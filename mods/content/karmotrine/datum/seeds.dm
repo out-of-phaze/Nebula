@@ -1,0 +1,26 @@
+/datum/seed/bronson
+	name = "bronsonroot"
+	product_name = "bronson root"
+	display_name = "bronson root stalks"
+	grown_tag = "bronson"
+
+/datum/seed/bronson/New()
+	..()
+	set_trait(TRAIT_MATURATION,10)
+	set_trait(TRAIT_PRODUCTION,1)
+	set_trait(TRAIT_YIELD,5)
+	set_trait(TRAIT_POTENCY,10)
+	set_trait(TRAIT_PRODUCT_ICON,"bulb")
+	set_trait(TRAIT_PRODUCT_COLOUR,"#ffc73e")
+	set_trait(TRAIT_PLANT_ICON,"stalk")
+	set_trait(TRAIT_WATER_CONSUMPTION, 5)
+	set_chemical_amount(/decl/material/liquid/nutriment,                 list(2,10))
+	// it's good for you!
+	set_chemical_amount(/decl/material/liquid/blendable/bronson_extract, list(3, 5))
+
+/obj/item/seeds/bronson
+	seed = "bronsonroot"
+
+/decl/hierarchy/supply_pack/hydroponics/seeds/Initialize()
+	contains += /obj/item/seeds/bronson
+	. = ..()
