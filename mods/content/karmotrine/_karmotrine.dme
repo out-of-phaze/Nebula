@@ -3,5 +3,6 @@
 // BEGIN_INCLUDE
 #include "karmotrine.dm"
 #include "datum/chems.dm"
+#include "datum/cocktails.dm"
 // END_INCLUDE
 #endif
