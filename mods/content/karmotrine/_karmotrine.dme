@@ -1,0 +1,6 @@
+#ifndef MODPACK_KARMOTRINE
+#define MODPACK_KARMOTRINE
+// BEGIN_INCLUDE
+#include "karmotrine.dm"
+// END_INCLUDE
+#endif
