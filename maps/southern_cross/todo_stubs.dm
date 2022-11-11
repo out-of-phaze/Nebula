@@ -1,0 +1,15 @@
+/obj/item/storage/bag/circuits/basic
+/obj/item/pinpointer/shuttle/merc
+/obj/item/pinpointer/shuttle/heist
+/obj/machinery/pda_multicaster/prebuilt
+/obj/machinery/exonet_node
+/obj/machinery/bluespace_beacon
+/obj/machinery/power/grid_checker
+/obj/machinery/atmospherics/binary/dp_vent_pump/high_volume
+/obj/machinery/door/unpowered/shuttle
+/obj/machinery/vending/giftvendor
+/obj/machinery/vending/deathmatch/red
+/obj/structure/flight_right
+/obj/structure/flight_left
+/obj/structure/signpost
+/obj/item/clothing/accessory/permit
