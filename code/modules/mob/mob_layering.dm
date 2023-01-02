@@ -104,3 +104,10 @@
 			pixel_x = new_pixel_x
 			pixel_y = new_pixel_y
 			pixel_z = new_pixel_z
+
+/mob/reset_animate_movement()
+	..()
+	if (isturf(loc))
+		// Update animate_movement from our buckled atom.
+		if(buckled)
+			animate_movement = buckled.animate_movement

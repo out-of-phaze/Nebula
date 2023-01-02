@@ -5,7 +5,7 @@ var/global/list/overmap_unknown_ids = list()
 	icon = 'icons/obj/overmap.dmi'
 	icon_state = "object"
 	color = "#c0c0c0"
-	animate_movement = NO_STEPS
+	default_animate_movement = NO_STEPS
 
 	var/scannable                       // if set to TRUE will show up on ship sensors for detailed scans, and will ping when detected by scanners.
 	var/unknown_id                      // A unique identifier used when this entity is scanned. Assigned in Initialize().

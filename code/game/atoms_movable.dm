@@ -37,6 +37,9 @@
 	var/inertia_move_delay = 5
 	var/atom/movable/inertia_ignore
 
+	/// Animate_movement setting applied by default reset_animate_movement, used by buckling to make vehicle movement look better.
+	var/tmp/default_animate_movement = FORWARD_STEPS
+
 // This proc determines if the instance is preserved when the process() despawn of crypods occurs.
 /atom/movable/proc/preserve_in_cryopod(var/obj/machinery/cryopod/pod)
 	return FALSE
@@ -437,8 +440,12 @@
 	if(M)
 		M.reset_offsets(4)
 		M.reset_plane_and_layer()
+		M.reset_animate_movement()
 	if(buckled_mob && buckled_mob != M)
 		refresh_buckled_mob()
+
+/atom/movable/proc/reset_animate_movement()
+	animate_movement = default_animate_movement
 
 /atom/movable/proc/user_buckle_mob(mob/living/M, mob/user)
 	if(M != user && user.incapacitated())

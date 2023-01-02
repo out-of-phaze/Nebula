@@ -94,8 +94,8 @@
 /obj/item/projectile/Initialize()
 	damtype = damage_type //TODO unify these vars properly
 	if(!hitscan)
-		animate_movement = SLIDE_STEPS
-	else animate_movement = NO_STEPS
+		default_animate_movement = SLIDE_STEPS
+	else default_animate_movement = NO_STEPS
 	. = ..()
 
 /obj/item/projectile/CanPass()

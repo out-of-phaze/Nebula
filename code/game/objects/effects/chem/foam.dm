@@ -10,7 +10,7 @@
 	density = 0
 	layer = ABOVE_OBJ_LAYER
 	mouse_opacity = 0
-	animate_movement = 0
+	default_animate_movement = NO_STEPS
 	var/amount = 3
 	var/metal = 0
 

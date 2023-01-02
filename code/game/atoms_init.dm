@@ -95,6 +95,12 @@
 
 /atom/movable/Initialize(ml, ...)
 	. = ..()
+
+	if(isnull(default_animate_movement))
+		default_animate_movement = animate_movement
+	else
+		animate_movement = default_animate_movement
+
 	if (!follow_repository.excluded_subtypes[type] && follow_repository.followed_subtypes_tcache[type])
 		follow_repository.add_subject(src)
 

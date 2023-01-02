@@ -6,7 +6,7 @@
 	is_spawnable_type = TRUE
 
 	appearance_flags = PIXEL_SCALE | LONG_GLIDE
-	animate_movement = 2
+	default_animate_movement = SLIDE_STEPS
 	movable_flags = MOVABLE_FLAG_PROXMOVE
 
 	virtual_mob = /mob/observer/virtual/mob
