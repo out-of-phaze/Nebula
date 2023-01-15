@@ -25,6 +25,7 @@
 	dock_target = "tanker_dock"
 	defer_initialisation = TRUE
 	shuttle_area = /area/tanker
+	flags = SHUTTLE_FLAGS_PROCESS
 
 /obj/effect/shuttle_landmark/ship/tanker
 	landmark_tag = "nav_tanker"

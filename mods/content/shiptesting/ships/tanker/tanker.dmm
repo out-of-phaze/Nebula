@@ -191,6 +191,13 @@
 "lU" = (
 /turf/wall/r_wall/hull,
 /area/tanker)
+"pr" = (
+/obj/structure/bed/roller,
+/obj/structure/sign/poster{
+	dir = 4
+	},
+/turf/floor/plating,
+/area/tanker)
 "qS" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/air,
@@ -236,7 +243,7 @@
 "vC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/power/apc/high{
+/obj/machinery/apc/high{
 	dir = 4;
 	pixel_x = 24
 	},
@@ -254,6 +261,12 @@
 	icon_state = "4-8"
 	},
 /turf/floor/plating,
+/area/tanker)
+"wU" = (
+/obj/effect/shuttle_landmark/ship/tanker{
+	dir = 8
+	},
+/turf/floor/reinforced/oxygen,
 /area/tanker)
 "xA" = (
 /obj/abstract/docking_port_spawner/tanker{
@@ -278,8 +291,9 @@
 /turf/floor/tiled/steel_grid,
 /area/tanker)
 "yG" = (
-/obj/structure/bed/chair/office,
-/turf/simulated/floor/tiled/steel_grid,
+/obj/structure/chair/office,
+/obj/abstract/submap_landmark/spawnpoint/tanker_technician_spawn,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "An" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
@@ -336,10 +350,11 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/structure/bed/chair/shuttle{
+/obj/structure/chair/shuttle{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/obj/abstract/submap_landmark/spawnpoint/tanker_pilot_spawn,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "Dh" = (
 /obj/machinery/computer/modular/preset/civilian{
@@ -388,7 +403,7 @@
 /turf/wall,
 /area/tanker)
 "Hj" = (
-/obj/machinery/hologram/holopad/longrange/remoteship,
+/obj/machinery/holopad/longrange/remoteship,
 /turf/floor/tiled/steel_grid,
 /area/tanker)
 "HO" = (
@@ -424,16 +439,13 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/effect/shuttle_landmark/ship/tanker{
-	dir = 8
-	},
 /turf/floor/plating,
 /area/tanker)
 "Km" = (
 /obj/structure/rack,
 /obj/item/belt/utility/atmostech,
 /obj/item/wrench,
-/obj/item/twohanded/pipewrench,
+/obj/item/wrench/pipe,
 /obj/item/radio/off,
 /obj/item/radio/off,
 /turf/floor/tiled/steel_grid,
@@ -487,7 +499,7 @@
 /area/tanker)
 "So" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 4;
+	dir = 8;
 	id_tag = "tanker_input"
 	},
 /turf/floor/reinforced/oxygen,
@@ -518,11 +530,15 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/structure/bed/chair/shuttle{
+/obj/structure/chair/shuttle{
 	dir = 8
 	},
 /turf/floor/tiled/steel_grid,
 /area/tanker)
+"UX" = (
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/tanker,
+/turf/space,
+/area/space)
 "Va" = (
 /obj/machinery/computer/ship/sensors{
 	dir = 4
@@ -552,7 +568,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/wall,
+/turf/wall,
 /area/tanker)
 "YI" = (
 /obj/machinery/power/terminal,
@@ -565,10 +581,6 @@
 "YS" = (
 /obj/effect/wallframe_spawn/reinforced,
 /turf/floor/plating,
-/area/tanker)
-"Ze" = (
-/obj/structure/fuel_port/hydrogen,
-/turf/simulated/wall/r_wall/hull,
 /area/tanker)
 "ZI" = (
 /obj/structure/closet/emcloset,
@@ -645,7 +657,7 @@ jh
 jh
 jh
 jh
-jh
+UX
 "}
 (2,1,1) = {"
 jh
@@ -1845,7 +1857,7 @@ jh
 jh
 jh
 jh
-Ze
+lU
 jp
 cV
 vT
@@ -2095,7 +2107,7 @@ jh
 jh
 lU
 BI
-vT
+pr
 GF
 GF
 et
@@ -2474,7 +2486,7 @@ Td
 Td
 Td
 Td
-Td
+wU
 Td
 Td
 Td

@@ -15,8 +15,8 @@
 
 /datum/shuttle/autodock/overmap/tanker
 	name = "Tanker"
-	warmup_time = 40
-	fuel_consumption = 2
+	warmup_time = 4
+	fuel_consumption = 0 // because fuck fuel ports
 	current_location = "nav_tanker"
 	dock_target = "tanker_dock"
 	defer_initialisation = TRUE
@@ -35,3 +35,71 @@
 /area/tanker
 	name = "Tanker"
 	icon_state = "yellow"
+
+/decl/submap_archetype/spawnable_ship/tanker
+	name = "Astor-class gas tanker"
+	crew_jobs = list(
+		/datum/job/submap/shiptesting/tanker_pilot,
+		/datum/job/submap/shiptesting/tanker_technician
+	)
+
+/obj/abstract/submap_landmark/spawnpoint/tanker_pilot_spawn
+	name = "Tanker Pilot"
+
+/obj/abstract/submap_landmark/spawnpoint/tanker_technician_spawn
+	name = "Tanker Technician"
+
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/tanker
+	name = "Astor-class tanker shuttle"
+	archetype = /decl/submap_archetype/spawnable_ship/tanker
+
+/datum/job/submap/shiptesting/tanker_pilot
+	title = "Tanker Pilot"
+	info = "You are the pilot of an Astor-class tanker, ferrying gases in the outer regions of explored space."
+	total_positions = 1
+	outfit_type = /decl/outfit/job/generic/tanker_pilot
+	skill_points = 25
+	min_skill = list(
+		SKILL_LITERACY = SKILL_ADEPT,
+		SKILL_WEAPONS  = SKILL_ADEPT,
+		SKILL_ATMOS    = SKILL_BASIC,
+		SKILL_PILOT    = SKILL_ADEPT
+	)
+	max_skill = list(
+		SKILL_PILOT   = SKILL_MAX,
+		SKILL_WEAPONS = SKILL_MAX
+	)
+	selection_color = "#ccccff"
+
+/datum/job/submap/shiptesting/tanker_technician
+	title = "Tanker Technician"
+	info = "You are the atmospheric technician of an Astor-class tanker, ferrying gases in the outer regions of explored space."
+	total_positions = 1
+	outfit_type = /decl/outfit/job/generic/engineer/tanker_technician
+	min_skill = list(
+		SKILL_LITERACY     = SKILL_ADEPT,
+		SKILL_EVA          = SKILL_ADEPT,
+		SKILL_CONSTRUCTION = SKILL_BASIC,
+		SKILL_ELECTRICAL   = SKILL_BASIC,
+		SKILL_ATMOS        = SKILL_ADEPT
+	)
+	max_skill = list(
+		SKILL_CONSTRUCTION = SKILL_MAX,
+		SKILL_ELECTRICAL   = SKILL_MAX,
+		SKILL_ATMOS        = SKILL_MAX,
+		SKILL_ENGINES      = SKILL_MAX
+	)
+	skill_points = 20
+	selection_color = "#fff5cc"
+
+/decl/outfit/job/generic/tanker_pilot
+	name = "Job - Tanker pilot"
+	uniform = /obj/item/clothing/jumpsuit/pilot
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
+
+/decl/outfit/job/generic/engineer/tanker_technician
+	name = "Job - Tanker technician"
+	uniform = /obj/item/clothing/jumpsuit/atmospheric_technician
+	belt = /obj/item/belt/utility/atmostech
+	pda_type = /obj/item/modular_computer/pda/engineering
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
