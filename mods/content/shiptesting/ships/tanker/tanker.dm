@@ -28,3 +28,68 @@
 /area/tanker
 	name = "Tanker"
 	icon_state = "yellow"
+
+/decl/submap_archetype/tanker
+	descriptor = "gas tanker"
+	map = "Astor-class tanker shuttle"
+	crew_jobs = list(
+		/datum/job/submap/tanker_pilot,
+		/datum/job/submap/tanker_technician
+	)
+
+/obj/abstract/submap_landmark/spawnpoint/tanker_pilot_spawn
+	name = "Tanker Pilot"
+
+/obj/abstract/submap_landmark/spawnpoint/tanker_technician_spawn
+	name = "Tanker Technician"
+
+/obj/abstract/submap_landmark/joinable_submap/tanker
+	name = "Astor-class tanker shuttle"
+	archetype = /decl/submap_archetype/tanker
+
+/datum/job/submap/tanker_pilot
+	title = "Tanker Pilot"
+	info = "You are the pilot of an Astor-class tanker, ferrying gases in the outer regions of explored space."
+	total_positions = 1
+	outfit_type = /decl/hierarchy/outfit/job/generic/tanker_pilot
+	skill_points = 25
+	min_skill = list(
+		SKILL_LITERACY = SKILL_ADEPT,
+		SKILL_WEAPONS  = SKILL_ADEPT,
+		SKILL_ATMOS    = SKILL_BASIC,
+		SKILL_PILOT    = SKILL_ADEPT
+	)
+	max_skill = list(
+		SKILL_PILOT   = SKILL_MAX,
+		SKILL_WEAPONS = SKILL_MAX
+	)
+
+/datum/job/submap/tanker_technician
+	title = "Tanker Technician"
+	info = "You are the atmospheric technician of an Astor-class tanker, ferrying gases in the outer regions of explored space."
+	total_positions = 1
+	outfit_type = /decl/hierarchy/outfit/job/generic/engineer/tanker_technician
+	min_skill = list(
+		SKILL_LITERACY     = SKILL_ADEPT,
+		SKILL_EVA          = SKILL_ADEPT,
+		SKILL_CONSTRUCTION = SKILL_BASIC,
+		SKILL_ELECTRICAL   = SKILL_BASIC,
+		SKILL_ATMOS        = SKILL_ADEPT
+	)
+	max_skill = list(
+		SKILL_CONSTRUCTION = SKILL_MAX,
+		SKILL_ELECTRICAL   = SKILL_MAX,
+		SKILL_ATMOS        = SKILL_MAX,
+		SKILL_ENGINES      = SKILL_MAX
+	)
+	skill_points = 20
+
+/decl/hierarchy/outfit/job/generic/tanker_pilot
+	name = "Job - Tanker pilot"
+	uniform = /obj/item/clothing/under/pilot
+
+/decl/hierarchy/outfit/job/generic/engineer/tanker_technician
+	name = "Job - Tanker technician"
+	uniform = /obj/item/clothing/under/atmospheric_technician
+	belt = /obj/item/storage/belt/utility/atmostech
+	pda_type = /obj/item/modular_computer/pda/engineering
