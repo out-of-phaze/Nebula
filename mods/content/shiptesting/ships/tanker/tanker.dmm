@@ -184,6 +184,13 @@
 "lU" = (
 /turf/simulated/wall/r_wall/hull,
 /area/tanker)
+"pr" = (
+/obj/structure/bed/roller,
+/obj/structure/sign/poster{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/tanker)
 "qS" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/air,
@@ -258,6 +265,7 @@
 /area/tanker)
 "yG" = (
 /obj/structure/bed/chair/office,
+/obj/abstract/submap_landmark/spawnpoint/tanker_technician_spawn,
 /turf/simulated/floor/tiled/steel_grid,
 /area/tanker)
 "An" = (
@@ -318,6 +326,7 @@
 /obj/structure/bed/chair/shuttle{
 	dir = 8
 	},
+/obj/abstract/submap_landmark/spawnpoint/tanker_pilot_spawn,
 /turf/simulated/floor/tiled/steel_grid,
 /area/tanker)
 "Dh" = (
@@ -447,7 +456,7 @@
 /area/tanker)
 "So" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 4;
+	dir = 8;
 	id_tag = "tanker_input"
 	},
 /turf/simulated/floor/reinforced/oxygen,
@@ -480,6 +489,10 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tanker)
+"UX" = (
+/obj/abstract/submap_landmark/joinable_submap/tanker,
+/turf/space,
+/area/space)
 "Va" = (
 /obj/machinery/computer/ship/sensors{
 	dir = 4
@@ -524,9 +537,11 @@
 /turf/simulated/floor/plating,
 /area/tanker)
 "Ze" = (
-/obj/structure/fuel_port/hydrogen,
-/turf/simulated/wall/r_wall/hull,
-/area/tanker)
+/obj/structure/fuel_port/hydrogen{
+	dir = 1
+	},
+/turf/space,
+/area/space)
 "ZI" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/steel_grid,
@@ -602,7 +617,7 @@ jh
 jh
 jh
 jh
-jh
+UX
 "}
 (2,1,1) = {"
 jh
@@ -1801,8 +1816,8 @@ jh
 jh
 jh
 jh
-jh
 Ze
+lU
 jp
 cV
 vT
@@ -2052,7 +2067,7 @@ jh
 jh
 lU
 BI
-vT
+pr
 GF
 GF
 et
