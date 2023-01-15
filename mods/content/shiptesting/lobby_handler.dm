@@ -49,12 +49,21 @@
 		var/ship_to_test = input(user, "Which ship do you want to purchase?", "Purchase New Ship", null) as null|anything in testable_ships
 		if(!ship_to_test || !istype(testable_ships[ship_to_test], /datum/map_template/ship))
 			return
-		test_ship(testable_ships[ship_to_test])
-		user.LateChoices()
-		// TODO: move into a refresh lobby menu helper
-		user.panel.close()
-		user.show_lobby_menu()
+		test_ship(testable_ships[ship_to_test], user)
 		return
 
-/datum/lobby_option/buy_ship/proc/test_ship(datum/map_template/ship_to_test)
+/datum/lobby_option/buy_ship/proc/test_ship(datum/map_template/ship_to_test, mob/new_player/user)
+	var/expected_zlevel = world.maxz + 1 // since loading might call stoplag, we can't rely on the new value of maxz being our ship
 	ship_to_test.load_new_z()
+	to_chat(user, SPAN_NOTICE("Your ship is now being prepared for testing, please wait..."))
+	user.panel.close()
+	var/datum/submap/our_submap = null
+	for(var/datum/submap/candidate_submap in SSmapping.submaps)
+		if(candidate_submap.associated_z == expected_zlevel) // todo: refactor to make getting the spawned submap easier
+			our_submap = candidate_submap
+			break
+	if(!istype(our_submap))
+		to_chat(user, SPAN_WARNING("Something went wrong while preparing your ship, please contact an admin for assistance!"))
+		user.show_lobby_menu()
+		return
+	our_submap.join_as(user, our_submap.jobs[our_submap.jobs[1]]) // we assume the first job is the captain role, TODO: specify explicitly
