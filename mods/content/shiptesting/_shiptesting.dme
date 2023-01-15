@@ -1,0 +1,8 @@
+#ifndef MODPACK_SHIPTESTING
+#define MODPACK_SHIPTESTING
+// BEGIN_INCLUDE
+#include "shiptesting.dm"
+#include "lobby_handler.dm"
+#include "ships/ships.dm"
+#include "ships/tanker/tanker.dm"
+#endif
