@@ -5,3 +5,5 @@
 	path = "empty"
 	allowed_spawns = list()
 	default_spawn = null
+	overmap_ids = list(OVERMAP_ID_SPACE)
+	num_exoplanets = 5
