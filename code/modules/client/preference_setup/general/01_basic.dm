@@ -30,10 +30,10 @@
 	W.write("name_is_always_random", pref.be_random_name)
 
 	var/decl/spawnpoint/spawnpoint = GET_DECL(pref.spawnpoint)
-	W.write("spawnpoint", spawnpoint.name)
+	W.write("spawnpoint", spawnpoint?.name)
 
 /datum/category_item/player_setup_item/physical/basic/sanitize_character()
-	
+
 	var/valid_spawn = FALSE
 	for(var/decl/spawnpoint/spawnpoint as anything in global.using_map.allowed_spawns)
 		if(pref.spawnpoint == spawnpoint.type)
@@ -84,8 +84,8 @@
 			. += "<a href='?src=\ref[src];gender=\ref[G]'>[capitalize(G.name)]</a>"
 
 	var/decl/spawnpoint/spawnpoint = GET_DECL(pref.spawnpoint)
-	. += "<br><b>Spawn point</b>: <a href='?src=\ref[src];spawnpoint=1'>[spawnpoint.name]</a>"
-	. = jointext(.,null)
+	. += "<br><b>Spawn point</b>: <a href='?src=\ref[src];spawnpoint=1'>[spawnpoint?.name || "None"]</a>"
+	. = JOINTEXT(.)
 
 /datum/category_item/player_setup_item/physical/basic/OnTopic(var/href,var/list/href_list, var/mob/user)
 	var/decl/species/S = get_species_by_key(pref.species)
