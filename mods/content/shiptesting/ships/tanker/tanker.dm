@@ -16,7 +16,7 @@
 /datum/shuttle/autodock/overmap/tanker
 	name = "Tanker"
 	warmup_time = 40
-	fuel_consumption = 2
+	fuel_consumption = 0 // because fuck fuel ports
 	current_location = "nav_tanker"
 	dock_target = "tanker_dock"
 	defer_initialisation = TRUE
