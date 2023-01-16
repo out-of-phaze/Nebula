@@ -1,0 +1,154 @@
+/datum/map_template/ship/johnson
+	name = "Johnson-class deep space mining vessel"
+	suffixes = list("johnson/johnson.dmm")
+	area_usage_test_exempted_root_areas = list(/area/johnson)
+	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/johnson)
+
+/obj/effect/overmap/visitable/ship/landable/johnson
+	name = "Mining Vessel"
+	desc = "Sensors detect a Johnson-class deep space mining vessel."
+	shuttle = "Mining Vessel"
+	fore_dir = WEST
+	max_speed = 1/(10 SECOND)
+	sector_flags = OVERMAP_SECTOR_IN_SPACE
+	use_mapped_z_levels = TRUE
+
+/datum/shuttle/autodock/overmap/johnson
+	name = "Mining Vessel"
+	warmup_time = 2
+	fuel_consumption = 0 // because fuck fuel ports
+	current_location = "nav_johnson"
+	dock_target = "johnson_dock"
+	defer_initialisation = TRUE
+	shuttle_area = /area/johnson
+
+/obj/effect/shuttle_landmark/ship/johnson
+	landmark_tag = "nav_johnson"
+
+/area/johnson
+	name = "Mining Vessel"
+	icon_state = "yellow"
+
+/decl/submap_archetype/johnson
+	descriptor = "mining vessel"
+	map = "Johnson-class deep space mining vessel"
+	crew_jobs = list(
+		/datum/job/submap/johnson_pilot,
+		/datum/job/submap/johnson_technician,
+		/datum/job/submap/johnson_crewman,
+		/datum/job/submap/johnson_medic,
+	)
+
+/obj/abstract/submap_landmark/spawnpoint/johnson_pilot_spawn
+	name = "Mining Vessel Pilot"
+
+/obj/abstract/submap_landmark/spawnpoint/johnson_technician_spawn
+	name = "Mining Vessel Technician"
+
+/obj/abstract/submap_landmark/spawnpoint/johnson_crewman_spawn
+	name = "Mining Vessel Crewman"
+
+/obj/abstract/submap_landmark/spawnpoint/johnson_medic_spawn
+	name = "Mining Vessel Medic"
+
+/obj/abstract/submap_landmark/joinable_submap/johnson
+	name = "Johnson-class deep space mining vessel"
+	archetype = /decl/submap_archetype/johnson
+
+/datum/job/submap/johnson_pilot
+	title = "Mining Vessel Pilot"
+	info = "You are the pilot of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
+	total_positions = 1
+	outfit_type = /decl/hierarchy/outfit/job/generic/johnson_pilot
+	skill_points = 25
+	min_skill = list(
+		SKILL_LITERACY = SKILL_ADEPT,
+		SKILL_WEAPONS  = SKILL_ADEPT,
+		SKILL_PILOT    = SKILL_EXPERT
+	)
+	max_skill = list(
+		SKILL_PILOT   = SKILL_MAX,
+		SKILL_WEAPONS = SKILL_MAX
+	)
+
+/datum/job/submap/johnson_technician
+	title = "Mining Vessel Technician"
+	info = "You are the maintenance technician of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
+	total_positions = 1
+	outfit_type = /decl/hierarchy/outfit/job/generic/engineer/johnson_technician
+	min_skill = list(
+		SKILL_LITERACY     = SKILL_BASIC,
+		SKILL_EVA          = SKILL_ADEPT,
+		SKILL_CONSTRUCTION = SKILL_BASIC,
+		SKILL_ELECTRICAL   = SKILL_BASIC,
+		SKILL_ATMOS        = SKILL_BASIC,
+		SKILL_COMPUTER     = SKILL_BASIC
+	)
+	max_skill = list(
+		SKILL_CONSTRUCTION = SKILL_MAX,
+		SKILL_ELECTRICAL   = SKILL_MAX,
+		SKILL_ATMOS        = SKILL_MAX,
+		SKILL_ENGINES      = SKILL_MAX
+	)
+	skill_points = 20
+
+/datum/job/submap/johnson_crewman
+	title = "Mining Vessel Crewman"
+	info = "You are a crew member of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
+	total_positions = 3
+	outfit_type = /decl/hierarchy/outfit/job/generic/johnson_mining
+	alt_titles = list(
+		"Mining Vessel Drill Technician",
+		"Mining Vessel Prospector"
+	)
+	skill_points = 16
+	min_skill = list(
+		SKILL_LITERACY = SKILL_NONE,
+		SKILL_HAULING  = SKILL_ADEPT,
+		SKILL_EVA      = SKILL_BASIC
+	)
+	max_skill = list(
+		SKILL_PILOT    = SKILL_MAX
+	)
+
+/datum/job/submap/johnson_medic
+	title = "Mining Vessel Medic"
+	info = "You are the medic of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
+	total_positions = 1
+	outfit_type = /decl/hierarchy/outfit/job/generic/doctor/johnson_medic
+	skill_points = 25
+	min_skill = list(
+		SKILL_LITERACY = SKILL_ADEPT,
+		SKILL_EVA      = SKILL_BASIC,
+		SKILL_MEDICAL  = SKILL_BASIC,
+		SKILL_ANATOMY  = SKILL_BASIC
+	)
+	max_skill = list(
+		SKILL_MEDICAL   = SKILL_MAX,
+		SKILL_CHEMISTRY = SKILL_MAX
+	)
+
+/decl/hierarchy/outfit/job/generic/johnson_pilot
+	name = "Job - Mining vessel pilot"
+	uniform = /obj/item/clothing/under/pilot
+	id_type = /obj/item/card/id/civilian/head
+	pda_type = /obj/item/modular_computer/pda/heads/captain
+
+/decl/hierarchy/outfit/job/generic/engineer/johnson_technician
+	name = "Job - Mining vessel technician"
+	uniform = /obj/item/clothing/under/engineer
+	belt = /obj/item/storage/belt/utility/full
+
+/decl/hierarchy/outfit/job/generic/johnson_mining
+	name = "Job - Mining vessel shaft miner"
+	uniform = /obj/item/clothing/under/miner
+	pda_type = /obj/item/modular_computer/pda/science
+	backpack_contents = list(/obj/item/crowbar = 1, /obj/item/storage/ore = 1)
+	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+
+/decl/hierarchy/outfit/job/generic/johnson_mining/Initialize()
+	. = ..()
+	BACKPACK_OVERRIDE_ENGINEERING
+
+/decl/hierarchy/outfit/job/generic/doctor/johnson_medic
+	name = "Job - Mining vessel medic"
