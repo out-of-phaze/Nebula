@@ -1,0 +1,6148 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/closet/crate/plastic/rations,
+/obj/item/bag/trash,
+/obj/item/bag/trash,
+/obj/item/box/donkpockets,
+/obj/item/box/donkpockets,
+/obj/item/chems/condiment/enzyme,
+/obj/item/trash/liquidfood,
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/obj/item/food/junk/liquidfood,
+/obj/item/food/junk/liquidfood,
+/obj/item/food/junk/liquidfood,
+/obj/item/food/junk/liquidfood,
+/obj/item/food/junk/liquidfood,
+/obj/item/food/junk/liquidfood,
+/obj/item/food/can/beans,
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"ag" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/floor/plating,
+/area/johnson/maintenance)
+"ay" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/structure/cable{
+	icon_state = "1-6"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/table,
+/obj/machinery/recharger,
+/obj/item/cell/device/standard,
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"aP" = (
+/obj/structure/table/reinforced,
+/obj/item/blueprints/shuttle,
+/obj/item/radio/phone{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/obj/item/clothing/head/caphat/cap,
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/random/maintenance{
+	spawn_nothing_percentage = 50
+	},
+/turf/floor/tiled/dark,
+/area/johnson/bridge)
+"bd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/port_gen/pacman,
+/obj/item/stack/material/brick/mapped/graphite/twentyfive,
+/obj/machinery/airlock_sensor{
+	dir = 4;
+	id_tag = "johnson_dock_interior_sensor";
+	pixel_x = -22
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"bD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt/visible,
+/turf/floor/tiled/old_tile,
+/area/johnson/mining)
+"bG" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/closet/crate,
+/obj/item/stack/material/pane/mapped/glass/fifty,
+/obj/item/stack/material/sheet/mapped/steel/fifty,
+/obj/item/stack/material/ingot/mapped/copper/thirty,
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/item/stack/material/panel/mapped/plastic/fifty,
+/obj/item/stack/material/panel/mapped/plastic/fifty,
+/obj/item/stack/material/sheet/shiny/mapped/aluminium/fifty,
+/obj/item/stack/material/sheet/shiny/mapped/aluminium/fifty,
+/turf/floor/tiled/old_tile,
+/area/johnson/mining)
+"bM" = (
+/obj/structure/catwalk,
+/obj/machinery/button/access/exterior{
+	id_tag = "johnson_dock";
+	pixel_y = 24
+	},
+/turf/space,
+/area/johnson/maintenance)
+"bV" = (
+/obj/structure/table,
+/obj/item/firstaid/stab,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/item/pill_bottle/assorted,
+/turf/floor/tiled/old_tile,
+/area/johnson/medical)
+"cb" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/unary/tank/air{
+	dir = 8;
+	start_pressure = 30.3975;
+	volume = 15000
+	},
+/obj/machinery/door/firedoor,
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"ce" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/valve/open{
+	dir = 8
+	},
+/turf/floor/plating,
+/area/johnson/maintenance)
+"cg" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/holopad/longrange/remoteship,
+/obj/abstract/submap_landmark/spawnpoint/johnson_pilot_spawn,
+/turf/floor/tiled/dark/monotile,
+/area/johnson/bridge)
+"cs" = (
+/obj/machinery/computer/ship/sensors{
+	dir = 8
+	},
+/turf/floor/tiled/dark,
+/area/johnson/bridge)
+"cF" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/floor/plating,
+/area/johnson)
+"cK" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/floor/plating,
+/area/johnson)
+"dg" = (
+/obj/machinery/airlock_sensor{
+	dir = 1;
+	id_tag = "johnson_mining_exterior_sensor";
+	pixel_y = -20
+	},
+/obj/structure/catwalk,
+/turf/space,
+/area/johnson/mining)
+"dk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"dx" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"dJ" = (
+/obj/effect/floor_decal/corner/brown/bordercorner,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/light,
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"dV" = (
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/machinery/apc{
+	dir = 4;
+	pixel_x = 22
+	},
+/obj/structure/rack,
+/obj/item/toolbox/repairs,
+/obj/item/toolbox/mechanical,
+/obj/item/toolbox/electrical,
+/obj/item/clothing/gloves/insulated,
+/obj/item/multitool,
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"eh" = (
+/obj/effect/floor_decal/corner/brown/half,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt/visible,
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"ej" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/floor/lino,
+/area/johnson)
+"em" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"et" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/floor/plating/airless,
+/area/johnson/medical)
+"eO" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"eR" = (
+/turf/wall/r_wall/prepainted,
+/area/johnson)
+"fn" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/solar,
+/turf/floor/plating/airless,
+/area/johnson)
+"fx" = (
+/obj/machinery/vending/wallmed1{
+	pixel_y = 32
+	},
+/obj/structure/handrail,
+/turf/floor/tiled/old_cargo,
+/area/johnson/medical)
+"fK" = (
+/obj/machinery/door/blast/regular/open{
+	dir = 2;
+	id_tag = "johnson_cargo_hold"
+	},
+/turf/floor/plating,
+/area/johnson)
+"fV" = (
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/apc{
+	dir = 1;
+	pixel_y = 22
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"gC" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"gI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 9
+	},
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -21
+	},
+/obj/structure/closet/emcloset,
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"hs" = (
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -21
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"ht" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/turf/floor/plating/airless,
+/area/johnson)
+"hw" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/table,
+/obj/item/belt/medical/emt,
+/obj/item/box/gloves{
+	pixel_y = 10
+	},
+/obj/item/toolbox/mechanical,
+/obj/item/clothing/neck/stethoscope,
+/turf/floor/tiled/old_tile,
+/area/johnson/medical)
+"hy" = (
+/obj/structure/cable{
+	icon_state = "5-9"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/structure/catwalk,
+/turf/floor/plating,
+/area/johnson/maintenance)
+"hL" = (
+/obj/machinery/shipsensors,
+/obj/structure/cable,
+/obj/machinery/power/terminal{
+	icon_state = "term-omni"
+	},
+/turf/floor/plating/airless,
+/area/johnson)
+"iq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/industrial/firstaid/corner{
+	dir = 1
+	},
+/turf/floor/tiled/old_cargo,
+/area/johnson/medical)
+"iu" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/chemical_dispenser/calicomp/full{
+	dir = 8;
+	throwpass = 1
+	},
+/obj/structure/table/wood/mahogany,
+/obj/item/box/mixedglasses,
+/turf/floor/wood/walnut,
+/area/johnson)
+"iw" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor,
+/turf/floor/tiled/white/monotile,
+/area/johnson/medical)
+"iH" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/floor/plating/airless,
+/area/johnson)
+"iL" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/shuttle_landmark/ship/johnson{
+	dir = 4
+	},
+/obj/abstract/local_dock/automatic{
+	dir = 4;
+	reorient = 0;
+	port_tag = "center";
+	name = "center";
+	shuttle_tag = "Mining Vessel"
+	},
+/obj/effect/catwalk_plated/techfloor,
+/turf/floor/plating,
+/area/johnson)
+"iN" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/paleblue/half{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"iP" = (
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	dir = 4;
+	id_tag = "johnson_dock";
+	pixel_x = -22;
+	tag_airpump = "johnson_dock_pump";
+	tag_chamber_sensor = "johnson_dock_sensor";
+	tag_exterior_door = "johnson_dock_outer";
+	tag_exterior_sensor = "johnson_dock_exterior_sensor";
+	tag_interior_door = "johnson_dock_inner";
+	tag_interior_sensor = "johnson_dock_interior_sensor"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	dir = 1;
+	id_tag = "johnson_dock_pump"
+	},
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"iT" = (
+/obj/structure/sign/warning/compressed_gas{
+	dir = 8;
+	pixel_x = 34
+	},
+/obj/machinery/atmospherics/valve,
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"jt" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/floor/plating,
+/area/johnson)
+"jz" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/floor/plating,
+/area/johnson/maintenance)
+"jI" = (
+/obj/machinery/light/small,
+/obj/machinery/sleeper/standard,
+/obj/machinery/light_switch{
+	dir = 1
+	},
+/turf/floor/tiled/old_tile,
+/area/johnson/medical)
+"jJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/structure/catwalk,
+/turf/floor/plating,
+/area/johnson/maintenance)
+"jP" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor,
+/turf/floor/plating,
+/area/johnson/maintenance)
+"kc" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/structure/closet/medical_wall/filled{
+	pixel_y = 32
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/floor/tiled/old_tile,
+/area/johnson)
+"kn" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/eastleft,
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/floor/reinforced,
+/area/johnson/maintenance)
+"ko" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/suit_cycler/mining{
+	boots = /obj/item/clothing/shoes/magboots;
+	helmet = /obj/item/clothing/head/helmet/space/void/mining;
+	initial_access = null;
+	suit = /obj/item/clothing/suit/space/void/mining
+	},
+/obj/structure/sign/warning/nosmoking_1{
+	pixel_y = 32
+	},
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"kw" = (
+/obj/machinery/light_switch{
+	pixel_y = 25
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"kH" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/closet/crate/plastic,
+/obj/item/stack/material/sheet/reinforced/mapped/plasteel/thirty,
+/obj/item/stack/material/sheet/reinforced/mapped/fiberglass/fifty,
+/obj/effect/decal/cleanable/dirt/visible,
+/turf/floor/tiled/old_tile,
+/area/johnson/mining)
+"kI" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/yellow,
+/turf/floor/plating/airless,
+/area/johnson)
+"kM" = (
+/turf/space,
+/area/space)
+"lb" = (
+/obj/machinery/airlock_sensor{
+	dir = 4;
+	id_tag = "johnson_mining_sensor";
+	pixel_x = -22
+	},
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 1;
+	id_tag = "johnson_mining_pump_out_internal"
+	},
+/turf/floor/plating,
+/area/johnson/mining)
+"lF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/firstaid{
+	dir = 8
+	},
+/turf/floor/tiled/old_cargo,
+/area/johnson/medical)
+"ma" = (
+/obj/structure/tank_rack/oxygen,
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"mi" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/floor/tiled/old_tile,
+/area/johnson)
+"mt" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/obj/machinery/computer/modular/preset/engineering{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"mI" = (
+/obj/machinery/computer/ship/engines{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -21
+	},
+/obj/effect/decal/cleanable/cobweb{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"mO" = (
+/turf/wall/prepainted,
+/area/johnson/maintenance)
+"mW" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 4
+	},
+/turf/floor/tiled/old_tile,
+/area/johnson)
+"mX" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 1
+	},
+/obj/structure/sign/warning/vacuum{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"na" = (
+/obj/effect/decal/cleanable/dirt/visible,
+/turf/floor/plating,
+/area/johnson/mining)
+"nb" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/structure/handrail,
+/turf/floor/tiled/old_tile,
+/area/johnson)
+"nq" = (
+/turf/wall/prepainted,
+/area/johnson)
+"nB" = (
+/obj/random/maintenance{
+	spawn_nothing_percentage = 50
+	},
+/turf/floor/plating,
+/area/johnson)
+"ov" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/fabricator/imprinter,
+/obj/item/chems/chem_disp_cartridge/sacid{
+	volume = 120
+	},
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"oY" = (
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/johnson,
+/turf/space,
+/area/space)
+"ph" = (
+/obj/machinery/material_processing/compressor,
+/turf/floor/plating,
+/area/johnson)
+"pA" = (
+/obj/machinery/door/airlock/external/bolted{
+	dir = 1;
+	id_tag = "johnson_mining_outer"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/floor/plating,
+/area/johnson/mining)
+"pK" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/floor/plating/airless,
+/area/johnson/medical)
+"qk" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/floor/plating/airless,
+/area/johnson/medical)
+"qA" = (
+/obj/machinery/button/access/exterior{
+	dir = 1;
+	id_tag = "johnson_mining";
+	pixel_y = -22
+	},
+/obj/structure/catwalk,
+/turf/space,
+/area/johnson/mining)
+"qH" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/floor/plating,
+/area/johnson/medical)
+"qS" = (
+/obj/effect/floor_decal/corner/brown/half{
+	dir = 1
+	},
+/obj/random/single{
+	spawn_nothing_percentage = 95;
+	spawn_object = /obj/item/trash/cigbutt
+	},
+/obj/abstract/landmark/proc_caller/floor_burner{
+	probability = 25
+	},
+/turf/floor/tiled/old_tile,
+/area/johnson/mining)
+"qZ" = (
+/obj/structure/curtain/open/bed,
+/obj/item/bedsheet/brown,
+/obj/structure/bed,
+/obj/effect/decal/cleanable/cobweb2{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/random/maintenance{
+	spawn_nothing_percentage = 50
+	},
+/turf/floor/wood/walnut,
+/area/johnson)
+"rc" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/conveyor_switch{
+	id_tag = "johnson_cargo_belt"
+	},
+/turf/floor/plating,
+/area/johnson)
+"rr" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 1
+	},
+/obj/structure/handrail,
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"rB" = (
+/obj/structure/table/reinforced,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/item/paper_bin,
+/obj/item/folder/yellow,
+/obj/machinery/apc{
+	dir = 8;
+	pixel_x = -22
+	},
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/machinery/network/requests_console{
+	pixel_x = -32;
+	pixel_y = 32
+	},
+/obj/machinery/light_switch{
+	pixel_y = 25
+	},
+/turf/floor/tiled/dark,
+/area/johnson/bridge)
+"rS" = (
+/obj/machinery/ion_thruster{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/floor/reinforced/airless,
+/area/johnson/maintenance)
+"rZ" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/button/access/interior{
+	dir = 4;
+	id_tag = "johnson_dock";
+	pixel_x = -20
+	},
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"sd" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/abstract/submap_landmark/spawnpoint/johnson_technician_spawn,
+/obj/structure/catwalk,
+/turf/floor/plating,
+/area/johnson/maintenance)
+"sy" = (
+/obj/machinery/door/airlock/glass/command{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/johnson/bridge)
+"sz" = (
+/obj/structure/curtain/open/shower/engineering,
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"tB" = (
+/obj/effect/floor_decal/corner/brown/half,
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"tG" = (
+/obj/machinery/power/tracker,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow,
+/turf/floor/plating/airless,
+/area/johnson/medical)
+"tV" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/floor/tiled/old_cargo,
+/area/johnson/medical)
+"ux" = (
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"uT" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/floor/plating,
+/area/johnson/bridge)
+"vb" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/eastright,
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/floor/reinforced,
+/area/johnson/maintenance)
+"vt" = (
+/turf/wall/r_wall/prepainted,
+/area/johnson/bridge)
+"vJ" = (
+/obj/machinery/computer/operating{
+	dir = 4
+	},
+/turf/floor/tiled/old_cargo,
+/area/johnson/medical)
+"vR" = (
+/turf/wall,
+/area/johnson/medical)
+"wd" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/machinery/network/router/wall_mounted{
+	pixel_y = 21;
+	initial_network_id = "johnsonnet"
+	},
+/turf/floor/tiled/old_tile,
+/area/johnson)
+"wj" = (
+/obj/machinery/computer/shuttle_control/explore{
+	dir = 8;
+	name = "shuttle control console";
+	shuttle_tag = "Mining Vessel"
+	},
+/obj/structure/cable{
+	icon_state = "2-9"
+	},
+/turf/floor/tiled/dark,
+/area/johnson/bridge)
+"wo" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/obj/effect/catwalk_plated/techfloor,
+/turf/floor/plating,
+/area/johnson)
+"wD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/rack,
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -24
+	},
+/obj/item/sealant_tank/mapped,
+/obj/item/sealant_tank/mapped,
+/obj/item/gun/launcher/sealant/mapped,
+/obj/item/geiger,
+/obj/item/radio{
+	pixel_x = 7;
+	pixel_y = 8
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"wG" = (
+/obj/machinery/atmospherics/unary/outlet_injector,
+/turf/floor/reinforced/airless,
+/area/johnson/maintenance)
+"wY" = (
+/obj/machinery/airlock_sensor{
+	dir = 4;
+	id_tag = "johnson_dock_sensor";
+	pixel_x = -22
+	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	id_tag = "johnson_dock_pump"
+	},
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"xc" = (
+/obj/machinery/door/airlock/glass/command{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/johnson/bridge)
+"xf" = (
+/obj/machinery/door/airlock/external,
+/turf/floor/plating,
+/area/johnson)
+"xi" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/chair/shuttle/blue{
+	dir = 4
+	},
+/turf/floor/tiled/dark/monotile,
+/area/johnson/bridge)
+"xU" = (
+/obj/machinery/ion_thruster{
+	dir = 4
+	},
+/turf/floor/reinforced/airless,
+/area/johnson/maintenance)
+"yB" = (
+/obj/effect/floor_decal/corner/brown/half{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/button/access/interior{
+	dir = 8;
+	id_tag = "johnson_cargo";
+	pixel_x = 20
+	},
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"yS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/double/glass/medical,
+/obj/machinery/door/firedoor,
+/turf/floor/tiled/white/monotile,
+/area/johnson/medical)
+"zf" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/turf/floor/plating/airless,
+/area/johnson/medical)
+"zB" = (
+/obj/structure/catwalk,
+/turf/space,
+/area/johnson/maintenance)
+"zE" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/effect/catwalk_plated/techfloor,
+/turf/floor/plating,
+/area/johnson)
+"zM" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/solar,
+/turf/floor/plating/airless,
+/area/johnson)
+"zS" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/apc{
+	pixel_y = -22
+	},
+/obj/effect/floor_decal/industrial/firstaid{
+	dir = 9
+	},
+/turf/floor/tiled/old_cargo,
+/area/johnson/medical)
+"zT" = (
+/obj/structure/closet/hydrant{
+	dir = 8;
+	pixel_x = 32
+	},
+/obj/random/maintenance{
+	spawn_nothing_percentage = 50
+	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	dir = 1;
+	id_tag = "johnson_dock_pump"
+	},
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"zU" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/eastleft,
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/floor/reinforced,
+/area/johnson/maintenance)
+"zW" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/floor/plating,
+/area/johnson/mining)
+"Ac" = (
+/turf/wall,
+/area/johnson)
+"Aq" = (
+/obj/machinery/door/airlock/external/bolted_open{
+	dir = 4;
+	id_tag = "johnson_dock_inner"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"AR" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 1
+	},
+/turf/floor/lino,
+/area/johnson)
+"AU" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"Bc" = (
+/turf/wall/r_wall,
+/area/johnson/medical)
+"Bj" = (
+/obj/structure/bed/roller,
+/obj/structure/iv_drip,
+/obj/effect/floor_decal/industrial/firstaid{
+	dir = 8
+	},
+/obj/item/radio/intercom{
+	pixel_y = 20
+	},
+/turf/floor/tiled/old_cargo,
+/area/johnson/medical)
+"Bp" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/floor/tiled/old_tile,
+/area/johnson/mining)
+"Bu" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "johnson_mining_pump_out_external"
+	},
+/obj/abstract/exterior_marker/outside,
+/obj/abstract/local_dock/automatic{
+	dir = 1;
+	port_tag = "mining airlock";
+	shuttle_tag = "Mining Vessel";
+	name = "mining airlock"
+	},
+/turf/floor/reinforced/airless,
+/area/johnson/mining)
+"BP" = (
+/obj/effect/floor_decal/corner/brown/half,
+/obj/machinery/light,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/machinery/recharge_station,
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"BR" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/effect/catwalk_plated/techfloor,
+/turf/floor/plating,
+/area/johnson)
+"Ca" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/floor/plating,
+/area/johnson)
+"Cc" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"Cq" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/floor/plating,
+/area/johnson)
+"CA" = (
+/obj/structure/catwalk,
+/obj/machinery/airlock_sensor{
+	dir = 1;
+	id_tag = "johnson_dock_exterior_sensor";
+	pixel_y = -18
+	},
+/turf/space,
+/area/johnson/maintenance)
+"CB" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/suit_cycler/mining{
+	boots = /obj/item/clothing/shoes/magboots;
+	helmet = /obj/item/clothing/head/helmet/space/void/mining;
+	initial_access = null;
+	suit = /obj/item/clothing/suit/space/void/mining
+	},
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"CC" = (
+/turf/floor/tiled/old_tile,
+/area/johnson/mining)
+"CD" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/optable,
+/turf/floor/tiled/old_cargo,
+/area/johnson/medical)
+"CE" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/floor/plating,
+/area/johnson/medical)
+"CS" = (
+/turf/wall/r_wall,
+/area/johnson/maintenance)
+"CX" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"Dc" = (
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/paleblue/half{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"De" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/omni/filter{
+	tag_east = 8;
+	tag_filter_gas_east = "gas_oxygen";
+	tag_north = 1;
+	tag_south = 2
+	},
+/obj/structure/catwalk,
+/turf/floor/plating,
+/area/johnson/maintenance)
+"Di" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/eastright,
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/floor/reinforced,
+/area/johnson/maintenance)
+"Do" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/conveyor_switch{
+	id_tag = "johnson_cargo_belt"
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"DW" = (
+/obj/structure/table,
+/obj/item/firstaid/surgery,
+/turf/floor/tiled/old_cargo,
+/area/johnson/medical)
+"Et" = (
+/turf/wall,
+/area/johnson/bridge)
+"Eu" = (
+/obj/machinery/door/airlock/external/bolted_open{
+	dir = 1;
+	id_tag = "johnson_mining_inner"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/floor/plating,
+/area/johnson/mining)
+"ED" = (
+/obj/effect/floor_decal/corner/brown/half{
+	dir = 8
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -21
+	},
+/obj/structure/reagent_dispensers/fueltank,
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"EL" = (
+/obj/effect/floor_decal/corner/brown/border,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"EP" = (
+/obj/abstract/submap_landmark/spawnpoint/johnson_crewman_spawn,
+/turf/floor/plating,
+/area/johnson/mining)
+"Fm" = (
+/obj/structure/catwalk,
+/turf/floor/plating,
+/area/johnson/maintenance)
+"Fr" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/valve/open{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/floor/plating,
+/area/johnson/maintenance)
+"Fs" = (
+/obj/machinery/fabricator/replicator,
+/turf/floor/tiled/dark/monotile,
+/area/johnson)
+"FV" = (
+/turf/wall/r_wall,
+/area/johnson/bridge)
+"FW" = (
+/obj/machinery/atmospherics/unary/tank/air{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/cobweb2{
+	dir = 8
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"FX" = (
+/turf/wall/r_wall/prepainted,
+/area/johnson/mining)
+"FY" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/floor/lino,
+/area/johnson)
+"Gg" = (
+/obj/structure/table/wood/mahogany,
+/obj/item/flashlight/lamp/green,
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/floor/wood/walnut,
+/area/johnson)
+"Gj" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 8
+	},
+/turf/floor/tiled/dark/monotile,
+/area/johnson/bridge)
+"Gk" = (
+/obj/machinery/door/airlock/glass/mining,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor,
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"Gy" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"GD" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/overmap/visitable/ship/landable/spawnable/johnson,
+/obj/effect/catwalk_plated/techfloor,
+/turf/floor/plating,
+/area/johnson)
+"GF" = (
+/obj/abstract/exterior_marker/outside,
+/turf/floor/reinforced/airless,
+/area/johnson/mining)
+"GG" = (
+/turf/wall,
+/area/johnson/maintenance)
+"GH" = (
+/obj/effect/floor_decal/corner/brown,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"Hc" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/button/blast_door{
+	dir = 1;
+	id_tag = "johnson_cargo_hold";
+	pixel_y = -32
+	},
+/turf/floor/plating,
+/area/johnson)
+"Hm" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/structure/catwalk,
+/turf/floor/plating,
+/area/johnson/maintenance)
+"Hy" = (
+/obj/machinery/cryopod{
+	dir = 1
+	},
+/obj/machinery/computer/cryopod{
+	dir = 1;
+	pixel_y = -24
+	},
+/turf/floor/wood/walnut,
+/area/johnson)
+"HG" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/conveyor{
+	id_tag = "johnson_cargo_belt"
+	},
+/turf/floor/plating,
+/area/johnson)
+"HN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/table,
+/obj/item/belt/utility/full,
+/obj/item/box/lights/mixed,
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"HP" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/floor/plating,
+/area/johnson)
+"HY" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/floor/plating,
+/area/johnson/bridge)
+"Id" = (
+/obj/machinery/door/airlock/engineering,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/johnson/maintenance)
+"If" = (
+/obj/structure/table/wood/mahogany,
+/obj/machinery/microwave{
+	throwpass = 1
+	},
+/obj/effect/decal/cleanable/dirt/visible,
+/turf/floor/lino,
+/area/johnson)
+"Il" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 4
+	},
+/turf/floor/reinforced/airless,
+/area/johnson/maintenance)
+"It" = (
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable/yellow,
+/obj/machinery/atmospherics/omni/filter{
+	tag_east = 8;
+	tag_filter_gas_east = "gas_nitrogen";
+	tag_north = 1;
+	tag_south = 2
+	},
+/obj/structure/catwalk,
+/turf/floor/plating,
+/area/johnson/maintenance)
+"II" = (
+/obj/structure/table/reinforced,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -21
+	},
+/obj/item/gps{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/obj/item/radio{
+	pixel_x = 7;
+	pixel_y = 8
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = -30
+	},
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/random/maintenance{
+	spawn_nothing_percentage = 50
+	},
+/turf/floor/tiled/dark,
+/area/johnson/bridge)
+"IS" = (
+/obj/structure/flaps/airtight,
+/obj/machinery/conveyor{
+	id_tag = "johnson_cargo_belt"
+	},
+/obj/machinery/door/firedoor,
+/turf/floor/plating,
+/area/johnson)
+"IT" = (
+/obj/effect/floor_decal/corner/brown/border,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"IW" = (
+/turf/wall/r_wall/prepainted,
+/area/johnson/maintenance)
+"IZ" = (
+/obj/structure/curtain/open/bed,
+/obj/item/bedsheet/brown,
+/obj/structure/bed,
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/random/maintenance{
+	spawn_nothing_percentage = 50
+	},
+/turf/floor/wood/walnut,
+/area/johnson)
+"Ju" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	pixel_y = 21
+	},
+/obj/structure/handrail,
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"JP" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"Kh" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/turf/floor/plating/airless,
+/area/johnson/medical)
+"Kr" = (
+/turf/wall/r_wall,
+/area/johnson/mining)
+"Kw" = (
+/obj/structure/flaps/airtight,
+/obj/machinery/door/blast/regular{
+	id_tag = "johnson_mining_bay"
+	},
+/obj/machinery/door/firedoor,
+/turf/floor/plating,
+/area/johnson/mining)
+"KC" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/light,
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"KX" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/catwalk_plated/techfloor,
+/turf/floor/plating,
+/area/johnson)
+"Lw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/airlock_sensor{
+	id_tag = "johnson_mining_interior_sensor";
+	pixel_y = 24
+	},
+/turf/floor/tiled/old_tile,
+/area/johnson/mining)
+"Ly" = (
+/obj/machinery/door/airlock/external/bolted_open{
+	dir = 1;
+	id_tag = "johnson_mining_inner"
+	},
+/turf/floor/plating,
+/area/johnson/mining)
+"LB" = (
+/obj/effect/floor_decal/techfloor,
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"LD" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/suit_cycler/mining{
+	boots = /obj/item/clothing/shoes/magboots;
+	helmet = /obj/item/clothing/head/helmet/space/void/mining;
+	initial_access = null;
+	suit = /obj/item/clothing/suit/space/void/mining
+	},
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"Mg" = (
+/obj/structure/chair/armchair/brown{
+	dir = 1
+	},
+/turf/floor/lino,
+/area/johnson)
+"Mk" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/sign/warning/airlock{
+	dir = 4;
+	pixel_x = -34
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"Mo" = (
+/obj/structure/catwalk,
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber,
+/turf/floor/plating,
+/area/johnson/maintenance)
+"MO" = (
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
+	cycle_to_external_air = 1;
+	dir = 8;
+	id_tag = "johnson_mining";
+	name = "mining airlock controller";
+	pixel_x = 22;
+	tag_airpump = "johnson_mining_pump";
+	tag_chamber_sensor = "johnson_mining_sensor";
+	tag_exterior_door = "johnson_mining_outer";
+	tag_exterior_sensor = "johnson_mining_exterior_sensor";
+	tag_interior_door = "johnson_mining_inner";
+	tag_interior_sensor = "johnson_mining_interior_sensor";
+	tag_pump_out_external = "johnson_mining_pump_out_external";
+	tag_pump_out_internal = "johnson_mining_pump_out_internal";
+	tag_secure = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	id_tag = "johnson_mining_pump"
+	},
+/turf/floor/plating,
+/area/johnson/mining)
+"MU" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/floor/plating/airless,
+/area/johnson)
+"Nu" = (
+/obj/structure/curtain/open/shower/engineering,
+/obj/effect/decal/cleanable/cobweb2,
+/obj/random/maintenance{
+	spawn_nothing_percentage = 50
+	},
+/obj/structure/hygiene/shower{
+	pixel_y = 8
+	},
+/obj/structure/hygiene/toilet{
+	dir = 8
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"Nz" = (
+/obj/effect/floor_decal/corner/brown/three_quarters{
+	dir = 8
+	},
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 24
+	},
+/obj/structure/closet,
+/obj/item/gun/projectile/zipgun/unloaded,
+/obj/item/paicard,
+/obj/item/sign{
+	sign_type = /obj/structure/sign/warning/nosmoking_burned
+	},
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"ND" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"NI" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 4
+	},
+/obj/abstract/submap_landmark/spawnpoint/johnson_medic_spawn,
+/turf/floor/tiled/old_cargo,
+/area/johnson/medical)
+"NK" = (
+/obj/machinery/door/airlock/engineering,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/johnson/maintenance)
+"NX" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/turf/floor/plating/airless,
+/area/johnson/medical)
+"Oj" = (
+/obj/random/vendor,
+/turf/floor/tiled/dark/monotile,
+/area/johnson)
+"Oo" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"Ow" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/floor/plating,
+/area/johnson)
+"Ps" = (
+/obj/effect/floor_decal/corner/brown/half,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/apc{
+	pixel_y = -22
+	},
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"Pv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_y = 25
+	},
+/obj/structure/handrail,
+/turf/floor/lino,
+/area/johnson)
+"PW" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/item/mop,
+/obj/structure/reagent_dispensers/watertank,
+/obj/item/chems/glass/bucket,
+/obj/item/bag/trash,
+/obj/item/plunger,
+/obj/item/box/detergent,
+/obj/item/soap,
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"PX" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/floor/plating,
+/area/johnson/maintenance)
+"Qa" = (
+/obj/structure/cable{
+	icon_state = "0-10"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/machinery/power/smes/buildable/preset{
+	_fully_charged = 1;
+	_input_maxed = 1;
+	_output_maxed = 1;
+	_output_on = 1
+	},
+/turf/floor/plating,
+/area/johnson/maintenance)
+"QQ" = (
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"Rz" = (
+/obj/machinery/door/airlock/external/bolted{
+	dir = 1;
+	id_tag = "johnson_mining_outer"
+	},
+/turf/floor/plating,
+/area/johnson/mining)
+"RY" = (
+/turf/floor/plating,
+/area/johnson)
+"Sm" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/floor/tiled/old_tile,
+/area/johnson/mining)
+"Sv" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/floor/tiled/old_cargo,
+/area/johnson/medical)
+"Sz" = (
+/obj/random/maintenance{
+	spawn_nothing_percentage = 50
+	},
+/turf/floor/lino,
+/area/johnson)
+"SJ" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/item/ore_satchel,
+/obj/item/ore_satchel,
+/obj/item/ore_satchel,
+/obj/structure/closet/walllocker{
+	pixel_y = 32
+	},
+/obj/item/tool/drill,
+/obj/item/tool/drill,
+/obj/item/tool/drill,
+/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern,
+/obj/item/box/glowsticks,
+/obj/item/box/glowsticks,
+/obj/item/box/glowsticks,
+/obj/item/radio{
+	pixel_x = 7;
+	pixel_y = 8
+	},
+/obj/item/radio{
+	pixel_x = 7;
+	pixel_y = 8
+	},
+/obj/item/radio{
+	pixel_x = 7;
+	pixel_y = 8
+	},
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/suit_cooling_unit,
+/obj/item/mobile_ladder,
+/obj/item/hoist_kit,
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"SQ" = (
+/turf/wall/r_wall/prepainted,
+/area/johnson/medical)
+"Td" = (
+/obj/random/single{
+	spawn_nothing_percentage = 95;
+	spawn_object = /obj/item/trash/cigbutt
+	},
+/obj/abstract/landmark/proc_caller/floor_burner{
+	probability = 25
+	},
+/turf/floor/tiled/old_tile,
+/area/johnson/mining)
+"Tu" = (
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/machinery/button/blast_door{
+	dir = 8;
+	id_tag = "johnson_mining_bay";
+	name = "mining bay shutters button";
+	pixel_x = 24
+	},
+/turf/floor/plating,
+/area/johnson/mining)
+"Tv" = (
+/obj/machinery/material_processing/smeltery,
+/turf/floor/plating,
+/area/johnson)
+"TX" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/floor/plating,
+/area/johnson)
+"Uh" = (
+/obj/effect/floor_decal/corner/brown/border,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"Ur" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/ore_box,
+/turf/floor/tiled/old_tile,
+/area/johnson/mining)
+"Uu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/floor/tiled/old_tile,
+/area/johnson/mining)
+"UA" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/floor/plating,
+/area/johnson)
+"UE" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/paleblue/half{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"UT" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/floor/plating/airless,
+/area/johnson)
+"UV" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"Vj" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/catwalk_plated/techfloor,
+/turf/floor/plating,
+/area/johnson)
+"Vm" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/floor/tiled/old_tile,
+/area/johnson)
+"Vo" = (
+/obj/machinery/atmospherics/unary/tank/air{
+	dir = 1;
+	start_pressure = 30.3975;
+	volume = 15000
+	},
+/obj/structure/sign/warning/airlock{
+	dir = 8;
+	pixel_x = 34
+	},
+/turf/floor/plating,
+/area/johnson/mining)
+"Vx" = (
+/obj/machinery/door/airlock/glass/civilian,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor,
+/turf/floor/tiled/dark,
+/area/johnson)
+"VW" = (
+/obj/effect/floor_decal/corner/brown/half,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/fabricator,
+/turf/floor/tiled/steel_grid,
+/area/johnson/mining)
+"Wb" = (
+/obj/abstract/docking_port_spawner/johnson{
+	dir = 4
+	},
+/turf/space,
+/area/space)
+"Wc" = (
+/obj/machinery/door/airlock/external/bolted{
+	dir = 8;
+	id_tag = "johnson_dock_outer"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/floor/plating,
+/area/johnson/maintenance)
+"Ws" = (
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"WD" = (
+/obj/machinery/atmospherics/unary/vent_scrubber,
+/obj/machinery/recycler,
+/turf/floor/plating,
+/area/johnson/mining)
+"WQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/port_gen/pacman,
+/obj/item/stack/material/brick/mapped/graphite/twentyfive,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/obj/machinery/door/firedoor,
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"Xb" = (
+/obj/machinery/atmospherics/unary/tank/carbon_dioxide{
+	dir = 8
+	},
+/turf/floor/plating,
+/area/johnson/maintenance)
+"Xw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/fabricator/pipe,
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"XF" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/table/wood/mahogany,
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/machinery/reagentgrinder/juicer{
+	pixel_y = 19;
+	throwpass = 1
+	},
+/obj/machinery/chemical_dispenser/ship_coffee/full{
+	pixel_x = 6;
+	pixel_y = 4;
+	throwpass = 1
+	},
+/turf/floor/wood/walnut,
+/area/johnson)
+"XL" = (
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/random/maintenance{
+	spawn_nothing_percentage = 50
+	},
+/turf/floor/plating,
+/area/johnson/mining)
+"XN" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "6-8"
+	},
+/turf/floor/tiled/dark/monotile,
+/area/johnson/bridge)
+"XY" = (
+/turf/wall,
+/area/johnson/mining)
+"Yj" = (
+/obj/structure/tank_rack/oxygen,
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	id_tag = "johnson_dock_pump"
+	},
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+"Yn" = (
+/obj/structure/mirror{
+	pixel_y = 29
+	},
+/obj/structure/hygiene/sink{
+	dir = 1;
+	pixel_y = 22
+	},
+/turf/floor/tiled/old_cargo,
+/area/johnson/medical)
+"YG" = (
+/obj/machinery/computer/ship/helm{
+	dir = 8
+	},
+/turf/floor/tiled/dark,
+/area/johnson/bridge)
+"Za" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/chair/shuttle/blue{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "6-9"
+	},
+/turf/floor/tiled/dark/monotile,
+/area/johnson/bridge)
+"Zi" = (
+/obj/structure/handrail,
+/turf/floor/plating,
+/area/johnson)
+"Zn" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/turf/floor/plating/airless,
+/area/johnson)
+"Zp" = (
+/obj/structure/table/reinforced,
+/obj/effect/decal/cleanable/dirt/visible,
+/obj/item/megaphone{
+	pixel_x = 8;
+	pixel_y = 10
+	},
+/obj/item/toolbox/emergency,
+/turf/floor/tiled/dark,
+/area/johnson/bridge)
+"Zu" = (
+/obj/structure/cable/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/machinery/power/solar_control{
+	dir = 8
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
+"ZH" = (
+/obj/effect/floor_decal/corner/brown/border,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor,
+/area/johnson)
+"ZL" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt/visible,
+/turf/floor/tiled/old_tile,
+/area/johnson/mining)
+"ZM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/abstract/submap_landmark/spawnpoint/johnson_crewman_spawn,
+/turf/floor/lino,
+/area/johnson)
+"ZT" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 6
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/floor/tiled/techmaint,
+/area/johnson/maintenance)
+
+(1,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+oY
+"}
+(2,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(3,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(4,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(5,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(6,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(7,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(8,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(9,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(10,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(11,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(12,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(13,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(14,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(15,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+Wb
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(16,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+CA
+mO
+mO
+Wc
+mO
+mO
+bM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(17,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+zB
+jz
+wY
+CX
+iP
+jz
+zB
+zB
+zB
+zB
+zB
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(18,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+Il
+xU
+zB
+zB
+jz
+Yj
+em
+zT
+jz
+zB
+wG
+rS
+Il
+zB
+zB
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(19,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+IW
+zU
+Di
+IW
+jz
+IW
+IW
+Aq
+IW
+IW
+PX
+IW
+kn
+vb
+IW
+zB
+zB
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(20,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+IW
+IW
+rr
+AU
+HN
+WQ
+bd
+Mk
+gC
+rZ
+wD
+Xw
+ay
+dk
+gI
+IW
+IW
+zB
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(21,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+IW
+sz
+ce
+Fr
+Fm
+jP
+Mo
+UV
+sd
+LB
+Hm
+De
+It
+hy
+jJ
+mI
+IW
+zB
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(22,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+IW
+Nu
+Xb
+ag
+PW
+cb
+dV
+Cc
+eO
+ZT
+Zu
+mt
+Qa
+aa
+iT
+FW
+IW
+zB
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(23,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+IW
+CS
+CS
+CS
+CS
+CS
+CS
+Id
+GG
+NK
+IW
+IW
+IW
+IW
+IW
+IW
+mO
+zB
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(24,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+FX
+ko
+CB
+LD
+ED
+ma
+XY
+fV
+Ws
+hs
+nq
+RY
+RY
+TX
+nB
+UA
+xf
+zB
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(25,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+Kw
+qS
+Td
+Td
+CC
+ov
+XY
+kw
+KX
+KC
+nq
+Zi
+nB
+RY
+RY
+Hc
+nq
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(26,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+Kw
+qS
+Ur
+Ur
+Sm
+VW
+XY
+Ju
+BR
+mX
+nq
+Cq
+RY
+RY
+RY
+UA
+fK
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(27,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+Kw
+na
+WD
+bG
+Uu
+tB
+zW
+ND
+KX
+Gy
+Ca
+rc
+RY
+RY
+RY
+UA
+fK
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(28,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+Kw
+qS
+XL
+kH
+Bp
+eh
+Gk
+Oo
+iL
+Gy
+IS
+HG
+RY
+RY
+RY
+UA
+fK
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(29,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+Kw
+Tu
+EP
+bD
+GH
+Nz
+zW
+ND
+GD
+Do
+Ca
+cF
+RY
+nB
+RY
+UA
+fK
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(30,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+dg
+FX
+FX
+FX
+Lw
+Ps
+Kr
+XY
+SJ
+KX
+JP
+nq
+HP
+RY
+RY
+RY
+UA
+fK
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(31,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+Bu
+pA
+lb
+Ly
+ZL
+BP
+Kr
+Oj
+QQ
+KX
+dx
+nq
+Zi
+Tv
+RY
+ph
+UA
+fK
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(32,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+GF
+Rz
+MO
+Eu
+yB
+Vo
+Kr
+Fs
+mW
+KX
+dJ
+nq
+nB
+RY
+cK
+RY
+UA
+fK
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(33,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+qA
+FX
+FX
+SQ
+Bc
+Bc
+Bc
+vR
+kc
+wo
+ZH
+nq
+eR
+eR
+eR
+eR
+eR
+nq
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(34,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+pK
+SQ
+vJ
+CD
+DW
+vR
+wd
+KX
+EL
+Ac
+qZ
+IZ
+Hy
+eR
+MU
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(35,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+qk
+SQ
+Yn
+NI
+zS
+vR
+nb
+KX
+IT
+Ac
+ZM
+FY
+Sz
+jt
+iH
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(36,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+qk
+SQ
+Bj
+lF
+iq
+yS
+Vm
+Vj
+Uh
+Ac
+Pv
+Sz
+Mg
+jt
+iH
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(37,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+qk
+SQ
+fx
+Sv
+tV
+iw
+mi
+zE
+ux
+Vx
+ej
+AR
+If
+jt
+iH
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(38,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+qk
+SQ
+bV
+hw
+jI
+vR
+iN
+UE
+Dc
+Ac
+iu
+XF
+Gg
+eR
+iH
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(39,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+qk
+SQ
+CE
+qH
+vt
+FV
+sy
+Et
+xc
+Et
+vt
+Ow
+jt
+eR
+iH
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(40,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+Kh
+NX
+zf
+tG
+vt
+rB
+XN
+cg
+Gj
+II
+vt
+zM
+ht
+kI
+Zn
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(41,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+et
+et
+uT
+aP
+xi
+Za
+xi
+Zp
+uT
+fn
+UT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(42,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+uT
+uT
+cs
+YG
+wj
+HY
+HY
+hL
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(43,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+uT
+uT
+uT
+uT
+uT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(44,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(45,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(46,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(47,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(48,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(49,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(50,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(51,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(52,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(53,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(54,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(55,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(56,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(57,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(58,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(59,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(60,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
