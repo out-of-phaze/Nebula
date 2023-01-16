@@ -536,12 +536,6 @@
 /obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/tanker)
-"Ze" = (
-/obj/structure/fuel_port/hydrogen{
-	dir = 1
-	},
-/turf/space,
-/area/space)
 "ZI" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/steel_grid,
@@ -1816,7 +1810,7 @@ jh
 jh
 jh
 jh
-Ze
+jh
 lU
 jp
 cV
