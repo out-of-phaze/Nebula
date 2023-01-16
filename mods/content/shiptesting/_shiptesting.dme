@@ -5,4 +5,5 @@
 #include "lobby_handler.dm"
 #include "ships/ships.dm"
 #include "ships/tanker/tanker.dm"
+#include "ships/johnson/johnson.dm"
 #endif
