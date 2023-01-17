@@ -9,18 +9,18 @@
 	desc = "Sensors detect a Johnson-class deep space mining vessel."
 	shuttle = "Mining Vessel"
 	fore_dir = WEST
-	max_speed = 1/(10 SECOND)
+	max_speed = 1/(3 SECONDS)
 	sector_flags = OVERMAP_SECTOR_IN_SPACE
 	use_mapped_z_levels = TRUE
 
 /datum/shuttle/autodock/overmap/johnson
 	name = "Mining Vessel"
-	warmup_time = 2
+	warmup_time = 4 // in seconds
 	fuel_consumption = 0 // because fuck fuel ports
 	current_location = "nav_johnson"
 	dock_target = "johnson_dock"
 	defer_initialisation = TRUE
-	shuttle_area = /area/johnson
+	shuttle_area = list(/area/johnson, /area/johnson/bridge, /area/johnson/maintenance, /area/johnson/medical, /area/johnson/mining)
 
 /obj/effect/shuttle_landmark/ship/johnson
 	landmark_tag = "nav_johnson"
@@ -52,6 +52,8 @@
 		/datum/job/submap/johnson_crewman,
 		/datum/job/submap/johnson_medic,
 	)
+	whitelisted_species = null
+	blacklisted_species = null
 
 /obj/abstract/submap_landmark/spawnpoint/johnson_pilot_spawn
 	name = "Mining Vessel Pilot"
@@ -84,6 +86,9 @@
 		SKILL_PILOT   = SKILL_MAX,
 		SKILL_WEAPONS = SKILL_MAX
 	)
+	no_skill_buffs = TRUE // stopgap for utility frames
+	whitelisted_species = null
+	blacklisted_species = null
 
 /datum/job/submap/johnson_technician
 	title = "Mining Vessel Technician"
@@ -104,7 +109,10 @@
 		SKILL_ATMOS        = SKILL_MAX,
 		SKILL_ENGINES      = SKILL_MAX
 	)
-	skill_points = 20
+	skill_points = 25
+	no_skill_buffs = TRUE // stopgap for utility frames
+	whitelisted_species = null
+	blacklisted_species = null
 
 /datum/job/submap/johnson_crewman
 	title = "Mining Vessel Crewman"
@@ -115,15 +123,18 @@
 		"Mining Vessel Drill Technician",
 		"Mining Vessel Prospector"
 	)
-	skill_points = 16
+	skill_points = 25
 	min_skill = list(
-		SKILL_LITERACY = SKILL_NONE,
+		SKILL_LITERACY = SKILL_BASIC,
 		SKILL_HAULING  = SKILL_ADEPT,
 		SKILL_EVA      = SKILL_BASIC
 	)
 	max_skill = list(
 		SKILL_PILOT    = SKILL_MAX
 	)
+	no_skill_buffs = TRUE // stopgap for utility frames
+	whitelisted_species = null
+	blacklisted_species = null
 
 /datum/job/submap/johnson_medic
 	title = "Mining Vessel Medic"
@@ -141,17 +152,22 @@
 		SKILL_MEDICAL   = SKILL_MAX,
 		SKILL_CHEMISTRY = SKILL_MAX
 	)
+	no_skill_buffs = TRUE // stopgap for utility frames
+	whitelisted_species = null
+	blacklisted_species = null
 
 /decl/hierarchy/outfit/job/generic/johnson_pilot
 	name = "Job - Mining vessel pilot"
 	uniform = /obj/item/clothing/under/pilot
 	id_type = /obj/item/card/id/civilian/head
 	pda_type = /obj/item/modular_computer/pda/heads/captain
+	l_ear = null
 
 /decl/hierarchy/outfit/job/generic/engineer/johnson_technician
 	name = "Job - Mining vessel technician"
 	uniform = /obj/item/clothing/under/engineer
 	belt = /obj/item/storage/belt/utility/full
+	l_ear = null
 
 /decl/hierarchy/outfit/job/generic/johnson_mining
 	name = "Job - Mining vessel shaft miner"
@@ -159,6 +175,7 @@
 	pda_type = /obj/item/modular_computer/pda/science
 	backpack_contents = list(/obj/item/crowbar = 1, /obj/item/storage/ore = 1)
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	l_ear = null
 
 /decl/hierarchy/outfit/job/generic/johnson_mining/Initialize()
 	. = ..()
@@ -166,3 +183,4 @@
 
 /decl/hierarchy/outfit/job/generic/doctor/johnson_medic
 	name = "Job - Mining vessel medic"
+	l_ear = null
