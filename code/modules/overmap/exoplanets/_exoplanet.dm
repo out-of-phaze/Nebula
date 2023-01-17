@@ -255,7 +255,7 @@
 
 		landing_points_to_place--
 		places += T
-		new /obj/effect/shuttle_landmark/automatic/clearing(T)
+		new /obj/effect/shuttle_landmark/automatic/clearing(T, round(shuttle_size / 2))
 
 /obj/effect/overmap/visitable/sector/exoplanet/get_scan_data(mob/user)
 	. = ..()

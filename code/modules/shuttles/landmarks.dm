@@ -129,12 +129,14 @@ var/global/list/shuttle_landmarks = list()
 	..()
 	SetName("[O.name] - [initial(name)] ([x],[y])")
 
-//Subtype that calls explosion on init to clear space for shuttles
+//Subtype that replaces turfs on lateinit to clear space for shuttles
 /obj/effect/shuttle_landmark/automatic/clearing
 	var/radius = 10
 
-/obj/effect/shuttle_landmark/automatic/clearing/Initialize()
+/obj/effect/shuttle_landmark/automatic/clearing/Initialize(mapload, newradius)
 	..()
+	if(!isnull(newradius))
+		radius = newradius
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/effect/shuttle_landmark/automatic/clearing/LateInitialize()
