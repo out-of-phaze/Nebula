@@ -29,6 +29,18 @@
 	name = "Mining Vessel"
 	icon_state = "yellow"
 
+/area/johnson/bridge
+	name = "Mining Vessel Bridge"
+
+/area/johnson/maintenance
+	name = "Mining Vessel Maintenance"
+
+/area/johnson/mining
+	name = "Mining Vessel Operations Bay"
+
+/area/johnson/medical
+	name = "Mining Vessel Infirmary"
+
 /decl/submap_archetype/johnson
 	descriptor = "mining vessel"
 	map = "Johnson-class deep space mining vessel"
