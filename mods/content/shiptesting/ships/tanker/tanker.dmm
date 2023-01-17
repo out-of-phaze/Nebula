@@ -49,7 +49,7 @@
 /area/tanker)
 "dg" = (
 /obj/effect/overmap/visitable/ship/landable/tanker,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/simulated/floor/reinforced/oxygen,
 /area/tanker)
 "dJ" = (
 /turf/simulated/floor/reinforced/airless,
@@ -1820,7 +1820,7 @@ yv
 sl
 sl
 Uu
-dg
+sl
 CD
 fv
 GF
@@ -2502,7 +2502,7 @@ Td
 Td
 Td
 Td
-Td
+dg
 Td
 Td
 Td
