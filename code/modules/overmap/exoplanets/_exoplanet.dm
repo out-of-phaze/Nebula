@@ -22,7 +22,7 @@
 	var/x_size
 	var/y_size
 
-	var/shuttle_size = 20  		 //'diameter' of expected shuttle in turfs
+	var/shuttle_size = 30  		 //'diameter' of expected shuttle in turfs
 	var/landing_points_to_place  // number of landing points to place, calculated dynamically based on planet size
 
 	var/list/rock_colors = list(COLOR_ASTEROID_ROCK)
