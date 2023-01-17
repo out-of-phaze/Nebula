@@ -15,7 +15,7 @@
 
 /datum/shuttle/autodock/overmap/tanker
 	name = "Tanker"
-	warmup_time = 40
+	warmup_time = 4
 	fuel_consumption = 0 // because fuck fuel ports
 	current_location = "nav_tanker"
 	dock_target = "tanker_dock"
@@ -24,6 +24,8 @@
 
 /obj/effect/shuttle_landmark/ship/tanker
 	landmark_tag = "nav_tanker"
+	base_area = /area/space
+	base_turf = /turf/space
 
 /area/tanker
 	name = "Tanker"

@@ -24,6 +24,8 @@
 
 /obj/effect/shuttle_landmark/ship/johnson
 	landmark_tag = "nav_johnson"
+	base_area = /area/space
+	base_turf = /turf/space
 
 /area/johnson
 	name = "Mining Vessel"
