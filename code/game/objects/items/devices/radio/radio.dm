@@ -251,10 +251,18 @@
 	talk_into(A, message, channel, sayverb)
 	qdel(A)
 
+var/global/list/nondepartment_message_modes = list(
+	"headset" = TRUE,
+	"left ear" = TRUE,
+	"right ear" = TRUE,
+	"intercom" = TRUE,
+	"whisper" = TRUE
+)
+
 // Interprets the message mode when talking into a radio, possibly returning a connection datum
 /obj/item/radio/proc/get_connection_from_message_mode(mob/living/M, message, message_mode)
 	// If a channel isn't specified, send to common.
-	if(!message_mode || message_mode == "headset")
+	if(!message_mode || nondepartment_message_modes[message_mode])
 		return radio_connection
 
 	// Otherwise, if a channel is specified, look for it.

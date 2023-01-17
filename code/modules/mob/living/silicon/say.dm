@@ -9,7 +9,7 @@
 		if(!is_component_functioning("radio"))
 			to_chat(src, SPAN_WARNING("Your radio isn't functional at this time."))
 			return FALSE
-		if(message_mode == "general")
+		if(message_mode == "headset")
 			message_mode = null
 		return silicon_radio.talk_into(src, message, message_mode, verb, speaking)
 	return ..()
@@ -21,14 +21,14 @@
 		if (ai_radio.disabledAi || !has_power() || stat)
 			to_chat(src, "<span class='danger'>System Error - Transceiver Disabled.</span>")
 			return FALSE
-		if(message_mode == "general")
+		if(message_mode == "headset")
 			message_mode = null
 		return ai_radio.talk_into(src,message,message_mode,verb,speaking)
 	return ..()
 
 /mob/living/silicon/pai/handle_message_mode(message_mode, message, verb, speaking, used_radios, alt_name)
 	if(message_mode)
-		if(message_mode == "general")
+		if(message_mode == "headset")
 			message_mode = null
 		return silicon_radio.talk_into(src,message,message_mode,verb,speaking)
 	return ..()

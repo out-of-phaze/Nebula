@@ -181,7 +181,6 @@ var/global/list/channel_to_radio_key = new
 		used_radios += radio
 		radio.add_fingerprint(src)
 		radio.talk_into(src, message, message_mode, verb, speaking)
-		. = TRUE
 
 /mob/living/proc/handle_speech_sound()
 	var/list/returns[2]
