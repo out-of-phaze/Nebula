@@ -2,7 +2,7 @@
 
 /decl/modpack/shiptesting
 	name = "Ship Testing Content"
-	credits_adjectives =      list("SHIPPED", "TESTED", "SHIPTESTED")
+	credits_adjectives =      list("SHIPPED", "TESTED", "SHIPTESTED", "SHIPPING", "TESTING")
 	credits_adventure_names = list("ODYSSEY", "TEST", "TRIAL")
 	credits_crew_names =      list("THE TESTING TEAM", "THE SHIP")
 	credits_holidays =        list("NATIONAL DAY OF SHIP", "INTERNATIONAL TESTING DAY", "THE SHIPTESTIVERSARY")
