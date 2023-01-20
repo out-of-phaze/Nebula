@@ -7,3 +7,4 @@
 	default_spawn = null
 	overmap_ids = list(OVERMAP_ID_SPACE)
 	num_exoplanets = 3
+	away_site_budget = 5
