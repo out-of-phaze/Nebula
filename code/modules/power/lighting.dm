@@ -99,6 +99,10 @@
 		if(prob(lightbulb.broken_chance))
 			broken(1)
 
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/machinery/light/LateInitialize()
+	. = ..()
 	on = expected_to_be_on()
 	queue_icon_update(0)
 
