@@ -24,6 +24,7 @@
 
 /obj/effect/shuttle_landmark/ship/johnson
 	landmark_tag = "nav_johnson"
+	flags = SLANDMARK_FLAG_ZERO_G
 	base_area = /area/space
 	base_turf = /turf/space
 
