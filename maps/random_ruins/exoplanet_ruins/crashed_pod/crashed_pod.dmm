@@ -11,22 +11,12 @@
 /turf/floor/plating,
 /area/map_template/crashed_pod)
 "ad" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 1
-	},
-/obj/structure/wall_frame,
-/obj/structure/grille,
-/obj/structure/window/borosilicate_reinforced/full,
 /obj/abstract/submap_landmark/joinable_submap/crashed_pod,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/floor/plating,
 /area/map_template/crashed_pod)
 "ae" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 1
-	},
-/obj/structure/wall_frame,
-/obj/structure/grille,
-/obj/structure/window/borosilicate_reinforced/full,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/floor/plating,
 /area/map_template/crashed_pod)
 "af" = (
@@ -37,15 +27,10 @@
 /turf/wall/r_wall,
 /area/map_template/crashed_pod)
 "ag" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 1
-	},
-/obj/structure/wall_frame,
-/obj/structure/grille,
-/obj/structure/window/borosilicate_reinforced/full,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 10
 	},
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/floor/plating,
 /area/map_template/crashed_pod)
 "ah" = (
@@ -549,6 +534,10 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/abstract/landmark/carnage_mark{
+	movement_prob = 10;
+	movement_range = 1
+	},
 /turf/floor/tiled/dark,
 /area/map_template/crashed_pod)
 "bl" = (
