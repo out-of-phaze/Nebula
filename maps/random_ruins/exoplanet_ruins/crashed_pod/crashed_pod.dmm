@@ -26,22 +26,12 @@
 /turf/floor/plating,
 /area/map_template/crashed_pod)
 "ad" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 1
-	},
-/obj/structure/wall_frame,
-/obj/structure/grille,
-/obj/structure/window/borosilicate_reinforced/full,
 /obj/abstract/submap_landmark/joinable_submap/crashed_pod,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/floor/plating,
 /area/map_template/crashed_pod)
 "ae" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 1
-	},
-/obj/structure/wall_frame,
-/obj/structure/grille,
-/obj/structure/window/borosilicate_reinforced/full,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/floor/plating,
 /area/map_template/crashed_pod)
 "af" = (
@@ -57,12 +47,7 @@
 /turf/floor/plating,
 /area/map_template/crashed_pod)
 "ag" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 1
-	},
-/obj/structure/wall_frame,
-/obj/structure/grille,
-/obj/structure/window/borosilicate_reinforced/full,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 10
 	},
@@ -757,6 +742,10 @@
 /obj/item/bladed/polearm/spear,
 /obj/item/bladed/polearm/spear,
 /obj/effect/decal/cleanable/dirt/visible,
+/obj/abstract/landmark/carnage_mark{
+	movement_prob = 10;
+	movement_range = 1
+	},
 /turf/floor/tiled/dark,
 /area/map_template/crashed_pod)
 "bl" = (
