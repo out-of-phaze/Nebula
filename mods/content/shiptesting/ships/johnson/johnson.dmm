@@ -62,6 +62,20 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/johnson/bridge)
+"bd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/port_gen/pacman,
+/obj/item/stack/material/brick/mapped/graphite/twentyfive,
+/obj/machinery/airlock_sensor{
+	dir = 4;
+	id_tag = "johnson_dock_interior_sensor";
+	pixel_x = -22
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/johnson/maintenance)
 "bD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -109,9 +123,10 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
+/obj/machinery/atmospherics/unary/tank/air{
+	dir = 8;
+	start_pressure = 30.3975;
+	volume = 15000
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
@@ -128,10 +143,6 @@
 	},
 /obj/machinery/hologram/holopad/longrange/remoteship,
 /obj/abstract/submap_landmark/spawnpoint/johnson_pilot_spawn,
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -24
-	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/johnson/bridge)
 "cs" = (
@@ -146,13 +157,21 @@
 	},
 /turf/simulated/floor/plating,
 /area/johnson)
-"dg" = (
-/obj/machinery/door/airlock/external/bolted{
-	dir = 1;
-	id_tag = "johnson_dock_exterior_door"
+"cK" = (
+/obj/structure/handrail{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/johnson/maintenance)
+/area/johnson)
+"dg" = (
+/obj/machinery/airlock_sensor{
+	dir = 1;
+	id_tag = "johnson_dock_sensor_external";
+	pixel_y = -20
+	},
+/obj/structure/catwalk,
+/turf/space,
+/area/johnson/mining)
 "dk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/structure/cable{
@@ -227,7 +246,7 @@
 /area/johnson/maintenance)
 "et" = (
 /obj/machinery/power/solar,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/johnson)
 "eO" = (
 /obj/effect/floor_decal/techfloor{
@@ -244,10 +263,18 @@
 "eR" = (
 /turf/simulated/wall/r_wall/hull,
 /area/johnson)
+"fn" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/solar,
+/turf/simulated/floor/airless,
+/area/johnson)
 "fx" = (
 /obj/machinery/vending/wallmed1{
 	pixel_y = 32
 	},
+/obj/structure/handrail,
 /turf/simulated/floor/tiled/white/monotile,
 /area/johnson/medical)
 "fK" = (
@@ -335,7 +362,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/johnson)
 "hw" = (
 /obj/structure/cable/yellow{
@@ -365,7 +392,8 @@
 /area/johnson/maintenance)
 "hL" = (
 /obj/machinery/shipsensors,
-/turf/simulated/floor/plating,
+/obj/structure/cable,
+/turf/simulated/floor/airless,
 /area/johnson)
 "iq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -402,7 +430,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/johnson)
 "iL" = (
 /obj/effect/shuttle_landmark/ship/johnson,
@@ -430,18 +458,21 @@
 /turf/simulated/floor/tiled/dark,
 /area/johnson)
 "iP" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
-	dir = 1;
-	id_tag = "johnson_dock_pump"
-	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
+	cycle_to_external_air = 1;
 	dir = 4;
 	id_tag = "johnson_dock";
 	pixel_x = -22;
 	tag_airpump = "johnson_dock_pump";
 	tag_chamber_sensor = "johnson_dock_sensor";
-	tag_exterior_door = "johnson_dock_exterior_door";
-	tag_interior_door = "johnson_dock_interior_door"
+	tag_exterior_door = "johnson_dock_outer";
+	tag_exterior_sensor = "johnson_dock_exterior_sensor";
+	tag_interior_door = "johnson_dock_inner";
+	tag_interior_sensor = "johnson_dock_interior_sensor"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	dir = 1;
+	id_tag = "johnson_dock_pump"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/johnson/maintenance)
@@ -568,7 +599,7 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/yellow,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/johnson)
 "kM" = (
 /turf/space,
@@ -579,10 +610,11 @@
 	id_tag = "johnson_mining_sensor";
 	pixel_x = -22
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
-	id_tag = "johnson_mining_pump"
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	dir = 1;
+	id_tag = "johnson_mining_pump_out_internal"
+	},
 /turf/simulated/floor/plating,
 /area/johnson/mining)
 "lF" = (
@@ -651,6 +683,9 @@
 	dir = 1;
 	pixel_y = -32
 	},
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/johnson)
 "na" = (
@@ -661,6 +696,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
+/obj/structure/handrail,
 /turf/simulated/floor/tiled/white,
 /area/johnson)
 "nB" = (
@@ -688,28 +724,20 @@
 "pA" = (
 /obj/machinery/door/airlock/external/bolted{
 	dir = 1;
-	id_tag = "johnson_mining_exterior_door"
+	id_tag = "johnson_mining_outer"
 	},
-/turf/simulated/floor/plating,
-/area/johnson/mining)
-"qq" = (
-/obj/machinery/door/airlock/external/bolted_open{
-	dir = 1;
-	id_tag = "johnson_mining_interior_door"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/johnson/mining)
 "qA" = (
 /obj/machinery/button/access/exterior{
 	dir = 1;
-	id_tag = "johnson_cargo";
+	id_tag = "johnson_mining";
 	pixel_y = -22
 	},
+/obj/structure/catwalk,
 /turf/space,
-/area/space)
+/area/johnson/mining)
 "qH" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/structure/cable/yellow{
@@ -758,6 +786,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1
 	},
+/obj/structure/handrail,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "rB" = (
@@ -773,7 +802,11 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/network/requests_console{
+	pixel_x = -32;
 	pixel_y = 32
+	},
+/obj/machinery/light_switch{
+	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/dark,
 /area/johnson/bridge)
@@ -854,7 +887,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/johnson)
 "tV" = (
 /obj/structure/cable/yellow{
@@ -918,6 +951,9 @@
 	name = "shuttle control console";
 	shuttle_tag = "Mining Vessel"
 	},
+/obj/structure/cable{
+	icon_state = "2-9"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/johnson/bridge)
 "wD" = (
@@ -942,7 +978,7 @@
 /area/johnson/maintenance)
 "wG" = (
 /obj/machinery/atmospherics/unary/outlet_injector,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/airless,
 /area/johnson/maintenance)
 "wY" = (
 /obj/machinery/airlock_sensor{
@@ -950,7 +986,9 @@
 	id_tag = "johnson_dock_sensor";
 	pixel_x = -22
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air,
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	id_tag = "johnson_dock_pump"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "xc" = (
@@ -1022,7 +1060,6 @@
 /turf/simulated/floor/plating,
 /area/johnson)
 "zM" = (
-/obj/machinery/power/solar,
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
@@ -1032,7 +1069,8 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/plating,
+/obj/machinery/power/solar,
+/turf/simulated/floor/airless,
 /area/johnson)
 "zS" = (
 /obj/structure/cable{
@@ -1047,16 +1085,19 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/johnson/medical)
 "zT" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
-	dir = 1;
-	id_tag = "johnson_dock_pump"
-	},
 /obj/structure/closet/hydrant{
 	dir = 8;
 	pixel_x = 32
 	},
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
+	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	dir = 1;
+	id_tag = "johnson_dock_pump"
+	},
+/obj/structure/handrail{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/johnson/maintenance)
@@ -1083,7 +1124,7 @@
 "Aq" = (
 /obj/machinery/door/airlock/external/bolted_open{
 	dir = 4;
-	id_tag = "johnson_dock_interior_door"
+	id_tag = "johnson_dock_inner"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -1133,11 +1174,11 @@
 /turf/simulated/floor/tiled,
 /area/johnson/mining)
 "Bu" = (
-/obj/machinery/atmospherics/unary/engine{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "johnson_mining_pump_out_external"
 	},
-/turf/space,
-/area/johnson/maintenance)
+/turf/simulated/floor/reinforced/airless,
+/area/johnson/mining)
 "BP" = (
 /obj/effect/floor_decal/corner/brown/half,
 /obj/machinery/light,
@@ -1279,6 +1320,14 @@
 "Et" = (
 /turf/simulated/wall,
 /area/johnson/bridge)
+"Eu" = (
+/obj/machinery/door/airlock/external/bolted_open{
+	dir = 1;
+	id_tag = "johnson_mining_inner"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/plating,
+/area/johnson/mining)
 "ED" = (
 /obj/effect/floor_decal/corner/brown/half{
 	dir = 8
@@ -1292,9 +1341,6 @@
 /area/johnson/mining)
 "EP" = (
 /obj/abstract/submap_landmark/spawnpoint/johnson_crewman_spawn,
-/obj/structure/sign/warning/nosmoking_burned{
-	pixel_x = 30
-	},
 /turf/simulated/floor/plating,
 /area/johnson/mining)
 "Fm" = (
@@ -1384,11 +1430,8 @@
 /turf/simulated/floor/plating,
 /area/johnson)
 "GF" = (
-/obj/machinery/door/airlock/external/bolted{
-	id_tag = "johnson_dock_exterior_door"
-	},
-/turf/simulated/floor/plating,
-/area/johnson/maintenance)
+/turf/simulated/floor/reinforced/airless,
+/area/johnson/mining)
 "GG" = (
 /turf/simulated/wall,
 /area/johnson/maintenance)
@@ -1454,6 +1497,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/johnson)
+"HY" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/johnson/bridge)
 "Id" = (
 /obj/machinery/door/airlock/engineering,
 /obj/structure/cable{
@@ -1527,6 +1577,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/johnson)
+"IT" = (
+/obj/effect/floor_decal/corner/brown/border,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/johnson)
 "IW" = (
 /turf/simulated/wall/r_wall/hull,
 /area/johnson/maintenance)
@@ -1547,6 +1607,7 @@
 /obj/machinery/firealarm{
 	pixel_y = 21
 	},
+/obj/structure/handrail,
 /turf/simulated/floor/tiled/dark,
 /area/johnson)
 "JP" = (
@@ -1562,7 +1623,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/johnson)
 "Kw" = (
 /obj/structure/plasticflaps/airtight,
@@ -1596,15 +1657,16 @@
 	dir = 4
 	},
 /obj/structure/sign/warning/airlock,
+/obj/machinery/airlock_sensor{
+	id_tag = "johnson_dock_sensor_external";
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled,
 /area/johnson/mining)
 "Ly" = (
 /obj/machinery/door/airlock/external/bolted_open{
 	dir = 1;
-	id_tag = "johnson_mining_interior_door"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
+	id_tag = "johnson_mining_inner"
 	},
 /turf/simulated/floor/plating,
 /area/johnson/mining)
@@ -1670,19 +1732,25 @@
 /turf/simulated/floor/plating,
 /area/johnson/maintenance)
 "MO" = (
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
+	cycle_to_external_air = 1;
 	dir = 8;
 	id_tag = "johnson_mining";
+	name = "mining airlock controller";
 	pixel_x = 22;
 	tag_airpump = "johnson_mining_pump";
 	tag_chamber_sensor = "johnson_mining_sensor";
-	tag_exterior_door = "johnson_mining_exterior_door";
-	tag_interior_door = "johnson_mining_interior_door"
+	tag_exterior_door = "johnson_mining_outer";
+	tag_exterior_sensor = "johnson_mining_exterior_sensor";
+	tag_interior_door = "johnson_mining_inner";
+	tag_interior_sensor = "johnson_mining_interior_sensor";
+	tag_pump_out_external = "johnson_mining_pump_out_external";
+	tag_pump_out_internal = "johnson_mining_pump_out_internal"
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
 	id_tag = "johnson_mining_pump"
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/johnson/mining)
 "MU" = (
@@ -1690,7 +1758,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/johnson)
 "Nu" = (
 /obj/structure/curtain/open/shower/engineering,
@@ -1756,7 +1824,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/johnson)
 "Oj" = (
 /obj/random/vendor,
@@ -1800,6 +1868,7 @@
 /obj/machinery/light_switch{
 	pixel_y = 25
 	},
+/obj/structure/handrail,
 /turf/simulated/floor/lino,
 /area/johnson)
 "PH" = (
@@ -1825,19 +1894,25 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
-/obj/machinery/power/smes/buildable/preset,
 /obj/structure/catwalk,
+/obj/machinery/power/smes/buildable/preset{
+	_fully_charged = 1;
+	_input_maxed = 1;
+	_output_maxed = 1;
+	_output_on = 1
+	},
 /turf/simulated/floor/plating,
 /area/johnson/maintenance)
 "QQ" = (
 /turf/simulated/floor/tiled/dark,
 /area/johnson)
 "Rz" = (
-/obj/effect/floor_decal/industrial/loading{
-	dir = 8
+/obj/machinery/door/airlock/external/bolted{
+	dir = 1;
+	id_tag = "johnson_mining_outer"
 	},
 /turf/simulated/floor/plating,
-/area/johnson)
+/area/johnson/mining)
 "RY" = (
 /turf/simulated/floor/plating,
 /area/johnson)
@@ -1917,10 +1992,21 @@
 	name = "mining bay shutters button";
 	pixel_x = 24
 	},
+/obj/structure/sign/warning/nosmoking_burned{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 30
+	},
 /turf/simulated/floor/plating,
 /area/johnson/mining)
 "Tv" = (
 /obj/machinery/material_processing/smeltery,
+/turf/simulated/floor/plating,
+/area/johnson)
+"TX" = (
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/johnson)
 "Uh" = (
@@ -1968,7 +2054,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/johnson)
 "UV" = (
 /obj/effect/floor_decal/techfloor{
@@ -2014,10 +2100,11 @@
 /turf/simulated/floor/tiled/white,
 /area/johnson)
 "Vo" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
+/obj/machinery/atmospherics/unary/tank/air{
+	dir = 1;
+	start_pressure = 30.3975;
+	volume = 15000
 	},
-/obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/plating,
 /area/johnson/mining)
 "Vx" = (
@@ -2039,7 +2126,7 @@
 "Wc" = (
 /obj/machinery/door/airlock/external/bolted{
 	dir = 8;
-	id_tag = "johnson_dock_exterior_door"
+	id_tag = "johnson_dock_outer"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -2113,6 +2200,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/structure/cable{
+	icon_state = "6-8"
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/johnson/bridge)
 "XY" = (
@@ -2120,7 +2210,9 @@
 /area/johnson/mining)
 "Yj" = (
 /obj/structure/tank_rack/oxygen,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air,
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	id_tag = "johnson_dock_pump"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "Yn" = (
@@ -2139,11 +2231,33 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/johnson/bridge)
+"YJ" = (
+/obj/machinery/airlock_sensor{
+	dir = 8;
+	id_tag = "johnson_dock_exterior_sensor";
+	pixel_x = 22
+	},
+/turf/space,
+/area/space)
+"Za" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/bed/chair/shuttle/blue{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "6-9"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/johnson/bridge)
+"Zi" = (
+/obj/structure/handrail,
+/turf/simulated/floor/plating,
+/area/johnson)
 "Zn" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/johnson)
 "Zp" = (
 /obj/structure/table/reinforced,
@@ -3097,7 +3211,7 @@ kM
 kM
 kM
 kM
-kM
+YJ
 kM
 NF
 kM
@@ -3220,11 +3334,11 @@ kM
 kM
 kM
 zB
-dg
+jz
 wY
 CX
 iP
-GF
+jz
 zB
 zB
 zB
@@ -3278,7 +3392,7 @@ kM
 kM
 kM
 kM
-Bu
+Il
 xU
 zB
 zB
@@ -3406,7 +3520,7 @@ rr
 AU
 HN
 WQ
-WQ
+bd
 Mk
 gC
 rZ
@@ -3661,7 +3775,7 @@ hs
 Ac
 RY
 RY
-RY
+TX
 nB
 UA
 xf
@@ -3721,7 +3835,7 @@ kw
 KX
 KC
 Ac
-RY
+Zi
 nB
 RY
 RY
@@ -4019,7 +4133,7 @@ kM
 kM
 kM
 kM
-kM
+dg
 FX
 FX
 FX
@@ -4032,9 +4146,9 @@ KX
 JP
 Ac
 HP
-Rz
 RY
-Rz
+RY
+RY
 UA
 fK
 kM
@@ -4081,10 +4195,10 @@ kM
 kM
 kM
 kM
-kM
+Bu
 pA
 lb
-qq
+Ly
 ZL
 BP
 FX
@@ -4093,7 +4207,7 @@ QQ
 KX
 dx
 Ac
-RY
+Zi
 Tv
 RY
 ph
@@ -4143,10 +4257,10 @@ kM
 kM
 kM
 kM
-kM
-pA
+GF
+Rz
 MO
-Ly
+Eu
 yB
 Vo
 FX
@@ -4156,9 +4270,9 @@ KX
 dJ
 Ac
 nB
-Rz
 RY
-Rz
+cK
+RY
 UA
 fK
 kM
@@ -4339,7 +4453,7 @@ zS
 vR
 nb
 KX
-ZH
+IT
 Ac
 ZM
 FY
@@ -4710,11 +4824,11 @@ et
 uT
 aP
 xi
-xi
+Za
 xi
 Zp
 uT
-UT
+fn
 UT
 kM
 kM
@@ -4774,8 +4888,8 @@ uT
 cs
 YG
 wj
-uT
-uT
+HY
+HY
 hL
 kM
 kM
