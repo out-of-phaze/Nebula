@@ -504,7 +504,6 @@
 	. = ..()
 	if(config.expanded_alt_interactions)
 		LAZYADD(., list(
-			/decl/interaction_handler/look,
 			/decl/interaction_handler/grab
 		))
 
