@@ -22,6 +22,12 @@
  * Text sanitization
  */
 
+/**
+ * Strip out the special beyond characters for \proper and \improper
+ * from text that will be sent to the browser.
+ */
+#define strip_improper(input_text) replacetext(replacetext(input_text, "\proper", ""), "\improper", "")
+
 //Used for preprocessing entered text
 //Added in an additional check to alert players if input is too long
 /proc/sanitize(input, max_length = MAX_MESSAGE_LEN, encode = TRUE, trim = TRUE, extra = TRUE, ascii_only = FALSE)
@@ -34,6 +40,8 @@
 			to_chat(usr, SPAN_WARNING("Your message is too long by [input_length - max_length] character\s."))
 			return
 		input = copytext_char(input, 1, max_length + 1)
+
+	input = strip_improper(input)
 
 	if(extra)
 		input = replace_characters(input, list("\n"=" ","\t"=" "))
@@ -502,12 +510,6 @@
 
 #define starts_with(string, substring) (copytext(string,1,1+length(substring)) == substring)
 
-/**
- * Strip out the special beyond characters for \proper and \improper
- * from text that will be sent to the browser.
- */
-#define strip_improper(input_text) replacetext(replacetext(input_text, "\proper", ""), "\improper", "")
-
 /proc/pencode2html(t)
 	t = replacetext(t, "\n", "<BR>")
 	t = replacetext(t, "\[center\]", "<center>")
@@ -795,7 +797,7 @@ var/global/list/plural_words_unchanged = list(
 		word = splited[splited.len]
 	else
 		splited = null
-	
+
 	//Words that don't change when pluralized
 	if(global.plural_words_unchanged[word])
 		return initial_word
@@ -803,7 +805,7 @@ var/global/list/plural_words_unchanged = list(
 	//Apophonic plurals
 	if(global.apophonic_plurals[word])
 		word = global.apophonic_plurals[word]
-	
+
 	//Siblants + plurals of nouns in -o preceded by a consonant. Loanwords ending in o just ends with an s
 	else if(text_ends_with_any_of(word, global.plural_siblants) || (text_ends_with(word, "o") && !(word in global.english_loanwords)))
 		word = "[word]es"
@@ -826,14 +828,14 @@ var/global/list/plural_words_unchanged = list(
 			word = "[word]es"
 		else
 			word = "[copytext(word, 1, length(word) - 1)]i" //EX: Cactus -> Cacti, Fungus -> Fungi
-	
+
 	//Finally just go with the basic rules
-	else 
+	else
 		if(text_ends_with(word, "s"))
 			word = "[word]es"
 		else
 			word = "[word]s"
-	
+
 	//Put the sentence back together, if applicable
 	if(splited)
 		word = "[jointext(splited, " ", 1, length(splited))] [word]"
