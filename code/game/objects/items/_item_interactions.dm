@@ -10,6 +10,8 @@
 /decl/interaction_handler/use
 	name = "Use"
 	expected_target_type = /obj/item
+	icon = 'icons/screen/radial.dmi'
+	icon_state = "radial_use"
 
 /decl/interaction_handler/use/invoked(atom/target, mob/user, obj/item/prop)
 	var/obj/item/I = target
@@ -18,6 +20,8 @@
 /decl/interaction_handler/pick_up
 	name = "Pick Up"
 	expected_target_type = /obj/item
+	icon = 'icons/screen/radial.dmi'
+	icon_state = "radial_pickup"
 
 /decl/interaction_handler/pick_up/invoked(atom/target, mob/user, obj/item/prop)
 	target.attack_hand_with_interaction_checks(user)
@@ -26,6 +30,8 @@
 	name = "Drop"
 	expected_target_type = /obj/item
 	interaction_flags = INTERACTION_NEEDS_PHYSICAL_INTERACTION | INTERACTION_NEEDS_INVENTORY
+	icon = 'icons/screen/radial.dmi'
+	icon_state = "radial_ladder_down"
 
 /decl/interaction_handler/drop/invoked(atom/target, mob/user, obj/item/prop)
 	user.try_unequip(target, user.loc)
@@ -34,6 +40,8 @@
 	name = "Open Storage"
 	expected_target_type = /atom
 	incapacitation_flags = INCAPACITATION_DISRUPTED
+	icon = 'icons/screen/radial.dmi'
+	icon_state = "radial_lookat"
 
 /decl/interaction_handler/storage_open/is_possible(atom/target, mob/user, obj/item/prop)
 	. = ..() && (ishuman(user) || isrobot(user) || issmall(user)) && target?.storage
