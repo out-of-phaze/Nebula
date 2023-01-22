@@ -21,6 +21,7 @@
 	dock_target = "johnson_dock"
 	defer_initialisation = TRUE
 	shuttle_area = list(/area/johnson, /area/johnson/bridge, /area/johnson/maintenance, /area/johnson/medical, /area/johnson/mining)
+	flags = SHUTTLE_FLAGS_PROCESS
 
 /obj/effect/shuttle_landmark/ship/johnson
 	landmark_tag = "nav_johnson"
