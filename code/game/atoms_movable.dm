@@ -525,6 +525,10 @@
 	icon = 'icons/screen/radial.dmi'
 	icon_state = "radial_pull"
 
+/decl/interaction_handler/grab/is_possible(atom/movable/target, mob/user, obj/item/prop)
+	if((. = ..()))
+		. = !target.anchored
+
 /decl/interaction_handler/grab/invoked(atom/target, mob/user, obj/item/prop)
 	var/atom/movable/AM = target
 	AM.try_make_grab(user, defer_hand = TRUE)
