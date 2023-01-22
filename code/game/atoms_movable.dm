@@ -512,6 +512,8 @@
 	name = "Examine"
 	expected_user_type = /mob
 	interaction_flags = 0
+	icon = 'icons/screen/radial.dmi'
+	icon_state = "radial_examine"
 
 /decl/interaction_handler/look/invoked(atom/target, mob/user, obj/item/prop)
 	target.examine(user, get_dist(user, target))
@@ -520,6 +522,8 @@
 	name = "Grab"
 	expected_target_type = /atom/movable
 	interaction_flags = INTERACTION_NEEDS_PHYSICAL_INTERACTION | INTERACTION_NEEDS_TURF
+	icon = 'icons/screen/radial.dmi'
+	icon_state = "radial_pull"
 
 /decl/interaction_handler/grab/invoked(atom/target, mob/user, obj/item/prop)
 	var/atom/movable/AM = target

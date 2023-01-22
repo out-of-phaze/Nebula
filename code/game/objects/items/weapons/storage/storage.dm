@@ -455,6 +455,8 @@
 	name = "Open Storage"
 	expected_target_type = /obj/item/storage
 	incapacitation_flags = INCAPACITATION_DISRUPTED
+	icon = 'icons/screen/radial.dmi'
+	icon_state = "radial_lookat"
 
 /decl/interaction_handler/storage_open/is_possible(atom/target, mob/user, obj/item/prop)
 	. = ..() && (ishuman(user) || isrobot(user) || issmall(user))
