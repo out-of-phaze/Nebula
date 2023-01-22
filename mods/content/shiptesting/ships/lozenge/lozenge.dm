@@ -8,10 +8,13 @@
 	name = "\improper Emergency Pod"
 	desc = "Sensors detect a Lozenge-class emergency pod."
 	shuttle = "Emergency Pod"
-	fore_dir = WEST
-	max_speed = 1/(10 SECONDS)
+	fore_dir = EAST
+	max_speed = 1/(2 SECONDS)
+	burn_delay = 1 SECONDS
+	skill_needed = SKILL_BASIC
 	sector_flags = OVERMAP_SECTOR_IN_SPACE
 	use_mapped_z_levels = TRUE
+	vessel_size = SHIP_SIZE_TINY
 
 /datum/shuttle/autodock/overmap/lozenge
 	name = "Emergency Pod"
@@ -21,15 +24,7 @@
 	dock_target = "lozenge_dock"
 	defer_initialisation = TRUE
 	shuttle_area = list(/area/lozenge)
-
-/obj/effect/overmap/visitable/ship/landable/pod
-	name = "Emergency Pod"
-	desc = "A single-seater short-range pod."
-	max_speed = 1/(2 SECONDS)
-	burn_delay = 1 SECONDS
-	fore_dir = NORTH
-	skill_needed = SKILL_BASIC
-	vessel_size = SHIP_SIZE_TINY
+	flags = SHUTTLE_FLAGS_PROCESS
 
 /obj/effect/shuttle_landmark/ship/lozenge
 	landmark_tag = "nav_lozenge"
