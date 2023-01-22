@@ -47,7 +47,8 @@ SUBSYSTEM_DEF(lighting)
 	return TRUE
 
 /datum/controller/subsystem/lighting/proc/handle_roundstart()
-	force_queued = FALSE
+	if(force_override)
+		force_queued = FALSE
 	total_ss_updates = 0
 	total_instant_updates = 0
 
@@ -197,3 +198,17 @@ SUBSYSTEM_DEF(lighting)
 	if (oq_idex > 1)
 		overlay_queue.Cut(1, oq_idex)
 		oq_idex = 1
+
+#ifdef USE_INTELLIGENT_LIGHTING_UPDATES
+
+// Instant updates during maploading leads to lights being in an inconsistent state.
+// This disables them for the duration of maploading.
+/datum/controller/subsystem/lighting/StartLoadingMap()
+	force_queued = TRUE
+
+/datum/controller/subsystem/lighting/StopLoadingMap()
+	if(force_override)
+		return
+	force_queued = FALSE
+
+#endif
