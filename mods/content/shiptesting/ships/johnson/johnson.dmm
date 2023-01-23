@@ -393,6 +393,9 @@
 "hL" = (
 /obj/machinery/shipsensors,
 /obj/structure/cable,
+/obj/machinery/power/terminal{
+	icon_state = "term-omni"
+	},
 /turf/simulated/floor/airless,
 /area/johnson)
 "iq" = (
