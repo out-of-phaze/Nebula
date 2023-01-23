@@ -16,6 +16,9 @@
 		/mob/living/simple_animal/hostile/retaliate/jelly/alt,
 		/mob/living/simple_animal/hostile/leech
 	)
+	megafauna_types = list(
+		/mob/living/simple_animal/hostile/creature
+	)
 	spawn_weight = 10	// meat
 
 /obj/effect/overmap/visitable/sector/exoplanet/meat/generate_map()
@@ -57,7 +60,7 @@
 	water_type = /turf/exterior/water/stomach
 
 /area/exoplanet/meat
-	forced_ambience = list("sound/ambience/spookyspace1.ogg", "sound/ambience/spookyspace2.ogg")
+	forced_ambience = list('sound/ambience/spookyspace1.ogg', 'sound/ambience/spookyspace2.ogg', 'sound/effects/Heart Beat.ogg', 'sound/effects/singlebeat.ogg')
 	base_turf = /turf/exterior/meat
 
 /turf/exterior/meat
