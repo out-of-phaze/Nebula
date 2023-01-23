@@ -1426,7 +1426,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/overmap/visitable/ship/landable/johnson,
+/obj/effect/overmap/visitable/ship/landable/spawnable/johnson,
 /turf/simulated/floor/plating,
 /area/johnson)
 "GF" = (

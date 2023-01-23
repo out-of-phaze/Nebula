@@ -4,7 +4,7 @@
 	area_usage_test_exempted_root_areas = list(/area/johnson)
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/johnson)
 
-/obj/effect/overmap/visitable/ship/landable/johnson
+/obj/effect/overmap/visitable/ship/landable/spawnable/johnson
 	name = "Mining Vessel"
 	desc = "Sensors detect a Johnson-class deep space mining vessel."
 	shuttle = "Mining Vessel"
@@ -12,6 +12,7 @@
 	max_speed = 1/(3 SECONDS)
 	sector_flags = OVERMAP_SECTOR_IN_SPACE
 	use_mapped_z_levels = TRUE
+	ship_name_classes = list("GENERAL", "SPACE", "NATURAL", "ENGINEERING")
 
 /datum/shuttle/autodock/overmap/johnson
 	name = "Mining Vessel"
