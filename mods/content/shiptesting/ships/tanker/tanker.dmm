@@ -48,7 +48,7 @@
 /turf/simulated/floor/plating,
 /area/tanker)
 "dg" = (
-/obj/effect/overmap/visitable/ship/landable/tanker,
+/obj/effect/overmap/visitable/ship/landable/spawnable/tanker,
 /turf/simulated/floor/reinforced/oxygen,
 /area/tanker)
 "dJ" = (
