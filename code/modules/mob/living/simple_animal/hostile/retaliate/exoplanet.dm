@@ -120,7 +120,7 @@
 /mob/living/simple_animal/hostile/retaliate/beast/shantak/alt
 	desc = "A piglike creature with a long and graceful mane. Don't be fooled by its beauty."
 	icon = 'icons/mob/simple_animal/shantak_alt.dmi'
-	emote_see = list("scratches the ground","shakes out it's mane","rustles softly")
+	emote_see = list("scratches the ground","shakes out its mane","rustles softly")
 
 /mob/living/simple_animal/yithian
 	name = "yithian"
