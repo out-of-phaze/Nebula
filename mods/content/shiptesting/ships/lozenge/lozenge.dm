@@ -4,7 +4,7 @@
 	area_usage_test_exempted_root_areas = list(/area/lozenge)
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/lozenge)
 
-/obj/effect/overmap/visitable/ship/landable/lozenge
+/obj/effect/overmap/visitable/ship/landable/spawnable/lozenge
 	name = "\improper Emergency Pod"
 	desc = "Sensors detect a Lozenge-class emergency pod."
 	shuttle = "Emergency Pod"
@@ -15,6 +15,10 @@
 	sector_flags = OVERMAP_SECTOR_IN_SPACE
 	use_mapped_z_levels = TRUE
 	vessel_size = SHIP_SIZE_TINY
+
+/obj/effect/overmap/visitable/ship/landable/spawnable/lozenge/Initialize()
+	. = ..()
+	name += " #[add_zero(num2text(rand(1, 12)), 2)]"
 
 /datum/shuttle/autodock/overmap/lozenge
 	name = "Emergency Pod"
