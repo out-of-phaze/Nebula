@@ -8,7 +8,7 @@
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/tanker)
 	template_flags = TEMPLATE_FLAG_ALLOW_DUPLICATES
 
-/obj/effect/overmap/visitable/ship/landable/tanker
+/obj/effect/overmap/visitable/ship/landable/spawnable/tanker
 	name = "Tanker"
 	desc = "Sensors detect an Astor class medium-haul gas tanker."
 	shuttle = "Tanker"
