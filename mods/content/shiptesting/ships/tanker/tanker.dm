@@ -4,7 +4,7 @@
 	area_usage_test_exempted_root_areas = list(/area/tanker)
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/tanker)
 
-/obj/effect/overmap/visitable/ship/landable/tanker
+/obj/effect/overmap/visitable/ship/landable/spawnable/tanker
 	name = "Tanker"
 	desc = "Sensors detect an Astor-class medium-haul gas tanker."
 	shuttle = "Tanker"
