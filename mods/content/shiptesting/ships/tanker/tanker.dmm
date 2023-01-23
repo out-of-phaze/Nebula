@@ -14,8 +14,9 @@
 /turf/simulated/floor/plating,
 /area/tanker)
 "bd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/blue{
+	icon_state = "1-10"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tanker)
 "bC" = (
@@ -60,6 +61,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tanker)
@@ -118,6 +122,9 @@
 /obj/machinery/door/airlock/engineering,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tanker)
 "ig" = (
@@ -218,6 +225,12 @@
 /area/tanker)
 "sN" = (
 /obj/machinery/shipsensors,
+/obj/machinery/power/terminal{
+	icon_state = "term-omni"
+	},
+/obj/structure/cable/blue{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/tanker)
 "ul" = (
@@ -235,6 +248,9 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/blue,
+/obj/structure/cable/blue{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tanker)
 "vT" = (
@@ -254,6 +270,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tanker)
@@ -334,6 +353,9 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/structure/cable/blue{
+	icon_state = "5-10"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tanker)
 "DV" = (
@@ -342,6 +364,9 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 24
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tanker)
@@ -424,6 +449,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/tanker)
+"Ob" = (
+/obj/structure/cable/blue{
+	icon_state = "5-8"
+	},
+/turf/simulated/wall/r_wall/hull,
+/area/tanker)
 "Qj" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -471,6 +502,9 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tanker)
@@ -1765,7 +1799,7 @@ GF
 la
 la
 lU
-lU
+Ob
 jh
 jh
 jh
@@ -1884,10 +1918,10 @@ vC
 Tr
 DV
 yd
-bd
+cT
 ia
 eb
-sl
+bd
 yG
 RC
 AH

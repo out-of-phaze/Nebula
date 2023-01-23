@@ -120,6 +120,9 @@
 "q" = (
 /obj/machinery/shipsensors/weak,
 /obj/structure/cable/green,
+/obj/machinery/power/terminal{
+	icon_state = "term-omni"
+	},
 /turf/simulated/floor/plating,
 /area/lozenge)
 "r" = (
