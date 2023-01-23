@@ -18,7 +18,7 @@
 
 /obj/effect/overmap/visitable/ship/landable/spawnable/lozenge/Initialize()
 	. = ..()
-	name += " #[add_zero(num2text(rand(1, 12)), 2)]"
+	name += " Pod #[add_zero(num2text(rand(1, 12)), 2)]"
 
 /datum/shuttle/autodock/overmap/lozenge
 	name = "Emergency Pod"
@@ -74,6 +74,6 @@
 	head = /obj/item/clothing/head/helmet/space/emergency
 	suit = /obj/item/clothing/suit/space/emergency
 	id_type = null
-	pda_type = /obj/item/modular_computer/pda
+	pda_type = null
 	belt = /obj/item/tank/emergency/oxygen/engi
 	l_ear = null
