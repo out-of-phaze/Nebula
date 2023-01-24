@@ -10,6 +10,7 @@
 	icon_state = "1-2"
 	},
 /obj/abstract/submap_landmark/spawnpoint/lozenge_survivor,
+/obj/machinery/hologram/holopad/longrange/remoteship,
 /turf/simulated/floor/tiled/white,
 /area/lozenge)
 "d" = (
