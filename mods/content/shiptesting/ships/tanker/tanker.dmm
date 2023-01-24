@@ -394,6 +394,10 @@
 "GF" = (
 /turf/simulated/wall,
 /area/tanker)
+"Hj" = (
+/obj/machinery/hologram/holopad/longrange/remoteship,
+/turf/simulated/floor/tiled/steel_grid,
+/area/tanker)
 "HO" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
@@ -1854,7 +1858,7 @@ yv
 sl
 sl
 Uu
-sl
+Hj
 CD
 fv
 GF
