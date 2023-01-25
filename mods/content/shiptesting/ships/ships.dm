@@ -37,3 +37,6 @@ var/global/list/ship_names_by_class = list()
 	if(prefix)
 		name = "[pick("SEV", "SIC", "FTUV", "ICV", "HMS")] [name]"
 	name = "\improper [name]" // so that we get "you are landed on by the SEV Icarus" instead of "you are landed on by SEV Icarus"
+
+/decl/submap_archetype/spawnable_ship
+	abstract_type = /decl/submap_archetype/spawnable_ship

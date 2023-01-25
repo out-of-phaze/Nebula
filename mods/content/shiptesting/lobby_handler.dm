@@ -1,7 +1,7 @@
 /decl/lobby_handler/shiptesting
 	lobby_options = list(
 		/datum/lobby_option/setup,
-		/datum/lobby_option/view_manifest,
+		/datum/lobby_option/view_ship_manifest,
 		/datum/lobby_option/observe,
 		/datum/lobby_option/character_setup/shiptesting,
 		/datum/lobby_option/buy_ship
@@ -31,9 +31,10 @@
 	sort_priority = 5
 
 /datum/lobby_option/buy_ship/get_lobby_menu_string(mob/new_player/viewer)
-	if(GAME_STATE >= RUNLEVEL_GAME)
-		return "<a href='byond://?src=\ref[src];buy_ship=1'>Purchase New Ship!</a>"
-	return null
+	return "<a href='byond://?src=\ref[src];buy_ship=1'>Purchase New Ship!</a>"
+
+/datum/lobby_option/buy_ship/visible(mob/new_player/viewer)
+	return GAME_STATE == RUNLEVEL_GAME
 
 /datum/lobby_option/buy_ship/proc/get_testable_ships()
 	return SSmapping.get_templates_by_category(MAP_TEMPLATE_CATEGORY_SHIP)
@@ -67,3 +68,74 @@
 		user.show_lobby_menu()
 		return
 	our_submap.join_as(user, our_submap.jobs[our_submap.jobs[1]]) // we assume the first job is the captain role, TODO: specify explicitly
+
+/decl/submap_archetype/proc/is_manifest_visible()
+	return FALSE
+
+/decl/submap_archetype/spawnable_ship/is_manifest_visible()
+	return TRUE
+
+/datum/lobby_option/view_ship_manifest
+	sort_priority = 2
+
+/datum/lobby_option/view_ship_manifest/visible(mob/new_player/viewer)
+	return GAME_STATE >= RUNLEVEL_GAME
+
+/datum/lobby_option/view_ship_manifest/get_lobby_menu_string(mob/new_player/viewer)
+	return "<a href='byond://?src=\ref[src];view_manifest=1'>View the Ship Manifest</A> "
+
+/datum/lobby_option/view_ship_manifest/Topic(href, href_list)
+	if((. = ..()))
+		return
+	var/mob/new_player/user = usr
+	if(!istype(user))
+		return
+	if(href_list["view_manifest"])
+		var/dat = "<div align='center'>"
+		dat += html_ship_manifest(OOC = TRUE)
+		var/datum/browser/popup = new(user, "Ship Manifest", "Ship Manifest", 370, 420, user)
+		popup.add_stylesheet("nano_shared", 'nano/css/shared.css')
+		popup.set_content(dat)
+		popup.open()
+		return TOPIC_HANDLED
+
+/proc/html_ship_manifest(monochrome = FALSE, OOC = FALSE)
+	var/list/dat = list({"
+	<style>
+		.manifest {border-collapse:collapse;width:100%;}
+		.manifest td, th {border:1px solid [monochrome?"black":"[OOC?"black; color:white":"#DEF; color:black"]"]; padding:.25em}
+		.manifest th {height: 2em; [monochrome?"border-top-width: 3px":"background-color: [OOC?"#40628a":"#48C"]; color:white"]}
+		.manifest tr.head th { [monochrome?"border-top-width: 1px":"background-color: [OOC?"#013D3B;":"#488;"]"] }
+		.manifest td:first-child {text-align:right}
+		.manifest tr.alt td {[monochrome?"border-top-width: 2px":"background-color: [OOC?"#373737; color:white":"#DEF"]"]}
+	</style>
+	<table class="manifest" width='350px'>
+	<tr class='head'><th>Name</th><th>Position</th></tr>
+	"})
+	var/list/submaps = list()
+	for(var/mob/living/carbon/human/character in human_mob_list)
+		var/datum/job/submap/submap_job = character.mind?.assigned_job
+		if(!istype(submap_job))
+			continue
+		if(!submap_job.owner.archetype.is_manifest_visible())
+			continue
+		LAZYADD(submaps[submap_job.owner], list(list(character.real_name, character.mind.role_alt_title || character.mind.assigned_role)))
+
+	for(var/datum/submap/submap in submaps)
+		if(!submap.archetype.is_manifest_visible())
+			continue
+		dat += "<tr><th colspan=2>[submap.name] ([submap.archetype.descriptor]):</th></tr>"
+		for(var/entry in submaps[submap])
+			dat += "<tr class='candystripe'><td>[entry[1]]</td><td>[entry[2]]</td></tr>"
+	dat += "</table>"
+	dat = JOINTEXT(dat)
+	dat = replacetext(dat, "\n", "") // so it can be placed on paper correctly
+	dat = replacetext(dat, "\t", "")
+	return dat
+
+/mob/observer/ghost/view_manfiest()
+	var/dat
+	dat += "<h4>Ship Manifest</h4>"
+	dat += html_ship_manifest()
+
+	show_browser(src, dat, "window=manifest;size=370x420;can_close=1")
