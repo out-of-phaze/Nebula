@@ -40,7 +40,7 @@
 	name = "\improper Emergency Pod"
 	icon_state = "yellow"
 
-/decl/submap_archetype/lozenge
+/decl/submap_archetype/spawnable_ship/lozenge
 	descriptor = "escape pod"
 	map = "Lozenge-class emergency pod"
 	crew_jobs = list(
@@ -54,7 +54,7 @@
 
 /obj/abstract/submap_landmark/joinable_submap/lozenge
 	name = "Lozenge-class emergency pod"
-	archetype = /decl/submap_archetype/lozenge
+	archetype = /decl/submap_archetype/spawnable_ship/lozenge
 
 /datum/job/submap/lozenge_survivor
 	title = "Escape Pod Survivor"
