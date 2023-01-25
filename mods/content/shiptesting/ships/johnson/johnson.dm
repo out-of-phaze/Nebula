@@ -46,7 +46,7 @@
 /area/johnson/medical
 	name = "Mining Vessel Infirmary"
 
-/decl/submap_archetype/johnson
+/decl/submap_archetype/spawnable_ship/johnson
 	descriptor = "mining vessel"
 	map = "Johnson-class deep space mining vessel"
 	crew_jobs = list(
@@ -72,7 +72,7 @@
 
 /obj/abstract/submap_landmark/joinable_submap/johnson
 	name = "Johnson-class deep space mining vessel"
-	archetype = /decl/submap_archetype/johnson
+	archetype = /decl/submap_archetype/spawnable_ship/johnson
 
 /datum/job/submap/johnson_pilot
 	title = "Mining Vessel Pilot"

@@ -32,7 +32,7 @@
 	name = "Tanker"
 	icon_state = "yellow"
 
-/decl/submap_archetype/tanker
+/decl/submap_archetype/spawnable_ship/tanker
 	descriptor = "gas tanker"
 	map = "Astor-class tanker shuttle"
 	crew_jobs = list(
@@ -48,7 +48,7 @@
 
 /obj/abstract/submap_landmark/joinable_submap/tanker
 	name = "Astor-class tanker shuttle"
-	archetype = /decl/submap_archetype/tanker
+	archetype = /decl/submap_archetype/spawnable_ship/tanker
 
 /datum/job/submap/tanker_pilot
 	title = "Tanker Pilot"
