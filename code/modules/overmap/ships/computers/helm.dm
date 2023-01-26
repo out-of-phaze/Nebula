@@ -27,6 +27,10 @@ var/global/list/overmap_helm_computers
 	/// The mob currently operating the helm - The last one to click one of the movement buttons and be on the overmap screen. Set to `null` for autopilot or when the mob isn't in range.
 	var/weakref/current_operator
 	var/obj/compass_holder/overmap/compass
+	// SHIPTESTING EDIT
+	var/const/rename_cooldown = 5 MINUTES
+	var/last_renamed_time = -rename_cooldown
+	// END SHIPTESTING EDIT
 
 /obj/machinery/computer/ship/helm/Initialize()
 	. = ..()
@@ -161,12 +165,20 @@ var/global/list/overmap_helm_computers
 
 		data["locations"] = locations
 
+		// START SHIPTESTING EDIT
+		data["vessel_name"] = "\the [linked]"
+		data["can_rename"] = (world.time - last_renamed_time) > rename_cooldown
+
+		if(ui)
+			ui.title = sanitize("[linked.name] Helm Control")
+		// END SHIPTESTING EDIT
+
 		ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 		if (!ui)
 			ui = new(user, src, ui_key, "helm.tmpl", "[linked.name] Helm Control", 565, 545, nref = src)
 			ui.set_initial_data(data)
 			ui.open()
-			ui.set_auto_update(1)
+			ui.set_auto_update(TRUE)
 
 /obj/machinery/computer/ship/helm/OnTopic(var/mob/user, var/list/href_list, state)
 	if(..())
@@ -283,6 +295,28 @@ var/global/list/overmap_helm_computers
 			to_chat(user, SPAN_WARNING("You can't use this."))
 			return TOPIC_NOACTION
 		viewing_overmap(user) ? unlook(user) : look(user)
+
+	// START SHIPTESTING EDIT
+	if (href_list["rename"])
+		if(!isliving(user))
+			to_chat(user, SPAN_WARNING("You can't use this."))
+			return TOPIC_NOACTION
+		var/prevname = replacetext(linked.name, "\improper ", "the ")
+		var/new_vessel_name = sanitize_safe(input(user, "Edit vessel name:","Vessel Editing", prevname), MAX_LNAME_LEN)
+		if(!new_vessel_name || !length(new_vessel_name) || new_vessel_name == prevname)
+			return TOPIC_NOACTION
+		new_vessel_name = replacetext(new_vessel_name, regex(@"^the "), "\improper ")
+		linked.SetName(new_vessel_name)
+		last_renamed_time = world.time
+		// Update linked shuttles, if we're a landable vessel.
+		if(istype(linked, /obj/effect/overmap/visitable/ship/landable))
+			var/obj/effect/overmap/visitable/ship/landable/shuttle_owner = linked
+			var/datum/shuttle/shuttle = SSshuttle.shuttles[shuttle_owner.shuttle]
+			if(istype(shuttle))
+				// TODO: replace user-facing uses of shuttle.name with shuttle.display_name
+				shuttle.display_name = new_vessel_name // don't set name, that's a tag var
+		SSnano.update_user_uis(user, src, force_open = TRUE)
+	// END SHIPTESTING EDIT
 
 	add_fingerprint(user)
 	updateUsrDialog()

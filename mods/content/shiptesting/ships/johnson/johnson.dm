@@ -70,7 +70,7 @@
 /obj/abstract/submap_landmark/spawnpoint/johnson_medic_spawn
 	name = "Mining Vessel Medic"
 
-/obj/abstract/submap_landmark/joinable_submap/johnson
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/johnson
 	name = "Johnson-class deep space mining vessel"
 	archetype = /decl/submap_archetype/spawnable_ship/johnson
 

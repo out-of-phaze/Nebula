@@ -18,7 +18,7 @@
 
 /obj/effect/overmap/visitable/ship/landable/spawnable/lozenge/Initialize()
 	. = ..()
-	name += " Pod #[add_zero(num2text(rand(1, 12)), 2)]"
+	SetName(name + " Pod #[add_zero(num2text(rand(1, 12)), 2)]")
 
 /datum/shuttle/autodock/overmap/lozenge
 	name = "Emergency Pod"
@@ -52,7 +52,7 @@
 /obj/abstract/submap_landmark/spawnpoint/lozenge_survivor
 	name = "Escape Pod Survivor"
 
-/obj/abstract/submap_landmark/joinable_submap/lozenge
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/lozenge
 	name = "Lozenge-class emergency pod"
 	archetype = /decl/submap_archetype/spawnable_ship/lozenge
 
