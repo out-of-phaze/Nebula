@@ -717,7 +717,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/johnson/mining)
 "oY" = (
-/obj/abstract/submap_landmark/joinable_submap/johnson,
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/johnson,
 /turf/space,
 /area/space)
 "ph" = (

@@ -100,7 +100,7 @@
 /turf/simulated/floor/plating,
 /area/lozenge)
 "n" = (
-/obj/abstract/submap_landmark/joinable_submap/lozenge,
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/lozenge,
 /turf/space,
 /area/space)
 "o" = (
