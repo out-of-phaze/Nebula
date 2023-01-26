@@ -28,15 +28,30 @@ var/global/list/ship_names_by_class = list()
 
 /obj/effect/overmap/visitable/ship/landable/spawnable/Initialize()
 	. = ..()
-	var/prefix
+	var/new_name = ""
 	if(islist(name_prefixes))
-		prefix = pick(name_prefixes)
+		new_name = pick(name_prefixes)
 	else if(istext(name_prefixes))
-		prefix = name_prefixes
-	name = "[pick(global.ship_names_by_class[pick(ship_name_classes)])]"
-	if(prefix)
-		name = "[pick("SEV", "SIC", "FTUV", "ICV", "HMS")] [name]"
-	name = "\improper [name]" // so that we get "you are landed on by the SEV Icarus" instead of "you are landed on by SEV Icarus"
+		new_name = name_prefixes
+	new_name += " [pick(global.ship_names_by_class[pick(ship_name_classes)])]"
+	SetName("\improper [new_name]") // so that we get "you are landed on by the SEV Icarus" instead of "you are landed on by SEV Icarus"
+
+// We stay synced with our overmap object at all times.
+/datum/submap/spawnable_ship/sync_cell(obj/effect/overmap/visitable/cell)
+	..()
+	events_repository.register(/decl/observ/name_set, cell, src, PROC_REF(update_name))
+	events_repository.register(/decl/observ/destroyed, cell, src, PROC_REF(unregister_name))
+
+/datum/submap/spawnable_ship/proc/update_name(atom/namee, old_name, new_name)
+	name = new_name
+
+/datum/submap/spawnable_ship/proc/unregister_name(datum/destroyed_instance)
+	events_repository.register(/decl/observ/name_set, destroyed_instance, src, PROC_REF(update_name))
+	events_repository.register(/decl/observ/destroyed, destroyed_instance, src, PROC_REF(unregister_name))
+
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship
+	abstract_type = /obj/abstract/submap_landmark/joinable_submap/spawnable_ship
+	submap_datum_type = /datum/submap/spawnable_ship
 
 /decl/submap_archetype/spawnable_ship
 	abstract_type = /decl/submap_archetype/spawnable_ship
