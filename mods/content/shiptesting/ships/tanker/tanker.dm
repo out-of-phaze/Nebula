@@ -46,7 +46,7 @@
 /obj/abstract/submap_landmark/spawnpoint/tanker_technician_spawn
 	name = "Tanker Technician"
 
-/obj/abstract/submap_landmark/joinable_submap/tanker
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/tanker
 	name = "Astor-class tanker shuttle"
 	archetype = /decl/submap_archetype/spawnable_ship/tanker
 

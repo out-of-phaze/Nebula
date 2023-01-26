@@ -528,7 +528,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/tanker)
 "UX" = (
-/obj/abstract/submap_landmark/joinable_submap/tanker,
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/tanker,
 /turf/space,
 /area/space)
 "Va" = (
