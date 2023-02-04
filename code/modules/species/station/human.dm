@@ -1,6 +1,6 @@
 /decl/species/human
 	name = SPECIES_HUMAN
-	name_plural = "Humans"
+	name_plural = "Gestalts" // SIGNALIS EDIT
 	primitive_form = SPECIES_MONKEY
 	unarmed_attacks = list(
 		/decl/natural_attack/stomp,
