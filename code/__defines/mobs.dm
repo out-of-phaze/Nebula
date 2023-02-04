@@ -251,7 +251,7 @@
 #define CORPSE_CAN_REENTER             BITFLAG(0)
 #define CORPSE_CAN_RESPAWN             BITFLAG(1)
 
-#define SPECIES_HUMAN            "Human"
+#define SPECIES_HUMAN            "Gestalt" // SIGNALIS EDIT
 #define SPECIES_MONKEY           "Monkey"
 #define SPECIES_ALIEN            "Humanoid"
 #define SPECIES_GOLEM            "Golem"
