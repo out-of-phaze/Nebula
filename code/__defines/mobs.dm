@@ -250,7 +250,7 @@
 #define CORPSE_CAN_REENTER 1
 #define CORPSE_CAN_REENTER_AND_RESPAWN 2
 
-#define SPECIES_HUMAN            "Human"
+#define SPECIES_HUMAN            "Gestalt" // SIGNALIS EDIT
 #define SPECIES_MONKEY           "Monkey"
 #define SPECIES_ALIEN            "Humanoid"
 #define SPECIES_GOLEM            "Golem"
