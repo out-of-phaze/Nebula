@@ -1,7 +1,7 @@
 /decl/species/human
 	uid = "species_human"
-	name = "Human"
-	name_plural = "Humans"
+	name = "Gestalt"
+	name_plural = "Gestalts"
 	primitive_form = /decl/species/monkey::uid
 	description = "A medium-sized creature prone to great ambition. If you are reading this, you are probably a human."
 	hidden_from_codex = FALSE
