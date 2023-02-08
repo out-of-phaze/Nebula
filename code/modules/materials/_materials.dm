@@ -878,3 +878,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	if(!environment || amount <= 0 || !burn_product)
 		return
 	environment.adjust_gas(burn_product, amount)
+
+/decl/material/proc/get_color(datum/reagents/holder)
+	return color
