@@ -813,3 +813,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 			total_interacted_units -= interacted_units
 		if(total_interacted_units <= 0)
 			return
+
+/decl/material/proc/get_color(datum/reagents/holder)
+	return color
