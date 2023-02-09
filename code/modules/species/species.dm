@@ -577,8 +577,12 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	return FALSE
 
 /decl/species/proc/get_blood_decl(var/mob/living/human/H)
+	// SIGNALIS EDIT START
+	/*
 	if(istype(H) && H.isSynthetic())
 		return GET_DECL(/decl/blood_type/coolant)
+	*/
+	// SIGNALIS EDIT END
 	return get_blood_type_by_name(blood_types[1])
 
 /decl/species/proc/get_blood_name(var/mob/living/human/H)
