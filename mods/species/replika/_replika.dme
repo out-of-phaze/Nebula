@@ -1,0 +1,25 @@
+#ifndef MODPACK_REPLIKA
+#define MODPACK_REPLIKA
+// BEGIN_INCLUDE
+#include "../../../mods/content/psionics/_psionics.dme"
+#include "../../../mods/content/ventcrawl/_ventcrawl.dme"
+#include "_replika.dm"
+#include "accessory.dm"
+#include "chems.dm"
+#include "clothing.dm"
+#include "objects.dm"
+#include "organs.dm"
+#include "reactions.dm"
+#include "species.dm"
+#include "species_bodytypes.dm"
+#include "traits.dm"
+#include "overrides\replika_chem_disabling.dm"
+// END_INCLUDE
+#endif
+// BEGIN_INTERNALS
+// END_INTERNALS
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+// BEGIN_PREFERENCES
+// END_PREFERENCES

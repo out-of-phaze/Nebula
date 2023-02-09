@@ -1,0 +1,86 @@
+#define REPLIKA_EARLY_GEN 1
+#define REPLIKA_LATE_GEN  2
+#define CE_REGEN_BRUTE_REPLIKA "brutehealreplika" // Causes prosthetic brute damage to regenerate.
+#define CE_REGEN_BURN_REPLIKA "burnhealreplika" // Causes prosthetic burn damage to regenerate.
+
+#define CALIBER_SIGNALIS_REVOLVER "12x40mm hollow point"
+
+/decl/modpack/replika
+	name = "Replika"
+	dreams = list(
+		"a Replika", "a Gestalt", "a Protektor",
+		"an ADLR model", "an Adler model", "an Adler", "an eagle", "authority", "a conspiracy", "a fountain pen",
+		"an ARAR model", "an Ara model", "an Ara", "a service tunnel", "a hermit",
+		"a EULR model", "a Eule model", "a Eule", "an owl", "a mirror", "a ballet dancer",
+		"a FKLR model", "a Falke model", "a Falke", "a falcon", "a Goddess", "a dreamer", "a strange dream", "becoming one",
+		"a KLBR model", "a Kolibri model", "a Kolibri", "a hummingbird", "a cadre of Kolibris", "a swarm of hummingbirds", "a hivemind", "a library", "a Blockwart", "unity",
+		"an LSTR model", "an Elster model", "an Elster", "a magpie", "a distant star", "a crashed ship", "a promise remembered", "a promise kept", "a promise broken", "a promise forgotten",
+		"a MNHR model", "a Mynah model", "a Mynah", "a cat", "a plush doll",
+		"a SAPR model", "a Schnapper",
+		"a STAR model", "a Star model", "a Star", "a starling", "respect", "disrespect", "a prized firearm", "insubordination", "a promotion", "obedience",
+		"a STCR model", "a Storch model", "a Storch", "a stork", "a fable", "an ancient myth", "Saturn Devouring his Son", "a jackboot",
+		"a KNCR model", "a Kranich model"
+	)
+
+/decl/modpack/replika/pre_initialize()
+	. = ..()
+	SSmodpacks.default_submap_whitelisted_species |= /decl/species/replika::uid
+
+/mob/living/human/replika
+	var/decl/bodytype/replika/starting_bodytype
+
+/mob/living/human/replika/Initialize(mapload)
+	var/datum/mob_snapshot/dummy_appearance = new
+	dummy_appearance.root_species = GET_DECL(/decl/species/replika)
+	dummy_appearance.root_bodytype = GET_DECL(starting_bodytype)
+	. = ..(mapload, /decl/species/replika::uid, dummy_appearance)
+	QDEL_NULL(dummy_appearance)
+	var/decl/bodytype/replika/model = get_bodytype()
+	set_real_name(model.get_default_name())
+	reset_hair() // I have no clue why this is necessary.
+	// todo: figure out why we let snapshot overwrite bodytype-default accessories
+
+/decl/bodytype/replika/proc/get_default_name()
+	return "[name]-[add_zero(num2text(random_id(name, 0, 99)), 2)]"
+
+/mob/living/human/replika/eulr
+	starting_bodytype = /decl/bodytype/replika/eulr
+
+/mob/living/human/replika/eulr/dancing
+	ai = /datum/mob_controller/eule_dance
+
+/datum/mob_controller/eule_dance
+	var/dancing = FALSE
+
+/datum/mob_controller/eule_dance/do_process(time_elapsed)
+	. = ..()
+	if(QDELETED(body) || body.stat)
+		return
+	if(!body.can_act())
+		return
+	try_dance()
+
+/datum/mob_controller/eule_dance/proc/try_dance()
+	set waitfor = FALSE
+	if(!dancing)
+		dancing = TRUE
+		if(prob(5))
+			body.custom_emote(VISIBLE_MESSAGE, "dances around.")
+		for(var/i = 1, i < 2 SECONDS, i += 0.2 SECONDS)
+			body.set_dir((i % 2 == 0) ? EAST : WEST)
+			sleep(0.2 SECONDS)
+			if(QDELETED(body) || body.client)
+				break
+		dancing = FALSE
+
+/mob/living/human/replika/arar
+	starting_bodytype = /decl/bodytype/replika/arar
+
+/mob/living/human/replika/lstr
+	starting_bodytype = /decl/bodytype/replika/lstr
+
+/mob/living/human/replika/star
+	starting_bodytype = /decl/bodytype/replika/star
+
+/mob/living/human/replika/klbr
+	starting_bodytype = /decl/bodytype/replika/klbr
