@@ -1,0 +1,15 @@
+#ifndef MODPACK_REPLIKA
+#define MODPACK_REPLIKA
+// BEGIN_INCLUDE
+#include "_replika.dm"
+#include "accessory.dm"
+#include "aspects.dm"
+#include "chems.dm"
+#include "limbs.dm"
+#include "objects.dm"
+#include "species.dm"
+#include "species_bodytypes.dm"
+#include "overrides\bodytype_inherent_verbs.dm"
+#include "overrides\replika_chem_disabling.dm"
+// END_INCLUDE
+#endif
