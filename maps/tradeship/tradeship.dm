@@ -44,6 +44,8 @@
 	#include "../../mods/species/bayliens/_bayliens.dme"
 	#include "../../mods/species/vox/_vox.dme"
 
+	#include "../../mods/species/replika/_replika.dme"
+
 	#include "../away/bearcat/bearcat.dm"
 	#include "../away/casino/casino.dm"
 	#include "../away/derelict/derelict.dm"
