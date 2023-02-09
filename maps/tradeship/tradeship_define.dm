@@ -10,8 +10,8 @@
 	dock_name     = "FTS Capitalist's Rest"
 	boss_name     = "FTU Merchant Navy"
 	boss_short    = "Merchant Admiral"
-	company_name  = "Legit Cargo Ltd."
-	company_short = "LC"
+	company_name  = "Hilbert 12"
+	company_short = "H12"
 	lobby_screens = list('maps/tradeship/lobby/bloodmoney.png','maps/tradeship/lobby/vapormoney.png')
 	overmap_ids = list(OVERMAP_ID_SPACE)
 	num_exoplanets = 1
