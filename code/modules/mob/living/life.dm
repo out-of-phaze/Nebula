@@ -166,7 +166,7 @@
 	chem_effects = null
 
 	// TODO: handle isSynthetic() properly via Psi's metabolism modifiers for contact reagents like acid.
-	if((status_flags & GODMODE) || isSynthetic())
+	if((status_flags & GODMODE)) // SIGNALIS EDIT: removed isSynthetic check pending above
 		return FALSE
 
 	// Metabolize any reagents currently in our body and keep a reference for chem dose checking.
