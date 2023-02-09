@@ -763,7 +763,7 @@
 		to_chat(user, SPAN_WARNING("\The [src] is missing that limb."))
 		return 0
 
-	if(BP_IS_PROSTHETIC(affecting))
+	if(BP_IS_PROSTHETIC(affecting) && !(species.species_flags & SPECIES_FLAG_SYNTHETIC)) // SIGNALIS EDIT
 		to_chat(user, SPAN_WARNING("That limb is prosthetic."))
 		return 0
 
@@ -934,15 +934,17 @@
 		victim.forceMove(stomach)
 
 /mob/living/carbon/human/should_have_organ(var/organ_check)
+	// SIGNALIS EDIT START
+	if(species && !(species.species_flags & SPECIES_FLAG_SYNTHETIC))
+		var/obj/item/organ/external/affecting
+		if(organ_check in list(BP_HEART, BP_LUNGS))
+			affecting = GET_EXTERNAL_ORGAN(src, BP_CHEST)
+		else if(organ_check in list(BP_LIVER, BP_KIDNEYS))
+			affecting = GET_EXTERNAL_ORGAN(src, BP_GROIN)
 
-	var/obj/item/organ/external/affecting
-	if(organ_check in list(BP_HEART, BP_LUNGS))
-		affecting = GET_EXTERNAL_ORGAN(src, BP_CHEST)
-	else if(organ_check in list(BP_LIVER, BP_KIDNEYS))
-		affecting = GET_EXTERNAL_ORGAN(src, BP_GROIN)
-
-	if(affecting && BP_IS_PROSTHETIC(affecting))
-		return 0
+		if(affecting && BP_IS_PROSTHETIC(affecting))
+			return 0
+	// SIGNALIS EDIT END
 	return (species && species.has_organ[organ_check])
 
 /mob/living/carbon/human/can_feel_pain(var/obj/item/organ/check_organ)
