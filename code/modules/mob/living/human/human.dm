@@ -695,8 +695,8 @@
 		to_chat(user, SPAN_WARNING("\The [src] is missing that limb."))
 		return 0
 
-	if(BP_IS_PROSTHETIC(affecting))
-		to_chat(user, SPAN_WARNING("That limb is prosthetic."))
+	if(affecting.bodytype.body_flags & BODY_FLAG_NO_DNA) // SIGNALIS EDIT
+		to_chat(user, SPAN_WARNING("That limb is not organic."))
 		return 0
 
 	. = CAN_INJECT
