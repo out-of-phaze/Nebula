@@ -148,7 +148,7 @@
 
 	// Do some organ checking for mobs that have lungs and need air to speak.
 	var/decl/bodytype/root_bodytype = get_bodytype()
-	if(root_bodytype && !root_bodytype.is_robotic && need_breathe() && failed_last_breath && root_bodytype.breathing_organ)
+	if(root_bodytype && /*!root_bodytype.is_robotic &&*/ need_breathe() && failed_last_breath && root_bodytype.breathing_organ) // SIGNALIS EDIT
 
 		// Grab lungs and breath data.
 		var/obj/item/organ/internal/lungs/lungs = get_organ(root_bodytype.breathing_organ, /obj/item/organ/internal/lungs)
