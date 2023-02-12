@@ -2,6 +2,10 @@
 "aa" = (
 /turf/space,
 /area/space)
+"DJ" = (
+/obj/abstract/level_data/debug,
+/turf/space,
+/area/space)
 
 (1,1,1) = {"
 aa
@@ -258,7 +262,7 @@ aa
 aa
 aa
 aa
-aa
+DJ
 "}
 (2,1,1) = {"
 aa
