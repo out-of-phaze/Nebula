@@ -258,7 +258,7 @@
 /datum/unit_test/map_image_map_test/start_test()
 	var/failed = FALSE
 
-	for(var/z in global.using_map.map_levels)
+	for(var/z in SSmapping.map_levels)
 		var/file_name = map_image_file_name(z)
 		var/file_path = MAP_IMAGE_PATH + file_name
 		if(!fexists(file_path))
@@ -544,7 +544,7 @@
 /datum/unit_test/pipes_shall_not_leak/start_test()
 	var/failures = 0
 	for(var/obj/machinery/atmospherics/pipe/P in SSmachines.machinery)
-		if(P.leaking && isPlayerLevel(P.z) && !(locate(/obj/abstract/landmark/allowed_leak) in get_turf(P)))
+		if(P.leaking && !(locate(/obj/abstract/landmark/allowed_leak) in get_turf(P)))
 			failures++
 			log_bad("Following pipe is leaking: [log_info_line(P)]")
 
