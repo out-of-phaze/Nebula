@@ -2,6 +2,9 @@
 	name = "Lozenge-class emergency pod"
 	suffixes = list("lozenge/lozenge.dmm")
 	area_usage_test_exempted_root_areas = list(/area/lozenge)
+	apc_test_exempt_areas = list(
+		/area/lozenge = NO_VENT|NO_SCRUBBER // non-controlled vents don't cout
+	)
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/lozenge)
 
 /obj/effect/overmap/visitable/ship/landable/spawnable/lozenge
