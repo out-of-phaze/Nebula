@@ -74,6 +74,7 @@
 	id_tag = "johnson_dock_interior_sensor";
 	pixel_x = -22
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "bD" = (
@@ -247,7 +248,7 @@
 "et" = (
 /obj/machinery/power/solar,
 /turf/simulated/floor/airless,
-/area/johnson)
+/area/johnson/medical)
 "eO" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -322,7 +323,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
+	dir = 9
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/johnson/maintenance)
@@ -516,7 +517,7 @@
 	},
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/johnson/maintenance)
@@ -732,6 +733,23 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/johnson/mining)
+"pK" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/airless,
+/area/johnson/medical)
+"qk" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/airless,
+/area/johnson/medical)
 "qA" = (
 /obj/machinery/button/access/exterior{
 	dir = 1;
@@ -849,9 +867,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9
-	},
 /obj/abstract/submap_landmark/spawnpoint/johnson_technician_spawn,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -891,7 +906,7 @@
 	},
 /obj/structure/cable/yellow,
 /turf/simulated/floor/airless,
-/area/johnson)
+/area/johnson/medical)
 "tV" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -926,7 +941,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/reinforced,
 /area/johnson/maintenance)
@@ -1044,6 +1059,17 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/white/monotile,
 /area/johnson/medical)
+"zf" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/airless,
+/area/johnson/medical)
 "zB" = (
 /obj/structure/catwalk,
 /turf/space,
@@ -1113,7 +1139,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/reinforced,
 /area/johnson/maintenance)
@@ -1627,7 +1653,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
-/area/johnson)
+/area/johnson/medical)
 "Kw" = (
 /obj/structure/plasticflaps/airtight,
 /obj/machinery/door/blast/regular{
@@ -1720,6 +1746,7 @@
 	dir = 4;
 	pixel_x = -34
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "Mo" = (
@@ -1731,7 +1758,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber,
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/johnson/maintenance)
 "MO" = (
@@ -1828,7 +1854,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/airless,
-/area/johnson)
+/area/johnson/medical)
 "Oj" = (
 /obj/random/vendor,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -2075,7 +2101,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "Vj" = (
@@ -2162,6 +2187,9 @@
 	},
 /obj/machinery/port_gen/pacman,
 /obj/item/stack/material/brick/mapped/graphite/twentyfive,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "Xb" = (
@@ -4386,7 +4414,7 @@ kM
 kM
 kM
 kM
-MU
+pK
 SQ
 vJ
 CD
@@ -4448,7 +4476,7 @@ kM
 kM
 kM
 kM
-iH
+qk
 SQ
 Yn
 NI
@@ -4510,7 +4538,7 @@ kM
 kM
 kM
 kM
-iH
+qk
 SQ
 Bj
 lF
@@ -4572,7 +4600,7 @@ kM
 kM
 kM
 kM
-iH
+qk
 SQ
 fx
 Sv
@@ -4634,7 +4662,7 @@ kM
 kM
 kM
 kM
-iH
+qk
 SQ
 bV
 hw
@@ -4696,7 +4724,7 @@ kM
 kM
 kM
 kM
-iH
+qk
 SQ
 CE
 qH
@@ -4760,7 +4788,7 @@ kM
 kM
 Kh
 NX
-ht
+zf
 tG
 FV
 rB
