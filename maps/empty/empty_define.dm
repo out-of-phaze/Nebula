@@ -4,7 +4,7 @@
 	station_name = "the Frontier"
 	station_short = "the Frontier"
 	system_name = "the Frontier"
-	welcome_sound = 'sound/effects/alarm.ogg'
+	welcome_sound = 'maps/empty/sound/achtung.ogg'
 	path = "empty"
 	allowed_spawns = list()
 	default_spawn = null
