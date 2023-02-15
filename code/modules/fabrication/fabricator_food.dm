@@ -7,6 +7,7 @@
 	base_icon_state = "replicator"
 	base_storage_capacity_mult = 5
 	has_recycler = FALSE
+	base_type = /obj/machinery/fabricator/replicator
 
 /obj/machinery/fabricator/replicator/hear_talk(var/mob/M, var/text, var/verb, var/decl/language/speaking)
 	if(speaking && !speaking.machine_understands)
@@ -16,7 +17,7 @@
 		addtimer(CALLBACK(src, /obj/machinery/fabricator/replicator/proc/state_status), 2 SECONDS, TIMER_UNIQUE | TIMER_OVERRIDE)
 	else if(findtext(true_text, "menu"))
 		addtimer(CALLBACK(src, /obj/machinery/fabricator/replicator/proc/state_menu), 2 SECONDS, TIMER_UNIQUE | TIMER_OVERRIDE)
-	else 
+	else
 		for(var/datum/fabricator_recipe/recipe in design_cache)
 			if(recipe.hidden && !(fab_status_flags & FAB_HACKED))
 				continue
