@@ -35,6 +35,16 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	var/flesh_color = "#ffc896"             // Pink.
 	var/blood_oxy = 1
 
+	// Darksight handling
+	/// Fractional multiplier (0 to 1) for the base alpha of the darkness overlay. A value of 1 means darkness is completely invisible.
+	var/base_low_light_vision = 0
+	/// The lumcount (turf luminosity) threshold under which adaptive low light vision will begin processing.
+	var/low_light_vision_threshold = 0.3
+	/// Fractional multiplier for the overall effectiveness of low light vision for this species. Caps the final alpha value of the darkness plane.
+	var/low_light_vision_effectiveness = 0
+	/// The rate at which low light vision adjusts towards the final value, as a fractional multiplier of the difference between the current and target alphas. ie. set to 0.15 for a 15% shift towards the target value each tick.
+	var/low_light_vision_adjustment_speed = 0.15
+
 	// Used for initializing prefs/preview
 	var/base_color =      COLOR_BLACK
 	var/base_eye_color =  COLOR_BLACK
@@ -349,6 +359,10 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 
 	. = ..()
 
+	if(config.grant_default_darksight)
+		darksight_range = max(darksight_range, config.default_darksight_range)
+		low_light_vision_effectiveness = max(low_light_vision_effectiveness, config.default_darksight_effectiveness)
+
 	// Populate blood type table.
 	for(var/blood_type in blood_types)
 		var/decl/blood_type/blood_decl = GET_DECL(blood_type)
@@ -440,15 +454,47 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 /decl/species/validate()
 	. = ..()
 
+	for(var/decl/bodytype/bodytype in available_bodytypes)
+		var/bodytype_base_icon = bodytype.get_base_icon()
+		var/deformed_base_icon = bodytype.get_base_icon(get_deform = TRUE)
+		for(var/organ_tag in has_limbs)
+			if(organ_tag == BP_TAIL) // Tails are handled specially due to overlays and animations, will not be present in the base bodytype icon(s).
+				continue
+			if(bodytype_base_icon && !check_state_in_icon(organ_tag, bodytype_base_icon))
+				. += "missing state \"[organ_tag]\" from base icon [bodytype_base_icon] on bodytype [bodytype.type]"
+			if(deformed_base_icon && bodytype_base_icon != deformed_base_icon && !check_state_in_icon(organ_tag, deformed_base_icon))
+				. += "missing state \"[organ_tag]\" from deformed icon [deformed_base_icon] on bodytype [bodytype.type]"
+
 	for(var/organ_tag in vital_organs)
 		if(!(organ_tag in has_organ) && !(organ_tag in has_limbs))
-			. += "vital organ '[organ_tag]' not present in organ/limb lists"
+			. += "vital organ \"[organ_tag]\" not present in organ/limb lists"
 
 	for(var/trait_type in traits)
 		var/trait_level = traits[trait_type]
 		var/decl/trait/T = GET_DECL(trait_type)
 		if(!T.validate_level(trait_level))
 			. += "invalid levels for species trait [trait_type]"
+
+
+	if(base_low_light_vision > 1)
+		. += "base low light vision is greater than 1 (over 100%)"
+	else if(base_low_light_vision < 0)
+		. += "base low light vision is less than 0 (below 0%)"
+
+	if(low_light_vision_threshold > 1)
+		. += "low light vision threshold is greater than 1 (over 100%)"
+	else if(low_light_vision_threshold < 0)
+		. += "low light vision threshold is less than 0 (below 0%)"
+
+	if(low_light_vision_effectiveness > 1)
+		. += "low light vision effectiveness is greater than 1 (over 100%)"
+	else if(low_light_vision_effectiveness < 0)
+		. += "low light vision effectiveness is less than 0 (below 0%)"
+
+	if(low_light_vision_adjustment_speed > 1)
+		. += "low light vision adjustment speed is greater than 1 (over 100%)"
+	else if(low_light_vision_adjustment_speed < 0)
+		. += "low light vision adjustment speed is less than 0 (below 0%)"
 
 /decl/species/proc/equip_survival_gear(var/mob/living/carbon/human/H, var/box_type = /obj/item/storage/box/survival)
 	var/obj/item/storage/backpack/backpack = H.get_equipped_item(slot_back_str)

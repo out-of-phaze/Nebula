@@ -5,9 +5,8 @@
 	else
 		add_to_living_mob_list()
 
-/mob/living/examine(mob/user, distance, infix, suffix)
-	. = ..()
-	if (admin_paralyzed)
+/mob/living/show_other_examine_strings(mob/user, distance, infix, suffix, hideflags, decl/pronouns/pronouns)
+	if(admin_paralyzed)
 		to_chat(user, SPAN_OCCULT("OOC: They have been paralyzed by staff. Please avoid interacting with them unless cleared to do so by staff."))
 
 //mob verbs are faster than object verbs. See above.
@@ -725,6 +724,7 @@ default behaviour is:
 	if(auras)
 		for(var/a in auras)
 			remove_aura(a)
+	QDEL_NULL(lighting_master)
 	return ..()
 
 /mob/living/proc/melee_accuracy_mods()
@@ -1080,3 +1080,9 @@ default behaviour is:
 
 /mob/living/get_speech_bubble_state_modifier()
 	return isSynthetic() ? "synth" : ..()
+
+/mob/living/proc/refresh_lighting_master()
+	if(!lighting_master)
+		lighting_master = new
+	if(client)
+		client.screen |= lighting_master
