@@ -1,6 +1,7 @@
 /obj/item/chems/repair_spray
 	name = "repair spray"
-	desc = "A single-use spray gun used to fill damaged areas with polyurethane-based expanding foam."
+	desc = "A single-use spray gun to fill damaged areas with polyurethane-based expanding foam."
+	icon = 'mods/species/replika/icons/repair_spray.dmi'
 	item_flags = ITEM_FLAG_NO_BLUDGEON
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
 	w_class = ITEM_SIZE_SMALL
@@ -33,6 +34,15 @@
 	reagents.add_reagent(/decl/material/solid/plastifoam, reagents.maximum_volume)
 	return
 
+/obj/item/chems/repair_spray/quick
+	name = "repair spray+"
+	desc = "A single-use spray gun used to fill damaged areas with fast-curing polyurethane-based expanding foam."
+	icon = 'mods/species/replika/icons/repair_spray+.dmi'
+
+/obj/item/chems/repair_spray/quick/populate_reagents()
+	reagents.add_reagent(/decl/material/solid/plastifoam/quick, reagents.maximum_volume)
+	return
+
 /obj/item/chems/hypospray/autoinjector/klstim
 	name = "autoinjector"
 	desc = "Autoinjector syringe filled with REPLIKA-KLStim-N stimulant. Quick and easy to use."
@@ -44,8 +54,8 @@
 	name = "patch"
 	base_name = "patch"
 	desc = "A reagent-infused patch for topical administration of medicines."
-	// TODO: icon and icon_state
-	item_state = "pill"
+	// todo: inhand sprites?
+	icon = 'mods/species/replika/icons/repair_patch.dmi'
 	randpixel = 7
 	possible_transfer_amounts = null
 	w_class = ITEM_SIZE_TINY
