@@ -46,6 +46,8 @@
 /obj/item/chems/hypospray/autoinjector/klstim
 	name = "autoinjector"
 	desc = "Autoinjector syringe filled with REPLIKA-KLStim-N stimulant. Quick and easy to use."
+	icon = 'mods/species/replika/icons/autoinjector.dmi'
+	detail_state = null
 
 /obj/item/chems/hypospray/autoinjector/klstim/populate_reagents()
 	reagents.add_reagent(/decl/material/liquid/klstim_n, reagents.maximum_volume)
