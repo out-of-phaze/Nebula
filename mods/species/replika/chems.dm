@@ -19,20 +19,39 @@
 	lore_text = "Polyurethane expanding foam can be used to fill up Replika wounds and stop leaks. \
 	Takes a few seconds to expand, but very hard once fully cured."
 	metabolism = 2/5 // 0.4u/tick, works out to 30 damage healed over 25 seconds in a 5u spray
+	var/strength = 3 // Damage healted per unit.
 
 /decl/material/solid/plastifoam/quick
 	name = "quick-setting polyurethane foam"
 	lore_text = "Polyurethane resin can be used to fix and fill damaged hull sections. \
-	Hardens instantly."
+	Hardens instantly, but doesn't expand as much."
 	metabolism = 5 // metabolizes an entire 5u spray in one tick
+	strength = 2
 
-// TODO: have this
+// TODO: have this use limb coating and apply only to wounds/damage on that limb?
 /decl/material/solid/plastifoam/affect_touch(mob/living/carbon/human/victim, removed, datum/reagents/holder)
 	. = ..()
 	if(!istype(victim) || !victim.HasTrait(/decl/trait/biosynthetic_healing))
 		return
-	victim.add_chemical_effect_max(CE_REGEN_BRUTE_REPLIKA, 3*removed)
-	victim.add_chemical_effect_max(CE_REGEN_BURN_REPLIKA, 3*removed)
+	victim.add_chemical_effect_max(CE_REGEN_BRUTE_REPLIKA, strength*removed)
+	victim.add_chemical_effect_max(CE_REGEN_BURN_REPLIKA, strength*removed)
+
+/decl/material/solid/plastifoam/affect_blood(mob/living/victim, removed, datum/reagents/holder)
+	. = ..()
+	if(!istype(victim))
+		return
+	if(victim.HasTrait(/decl/trait/biosynthetic_healing))
+		return
+	victim.add_chemical_effect_max(CE_BLOCKAGE, 0.4) // lower max blood volume to 60%, very dangerous
+
+/decl/material/solid/plastifoam/affect_inhale(mob/living/carbon/human/victim, removed, datum/reagents/holder)
+	. = ..()
+	if(!istype(victim))
+		return
+	var/obj/item/organ/internal/lungs/lung = GET_INTERNAL_ORGAN(victim, BP_LUNGS)
+	if(!istype(lung))
+		return
+	lung.take_internal_damage(removed, FALSE)
 
 /decl/material/solid/koagulant_k
 	name = "Coagulant K"
