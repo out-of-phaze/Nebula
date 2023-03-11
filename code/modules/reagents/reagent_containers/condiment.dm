@@ -12,7 +12,7 @@
 	icon_state = "emptycondiment"
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
 	possible_transfer_amounts = @"[1,5,10]"
-	center_of_mass = @"{'x':16,'y':6}"
+	center_of_mass = @'{"x":16,"y":6}'
 	randpixel = 6
 	volume = 50
 	var/static/list/special_bottles = list(
@@ -187,7 +187,7 @@
 	name = "salt shaker"
 	desc = "Salt. From space oceans, presumably."
 	icon_state = "saltshakersmall"
-	center_of_mass = @"{'x':16,'y':9}"
+	center_of_mass = @'{"x":16,"y":9}'
 
 /obj/item/chems/condiment/small/saltshaker/populate_reagents()
 	reagents.add_reagent(/decl/material/solid/sodiumchloride, reagents.maximum_volume)
@@ -196,7 +196,7 @@
 	name = "pepper mill"
 	desc = "Often used to flavor food or make people sneeze."
 	icon_state = "peppermillsmall"
-	center_of_mass = @"{'x':16,'y':8}"
+	center_of_mass = @'{"x":16,"y":8}'
 
 /obj/item/chems/condiment/small/peppermill/populate_reagents()
 	reagents.add_reagent(/decl/material/solid/blackpepper, reagents.maximum_volume)
@@ -205,7 +205,7 @@
 	name = "sugar"
 	desc = "Sweetness in a bottle"
 	icon_state = "sugarsmall"
-	center_of_mass = @"{'x':17,'y':9}"
+	center_of_mass = @'{"x":17,"y":9}'
 
 /obj/item/chems/condiment/small/sugar/populate_reagents()
 	reagents.add_reagent(/decl/material/liquid/nutriment/sugar, reagents.maximum_volume)
