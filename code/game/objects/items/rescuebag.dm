@@ -5,7 +5,7 @@
 	a hostile enviroment."
 	icon = 'icons/obj/closets/rescuebag.dmi'
 	icon_state = "folded"
-	origin_tech = "{'biotech':2}"
+	origin_tech = @'{"biotech":2}'
 	material = /decl/material/solid/plastic
 	matter = list(/decl/material/solid/silicon = MATTER_AMOUNT_SECONDARY)
 	var/obj/item/tank/airtank
@@ -55,7 +55,7 @@
 		to_chat(user,"The distribution valve on \the [airtank] is set to '[airtank.distribute_pressure] kPa'.")
 	else
 		to_chat(user, "<span class='warning'>The air tank is missing.</span>")
-		
+
 /obj/structure/closet/body_bag/rescue
 	name = "rescue bag"
 	desc = "A reusable plastic bag designed to prevent additional damage to an occupant, especially useful if short on time or in \

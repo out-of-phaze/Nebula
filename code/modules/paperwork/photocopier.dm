@@ -5,7 +5,7 @@
 	name = "circuitboard (photocopier)"
 	build_path = /obj/machinery/photocopier
 	board_type = "machine"
-	origin_tech = "{'engineering':1, 'programming':1}"
+	origin_tech = @'{"engineering":1, "programming":1}'
 	req_components = list(
 			/obj/item/stock_parts/printer/buildable = 1,
 			/obj/item/stock_parts/manipulator       = 2,
@@ -165,7 +165,7 @@
 	//Printer header stuff
 	if(printer)
 		LAZYADD(., printer.ui_data(user))
-	
+
 	//Photocopier stuff
 	LAZYSET(., "src",                "\ref[src]")
 	LAZYSET(., "is_sillicon_mode",   issilicon(user))
@@ -188,7 +188,7 @@
 
 /obj/machinery/photocopier/OnTopic(user, href_list, state)
 	//We don't plug in the printer's own OnTopic here since we don't want to allow the user control over it
-	
+
 	if(href_list["eject"])
 		eject_item(user)
 		return TOPIC_REFRESH

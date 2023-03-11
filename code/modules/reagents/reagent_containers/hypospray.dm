@@ -8,7 +8,7 @@
 	icon = 'icons/obj/syringe.dmi'
 	item_state = "hypo"
 	icon_state = "hypo"
-	origin_tech = "{'materials':4,'biotech':5}"
+	origin_tech = @'{"materials":4,"biotech":5}'
 	amount_per_transfer_from_this = 5
 	unacidable = 1
 	volume = 30
@@ -173,7 +173,7 @@
 	item_state = "autoinjector"
 	amount_per_transfer_from_this = 5
 	volume = 5
-	origin_tech = "{'materials':2,'biotech':2}"
+	origin_tech = @'{"materials":2,"biotech":2}'
 	slot_flags = SLOT_LOWER_BODY | SLOT_EARS
 	w_class = ITEM_SIZE_TINY
 	detail_state = "_band"

@@ -11,7 +11,7 @@
 	anchored = 1
 	idle_power_usage = 10
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
-	directional_offset = "{'NORTH':{'y':-32}, 'SOUTH':{'y':32}, 'EAST':{'x':-32}, 'WEST':{'x':32}}"
+	directional_offset = @'{"NORTH":{"y":-32}, "SOUTH":{"y":32}, "EAST":{"x":-32}, "WEST":{"x":32}}'
 
 	var/datum/money_account/authenticated_account
 	var/number_incorrect_tries = 0
@@ -377,7 +377,7 @@
 
 					var/obj/item/paper/R = new(src.loc, null, txt, "Account balance: [authenticated_account.owner_name]")
 					R.apply_custom_stamp(
-						overlay_image('icons/obj/bureaucracy.dmi', "paper_stamp-boss", flags = RESET_COLOR), 
+						overlay_image('icons/obj/bureaucracy.dmi', "paper_stamp-boss", flags = RESET_COLOR),
 						"by the [machine_id]")
 
 				if(prob(50))
@@ -387,7 +387,7 @@
 			if ("print_transaction")
 				if(authenticated_account)
 					var/txt
-					
+
 					txt = "<b>Transaction logs</b><br>"
 					txt += "<i>Account holder:</i> [authenticated_account.owner_name]<br>"
 					txt += "<i>Account number:</i> [authenticated_account.account_number]<br>"
@@ -414,7 +414,7 @@
 					txt += "</table>"
 					var/obj/item/paper/R = new(src.loc, null, txt, "Transaction logs: [authenticated_account.owner_name]")
 					R.apply_custom_stamp(
-						overlay_image('icons/obj/bureaucracy.dmi', "paper_stamp-boss", flags = RESET_COLOR), 
+						overlay_image('icons/obj/bureaucracy.dmi', "paper_stamp-boss", flags = RESET_COLOR),
 						"by the [machine_id]")
 
 				if(prob(50))

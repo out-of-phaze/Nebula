@@ -11,8 +11,8 @@
 		/obj/item/stock_parts/computer/processor_unit = 1
 	)
 	additional_spawn_components = list(
-		/obj/item/stock_parts/power/apc/buildable = 1, 
-		/obj/item/stock_parts/computer/network_card = 1, 
+		/obj/item/stock_parts/power/apc/buildable = 1,
+		/obj/item/stock_parts/computer/network_card = 1,
 		/obj/item/stock_parts/computer/hard_drive/super = 1
 	)
 
@@ -56,7 +56,7 @@
 	anchored           = TRUE
 	density            = FALSE
 	obj_flags          = OBJ_FLAG_MOVES_UNSUPPORTED
-	directional_offset = "{'NORTH':{'y':-20}, 'SOUTH':{'y':24}, 'EAST':{'x':-24}, 'WEST':{'x':24}}"
+	directional_offset = @'{"NORTH":{"y":-20}, "SOUTH":{"y":24}, "EAST":{"x":-24}, "WEST":{"x":24}}'
 	idle_power_usage   = 75
 	active_power_usage = 300
 	max_hardware_size  = 2 //make sure we can only put smaller components in here
@@ -72,7 +72,7 @@
 	os_type            = /datum/extension/interactive/os/console/telescreen
 
 /obj/machinery/computer/modular/telescreen/update_directional_offset(force = FALSE)
-	if(!force && (!length(directional_offset) || !is_wall_mounted())) 
+	if(!force && (!length(directional_offset) || !is_wall_mounted()))
 		return
 	. = ..()
 
@@ -100,7 +100,7 @@
 
 	if(!panel_open && (reason_broken & MACHINE_BROKEN_GENERIC))
 		add_overlay("panel_broken")
-	
+
 	if(inoperable())
 		set_light(0)
 		var/screen = get_component_of_type(/obj/item/stock_parts/console_screen)

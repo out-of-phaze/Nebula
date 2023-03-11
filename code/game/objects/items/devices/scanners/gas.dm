@@ -9,7 +9,7 @@
 	icon_state = "atmos"
 	item_state = "analyzer"
 
-	origin_tech = "{'magnets':1,'engineering':1}"
+	origin_tech = @'{"magnets":1,"engineering":1}'
 	window_width = 350
 	window_height = 400
 	var/mode = DEFAULT_MODE

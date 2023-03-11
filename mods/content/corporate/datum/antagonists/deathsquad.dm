@@ -57,7 +57,7 @@
 		player.implant_loyalty(player)
 
 /obj/item/radio/headset/deathsquad
-	origin_tech = "{'esoteric':2}"
+	origin_tech = @'{"esoteric":2}'
 	syndie = 1
 
 /obj/item/radio/headset/deathsquad/Initialize()

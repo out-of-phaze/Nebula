@@ -6,7 +6,7 @@
 	layer = ABOVE_WINDOW_LAYER
 	w_class = ITEM_SIZE_NORMAL
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
-	directional_offset = "{'NORTH':{'y':-32}, 'SOUTH':{'y':32}, 'WEST':{'x':-32}, 'EAST':{'x':32}}"
+	directional_offset = @'{"NORTH":{"y":-32}, "SOUTH":{"y":32}, "WEST":{"x":-32}, "EAST":{"x":32}}'
 
 /obj/structure/sign/explosion_act(severity)
 	..()
@@ -86,7 +86,7 @@
 /obj/structure/sign/warning
 	name = "\improper WARNING"
 	icon_state = "securearea"
-	directional_offset = "{'NORTH':{'y':-32}, 'SOUTH':{'y':32}, 'WEST':{'x':34}, 'EAST':{'x':-34}}"
+	directional_offset = @'{"NORTH":{"y":-32}, "SOUTH":{"y":32}, "WEST":{"x":34}, "EAST":{"x":-34}}'
 
 /obj/structure/sign/warning/detailed
 	icon_state = "securearea2"

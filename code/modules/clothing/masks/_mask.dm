@@ -7,7 +7,7 @@
 	blood_overlay_type = "maskblood"
 	material = /decl/material/solid/fiberglass
 	matter = list(/decl/material/solid/plastic = MATTER_AMOUNT_REINFORCEMENT)
-	origin_tech = "{'materials':1,'engineering':1}"
+	origin_tech = @'{"materials":1,"engineering":1}'
 
 	var/voicechange = 0
 	var/list/say_messages
@@ -38,7 +38,7 @@
 	if(overlay && hanging && slot == slot_wear_mask_str && check_state_in_icon("[overlay.icon_state]-down", overlay.icon))
 		overlay.icon_state = "[overlay.icon_state]-down"
 	. = ..()
- 
+
 /obj/item/clothing/mask/proc/filter_air(datum/gas_mixture/air)
 	return
 

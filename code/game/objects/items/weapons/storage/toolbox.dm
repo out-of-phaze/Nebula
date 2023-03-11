@@ -14,7 +14,7 @@
 	w_class = ITEM_SIZE_LARGE
 	max_w_class = ITEM_SIZE_NORMAL
 	max_storage_space = DEFAULT_LARGEBOX_STORAGE //enough to hold all starting contents
-	origin_tech = "{'combat':1}"
+	origin_tech = @'{"combat":1}'
 	attack_verb = list("robusted")
 	use_sound = 'sound/effects/storage/toolbox.ogg'
 	material = /decl/material/solid/metal/aluminium
@@ -40,11 +40,11 @@
 
 /obj/item/storage/toolbox/mechanical/WillContain()
 	return list(
-			/obj/item/screwdriver, 
-			/obj/item/wrench, 
-			/obj/item/weldingtool, 
-			/obj/item/crowbar, 
-			/obj/item/scanner/gas, 
+			/obj/item/screwdriver,
+			/obj/item/wrench,
+			/obj/item/weldingtool,
+			/obj/item/crowbar,
+			/obj/item/scanner/gas,
 			/obj/item/wirecutters
 		)
 
@@ -58,9 +58,9 @@
 	return list(
 			new /datum/atom_creator/weighted(list(/obj/item/clothing/gloves/insulated = 5, /obj/item/stack/cable_coil/random = 95)),
 			/obj/item/stack/cable_coil/random = 2,
-			/obj/item/screwdriver, 
-			/obj/item/wirecutters, 
-			/obj/item/t_scanner, 
+			/obj/item/screwdriver,
+			/obj/item/wirecutters,
+			/obj/item/t_scanner,
 			/obj/item/crowbar
 		)
 
@@ -69,26 +69,26 @@
 	desc = "A toolbox in black, with stylish red trim. This one feels particularly heavy, yet balanced."
 	icon_state = "syndicate"
 	item_state = "toolbox_syndi"
-	origin_tech = "{'combat':1,'esoteric':1}"
+	origin_tech = @'{"combat":1,"esoteric":1}'
 	attack_cooldown = 10
 
 /obj/item/storage/toolbox/syndicate/WillContain()
 	return list(
-			/obj/item/clothing/gloves/insulated, 
-			/obj/item/screwdriver, 
-			/obj/item/wrench, 
-			/obj/item/weldingtool, 
-			/obj/item/crowbar, 
-			/obj/item/wirecutters, 
+			/obj/item/clothing/gloves/insulated,
+			/obj/item/screwdriver,
+			/obj/item/wrench,
+			/obj/item/weldingtool,
+			/obj/item/crowbar,
+			/obj/item/wirecutters,
 			/obj/item/multitool
 		)
 
 /obj/item/storage/toolbox/syndicate/powertools/WillContain()
 	return list(
-			/obj/item/clothing/gloves/insulated, 
-			/obj/item/power_drill, 
-			/obj/item/weldingtool/electric, 
-			/obj/item/hydraulic_cutter, 
+			/obj/item/clothing/gloves/insulated,
+			/obj/item/power_drill,
+			/obj/item/weldingtool/electric,
+			/obj/item/hydraulic_cutter,
 			/obj/item/multitool
 		)
 

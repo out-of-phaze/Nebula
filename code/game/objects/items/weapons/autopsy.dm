@@ -8,7 +8,7 @@
 	icon_state = "autopsy_scanner"
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	w_class = ITEM_SIZE_SMALL
-	origin_tech = "{'materials':1,'biotech':1}"
+	origin_tech = @'{"materials":1,"biotech":1}'
 	var/list/weapon_data = list()
 	var/list/chemtraces = list()
 	var/target_name
@@ -42,8 +42,8 @@
 	else if(istype(A, /obj/item/organ/external))
 		set_target(A, user)
 		add_data(A)
-	
-	scan_title = "Autopsy Report ([target_name])" 
+
+	scan_title = "Autopsy Report ([target_name])"
 	scan_data = get_formatted_data()
 	playsound(src, 'sound/effects/fastbeep.ogg', 10)
 

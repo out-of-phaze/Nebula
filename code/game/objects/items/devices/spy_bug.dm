@@ -14,11 +14,11 @@
 	throw_range = 15
 	throw_speed = 3
 
-	origin_tech = "{'programming':1,'engineering':1,'esoteric':3}"
+	origin_tech = @'{"programming":1,"engineering":1,"esoteric":3}'
 	material = /decl/material/solid/plastic
 	matter = list(
-		/decl/material/solid/metal/copper    = MATTER_AMOUNT_REINFORCEMENT, 
-		/decl/material/solid/silicon         = MATTER_AMOUNT_REINFORCEMENT, 
+		/decl/material/solid/metal/copper    = MATTER_AMOUNT_REINFORCEMENT,
+		/decl/material/solid/silicon         = MATTER_AMOUNT_REINFORCEMENT,
 		/decl/material/solid/glass           = MATTER_AMOUNT_TRACE,
 	)
 
@@ -62,7 +62,7 @@
 	icon_state = ICON_STATE_WORLD
 	color = COLOR_GRAY80
 	w_class = ITEM_SIZE_SMALL
-	origin_tech = "{'programming':1,'engineering':1,'esoteric':3}"
+	origin_tech = @'{"programming":1,"engineering":1,"esoteric":3}'
 	material = /decl/material/solid/plastic
 	matter = list(
 		/decl/material/solid/metal/copper = MATTER_AMOUNT_REINFORCEMENT,
