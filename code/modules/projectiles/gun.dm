@@ -92,9 +92,9 @@
 	var/last_fire_message_time
 
 /obj/item/gun/Initialize()
-	. = ..()
 	for(var/i in 1 to firemodes.len)
 		firemodes[i] = new /datum/firemode(src, firemodes[i])
+	. = ..()
 	if(isnull(scoped_accuracy))
 		scoped_accuracy = accuracy
 	if(scope_zoom)
