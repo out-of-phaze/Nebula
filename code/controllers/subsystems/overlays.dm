@@ -217,6 +217,20 @@ SUBSYSTEM_DEF(overlays)
 #undef NOT_QUEUED_ALREADY
 #undef QUEUE_FOR_COMPILE
 
+// TEMPORARY OD TWEAK
+/atom/add_overlay(x)
+	overlays += x
+
+/atom/cut_overlay(x)
+	overlays -= x
+
+/atom/cut_overlays(x)
+	overlays.Cut()
+
+/atom/set_overlays(x)
+	overlays = x
+// END TEMPORARY OD TWEAK
+
 //TODO: Better solution for these?
 /image/proc/add_overlay(x)
 	overlays += x
