@@ -250,7 +250,9 @@ SUBSYSTEM_DEF(zcopy)
 			// This openturf doesn't care about its icon, so we can just overwrite it.
 			if (T.below.mimic_proxy)
 				QDEL_NULL(T.below.mimic_proxy)
-			T.appearance = T.below
+			// TEMPORARY OD TWEAK
+			OD_set_appearance(T, T.below)
+			// T.appearance = T.below
 			T.name = initial(T.name)
 			T.desc = initial(T.desc)
 			T.gender = initial(T.gender)
@@ -261,7 +263,9 @@ SUBSYSTEM_DEF(zcopy)
 			if (!T.below.mimic_proxy)
 				T.below.mimic_proxy = new(T)
 			var/atom/movable/openspace/turf_proxy/TO = T.below.mimic_proxy
-			TO.appearance = Td
+			// TEMPORARY OD TWEAK
+			OD_set_appearance(TO, Td)
+			// TO.appearance = Td
 			TO.name = T.name
 			TO.gender = T.gender	// Need to grab this too so PLURAL works properly in examine.
 			TO.opacity = FALSE
@@ -277,7 +281,9 @@ SUBSYSTEM_DEF(zcopy)
 			if (!T.below.mimic_above_copy)
 				T.below.mimic_above_copy = new(T)
 			var/atom/movable/openspace/turf_mimic/DC = T.below.mimic_above_copy
-			DC.appearance = T.below
+			// TEMPORARY OD TWEAK
+			OD_set_appearance(DC, T.below)
+			// DC.appearance = T.below
 			DC.mouse_opacity = initial(DC.mouse_opacity)
 			DC.plane = OPENTURF_MAX_PLANE - turf_depth - 1
 
@@ -405,7 +411,9 @@ SUBSYSTEM_DEF(zcopy)
 		if (OO.particles != OO.associated_atom.particles)
 			OO.particles = OO.associated_atom.particles
 
-		OO.appearance = OO.associated_atom
+		// TEMPORARY OD TWEAK
+		OD_set_appearance(OO, OO.associated_atom)
+		// OO.appearance = OO.associated_atom
 		OO.z_flags = OO.associated_atom.z_flags
 		OO.plane = OPENTURF_MAX_PLANE - OO.depth
 
@@ -416,7 +424,9 @@ SUBSYSTEM_DEF(zcopy)
 		if (OO.z_flags & ZMM_MANGLE_PLANES)
 			var/new_appearance = fixup_appearance_planes(OO.appearance)
 			if (new_appearance)
-				OO.appearance = new_appearance
+				// TEMPORARY OD TWEAK
+				OD_set_appearance(OO, new_appearance)
+				// OO.appearance = new_appearance
 				OO.have_performed_fixup = TRUE
 
 		if (OO.bound_overlay)	// If we have a bound overlay, queue it too.
@@ -442,7 +452,9 @@ SUBSYSTEM_DEF(zcopy)
 
 /datum/controller/subsystem/zcopy/proc/simple_appearance_copy(turf/T, new_appearance, target_plane)
 	if (T.z_flags & ZM_MIMIC_OVERWRITE)
-		T.appearance = new_appearance
+		// TEMPORARY OD TWEAK
+		OD_set_appearance(T, new_appearance)
+		// T.appearance = new_appearance
 		T.name = initial(T.name)
 		T.desc = initial(T.desc)
 		T.gender = initial(T.gender)
@@ -453,7 +465,9 @@ SUBSYSTEM_DEF(zcopy)
 		if (!T.mimic_underlay)
 			T.mimic_underlay = new(T)
 		var/atom/movable/openspace/turf_proxy/TO = T.mimic_underlay
-		TO.appearance = new_appearance
+		// TEMPORARY OD TWEAK
+		OD_set_appearance(TO, new_appearance)
+		// TO.appearance = new_appearance
 		TO.name = T.name
 		TO.gender = T.gender	// Need to grab this too so PLURAL works properly in examine.
 		TO.mouse_opacity = initial(TO.mouse_opacity)
@@ -604,7 +618,9 @@ SUBSYSTEM_DEF(zcopy)
 	while ((Tbelow = Tbelow.below))
 		var/atom/movable/openspace/debug/turf/VTO = new
 		VTO.computed_depth = SSzcopy.zlev_maximums[Tbelow.z] - Tbelow.z
-		VTO.appearance = Tbelow
+		// TEMPORARY OD TWEAK
+		OD_set_appearance(VTO, Tbelow)
+		// VTO.appearance = Tbelow
 		VTO.parent = Tbelow
 		VTO.plane = OPENTURF_MAX_PLANE - VTO.computed_depth
 		found_oo += VTO
@@ -616,7 +632,9 @@ SUBSYSTEM_DEF(zcopy)
 	if (T.shadower.overlays.len)
 		for (var/overlay in T.shadower.overlays)
 			var/atom/movable/openspace/debug/D = new
-			D.appearance = overlay
+			// TEMPORARY OD TWEAK
+			OD_set_appearance(D, overlay)
+			// D.appearance = overlay
 			if (D.plane < -10000)	// FLOAT_PLANE
 				D.plane = T.shadower.plane
 			found_oo += D

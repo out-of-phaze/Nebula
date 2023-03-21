@@ -153,7 +153,9 @@
 	if(occupant)
 		occupant.set_dir(SOUTH)
 		var/image/I = image(null)
-		I.appearance = occupant
+		// TEMPORARY OD TWEAK
+		OD_set_appearance(I, occupant)
+		// I.appearance = occupant
 		var/matrix/M = matrix()
 		M.Turn(occupant.butchery_rotation)
 		I.transform = M

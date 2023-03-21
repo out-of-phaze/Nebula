@@ -720,7 +720,9 @@
 				else if(no_damage)
 					health_images += image('icons/mob/screen1_health.dmi',"fullhealth")
 				healths_ma.overlays += health_images
-			healths.appearance = healths_ma
+			// TEMPORARY OD TWEAK
+			OD_set_appearance(healths, healths_ma)
+			// healths.appearance = healths_ma
 
 		if(nutrition_icon)
 			switch(nutrition)

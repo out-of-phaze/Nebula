@@ -24,7 +24,9 @@ var/global/const/GHOST_IMAGE_ALL = ~GHOST_IMAGE_NONE
 	ghost_image = image(src.icon,src)
 	ghost_image.plane = plane
 	ghost_image.layer = layer
-	ghost_image.appearance = src
+	// TEMPORARY OD TWEAK
+	OD_set_appearance(ghost_image, src)
+	// ghost_image.appearance = src
 	ghost_image.appearance_flags = RESET_ALPHA
 	if(ghost_image_flag & GHOST_IMAGE_DARKNESS)
 		ghost_darkness_images |= ghost_image //so ghosts can see the eye when they disable darkness

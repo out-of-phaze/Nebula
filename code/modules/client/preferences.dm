@@ -260,7 +260,9 @@ var/global/list/time_prefs_fixed = list()
 			client.screen |= O
 		mannequin.set_dir(D) // necessary to update direction-dependent over/underlays like tails.
 		var/mutable_appearance/MA = new /mutable_appearance(mannequin)
-		O.appearance = MA
+		// TEMPORARY OD TWEAK
+		OD_set_appearance(O, MA)
+		// O.appearance = MA
 		O.dir = D
 		O.screen_loc = preview_screen_locs["[D]"]
 	update_setup_window(usr)

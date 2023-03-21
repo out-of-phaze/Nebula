@@ -19,7 +19,9 @@ var/global/list/floor_decals = list()
 
 /obj/effect/floor_decal/LateInitialize(mapload, var/newdir, var/newcolour, var/newappearance)
 	supplied_dir = newdir
-	if(newappearance) appearance = newappearance
+	// TEMPORARY OD TWEAK
+	if(newappearance) OD_set_appearance(src, newappearance)
+	// if(newappearance) appearance = newappearance
 	if(newcolour) color = newcolour
 
 	if(supplied_dir) set_dir(supplied_dir)

@@ -69,7 +69,9 @@
 		while(draw_worth >= denomination.marked_value)
 			draw_worth -= denomination.marked_value
 			var/image/banknote = new
-			banknote.appearance = denomination.overlay
+			// TEMPORARY OD TWEAK
+			OD_set_appearance(banknote, denomination.overlay)
+			// banknote.appearance = denomination.overlay
 			banknote.plane = FLOAT_PLANE
 			banknote.layer = FLOAT_LAYER
 			var/matrix/M = matrix()

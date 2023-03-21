@@ -204,8 +204,8 @@ Please contact me on #coderbus IRC. ~Carn x
 	else
 		icon = stand_icon
 		icon_state = null
-		visible_overlays = overlays_standing
-		visible_underlays = underlays_standing
+		visible_overlays = overlays_standing.Copy()
+		visible_underlays = underlays_standing.Copy()
 
 	var/matrix/M = matrix()
 	if(lying && (bodytype.prone_overlay_offset[1] || bodytype.prone_overlay_offset[2]))
@@ -224,15 +224,17 @@ Please contact me on #coderbus IRC. ~Carn x
 					overlay.transform = M
 				add_overlay(overlay)
 
+	underlays = null
 	for(var/i = 1 to LAZYLEN(visible_underlays))
 		var/entry = visible_underlays[i]
 		if(istype(entry, /image))
 			var/image/underlay = entry
 			underlay.transform = M
+			underlays += underlay
 		else if(islist(entry))
 			for(var/image/underlay in entry)
 				underlay.transform = M
-	underlays = visible_underlays
+				underlays += underlay
 
 	var/obj/item/organ/external/head/head = get_organ(BP_HEAD, /obj/item/organ/external/head)
 	if(head)
@@ -579,7 +581,7 @@ var/global/list/damage_icon_parts = list()
 		var/obj/item/ear = get_equipped_item(slot)
 		if(ear)
 			if(!both)
-				both = image("icon" = 'icons/effects/effects.dmi', "icon_state" = "nothing")
+				both = image(icon = 'icons/effects/effects.dmi', icon_state = "nothing")
 			both.overlays += ear.get_mob_overlay(src, slot)
 
 	if(both)

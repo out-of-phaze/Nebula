@@ -34,7 +34,9 @@
 
 /datum/overmap_contact/proc/update_marker_icon()
 
-	marker.appearance = effect
+	// TEMPORARY OD TWEAK
+	OD_set_appearance(marker, effect)
+	// marker.appearance = effect
 	marker.appearance_flags |= RESET_TRANSFORM
 	// Pixel offsets are included in appearance but since this marker's loc
 	// is the effect, it's already offset and we don't want to double it.

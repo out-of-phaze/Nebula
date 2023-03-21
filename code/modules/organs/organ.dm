@@ -361,7 +361,9 @@
 
 	var/obj/item/chems/food/organ/O = new(get_turf(src))
 	O.SetName(name)
-	O.appearance = src
+	// TEMPORARY OD TWEAK
+	OD_set_appearance(O, src)
+	// O.appearance = src
 	if(reagents && reagents.total_volume)
 		reagents.trans_to(O, reagents.total_volume)
 	transfer_fingerprints_to(O)

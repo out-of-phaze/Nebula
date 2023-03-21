@@ -73,7 +73,9 @@
 		for(var/i = 1 to LAZYLEN(pilots))
 			var/mob/pilot = pilots[i]
 			var/image/draw_pilot = new
-			draw_pilot.appearance = pilot
+			// TEMPORARY OD TWEAK
+			OD_set_appearance(draw_pilot, pilot)
+			// draw_pilot.appearance = pilot
 			var/rel_pos = dir == NORTH ? -1 : 1
 			draw_pilot.layer = MECH_PILOT_LAYER + (body ? ((LAZYLEN(body.pilot_positions)-i)*0.001 * rel_pos) : 0)
 			draw_pilot.plane = FLOAT_PLANE
@@ -91,7 +93,7 @@
 			var/diff_x = 8 - draw_pilot.pixel_x
 			var/diff_y = 8 - draw_pilot.pixel_y
 			draw_pilot.add_filter("pilot_mask", 1, list(type = "alpha", icon = icon(body.on_mech_icon, "[body.icon_state]_pilot_mask[hatch_closed ? "" : "_open"]", dir), x = diff_x, y = diff_y))
-			
+
 			LAZYADD(pilot_overlays, draw_pilot)
 		if(update_overlays && LAZYLEN(pilot_overlays))
 			overlays += pilot_overlays

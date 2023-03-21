@@ -83,7 +83,9 @@
 		return INITIALIZE_HINT_QDEL
 	daddy = ndaddy
 	set_dir(daddy.dir)
-	appearance = daddy.appearance
+	// TEMPORARY OD TWEAK
+	OD_set_appearance(src, daddy)
+	// appearance = daddy.appearance
 	events_repository.register(/decl/observ/moved, daddy, src, /obj/effect/bluegoast/proc/mirror)
 	events_repository.register(/decl/observ/dir_set, daddy, src, /obj/effect/bluegoast/proc/mirror_dir)
 	events_repository.register(/decl/observ/destroyed, daddy, src, /datum/proc/qdel_self)

@@ -47,7 +47,9 @@ var/global/list/protected_objects = list(/obj/machinery,
 /mob/living/simple_animal/hostile/mimic/on_update_icon()
 	SHOULD_CALL_PARENT(FALSE)
 	if(copy_of && copy_of.resolve())
-		appearance = copy_of.resolve()
+		// TEMPORARY OD TWEAK
+		OD_set_appearance(src, copy_of.resolve())
+		// appearance = copy_of.resolve()
 	else
 		icon = initial(icon)
 		icon_state = initial(icon_state)

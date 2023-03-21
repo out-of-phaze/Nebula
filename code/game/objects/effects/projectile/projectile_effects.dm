@@ -74,7 +74,9 @@
 	look.pixel_y = p_y
 	if(color_override)
 		look.color = color_override
-	appearance = look
+	// TEMPORARY OD TWEAK
+	OD_set_appearance(src, look)
+	// appearance = look
 	scale_to(1,scaling, FALSE)
 	turn_to(angle_override, FALSE)
 	if(!isnull(new_loc))	//If you want to null it just delete it...

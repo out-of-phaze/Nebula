@@ -35,9 +35,13 @@
 		edge |= EAST
 
 	if(edge) //Magic edges
-		appearance = SSskybox.mapedge_cache["[edge]"]
+		// TEMPORARY OD TWEAK
+		OD_set_appearance(src, SSskybox.mapedge_cache["[edge]"])
+		// appearance = SSskybox.mapedge_cache["[edge]"]
 	else //Dust
-		appearance = SSskybox.dust_cache["[((x + y) ^ ~(x * y) + z) % 25]"]
+		// TEMPORARY OD TWEAK
+		OD_set_appearance(src, SSskybox.dust_cache["[((x + y) ^ ~(x * y) + z) % 25]"])
+		// appearance = SSskybox.dust_cache["[((x + y) ^ ~(x * y) + z) % 25]"]
 
 	if(!HasBelow(z))
 		return INITIALIZE_HINT_NORMAL
@@ -57,15 +61,21 @@
 		return
 
 	if(!direction) //Stopping our transit
-		appearance = SSskybox.dust_cache["[((x + y) ^ ~(x * y) + z) % 25]"]
+		// TEMPORARY OD TWEAK
+		OD_set_appearance(src, SSskybox.dust_cache["[((x + y) ^ ~(x * y) + z) % 25]"])
+		// appearance = SSskybox.dust_cache["[((x + y) ^ ~(x * y) + z) % 25]"]
 	else if(direction & (NORTH|SOUTH)) //Starting transit vertically
 		var/x_shift = SSskybox.phase_shift_by_x[x % (SSskybox.phase_shift_by_x.len - 1) + 1]
 		var/transit_state = ((direction & SOUTH ? world.maxy - y : y) + x_shift) % 15
-		appearance = SSskybox.speedspace_cache["NS_[transit_state]"]
+		// TEMPORARY OD TWEAK
+		OD_set_appearance(src, SSskybox.speedspace_cache["NS_[transit_state]"])
+		// appearance = SSskybox.speedspace_cache["NS_[transit_state]"]
 	else if(direction & (EAST|WEST)) //Starting transit horizontally
 		var/y_shift = SSskybox.phase_shift_by_y[y % (SSskybox.phase_shift_by_y.len - 1) + 1]
 		var/transit_state = ((direction & WEST ? world.maxx - x : x) + y_shift) % 15
-		appearance = SSskybox.speedspace_cache["EW_[transit_state]"]
+		// TEMPORARY OD TWEAK
+		OD_set_appearance(src, SSskybox.speedspace_cache["EW_[transit_state]"])
+		// appearance = SSskybox.speedspace_cache["EW_[transit_state]"]
 
 	for(var/atom/movable/AM in src)
 		if (AM.simulated && !AM.anchored)

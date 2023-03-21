@@ -564,7 +564,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	var/pre_layer = layer
 	var/pre_invis = invisibility
 
-	appearance = target
+	// TEMPORARY OD TWEAK
+	OD_set_appearance(src, target)
+	// appearance = target
 	appearance_flags |= initial(appearance_flags)
 	alpha = pre_alpha
 	plane = pre_plane

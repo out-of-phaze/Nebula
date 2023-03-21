@@ -1,7 +1,7 @@
 /mob/proc/do_jitter(amplitude)
 	pixel_x = default_pixel_x + rand(-amplitude, amplitude)
 	pixel_y = default_pixel_y + rand(-amplitude/3, amplitude/3)
-	
+
 //handles up-down floaty effect in space and zero-gravity
 /mob/var/is_floating = 0
 /mob/var/floatiness = 0
@@ -99,7 +99,9 @@
 	// Create an image to show to viewers.
 	// Reset plane and layer so that it doesn't inherit the UI settings from equipped items.
 	var/image/I = new(loc = A)
-	I.appearance = weapon
+	// TEMPORARY OD TWEAK
+	OD_set_appearance(I, weapon)
+	// I.appearance = weapon
 	I.plane = DEFAULT_PLANE
 	I.layer = A.layer + 0.1
 	I.pixel_x = 0

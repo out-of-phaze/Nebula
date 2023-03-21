@@ -139,7 +139,9 @@
 
 /atom/PopulateClone(atom/clone)
 	//Not entirely sure about icon stuff. Some legacy things would need it copied, but not more recently coded atoms..
-	clone.appearance = appearance
+	// TEMPORARY OD TWEAK
+	OD_set_appearance(clone, src)
+	// clone.appearance = appearance
 	clone.set_invisibility(invisibility)
 
 	clone.SetName(name)

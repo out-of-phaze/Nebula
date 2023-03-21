@@ -14,7 +14,9 @@
 /obj/effect/quicksand/Initialize()
 	. = ..()
 	var/turf/T = get_turf(src)
-	appearance = T.appearance
+	// TEMPORARY OD TWEAK
+	OD_set_appearance(src, T)
+	// appearance = T.appearance
 
 /obj/effect/quicksand/user_unbuckle_mob(mob/user)
 	if(buckled_mob && !user.stat && !user.restrained())

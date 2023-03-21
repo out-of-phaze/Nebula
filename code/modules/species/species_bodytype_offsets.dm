@@ -19,7 +19,7 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 
 /decl/bodytype
 	var/list/equip_adjust = list()
-	var/list/equip_overlays = list()
+	var/list/image/equip_overlays = list()
 
 /decl/bodytype/proc/get_offset_overlay_image(var/spritesheet, var/mob_icon, var/mob_state, var/color, var/slot)
 	// If we don't actually need to offset this, don't bother with any of the generation/caching.
@@ -42,6 +42,8 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 				final_I.Insert(canvas, dir = use_dir)
 			equip_overlays[image_key] = overlay_image(final_I, color = color, flags = RESET_COLOR)
 		var/image/I = new() // We return a copy of the cached image, in case downstream procs mutate it.
-		I.appearance = equip_overlays[image_key]
+		// TEMPORARY OD TWEAK
+		OD_set_appearance(I, equip_overlays[image_key])
+		// I.appearance = equip_overlays[image_key]
 		return I
 	return overlay_image(mob_icon, mob_state, color, RESET_COLOR)

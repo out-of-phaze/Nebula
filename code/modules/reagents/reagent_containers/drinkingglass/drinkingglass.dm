@@ -131,7 +131,9 @@
 			var/icon/extra = new/icon('icons/obj/drink_glasses/extras.dmi', overlay)
 			base.Blend(extra, ICON_MULTIPLY)
 		filling_icons_cache["[base_icon][amount][overlay]"] = image(base)
-	I.appearance = filling_icons_cache["[base_icon][amount][overlay]"]
+	// TEMPORARY OD TWEAK
+	OD_set_appearance(I, filling_icons_cache["[base_icon][amount][overlay]"])
+	// I.appearance = filling_icons_cache["[base_icon][amount][overlay]"]
 	return I
 
 /obj/item/chems/drinks/glass2/on_update_icon()

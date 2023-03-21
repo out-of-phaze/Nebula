@@ -96,7 +96,9 @@
 	return ..()
 
 /atom/movable/openspace/multiplier/proc/copy_lighting(atom/movable/lighting_overlay/LO)
-	appearance = LO
+	// TEMPORARY OD TWEAK
+	OD_set_appearance(src, LO)
+	// appearance = LO
 	layer = MIMICED_LIGHTING_LAYER
 	plane = OPENTURF_MAX_PLANE
 	blend_mode = BLEND_MULTIPLY

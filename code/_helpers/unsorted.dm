@@ -800,3 +800,15 @@ var/global/list/WALLITEMS = list(
 			if(3)
 				return "[num]rd"
 	return "[num]th"
+
+/proc/OD_set_appearance(image/receiver, image/source) // these aren't actually images, just anything with an appearance
+	if(!receiver || !source)
+		return
+	receiver.icon = source.icon
+	receiver.icon_state = source.icon_state
+	receiver.dir = source.dir
+	receiver.color = source.color
+	receiver.alpha = source.alpha
+	receiver.layer = source.layer
+	receiver.pixel_x = source.pixel_x
+	receiver.pixel_y = source.pixel_y
