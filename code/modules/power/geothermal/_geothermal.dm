@@ -111,7 +111,7 @@ var/global/const/MAX_GEOTHERMAL_PRESSURE =            2000
 	if(neighbors)
 		for(var/neighbordir in global.cardinal)
 			if(neighbors & neighbordir)
-				add_overlay(image(icon, "geothermal-connector", dir = neighbordir))
+				add_overlay(image(icon, icon_state = "geothermal-connector", dir = neighbordir))
 
 	if(current_pressure > 0)
 		set_light(2, 0.5, COLOR_RED)
@@ -124,7 +124,7 @@ var/global/const/MAX_GEOTHERMAL_PRESSURE =            2000
 			for(var/neighbordir in global.cardinal)
 				if(neighbors & neighbordir)
 					// emissive_overlay is not setting dir and setting plane/layer directly also causes dir to break :(
-					I = image(icon, "geothermal-connector-glow", dir = neighbordir)
+					I = image(icon, icon_state = "geothermal-connector-glow", dir = neighbordir)
 					I.alpha = glow_alpha
 					add_overlay(I)
 	else

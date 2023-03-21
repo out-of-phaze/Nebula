@@ -71,17 +71,17 @@
 			for(var/i = 1 to 4)
 				var/conn = connections ? connections[i] : "0"
 				if(other_connections && other_connections[i] != "0")
-					I = image(icon, "grille_other_onframe[conn]", dir = BITFLAG(i-1))
+					I = image(icon, icon_state = "grille_other_onframe[conn]", dir = BITFLAG(i-1))
 				else
-					I = image(icon, "grille_onframe[conn]", dir = BITFLAG(i-1))
+					I = image(icon, icon_state = "grille_onframe[conn]", dir = BITFLAG(i-1))
 				add_overlay(I)
 		else
 			for(var/i = 1 to 4)
 				var/conn = connections ? connections[i] : "0"
 				if(other_connections && other_connections[i] != "0")
-					I = image(icon, "grille_other[conn]", dir = BITFLAG(i-1))
+					I = image(icon, icon_state = "grille_other[conn]", dir = BITFLAG(i-1))
 				else
-					I = image(icon, "grille[conn]", dir = BITFLAG(i-1))
+					I = image(icon, icon_state = "grille[conn]", dir = BITFLAG(i-1))
 				add_overlay(I)
 
 /obj/structure/grille/Bumped(atom/user)

@@ -233,7 +233,7 @@
 	number = 2
 
 /datum/hallucination/mirage/money/generate_mirage()
-	return image('icons/obj/items/money.dmi', "cash_x_5]", layer = BELOW_TABLE_LAYER)
+	return image('icons/obj/items/money.dmi', icon_state = "cash_x_5", layer = BELOW_TABLE_LAYER)
 
 //Blood and aftermath of firefight
 /datum/hallucination/mirage/carnage
@@ -242,11 +242,11 @@
 
 /datum/hallucination/mirage/carnage/generate_mirage()
 	if(prob(50))
-		var/image/I = image('icons/effects/blood.dmi', pick("mfloor1", "mfloor2", "mfloor3", "mfloor4", "mfloor5", "mfloor6", "mfloor7"), layer = BELOW_TABLE_LAYER)
+		var/image/I = image('icons/effects/blood.dmi', icon_state = pick("mfloor1", "mfloor2", "mfloor3", "mfloor4", "mfloor5", "mfloor6", "mfloor7"), layer = BELOW_TABLE_LAYER)
 		I.color = COLOR_BLOOD_HUMAN
 		return I
 	else
-		var/image/I = image('icons/obj/ammo.dmi', "s-casing-spent", layer = BELOW_TABLE_LAYER)
+		var/image/I = image('icons/obj/ammo.dmi', icon_state = "s-casing-spent", layer = BELOW_TABLE_LAYER)
 		I.layer = BELOW_TABLE_LAYER
 		I.dir = pick(global.alldirs)
 		I.pixel_x = rand(-10,10)

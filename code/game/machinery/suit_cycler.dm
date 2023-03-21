@@ -73,24 +73,24 @@
 		LAZYADD(new_overlays, helmet.get_mob_overlay(null, slot_head_str))
 	if(occupant)
 		LAZYADD(new_overlays, image(occupant))
-	LAZYADD(new_overlays, image(icon, "overbase", layer = ABOVE_HUMAN_LAYER))
+	LAZYADD(new_overlays, image(icon, icon_state = "overbase", layer = ABOVE_HUMAN_LAYER))
 
 	if(locked || active)
-		LAZYADD(new_overlays, image(icon, "closed", layer = ABOVE_HUMAN_LAYER))
+		LAZYADD(new_overlays, image(icon, icon_state = "closed", layer = ABOVE_HUMAN_LAYER))
 	else
-		LAZYADD(new_overlays, image(icon, "open", layer = ABOVE_HUMAN_LAYER))
+		LAZYADD(new_overlays, image(icon, icon_state = "open", layer = ABOVE_HUMAN_LAYER))
 
 	if(irradiating)
-		LAZYADD(new_overlays, image(icon, "light_radiation", layer = ABOVE_HUMAN_LAYER))
+		LAZYADD(new_overlays, image(icon, icon_state = "light_radiation", layer = ABOVE_HUMAN_LAYER))
 		set_light(3, 0.8, COLOR_RED_LIGHT)
 	else if(active)
-		LAZYADD(new_overlays, image(icon, "light_active", layer = ABOVE_HUMAN_LAYER))
+		LAZYADD(new_overlays, image(icon, icon_state = "light_active", layer = ABOVE_HUMAN_LAYER))
 		set_light(3, 0.8, COLOR_YELLOW)
 	else
 		set_light(0)
 
 	if(panel_open)
-		LAZYADD(new_overlays, image(icon, "panel", layer = ABOVE_HUMAN_LAYER))
+		LAZYADD(new_overlays, image(icon, icon_state = "panel", layer = ABOVE_HUMAN_LAYER))
 
 	overlays = new_overlays
 

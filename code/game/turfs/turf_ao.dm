@@ -32,7 +32,7 @@
 	var/cstr = "[corner]"
 	var/key = "[cstr]-[i]-[px]/[py]/[pz]/[pw]"
 
-	var/image/I = image('icons/turf/flooring/shadows.dmi', cstr, dir = BITFLAG(i-1))
+	var/image/I = image('icons/turf/flooring/shadows.dmi', icon_state = cstr, dir = BITFLAG(i-1))
 	I.alpha = WALL_AO_ALPHA
 	I.blend_mode = BLEND_OVERLAY
 	I.appearance_flags = RESET_ALPHA|RESET_COLOR|TILE_BOUND

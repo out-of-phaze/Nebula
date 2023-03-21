@@ -219,4 +219,4 @@
 /obj/machinery/chemical_dispenser/on_update_icon()
 	cut_overlays()
 	if(container)
-		add_overlay(image(icon, "lil_beaker", pixel_x = pick(beaker_positions), pixel_y = beaker_offset))
+		add_overlay(image(icon, icon_state = "lil_beaker", pixel_x = pick(beaker_positions), pixel_y = beaker_offset))

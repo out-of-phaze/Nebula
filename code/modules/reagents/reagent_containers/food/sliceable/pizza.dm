@@ -182,7 +182,7 @@
 				doimgtag = 1
 
 		if( doimgtag )
-			add_overlay(image("food.dmi", "pizzabox_tag", pixel_y = (boxes.len * 3)))
+			add_overlay(image("food.dmi", icon_state = "pizzabox_tag", pixel_y = (boxes.len * 3)))
 
 	icon_state = "pizzabox[boxes.len+1]"
 

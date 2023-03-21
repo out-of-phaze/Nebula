@@ -69,13 +69,13 @@
 
 /obj/machinery/computer/proc/get_screen_overlay()
 	if(icon_screen)
-		var/image/I = image(icon, icon_screen, overlay_layer)
+		var/image/I = image(icon, icon_state = icon_screen, layer = overlay_layer)
 		I.appearance_flags |= RESET_COLOR
 		return I
 
 /obj/machinery/computer/proc/get_keyboard_overlay()
 	if(icon_keyboard)
-		var/image/I = image(icon, icon_keyboard, overlay_layer)
+		var/image/I = image(icon, icon_state = icon_keyboard, layer = overlay_layer)
 		I.appearance_flags |= RESET_COLOR
 		return I
 

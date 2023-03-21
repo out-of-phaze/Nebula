@@ -69,7 +69,7 @@
 			off_y = rand(-6, 11)
 
 		//Keep the full icon path, since subclasses may not have the label in their icon file
-		var/image/I = image('icons/obj/items/storage/deliverypackage.dmi', "delivery_label", pixel_x = off_x, pixel_y = off_y)
+		var/image/I = image('icons/obj/items/storage/deliverypackage.dmi', icon_state = "delivery_label", pixel_x = off_x, pixel_y = off_y)
 		add_overlay(I)
 
 /obj/item/parcel/examine(mob/user, distance)

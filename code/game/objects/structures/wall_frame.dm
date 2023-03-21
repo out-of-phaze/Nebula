@@ -103,9 +103,9 @@
 	for(var/i = 1 to 4)
 		var/conn = connections ? connections[i] : "0"
 		if(other_connections && other_connections[i] != "0")
-			I = image(icon, "frame_other[conn]", dir = BITFLAG(i-1))
+			I = image(icon, icon_state = "frame_other[conn]", dir = BITFLAG(i-1))
 		else
-			I = image(icon, "frame[conn]", dir = BITFLAG(i-1))
+			I = image(icon, icon_state = "frame[conn]", dir = BITFLAG(i-1))
 		I.color = new_color
 		add_overlay(I)
 

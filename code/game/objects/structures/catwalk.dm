@@ -62,7 +62,7 @@
 	icon_state = ""
 	if(!hatch_open)
 		for(var/i = 1 to 4)
-			add_overlay(image(icon, "catwalk[connections ? connections[i] : "0"]", dir = BITFLAG(i-1)))
+			add_overlay(image(icon, icon_state = "catwalk[connections ? connections[i] : "0"]", dir = BITFLAG(i-1)))
 	if(plated_tile)
 		var/image/I = image(icon, "plated")
 		I.color = plated_tile.color

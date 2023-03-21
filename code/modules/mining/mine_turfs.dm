@@ -113,7 +113,7 @@
 	for(var/direction in step_overlays)
 
 		if(isspaceturf(get_step(src, step_overlays[direction])))
-			var/image/aster_edge = image('icons/turf/flooring/asteroid.dmi', "asteroid_edges", dir = step_overlays[direction])
+			var/image/aster_edge = image('icons/turf/flooring/asteroid.dmi', icon_state = "asteroid_edges", dir = step_overlays[direction])
 			aster_edge.layer = DECAL_LAYER
 			overlays += aster_edge
 

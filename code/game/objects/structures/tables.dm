@@ -293,20 +293,20 @@
 		// Tabletop
 		if(reinf_material)
 			for(var/i = 1 to 4)
-				I = image(icon, "[reinf_material.table_icon_base]_[connections ? connections[i] : "0"]", dir = BITFLAG(i-1))
+				I = image(icon, icon_state = "[reinf_material.table_icon_base]_[connections ? connections[i] : "0"]", dir = BITFLAG(i-1))
 				I.color = reinf_material.color
 				I.alpha = 255 * reinf_material.opacity
 				add_overlay(I)
 		if(additional_reinf_material)
 			for(var/i = 1 to 4)
-				I = image(icon, "[additional_reinf_material.table_icon_reinforced]_[connections ? connections[i] : "0"]", dir = BITFLAG(i-1))
+				I = image(icon, icon_state = "[additional_reinf_material.table_icon_reinforced]_[connections ? connections[i] : "0"]", dir = BITFLAG(i-1))
 				I.color = additional_reinf_material.color
 				I.alpha = 255 * additional_reinf_material.opacity
 				add_overlay(I)
 
 		if(felted)
 			for(var/i = 1 to 4)
-				add_overlay(image(icon, "carpet_[connections ? connections[i] : "0"]", dir = BITFLAG(i-1)))
+				add_overlay(image(icon, icon_state = "carpet_[connections ? connections[i] : "0"]", dir = BITFLAG(i-1)))
 	else
 
 		mob_offset = 0
@@ -331,13 +331,13 @@
 
 		var/image/I
 		if(reinf_material)
-			I = image(icon, "[reinf_material.table_icon_base]_flip[flip_type][flip_mod]")
+			I = image(icon, icon_state = "[reinf_material.table_icon_base]_flip[flip_type][flip_mod]")
 			I.color = reinf_material.color
 			I.alpha = 255 * reinf_material.opacity
 			I.appearance_flags |= RESET_COLOR|RESET_ALPHA
 			add_overlay(I)
 		if(additional_reinf_material)
-			I = image(icon, "[reinf_material.table_icon_reinforced]_flip[flip_type][flip_mod]")
+			I = image(icon, icon_state = "[reinf_material.table_icon_reinforced]_flip[flip_type][flip_mod]")
 			I.color = additional_reinf_material.color
 			I.alpha = 255 * additional_reinf_material.opacity
 			I.appearance_flags |= RESET_COLOR|RESET_ALPHA

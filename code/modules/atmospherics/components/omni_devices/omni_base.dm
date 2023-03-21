@@ -217,7 +217,7 @@
 			pipe_state_key = "down"
 		else
 			pipe_state_key = "intact"
-		var/image/pipe_state = image('icons/atmos/pipe_underlays.dmi', pipe_state_key, dir = P.direction)
+		var/image/pipe_state = image('icons/atmos/pipe_underlays.dmi', icon_state = pipe_state_key, dir = P.direction)
 		pipe_state.color = color_cache_name(node)
 
 		return list("on_icon" = ic_on, "off_icon" = ic_off, "pipe_icon" = pipe_state)
@@ -262,7 +262,7 @@
 		QDEL_NULL(P.network)
 		if(P.mode == 0)
 			continue
-		
+
 		for(var/obj/machinery/atmospherics/target in get_step(src, P.direction))
 			if(target.initialize_directions & get_dir(target,src))
 				if (check_connect_types(target,src))

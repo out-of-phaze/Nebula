@@ -92,7 +92,7 @@ Pipelines + Other Objects -> Pipe network
 		else
 			state = "intact"
 
-	var/image/I = image('icons/atmos/pipe_underlays.dmi', "[state][icon_connect_type]", dir = direction)
+	var/image/I = image('icons/atmos/pipe_underlays.dmi', icon_state = "[state][icon_connect_type]", dir = direction)
 	I.color = color_cache_name(node)
 	underlays += I
 

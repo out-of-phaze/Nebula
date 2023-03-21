@@ -139,7 +139,7 @@
 			on = 0
 
 	if(istype(lightbulb, /obj/item/light))
-		var/image/I = image(icon, _state)
+		var/image/I = image(icon, icon_state = _state)
 		I.color = get_mode_color()
 		add_overlay(I)
 
