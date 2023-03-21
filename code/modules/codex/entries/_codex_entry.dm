@@ -92,7 +92,7 @@
 			. += category.get_category_link(src)
 
 // TODO: clean up codex bodies until trimming linebreaks is unnecessary.
-#define TRIM_LINEBREAKS(TEXT) replacetext(replacetext(TEXT, SScodex.trailingLinebreakRegexStart, null), SScodex.trailingLinebreakRegexEnd, null)
+#define TRIM_LINEBREAKS(TEXT) replacetext(replacetext(TEXT, SScodex.trailingLinebreakRegexStart, ""), SScodex.trailingLinebreakRegexEnd, "")
 /datum/codex_entry/proc/get_codex_body(var/mob/presenting_to, var/include_header = TRUE, var/include_footer = TRUE)
 
 	. = list()
