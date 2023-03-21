@@ -16,8 +16,16 @@ SUBSYSTEM_DEF(input)
 // This is for when macro sets are eventualy datumized
 /datum/controller/subsystem/input/proc/setup_default_macro_sets()
 	macro_set = list(
-	"Any" = "\"KeyDown \[\[*\]\]\"",
-	"Any+UP" = "\"KeyUp \[\[*\]\]\"",
+	"Any" = "\"keyDown \[\[*\]\]\"",
+	"Any+UP" = "\"keyUp \[\[*\]\]\"",
+	"W" = "\"keyDown W\"",
+	"W+UP" = "\"keyUp W\"",
+	"A" = "\"keyDown A\"",
+	"A+UP" = "\"keyUp A\"",
+	"S" = "\"keyDown S\"",
+	"S+UP" = "\"keyUp S\"",
+	"D" = "\"keyDown D\"",
+	"D+UP" = "\"keyUp D\"",
 	"Back" = "\".winset \\\"outputwindow.input.text=\\\"\\\"\\\"\""
 	)
 
