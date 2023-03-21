@@ -99,7 +99,9 @@
 		"}
 
 /datum/proc/VV_get_variables()
-	. = vars - VV_hidden()
+	. = list()
+	. += src.vars
+	. -= VV_hidden()
 	if(!usr || !check_rights(R_ADMIN|R_DEBUG, FALSE))
 		. -= VV_secluded()
 
