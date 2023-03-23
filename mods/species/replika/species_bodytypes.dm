@@ -33,3 +33,25 @@
 	icon_base =         'mods/species/replika/icons/lstr/body.dmi'
 	prosthetics_model = /decl/prosthetics_manufacturer/replika/lstr
 	default_hair_style = /decl/sprite_accessory/hair/replika/lstr
+
+/decl/bodytype/replika/star
+	name =              "STAR"
+	nickname =          "Starling"
+	icon_base =         'mods/species/replika/icons/star/body.dmi'
+	prosthetics_model = /decl/prosthetics_manufacturer/replika/star
+	default_hair_style = /decl/sprite_accessory/hair/replika/star
+	eye_offset = 2
+
+/decl/bodytype/replika/star/Initialize()
+	. = ..()
+	equip_adjust = list(
+		BP_L_HAND =           list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
+		BP_R_HAND =           list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
+		slot_head_str =       list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
+		slot_wear_mask_str =  list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
+		slot_w_uniform_str =  list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
+		slot_wear_suit_str =  list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
+		slot_back_str =       list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
+		slot_belt_str =       list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
+		slot_underpants_str = list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
+	)
