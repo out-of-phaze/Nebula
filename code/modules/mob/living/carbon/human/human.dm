@@ -1310,11 +1310,11 @@
 /mob/living/carbon/human/set_internals_to_best_available_tank(var/breathes_gas = /decl/material/gas/oxygen, var/list/poison_gas = list(/decl/material/gas/chlorine))
 	. = ..(species.breath_type, species.poison_types)
 
-/mob/living/carbon/human/get_possible_internals_sources()
+/mob/living/carbon/human/get_equipped_internals_sources()
 	. = ..() | list(
 		"suit" =         list(get_equipped_item(slot_s_store_str), "on"),
 		"belt" =         list(get_equipped_item(slot_belt_str),    "on"),
-		"left_pocket" =  list(get_equipped_item(slot_l_store_str), "in"),
+		"left pocket" =  list(get_equipped_item(slot_l_store_str), "in"),
 		"right pocket" = list(get_equipped_item(slot_r_store_str), "in"),
 		"rig" =          list(wearing_rig?.air_supply, "in")
 	)
@@ -1361,6 +1361,8 @@
 
 	set_species(species_name)
 
+	if(!skin_colour)
+		skin_colour = species.base_color
 	if(!hair_colour)
 		hair_colour = species.base_hair_color
 	if(!facial_hair_colour)

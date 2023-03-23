@@ -62,7 +62,7 @@ default behaviour is:
 	// End boilerplate.
 
 	spawn(0)
-		if ((!( yes ) || now_pushing) || !loc)
+		if (!yes || now_pushing || QDELETED(src) || QDELETED(AM) || !loc || !AM.loc)
 			return
 
 		now_pushing = 1
@@ -107,6 +107,8 @@ default behaviour is:
 
 		now_pushing = 0
 		spawn(0)
+			if (QDELETED(src) || QDELETED(AM) || !loc || !AM.loc)
+				return
 			..()
 			var/saved_dir = AM.dir
 			if (!istype(AM, /atom/movable) || AM.anchored)
@@ -724,7 +726,6 @@ default behaviour is:
 	if(auras)
 		for(var/a in auras)
 			remove_aura(a)
-	QDEL_NULL(lighting_master)
 	return ..()
 
 /mob/living/proc/melee_accuracy_mods()
@@ -1081,8 +1082,3 @@ default behaviour is:
 /mob/living/get_speech_bubble_state_modifier()
 	return isSynthetic() ? "synth" : ..()
 
-/mob/living/proc/refresh_lighting_master()
-	if(!lighting_master)
-		lighting_master = new
-	if(client)
-		client.screen |= lighting_master

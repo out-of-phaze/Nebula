@@ -266,6 +266,9 @@
 /datum/fabricator_recipe/imprinter/circuit/design_console
 	path = /obj/item/stock_parts/circuitboard/design_console
 
+/datum/fabricator_recipe/imprinter/circuit/design_database
+	path = /obj/item/stock_parts/circuitboard/design_database
+
 /datum/fabricator_recipe/imprinter/circuit/sensors
 	path = /obj/item/stock_parts/circuitboard/sensors
 
@@ -472,6 +475,9 @@
 
 /datum/fabricator_recipe/imprinter/circuit/router_wall_mounted
 	path = /obj/item/stock_parts/circuitboard/router/wall_mounted
+
+/datum/fabricator_recipe/imprinter/circuit/modem
+	path = /obj/item/stock_parts/circuitboard/modem
 
 /datum/fabricator_recipe/imprinter/circuit/relay
 	path = /obj/item/stock_parts/circuitboard/relay
