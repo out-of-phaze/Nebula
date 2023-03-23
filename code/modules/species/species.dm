@@ -4,6 +4,7 @@
 var/global/const/DEFAULT_SPECIES_HEALTH = 200
 
 /decl/species
+	abstract_type = /decl/species
 
 	// Descriptors and strings.
 	var/name
@@ -34,6 +35,16 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 
 	var/flesh_color = "#ffc896"             // Pink.
 	var/blood_oxy = 1
+
+	// Darksight handling
+	/// Fractional multiplier (0 to 1) for the base alpha of the darkness overlay. A value of 1 means darkness is completely invisible.
+	var/base_low_light_vision = 0
+	/// The lumcount (turf luminosity) threshold under which adaptive low light vision will begin processing.
+	var/low_light_vision_threshold = 0.3
+	/// Fractional multiplier for the overall effectiveness of low light vision for this species. Caps the final alpha value of the darkness plane.
+	var/low_light_vision_effectiveness = 0
+	/// The rate at which low light vision adjusts towards the final value, as a fractional multiplier of the difference between the current and target alphas. ie. set to 0.15 for a 15% shift towards the target value each tick.
+	var/low_light_vision_adjustment_speed = 0.15
 
 	// Used for initializing prefs/preview
 	var/base_color =      COLOR_BLACK
@@ -349,6 +360,10 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 
 	. = ..()
 
+	if(config.grant_default_darksight)
+		darksight_range = max(darksight_range, config.default_darksight_range)
+		low_light_vision_effectiveness = max(low_light_vision_effectiveness, config.default_darksight_effectiveness)
+
 	// Populate blood type table.
 	for(var/blood_type in blood_types)
 		var/decl/blood_type/blood_decl = GET_DECL(blood_type)
@@ -460,6 +475,76 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 		var/decl/trait/T = GET_DECL(trait_type)
 		if(!T.validate_level(trait_level))
 			. += "invalid levels for species trait [trait_type]"
+
+	if(base_low_light_vision > 1)
+		. += "base low light vision is greater than 1 (over 100%)"
+	else if(base_low_light_vision < 0)
+		. += "base low light vision is less than 0 (below 0%)"
+
+	if(low_light_vision_threshold > 1)
+		. += "low light vision threshold is greater than 1 (over 100%)"
+	else if(low_light_vision_threshold < 0)
+		. += "low light vision threshold is less than 0 (below 0%)"
+
+	if(low_light_vision_effectiveness > 1)
+		. += "low light vision effectiveness is greater than 1 (over 100%)"
+	else if(low_light_vision_effectiveness < 0)
+		. += "low light vision effectiveness is less than 0 (below 0%)"
+
+	if(low_light_vision_adjustment_speed > 1)
+		. += "low light vision adjustment speed is greater than 1 (over 100%)"
+	else if(low_light_vision_adjustment_speed < 0)
+		. += "low light vision adjustment speed is less than 0 (below 0%)"
+
+	if((appearance_flags & HAS_SKIN_COLOR) && isnull(base_color))
+		. += "uses skin color but missing base_color"
+	if((appearance_flags & HAS_HAIR_COLOR) && isnull(base_hair_color))
+		. += "uses hair color but missing base_hair_color"
+	if((appearance_flags & HAS_EYE_COLOR) && isnull(base_eye_color))
+		. += "uses eye color but missing base_eye_color"
+	if(isnull(default_h_style))
+		. += "null default_h_style (use a bald/hairless hairstyle if 'no hair' is intended)"
+	if(isnull(default_f_style))
+		. += "null default_f_style (use a shaved/hairless facial hair style if 'no facial hair' is intended)"
+	if(!length(blood_types))
+		. += "missing at least one blood type"
+	if(default_bodytype && !(default_bodytype in available_bodytypes))
+		. += "default bodytype is not in available bodytypes list"
+	if(!length(available_bodytypes))
+		. += "missing at least one bodytype"
+	// TODO: Maybe make age descriptors optional, in case someone wants a 'timeless entity' species?
+	if(isnull(age_descriptor))
+		. += "age descriptor was unset"
+	else if(!ispath(age_descriptor, /datum/appearance_descriptor/age))
+		. += "age descriptor was not a /datum/appearance_descriptor/age subtype"
+
+	if(cold_level_3)
+		if(cold_level_2)
+			if(cold_level_3 > cold_level_2)
+				. += "cold_level_3 ([cold_level_3]) was not lower than cold_level_2 ([cold_level_2])"
+			if(cold_level_1)
+				if(cold_level_3 > cold_level_1)
+					. += "cold_level_3 ([cold_level_3]) was not lower than cold_level_1 ([cold_level_1])"
+	if(cold_level_2 && cold_level_1)
+		if(cold_level_2 > cold_level_1)
+			. += "cold_level_2 ([cold_level_2]) was not lower than cold_level_1 ([cold_level_1])"
+
+	if(heat_level_3 != INFINITY)
+		if(heat_level_2 != INFINITY)
+			if(heat_level_3 < heat_level_2)
+				. += "heat_level_3 ([heat_level_3]) was not higher than heat_level_2 ([heat_level_2])"
+			if(heat_level_1 != INFINITY)
+				if(heat_level_3 < heat_level_1)
+					. += "heat_level_3 ([heat_level_3]) was not higher than heat_level_1 ([heat_level_1])"
+	if((heat_level_2 != INFINITY) && (heat_level_1 != INFINITY))
+		if(heat_level_2 < heat_level_1)
+			. += "heat_level_2 ([heat_level_2]) was not higher than heat_level_1 ([heat_level_1])"
+
+	if(min(heat_level_1, heat_level_2, heat_level_3) <= max(cold_level_1, cold_level_2, cold_level_3))
+		. += "heat and cold damage level thresholds overlap"
+
+	if(taste_sensitivity < 0)
+		. += "taste_sensitivity ([taste_sensitivity]) was negative"
 
 /decl/species/proc/equip_survival_gear(var/mob/living/carbon/human/H, var/box_type = /obj/item/storage/box/survival)
 	var/obj/item/storage/backpack/backpack = H.get_equipped_item(slot_back_str)
@@ -698,15 +783,15 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 					light -= H.equipment_light_protection
 	return clamp(max(prescriptions, light), 0, 7)
 
-/decl/species/proc/set_default_hair(var/mob/living/carbon/human/H)
-	if(H.h_style != H.species.default_h_style)
-		H.h_style = H.species.default_h_style
+/decl/species/proc/set_default_hair(mob/living/carbon/human/organism, override_existing = TRUE, defer_update_hair = FALSE)
+	if(!organism.h_style || (override_existing && (organism.h_style != default_h_style)))
+		organism.h_style = default_h_style
 		. = TRUE
-	if(H.f_style != H.species.default_f_style)
-		H.f_style = H.species.default_f_style
+	if(!organism.h_style || (override_existing && (organism.f_style != default_f_style)))
+		organism.f_style = default_f_style
 		. = TRUE
-	if(.)
-		H.update_hair()
+	if(. && !defer_update_hair)
+		organism.update_hair()
 
 /decl/species/proc/handle_additional_hair_loss(var/mob/living/carbon/human/H, var/defer_body_update = TRUE)
 	return FALSE
