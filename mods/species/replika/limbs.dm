@@ -22,4 +22,9 @@
 	desc = "This limb is made of bioengineered flesh with a carbon fiber-reinforced polyethylene shell, designed to work as a combat engineer or ship technician."
 	icon = 'mods/species/replika/icons/lstr/body.dmi'
 
+/decl/prosthetics_manufacturer/replika/star
+	name = "\improper STAR model"
+	desc = "This limb is made of bioengineered flesh with a polyethylene shell, designed for general-purpose duties."
+	icon = 'mods/species/replika/icons/star/body.dmi'
+
 // Sorry, can't manufacture these! Tough luck. You can steal them from others though ;)

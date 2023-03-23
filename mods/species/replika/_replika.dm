@@ -66,3 +66,6 @@
 
 /mob/living/carbon/human/replika/lstr
 	starting_bodytype = /decl/bodytype/replika/lstr
+
+/mob/living/carbon/human/replika/star
+	starting_bodytype = /decl/bodytype/replika/star
