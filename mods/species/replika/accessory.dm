@@ -17,7 +17,8 @@
 
 /decl/sprite_accessory/hair/replika/lstr
 	name = "LSTR hair"
-	icon_state = "hair_bobcutalt"
+	icon = 'mods/species/replika/icons/lstr/hair.dmi'
+	icon_state = "hair_lstr"
 
 /decl/sprite_accessory/hair/replika/star
 	name = "STAR hair"
