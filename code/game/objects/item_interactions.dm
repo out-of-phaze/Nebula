@@ -34,4 +34,4 @@
 	icon_state = "radial_ladder_down"
 
 /decl/interaction_handler/drop/invoked(atom/target, mob/user, obj/item/prop)
-	user.unEquip(target, user.loc)
+	user.try_unequip(target, user.loc)

@@ -268,7 +268,7 @@ var/global/list/closets = list()
 								 "<span class='notice'>You hear rustling of clothes.</span>")
 			return TRUE
 
-		if(user.unEquip(W, loc))
+		if(user.try_unequip(W, loc))
 			W.pixel_x = 0
 			W.pixel_y = 0
 			W.pixel_z = 0
