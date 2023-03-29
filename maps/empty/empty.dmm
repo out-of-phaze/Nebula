@@ -3,7 +3,7 @@
 /turf/space,
 /area/space)
 "DJ" = (
-/obj/abstract/level_data/debug,
+/obj/abstract/level_data_spawner/debug,
 /turf/space,
 /area/space)
 
