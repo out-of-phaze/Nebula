@@ -309,7 +309,9 @@ var/global/list/damage_icon_parts = list()
 		if(O.damage_state == "00")
 			continue
 		var/icon/DI
-		var/use_colour = (BP_IS_PROSTHETIC(O) ? SYNTH_BLOOD_COLOR : O.species.get_blood_color(src))
+		// SIGNALIS EDIT START
+		var/use_colour = (O.species.species_flags & SPECIES_FLAG_SYNTHETIC || !BP_IS_PROSTHETIC(O)) ? O.species.get_blood_color(src) : SYNTH_BLOOD_COLOR
+		// SIGNALIS EDIT END
 		var/cache_index = "[O.damage_state]/[O.bodytype.type]/[O.icon_state]/[use_colour]/[species.name]"
 		if(damage_icon_parts[cache_index] == null)
 			DI = new /icon(bodytype.get_damage_overlays(src), O.damage_state) // the damage icon for whole human
