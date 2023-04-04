@@ -50,7 +50,7 @@
 /area/johnson/maintenance)
 "aP" = (
 /obj/structure/table/reinforced,
-/obj/item/blueprints,
+/obj/item/blueprints/shuttle,
 /obj/item/radio/phone{
 	pixel_x = 8;
 	pixel_y = 8
