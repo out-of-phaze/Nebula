@@ -393,6 +393,7 @@
 	probability = 20
 	},
 /obj/machinery/light/small/red,
+/obj/item/mobile_ladder,
 /turf/simulated/floor/tiled/white,
 /area/lozenge)
 "X" = (
