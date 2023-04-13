@@ -2214,6 +2214,9 @@
 	},
 /obj/structure/table/woodentable/mahogany,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/chemical_dispenser/ship_coffee/full{
+	pixel_y = 6
+	},
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
