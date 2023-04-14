@@ -1,0 +1,465 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/space,
+/area/space)
+"d" = (
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/obj/machinery/shipsensors/weak,
+/turf/space,
+/area/skiff)
+"e" = (
+/obj/machinery/computer/ship/engines{
+	dir = 8
+	},
+/obj/structure/railing/mapped{
+	material = /decl/material/solid/plastic
+	},
+/obj/structure/railing/mapped{
+	dir = 4;
+	material = /decl/material/solid/plastic
+	},
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/turf/space,
+/area/skiff)
+"i" = (
+/obj/structure/catwalk,
+/obj/machinery/ion_thruster{
+	dir = 8
+	},
+/turf/space,
+/area/skiff)
+"j" = (
+/obj/machinery/computer/ship/helm{
+	dir = 8
+	},
+/obj/structure/railing/mapped{
+	dir = 4;
+	material = /decl/material/solid/plastic
+	},
+/obj/effect/overmap/visitable/ship/landable/spawnable/skiff,
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/turf/space,
+/area/skiff)
+"l" = (
+/obj/machinery/computer/shuttle_control/explore{
+	dir = 8;
+	name = "mining shuttle control console";
+	shuttle_tag = "Mining Skiff"
+	},
+/obj/structure/railing/mapped{
+	dir = 1;
+	material = /decl/material/solid/plastic
+	},
+/obj/structure/railing/mapped{
+	dir = 4;
+	material = /decl/material/solid/plastic
+	},
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/turf/space,
+/area/skiff)
+"o" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/abstract/submap_landmark/spawnpoint/skiff_operator,
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/turf/space,
+/area/skiff)
+"q" = (
+/obj/structure/railing/mapped{
+	dir = 1;
+	material = /decl/material/solid/plastic
+	},
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/turf/space,
+/area/skiff)
+"t" = (
+/obj/structure/railing/mapped{
+	material = /decl/material/solid/plastic
+	},
+/obj/structure/closet/crate/freezer/rations,
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/turf/space,
+/area/skiff)
+"D" = (
+/obj/machinery/power/apc/high{
+	pixel_y = -22
+	},
+/obj/structure/railing/mapped{
+	dir = 8;
+	material = /decl/material/solid/plastic
+	},
+/obj/structure/closet/emcloset,
+/obj/item/storage/toolbox/repairs,
+/obj/item/weldingtool/electric,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/item/pickaxe,
+/obj/item/shovel,
+/obj/structure/railing/mapped{
+	dir = 1;
+	material = /decl/material/solid/plastic
+	},
+/obj/item/blueprints/shuttle,
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/obj/item/hoist_kit,
+/obj/item/mobile_ladder,
+/turf/simulated/floor/airless,
+/area/skiff)
+"G" = (
+/obj/structure/railing/mapped{
+	material = /decl/material/solid/plastic
+	},
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/turf/space,
+/area/skiff)
+"I" = (
+/obj/machinery/port_gen/pacman,
+/obj/structure/railing/mapped{
+	dir = 8;
+	material = /decl/material/solid/plastic
+	},
+/obj/structure/cable,
+/obj/structure/railing/mapped{
+	material = /decl/material/solid/plastic
+	},
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/turf/simulated/floor/airless,
+/area/skiff)
+"J" = (
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/turf/space,
+/area/skiff)
+"K" = (
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/obj/structure/railing/mapped{
+	dir = 1;
+	material = /decl/material/solid/plastic
+	},
+/turf/space,
+/area/skiff)
+"M" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/plastic,
+/area/skiff)
+"P" = (
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/obj/machinery/computer/ship/sensors{
+	dir = 4
+	},
+/turf/space,
+/area/skiff)
+"Y" = (
+/obj/machinery/material_processing/smeltery{
+	input_turf = 1;
+	output_turf = 2
+	},
+/obj/effect/shuttle_landmark/ship/skiff,
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/skiff,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/turf/space,
+/area/skiff)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(6,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+i
+a
+a
+a
+a
+a
+a
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+a
+D
+M
+I
+a
+a
+a
+a
+a
+a
+"}
+(8,1,1) = {"
+a
+a
+a
+a
+a
+a
+K
+Y
+t
+a
+a
+a
+a
+a
+a
+"}
+(9,1,1) = {"
+a
+a
+a
+a
+a
+a
+J
+P
+J
+a
+a
+a
+a
+a
+a
+"}
+(10,1,1) = {"
+a
+a
+a
+a
+a
+a
+q
+o
+G
+a
+a
+a
+a
+a
+a
+"}
+(11,1,1) = {"
+a
+a
+a
+a
+a
+a
+l
+j
+e
+a
+a
+a
+a
+a
+a
+"}
+(12,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+d
+a
+a
+a
+a
+a
+a
+a
+"}
+(13,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(14,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(15,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
