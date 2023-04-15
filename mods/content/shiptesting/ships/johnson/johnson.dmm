@@ -247,6 +247,9 @@
 /area/johnson/maintenance)
 "et" = (
 /obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/airless,
 /area/johnson/medical)
 "eO" = (
@@ -262,7 +265,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "eR" = (
-/turf/simulated/wall/r_wall/hull,
+/turf/simulated/wall/r_wall/prepainted,
 /area/johnson)
 "fn" = (
 /obj/structure/cable/yellow{
@@ -550,11 +553,6 @@
 /obj/effect/floor_decal/corner/brown/half{
 	dir = 1
 	},
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
 /obj/random/single{
 	spawn_nothing_percentage = 95;
 	spawn_object = /obj/item/trash/cigbutt
@@ -562,6 +560,9 @@
 /obj/structure/sign/warning/nosmoking_1{
 	pixel_x = -24;
 	pixel_y = 30
+	},
+/obj/abstract/landmark/proc_caller/floor_burner{
+	probability = 25
 	},
 /turf/simulated/floor/tiled,
 /area/johnson/mining)
@@ -571,21 +572,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/johnson)
-"kA" = (
-/obj/effect/floor_decal/corner/brown/half{
-	dir = 1
-	},
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
-/obj/random/single{
-	spawn_nothing_percentage = 95;
-	spawn_object = /obj/item/trash/cigbutt
-	},
-/turf/simulated/floor/tiled,
-/area/johnson/mining)
 "kH" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -669,6 +655,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
+"mO" = (
+/turf/simulated/wall/prepainted,
+/area/johnson/maintenance)
 "mW" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 4
@@ -702,6 +691,9 @@
 	},
 /obj/structure/handrail,
 /turf/simulated/floor/tiled/white,
+/area/johnson)
+"nq" = (
+/turf/simulated/wall/prepainted,
 /area/johnson)
 "nB" = (
 /obj/random/maintenance{
@@ -767,17 +759,15 @@
 /turf/simulated/floor/plating,
 /area/johnson/medical)
 "qS" = (
-/obj/abstract/landmark/scorcher,
 /obj/effect/floor_decal/corner/brown/half{
 	dir = 1
 	},
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
 /obj/random/single{
 	spawn_nothing_percentage = 95;
 	spawn_object = /obj/item/trash/cigbutt
+	},
+/obj/abstract/landmark/proc_caller/floor_burner{
+	probability = 25
 	},
 /turf/simulated/floor/tiled,
 /area/johnson/mining)
@@ -945,6 +935,9 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/johnson/maintenance)
+"vt" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/johnson/bridge)
 "vJ" = (
 /obj/machinery/computer/operating{
 	dir = 4
@@ -1181,6 +1174,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
+"Bc" = (
+/turf/simulated/wall/r_wall,
+/area/johnson/medical)
 "Bj" = (
 /obj/structure/bed/roller,
 /obj/structure/iv_drip,
@@ -1268,6 +1264,7 @@
 /obj/machinery/suit_cycler/mining{
 	boots = /obj/item/clothing/shoes/magboots;
 	helmet = /obj/item/clothing/head/helmet/space/void/mining;
+	initial_access = null;
 	suit = /obj/item/clothing/suit/space/void/mining
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -1286,6 +1283,9 @@
 /obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/johnson/medical)
+"CS" = (
+/turf/simulated/wall/r_wall,
+/area/johnson/maintenance)
 "CX" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -1370,6 +1370,10 @@
 /area/johnson/mining)
 "EP" = (
 /obj/abstract/submap_landmark/spawnpoint/johnson_crewman_spawn,
+/obj/structure/sign/warning/airlock{
+	dir = 8;
+	pixel_x = 34
+	},
 /turf/simulated/floor/plating,
 /area/johnson/mining)
 "Fm" = (
@@ -1403,7 +1407,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "FX" = (
-/turf/simulated/wall/r_wall/hull,
+/turf/simulated/wall/r_wall/prepainted,
 /area/johnson/mining)
 "FY" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -1617,7 +1621,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/johnson)
 "IW" = (
-/turf/simulated/wall/r_wall/hull,
+/turf/simulated/wall/r_wall/prepainted,
 /area/johnson/maintenance)
 "IZ" = (
 /obj/structure/curtain/open/bed,
@@ -1654,6 +1658,9 @@
 	},
 /turf/simulated/floor/airless,
 /area/johnson/medical)
+"Kr" = (
+/turf/simulated/wall/r_wall,
+/area/johnson/mining)
 "Kw" = (
 /obj/structure/plasticflaps/airtight,
 /obj/machinery/door/blast/regular{
@@ -1685,7 +1692,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/sign/warning/airlock,
 /obj/machinery/airlock_sensor{
 	id_tag = "johnson_dock_sensor_external";
 	pixel_y = 24
@@ -1721,6 +1727,7 @@
 /obj/machinery/suit_cycler/mining{
 	boots = /obj/item/clothing/shoes/magboots;
 	helmet = /obj/item/clothing/head/helmet/space/void/mining;
+	initial_access = null;
 	suit = /obj/item/clothing/suit/space/void/mining
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -2001,17 +2008,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/johnson)
 "SQ" = (
-/turf/simulated/wall/r_wall/hull,
+/turf/simulated/wall/r_wall/prepainted,
 /area/johnson/medical)
 "Td" = (
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
-/obj/abstract/landmark/scorcher,
 /obj/random/single{
 	spawn_nothing_percentage = 95;
 	spawn_object = /obj/item/trash/cigbutt
+	},
+/obj/abstract/landmark/proc_caller/floor_burner{
+	probability = 25
 	},
 /turf/simulated/floor/tiled,
 /area/johnson/mining)
@@ -3308,11 +3313,11 @@ kM
 kM
 kM
 CA
-GG
-GG
+mO
+mO
 Wc
-GG
-GG
+mO
+mO
 bM
 kM
 kM
@@ -3737,12 +3742,12 @@ kM
 kM
 kM
 IW
-IW
-IW
-IW
-IW
-IW
-IW
+CS
+CS
+CS
+CS
+CS
+CS
 Id
 GG
 NK
@@ -3752,7 +3757,7 @@ IW
 IW
 IW
 IW
-Ac
+nq
 zB
 kM
 kM
@@ -3808,7 +3813,7 @@ XY
 fV
 Ws
 hs
-Ac
+nq
 RY
 RY
 TX
@@ -3870,13 +3875,13 @@ XY
 kw
 KX
 KC
-Ac
+nq
 Zi
 nB
 RY
 RY
 Hc
-Ac
+nq
 kM
 kM
 kM
@@ -3923,7 +3928,7 @@ kM
 kM
 kM
 Kw
-kA
+qS
 Ur
 Ur
 Sm
@@ -3932,7 +3937,7 @@ XY
 Ju
 BR
 mX
-Ac
+nq
 Cq
 RY
 RY
@@ -4175,12 +4180,12 @@ FX
 FX
 Lw
 Ps
-FX
+Kr
 XY
 SJ
 KX
 JP
-Ac
+nq
 HP
 RY
 RY
@@ -4237,12 +4242,12 @@ lb
 Ly
 ZL
 BP
-FX
+Kr
 Oj
 QQ
 KX
 dx
-Ac
+nq
 Zi
 Tv
 RY
@@ -4299,12 +4304,12 @@ MO
 Eu
 yB
 Vo
-FX
+Kr
 Fs
 mW
 KX
 dJ
-Ac
+nq
 nB
 RY
 cK
@@ -4359,20 +4364,20 @@ qA
 FX
 FX
 SQ
-SQ
-SQ
-SQ
+Bc
+Bc
+Bc
 vR
 kc
 KX
 ZH
-Ac
+nq
 eR
 eR
 eR
 eR
 eR
-Ac
+nq
 kM
 kM
 kM
@@ -4733,13 +4738,13 @@ qk
 SQ
 CE
 qH
-FV
+vt
 FV
 sy
 Et
 xc
 Et
-FV
+vt
 Ow
 jt
 eR
@@ -4795,13 +4800,13 @@ Kh
 NX
 zf
 tG
-FV
+vt
 rB
 XN
 cg
 Gj
 II
-FV
+vt
 zM
 ht
 kI
