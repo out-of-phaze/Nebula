@@ -87,6 +87,8 @@
 	if(flooded && !density)
 		make_flooded(TRUE)
 
+	refresh_vis_contents()
+
 	return INITIALIZE_HINT_NORMAL
 
 /turf/examine(mob/user, distance, infix, suffix)
@@ -372,7 +374,7 @@
 /turf/proc/update_weather(var/obj/abstract/weather_system/new_weather, var/force_update_below = FALSE)
 
 	if(isnull(new_weather))
-		new_weather = global.weather_by_z[num2text(z)]
+		new_weather = SSweather.get_weather_for_level(z)
 
 	// We have a weather system and we are exposed to it; update our vis contents.
 	if(istype(new_weather) && is_outside())

@@ -57,9 +57,13 @@
 /obj/abstract/landmark/clear
 	name = "wall removal landmark"
 	icon_state = "clear"
-	delete_me = TRUE
+	//Don't set deleteme to true, since we work inside lateinitialize
 
 /obj/abstract/landmark/clear/Initialize()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/abstract/landmark/clear/LateInitialize()
 	var/turf/simulated/wall/simulated_wall = get_turf(src)
 	if(istype(simulated_wall))
 		simulated_wall.dismantle_wall(TRUE, TRUE, TRUE)

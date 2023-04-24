@@ -792,7 +792,7 @@ var/global/list/plural_words_unchanged = list(
 	var/initial_word = word
 	//If someone passed us several words, just keep the last one.
 	var/list/splited = splittext_char(word, " ", 1, length(word)+1, FALSE)
-	log_debug("splitted '[initial_word]' to [log_info_line(splited)].")
+	//log_debug("splitted '[initial_word]' to [log_info_line(splited)].")
 	if(length(splited) > 1)
 		word = splited[splited.len]
 	else
