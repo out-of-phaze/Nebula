@@ -48,7 +48,7 @@
 	///Amount of shuttle landing points to generate on the surface level of the planet. If null, none will be generated.
 	var/amount_shuttle_landing_points = 2
 	///The maximum shuttle "radius" for the shuttle landing points that will be generated.
-	var/max_shuttle_radius = 20
+	var/max_shuttle_radius = 30
 	///The type of engraving flavor text generator to use for the new planet
 	var/xenoarch_engraving_flavor_type = /datum/xenoarch_engraving_flavor
 
