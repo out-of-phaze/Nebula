@@ -11,6 +11,7 @@ SUBSYSTEM_DEF(mapping)
 	var/list/map_templates_by_category = list()
 	var/list/map_templates_by_type =     list()
 	var/list/banned_maps =               list()
+	var/list/banned_ruin_names =         list()
 
 	// Listing .dmm filenames in the file at this location will blacklist any templates that include them from being used.
 	// Maps must be the full file path to be properly included. ex. "maps/random_ruins/away_sites/example.dmm"
@@ -46,6 +47,12 @@ SUBSYSTEM_DEF(mapping)
 	var/base_floor_area
 	/// A list of connected z-levels to avoid repeatedly rebuilding connections
 	var/list/connected_z_cache = list()
+	/// A list of turbolift holders to initialize.
+	var/list/turbolifts_to_initialize = list()
+	///Associative list of planetoid/exoplanet data currently registered. The key is the planetoid id, the value is the planetoid_data datum.
+	var/list/planetoid_data_by_id
+	///List of all z-levels in the world where the index corresponds to a z-level, and the key at that index is the planetoid_data datum for the associated planet
+	var/list/planetoid_data_by_z = list()
 
 /datum/controller/subsystem/mapping/PreInit()
 	reindex_lists()
@@ -73,6 +80,10 @@ SUBSYSTEM_DEF(mapping)
 	if (new_maxy > world.maxy)
 		world.maxy = new_maxy
 
+	// Generate turbolifts.
+	for(var/obj/abstract/turbolift_spawner/turbolift as anything in turbolifts_to_initialize)
+		turbolift.build_turbolift()
+
 	// Populate overmap.
 	if(length(global.using_map.overmap_ids))
 		for(var/overmap_id in global.using_map.overmap_ids)
@@ -83,15 +94,16 @@ SUBSYSTEM_DEF(mapping)
 
 	// Build away sites.
 	global.using_map.build_away_sites()
+	global.using_map.build_exoplanets()
 
 	// Initialize z-level objects.
 #ifdef UNIT_TEST
-	config.generate_map = TRUE
+	config.roundstart_level_generation = FALSE
 #endif
 	for(var/z = 1 to world.maxz)
-		var/obj/abstract/level_data/level = levels_by_z[z]
+		var/datum/level_data/level = levels_by_z[z]
 		if(!istype(level))
-			level = new /obj/abstract/level_data/space(locate(round(world.maxx*0.5), round(world.maxy*0.5), z))
+			level = new /datum/level_data/space(z)
 			PRINT_STACK_TRACE("Missing z-level data object for z[num2text(z)]!")
 		level.setup_level_data()
 
@@ -138,18 +150,30 @@ SUBSYSTEM_DEF(mapping)
 /datum/controller/subsystem/mapping/proc/get_templates_by_category(var/temple_cat) // :33
 	return map_templates_by_category[temple_cat]
 
+/datum/controller/subsystem/mapping/proc/get_template_by_type(var/template_type)
+	var/datum/map_template/template = template_type
+	var/template_name               = initial(template.name)
+	if(template_name)
+		return map_templates[template_name]
+
 // Z-Level procs after this point.
 /datum/controller/subsystem/mapping/proc/get_gps_level_name(var/z)
 	if(z)
-		var/obj/abstract/level_data/level = levels_by_z[z]
-		if(level?.name)
-			return level.get_gps_level_name()
+		var/datum/level_data/level = levels_by_z[z]
+		. = level.get_display_name()
+		if(length(.))
+			return .
 	return "Unknown Sector"
 
 /datum/controller/subsystem/mapping/proc/reindex_lists()
 	levels_by_z.len = world.maxz // Populate with nulls so we don't get index errors later.
 	base_turf_by_z.len = world.maxz
+	planetoid_data_by_z.len = world.maxz
 	connected_z_cache.Cut()
+
+	//Update SSWeather's indexed lists, if we can.
+	if(SSweather?.weather_by_z)
+		SSweather.weather_by_z.len = world.maxz
 
 /datum/controller/subsystem/mapping/proc/increment_world_z_size(var/new_level_type, var/defer_setup = FALSE)
 
@@ -162,24 +186,72 @@ SUBSYSTEM_DEF(mapping)
 		PRINT_STACK_TRACE("Missing z-level data type for z["[world.maxz]"]!")
 		return
 
-	var/obj/abstract/level_data/level = new new_level_type(locate(round(world.maxx*0.5), round(world.maxz*0.5), world.maxz), defer_setup)
-	level.initialize_level()
+	var/datum/level_data/level = new new_level_type(world.maxz, defer_setup)
+	level.initialize_new_level()
 	return level
 
 /datum/controller/subsystem/mapping/proc/get_connected_levels(z)
 	if(z <= 0  || z > length(levels_by_z))
 		CRASH("Invalid z-level supplied to get_connected_levels: [isnull(z) ? "NULL" : z]")
-	. = list(z)
+	var/list/root_stack = list(z)
 	// Traverse up and down to get the multiz stack.
 	for(var/level = z, HasBelow(level), level--)
-		. |= level-1
+		root_stack |= level-1
 	for(var/level = z, HasAbove(level), level++)
-		. |= level+1
+		root_stack |= level+1
+	. = list()
 	// Check stack for any laterally connected neighbors.
-	for(var/tz in .)
-		var/obj/abstract/level_data/level = levels_by_z[tz]
+	for(var/tz in root_stack)
+		var/datum/level_data/level = levels_by_z[tz]
 		if(level)
-			level.find_connected_levels(.)
+			var/list/cur_connected = level.get_all_connected_level_z()
+			if(length(cur_connected))
+				. |= cur_connected
+	. |= root_stack
+
+///Returns a list of all the level data of all the connected z levels to the given z.DBColumn
+/datum/controller/subsystem/mapping/proc/get_connected_levels_data(z)
+	if(z <= 0  || z > length(levels_by_z))
+		CRASH("Invalid z-level supplied to get_connected_levels_data: [isnull(z) ? "NULL" : z]")
+	var/list/root_lvl_data = list(levels_by_z[z])
+
+	// Traverse up and down to get the multiz stack.
+	for(var/level = z, HasBelow(level), level--)
+		root_lvl_data |= levels_by_z[level - 1]
+	for(var/level = z, HasAbove(level), level++)
+		root_lvl_data |= levels_by_z[level + 1]
+
+	. = list()
+	// Check stack for any laterally connected neighbors.
+	for(var/datum/level_data/L in root_lvl_data)
+		var/list/cur_connected = L.get_all_connected_level_data()
+		if(length(cur_connected))
+			. |= cur_connected
+	. |= root_lvl_data
+
+/datum/controller/subsystem/mapping/proc/get_connected_levels_ids(z)
+	if(z <= 0  || z > length(levels_by_z))
+		CRASH("Invalid z-level supplied to get_connected_levels_ids: [isnull(z) ? "NULL" : z]")
+	var/datum/level_data/LD = levels_by_z[z]
+	var/list/root_lvl_ids = list(LD.level_id)
+
+	// Traverse up and down to get the multiz stack.
+	for(var/level = z, HasBelow(level), level--)
+		var/datum/level_data/L = levels_by_z[level - 1]
+		root_lvl_ids |= L.level_id
+	for(var/level = z, HasAbove(level), level++)
+		var/datum/level_data/L = levels_by_z[level + 1]
+		root_lvl_ids |= L.level_id
+
+	. = list()
+	// Check stack for any laterally connected neighbors.
+	for(var/id in root_lvl_ids)
+		var/datum/level_data/level = levels_by_id[id]
+		if(level)
+			var/list/cur_connected = level.get_all_connected_level_ids()
+			if(length(cur_connected))
+				. |= cur_connected
+	. |= root_lvl_ids
 
 /datum/controller/subsystem/mapping/proc/are_connected_levels(var/zA, var/zB)
 	if (zA <= 0 || zB <= 0 || zA > world.maxz || zB > world.maxz)
@@ -196,3 +268,93 @@ SUBSYSTEM_DEF(mapping)
 		connected_z_cache.len = zA
 	connected_z_cache[zA] = new_entry
 	return new_entry[zB]
+
+/// Registers all the needed infos from a level_data into the mapping subsystem
+/datum/controller/subsystem/mapping/proc/register_level_data(var/datum/level_data/LD)
+	if(levels_by_z.len < LD.level_z)
+		levels_by_z.len = max(levels_by_z.len, LD.level_z)
+		PRINT_STACK_TRACE("Attempting to initialize a z-level([LD.level_z]) that has not incremented world.maxz.")
+
+	//Assign level z
+	var/datum/level_data/old_level = levels_by_z[LD.level_z]
+	levels_by_z[LD.level_z] = LD
+
+	if(old_level)
+		// Swap out the old one but preserve any relevant references etc.
+		old_level.replace_with(LD)
+		QDEL_NULL(old_level)
+
+	//Setup ID ref
+	if(isnull(LD.level_id))
+		PRINT_STACK_TRACE("Null level_id specified for z[LD.level_z].")
+	else if(LD.level_id in levels_by_id)
+		PRINT_STACK_TRACE("Duplicate level_id '[LD.level_id]' for z[LD.level_z].")
+	else
+		levels_by_id[LD.level_id] = LD
+
+	//Always add base turf for Z. It'll get replaced as needed.
+	base_turf_by_z[LD.level_z] = LD.base_turf || world.turf
+
+	//Add to level flags lookup lists
+	if(LD.level_flags & ZLEVEL_STATION)
+		station_levels |= LD.level_z
+	if(LD.level_flags & ZLEVEL_ADMIN)
+		admin_levels   |= LD.level_z
+	if(LD.level_flags & ZLEVEL_CONTACT)
+		contact_levels |= LD.level_z
+	if(LD.level_flags & ZLEVEL_PLAYER)
+		player_levels  |= LD.level_z
+	if(LD.level_flags & ZLEVEL_SEALED)
+		sealed_levels  |= LD.level_z
+	return TRUE
+
+/datum/controller/subsystem/mapping/proc/unregister_level_data(var/datum/level_data/LD)
+	if(levels_by_z[LD.level_z] == LD)
+		//Clear the level data ref from the list if we're in it.
+		levels_by_z[LD.level_z] = null
+	levels_by_id -= LD.level_id
+
+	base_turf_by_z[LD.level_z] = world.turf
+	station_levels -= LD.level_z
+	admin_levels   -= LD.level_z
+	contact_levels -= LD.level_z
+	player_levels  -= LD.level_z
+	sealed_levels  -= LD.level_z
+	return TRUE
+
+///Adds a planetoid/exoplanet's data to the lookup tables.
+/datum/controller/subsystem/mapping/proc/register_planetoid(var/datum/planetoid_data/P)
+	LAZYSET(planetoid_data_by_id, P.id, P)
+
+	//Keep track of the topmost z-level to speed up looking up things
+	var/datum/level_data/LD = levels_by_id[P.topmost_level_id]
+	//If we don't have level_data, we'll skip over assigning by z-level for now
+	if(LD)
+		//Assign all connected z-levels in the z list
+		planetoid_data_by_z[LD.level_z] = P
+		for(var/connected_z in get_connected_levels(LD.level_z))
+			planetoid_data_by_z[connected_z] = P
+
+	//#TODO: Until we split planet processing from the datum, make sure the planet datums get their process proc called regularly!
+	START_PROCESSING(SSobj, P)
+
+///Set the specified planetoid data for the specified level, and its connected levels.
+/datum/controller/subsystem/mapping/proc/register_planetoid_levels(var/_z, var/datum/planetoid_data/P)
+	LAZYSET(planetoid_data_by_id, P.id, P)
+	//Since this will be called before the world's max z is incremented, make sure we're at least as tall as the z we get
+	if(length(planetoid_data_by_z) < _z)
+		LAZYINITLIST(planetoid_data_by_z)
+		planetoid_data_by_z.len = _z
+	planetoid_data_by_z[_z] = P
+
+///Removes a planetoid/exoplanet's data from the lookup tables.
+/datum/controller/subsystem/mapping/proc/unregister_planetoid(var/datum/planetoid_data/P)
+	LAZYREMOVE(planetoid_data_by_id, P.id)
+
+	//Clear our ref in the z list. Don't use the level_id since, we can't guarantee it'll still exist.
+	for(var/z = 1 to length(planetoid_data_by_z))
+		var/datum/planetoid_data/cur = planetoid_data_by_z[z]
+		if(cur && (cur.id == P.id))
+			planetoid_data_by_z[z] = null
+
+	STOP_PROCESSING(SSobj, P)

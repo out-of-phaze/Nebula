@@ -172,7 +172,7 @@
 	// Other incidentals.
 	if(istype(suit))
 		dat += "<BR><b>Pockets:</b> <A href='?src=\ref[src];item=pockets'>Empty or Place Item</A>"
-		if(suit.has_sensor == 1)
+		if(suit.has_sensor == SUIT_HAS_SENSORS)
 			dat += "<BR><A href='?src=\ref[src];item=sensors'>Set sensors</A>"
 		if (suit.has_sensor && user.get_multitool())
 			dat += "<BR><A href='?src=\ref[src];item=lock_sensors'>[suit.has_sensor == SUIT_LOCKED_SENSORS ? "Unl" : "L"]ock sensors</A>"
@@ -403,7 +403,7 @@
 			if(E)
 				if(hasHUD(user, HUD_MEDICAL))
 					to_chat(usr, "<b>Name:</b> [E.get_name()]")
-					to_chat(usr, "<b>Gender:</b> [E.get_sex()]")
+					to_chat(usr, "<b>Gender:</b> [E.get_gender()]")
 					to_chat(usr, "<b>Species:</b> [E.get_species_name()]")
 					to_chat(usr, "<b>Blood Type:</b> [E.get_bloodtype()]")
 					to_chat(usr, "<b>Details:</b> [E.get_medical_record()]")
@@ -670,7 +670,7 @@
 	if(species.natural_armour_values)
 		set_extension(src, /datum/extension/armor, species.natural_armour_values)
 
-	var/decl/pronouns/new_pronouns = get_pronouns_by_gender(get_sex())
+	var/decl/pronouns/new_pronouns = get_pronouns_by_gender(get_gender())
 	if(!istype(new_pronouns) || !(new_pronouns in species.available_pronouns))
 		new_pronouns = species.default_pronouns
 		set_gender(new_pronouns.name)
@@ -698,6 +698,7 @@
 	if(!istype(move_intent))
 		set_next_usable_move_intent()
 	update_emotes()
+	refresh_ai_handler()
 
 	// Update codex scannables.
 	if(species.secret_codex_info)

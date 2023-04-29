@@ -1,4 +1,4 @@
-/datum/map_template
+/datum/map_template //#FIXME: Probably should be typed /decl since it's a singleton.
 	var/name = "Default Template Name"
 	var/width = 0
 	var/height = 0
@@ -114,7 +114,6 @@
 	var/list/bounds = list(1.#INF, 1.#INF, 1.#INF, -1.#INF, -1.#INF, -1.#INF)
 	var/list/atoms_to_initialise = list()
 	var/shuttle_state = pre_init_shuttles()
-
 	var/map_hash = modify_tag_vars && "[sequential_id("map_id")]"
 	ASSERT(isnull(global._preloader.current_map_hash)) // Recursive maploading is possible, but not from this block: recursive loads should be triggered in Initialize, from init_atoms below.
 	global._preloader.current_map_hash = map_hash
@@ -135,8 +134,8 @@
 	init_shuttles(shuttle_state, map_hash, initialized_areas_by_type)
 	after_load()
 	for(var/z_index = bounds[MAP_MINZ] to bounds[MAP_MAXZ])
-		var/obj/abstract/level_data/level = SSmapping.levels_by_z[z_index]
-		level.post_template_load(src)
+		var/datum/level_data/level = SSmapping.levels_by_z[z_index]
+		level.after_template_load(src)
 		if(SSlighting.initialized)
 			SSlighting.InitializeZlev(z_index)
 	log_game("Z-level [name] loaded at [x],[y],[world.maxz]")
@@ -206,6 +205,10 @@
 		if(corner)
 			placement = corner
 	return block(placement, locate(placement.x+width-1, placement.y+height-1, placement.z))
+
+///Returns whether a given map template is generated at runtime. Mainly used by unit tests.
+/datum/map_template/proc/is_runtime_generated()
+	return FALSE
 
 //for your ever biggening badminnery kevinz000
 //? - Cyberboss

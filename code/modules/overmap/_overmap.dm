@@ -9,7 +9,7 @@
 	var/overmap_edge_type = /turf/unsimulated/map/edge
 	var/overmap_turf_type = /turf/unsimulated/map
 	var/overmap_area_type = /area/overmap
-	var/empty_level_type =  /obj/abstract/level_data/space
+	var/empty_level_type =  /datum/level_data/space
 
 	var/list/valid_event_types
 
@@ -45,7 +45,7 @@
 	..()
 
 /datum/overmap/proc/populate_overmap()
-	var/area/overmap/A = new overmap_area_type
+	var/area/overmap/A = locate(overmap_area_type) || new overmap_area_type //level_data should have initialized the area
 	for(var/square in block(locate(1, 1, assigned_z), locate(map_size_x, map_size_y, assigned_z)))
 		var/turf/T = square
 		if(T.x == map_size_x || T.y == map_size_y)
@@ -56,7 +56,7 @@
 
 /datum/overmap/proc/generate_overmap()
 	testing("Building overmap [name]...")
-	SSmapping.increment_world_z_size(/obj/abstract/level_data/overmap)
+	SSmapping.increment_world_z_size(/datum/level_data/overmap)
 	assigned_z = world.maxz
 	testing("Putting [name] on [assigned_z].")
 	populate_overmap()
@@ -143,8 +143,8 @@
 			return res
 
 	// Create a new one.
-	var/obj/abstract/level_data/level = SSmapping.increment_world_z_size(empty_level_type)
-	return new /obj/effect/overmap/visitable/sector/temporary(null, x, y, level.my_z)
+	var/datum/level_data/level = SSmapping.increment_world_z_size(empty_level_type)
+	return new /obj/effect/overmap/visitable/sector/temporary(null, x, y, level.level_z)
 
 /datum/overmap/proc/discard_temporary_sector(var/obj/effect/overmap/visitable/sector/temporary/sector)
 	if(!length(cached_temporary_sectors[empty_level_type]))

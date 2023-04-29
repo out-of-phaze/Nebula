@@ -217,13 +217,13 @@
 		var/obj/effect/overmap/visitable/O = global.overmap_sectors[num2text(z)]
 		if(istype(O))
 			for(var/obj/effect/overmap/visitable/OO in range(O,2))
-				if((OO.sector_flags & OVERMAP_SECTOR_IN_SPACE) || istype(OO,/obj/effect/overmap/visitable/sector/exoplanet))
+				if((OO.sector_flags & OVERMAP_SECTOR_IN_SPACE) || istype(OO,/obj/effect/overmap/visitable/sector/planetoid))
 					LAZYDISTINCTADD(possible_locations, text2num(level))
 		if(length(possible_locations))
 			newz = pick(possible_locations)
 	if(!newz)
-		var/obj/abstract/level_data/level = SSmapping.increment_world_z_size(/obj/abstract/level_data/space)
-		newz = level?.my_z
+		var/datum/level_data/level = SSmapping.increment_world_z_size(/datum/level_data/space)
+		newz = level.level_z
 
 	if(newz)
 		var/turf/nloc = locate(rand(TRANSITIONEDGE, world.maxx-TRANSITIONEDGE), rand(TRANSITIONEDGE, world.maxy-TRANSITIONEDGE), newz)
