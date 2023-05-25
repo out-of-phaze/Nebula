@@ -278,12 +278,12 @@
 	. = ..()
 
 /obj/item/proc/dragged_onto(var/mob/user)
-	attack_hand(user)
+	return attack_hand_with_interaction_checks(user)
 
 /obj/item/attack_hand(mob/user)
 
 	if(!user)
-		return
+		return FALSE
 
 	if(anchored)
 		return ..()
@@ -298,24 +298,24 @@
 					user.drop_from_inventory(src)
 				else
 					to_chat(user, SPAN_WARNING("You fail to remove \the [src]!"))
-				return
+				return TRUE
 
 			if(isturf(loc))
 				if(loc == get_turf(user))
 					attack_self(user)
 				else
 					dropInto(get_turf(user))
-				return
+				return TRUE
 
 			if(istype(loc, /obj/item/storage))
 				visible_message(SPAN_NOTICE("\The [user] fumbles \the [src] out of \the [loc]."))
 				var/obj/item/storage/bag = loc
 				bag.remove_from_storage(src)
 				dropInto(get_turf(bag))
-				return
+				return TRUE
 
 		to_chat(user, SPAN_WARNING("You are not dexterous enough to pick up \the [src]."))
-		return
+		return TRUE
 
 	var/old_loc = loc
 	if (istype(loc, /obj/item/storage))
@@ -327,15 +327,11 @@
 
 	if (loc == user)
 		if(!user.try_unequip(src))
-			return
-	else
-		if(isliving(loc))
-			return
+			return TRUE
+	else if(isliving(loc))
+		return TRUE
 
-	if(QDELETED(src))
-		return // Unequipping changes our state, so must check here.
-
-	if(user.put_in_active_hand(src))
+	if(!QDELETED(src) && user.put_in_active_hand(src))
 		on_picked_up(user)
 		if (isturf(old_loc))
 			var/obj/effect/temporary/item_pickup_ghost/ghost = new(old_loc, src)
@@ -347,6 +343,7 @@
 		else if(randpixel == 0)
 			pixel_x = 0
 			pixel_y = 0
+	return TRUE
 
 /obj/item/attack_ai(mob/living/silicon/ai/user)
 	if (istype(src.loc, /obj/item/robot_module))
@@ -473,35 +470,33 @@ var/global/list/slot_flags_enumeration = list(
 //Set disable_warning to 1 if you wish it to not give you outputs.
 //Should probably move the bulk of this into mob code some time, as most of it is related to the definition of slots and not item-specific
 //set force to ignore blocking overwear and occupied slots
-/obj/item/proc/mob_can_equip(M, slot, disable_warning = FALSE, force = FALSE)
+/obj/item/proc/mob_can_equip(mob/M, slot, disable_warning = FALSE, force = FALSE)
 
-	if(!slot || !M || !ishuman(M))
+	if(!slot || !M)
 		return FALSE
 
 	var/can_hold = FALSE
-	if(isliving(M) && !isnum(slot))
-		var/mob/living/L = M
-		can_hold = !!LAZYACCESS(L.held_item_slots, slot)
+	if(!isnum(slot))
+		var/list/held_slots = M.get_held_item_slots()
+		can_hold = !!LAZYACCESS(held_slots, slot)
 
 	//First check if the item can be equipped to the desired slot.
-	var/list/mob_equip = list()
-	var/mob/living/carbon/human/H = M
+	var/list/mob_equip
 	if(!can_hold)
-		if(H.species.hud && H.species.hud.equip_slots)
-			mob_equip = H.species.hud.equip_slots
-		if(H.species && !(slot in mob_equip))
+		mob_equip = M.get_all_valid_equipment_slots()
+		if(!(slot in mob_equip))
 			return FALSE
 		var/associated_slot = global.slot_flags_enumeration[slot]
 		if(!isnull(associated_slot) && !(associated_slot & slot_flags))
-			return 0
+			return FALSE
 
 	if(!force)
 		//Next check that the slot is free
-		if(H.get_equipped_item(slot))
+		if(M.get_equipped_item(slot))
 			return FALSE
 		//Next check if the slot is accessible.
-		var/mob/_user = disable_warning? null : H
-		if(!H.slot_is_accessible(slot, src, _user))
+		var/mob/_user = disable_warning? null : M
+		if(!M.slot_is_accessible(slot, src, _user))
 			return FALSE
 
 	//Lastly, check special rules for the desired slot.
@@ -512,24 +507,24 @@ var/global/list/slot_flags_enumeration = list(
 		if(slot_belt_str)
 			if(slot == slot_belt_str && (item_flags & ITEM_FLAG_IS_BELT))
 				return TRUE
-			else if(!H.get_equipped_item(slot_w_uniform_str) && (slot_w_uniform_str in H.species.hud?.equip_slots))
+			else if(!M.get_equipped_item(slot_w_uniform_str) && (slot_w_uniform_str in mob_equip))
 				if(!disable_warning)
-					to_chat(H, SPAN_WARNING("You need a jumpsuit before you can attach this [name]."))
+					to_chat(M, SPAN_WARNING("You need a jumpsuit before you can attach this [name]."))
 				return FALSE
 		if(slot_l_store_str, slot_r_store_str)
-			if(!H.get_equipped_item(slot_w_uniform_str) && (slot_w_uniform_str in H.species.hud?.equip_slots))
+			if(!M.get_equipped_item(slot_w_uniform_str) && (slot_w_uniform_str in mob_equip))
 				if(!disable_warning)
-					to_chat(H, SPAN_WARNING("You need a jumpsuit before you can attach this [name]."))
+					to_chat(M, SPAN_WARNING("You need a jumpsuit before you can attach this [name]."))
 				return FALSE
 			if( w_class > ITEM_SIZE_SMALL && !(slot_flags & SLOT_POCKET) )
 				return FALSE
 			if(get_storage_cost() >= ITEM_SIZE_NO_CONTAINER)
 				return FALSE
 		if(slot_s_store_str)
-			var/obj/item/suit = H.get_equipped_item(slot_wear_suit_str)
-			if(!suit && (slot_wear_suit_str in H.species.hud?.equip_slots))
+			var/obj/item/suit = M.get_equipped_item(slot_wear_suit_str)
+			if(!suit && (slot_wear_suit_str in mob_equip))
 				if(!disable_warning)
-					to_chat(H, SPAN_WARNING("You need a suit before you can attach this [name]."))
+					to_chat(M, SPAN_WARNING("You need a suit before you can attach this [name]."))
 				return FALSE
 			if(suit && !suit.allowed)
 				if(!disable_warning)
@@ -541,25 +536,25 @@ var/global/list/slot_flags_enumeration = list(
 			if(!istype(src, /obj/item/handcuffs))
 				return FALSE
 		if(slot_in_backpack_str) //used entirely for equipping spawned mobs or at round start
-			var/obj/item/storage/backpack/B = H.get_equipped_item(slot_back_str)
+			var/obj/item/storage/backpack/B = M.get_equipped_item(slot_back_str)
 			if(!istype(B) || !B.can_be_inserted(src,M,1))
 				return FALSE
 		if(slot_tie_str)
-			var/obj/item/clothing/under/uniform = H.get_equipped_item(slot_w_uniform_str)
-			var/obj/item/clothing/suit = H.get_equipped_item(slot_wear_suit_str)
-			if((!uniform && (slot_w_uniform_str in H.species.hud?.equip_slots)) && (!suit && (slot_wear_suit_str in H.species.hud?.equip_slots)))
+			var/obj/item/clothing/under/uniform = M.get_equipped_item(slot_w_uniform_str)
+			var/obj/item/clothing/suit = M.get_equipped_item(slot_wear_suit_str)
+			if((!uniform && (slot_w_uniform_str in mob_equip)) && (!suit && (slot_wear_suit_str in mob_equip)))
 				if(!disable_warning)
-					to_chat(H, SPAN_WARNING("You need something you can attach \the [src] to."))
+					to_chat(M, SPAN_WARNING("You need something you can attach \the [src] to."))
 				return FALSE
-			if(istype(uniform) && (slot_w_uniform_str in H.species.hud?.equip_slots))
+			if(istype(uniform) && (slot_w_uniform_str in mob_equip))
 				if(!uniform.can_attach_accessory(src))
 					if (!disable_warning)
-						to_chat(H, SPAN_WARNING("You cannot equip \the [src] to \the [uniform]."))
+						to_chat(M, SPAN_WARNING("You cannot equip \the [src] to \the [uniform]."))
 					return FALSE
 				return TRUE
-			if(suit && (slot_wear_suit_str in H.species.hud?.equip_slots) && !suit.can_attach_accessory(src))
+			if(suit && (slot_wear_suit_str in mob_equip) && !suit.can_attach_accessory(src))
 				if (!disable_warning)
-					to_chat(H, SPAN_WARNING("You cannot equip \the [src] to \the [suit]."))
+					to_chat(M, SPAN_WARNING("You cannot equip \the [src] to \the [suit]."))
 				return FALSE
 	return TRUE
 
@@ -910,3 +905,17 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	var/mob/M = src.loc
 	if(istype(M) && M.client && M.machine == src)
 		src.attack_self(M)
+
+/obj/item/singularity_pull(S, current_size)
+	set waitfor = FALSE
+	if(!simulated || anchored)
+		return
+	sleep(0) //this is needed or multiple items will be thrown sequentially and not simultaneously
+	if(current_size >= STAGE_FOUR)
+		//throw_at(S, 14, 3)
+		step_towards(src,S)
+		sleep(1)
+		step_towards(src,S)
+	else if(current_size > STAGE_ONE)
+		step_towards(src,S)
+	else ..()

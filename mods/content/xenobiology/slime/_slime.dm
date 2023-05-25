@@ -179,10 +179,6 @@
 	if(severity == 1)
 		qdel(src)
 
-/mob/living/slime/unequip(obj/item/W)
-	SHOULD_CALL_PARENT(FALSE)
-	return FALSE
-
 /mob/living/slime/attack_ui(slot)
 	return
 
@@ -267,7 +263,8 @@
 			visible_message(SPAN_DANGER("\The [user] has punched \the [src]!"))
 			adjustBruteLoss(damage)
 			return TRUE
-	. = ..()
+
+	return ..()
 
 /mob/living/slime/attackby(var/obj/item/W, var/mob/user)
 	if(W.force > 0)

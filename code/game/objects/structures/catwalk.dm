@@ -93,8 +93,7 @@
 		return TRUE
 
 /obj/structure/catwalk/attack_robot(var/mob/user)
-	if(CanPhysicallyInteract(user))
-		return attack_hand(user)
+	return attack_hand_with_interaction_checks(user)
 
 /obj/structure/catwalk/attackby(obj/item/C, mob/user)
 	. = ..()
@@ -184,10 +183,13 @@
 	return 0
 
 /obj/effect/catwalk_plated/attack_hand()
+	SHOULD_CALL_PARENT(FALSE)
 	activate()
+	return TRUE
 
 /obj/effect/catwalk_plated/attack_ghost()
 	activate()
+	return TRUE
 
 /obj/effect/catwalk_plated/proc/activate()
 	if(activated) return

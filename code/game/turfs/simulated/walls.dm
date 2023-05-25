@@ -217,11 +217,16 @@ var/global/list/wall_fullblend_objects = list(
 
 	playsound(src, 'sound/items/Welder.ogg', 100, 1)
 	if(!no_product)
+		var/list/obj/structure/girder/placed_girders
 		if(girder_material)
-			girder_material.place_dismantled_girder(src, reinf_material)
+			placed_girders = girder_material.place_dismantled_girder(src, reinf_material)
 			material.place_dismantled_product(src,devastated)
 		else
-			material.place_dismantled_girder(src, reinf_material)
+			placed_girders = material.place_dismantled_girder(src, reinf_material)
+		for(var/obj/structure/girder/placed_girder in placed_girders)
+			placed_girder.anchored = TRUE
+			placed_girder.prepped_for_fakewall = can_open
+			placed_girder.update_icon()
 
 	for(var/obj/O in src.contents) //Eject contents!
 		if(istype(O,/obj/structure/sign/poster))
@@ -287,3 +292,17 @@ var/global/list/wall_fullblend_objects = list(
 
 /turf/simulated/wall/is_wall()
 	return TRUE
+
+/turf/simulated/wall/on_defilement()
+	var/new_material
+	if(material?.type != /decl/material/solid/stone/cult)
+		new_material = /decl/material/solid/stone/cult
+	var/new_rmaterial
+	if(reinf_material && reinf_material.type != /decl/material/solid/stone/cult/reinforced)
+		new_rmaterial = /decl/material/solid/stone/cult/reinforced
+	if(new_material || new_rmaterial)
+		..()
+		set_material(new_material, new_rmaterial)
+
+/turf/simulated/wall/is_defiled()
+	return material?.type == /decl/material/solid/stone/cult || reinf_material?.type == /decl/material/solid/stone/cult/reinforced || ..()

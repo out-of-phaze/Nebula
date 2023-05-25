@@ -26,16 +26,16 @@
 	return FALSE
 
 /atom/proc/attack_hand(mob/user)
-
+	SHOULD_CALL_PARENT(TRUE)
 	if(handle_grab_interaction(user))
 		return TRUE
-
-	if(LAZYLEN(climbers) && !(user in climbers))
-		user.visible_message(
-			SPAN_DANGER("\The [user] shakes \the [src]!"),
-			SPAN_DANGER("You shake \the [src]!"))
-		object_shaken()
-		return TRUE
+	if(!LAZYLEN(climbers) || (user in climbers) || !user.check_dexterity(DEXTERITY_GRIP, TRUE))
+		return FALSE
+	user.visible_message(
+		SPAN_DANGER("\The [user] shakes \the [src]!"),
+		SPAN_DANGER("You shake \the [src]!"))
+	object_shaken()
+	return TRUE
 
 /mob/proc/attack_empty_hand()
 	return
@@ -105,4 +105,8 @@
 
 // Attack hand but for simple animals
 /atom/proc/attack_animal(mob/user)
-	return attack_hand(user)
+	return attack_hand_with_interaction_checks(user)
+
+// Used to check for physical interactivity in case of nonstandard attack_hand calls.
+/atom/proc/attack_hand_with_interaction_checks(var/mob/user)
+	return CanPhysicallyInteract(user) && attack_hand(user)

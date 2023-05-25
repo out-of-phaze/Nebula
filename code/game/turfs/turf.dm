@@ -144,26 +144,20 @@
 		. += weather.get_movement_delay(return_air(), travel_dir)
 
 /turf/attack_hand(mob/user)
-	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
-
-	if(user.restrained())
-		return 0
-
-	. = handle_hand_interception(user)
-
-/turf/proc/handle_hand_interception(var/mob/user)
-	var/datum/extension/turf_hand/THE
-	for (var/A in src)
-		var/datum/extension/turf_hand/TH = get_extension(A, /datum/extension/turf_hand)
-		if (istype(TH) && TH.priority > THE?.priority) //Only overwrite if the new one is higher. For matching values, its first come first served
-			THE = TH
-
-	if (THE)
-		return THE.OnHandInterception(user)
+	SHOULD_CALL_PARENT(FALSE)
+	var/datum/extension/turf_hand/highest_priority_intercept
+	for(var/atom/thing in contents)
+		var/datum/extension/turf_hand/intercept = get_extension(thing, /datum/extension/turf_hand)
+		if(intercept?.intercept_priority > highest_priority_intercept?.intercept_priority)
+			highest_priority_intercept = intercept
+	if(highest_priority_intercept)
+		user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
+		var/atom/intercepting_atom = highest_priority_intercept.holder
+		return intercepting_atom.attack_hand(user)
+	return FALSE
 
 /turf/attack_robot(var/mob/user)
-	if(CanPhysicallyInteract(user))
-		return attack_hand(user)
+	return attack_hand_with_interaction_checks(user)
 
 /turf/attackby(obj/item/W, mob/user)
 
@@ -465,3 +459,19 @@
 		why_cannot_build_cable(user, cable_error)
 		return FALSE
 	return C.turf_place(src, user)
+
+/turf/singularity_act(S, current_size)
+	if(!simulated || is_open())
+		return 0
+	var/base_turf_type = get_base_turf_by_area(src)
+	if(type == base_turf_type)
+		return 0
+	ChangeTurf(base_turf_type)
+	return 2
+
+/turf/on_defilement()
+	var/decl/special_role/cultist/cult = GET_DECL(/decl/special_role/cultist)
+	cult.add_cultiness(CULTINESS_PER_TURF)
+
+/turf/proc/is_defiled()
+	return (locate(/obj/effect/narsie_footstep) in src)
