@@ -9,8 +9,8 @@
 	allowed_spawns = list()
 	default_spawn = null
 	overmap_ids = list(OVERMAP_ID_SPACE)
-	num_exoplanets = 3
-	away_site_budget = 5
+	//num_exoplanets = 3
+	//away_site_budget = 5
 
 /datum/map/outpost/get_map_info()
 	return "You're aboard a vessel or outpost in <b>[station_name],</b> the edge of the explored territory in space. \
