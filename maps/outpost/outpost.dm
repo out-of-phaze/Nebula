@@ -46,8 +46,11 @@
 	#include "../../mods/content/xenobiology/_xenobiology.dme"
 
 	#include "outpost_lobby.dm"
+	#include "outpost_areas.dm"
+	#include "outpost_exoplanet.dm"
 
-	#include "outpost.dmm"
+	#include "outpost-surface.dmm"
+	#include "outpost-space.dmm"
 
 	#define USING_MAP_DATUM /datum/map/outpost
 
