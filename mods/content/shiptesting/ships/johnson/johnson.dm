@@ -164,13 +164,13 @@
 	uniform = /obj/item/clothing/under/pilot
 	id_type = /obj/item/card/id/civilian/head
 	pda_type = /obj/item/modular_computer/pda/heads/captain
-	l_ear = null
+	l_ear = /obj/item/radio/headset
 
 /decl/hierarchy/outfit/job/generic/engineer/johnson_technician
 	name = "Job - Mining vessel technician"
 	uniform = /obj/item/clothing/under/engineer
 	belt = /obj/item/storage/belt/utility/full
-	l_ear = null
+	l_ear = /obj/item/radio/headset
 
 /decl/hierarchy/outfit/job/generic/johnson_mining
 	name = "Job - Mining vessel shaft miner"
@@ -178,7 +178,7 @@
 	pda_type = /obj/item/modular_computer/pda/science
 	backpack_contents = list(/obj/item/crowbar = 1, /obj/item/storage/ore = 1)
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
-	l_ear = null
+	l_ear = /obj/item/radio/headset
 
 /decl/hierarchy/outfit/job/generic/johnson_mining/Initialize()
 	. = ..()
@@ -186,4 +186,11 @@
 
 /decl/hierarchy/outfit/job/generic/doctor/johnson_medic
 	name = "Job - Mining vessel medic"
-	l_ear = null
+	l_ear = /obj/item/radio/headset
+
+/obj/machinery/network/telecomms_hub/johnson
+	req_access = null
+	initial_network_id = "johnsonnet"
+	channels = list(
+		COMMON_FREQUENCY_DATA
+	)

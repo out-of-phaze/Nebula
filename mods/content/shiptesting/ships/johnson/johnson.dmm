@@ -75,6 +75,7 @@
 	pixel_x = -22
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/item/stack/material/brick/mapped/graphite/twentyfive,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "bD" = (
@@ -515,9 +516,6 @@
 /turf/simulated/floor/plating,
 /area/johnson/maintenance)
 "jP" = (
-/obj/structure/cable/yellow{
-	icon_state = "2-8"
-	},
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -952,6 +950,7 @@
 	dir = 5
 	},
 /obj/machinery/network/router/wall_mounted{
+	initial_network_id = "johnsonnet";
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/white,
@@ -1394,9 +1393,6 @@
 /obj/machinery/fabricator/replicator,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/johnson)
-"FV" = (
-/turf/simulated/wall/r_wall/hull,
-/area/johnson/bridge)
 "FW" = (
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 1
@@ -1761,9 +1757,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber,
 /turf/simulated/floor/plating,
 /area/johnson/maintenance)
@@ -1969,6 +1962,12 @@
 	},
 /turf/simulated/floor/lino,
 /area/johnson)
+"SC" = (
+/obj/machinery/shipcomms/broadcaster{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/johnson/maintenance)
 "SJ" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -2010,6 +2009,10 @@
 "SQ" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/johnson/medical)
+"Tb" = (
+/obj/machinery/shipcomms/receiver,
+/turf/simulated/floor/reinforced/airless,
+/area/johnson/maintenance)
 "Td" = (
 /obj/random/single{
 	spawn_nothing_percentage = 95;
@@ -2181,6 +2184,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/machinery/network/telecomms_hub/johnson,
 /turf/simulated/floor/tiled/dark,
 /area/johnson)
 "WD" = (
@@ -2189,13 +2193,11 @@
 /area/johnson/mining)
 "WQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/obj/structure/cable/yellow{
-	icon_state = "0-4"
-	},
-/obj/machinery/port_gen/pacman,
-/obj/item/stack/material/brick/mapped/graphite/twentyfive,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
+	},
+/obj/machinery/computer/ship/comms{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
@@ -3436,13 +3438,13 @@ kM
 Il
 xU
 zB
-zB
+SC
 jz
 Yj
 em
 zT
 jz
-zB
+Tb
 wG
 rS
 Il
@@ -4739,7 +4741,7 @@ SQ
 CE
 qH
 vt
-FV
+vt
 sy
 Et
 xc
