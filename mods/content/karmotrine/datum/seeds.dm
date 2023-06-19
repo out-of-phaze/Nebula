@@ -23,3 +23,11 @@
 /decl/hierarchy/supply_pack/hydroponics/seeds/Initialize()
 	contains += /obj/item/seeds/bronson
 	. = ..()
+
+/obj/machinery/seed_storage/garden/Initialize()
+	starting_seeds[/obj/item/seeds/bronson] = 15
+	. = ..()
+
+/obj/machinery/seed_storage/xenobotany/Initialize()
+	starting_seeds[/obj/item/seeds/bronson] = 15
+	. = ..()
