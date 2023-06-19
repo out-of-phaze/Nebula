@@ -5,6 +5,8 @@
 	item_flags = ITEM_FLAG_NO_BLUDGEON
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
 	w_class = ITEM_SIZE_SMALL
+	volume = 20 // needs room to dump a repair patch into it
+	possible_transfer_amounts = @"[5,10,15]"
 	var/tmp/sound_spray = 'sound/effects/spray.ogg' ///Sound played when spraying
 
 /obj/item/chems/repair_spray/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
@@ -31,7 +33,7 @@
 			target.visible_message(SPAN_NOTICE("\The [user] sprays \the [target] with \the [src]."))
 
 /obj/item/chems/repair_spray/populate_reagents()
-	reagents.add_reagent(/decl/material/solid/plastifoam, reagents.maximum_volume)
+	reagents.add_reagent(/decl/material/solid/plastifoam, 15)
 	return
 
 /obj/item/chems/repair_spray/quick
@@ -40,7 +42,7 @@
 	icon = 'mods/species/replika/icons/repair_spray+.dmi'
 
 /obj/item/chems/repair_spray/quick/populate_reagents()
-	reagents.add_reagent(/decl/material/solid/plastifoam/quick, reagents.maximum_volume)
+	reagents.add_reagent(/decl/material/solid/plastifoam/quick, 15)
 	return
 
 /obj/item/chems/hypospray/autoinjector/klstim
@@ -61,7 +63,7 @@
 	randpixel = 7
 	possible_transfer_amounts = null
 	w_class = ITEM_SIZE_TINY
-	volume = 10
+	volume = 5
 	material = /decl/material/solid/plantmatter
 
 /obj/item/chems/patch/attack(mob/living/carbon/victim, mob/user, def_zone)
@@ -125,3 +127,15 @@
 
 /obj/item/chems/patch/repair/populate_reagents()
 	reagents.add_reagent(/decl/material/solid/koagulant_k, reagents.maximum_volume)
+
+/obj/item/storage/box/survival/replika
+	name = "\improper Replika repair kit"
+	desc = "A box decorated in warning colors that contains a limited supply of Replika repair supplies. The back says 'Im Besitz des Arbeits- und Erziehungsorgan der Nation,' whatever that means."
+	icon_state = "survival"
+
+/obj/item/storage/box/survival/replika/WillContain()
+	return list(
+		/obj/item/chems/patch/repair = 3,
+		/obj/item/chems/repair_spray = 2,
+		/obj/item/chems/hypospray/autoinjector/klstim = 1
+	)
