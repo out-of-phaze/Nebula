@@ -116,6 +116,12 @@
 		var/decl/bodytype/replika/replika_model = organ.bodytype
 		replika_model.apply_model_organ_modifications(organ)
 
+/decl/species/replika/equip_survival_gear(mob/living/carbon/human/victim)
+	. = ..()
+	var/obj/item/storage/backpack/backpack = victim.get_equipped_item(slot_back_str)
+	if(istype(backpack))
+		victim.equip_to_slot_or_store_or_drop(new /obj/item/storage/box/survival/replika(backpack), slot_in_backpack_str)
+
 /datum/hud_data/replika
 	gear = list(
 		"o_clothing" =   list("loc" = ui_oclothing, "name" = "Suit",         "slot" = slot_wear_suit_str, "state" = "suit",   "toggle" = 1),
