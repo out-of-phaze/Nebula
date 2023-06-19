@@ -1,40 +1,40 @@
 // CHEMICALS
 /decl/chemical_reaction/karmotrine
-	name = "Karmotrine Synthesis"
+	name = "Karmotrine"
 	result = /decl/material/liquid/ethanol/karmotrine
 	required_reagents = list(/decl/material/liquid/acid = 1, /decl/material/liquid/fuel/hydrazine = 1, /decl/material/solid/phosphorus = 1)
 	result_amount = 3
 
 /decl/chemical_reaction/adelhyde
-	name = "Adelhyde Synthesis"
+	name = "Adelhyde"
 	result = /decl/material/liquid/blendable/adelhyde
 	required_reagents = list(/decl/material/solid/carbon = 1, /decl/material/solid/potassium = 1, /decl/material/solid/skin/lizard = 1)
 	result_amount = 3
 
 /decl/chemical_reaction/powdered_delta
-	name = "Powdered Delta Synthesis"
+	name = "Powdered Delta"
 	result = /decl/material/liquid/blendable/powdered_delta
 	required_reagents = list(/decl/material/liquid/surfactant = 1, /decl/material/liquid/acid/hydrochloric = 1, /decl/material/liquid/acetone = 1)
 	result_amount = 3
 
 /decl/chemical_reaction/concentrated_flanergide
-	name = "Concentrated Flanergide Synthesis"
+	name = "Concentrated Flanergide"
 	result = /decl/material/liquid/capsaicin/condensed/flanergide
 	required_reagents = list(/decl/material/liquid/antiseptic = 1, /decl/material/gas/ammonia = 1, /decl/material/liquid/tar = 1)
 	result_amount = 3
 
 /decl/chemical_reaction/flanergide
-	name = "Concentrated Flanergide Dilution"
+	name = "Flanergide Dilution"
 	result = /decl/material/liquid/capsaicin/flanergide
 	required_reagents = list(/decl/material/liquid/capsaicin/condensed/flanergide = 1, /decl/material/liquid/water = 9)
 	result_amount = 10
 	maximum_temperature = T100C
 
 /decl/chemical_reaction/instant_age
-	name = "Insta-Age Synthesis"
+	name = "Insta-Age"
 	result = /decl/material/solid/instant_age
 	required_reagents = list(/decl/material/solid/bone/cartilage = 1, /decl/material/liquid/acid/polyacid = 1, /decl/material/liquid/acetone)
-	return_amount = 3
+	result_amount = 3
 
 // AGING
 /decl/chemical_reaction/adelhyde_aging
