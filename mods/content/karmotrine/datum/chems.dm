@@ -119,7 +119,7 @@
 // used to age drinks
 /decl/material/solid/instant_age
 	name = "Insta-Age"
-	lore_text = "A proprietary blend of powerful oxidisers, reputed to be safe for human consumption. Supposedly. \
+	lore_text = "A proprietary blend of powerful oxidizers, reputed to be safe for human consumption. Supposedly. \
 	Used to artificially age ingredients in cocktails."
 	color = "#4d0000"
 	taste_description = "rust"
