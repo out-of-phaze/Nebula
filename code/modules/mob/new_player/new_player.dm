@@ -341,7 +341,7 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 		additional_dat += "<br>"
 		dat = additional_dat + dat
 	dat = header + dat
-	var/datum/browser/popup = new(src, "latechoices", "Choose Profession", 450, 640)
+	var/datum/browser/popup = new(src, "latechoices", "Choose Profession", 450, 640, ndel_on_close = TRUE)
 	popup.set_content(jointext(dat, null))
 	popup.open(0)
 
@@ -407,7 +407,7 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 	var/dat = "<div align='center'>"
 	dat += html_crew_manifest(OOC = 1)
 	//show_browser(src, dat, "window=manifest;size=370x420;can_close=1")
-	var/datum/browser/popup = new(src, "Crew Manifest", "Crew Manifest", 370, 420, src)
+	var/datum/browser/popup = new(src, "Crew Manifest", "Crew Manifest", 370, 420, src, ndel_on_close = TRUE)
 	popup.add_stylesheet("nano_shared", 'nano/css/shared.css')
 	popup.set_content(dat)
 	popup.open()

@@ -85,7 +85,7 @@ var/global/list/wireColourNames = list("darkred" = "dark red")
 		close_browser(user, "window=wires")
 		return
 
-	var/datum/browser/popup = new(user, "wires", holder.name, window_x, window_y)
+	var/datum/browser/popup = new(user, "wires", holder.name, window_x, window_y, ndel_on_close = TRUE)
 	popup.set_content(html)
 	popup.open()
 	return TRUE

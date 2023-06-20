@@ -118,7 +118,7 @@ SUBSYSTEM_DEF(vote)
 	if(active_vote)
 		win_x = active_vote.win_x
 		win_y = active_vote.win_y
-	var/datum/browser/popup = new(user, "vote", "Voting Panel", win_x, win_y)
+	var/datum/browser/popup = new(user, "vote", "Voting Panel", win_x, win_y, ndel_on_close = TRUE)
 	popup.set_content(interface(user.client))
 	popup.update(force_open, TRUE)
 

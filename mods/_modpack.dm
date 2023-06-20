@@ -70,11 +70,11 @@
 		. = "<hr><br><center><b><font size = 3>Modpacks List</font></b></center><br><hr><br>"
 		for(var/modpack in SSmodpacks.loaded_modpacks)
 			var/decl/modpack/M = SSmodpacks.loaded_modpacks[modpack]
-			
+
 			if(M.name)
 				. += "<div class = 'statusDisplay'>"
 				. += "<center><b>[M.name]</b></center>"
-				
+
 				if(M.desc || M.author)
 					. += "<br>"
 					if(M.desc)
@@ -83,7 +83,7 @@
 						. += "<br><i>Author: [M.author]</i>"
 				. += "</div><br>"
 
-		var/datum/browser/popup = new(mob, "modpacks_list", "Modpacks List", 480, 580)
+		var/datum/browser/popup = new(mob, "modpacks_list", "Modpacks List", 480, 580, ndel_on_close = TRUE)
 		popup.set_content(.)
 		popup.open()
 	else

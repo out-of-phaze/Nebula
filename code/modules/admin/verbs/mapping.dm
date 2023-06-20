@@ -356,7 +356,7 @@ var/global/list/debug_verbs = list (
 		if(pack.name && !isnull(pack.cost))
 			prices += "<tr><td>[pack.name]</td><td>[pack.cost]</td></tr>"
 
-	var/datum/browser/popup = new(mob, "cargo_price_debug", "Cargo Prices")
+	var/datum/browser/popup = new(mob, "cargo_price_debug", "Cargo Prices", ndel_on_close = TRUE)
 	popup.set_content("<table>[jointext(prices, "")]</table>")
 	popup.open()
 

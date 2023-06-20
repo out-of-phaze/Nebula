@@ -81,7 +81,7 @@
 		dat += " [set_temperature]K ([set_temperature-T0C]&deg;C)"
 		dat += "<A href='?src=\ref[src];op=temp;val=5'>+</A><BR>"
 
-		var/datum/browser/popup = new(usr, "spaceheater", "Space Heater Control Panel")
+		var/datum/browser/popup = new(usr, "spaceheater", "Space Heater Control Panel", ndel_on_close = TRUE)
 		popup.set_content(jointext(dat, null))
 		popup.open()
 

@@ -73,7 +73,7 @@
 	dat += "Oxygen tanks: [oxycount] - [oxycount ? "<A href='?src=\ref[src];oxygen=1'>Dispense</A>" : "empty"]<br>"
 	var/hydrocount = LAZYLEN(hydrogen_tanks)
 	dat += "Hydrogen tanks: [hydrocount] - [hydrocount ? "<A href='?src=\ref[src];hydrogen=1'>Dispense</A>" : "empty"]"
-	var/datum/browser/popup = new(user, "window=tank_rack")
+	var/datum/browser/popup = new(user, "window=tank_rack", ndel_on_close = TRUE)
 	popup.set_content(jointext(dat, "<br>"))
 	popup.open()
 	return TRUE

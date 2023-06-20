@@ -315,7 +315,7 @@
 			"You hear welding.")
 		return 1
 	if(IS_MULTITOOL(W))
-		var/datum/browser/written_digital/popup = new(user, "Vent Configuration Utility", "[src] Configuration Panel", 600, 200)
+		var/datum/browser/written_digital/popup = new(user, "Vent Configuration Utility", "[src] Configuration Panel", 600, 200, ndel_on_close = TRUE)
 		popup.set_content(jointext(get_console_data(),"<br>"))
 		popup.open()
 		return TRUE

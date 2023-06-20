@@ -129,7 +129,7 @@
 
 /obj/machinery/atmospherics/unary/outlet_injector/attackby(var/obj/item/O, var/mob/user)
 	if(IS_MULTITOOL(O))
-		var/datum/browser/written_digital/popup = new (user, "Vent Configuration Utility", "[src] Configuration Panel", 600, 200)
+		var/datum/browser/written_digital/popup = new (user, "Vent Configuration Utility", "[src] Configuration Panel", 600, 200, ndel_on_close = TRUE)
 		popup.set_content(jointext(get_console_data(),"<br>"))
 		popup.open()
 		return

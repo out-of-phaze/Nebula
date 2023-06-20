@@ -207,7 +207,7 @@ var/global/datum/matchmaker/matchmaker = new()
 		for(var/I in mind.known_connections)
 			dat += "<br><i>[I]</i>"
 
-	var/datum/browser/popup = new(usr, "relations", "Relationship Info")
+	var/datum/browser/popup = new(usr, "relations", "Relationship Info", ndel_on_close = TRUE)
 	if(editable)
 		dat.Insert(1,"<a href='?src=\ref[src];relations_close=1;'>Finalize edits and close</a><br>")
 		popup.set_window_options("focus=0;can_close=0;can_minimize=1;can_maximize=0;can_resize=1;titlebar=1;")
@@ -230,7 +230,7 @@ var/global/datum/matchmaker/matchmaker = new()
 			dat += "<br><b>Things you know about them:</b><br>[R.other.info]<br>[R.other.holder.gen_relations_info]"
 		dat += "<hr>"
 
-	var/datum/browser/popup = new(usr, "relations", "Relationship Info")
+	var/datum/browser/popup = new(usr, "relations", "Relationship Info", ndel_on_close = TRUE)
 	popup.set_content(jointext(dat,null))
 	popup.open()
 

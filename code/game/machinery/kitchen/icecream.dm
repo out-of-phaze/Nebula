@@ -106,7 +106,7 @@
 		dat += "<A href='?src=\ref[src];disposeI=\ref[R]'>Purge</A><BR>"
 	dat += "<a href='?src=\ref[src];refresh=1'>Refresh</a> <a href='?src=\ref[src];close=1'>Close</a>"
 
-	var/datum/browser/popup = new(user, "icecreamvat","Icecream Vat", 700, 500, src)
+	var/datum/browser/popup = new(user, "icecreamvat","Icecream Vat", 700, 500, src, ndel_on_close = TRUE)
 	popup.set_content(dat)
 	popup.open()
 

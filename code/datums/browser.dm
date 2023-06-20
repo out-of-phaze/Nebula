@@ -15,6 +15,9 @@
 	var/content = ""
 	var/title_buttons = ""
 	var/written_text = WRITTEN_SKIP
+	/// If TRUE, the browser will delete itself on close.
+	/// If you set this, make sure there are no hanging references to this outside local proc variables!!
+	var/delete_on_close = FALSE
 
 /datum/browser/written_physical
 	written_text = WRITTEN_PHYSICAL
@@ -29,7 +32,7 @@
 	ref = null
 	return ..()
 
-/datum/browser/New(nuser, nwindow_id, ntitle, nwidth, nheight, atom/nref)
+/datum/browser/New(nuser, nwindow_id, ntitle, nwidth, nheight, atom/nref, ndel_on_close = null)
 
 	user = nuser
 	window_id = nwindow_id
@@ -142,6 +145,8 @@
 
 /datum/browser/proc/close()
 	close_browser(user, "window=[window_id]")
+	if(delete_on_close) // Better know what you're doing if you use this!
+		qdel(src)
 
 /**
  * Registers the on-close verb for a browse window (client/verb/.windowclose)
