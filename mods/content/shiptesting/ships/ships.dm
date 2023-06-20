@@ -54,4 +54,10 @@ var/global/list/ship_names_by_class = list()
 	submap_datum_type = /datum/submap/spawnable_ship
 
 /decl/submap_archetype/spawnable_ship
+	sort_priority = -1 // these should always be above everything else
+	default_to_hidden = FALSE
 	abstract_type = /decl/submap_archetype/spawnable_ship
+
+/datum/job/submap/shiptesting
+	abstract_type = /datum/job/submap/shiptesting
+	suppress_no_roundstart_warning = TRUE

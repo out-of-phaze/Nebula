@@ -33,11 +33,11 @@
 	icon_state = "yellow"
 
 /decl/submap_archetype/spawnable_ship/tanker
-	descriptor = "gas tanker"
+	descriptor = "Astor-class gas tanker"
 	map = "Astor-class tanker shuttle"
 	crew_jobs = list(
-		/datum/job/submap/tanker_pilot,
-		/datum/job/submap/tanker_technician
+		/datum/job/submap/shiptesting/tanker_pilot,
+		/datum/job/submap/shiptesting/tanker_technician
 	)
 
 /obj/abstract/submap_landmark/spawnpoint/tanker_pilot_spawn
@@ -50,7 +50,7 @@
 	name = "Astor-class tanker shuttle"
 	archetype = /decl/submap_archetype/spawnable_ship/tanker
 
-/datum/job/submap/tanker_pilot
+/datum/job/submap/shiptesting/tanker_pilot
 	title = "Tanker Pilot"
 	info = "You are the pilot of an Astor-class tanker, ferrying gases in the outer regions of explored space."
 	total_positions = 1
@@ -66,8 +66,9 @@
 		SKILL_PILOT   = SKILL_MAX,
 		SKILL_WEAPONS = SKILL_MAX
 	)
+	selection_color = "#ccccff"
 
-/datum/job/submap/tanker_technician
+/datum/job/submap/shiptesting/tanker_technician
 	title = "Tanker Technician"
 	info = "You are the atmospheric technician of an Astor-class tanker, ferrying gases in the outer regions of explored space."
 	total_positions = 1
@@ -86,6 +87,7 @@
 		SKILL_ENGINES      = SKILL_MAX
 	)
 	skill_points = 20
+	selection_color = "#fff5cc"
 
 /decl/hierarchy/outfit/job/generic/tanker_pilot
 	name = "Job - Tanker pilot"
