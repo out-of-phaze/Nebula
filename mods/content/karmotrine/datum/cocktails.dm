@@ -358,7 +358,7 @@
 	name = "Sugar Rush"
 	description = "Sweet, light and fruity. As girly as it gets."
 	glass_icon = 'mods/content/karmotrine/icons/cocktails.dmi'
-	glass_icon_state = "sugarrush"
+	glass_icon_state = "sugar_rush"
 	ratios = list(
 		/decl/material/liquid/blendable/adelhyde =             2,
 		/decl/material/liquid/blendable/powdered_delta =       1
