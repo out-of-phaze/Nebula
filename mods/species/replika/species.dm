@@ -3,10 +3,10 @@
 	chargen_max_index = 4
 	standalone_value_descriptors = list(
 		"brand new" =            1,
-		"worn" =                 5,
-		"an older model" =      12,
-		"nearing end-of-life" = 16,
-		"entirely obsolete" =   20
+		"worn" =                 3,
+		"an older model" =      6,
+		"nearing end-of-life" = 8,
+		"entirely obsolete" =   12
 	)
 
 // Robo-blood.
@@ -46,7 +46,7 @@
 
 	preview_outfit = null
 
-	base_eye_color = "#ff0000"
+	base_eye_color = COLOR_COMMAND_BLUE
 
 	heat_discomfort_strings = list(
 		"You are dangerously close to overheating!"
@@ -60,7 +60,9 @@
 	available_pronouns = list(
 		/decl/pronouns,
 		/decl/pronouns/female,
-		/decl/pronouns/male
+		/decl/pronouns/male,
+		/decl/pronouns/neuter,
+		/decl/pronouns/neuter/person
 	)
 	available_cultural_info = list(
 		TAG_CULTURE = list(/decl/cultural_info/culture/synthetic)
@@ -70,8 +72,9 @@
 		BP_POSIBRAIN = /obj/item/organ/internal/posibrain/replika,
 		BP_EYES =      /obj/item/organ/internal/eyes/robot/replika,
 		BP_CELL =      /obj/item/organ/internal/cell,
-		BP_HEART =     /obj/item/organ/internal/heart,
-		BP_STOMACH =   /obj/item/organ/internal/stomach,
+		BP_HEART =     /obj/item/organ/internal/heart/replika,
+		BP_LUNGS =     /obj/item/organ/internal/lungs/replika,
+		BP_STOMACH =   /obj/item/organ/internal/stomach/replika,
 	)
 
 	exertion_effect_chance = 10
@@ -87,18 +90,58 @@
 
 /obj/item/organ/internal/posibrain/replika
 	name = "neural matrix"
+	icon = 'icons/obj/surgery.dmi'
+	icon_state = "brain-prosthetic"
 	parent_organ = BP_HEAD
 
 /obj/item/organ/internal/eyes/robot/replika
 	icon = 'icons/obj/surgery.dmi'
-	icon_state = "eyes-prosthetic"
-	alive_icon = "eyes-prosthetic"
-	dead_icon = "eyes-prosthetic"
-	prosthetic_icon = "eyes-prosthetic"
-	prosthetic_dead_icon = "eyes-prosthetic"
+	icon_state = "eyes"
+	alive_icon = "eyes"
+	dead_icon = "eyes"
+	prosthetic_icon = "eyes"
+	prosthetic_dead_icon = "eyes"
+
+/obj/item/organ/internal/heart/replika
+	name = "oxidant impeller"
+	prosthetic_icon = "heart-on"
+	prosthetic_dead_icon = "heart-off"
+	organ_properties = ORGAN_PROP_PROSTHETIC
+
+/obj/item/organ/internal/lungs/replika
+	name = "gas exchange sacs"
+	prosthetic_icon = "lungs"
+	organ_properties = ORGAN_PROP_PROSTHETIC
+
+/obj/item/organ/internal/stomach/replika
+	name = "reagent processor"
+	organ_properties = ORGAN_PROP_PROSTHETIC
 
 /obj/item/organ/external/head/replika
 	glowing_eyes = TRUE
+
+// Make the glow stop once decapitated.
+/obj/item/organ/external/head/replika/on_remove_effects(var/mob/living/last_owner)
+	. = ..()
+	glowing_eyes = FALSE
+
+/obj/item/organ/external/head/replika/do_install(mob/living/carbon/human/target, obj/item/organ/external/affected, in_place)
+	if(!(. = ..()))
+		return
+	events_repository.register(/decl/observ/death, owner, src, .proc/on_owner_death)
+	events_repository.register(/decl/observ/life, owner, src, .proc/on_owner_revive)
+
+/obj/item/organ/external/head/replika/proc/on_owner_death()
+	glowing_eyes = FALSE
+
+/obj/item/organ/external/head/replika/proc/on_owner_revive()
+	glowing_eyes = TRUE
+
+/obj/item/organ/external/head/replika/do_uninstall(in_place, detach, ignore_children)
+	. = ..()
+	events_repository.unregister(/decl/observ/death, owner, src, .proc/on_owner_death)
+	events_repository.unregister(/decl/observ/life, owner, src, .proc/on_owner_revive)
+	glowing_eyes = FALSE
 
 /decl/species/replika/set_default_hair(mob/living/carbon/human/organism, override_existing = TRUE, defer_update_hair = FALSE)
 	if(!istype(organism.bodytype, /decl/bodytype/replika))
