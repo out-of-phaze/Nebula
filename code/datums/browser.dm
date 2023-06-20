@@ -22,6 +22,13 @@
 /datum/browser/written_digital
 	written_text = WRITTEN_DIGITAL
 
+/datum/browser/Destroy(force)
+	close()
+	// Don't hang references to mobs/atoms.
+	user = null
+	ref = null
+	return ..()
+
 /datum/browser/New(nuser, nwindow_id, ntitle, nwidth, nheight, atom/nref)
 
 	user = nuser
@@ -38,6 +45,9 @@
 
 	if(nref)
 		ref = nref
+
+	if(!isnull(ndel_on_close))
+		delete_on_close = ndel_on_close
 
 	// If a client exists, but they have disabled fancy windowing, disable it!
 	if(user?.client?.get_preference_value(/datum/client_preference/browser_style) == PREF_PLAIN)
