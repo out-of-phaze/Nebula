@@ -44,10 +44,10 @@
 	icon_state = "yellow"
 
 /decl/submap_archetype/spawnable_ship/lozenge
-	descriptor = "escape pod"
+	descriptor = "Lozenge-class escape pod"
 	map = "Lozenge-class emergency pod"
 	crew_jobs = list(
-		/datum/job/submap/lozenge_survivor
+		/datum/job/submap/shiptesting/lozenge_survivor
 	)
 	whitelisted_species = null
 	blacklisted_species = null
@@ -59,7 +59,7 @@
 	name = "Lozenge-class emergency pod"
 	archetype = /decl/submap_archetype/spawnable_ship/lozenge
 
-/datum/job/submap/lozenge_survivor
+/datum/job/submap/shiptesting/lozenge_survivor
 	title = "Escape Pod Survivor"
 	info = "You are the sole occupant of a Lozenge-class emergency pod, likely having just narrowly escaped a disaster. Now your supplies are dwindling and you need to find a way to survive."
 	total_positions = 1

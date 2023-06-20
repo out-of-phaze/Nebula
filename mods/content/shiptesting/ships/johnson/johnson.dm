@@ -47,13 +47,13 @@
 	name = "Mining Vessel Infirmary"
 
 /decl/submap_archetype/spawnable_ship/johnson
-	descriptor = "mining vessel"
+	descriptor = "Johnson-class mining vessel"
 	map = "Johnson-class deep space mining vessel"
 	crew_jobs = list(
-		/datum/job/submap/johnson_pilot,
-		/datum/job/submap/johnson_technician,
-		/datum/job/submap/johnson_crewman,
-		/datum/job/submap/johnson_medic,
+		/datum/job/submap/shiptesting/johnson_pilot,
+		/datum/job/submap/shiptesting/johnson_medic,
+		/datum/job/submap/shiptesting/johnson_technician,
+		/datum/job/submap/shiptesting/johnson_crewman,
 	)
 	whitelisted_species = null
 	blacklisted_species = null
@@ -74,7 +74,7 @@
 	name = "Johnson-class deep space mining vessel"
 	archetype = /decl/submap_archetype/spawnable_ship/johnson
 
-/datum/job/submap/johnson_pilot
+/datum/job/submap/shiptesting/johnson_pilot
 	title = "Mining Vessel Pilot"
 	info = "You are the pilot of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
 	total_positions = 1
@@ -92,8 +92,9 @@
 	no_skill_buffs = TRUE // stopgap for utility frames
 	whitelisted_species = null
 	blacklisted_species = null
+	selection_color = "#1d1d4f"
 
-/datum/job/submap/johnson_technician
+/datum/job/submap/shiptesting/johnson_technician
 	title = "Mining Vessel Technician"
 	info = "You are the maintenance technician of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
 	total_positions = 1
@@ -116,8 +117,9 @@
 	no_skill_buffs = TRUE // stopgap for utility frames
 	whitelisted_species = null
 	blacklisted_species = null
+	selection_color = "#7f6e2c"
 
-/datum/job/submap/johnson_crewman
+/datum/job/submap/shiptesting/johnson_crewman
 	title = "Mining Vessel Crewman"
 	info = "You are a crew member of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
 	total_positions = 3
@@ -139,7 +141,7 @@
 	whitelisted_species = null
 	blacklisted_species = null
 
-/datum/job/submap/johnson_medic
+/datum/job/submap/shiptesting/johnson_medic
 	title = "Mining Vessel Medic"
 	info = "You are the medic of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
 	total_positions = 1
@@ -158,6 +160,7 @@
 	no_skill_buffs = TRUE // stopgap for utility frames
 	whitelisted_species = null
 	blacklisted_species = null
+	selection_color = "#026865"
 
 /decl/hierarchy/outfit/job/generic/johnson_pilot
 	name = "Job - Mining vessel pilot"
