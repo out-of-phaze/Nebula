@@ -57,7 +57,7 @@
 	var/expected_zlevel = world.maxz + 1 // since loading might call stoplag, we can't rely on the new value of maxz being our ship
 	ship_to_test.load_new_z()
 	to_chat(user, SPAN_NOTICE("Your ship is now being prepared for testing, please wait..."))
-	user.panel.close()
+	user.close_spawn_windows()
 	var/datum/submap/our_submap = null
 	for(var/datum/submap/candidate_submap in SSmapping.submaps)
 		if(candidate_submap.associated_z == expected_zlevel) // todo: refactor to make getting the spawned submap easier
