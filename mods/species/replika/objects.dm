@@ -64,9 +64,26 @@
 	possible_transfer_amounts = null
 	w_class = ITEM_SIZE_TINY
 	volume = 5
-	material = /decl/material/solid/plantmatter
+	material = /decl/material/solid/paper
+	atom_flags = 0 // not open, temperature can change
+	var/start_sealed = TRUE // if sealed, it must be torn before it can be used
+
+/obj/item/chems/patch/Initialize()
+	. = ..()
+	if(!start_sealed)
+		atom_flags |= ATOM_FLAG_OPEN_CONTAINER
+
+/obj/item/chems/patch/on_update_icon()
+	. = ..()
+	if(start_sealed && ATOM_IS_OPEN_CONTAINER(src))
+		icon_state = "[get_world_inventory_state()]_torn"
+	else
+		icon_state = get_world_inventory_state()
 
 /obj/item/chems/patch/attack(mob/living/carbon/victim, mob/user, def_zone)
+	if(!ATOM_IS_OPEN_CONTAINER(src))
+		to_chat(user, SPAN_NOTICE("You need to open \the [src] first!"))
+		return TRUE
 	var/obj/item/organ/external/targeted_organ = GET_EXTERNAL_ORGAN(victim, def_zone)
 	if(!iscarbon(victim))
 		return TRUE
@@ -116,8 +133,49 @@
 		admin_attack_log(user, victim, "Dosed the victim with [src] (Reagents: [contained])", "Was dosed with [src] (Reagents: [contained])", "used [src] (Reagents: [contained])")
 		victim.visible_message("<b>\The [user]</b> applies \the [src] to \the [victim]'s [targeted_organ.name].", SPAN_NOTICE("You apply \the [src] to \the [victim]'s [targeted_organ.name]."))
 	reagents.trans_to_mob(victim, reagents.total_volume, CHEM_TOUCH)
-	qdel(src)
+	physically_destroyed()
 	return TRUE
+
+/obj/item/chems/patch/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	if(!ATOM_IS_OPEN_CONTAINER(src))
+		to_chat(user, SPAN_NOTICE("You need to open \the [src] first!"))
+		return
+	if(!proximity_flag)
+		return
+
+	if(standard_dispenser_refill(user, target))
+		return TRUE
+
+	if(standard_pour_into(user, target))
+		return TRUE
+
+/obj/item/chems/patch/on_reagent_change()
+	if(reagents.total_volume == 0)
+		addtimer(CALLBACK(src, /atom/proc/physically_destroyed), 0) // I hate this, but we need it to happen after other procs finish running.
+	else
+		..()
+
+/obj/item/chems/patch/physically_destroyed(skip_qdel)
+	var/turf/our_turf = get_turf(src)
+	var/decl/material/mat
+	for(var/key in matter)
+		SSmaterials.create_object(key, our_turf, round(matter[key]/SHEET_MATERIAL_AMOUNT))
+		mat = GET_DECL(key)
+		mat.place_cuttings(our_turf, matter[key] % SHEET_MATERIAL_AMOUNT)
+	if(reagents.total_volume > 0) // destroyed by something other than being used
+		reagents.splash_turf(our_turf, reagents.total_volume)
+	return ..()
+
+/obj/item/chems/patch/attack_self(mob/user)
+	if(!start_sealed)
+		return
+	if(ATOM_IS_OPEN_CONTAINER(src))
+		to_chat(user, SPAN_NOTICE("\The [src] is already open!"))
+		return
+	to_chat(user, SPAN_WARNING("You tear \the [src] open!"))
+	playsound(src, 'sound/items/poster_ripped.ogg', 10)
+	atom_flags |= ATOM_FLAG_OPEN_CONTAINER
+	update_icon()
 
 /obj/item/chems/patch/repair
 	name = "repair patch"
