@@ -93,7 +93,7 @@
 	if(href_list["view_manifest"])
 		var/dat = "<div align='center'>"
 		dat += html_ship_manifest(OOC = TRUE)
-		var/datum/browser/popup = new(user, "Ship Manifest", "Ship Manifest", 370, 420, user)
+		var/datum/browser/popup = new(user, "Ship Manifest", "Ship Manifest", 370, 420, user, ndel_on_close = TRUE)
 		popup.add_stylesheet("nano_shared", 'nano/css/shared.css')
 		popup.set_content(dat)
 		popup.open()
