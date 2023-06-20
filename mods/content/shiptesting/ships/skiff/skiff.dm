@@ -41,10 +41,10 @@
 	icon_state = "yellow"
 
 /decl/submap_archetype/spawnable_ship/skiff
-	descriptor = "mining skiff"
+	descriptor = "Gravedigger-class mining skiff"
 	map = "Gravedigger-class mining skiff"
 	crew_jobs = list(
-		/datum/job/submap/skiff_operator
+		/datum/job/submap/shiptesting/skiff_operator
 	)
 	whitelisted_species = null
 	blacklisted_species = null
@@ -56,7 +56,7 @@
 	name = "Gravedigger-class mining skiff"
 	archetype = /decl/submap_archetype/spawnable_ship/skiff
 
-/datum/job/submap/skiff_operator
+/datum/job/submap/shiptesting/skiff_operator
 	title = "Mining Skiff Operator"
 	info = "You are the sole operator of a Gravedigger-class mining skiff, often piloted by convicts or the desperate. Without even walls or floors to protect you from the harsh vacuum of space, it will be difficult for you to survive."
 	total_positions = 1
