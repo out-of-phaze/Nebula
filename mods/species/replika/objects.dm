@@ -45,6 +45,21 @@
 	reagents.add_reagent(/decl/material/solid/plastifoam/quick, 15)
 	return
 
+// TODO: Greyscale and add paint sprayer support
+// This is really bad and I don't like it :(
+/obj/item/chems/repair_spray/on_update_icon()
+	. = ..()
+	if(!reagents?.total_volume) // keep whatever we had last
+		return
+	if(reagents.primary_reagent == /decl/material/solid/plastifoam/quick)
+		name = "repair spray+"
+		desc = "A single-use spray gun used to fill damaged areas with fast-curing polyurethane-based expanding foam."
+		icon = 'mods/species/replika/icons/repair_spray+.dmi'
+	else if (reagents.primary_reagent == /decl/material/solid/plastifoam)
+		name = "repair spray"
+		desc = "A single-use spray gun to fill damaged areas with polyurethane-based expanding foam."
+		icon = 'mods/species/replika/icons/repair_spray.dmi'
+
 /obj/item/chems/hypospray/autoinjector/klstim
 	name = "autoinjector"
 	desc = "Autoinjector syringe filled with REPLIKA-KLStim-N stimulant. Quick and easy to use."
@@ -159,7 +174,6 @@
 	var/turf/our_turf = get_turf(src)
 	var/decl/material/mat
 	for(var/key in matter)
-		SSmaterials.create_object(key, our_turf, round(matter[key]/SHEET_MATERIAL_AMOUNT))
 		mat = GET_DECL(key)
 		mat.place_cuttings(our_turf, matter[key] % SHEET_MATERIAL_AMOUNT)
 	if(reagents.total_volume > 0) // destroyed by something other than being used
