@@ -321,14 +321,17 @@ var/global/list/areas = list()
 
 #undef DO_PARTY
 
-/area/proc/set_lightswitch(var/new_switch)
+/area/proc/set_lightswitch(var/new_switch, instant = FALSE)
 	if(lightswitch != new_switch)
 		lightswitch = new_switch
 		for(var/obj/machinery/light_switch/L in src)
 			L.sync_state()
 		update_icon()
 	for(var/obj/machinery/light/M in src)
-		M.delay_and_set_on(M.expected_to_be_on(), 1 SECOND)
+		if(instant)
+			M.seton(M.expected_to_be_on())
+		else
+			M.delay_and_set_on(M.expected_to_be_on(), 1 SECOND)
 
 /area/proc/set_emergency_lighting(var/enable)
 	for(var/obj/machinery/light/M in src)
