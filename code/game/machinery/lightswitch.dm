@@ -29,8 +29,8 @@
 /obj/machinery/light_switch/on
 	on = TRUE
 
-/obj/machinery/light_switch/Initialize()
-	..()
+/obj/machinery/light_switch/Initialize(mapload)
+	. = ..()
 	if(other_area)
 		connected_area = locate(other_area)
 	else
@@ -38,13 +38,9 @@
 
 	if(connected_area && name == initial(name))
 		SetName("light switch ([connected_area.proper_name])")
-	return INITIALIZE_HINT_LATELOAD
-
-/obj/machinery/light_switch/LateInitialize()
-	. = ..()
 	if(isnull(on))
 		on = get_config_value(/decl/config/toggle/lights_start_on)
-	connected_area?.set_lightswitch(on)
+	connected_area?.set_lightswitch(on, instant = !mapload)
 	update_icon()
 
 /obj/machinery/light_switch/on_update_icon()
