@@ -35,7 +35,7 @@
 	///Amount of shuttle landing points to generate on the surface level of the planet. If null, none will be generated.
 	var/amount_shuttle_landing_points = 2
 	///The maximum shuttle "radius" for the shuttle landing points that will be generated.
-	var/max_shuttle_radius = 20
+	var/max_shuttle_radius = 30
 
 	// *** Map Gen ***
 	///Maximum amount of themes that can be picked for the same planet.
