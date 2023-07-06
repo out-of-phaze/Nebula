@@ -497,6 +497,10 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/tiled,
 /area/europa/hangar/northeast)
+"yO" = (
+/obj/abstract/level_data_spawner/signal,
+/turf/exterior/open/flooded,
+/area/europa_exterior/mid)
 "zl" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -882,7 +886,7 @@
 /turf/simulated/floor,
 /area/europa/hangar/south_maintenance)
 "PY" = (
-/obj/turbolift_map_holder/signal,
+/obj/abstract/turbolift_spawner/signal,
 /turf/simulated/floor,
 /area/europa/hangar)
 "PZ" = (
@@ -1294,7 +1298,7 @@ Jx
 Jx
 Jx
 Jx
-Jx
+yO
 "}
 (2,1,1) = {"
 Jx

@@ -325,6 +325,10 @@
 	},
 /turf/simulated/floor,
 /area/europa/operations/south_maint)
+"pK" = (
+/obj/abstract/level_data_spawner/signal/icecaves,
+/turf/exterior/wall/ice,
+/area/europa_exterior/upper)
 "rr" = (
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor,
@@ -1350,7 +1354,7 @@ HL
 HL
 HL
 HL
-HL
+pK
 "}
 (2,1,1) = {"
 HL

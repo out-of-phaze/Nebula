@@ -183,6 +183,10 @@
 /obj/machinery/light/small,
 /turf/simulated/floor,
 /area/europa/heights/access)
+"uT" = (
+/obj/abstract/level_data_spawner/signal,
+/turf/exterior/open,
+/area/europa_exterior/heights)
 "vH" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -604,7 +608,7 @@ bU
 bU
 bU
 bU
-bU
+uT
 zC
 "}
 (2,1,1) = {"

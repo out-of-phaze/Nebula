@@ -945,6 +945,10 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/europa/surface/police_office)
+"NJ" = (
+/obj/abstract/level_data_spawner/signal/iceplain,
+/turf/exterior/wall/ice,
+/area/europa_exterior/surface)
 "NP" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -1406,7 +1410,7 @@ Fv
 Fv
 Fv
 Fv
-Fv
+NJ
 "}
 (2,1,1) = {"
 Fv

@@ -23,17 +23,6 @@
 	company_name  = "Sol Colonial Administration"
 	company_short = "CSA-CA"
 
-	station_levels = list(1, 2, 3)
-	contact_levels = list(1, 2, 3)
-	player_levels =  list(1, 2, 3)
-	base_turf_by_z = list(
-		"1" = /turf/exterior/seafloor,
-		"2" = /turf/exterior/open,
-		"3" = /turf/exterior/open
-	)
-
-	exterior_atmos_temp = T0C - 35 // a bit chilly
-
 	allowed_spawns = list(/decl/spawnpoint/arrivals)
 
 	shuttle_docked_message =           "The crew transfer vessel has docked at the Escape arm. Traffic control reports that departure will occur in approximately %ETD%."
@@ -114,13 +103,50 @@
 		TAG_RELIGION =  /decl/cultural_info/religion/other
 	)
 
-/datum/map/signal/perform_map_generation()
-	. = ..()
-	new /datum/random_map/noise/seafloor(1, 1, 1, world.maxx, world.maxy)
-	new /datum/random_map/automata/cave_system/ice_sheet/flooded(1, 1, 3, world.maxx, world.maxy)
-	new /datum/random_map/noise/ice_plain(1, 1, 4, world.maxx, world.maxy)
-
 /datum/map/signal/get_map_info()
 	return "<b>Yonaguni Dome</b>, bored into the ice plains of Puthiya Natu, is permanent civilian research facility administrated by \
 	the Central Solar government. It is old, remote and poorly funded, but hosts facilities dedicated to studying the sunken continent of \
 	Lemuria, a mysterious expanse of alien ruins buried beneath kilometers of ice and dark water."
+
+/decl/material/liquid/water/sea
+	name = "seawater"
+	codex_name = "seawater"
+	uid = "liquid_seawater"
+	gas_name = "seawater" // jank
+	gas_condensation_point = null // double jank
+
+/datum/level_data/main_level/signal
+	exterior_atmosphere = list(/decl/material/liquid/water/sea = 10000) // taken from old Europa's Yonaguni map
+	exterior_atmos_temp = T0C - 35 // a bit chilly
+	base_turf = /turf/exterior/open/flooded
+
+// z1 - seafloor
+/datum/level_data/main_level/signal/seafloor
+	base_turf = /turf/exterior/seafloor
+	level_generators = list(
+		/datum/random_map/noise/seafloor
+	)
+
+// z3 - flooded ice caves
+/datum/level_data/main_level/signal/icecaves
+	level_generators = list(
+		/datum/random_map/automata/cave_system/ice_sheet/flooded
+	)
+
+// z4 - ice plains
+/datum/level_data/main_level/signal/iceplain
+	level_generators = list(
+		/datum/random_map/noise/ice_plain
+	)
+
+/obj/abstract/level_data_spawner/signal
+	level_data_type = /datum/level_data/main_level/signal
+
+/obj/abstract/level_data_spawner/signal/seafloor
+	level_data_type = /datum/level_data/main_level/signal/seafloor
+
+/obj/abstract/level_data_spawner/signal/icecaves
+	level_data_type = /datum/level_data/main_level/signal/icecaves
+
+/obj/abstract/level_data_spawner/signal/iceplain
+	level_data_type = /datum/level_data/main_level/signal/iceplain

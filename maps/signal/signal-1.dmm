@@ -61,6 +61,10 @@
 	},
 /turf/simulated/floor,
 /area/europa/pillar/south)
+"fv" = (
+/obj/abstract/level_data_spawner/signal/seafloor,
+/turf/exterior/seafloor/flooded,
+/area/europa_exterior)
 "fA" = (
 /obj/machinery/power/smes/buildable/max_cap_in_out,
 /obj/structure/cable{
@@ -1075,7 +1079,7 @@ uG
 uG
 uG
 uG
-uG
+fv
 "}
 (2,1,1) = {"
 uG

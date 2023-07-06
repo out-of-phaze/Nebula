@@ -1,4 +1,4 @@
-/obj/turbolift_map_holder/signal
+/obj/abstract/turbolift_spawner/signal
 	name = "Yonaguni elevator placeholder"
 	depth = 4
 	lift_size_x = 4

@@ -106,18 +106,19 @@
 		update_mob_alpha(H, max(camo_min_alpha, last_alpha-camo_alpha_step))
 
 /datum/hud_data/octopus
-	gear = list(
-		"i_clothing" =   list("loc" = ui_iclothing, "name" = "Uniform",      "slot" = slot_w_uniform_str, "state" = "center", "toggle" = 1),
-		"o_clothing" =   list("loc" = ui_mask,      "name" = "Suit",         "slot" = slot_wear_suit_str, "state" = "suit",   "toggle" = 1),
-		"eyes" =         list("loc" = ui_glasses,   "name" = "Glasses",      "slot" = slot_glasses_str,   "state" = "glasses","toggle" = 1),
-		"head" =         list("loc" = ui_head,      "name" = "Hat",          "slot" = slot_head_str,      "state" = "hair",   "toggle" = 1),
-		"suit storage" = list("loc" = ui_sstore1,   "name" = "Suit Storage", "slot" = slot_s_store_str,   "state" = "suitstore"),
-		"back" =         list("loc" = ui_back,      "name" = "Back",         "slot" = slot_back_str,      "state" = "back"),
-		"id" =           list("loc" = ui_id,        "name" = "ID",           "slot" = slot_wear_id_str,   "state" = "id"),
-		"storage1" =     list("loc" = ui_storage1,  "name" = "Left Pocket",  "slot" = slot_l_store_str,   "state" = "pocket"),
-		"storage2" =     list("loc" = ui_storage2,  "name" = "Right Pocket", "slot" = slot_r_store_str,   "state" = "pocket"),
-		"belt" =         list("loc" = ui_belt,      "name" = "Belt",         "slot" = slot_belt_str,      "state" = "belt")
-		)
+	inventory_slots = list(
+		/datum/inventory_slot/handcuffs,
+		/datum/inventory_slot/uniform,
+		/datum/inventory_slot/suit,
+		/datum/inventory_slot/glasses,
+		/datum/inventory_slot/head,
+		/datum/inventory_slot/suit_storage,
+		/datum/inventory_slot/back,
+		/datum/inventory_slot/id,
+		/datum/inventory_slot/pocket,
+		/datum/inventory_slot/pocket/right,
+		/datum/inventory_slot/belt
+	)
 
 /decl/natural_attack/punch/tentacle
 	attack_verb = list("smacked", "slapped", "swiped")
@@ -197,6 +198,7 @@
 /decl/bodytype/octopus
 	name =              "octopode"
 	bodytype_category = BODYTYPE_OCTOPUS
+	bodytype_flag =     BODY_FLAG_OCTOPUS
 	icon_base =         'mods/signal/icons/species/octopus/body.dmi'
 	icon_deformed =     'mods/signal/icons/species/octopus/body.dmi'
 	icon_template =     'mods/signal/icons/species/octopus/template.dmi'
