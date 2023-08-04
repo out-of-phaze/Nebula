@@ -1,8 +1,9 @@
 /mob/living/carbon/human/set_bodytype(decl/bodytype/new_bodytype, rebuild_body = FALSE)
+	var/decl/bodytype/old_bodytype = get_bodytype()
 	if(ispath(new_bodytype))
 		new_bodytype = GET_DECL(new_bodytype)
-	if(istype(new_bodytype) && bodytype != new_bodytype)
-		bodytype?.on_lose(src)
+	if(istype(new_bodytype) && (rebuild_body || old_bodytype != new_bodytype))
+		old_bodytype?.on_lose()
 		..()
 		new_bodytype.on_gain(src)
 

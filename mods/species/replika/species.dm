@@ -30,23 +30,16 @@
 	base_prosthetics_model = null
 
 	blood_types = list(/decl/blood_type/oxidant)
-	vital_organs = list(
-		BP_POSIBRAIN,
-		BP_CELL
-	)
 
 	available_bodytypes = list(/decl/bodytype/replika/eulr, /decl/bodytype/replika/arar, /decl/bodytype/replika/lstr)
 	age_descriptor =        /datum/appearance_descriptor/age/replika
 	hidden_from_codex =     FALSE
-	species_flags =         SPECIES_FLAG_SYNTHETIC
 	spawn_flags =           SPECIES_CAN_JOIN
 	warning_low_pressure =  50
 	hazard_low_pressure =  -1
 	flesh_color =           COLOR_OFF_WHITE
 
 	preview_outfit = null
-
-	base_eye_color = COLOR_COMMAND_BLUE
 
 	heat_discomfort_strings = list(
 		"You are dangerously close to overheating!"
@@ -67,15 +60,6 @@
 	available_cultural_info = list(
 		TAG_CULTURE = list(/decl/cultural_info/culture/synthetic)
 	)
-	override_limb_types = list(BP_HEAD = /obj/item/organ/external/head/replika)
-	has_organ = list(
-		BP_POSIBRAIN = /obj/item/organ/internal/posibrain/replika,
-		BP_EYES =      /obj/item/organ/internal/eyes/robot/replika,
-		BP_CELL =      /obj/item/organ/internal/cell,
-		BP_HEART =     /obj/item/organ/internal/heart/replika,
-		BP_LUNGS =     /obj/item/organ/internal/lungs/replika,
-		BP_STOMACH =   /obj/item/organ/internal/stomach/replika,
-	)
 
 	exertion_effect_chance = 10
 	exertion_charge_scale = 1
@@ -87,77 +71,6 @@
 	hud_type = /datum/hud_data/replika
 
 	traits = list(/decl/trait/biosynthetic_healing = TRAIT_LEVEL_EXISTS)
-
-/obj/item/organ/internal/posibrain/replika
-	name = "neural matrix"
-	icon = 'icons/obj/surgery.dmi'
-	icon_state = "brain-prosthetic"
-	parent_organ = BP_HEAD
-
-/obj/item/organ/internal/eyes/robot/replika
-	icon = 'icons/obj/surgery.dmi'
-	icon_state = "eyes"
-	alive_icon = "eyes"
-	dead_icon = "eyes"
-	prosthetic_icon = "eyes"
-	prosthetic_dead_icon = "eyes"
-
-/obj/item/organ/internal/heart/replika
-	name = "oxidant impeller"
-	prosthetic_icon = "heart-on"
-	prosthetic_dead_icon = "heart-off"
-	organ_properties = ORGAN_PROP_PROSTHETIC
-
-/obj/item/organ/internal/lungs/replika
-	name = "gas exchange sacs"
-	prosthetic_icon = "lungs"
-	organ_properties = ORGAN_PROP_PROSTHETIC
-
-/obj/item/organ/internal/stomach/replika
-	name = "reagent processor"
-	organ_properties = ORGAN_PROP_PROSTHETIC
-
-/obj/item/organ/external/head/replika
-	glowing_eyes = TRUE
-
-// Make the glow stop once decapitated.
-/obj/item/organ/external/head/replika/on_remove_effects(var/mob/living/last_owner)
-	. = ..()
-	glowing_eyes = FALSE
-
-/obj/item/organ/external/head/replika/do_install(mob/living/carbon/human/target, obj/item/organ/external/affected, in_place)
-	if(!(. = ..()))
-		return
-	events_repository.register(/decl/observ/death, owner, src, .proc/on_owner_death)
-	events_repository.register(/decl/observ/life, owner, src, .proc/on_owner_revive)
-
-/obj/item/organ/external/head/replika/proc/on_owner_death()
-	glowing_eyes = FALSE
-
-/obj/item/organ/external/head/replika/proc/on_owner_revive()
-	glowing_eyes = TRUE
-
-/obj/item/organ/external/head/replika/do_uninstall(in_place, detach, ignore_children)
-	. = ..()
-	events_repository.unregister(/decl/observ/death, owner, src, .proc/on_owner_death)
-	events_repository.unregister(/decl/observ/life, owner, src, .proc/on_owner_revive)
-	glowing_eyes = FALSE
-
-/decl/species/replika/set_default_hair(mob/living/carbon/human/organism, override_existing = TRUE, defer_update_hair = FALSE)
-	if(!istype(organism.bodytype, /decl/bodytype/replika))
-		return
-	var/decl/bodytype/replika/replika_model = organism.bodytype
-	if(!organism.h_style || (override_existing && (organism.h_style != replika_model.default_hair_style)))
-		organism.h_style = replika_model.default_hair_style
-		if(!defer_update_hair)
-			organism.update_hair()
-		return TRUE
-
-/decl/species/replika/apply_species_organ_modifications(obj/item/organ/organ)
-	..()
-	if(istype(organ.bodytype, /decl/bodytype/replika))
-		var/decl/bodytype/replika/replika_model = organ.bodytype
-		replika_model.apply_model_organ_modifications(organ)
 
 /decl/species/replika/equip_survival_gear(mob/living/carbon/human/victim)
 	. = ..()
