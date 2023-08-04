@@ -1,46 +1,64 @@
 /decl/bodytype/replika
-	abstract_type =         /decl/bodytype/replika
-	name =                  "replika"
-	bodytype_category =     BODYTYPE_HUMANOID
-	limb_blend =            ICON_MULTIPLY
+	abstract_type =       /decl/bodytype/replika
+	name =                "replika"
+	bodytype_category =   BODYTYPE_HUMANOID
+	limb_blend =          ICON_MULTIPLY
+	modular_limb_tier =   MODULAR_BODYPART_CYBERNETIC
+	body_flags =          0
+	modifier_string =     "biosynthetic"
+	material =            /decl/material/solid/fiberglass // todo: polyethylene
+	base_eye_color =      COLOR_COMMAND_BLUE
+	matter = list(
+		/decl/material/solid/meat = MATTER_AMOUNT_SECONDARY // todo: make bioengineered meat toxic to non-replika?
+	)
+	override_limb_types = list(BP_HEAD = /obj/item/organ/external/head/replika)
+	has_organ = list(
+		BP_POSIBRAIN = /obj/item/organ/internal/posibrain/replika,
+		BP_EYES =      /obj/item/organ/internal/eyes/robot/replika,
+		BP_CELL =      /obj/item/organ/internal/cell,
+		BP_HEART =     /obj/item/organ/internal/heart/replika,
+		BP_LUNGS =     /obj/item/organ/internal/lungs/replika,
+		BP_STOMACH =   /obj/item/organ/internal/stomach/replika,
+	)
+	vital_organs = list(
+		BP_POSIBRAIN,
+		BP_CELL
+	)
 	var/nickname
-	var/prosthetics_model = /decl/prosthetics_manufacturer/replika
-	var/default_hair_style
-
-/decl/bodytype/replika/proc/apply_model_organ_modifications(obj/item/organ/org)
-	if(istype(org, /obj/item/organ/external))
-		var/obj/item/organ/external/limb = org
-		limb.robotize(prosthetics_model, FALSE, TRUE, /decl/material/solid/fiberglass, BODYTYPE_HUMANOID, SPECIES_REPLIKA)
 
 /decl/bodytype/replika/eulr
-	name =              "EULR"
-	nickname =          "Eule"
-	icon_base =         'mods/species/replika/icons/eulr/body.dmi'
-	prosthetics_model = /decl/prosthetics_manufacturer/replika/eulr
-	default_hair_style = /decl/sprite_accessory/hair/replika/eulr
+	name =            "EULR"
+	desc =            "This limb is made of bioengineered flesh with a polyethylene shell, designed for general-purpose duties."
+	nickname =        "Eule"
+	modifier_string = "\improper EULR model"
+	icon_base =       'mods/species/replika/icons/eulr/body.dmi'
+	default_h_style = /decl/sprite_accessory/hair/replika/eulr
 
 /decl/bodytype/replika/arar
-	name =              "ARAR"
-	nickname =          "Ara"
-	icon_base =         'mods/species/replika/icons/arar/body.dmi'
-	prosthetics_model = /decl/prosthetics_manufacturer/replika/arar
-	default_hair_style = /decl/sprite_accessory/hair/replika/arar
-	inherent_verbs = list(/mob/living/proc/ventcrawl)
+	name =            "ARAR"
+	desc =            "This limb is made of bioengineered flesh with a titanium-reinforced polyethylene shell, designed for repair, maintenance, construction, manufacturing, and other industrial tasks."
+	nickname =        "Ara"
+	modifier_string = "\improper ARAR model"
+	icon_base =       'mods/species/replika/icons/arar/body.dmi'
+	default_h_style = /decl/sprite_accessory/hair/replika/arar
+	inherent_verbs =  list(/mob/living/proc/ventcrawl)
 
 /decl/bodytype/replika/lstr
-	name =              "LSTR"
-	nickname =          "Elster"
-	icon_base =         'mods/species/replika/icons/lstr/body.dmi'
-	prosthetics_model = /decl/prosthetics_manufacturer/replika/lstr
-	default_hair_style = /decl/sprite_accessory/hair/replika/lstr
+	name =            "LSTR"
+	desc =            "This limb is made of bioengineered flesh with a carbon fiber-reinforced polyethylene shell, designed to work as a combat engineer or ship technician."
+	nickname =        "Elster"
+	modifier_string = "\improper LSTR model"
+	icon_base =       'mods/species/replika/icons/lstr/body.dmi'
+	default_h_style = /decl/sprite_accessory/hair/replika/lstr
 
 /decl/bodytype/replika/star
-	name =              "STAR"
-	nickname =          "Starling"
-	icon_base =         'mods/species/replika/icons/star/body.dmi'
-	prosthetics_model = /decl/prosthetics_manufacturer/replika/star
-	default_hair_style = /decl/sprite_accessory/hair/replika/star
-	eye_offset = 2
+	name =            "STAR"
+	desc =            "This limb is made of bioengineered flesh with a polyethylene shell, designed for general-purpose duties."
+	nickname =        "Starling"
+	modifier_string = "\improper STAR model"
+	icon_base =       'mods/species/replika/icons/star/body.dmi'
+	default_h_style = /decl/sprite_accessory/hair/replika/star
+	eye_offset =      2
 
 /decl/bodytype/replika/star/Initialize()
 	. = ..()
