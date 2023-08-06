@@ -466,16 +466,14 @@ var/global/list/time_prefs_fixed = list()
 
 	dat += "<hr>"
 	dat += "</center></tt>"
-	if(!panel) // don't unnecessarily churn through panels
-		panel = new(user, "Character Slots", "Character Slots", 300, 390, src)
+	panel = new(user, "Character Slots", "Character Slots", 300, 390, src)
 	panel.set_content(jointext(dat,null))
 	panel.open()
 
 /datum/preferences/proc/close_load_dialog(mob/user)
 	if(panel)
 		panel.close()
-		// we don't delete it here in case we reopen it
-		// it gets qdeleted in Destroy
+		panel = null
 	close_browser(user, "window=saves")
 
 /datum/preferences/proc/apply_post_login_preferences()

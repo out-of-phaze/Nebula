@@ -91,10 +91,6 @@ var/global/list/rpd_pipe_selection_skilled = list()
 	var/list/L = global.rpd_pipe_selection[global.rpd_pipe_selection[1]]
 	P = L[1]
 
-/obj/item/rpd/Destroy()
-	QDEL_NULL(popup)
-	return ..()
-
 /obj/item/rpd/proc/get_console_data(var/list/pipe_categories, var/color_options = FALSE)
 	. = list()
 	. += "<table>"
