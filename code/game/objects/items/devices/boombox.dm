@@ -56,7 +56,7 @@
 	dat += "<A href='?src=\ref[src];stop=1;'>STOP</a>"
 	dat += "<A href='?src=\ref[src];voldown=1;'>VOL -</a>"
 	dat += "<A href='?src=\ref[src];volup=1;'>VOL +</a>"
-	var/datum/browser/popup = new(user, "boombox", "BOOMTASTIC 3000", 290, 110, ndel_on_close = TRUE)
+	var/datum/browser/popup = new(user, "boombox", "BOOMTASTIC 3000", 290, 110)
 	popup.set_content(dat)
 	popup.open()
 

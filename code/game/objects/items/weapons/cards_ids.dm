@@ -220,7 +220,7 @@ var/global/const/NO_EMAG_ACT = -50
 	if(front && side)
 		send_rsc(user, front, "front.png")
 		send_rsc(user, side, "side.png")
-	var/datum/browser/written_physical/popup = new(user, "idcard", name, 600, 250, ndel_on_close = TRUE)
+	var/datum/browser/written_physical/popup = new(user, "idcard", name, 600, 250)
 	popup.set_content(dat())
 	popup.open()
 	return

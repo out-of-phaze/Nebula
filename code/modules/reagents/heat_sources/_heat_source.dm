@@ -158,7 +158,7 @@
 	dat += "<tr><td>Switched:</td><td><a href='?src=\ref[src];toggle_power=1'>[use_power == POWER_USE_ACTIVE ? "On" : "Off"]</a></td></tr>"
 	dat += "</table>"
 
-	var/datum/browser/popup = new(user, "\ref[src]-reagent_temperature_window", "[capitalize(name)]", ndel_on_close = TRUE)
+	var/datum/browser/popup = new(user, "\ref[src]-reagent_temperature_window", "[capitalize(name)]")
 	popup.set_content(jointext(dat, null))
 	popup.open()
 

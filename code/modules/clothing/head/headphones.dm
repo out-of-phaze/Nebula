@@ -96,7 +96,7 @@
 		else
 			dat += "<A href='?src=\ref[src];track=[track];'>[track]</a>"
 
-	var/datum/browser/popup = new(user, "headphones", name, 290, 410, ndel_on_close = TRUE)
+	var/datum/browser/popup = new(user, "headphones", name, 290, 410)
 	popup.set_content(jointext(dat,"<br>"))
 	popup.open()
 

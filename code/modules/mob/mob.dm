@@ -378,7 +378,7 @@
 
 	dat += "<BR><A href='?src=\ref[src];refresh=1'>Refresh</A>"
 
-	var/datum/browser/popup = new(user, "[name]", "Inventory of \the [name]", 325, 500, src, ndel_on_close = TRUE)
+	var/datum/browser/popup = new(user, "[name]", "Inventory of \the [name]", 325, 500, src)
 	popup.set_content(jointext(dat, "<br>"))
 	popup.open()
 

@@ -72,6 +72,6 @@ SUBSYSTEM_DEF(persistence)
 			dat += P.GetAdminSummary(user, can_modify)
 	dat += "</table>"
 
-	var/datum/browser/popup = new(user, "admin_persistence", "Persistence Data", ndel_on_close = TRUE)
+	var/datum/browser/popup = new(user, "admin_persistence", "Persistence Data")
 	popup.set_content(jointext(dat, null))
 	popup.open()

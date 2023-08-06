@@ -101,7 +101,7 @@
 			LAZYADD(dat, "<a href='?src=\ref[src];look=\ref[thing]'>Look</a>")
 		LAZYADD(dat, "<a href='?src=\ref[src];remove=\ref[thing]'>Remove</a></td></tr>")
 
-	var/datum/browser/popup = new(user, "noticeboard-\ref[src]", "Noticeboard", ndel_on_close = TRUE)
+	var/datum/browser/popup = new(user, "noticeboard-\ref[src]", "Noticeboard")
 	popup.set_content(jointext(dat, null))
 	popup.open()
 

@@ -109,7 +109,7 @@
 	else
 		dat += "<h2>Psionic Control Violations <a href='?src=\ref[src];show_violations=1'>+</a></h2><hr>"
 
-	var/datum/browser/written_digital/popup = new(user, "psi_monitor_\ref[src]", "Psi-Monitor", ndel_on_close = TRUE)
+	var/datum/browser/written_digital/popup = new(user, "psi_monitor_\ref[src]", "Psi-Monitor")
 	popup.set_content(jointext(dat,null))
 	popup.open()
 

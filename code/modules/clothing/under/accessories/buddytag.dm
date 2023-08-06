@@ -24,7 +24,7 @@
 	dat += "<br>ID: <A href='?src=\ref[src];setcode=1;'>[id]</a>"
 	dat += "<br>Search Interval: <A href='?src=\ref[src];set_interval=1;'>[search_interval/10] seconds</a>"
 	dat += "<br>Search Distance: <A href='?src=\ref[src];set_distance=1;'>[distance]</a>"
-	var/datum/browser/popup = new(user, "buddytag", "Buddy Tag", 290, 200, ndel_on_close = TRUE)
+	var/datum/browser/popup = new(user, "buddytag", "Buddy Tag", 290, 200)
 	popup.set_content(JOINTEXT(dat))
 	popup.open()
 

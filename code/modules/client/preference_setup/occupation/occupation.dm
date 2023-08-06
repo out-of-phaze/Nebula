@@ -433,7 +433,7 @@
 		var/description = job.get_description_blurb()
 		if(description)
 			dat += html_encode(description)
-		var/datum/browser/popup = new(user, "Job Info", "[capitalize(rank)]", 430, 520, src, ndel_on_close = TRUE)
+		var/datum/browser/popup = new(user, "Job Info", "[capitalize(rank)]", 430, 520, src)
 		popup.set_content(jointext(dat,"<br>"))
 		popup.open()
 

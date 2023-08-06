@@ -148,7 +148,7 @@
 	if(curText)
 		dat += curText
 
-	var/datum/browser/popup = new(user, "botpanel", "[src] controls", ndel_on_close = TRUE)
+	var/datum/browser/popup = new(user, "botpanel", "[src] controls")
 	popup.set_content(dat)
 	popup.open()
 

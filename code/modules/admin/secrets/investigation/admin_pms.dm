@@ -29,7 +29,7 @@
 		dat += "<tr><td colspan=3>[pm.message]</td></tr>"
 	dat += "</table>"
 
-	var/datum/browser/popup = new(user, "admin_ahelps", "Admin PMs", 800, 400, ndel_on_close = TRUE)
+	var/datum/browser/popup = new(user, "admin_ahelps", "Admin PMs", 800, 400)
 	popup.set_content(jointext(dat, null))
 	popup.open()
 

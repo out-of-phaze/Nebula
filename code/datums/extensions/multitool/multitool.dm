@@ -9,7 +9,7 @@
 
 	var/html = get_interact_window(M, user)
 	if(html)
-		var/datum/browser/popup = new(user, "multitool", "Multitool Menu", window_x, window_y, ndel_on_close = TRUE)
+		var/datum/browser/popup = new(user, "multitool", "Multitool Menu", window_x, window_y)
 		popup.set_content(html)
 		popup.open()
 	else

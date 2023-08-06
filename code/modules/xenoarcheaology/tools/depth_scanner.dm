@@ -99,7 +99,7 @@
 
 	dat += "<hr>"
 	dat += "<A href='?src=\ref[src];refresh=1'>Refresh</a><br>"
-	var/datum/browser/popup = new(user, "depth_scanner", "Results", 300, 500, ndel_on_close = TRUE)
+	var/datum/browser/popup = new(user, "depth_scanner", "Results", 300, 500)
 	popup.set_content(dat)
 	popup.open()
 	onclose(user, "depth_scanner")

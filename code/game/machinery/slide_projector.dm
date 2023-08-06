@@ -60,7 +60,7 @@
 		QDEL_NULL(projection)
 	events_repository.unregister(/decl/observ/moved, src, src, .proc/check_projections)
 	update_icon()
-
+	
 /obj/item/storage/slide_projector/proc/project_at(turf/target)
 	stop_projecting()
 	if(!current_slide)
@@ -78,13 +78,13 @@
 /obj/item/storage/slide_projector/attack_self(mob/user)
 	interact(user)
 
-/obj/item/storage/slide_projector/interact(mob/user)
+/obj/item/storage/slide_projector/interact(mob/user)	
 	var/data = list()
 	if(projection)
 		data += "<a href='?src=\ref[src];stop_projector=1'>Disable projector</a>"
 	else
 		data += "Projector inactive"
-
+	
 	var/table = list("<table><th>#<th>SLIDE<th>SHOW")
 	var/i = 1
 	for(var/obj/item/I in contents)
@@ -95,7 +95,7 @@
 			table += "<td>[I.name]<td><a href='?src=\ref[src];set_active=[i]'>SHOW</a>"
 		i++
 	data += jointext(table,null)
-	var/datum/browser/popup = new(user, "slides\ref[src]", "Slide Projector", ndel_on_close = TRUE)
+	var/datum/browser/popup = new(user, "slides\ref[src]", "Slide Projector")
 	popup.set_content(jointext(data, "<br>"))
 	popup.open()
 
@@ -115,7 +115,7 @@
 			return TOPIC_HANDLED
 		set_slide(contents[index])
 		. = TOPIC_REFRESH
-
+	
 	if(. == TOPIC_REFRESH)
 		interact(user)
 
