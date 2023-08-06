@@ -413,12 +413,15 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/johnson/medical)
 "iu" = (
-/obj/structure/bed/chair/armchair/brown{
-	dir = 8
-	},
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/machinery/chemical_dispenser/calicomp/full{
+	dir = 8;
+	throwpass = 1
+	},
+/obj/structure/table/woodentable/mahogany,
+/obj/item/storage/box/mixedglasses,
 /turf/simulated/floor/wood/walnut,
 /area/johnson)
 "iw" = (
@@ -466,16 +469,15 @@
 /area/johnson)
 "iP" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	cycle_to_external_air = 1;
 	dir = 4;
 	id_tag = "johnson_dock";
 	pixel_x = -22;
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_exterior_sensor = null;
-	tag_interior_door = null;
-	tag_interior_sensor = null
+	tag_airpump = "johnson_dock_pump";
+	tag_chamber_sensor = "johnson_dock_sensor";
+	tag_exterior_door = "johnson_dock_outer";
+	tag_exterior_sensor = "johnson_dock_exterior_sensor";
+	tag_interior_door = "johnson_dock_inner";
+	tag_interior_sensor = "johnson_dock_interior_sensor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/airlock{
 	dir = 1;
@@ -1547,7 +1549,9 @@
 /area/johnson/maintenance)
 "If" = (
 /obj/structure/table/woodentable/mahogany,
-/obj/machinery/microwave,
+/obj/machinery/microwave{
+	throwpass = 1
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/lino,
 /area/johnson)
@@ -1767,14 +1771,14 @@
 	id_tag = "johnson_mining";
 	name = "mining airlock controller";
 	pixel_x = 22;
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_exterior_sensor = null;
-	tag_interior_door = null;
-	tag_interior_sensor = null;
-	tag_pump_out_external = null;
-	tag_pump_out_internal = null
+	tag_airpump = "johnson_mining_pump";
+	tag_chamber_sensor = "johnson_mining_sensor";
+	tag_exterior_door = "johnson_mining_outer";
+	tag_exterior_sensor = "johnson_mining_exterior_sensor";
+	tag_interior_door = "johnson_mining_inner";
+	tag_interior_sensor = "johnson_mining_interior_sensor";
+	tag_pump_out_external = "johnson_mining_pump_out_external";
+	tag_pump_out_internal = "johnson_mining_pump_out_internal"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/airlock{
 	id_tag = "johnson_mining_pump"
@@ -1902,9 +1906,6 @@
 /obj/structure/handrail,
 /turf/simulated/floor/lino,
 /area/johnson)
-"PH" = (
-/turf/simulated/floor/lino,
-/area/johnson)
 "PW" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -1915,6 +1916,7 @@
 /obj/item/storage/bag/trash,
 /obj/item/plunger,
 /obj/item/storage/box/detergent,
+/obj/item/soap,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "Qa" = (
@@ -2213,11 +2215,14 @@
 	},
 /obj/structure/table/woodentable/mahogany,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/chemical_dispenser/ship_coffee/full{
-	pixel_y = 6
+/obj/machinery/reagentgrinder/juicer{
+	pixel_y = 19;
+	throwpass = 1
 	},
-/obj/random/maintenance{
-	spawn_nothing_percentage = 50
+/obj/machinery/chemical_dispenser/ship_coffee/full{
+	pixel_x = 6;
+	pixel_y = 4;
+	throwpass = 1
 	},
 /turf/simulated/floor/wood/walnut,
 /area/johnson)
@@ -4553,7 +4558,7 @@ Vj
 Uh
 Ac
 Pv
-PH
+Sz
 Mg
 jt
 iH
