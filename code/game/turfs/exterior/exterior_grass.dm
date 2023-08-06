@@ -40,6 +40,7 @@
 /turf/exterior/wildgrass/melt()
 	if(icon_state != "scorched")
 		SetName("scorched ground")
+		possible_states = 0
 		icon_state = "scorched"
 		icon_edge_layer = -1
 		footstep_type = /decl/footsteps/asteroid

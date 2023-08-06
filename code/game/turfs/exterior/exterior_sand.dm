@@ -4,7 +4,7 @@
 	dirt_color = "#ae9e66"
 	footstep_type = /decl/footsteps/sand
 	icon = 'icons/turf/exterior/sand.dmi'
-	icon_edge_layer = EXT_EDGE_SAND 
+	icon_edge_layer = EXT_EDGE_SAND
 	icon_has_corners = TRUE
 	possible_states = 5
 
@@ -16,6 +16,7 @@
 	if(icon_state != "glass")
 		SetName("molten silica")
 		desc = "A glassed patch of sand."
+		possible_states = 0
 		icon_state = "glass"
 		icon_edge_layer = -1
 		diggable = FALSE

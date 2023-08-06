@@ -23,6 +23,7 @@
 /turf/exterior/snow/melt()
 	if(icon_state != "permafrost")
 		SetName("permafrost")
+		possible_states = 0
 		icon_state = "permafrost"
 		icon_edge_layer = -1
 		footstep_type = /decl/footsteps/asteroid
