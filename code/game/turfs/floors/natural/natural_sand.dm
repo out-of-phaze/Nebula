@@ -38,6 +38,7 @@
 		set_turf_materials(/decl/material/solid/glass, skip_update = TRUE)
 		SetName("molten silica")
 		desc = "A glassed patch of sand."
+		possible_states = 0
 		icon_state = "glass"
 		icon_edge_layer = -1
 		clear_diggable_resources()
