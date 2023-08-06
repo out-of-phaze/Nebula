@@ -11,6 +11,20 @@
 	///Ideally this will eventually be the main reference for the z-level to the planet level contents are located on. So we don't need to link every single turfs to it.
 	var/datum/planetoid_data/parent_planetoid
 
+// TEMPORARY STOPGAP, DO NOT PUSH UPSTREAM
+/datum/level_data/planetoid/get_base_area_instance()
+	if(istext(base_area))
+		var/area/found = locate(base_area)
+		if(found)
+			return found
+	if(ispath(base_area))
+		var/area/new_area = new base_area
+		new_area.tag = "area_[level_id]"
+		base_area = new_area.tag
+		return new_area
+	return locate(world.area)
+// END STOPGAP
+
 ///Level data for generating surface levels on exoplanets
 /datum/level_data/planetoid/exoplanet
 	base_area = /area/exoplanet
@@ -95,7 +109,7 @@
 /datum/level_data/planetoid/adapt_location_name(location_name)
 	if(!(. = ..()))
 		return
-	if(!ispath(base_area) || ispath(base_area, world.area))
+	if(!base_area || ispath(base_area, world.area))
 		return
 	var/area/A = get_base_area_instance()
 	//Make sure we're not going to rename the world's base area
