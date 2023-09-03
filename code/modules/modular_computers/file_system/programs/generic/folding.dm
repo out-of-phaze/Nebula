@@ -57,7 +57,7 @@
 	if(!started_on)
 		return
 
-	if(world.timeofday > next_event)
+	if(world.timeofday < next_event)
 		return
 	var/mob/living/holder = computer.holder.get_recursive_loc_of_type(/mob/living/carbon/human)
 	if(!crashed)
