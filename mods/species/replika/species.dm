@@ -35,7 +35,14 @@
 		BP_CELL
 	)
 
-	available_bodytypes = list(/decl/bodytype/replika/eulr, /decl/bodytype/replika/arar, /decl/bodytype/replika/lstr)
+	appearance_descriptors = null
+
+	available_bodytypes = list(
+		/decl/bodytype/replika/eulr,
+		/decl/bodytype/replika/arar,
+		/decl/bodytype/replika/lstr,
+		/decl/bodytype/replika/star
+	)
 	age_descriptor =        /datum/appearance_descriptor/age/replika
 	hidden_from_codex =     FALSE
 	species_flags =         SPECIES_FLAG_SYNTHETIC
