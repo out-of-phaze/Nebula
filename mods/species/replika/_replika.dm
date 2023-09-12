@@ -31,8 +31,7 @@
 	set_real_name(model.get_default_name())
 
 /decl/bodytype/replika/proc/get_default_name()
-	var/newname = "[name]-[global.using_map.company_short]"
-	return newname + add_zero(num2text(random_id(newname, 0, 99)), 2)
+	return "[name]-[add_zero(num2text(random_id(name, 0, 99)), 2)]"
 
 /mob/living/carbon/human/replika/eulr
 	starting_bodytype = /decl/bodytype/replika/eulr

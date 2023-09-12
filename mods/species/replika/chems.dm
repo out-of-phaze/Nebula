@@ -12,6 +12,7 @@
 	var/brute_regen = GET_CHEMICAL_EFFECT(src, CE_REGEN_BRUTE_REPLIKA)
 	if(burn_regen || brute_regen)
 		heal_organ_damage(brute_regen, burn_regen, affect_robo = TRUE)
+		UpdateDamageIcon(TRUE)
 		return TRUE
 
 /decl/material/solid/plastifoam
@@ -19,7 +20,7 @@
 	lore_text = "Polyurethane expanding foam can be used to fill up Replika wounds and stop leaks. \
 	Takes a few seconds to expand, but very hard once fully cured."
 	metabolism = 2/5 // 0.4u/tick, works out to 30 damage healed over 25 seconds in a 5u spray
-	var/strength = 3 // Damage healted per unit.
+	var/strength = 3 // Damage healed per unit.
 
 /decl/material/solid/plastifoam/quick
 	name = "quick-setting polyurethane foam"
