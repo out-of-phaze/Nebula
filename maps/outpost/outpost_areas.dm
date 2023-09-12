@@ -47,3 +47,12 @@
 	arrival_sound = null
 	lift_announce_str = null
 	holomap_color = HOLOMAP_AREACOLOR_LIFTS
+
+/area/space_outpost
+	name = "\improper Docking Station"
+	icon_state = "shuttle"
+	requires_power = FALSE
+	dynamic_lighting = TRUE
+	sound_env = STANDARD_STATION
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_CREW
