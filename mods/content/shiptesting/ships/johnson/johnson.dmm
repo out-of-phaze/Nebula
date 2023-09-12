@@ -443,7 +443,6 @@
 /turf/simulated/floor/airless,
 /area/johnson)
 "iL" = (
-/obj/effect/shuttle_landmark/ship/johnson,
 /obj/effect/catwalk_plated/dark,
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1251,10 +1250,10 @@
 /area/johnson)
 "CA" = (
 /obj/structure/catwalk,
-/obj/machinery/button/access/exterior{
+/obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = "johnson_dock";
-	pixel_y = -22
+	id_tag = "johnson_dock_exterior_sensor";
+	pixel_y = -18
 	},
 /turf/space,
 /area/johnson/maintenance)
@@ -1831,14 +1830,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/johnson)
-"NF" = (
-/obj/machinery/button/access/exterior{
-	dir = 8;
-	id_tag = "johnson_dock";
-	pixel_x = 20
-	},
-/turf/space,
-/area/space)
 "NI" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 4
@@ -2157,6 +2148,12 @@
 /obj/machinery/fabricator,
 /turf/simulated/floor/tiled/steel_grid,
 /area/johnson/mining)
+"Wb" = (
+/obj/abstract/docking_port_spawner/johnson{
+	dir = 4
+	},
+/turf/space,
+/area/space)
 "Wc" = (
 /obj/machinery/door/airlock/external/bolted{
 	dir = 8;
@@ -2164,6 +2161,9 @@
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
+	},
+/obj/effect/shuttle_landmark/ship/johnson{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/johnson/maintenance)
@@ -2274,14 +2274,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/johnson/bridge)
-"YJ" = (
-/obj/machinery/airlock_sensor{
-	dir = 8;
-	id_tag = "johnson_dock_exterior_sensor";
-	pixel_x = 22
-	},
-/turf/space,
-/area/space)
 "Za" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/bed/chair/shuttle/blue{
@@ -3254,9 +3246,9 @@ kM
 kM
 kM
 kM
-YJ
 kM
-NF
+Wb
+kM
 kM
 kM
 kM
