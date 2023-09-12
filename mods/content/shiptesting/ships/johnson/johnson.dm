@@ -25,10 +25,15 @@
 	flags = SHUTTLE_FLAGS_PROCESS
 
 /obj/effect/shuttle_landmark/ship/johnson
+	shuttle_name = "Mining Vessel"
 	landmark_tag = "nav_johnson"
-	flags = SLANDMARK_FLAG_ZERO_G
+	flags = SLANDMARK_FLAG_ZERO_G | SLANDMARK_FLAG_REORIENT
 	base_area = /area/space
 	base_turf = /turf/space
+
+/obj/abstract/docking_port_spawner/johnson
+	core_landmark_tag = "nav_johnson"
+	docking_tag = "johnson_dock"
 
 /area/johnson
 	name = "Mining Vessel"
