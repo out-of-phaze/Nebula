@@ -13,7 +13,7 @@
 	shuttle = "Emergency Pod"
 	fore_dir = EAST
 	max_speed = 1/(2 SECONDS)
-	burn_delay = 1 SECONDS
+	burn_delay = 1 SECOND
 	skill_needed = SKILL_BASIC
 	sector_flags = OVERMAP_SECTOR_IN_SPACE
 	use_mapped_z_levels = TRUE
@@ -34,10 +34,14 @@
 	flags = SHUTTLE_FLAGS_PROCESS
 
 /obj/effect/shuttle_landmark/ship/lozenge
+	shuttle_name = "Emergency Pod"
 	landmark_tag = "nav_lozenge"
-	flags = SLANDMARK_FLAG_ZERO_G
+	flags = SLANDMARK_FLAG_ZERO_G | SLANDMARK_FLAG_REORIENT
 	base_area = /area/space
 	base_turf = /turf/space
+
+/obj/abstract/docking_port_spawner/lozenge
+	core_landmark_tag = "nav_lozenge"
 
 /area/lozenge
 	name = "\improper Emergency Pod"

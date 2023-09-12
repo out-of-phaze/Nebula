@@ -162,7 +162,6 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/obj/effect/shuttle_landmark/ship/lozenge,
 /turf/simulated/floor/plating,
 /area/lozenge)
 "w" = (
@@ -273,6 +272,7 @@
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/effect/shuttle_landmark/ship/lozenge,
 /turf/simulated/floor/airless,
 /area/lozenge)
 "L" = (
@@ -400,6 +400,12 @@
 /obj/effect/paint/red,
 /turf/simulated/wall/titanium,
 /area/lozenge)
+"Y" = (
+/obj/abstract/docking_port_spawner/lozenge{
+	dir = 1
+	},
+/turf/space,
+/area/space)
 
 (1,1,1) = {"
 a
@@ -2296,7 +2302,7 @@ H
 L
 o
 I
-a
+Y
 a
 a
 a
