@@ -9,18 +9,18 @@
 
 // Cosmetic/armour changes, different models of limb
 /decl/aspect/replika/customisation
-	name = "Heavy Frame"
+	name = "Armored Chest"
 	desc = "Coming soon!"
 	category = "Frame Customisation"
 
 // Additional augments, organs, better armour, robomodules
 /decl/aspect/replika/upgrade
-	name = "Upgraded Widget"
+	name = "Upgraded Organ"
 	desc = "Coming soon!"
 	category = "Upgrades"
 
 // Various maluses
 /decl/aspect/replika/fault
-	name = "Faulty Widget"
+	name = "Faulty Organ"
 	desc = "Coming soon!"
 	category = "Faults"

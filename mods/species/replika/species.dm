@@ -29,6 +29,8 @@
 	cyborg_noun = null
 	base_prosthetics_model = null
 
+	appearance_flags = HAS_LIPS
+
 	blood_types = list(/decl/blood_type/oxidant)
 	vital_organs = list(
 		BP_POSIBRAIN,
@@ -72,7 +74,7 @@
 		/decl/pronouns/neuter/person
 	)
 	available_cultural_info = list(
-		TAG_CULTURE = list(/decl/cultural_info/culture/synthetic)
+		TAG_CULTURE = list(/decl/cultural_info/culture/synthetic/replika)
 	)
 	override_limb_types = list(BP_HEAD = /obj/item/organ/external/head/replika)
 	has_organ = list(
@@ -94,6 +96,17 @@
 	hud_type = /datum/hud_data/replika
 
 	traits = list(/decl/trait/biosynthetic_healing = TRAIT_LEVEL_EXISTS)
+
+/decl/cultural_info/culture/synthetic/replika
+	name = "Replika"
+	description = "You are a biosynthetic humanoid created by the Nation to serve as their primary workforce."
+
+/decl/cultural_info/culture/synthetic/replika/get_random_name(mob/M, gender)
+	var/decl/species/our_species = get_species_by_key(M?.client?.prefs?.species)
+	if(our_species?.get_root_species_name() != SPECIES_REPLIKA)
+		return ..()
+	var/decl/bodytype/replika/our_bodytype = our_species.get_bodytype_by_name(M.client.prefs.bodytype)
+	return our_bodytype.get_default_name()
 
 /obj/item/organ/internal/posibrain/replika
 	name = "neural matrix"
