@@ -11,6 +11,7 @@
 	matter = list(
 		/decl/material/solid/meat = MATTER_AMOUNT_SECONDARY // todo: make bioengineered meat toxic to non-replika?
 	)
+	appearance_flags = HAS_LIPS // eye, hair, and skin color are all fixed
 	override_limb_types = list(BP_HEAD = /obj/item/organ/external/head/replika)
 	has_organ = list(
 		BP_POSIBRAIN = /obj/item/organ/internal/posibrain/replika,
