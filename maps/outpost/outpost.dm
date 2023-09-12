@@ -30,6 +30,7 @@
 
 	#include "../../mods/species/bayliens/_bayliens.dme"
 	#include "../../mods/species/neoavians/_neoavians.dme"
+	#include "../../mods/species/replika/_replika.dme"
 	#include "../../mods/species/utility_frames/_utility_frames.dme"
 	#include "../../mods/species/vox/_vox.dme"
 
@@ -40,6 +41,10 @@
 
 	// CONTENT
 
+	#include "../../mods/content/bigpharma/_bigpharma.dme"
+	#include "../../mods/content/government/_government.dme"
+	#include "../../mods/content/corporate/_corporate.dme"
+	#include "../../mods/content/karmotrine/_karmotrine.dme"
 	#include "../../mods/content/matchmaking/_matchmaking.dme"
 	#include "../../mods/content/modern_earth/_modern_earth.dme"
 	#include "../../mods/content/psionics/_psionics.dme"
