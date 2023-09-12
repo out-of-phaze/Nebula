@@ -30,6 +30,16 @@
 	},
 /turf/space,
 /area/skiff)
+"h" = (
+/obj/structure/catwalk{
+	material = /decl/material/solid/plastic;
+	material_alteration = 16777215
+	},
+/obj/effect/shuttle_landmark/ship/skiff{
+	dir = 1
+	},
+/turf/space,
+/area/skiff)
 "i" = (
 /obj/structure/catwalk,
 /obj/machinery/ion_thruster{
@@ -105,6 +115,16 @@
 	},
 /turf/space,
 /area/skiff)
+"u" = (
+/obj/abstract/docking_port_spawner/skiff_starboard{
+	dir = 1
+	},
+/turf/space,
+/area/space)
+"z" = (
+/obj/abstract/docking_port_spawner/skiff_port,
+/turf/space,
+/area/space)
 "D" = (
 /obj/machinery/power/apc/high{
 	pixel_y = -22
@@ -199,7 +219,6 @@
 	input_turf = 1;
 	output_turf = 2
 	},
-/obj/effect/shuttle_landmark/ship/skiff,
 /obj/abstract/submap_landmark/joinable_submap/spawnable_ship/skiff,
 /obj/machinery/light{
 	dir = 8
@@ -353,11 +372,11 @@ a
 a
 a
 a
-a
-J
+z
+h
 P
 J
-a
+u
 a
 a
 a

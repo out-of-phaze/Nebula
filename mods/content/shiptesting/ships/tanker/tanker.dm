@@ -24,9 +24,13 @@
 
 /obj/effect/shuttle_landmark/ship/tanker
 	landmark_tag = "nav_tanker"
-	flags = SLANDMARK_FLAG_ZERO_G
+	flags = SLANDMARK_FLAG_ZERO_G | SLANDMARK_FLAG_REORIENT
 	base_area = /area/space
 	base_turf = /turf/space
+
+/obj/abstract/docking_port_spawner/tanker
+	core_landmark_tag = "nav_tanker"
+	docking_tag = "tanker_dock"
 
 /area/tanker
 	name = "Tanker"

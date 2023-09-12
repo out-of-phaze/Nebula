@@ -263,9 +263,11 @@
 /turf/simulated/floor/plating,
 /area/tanker)
 "xA" = (
-/obj/effect/shuttle_landmark/ship/tanker,
-/turf/simulated/floor/reinforced/oxygen,
-/area/tanker)
+/obj/abstract/docking_port_spawner/tanker{
+	dir = 4
+	},
+/turf/space,
+/area/space)
 "yd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -430,6 +432,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/effect/shuttle_landmark/ship/tanker{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/tanker)
@@ -1665,7 +1670,7 @@ jh
 jh
 jh
 jh
-jh
+xA
 jh
 jh
 jh
@@ -2602,7 +2607,7 @@ Td
 Td
 Td
 Td
-xA
+Td
 Td
 Td
 Td
