@@ -65,7 +65,7 @@
 		/decl/pronouns/neuter/person
 	)
 	available_cultural_info = list(
-		TAG_CULTURE = list(/decl/cultural_info/culture/synthetic)
+		TAG_CULTURE = list(/decl/cultural_info/culture/synthetic/replika)
 	)
 
 	exertion_effect_chance = 10
@@ -78,6 +78,17 @@
 	hud_type = /datum/hud_data/replika
 
 	traits = list(/decl/trait/biosynthetic_healing = TRAIT_LEVEL_EXISTS)
+
+/decl/cultural_info/culture/synthetic/replika
+	name = "Replika"
+	description = "You are a biosynthetic humanoid created by the Nation to serve as their primary workforce."
+
+/decl/cultural_info/culture/synthetic/replika/get_random_name(mob/M, gender)
+	var/decl/species/our_species = get_species_by_key(M?.client?.prefs?.species)
+	if(our_species?.get_root_species_name() != SPECIES_REPLIKA)
+		return ..()
+	var/decl/bodytype/replika/our_bodytype = our_species.get_bodytype_by_name(M.client.prefs.bodytype)
+	return our_bodytype.get_default_name()
 
 /decl/species/replika/equip_survival_gear(mob/living/carbon/human/victim)
 	. = ..()
