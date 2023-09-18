@@ -26,6 +26,19 @@
 		BP_CELL
 	)
 	var/nickname
+	var/list/traits = list(
+		/decl/trait/biosynthetic_healing = REPLIKA_LATE_GEN
+	)
+
+/decl/bodytype/replika/on_gain(mob/living/carbon/human/organism)
+	. = ..()
+	for(var/trait in traits)
+		organism.SetTrait(trait, traits[trait])
+
+/decl/bodytype/replika/on_lose(mob/living/carbon/human/organism)
+	. = ..()
+	for(var/trait in traits)
+		organism.RemoveExtrinsicTrait(trait)
 
 /decl/bodytype/replika/eulr
 	name =            "EULR"
@@ -43,6 +56,7 @@
 	icon_base =       'mods/species/replika/icons/arar/body.dmi'
 	default_h_style = /decl/sprite_accessory/hair/replika/arar
 	inherent_verbs =  list(/mob/living/proc/ventcrawl)
+	traits =          list(/decl/trait/biosynthetic_healing = REPLIKA_EARLY_GEN)
 
 /decl/bodytype/replika/lstr
 	name =            "LSTR"
