@@ -437,7 +437,7 @@
 	if(robolimb_count)
 		bodytemperature += round(robolimb_count/2)
 
-	if (species.body_temperature == null || isSynthetic())
+	if (species.body_temperature == null || (!(species.species_flags & SPECIES_FLAG_SYNTHETIC) && isSynthetic())) // SIGNALIS EDIT
 		return //this species doesn't have metabolic thermoregulation
 
 	var/body_temperature_difference = species.body_temperature - bodytemperature
