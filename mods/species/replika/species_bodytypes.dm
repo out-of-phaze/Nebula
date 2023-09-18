@@ -6,11 +6,24 @@
 	var/nickname
 	var/prosthetics_model = /decl/prosthetics_manufacturer/replika
 	var/default_hair_style
+	var/list/traits = list(
+		/decl/trait/biosynthetic_healing = REPLIKA_LATE_GEN
+	)
 
 /decl/bodytype/replika/proc/apply_model_organ_modifications(obj/item/organ/org)
 	if(istype(org, /obj/item/organ/external))
 		var/obj/item/organ/external/limb = org
 		limb.robotize(prosthetics_model, FALSE, TRUE, /decl/material/solid/fiberglass, BODYTYPE_HUMANOID, SPECIES_REPLIKA)
+
+/decl/bodytype/replika/on_gain(mob/living/carbon/human/organism)
+	. = ..()
+	for(var/trait in traits)
+		organism.SetTrait(trait, traits[trait])
+
+/decl/bodytype/replika/on_lose(mob/living/carbon/human/organism)
+	. = ..()
+	for(var/trait in traits)
+		organism.RemoveExtrinsicTrait(trait)
 
 /decl/bodytype/replika/eulr
 	name =              "EULR"
@@ -20,27 +33,28 @@
 	default_hair_style = /decl/sprite_accessory/hair/replika/eulr
 
 /decl/bodytype/replika/arar
-	name =              "ARAR"
-	nickname =          "Ara"
-	icon_base =         'mods/species/replika/icons/arar/body.dmi'
-	prosthetics_model = /decl/prosthetics_manufacturer/replika/arar
+	name =               "ARAR"
+	nickname =           "Ara"
+	icon_base =          'mods/species/replika/icons/arar/body.dmi'
+	prosthetics_model =  /decl/prosthetics_manufacturer/replika/arar
 	default_hair_style = /decl/sprite_accessory/hair/replika/arar
-	inherent_verbs = list(/mob/living/proc/ventcrawl)
+	inherent_verbs =     list(/mob/living/proc/ventcrawl)
+	traits =             list(/decl/trait/biosynthetic_healing = REPLIKA_EARLY_GEN)
 
 /decl/bodytype/replika/lstr
-	name =              "LSTR"
-	nickname =          "Elster"
-	icon_base =         'mods/species/replika/icons/lstr/body.dmi'
-	prosthetics_model = /decl/prosthetics_manufacturer/replika/lstr
+	name =               "LSTR"
+	nickname =           "Elster"
+	icon_base =          'mods/species/replika/icons/lstr/body.dmi'
+	prosthetics_model =  /decl/prosthetics_manufacturer/replika/lstr
 	default_hair_style = /decl/sprite_accessory/hair/replika/lstr
 
 /decl/bodytype/replika/star
-	name =              "STAR"
-	nickname =          "Starling"
-	icon_base =         'mods/species/replika/icons/star/body.dmi'
-	prosthetics_model = /decl/prosthetics_manufacturer/replika/star
+	name =               "STAR"
+	nickname =           "Starling"
+	icon_base =          'mods/species/replika/icons/star/body.dmi'
+	prosthetics_model =  /decl/prosthetics_manufacturer/replika/star
 	default_hair_style = /decl/sprite_accessory/hair/replika/star
-	eye_offset = 2
+	eye_offset =         2
 
 /decl/bodytype/replika/star/Initialize()
 	. = ..()
