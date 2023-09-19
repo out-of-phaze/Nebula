@@ -211,3 +211,27 @@
 		/obj/item/chems/repair_spray = 2,
 		/obj/item/chems/hypospray/autoinjector/klstim = 1
 	)
+
+/obj/item/gun/projectile/revolver/einhorn
+	name = "\improper Einhorn revolver"
+	desc = "The Eu-K508 S 'Einhorn' is a short-barreled double-action 6-shot revolver that fires 12mm high-power ammo. High recoil, strong knockback."
+	icon = 'mods/species/replika/icons/weapons/einhorn.dmi'
+	safety_icon = null
+	caliber = CALIBER_SIGNALIS_REVOLVER
+	ammo_type = /obj/item/ammo_casing/pistol/magnum/einhorn
+
+/obj/item/ammo_casing/pistol/magnum/einhorn
+	desc = "A high-powered, hollow-tipped 12mm revolver bullet casing."
+	caliber = CALIBER_SIGNALIS_REVOLVER
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
+
+/obj/item/storage/box/ammo/eimyria
+	name = "box of Imperial revolver rounds"
+	desc = "Old Imperially-produced 12x40mm hollow-point bullets that deform and fracture on impact for immense impact power. "
+
+/obj/item/storage/box/ammo/eimyria/WillContain()
+	return list(/obj/item/ammo_casing/pistol/magnum/einhorn = 18)
+
+/obj/item/ammo_magazine/speedloader/eimyria
+	caliber = CALIBER_SIGNALIS_REVOLVER
+	ammo_type = /obj/item/ammo_casing/pistol/magnum/einhorn
