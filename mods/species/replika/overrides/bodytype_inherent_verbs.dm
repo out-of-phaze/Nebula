@@ -3,7 +3,7 @@
 	if(ispath(new_bodytype))
 		new_bodytype = GET_DECL(new_bodytype)
 	if(istype(new_bodytype) && (rebuild_body || old_bodytype != new_bodytype))
-		old_bodytype?.on_lose()
+		old_bodytype?.on_lose(src)
 		..()
 		new_bodytype.on_gain(src)
 
