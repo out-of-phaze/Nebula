@@ -4,6 +4,8 @@
 #define CE_REGEN_BRUTE_REPLIKA "brutehealreplika" // Causes prosthetic brute damage to regenerate.
 #define CE_REGEN_BURN_REPLIKA "burnhealreplika" // Causes prosthetic burn damage to regenerate.
 
+#define CALIBER_SIGNALIS_REVOLVER "12x40mm hollow point"
+
 /decl/modpack/replika
 	name = "Replika"
 	dreams = list(
