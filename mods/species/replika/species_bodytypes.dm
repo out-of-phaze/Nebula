@@ -30,6 +30,11 @@
 		/decl/trait/biosynthetic_healing = REPLIKA_LATE_GEN
 	)
 
+/decl/bodytype/replika/apply_bodytype_organ_modifications(obj/item/organ/org)
+	if(istype(org, /obj/item/organ/external))
+		var/obj/item/organ/external/external_organ = org
+		external_organ.owner?.refresh_modular_limb_verbs()
+
 /decl/bodytype/replika/on_gain(mob/living/carbon/human/organism)
 	. = ..()
 	for(var/trait in traits)
