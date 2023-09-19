@@ -1,17 +1,19 @@
 /datum/map/ministation
-	name = "Ministation"
-	full_name = "Tradepost Zebra"
+	name = "Leng Orbital"
+	full_name = "Leng Orbital Interchange"
 	path = "ministation"
 	ground_noun = "floor"
 
-	station_name = "Tradepost Zebra"
-	station_short = "Zebra"
+	station_name  = "Leng Orbital Interchange"
+	station_short = "Leng Orbital"
 
-	dock_name     = "Salvia Station"
-	boss_name     = "Trademaster"
-	boss_short    = "Admin"
-	company_name  = "Tradehouse Administration"
-	company_short = "Admin"
+	dock_name     = "Sierpinski-23"
+	boss_name     = "The Nation of Eusan"
+	boss_short    = "The Nation"
+	company_name  = "Luftstreitkräfte der Nationalen Volksarmee"
+	company_short = "LSK"
+	system_name   = "Sol"
+	game_year     = 63
 
 	default_law_type = /datum/ai_laws/nanotrasen
 
@@ -38,8 +40,6 @@
 	emergency_shuttle_recall_message = "The emergency shuttle has been recalled."
 
 	evac_controller_type = /datum/evacuation_controller/shuttle
-
-	pray_reward_type = /obj/item/mollusc/clam
 
 	starting_money = 5000
 	department_money = 1000
