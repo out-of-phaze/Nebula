@@ -472,6 +472,7 @@
 	if(!istype(new_bodytype) || (!rebuild_body && old_bodytype == new_bodytype))
 		return FALSE
 
+	old_bodytype?.on_lose(src)
 	mob_size = new_bodytype.mob_size
 	new_bodytype.create_missing_organs(src, TRUE) // actually rebuild the body
 	if(istype(old_bodytype))
@@ -481,6 +482,7 @@
 	force_update_limbs()
 	update_hair()
 	update_eyes()
+	new_bodytype.on_gain(src)
 	return TRUE
 
 /mob/proc/set_species(var/new_species_name, var/new_bodytype = null)
