@@ -26,7 +26,7 @@
 		BP_CELL
 	)
 	var/nickname
-	var/list/traits = list(
+	traits = list(
 		/decl/trait/biosynthetic_healing = REPLIKA_LATE_GEN
 	)
 
