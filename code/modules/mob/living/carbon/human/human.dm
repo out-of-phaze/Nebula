@@ -473,12 +473,14 @@
 	if(ispath(new_bodytype))
 		new_bodytype = GET_DECL(new_bodytype)
 	if(istype(new_bodytype) && (rebuild_body || old_bodytype != new_bodytype))
+		old_bodytype?.on_lose(src)
 		mob_size = new_bodytype.mob_size
 		new_bodytype.create_missing_organs(src, fully_replace = rebuild_body)
 		apply_bodytype_appearance()
 		force_update_limbs()
 		update_hair()
 		update_eyes()
+		new_bodytype.on_gain(src)
 		return TRUE
 	return FALSE
 
