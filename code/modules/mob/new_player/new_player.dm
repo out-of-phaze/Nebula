@@ -374,7 +374,11 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 		if(!check_species_allowed(chosen_species))
 			spawning = 0 //abort
 			return null
-		new_character = new(spawn_turf, chosen_species.uid)
+		var/datum/mob_snapshot/dummy_appearance = new
+		dummy_appearance.root_species  = chosen_species
+		dummy_appearance.root_bodytype = client.prefs.get_bodytype_decl()
+		new_character = new(spawn_turf, chosen_species.uid, dummy_appearance)
+		QDEL_NULL(dummy_appearance)
 
 	if(!new_character)
 		new_character = new(spawn_turf)
