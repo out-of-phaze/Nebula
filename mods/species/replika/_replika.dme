@@ -10,7 +10,6 @@
 #include "reactions.dm"
 #include "species.dm"
 #include "species_bodytypes.dm"
-#include "overrides\bodytype_inherent_verbs.dm"
 #include "overrides\replika_chem_disabling.dm"
 // END_INCLUDE
 #endif
