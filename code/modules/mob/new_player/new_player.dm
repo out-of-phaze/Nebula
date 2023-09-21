@@ -369,7 +369,7 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 		if(!check_species_allowed(chosen_species))
 			spawning = 0 //abort
 			return null
-		new_character = new(spawn_turf, chosen_species.name)
+		new_character = new(spawn_turf, chosen_species.name, null, client.prefs.get_bodytype_decl())
 
 	if(!new_character)
 		new_character = new(spawn_turf)
