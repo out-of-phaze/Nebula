@@ -1056,11 +1056,12 @@ default behaviour is:
 
 /mob/living/handle_fall_effect(var/turf/landing)
 	..()
-	apply_fall_damage(landing)
-	if(client)
-		var/area/A = get_area(landing)
-		if(A)
-			A.alert_on_fall(src)
+	if(istype(landing) && !landing.is_open())
+		apply_fall_damage(landing)
+		if(client)
+			var/area/A = get_area(landing)
+			if(A)
+				A.alert_on_fall(src)
 
 /mob/living/proc/apply_fall_damage(var/turf/landing)
 	adjustBruteLoss(rand(max(1, CEILING(mob_size * 0.33)), max(1, CEILING(mob_size * 0.66))))
@@ -1121,3 +1122,11 @@ default behaviour is:
 /mob/living/proc/get_mob_footstep(var/footstep_type)
 	var/decl/species/my_species = get_species()
 	return my_species?.get_footstep(src, footstep_type)
+
+/mob/living/get_overhead_text_x_offset()
+	var/decl/bodytype/bodytype = get_bodytype()
+	return ..() + bodytype?.antaghud_offset_x
+
+/mob/living/get_overhead_text_y_offset()
+	var/decl/bodytype/bodytype = get_bodytype()
+	return ..() + bodytype?.antaghud_offset_y
