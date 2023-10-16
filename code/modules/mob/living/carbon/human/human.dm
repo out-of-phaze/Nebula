@@ -576,7 +576,7 @@
 /mob/living/carbon/human/proc/set_bodytype(var/decl/bodytype/new_bodytype, var/rebuild_body = FALSE)
 	if(ispath(new_bodytype))
 		new_bodytype = GET_DECL(new_bodytype)
-	if(istype(new_bodytype) && bodytype != new_bodytype)
+	if(istype(new_bodytype) && (rebuild_body || bodytype != new_bodytype))
 		bodytype = new_bodytype
 		if(bodytype && rebuild_body)
 			UpdateAppearance() // force_update_limbs is insufficient because of internal organs

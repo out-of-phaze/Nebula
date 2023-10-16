@@ -343,9 +343,13 @@ var/global/list/time_prefs_fixed = list()
 
 	// Sanitizing rather than saving as someone might still be editing when copy_to occurs.
 	player_setup.sanitize_setup()
+	var/decl/species/our_species = get_species_by_key(species || global.using_map.default_species)
 	character.personal_aspects = list()
-	character.change_species(species)
-	character.set_bodytype((character.species.get_bodytype_by_name(bodytype) || character.species.default_bodytype), FALSE)
+	var/decl/bodytype/new_bodytype = our_species.get_bodytype_by_name(bodytype) || our_species.default_bodytype
+	if(species == character.get_species_name())
+		character.set_bodytype(new_bodytype, rebuild_body = TRUE)
+	else
+		character.change_species(species, new_bodytype)
 
 	if(be_random_name)
 		var/decl/cultural_info/culture = GET_DECL(cultural_info[TAG_CULTURE])
