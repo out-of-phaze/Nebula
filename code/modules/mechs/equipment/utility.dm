@@ -465,10 +465,10 @@
 	mech_cell.use(active_power_use * CELLRATE) //supercall made sure we have one
 
 	var/delay = 3 SECONDS //most things
-	switch (drill_head.material.brute_armor)
-		if (15 to INFINITY) delay = 0.5 SECONDS //voxalloy on a good roll
-		if (10 to 15) delay = 1 SECOND //titanium, diamond
-		if (5 to 10) delay = 2 SECONDS //plasteel, steel
+	switch (drill_head.material.hardness)
+		if (MAT_VALUE_VERY_HARD to INFINITY) delay = 0.5 SECONDS //diamond
+		if (MAT_VALUE_HARD to MAT_VALUE_VERY_HARD) delay = 1 SECOND //titanium, plasteel
+		if (MAT_VALUE_RIGID to MAT_VALUE_HARD) delay = 2 SECONDS //steel
 	owner.setClickCooldown(delay)
 
 	playsound(src, 'sound/mecha/mechdrill.ogg', 50, 1)
