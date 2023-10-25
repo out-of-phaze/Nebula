@@ -93,3 +93,34 @@
 		slot_belt_str =       list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
 		slot_underpants_str = list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
 	)
+
+/decl/bodytype/replika/klbr
+	name =            "KLBR"
+	desc =            "This limb is made of bioengineered flesh with a polyethylene shell, designed for general-purpose duties."
+	nickname =        "Kolibri"
+	modifier_string = "\improper KLBR model"
+	icon_base =       'mods/species/replika/icons/klbr/body.dmi'
+	default_h_style = /decl/sprite_accessory/hair/replika/klbr
+	eye_offset =     -1
+
+/decl/bodytype/replika/klbr/on_gain(mob/living/carbon/human/organism)
+	. = ..()
+	organism.set_psi_rank(PSI_COERCION, 2)
+
+/decl/bodytype/replika/klbr/on_lose(mob/living/carbon/human/organism)
+	. = ..()
+	QDEL_NULL(organism.psi)
+
+/decl/bodytype/replika/klbr/Initialize()
+	. = ..()
+	equip_adjust = list(
+		BP_L_HAND =           list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
+		BP_R_HAND =           list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
+		slot_head_str =       list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
+		slot_wear_mask_str =  list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
+		slot_w_uniform_str =  list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
+		slot_wear_suit_str =  list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
+		slot_back_str =       list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
+		slot_belt_str =       list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
+		slot_underpants_str = list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
+	)

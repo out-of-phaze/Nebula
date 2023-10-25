@@ -24,3 +24,8 @@
 	name = "STAR hair"
 	icon = 'mods/species/replika/icons/star/hair.dmi'
 	icon_state = "hair_star"
+
+/decl/sprite_accessory/hair/replika/klbr
+	name = "KLBR hair"
+	icon = 'mods/species/replika/icons/klbr/hair.dmi'
+	icon_state = "hair_klbr"
