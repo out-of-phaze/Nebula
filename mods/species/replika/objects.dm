@@ -129,7 +129,7 @@
 		if(!do_mob(user, victim, time_taken))
 			user.visible_message("<b>\The [user]</b> stops treating \the [victim].", SPAN_NOTICE("You stop treating \the [victim]."))
 			return TRUE
-		user.visible_message("<b>\The [user] finds a wound on \the [targeted_organ].")
+		user.visible_message("<b>\The [user]</b> finds a wound on \the [targeted_organ].")
 
 	user.visible_message("<b>\The [user]</b> starts applying \the [src] to \the [victim]'s [targeted_organ.name]...", SPAN_NOTICE("You start applying \the [src] to \the [victim]'s [targeted_organ.name]."))
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
