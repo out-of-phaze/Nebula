@@ -37,7 +37,8 @@
 		/decl/bodytype/replika/eulr,
 		/decl/bodytype/replika/arar,
 		/decl/bodytype/replika/lstr,
-		/decl/bodytype/replika/star
+		/decl/bodytype/replika/star,
+		/decl/bodytype/replika/klbr
 	)
 	age_descriptor =        /datum/appearance_descriptor/age/replika
 	hidden_from_codex =     FALSE
