@@ -23,7 +23,7 @@
 /decl/sprite_accessory/hair/replika/lstr
 	name = "LSTR hair"
 	icon = 'mods/species/replika/icons/lstr/hair.dmi'
-	icon_state = "hair_lstr"
+	icon_state = "hair_lstr_apmk"
 	bodytypes_allowed = list(/decl/bodytype/replika/lstr)
 	uid = "hair_lstr"
 
