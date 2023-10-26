@@ -9,23 +9,28 @@
 	name = "EULR hair"
 	icon_state = "hair_volaju"
 	flags = HAIR_TIEABLE
+	uid = "hair_eulr"
 
 /decl/sprite_accessory/hair/replika/arar
 	name = "ARAR hair"
 	icon_state = "hair_longfringe"
 	flags = HAIR_TIEABLE
+	uid = "hair_arar"
 
 /decl/sprite_accessory/hair/replika/lstr
 	name = "LSTR hair"
 	icon = 'mods/species/replika/icons/lstr/hair.dmi'
-	icon_state = "hair_lstr"
+	icon_state = "hair_lstr_apmk"
+	uid = "hair_lstr"
 
 /decl/sprite_accessory/hair/replika/star
 	name = "STAR hair"
 	icon = 'mods/species/replika/icons/star/hair.dmi'
 	icon_state = "hair_star"
+	uid = "hair_star"
 
 /decl/sprite_accessory/hair/replika/klbr
 	name = "KLBR hair"
 	icon = 'mods/species/replika/icons/klbr/hair.dmi'
 	icon_state = "hair_klbr"
+	uid = "hair_klbr"
