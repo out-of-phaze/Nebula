@@ -10,6 +10,7 @@
 	power_environ = 0
 	area_flags = AREA_FLAG_EXTERNAL | AREA_FLAG_IS_NOT_PERSISTENT | AREA_FLAG_IS_BACKGROUND | AREA_FLAG_RAD_SHIELDED
 	base_turf = /turf/exterior/seafloor
+	turf_initializer = /decl/turf_initializer/ocean
 	//open_turf = /turf/exterior/open
 	color = COLOR_LIQUID_WATER
 	is_outside = OUTSIDE_NO
@@ -42,6 +43,7 @@
 	icon_state = "built"
 	base_turf = /turf/simulated/floor
 	color = COLOR_GRAY
+	turf_initializer = /decl/turf_initializer/ocean
 
 /area/europa/Initialize()
 	color = null
@@ -72,10 +74,12 @@
 /area/europa/hangar/south_maintenance
 	name = "\improper Hangar Level - South Maintenance"
 	color = COLOR_BLUE
+	turf_initializer = /decl/turf_initializer/maintenance/ocean
 
 /area/europa/hangar/north_maintenance
 	name = "\improper Hangar Level - North Maintenance"
 	color = COLOR_RED
+	turf_initializer = /decl/turf_initializer/maintenance/ocean
 
 /area/europa/hangar/north
 	name = "\improper Hangar Level - North Chamber"
@@ -113,18 +117,22 @@
 /area/europa/operations/north_maint
 	name = "\improper Operations Level - Northern Maintenance"
 	color = COLOR_DARK_BROWN
+	turf_initializer = /decl/turf_initializer/maintenance/ocean
 
 /area/europa/operations/east_maint
 	name = "\improper Operations Level - Eastern Maintenance"
 	color = COLOR_SABER_BLUE
+	turf_initializer = /decl/turf_initializer/maintenance/ocean
 
 /area/europa/operations/south_maint
 	name = "\improper Operations Level - Southern Maintenance"
 	color = COLOR_AMBER
+	turf_initializer = /decl/turf_initializer/maintenance/ocean
 
 /area/europa/operations/west_maint
 	name = "\improper Operations Level - Western Maintenance"
 	color = COLOR_CHESTNUT
+	turf_initializer = /decl/turf_initializer/maintenance/ocean
 
 /area/europa/operations/northeast_central
 	name = "\improper Operations Level - Northeastern Central Chamber"
@@ -186,10 +194,12 @@
 /area/europa/surface/south_maint
 	name = "\improper Surface - Southern Maintenance"
 	color = COLOR_BLOOD_HUMAN
+	turf_initializer = /decl/turf_initializer/maintenance/ocean
 
 /area/europa/surface/north_maint
 	name = "\improper Surface - Northern Maintenance"
 	color = COLOR_BLUE
+	turf_initializer = /decl/turf_initializer/maintenance/ocean
 
 /area/europa/surface/roof
 	name = "\improper Surface - Roof Access"
