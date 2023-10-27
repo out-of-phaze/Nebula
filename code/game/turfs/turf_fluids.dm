@@ -50,6 +50,7 @@
 
 	// Set our flood state.
 	flooded = new_flooded
+	atmos_canpass = new_flooded ? CANPASS_NEVER : initial(atmos_canpass) // gas transfer is blocked by the liquid when flooded
 	if(flooded)
 		QDEL_NULL(reagents)
 		ADD_ACTIVE_FLUID_SOURCE(src)
