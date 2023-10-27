@@ -123,6 +123,7 @@
 // z1 - seafloor
 /datum/level_data/main_level/signal/seafloor
 	base_turf = /turf/exterior/seafloor
+	base_area = /area/europa_exterior
 	level_generators = list(
 		/datum/random_map/noise/seafloor
 	)

@@ -6,6 +6,10 @@
 /obj/machinery/power/terminal,
 /turf/simulated/floor,
 /area/europa/pillar/east)
+"bb" = (
+/obj/machinery/door/airlock/maintenance,
+/turf/simulated/floor,
+/area/europa/pillar/east)
 "by" = (
 /obj/structure/ladder,
 /obj/structure/cable{
@@ -115,6 +119,10 @@
 	},
 /turf/exterior/concrete/flooded,
 /area/europa_exterior)
+"iF" = (
+/obj/machinery/door/airlock/maintenance,
+/turf/simulated/floor,
+/area/europa/pillar)
 "je" = (
 /obj/structure/ladder,
 /obj/structure/cable,
@@ -595,6 +603,10 @@
 	},
 /turf/exterior/concrete/flooded,
 /area/europa_exterior)
+"JE" = (
+/obj/machinery/door/airlock/maintenance,
+/turf/simulated/floor,
+/area/europa/pillar/south)
 "Kd" = (
 /obj/machinery/door/airlock/external/bolted,
 /turf/simulated/floor,
@@ -20558,7 +20570,7 @@ la
 tR
 la
 la
-LM
+iF
 la
 la
 la
@@ -21398,7 +21410,7 @@ nO
 nO
 nO
 nO
-LM
+JE
 nO
 nO
 PH
@@ -23804,7 +23816,7 @@ Gn
 Ep
 Ep
 Ep
-LM
+bb
 PO
 Dm
 uu

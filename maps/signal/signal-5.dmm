@@ -367,6 +367,20 @@
 	},
 /turf/simulated/floor,
 /area/europa/heights/access)
+"Rw" = (
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/europa/heights)
+"RI" = (
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/europa/heights)
 "SH" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -379,6 +393,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/europa/heights/landing)
+"SM" = (
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/europa/heights)
 "UG" = (
 /obj/effect/wallframe_spawn/no_grille,
 /turf/simulated/floor,
@@ -402,6 +423,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/europa/heights/exterior)
+"Ys" = (
+/obj/structure/catwalk,
+/obj/structure/railing/mapped,
+/turf/simulated/open,
+/area/europa/heights)
 "YS" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -17481,15 +17507,15 @@ Oq
 Oq
 Oq
 Oq
-bU
-bU
-bU
-bU
-bU
-bU
-bU
-bU
-bU
+Oq
+Oq
+Oq
+Oq
+Oq
+Oq
+Oq
+Oq
+Oq
 bU
 bU
 bU
@@ -17683,15 +17709,15 @@ Oq
 Oq
 Oq
 Oq
-bU
-bU
-bU
-bU
-bU
-bU
-bU
-bU
-bU
+Oq
+Oq
+Oq
+Oq
+Oq
+Oq
+Oq
+Oq
+Oq
 bU
 bU
 bU
@@ -17896,10 +17922,10 @@ kZ
 kZ
 kZ
 se
-bU
-bU
-bU
-bU
+Oq
+Oq
+Oq
+Oq
 bU
 bU
 bU
@@ -18098,10 +18124,10 @@ Af
 Af
 Af
 xr
-bU
-bU
-bU
-bU
+Oq
+Oq
+Oq
+Oq
 bU
 bU
 bU
@@ -18300,10 +18326,10 @@ Af
 Af
 Af
 xr
-bU
-bU
-bU
-bU
+Oq
+Oq
+Oq
+Oq
 bU
 bU
 bU
@@ -18502,10 +18528,10 @@ tk
 Af
 Af
 xr
-bU
-bU
-bU
-bU
+Oq
+Oq
+Oq
+Oq
 bU
 bU
 bU
@@ -18704,10 +18730,10 @@ Af
 Af
 Af
 xr
-bU
-bU
-bU
-bU
+Oq
+Oq
+Oq
+Oq
 bU
 bU
 bU
@@ -18906,10 +18932,10 @@ Af
 Af
 Af
 xr
-bU
-bU
-bU
-bU
+Oq
+Oq
+Oq
+Oq
 bU
 bU
 bU
@@ -19108,10 +19134,10 @@ Af
 Af
 Af
 xr
-bU
-bU
-bU
-bU
+Oq
+Oq
+Oq
+Oq
 bU
 bU
 bU
@@ -19310,10 +19336,10 @@ in
 tk
 Af
 xr
-bU
-bU
-bU
-bU
+Oq
+Oq
+Oq
+Oq
 bU
 bU
 bU
@@ -19512,10 +19538,10 @@ EW
 Af
 Af
 xr
-bU
-bU
-bU
-bU
+Oq
+Oq
+Oq
+Oq
 bU
 bU
 bU
@@ -19714,10 +19740,10 @@ in
 Af
 Af
 xr
-bU
-bU
-bU
-bU
+Oq
+Oq
+Oq
+Oq
 bU
 bU
 bU
@@ -19900,11 +19926,11 @@ xK
 UG
 Fi
 Fi
-Fi
+Rw
 Js
 Js
 Js
-Fi
+Rw
 Fi
 av
 UG
@@ -19916,10 +19942,10 @@ EW
 Af
 Af
 xr
-bU
-bU
-bU
-bU
+Oq
+Oq
+Oq
+Oq
 bU
 bU
 bU
@@ -20101,13 +20127,13 @@ xK
 xK
 UG
 Fi
-Fi
+Ys
 oS
 oS
 oS
 oS
 oS
-Fi
+RI
 av
 UG
 xK
@@ -20303,13 +20329,13 @@ xK
 xK
 UG
 Fi
-Fi
+Ys
 oS
 oS
 oS
 oS
 oS
-Fi
+RI
 av
 UG
 xK
@@ -20505,13 +20531,13 @@ xK
 xK
 UG
 Fi
-Fi
+Ys
 oS
 oS
 oS
 oS
 oS
-Fi
+RI
 av
 UG
 xK
@@ -20707,13 +20733,13 @@ xK
 xK
 UG
 Fi
-Fi
+Ys
 oS
 oS
 oS
 oS
 oS
-Fi
+RI
 av
 UG
 xK
@@ -20909,13 +20935,13 @@ xK
 xK
 UG
 Fi
-Fi
+Ys
 oS
 oS
 oS
 oS
 oS
-Fi
+RI
 av
 UG
 xK
@@ -21112,11 +21138,11 @@ xK
 UG
 Fi
 Fi
-Fi
+SM
 Js
 Js
 Js
-Fi
+SM
 Fi
 av
 UG

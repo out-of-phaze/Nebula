@@ -23,6 +23,7 @@
 /area/turbolift/signal_first
 	name = "Hangar Sublevel"
 	base_turf = /turf/simulated/floor
+	open_turf = /turf/simulated/floor // to stop it from opening to the ocean and flooding the station
 
 /area/turbolift/signal_second
 	name = "Operations Sublevel"
