@@ -104,20 +104,29 @@
 	)
 
 /datum/map/signal/get_map_info()
-	return "<b>Yonaguni Dome</b>, bored into the ice plains of Puthiya Natu, is permanent civilian research facility administrated by \
-	the Central Solar government. It is old, remote and poorly funded, but hosts facilities dedicated to studying the sunken continent of \
+	return "<b>Yonaguni Dome</b>, bored into the ice plains of Puthiya Natu, is a permanent civilian research facility administered by \
+	the Central Solar government. It is old, remote, and poorly funded, but hosts facilities dedicated to studying the sunken continent of \
 	Lemuria, a mysterious expanse of alien ruins buried beneath kilometers of ice and dark water."
 
-/decl/material/liquid/water/sea
-	name = "seawater"
-	codex_name = "seawater"
-	uid = "liquid_seawater"
-	gas_name = "seawater" // jank
-	gas_condensation_point = null // double jank
+/* /decl/material/liquid/water/sea
+	name = "pressurized water"
+	codex_name = "pressurized water"
+	uid = "liquid_water_pressurized" */
+
+#define FLUID_CRUSH_MIN_THRESHOLD (FLUID_DEEP * 2)
+#define FLUID_CRUSH_MAX_THRESHOLD FLUID_MAX_DEPTH
+/mob/living/carbon/human/calculate_affecting_pressure(pressure)
+	var/turf/our_turf = get_turf(src)
+	var/fluid_depth = our_turf?.get_fluid_depth()
+	if(fluid_depth >= FLUID_CRUSH_MIN_THRESHOLD)
+		pressure = max(pressure, min((fluid_depth - FLUID_CRUSH_MIN_THRESHOLD) * (FLUID_CRUSH_MAX_THRESHOLD - FLUID_CRUSH_MIN_THRESHOLD) / (HAZARD_HIGH_PRESSURE - WARNING_HIGH_PRESSURE) + WARNING_HIGH_PRESSURE, HAZARD_HIGH_PRESSURE))
+	return ..(pressure)
+#undef FLUID_CRUSH_MIN_THRESHOLD
+#undef FLUID_CRUSH_MAX_THRESHOLD
 
 /datum/level_data/main_level/signal
-	exterior_atmosphere = list(/decl/material/liquid/water/sea = 10000) // taken from old Europa's Yonaguni map
-	exterior_atmos_temp = T0C - 35 // a bit chilly
+	// exterior_atmosphere = list(/decl/material/liquid/water/sea = 10000) // taken from old Europa's Yonaguni map
+	// exterior_atmos_temp = T0C - 35 // a bit chilly
 	base_turf = /turf/exterior/open/flooded
 
 // z1 - seafloor
@@ -130,6 +139,10 @@
 
 // z3 - flooded ice caves
 /datum/level_data/main_level/signal/icecaves
+	exterior_atmosphere = list(
+		/decl/material/gas/oxygen = MOLES_O2STANDARD,
+		/decl/material/gas/nitrogen = MOLES_N2STANDARD,
+	)
 	level_generators = list(
 		/datum/random_map/automata/cave_system/ice_sheet/flooded
 	)
