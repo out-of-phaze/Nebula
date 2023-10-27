@@ -14,12 +14,13 @@
 
 /datum/job/signal
 	title = "Employee"
-	//welcome_blurb = "Research facilities often need people to do odd jobs. Today, that would be you."
+	welcome_blurb = "Research facilities often need people to do odd jobs. Today, that would be you."
 	supervisors = "absolutely everyone"
 	total_positions = -1
 	spawn_positions = -1
 	department_types = list(/decl/department/signal_civilian)
 	selection_color = "#666666"
+	outfit_type = /decl/hierarchy/outfit/job/generic
 
 	allowed_branches = list(
 		/datum/mil_branch/signal_public_service
@@ -32,8 +33,8 @@
 
 /*
 	title = "Foundation Agent"
-	//welcome_blurb = "You are a Cuchulain Foundation field agent on secondment to your current site. When there's something strange in the neighborhood, you're the one they call."
+	welcome_blurb = "You are a Cuchulain Foundation field agent on secondment to your current site. When there's something strange in the neighborhood, you're the one they call."
 
 	title = "Psionics Liaison"
-	//welcome_blurb = "You are a representative of the Cuchulain Foundation, serving as a consultant to the crew on psionic matters."
+	welcome_blurb = "You are a representative of the Cuchulain Foundation, serving as a consultant to the crew on psionic matters."
 */

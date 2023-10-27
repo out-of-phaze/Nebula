@@ -1,5 +1,6 @@
 /datum/job
 	var/title                                 // The name of the job
+	var/welcome_blurb                         // Informative text displayed to the player in chat on spawn
 	var/list/software_on_spawn = list()       // Defines the software files that spawn on tablets and labtops
 	var/list/department_types = list()        // What departments the job is in.
 	var/autoset_department = TRUE             // If department list is empty, use map default.

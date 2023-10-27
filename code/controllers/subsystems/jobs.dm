@@ -546,6 +546,9 @@ SUBSYSTEM_DEF(jobs)
 	if(job.description)
 		to_chat(H, SPAN_BOLD("[job.description]"))
 
+	if(job.welcome_blurb)
+		to_chat(H, "<b>[job.welcome_blurb]</b>")
+
 	if(job.supervisors)
 		to_chat(H, "<b>As the [alt_title || job_title] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
 
