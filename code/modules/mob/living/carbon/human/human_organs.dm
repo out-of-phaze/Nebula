@@ -93,6 +93,10 @@
 
 	return 0
 
+#define LIMB_UNUSABLE 2
+#define LIMB_DAMAGED  1
+#define LIMB_IMPAIRED 0.5
+
 /mob/living/carbon/human/proc/handle_stance()
 	set waitfor = FALSE // Can sleep in emotes.
 	// Don't need to process any of this if they aren't standing anyways
@@ -110,62 +114,89 @@
 	if(!has_gravity())
 		return
 
-	var/limb_pain
-	for(var/limb_tag in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT))
-		var/obj/item/organ/external/E = GET_EXTERNAL_ORGAN(src, limb_tag)
-		if(!E || !E.is_usable())
-			stance_damage += 2 // let it fail even if just foot&leg
-		else if (E.is_malfunctioning())
-			//malfunctioning only happens intermittently so treat it as a missing limb when it procs
-			stance_damage += 2
-			if(prob(10))
-				visible_message("\The [src]'s [E.name] [pick("twitches", "shudders")] and sparks!")
-				spark_at(src, amount = 5, holder = src)
-		else if (E.is_broken())
-			stance_damage += 1
-		else if (E.is_dislocated())
-			stance_damage += 0.5
+	// If we don't have a bodytype, all the limb checking below is going to be nonsensical.
+	var/decl/bodytype/root_bodytype = get_bodytype()
+	if(!root_bodytype)
+		return
 
-		if(E) limb_pain = E.can_feel_pain()
+	var/static/list/all_stance_limbs = list(ORGAN_CATEGORY_STANCE, ORGAN_CATEGORY_STANCE_ROOT)
+	var/expected_limbs_for_bodytype = root_bodytype.get_expected_organ_count_for_categories(all_stance_limbs)
+	if(expected_limbs_for_bodytype <= 0)
+		return // we don't care about stance for whatever reason.
+
+	// Is there something in our loc we can prop ourselves on?
+	if(length(loc?.contents))
+		for(var/obj/thing in loc.contents)
+			if(thing.obj_flags & OBJ_FLAG_SUPPORT_MOB)
+				return
+
+	var/had_limb_pain = FALSE
+	for(var/obj/item/organ/external/limb in get_organs_by_categories(all_stance_limbs))
+		var/add_stance_damage = 0
+		if(limb.is_malfunctioning())
+			// malfunctioning only happens intermittently so treat it as a missing limb when it procs
+			add_stance_damage = LIMB_UNUSABLE
+			if(prob(10))
+				visible_message("\The [src]'s [limb.name] [pick("twitches", "shudders")] and sparks!")
+				spark_at(src, amount = 5, holder = src)
+		else if(!limb.is_usable())
+			add_stance_damage = LIMB_UNUSABLE
+		else if (limb.is_broken())
+			add_stance_damage = LIMB_DAMAGED
+		else if (limb.is_dislocated())
+			add_stance_damage = LIMB_IMPAIRED
+
+		if(add_stance_damage > 0)
+			// Keep track of if any of our limbs can feel pain and has failed,
+			// so we don't scream if it's a prosthetic that has broken.
+			had_limb_pain = had_limb_pain || limb.can_feel_pain()
+			stance_damage += add_stance_damage
 
 	// Canes and crutches help you stand (if the latter is ever added)
 	// One cane mitigates a broken leg+foot, or a missing foot.
 	// Two canes are needed for a lost leg. If you are missing both legs, canes aren't gonna help you.
 	for(var/obj/item/cane/C in get_held_items())
-		stance_damage -= 2
+		stance_damage -= LIMB_UNUSABLE // Counts for a single functional limb.
 
 	if(MOVING_DELIBERATELY(src)) //you don't suffer as much if you aren't trying to run
-		var/working_pair = 2
-		var/obj/item/organ/external/LF = GET_EXTERNAL_ORGAN(src, BP_L_FOOT)
-		var/obj/item/organ/external/LL = GET_EXTERNAL_ORGAN(src, BP_L_LEG)
-		var/obj/item/organ/external/RF = GET_EXTERNAL_ORGAN(src, BP_R_FOOT)
-		var/obj/item/organ/external/RL = GET_EXTERNAL_ORGAN(src, BP_R_LEG)
-		if(!LL || !LF) //are we down a limb?
-			working_pair -= 1
-		else if((!LL.is_usable()) || (!LF.is_usable())) //if not, is it usable?
-			working_pair -= 1
-		if(!RL || !RF)
-			working_pair -= 1
-		else if((!RL.is_usable()) || (!RF.is_usable()))
-			working_pair -= 1
-		if(working_pair >= 1)
-			stance_damage -= 1
+
+		// Calculate the expected and actual number of functioning legs we have.
+		var/has_sufficient_working_legs = TRUE
+		var/list/root_limb_tags  = root_bodytype.organ_tags_by_category[ORGAN_CATEGORY_STANCE_ROOT]
+		var/minimum_working_legs = CEILING(length(root_limb_tags) * 0.5)
+		if(minimum_working_legs > 0)
+			has_sufficient_working_legs = 0
+			for(var/organ_tag in root_limb_tags)
+				var/obj/item/organ/external/stance_root = GET_EXTERNAL_ORGAN(src, organ_tag)
+				if(!stance_root || !stance_root.is_usable())
+					continue
+				if(!length(stance_root.children))
+					continue
+				// In theory a leg may have multiple children in the future; this
+				// will need to be revisited for fork-legged insect people or whatever.
+				var/has_usable_child = FALSE
+				for(var/child_tag in stance_root.children)
+					var/obj/item/organ/external/stance_child = GET_EXTERNAL_ORGAN(src, child_tag)
+					if(stance_child?.is_usable())
+						has_usable_child = TRUE
+						break
+				if(has_usable_child)
+					has_sufficient_working_legs++
+					if(has_sufficient_working_legs >= minimum_working_legs)
+						has_sufficient_working_legs = TRUE
+						break
+
+		// Having half or more of our expected number of working legs allows us to mitigate some stance damage.
+		if(has_sufficient_working_legs)
 			if(Check_Proppable_Object()) //it helps to lean on something if you've got another leg to stand on
-				stance_damage -= 1
-
-	var/list/objects_to_sit_on = list(
-			/obj/item/stool,
-			/obj/structure/bed,
-		)
-
-	for(var/type in objects_to_sit_on) //things that can't be climbed but can be propped-up-on
-		if(locate(type) in src.loc)
-			return
+				stance_damage -= LIMB_UNUSABLE
+			else
+				stance_damage -= LIMB_DAMAGED
 
 	// standing is poor
-	if(stance_damage >= 4 || (stance_damage >= 2 && prob(2)) || (stance_damage >= 3 && prob(8)))
+	if(stance_damage >= expected_limbs_for_bodytype || (stance_damage >= (expected_limbs_for_bodytype*0.75) && prob(8)) || (stance_damage >= (expected_limbs_for_bodytype*0.5) && prob(2)))
 		if(!(lying || resting))
-			if(limb_pain)
+			if(had_limb_pain)
 				emote(/decl/emote/audible/scream)
 			custom_emote(VISIBLE_MESSAGE, "collapses!")
 		SET_STATUS_MAX(src, STAT_WEAK, 3) //can't emote while weakened, apparently.

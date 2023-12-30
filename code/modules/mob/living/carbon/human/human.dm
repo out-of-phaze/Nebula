@@ -1325,3 +1325,7 @@
 	volume = round(volume)
 	if(volume > 0 && range > 0)
 		playsound(T, footsound, volume, 1, range)
+
+/mob/living/get_overlay_state_modifier()
+	return get_bodytype()?.get_overlay_state_modifier_for_mob(src)
+

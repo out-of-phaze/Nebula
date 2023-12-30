@@ -137,21 +137,22 @@
 /decl/sprite_accessory/proc/get_grooming_descriptor(grooming_result, obj/item/organ/external/organ, obj/item/grooming/tool)
 	return "mystery grooming target"
 
-/decl/sprite_accessory/proc/get_cached_accessory_icon(var/obj/item/organ/external/organ, var/color = COLOR_WHITE)
+/decl/sprite_accessory/proc/get_cached_accessory_icon(var/obj/item/organ/external/organ, var/color = COLOR_WHITE, var/modifier)
 	ASSERT(istext(color) && (length(color) == 7 || length(color) == 9))
 	if(!icon_state)
 		return null
+	var/marking_state = "[organ.organ_tag][modifier]"
 	LAZYINITLIST(cached_icons[organ.bodytype])
-	LAZYINITLIST(cached_icons[organ.bodytype][organ.organ_tag])
-	var/icon/accessory_icon = cached_icons[organ.bodytype][organ.organ_tag][color]
+	LAZYINITLIST(cached_icons[organ.bodytype][marking_state])
+	var/icon/accessory_icon = cached_icons[organ.bodytype][marking_state][color]
 	if(!accessory_icon)
 		accessory_icon = icon(get_accessory_icon(organ), icon_state) // make a new one to avoid mutating the base
 		if(!accessory_icon)
-			cached_icons[organ.bodytype][organ.organ_tag][color] = null
+			cached_icons[organ.bodytype][marking_state][color] = null
 			return null
 		if(mask_to_bodypart)
-			accessory_icon.Blend(get_limb_mask_for(organ), ICON_MULTIPLY)
+			accessory_icon.Blend(get_limb_mask_for(organ, marking_state), ICON_MULTIPLY)
 		if(!isnull(color) && !isnull(color_blend))
 			accessory_icon.Blend(color, color_blend)
-		cached_icons[organ.bodytype][organ.organ_tag][color] = accessory_icon
+		cached_icons[organ.bodytype][marking_state][color] = accessory_icon
 	return accessory_icon

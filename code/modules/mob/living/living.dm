@@ -420,17 +420,19 @@ default behaviour is:
 	var/image/standing_image = image(root_bodytype.get_damage_overlays(src), icon_state = "00")
 
 	// blend the individual damage states with our icons
+	var/use_modifier = get_overlay_state_modifier()
 	for(var/obj/item/organ/external/O in get_external_organs())
 		if(!O.damage_state || O.damage_state == "00")
 			continue
+		var/use_damage_state = "[O.damage_state][use_modifier]"
 		var/icon/DI
 		var/use_colour = (BP_IS_PROSTHETIC(O) ? SYNTH_BLOOD_COLOR : O.species.get_species_blood_color(src))
-		var/cache_index = "[O.damage_state]/[O.bodytype.type]/[O.icon_state]/[use_colour]/[O.species.name]"
+		var/cache_index = "[use_damage_state]/[O.bodytype.type]/[O.icon_state]/[use_colour]/[O.species.name]"
 		if(!(cache_index in damage_icon_parts))
 			var/damage_overlay_icon = O.bodytype.get_damage_overlays(src)
-			if(check_state_in_icon(O.damage_state, damage_overlay_icon))
+			if(check_state_in_icon(use_damage_state, damage_overlay_icon))
 				DI = new /icon(damage_overlay_icon, O.damage_state) // the damage icon for whole human
-				DI.Blend(get_limb_mask_for(O), ICON_MULTIPLY)  // mask with this organ's pixels
+				DI.Blend(get_limb_mask_for(O, use_damage_state), ICON_MULTIPLY)  // mask with this organ's pixels
 				DI.Blend(use_colour, ICON_MULTIPLY)
 			damage_icon_parts[cache_index] = DI || FALSE
 		else

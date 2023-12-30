@@ -1,7 +1,7 @@
 var/global/list/_limb_mask_cache = list()
-/proc/get_limb_mask_for(obj/item/organ/external/limb)
+/proc/get_limb_mask_for(obj/item/organ/external/limb, force_state)
 	var/decl/bodytype/bodytype = limb?.bodytype
-	var/bodypart = limb?.icon_state
+	var/bodypart = force_state || limb?.icon_state
 	if(!bodytype || !bodypart)
 		return
 	LAZYINITLIST(_limb_mask_cache[bodytype])
@@ -211,7 +211,7 @@ Please contact me on #coderbus IRC. ~Carn x
 	var/turn_angle
 	var/matrix/M = matrix()
 	M.Scale(desired_scale_x, desired_scale_y)
-	if(lying)
+	if(lying && get_bodytype()?.rotate_on_prone)
 		// This locate is very bad but trying to get it to respect the buckled dir is proving tricky.
 		if((dir & EAST) || (isturf(loc) && (locate(/obj/structure/bed) in loc)))
 			turn_angle = 90

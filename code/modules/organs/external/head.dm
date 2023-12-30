@@ -112,3 +112,5 @@
 	var/image/eye_glow = get_organ_eyes_overlay()
 	if(eye_glow)
 		LAZYADD(., eye_glow)
+
+/obj/item/organ/external/head/gripper

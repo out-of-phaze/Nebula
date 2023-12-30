@@ -1,0 +1,10 @@
+#ifndef MODPACK_DRAKES
+#define MODPACK_DRAKES
+// BEGIN_INCLUDE
+#include "_drakes.dm"
+#include "datum/culture.dm"
+#include "datum/language.dm"
+#include "datum/species.dm"
+#include "datum/species_bodytypes.dm"
+// END_INCLUDE
+#endif
