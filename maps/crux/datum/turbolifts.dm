@@ -1,10 +1,10 @@
-/obj/abstract/turbolift_spawner/southern_cross
+/obj/abstract/turbolift_spawner/crux
 	icon = 'icons/obj/turbolift_preview_5x5.dmi'
 	depth = 2
 	lift_size_x = 4
 	lift_size_y = 4
 
-/obj/abstract/turbolift_spawner/southern_cross/port
+/obj/abstract/turbolift_spawner/crux/port
 	name = "Sothern Cross turbolift map placeholder - Port"
 	dir = EAST
 	areas_to_use = list(
@@ -12,7 +12,7 @@
 		/area/turbolift/port_deck_two
 		)
 
-/obj/abstract/turbolift_spawner/southern_cross/starboard
+/obj/abstract/turbolift_spawner/crux/starboard
 	name = "Sothern Cross turbolift map placeholder - Starboard"
 	dir = WEST
 	areas_to_use = list(
@@ -20,7 +20,7 @@
 		/area/turbolift/starboard_deck_two
 		)
 
-/obj/abstract/turbolift_spawner/southern_cross/cargo
+/obj/abstract/turbolift_spawner/crux/cargo
 	name = "Sothern Cross turbolift map placeholder - Cargo"
 	dir = WEST
 	areas_to_use = list(
@@ -28,7 +28,7 @@
 		/area/turbolift/cargo_deck_two
 		)
 
-/obj/abstract/turbolift_spawner/southern_cross/center
+/obj/abstract/turbolift_spawner/crux/center
 	name = "Sothern Cross turbolift map placeholder - Center"
 	depth = 3
 	areas_to_use = list(

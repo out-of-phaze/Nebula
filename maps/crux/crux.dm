@@ -38,16 +38,16 @@
 
 	#include "todo_stubs.dm"
 
-	#include "southern_cross_areas.dm"
-	#include "southern_cross_cryo.dm"
-	#include "southern_cross_overmap.dm"
-	#include "southern_cross_unit_testing.dm"
+	#include "crux_areas.dm"
+	#include "crux_cryo.dm"
+	#include "crux_overmap.dm"
+	#include "crux_testing.dm"
 
-	#include "southern_cross-station-0.dmm"
-	#include "southern_cross-station-1.dmm"
-	#include "southern_cross-station-2.dmm"
+	#include "crux-station-0.dmm"
+	#include "crux-station-1.dmm"
+	#include "crux-station-2.dmm"
 
-	#define USING_MAP_DATUM /datum/map/southern_cross
+	#define USING_MAP_DATUM /datum/map/crux
 
 #elif !defined(MAP_OVERRIDE)
 

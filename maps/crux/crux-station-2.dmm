@@ -10646,7 +10646,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
 "mIN" = (
-/obj/abstract/level_data_spawner/southern_cross_deck_three,
+/obj/abstract/level_data_spawner/crux_level_two,
 /turf/exterior/open,
 /area/space)
 

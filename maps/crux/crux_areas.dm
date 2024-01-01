@@ -1,7 +1,7 @@
 #define AMBIENCE_SPACE list('sound/ambience/ambispace1.ogg','sound/ambience/ambispace2.ogg','sound/ambience/ambispace3.ogg','sound/ambience/ambispace4.ogg','sound/ambience/ambispace5.ogg')
 
 /*
-/datum/map/southern_cross
+/datum/map/crux
 
 	post_round_safe_areas = list (
 		/area/centcom,

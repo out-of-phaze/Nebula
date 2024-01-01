@@ -11637,7 +11637,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
 "axQ" = (
-/obj/abstract/turbolift_spawner/southern_cross/port,
+/obj/abstract/turbolift_spawner/crux/port,
 /turf/unsimulated/mask,
 /area/hallway/primary/firstdeck/port)
 "axR" = (
@@ -11810,7 +11810,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/elevator)
 "ayn" = (
-/obj/abstract/turbolift_spawner/southern_cross/center,
+/obj/abstract/turbolift_spawner/crux/center,
 /turf/unsimulated/mask,
 /area/hallway/primary/firstdeck/elevator)
 "ayo" = (
@@ -12038,7 +12038,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/starboard)
 "ayM" = (
-/obj/abstract/turbolift_spawner/southern_cross/starboard,
+/obj/abstract/turbolift_spawner/crux/starboard,
 /turf/unsimulated/mask,
 /area/hallway/primary/firstdeck/starboard)
 "ayN" = (
@@ -18905,7 +18905,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "aMN" = (
-/obj/abstract/turbolift_spawner/southern_cross/cargo,
+/obj/abstract/turbolift_spawner/crux/cargo,
 /turf/unsimulated/mask,
 /area/quartermaster/storage)
 "aMO" = (
@@ -25998,7 +25998,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
 "dYr" = (
-/obj/effect/overmap/visitable/sector/southern_cross,
+/obj/effect/overmap/visitable/sector/crux,
 /turf/exterior/water,
 /area/space)
 "dYs" = (
@@ -27832,7 +27832,7 @@
 /turf/simulated/floor/tiled,
 /area/security/checkpoint3)
 "ghH" = (
-/obj/abstract/level_data_spawner/southern_cross_deck_one,
+/obj/abstract/level_data_spawner/crux_ground_floor,
 /turf/exterior/water,
 /area/space)
 "hDK" = (

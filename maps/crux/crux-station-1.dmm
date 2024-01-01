@@ -68236,9 +68236,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/abstract/landmark{
-	name = "Observer-Start"
-	},
+/obj/abstract/landmark/latejoin/observer,
 /obj/abstract/landmark/start,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
@@ -73344,7 +73342,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "eXX" = (
-/obj/abstract/level_data_spawner/southern_cross_deck_two,
+/obj/abstract/level_data_spawner/crux_level_one,
 /turf/exterior/open,
 /area/space)
 "oJY" = (

@@ -1,12 +1,12 @@
 /turf/exterior/sif_growth
     name = "growth"
     desc = "A natural moss that has adapted to the sheer cold climate."
-    icon = 'maps/southern_cross/icons/sif_grass.dmi'
+    icon = 'maps/crux/icons/sif_grass.dmi'
     possible_states = 1
 
 /turf/exterior/sif_growth/thick
     name = "thick growth"
-    icon = 'maps/southern_cross/icons/sif_grass_thick.dmi'
+    icon = 'maps/crux/icons/sif_grass_thick.dmi'
 
 // TODO port sky level
 /obj/item/storage/backpack/parachute

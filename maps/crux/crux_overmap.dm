@@ -6,7 +6,7 @@
 	start_x = 10
 	start_y = 10
 
-/obj/effect/overmap/visitable/sector/southern_cross
+/obj/effect/overmap/visitable/sector/crux
 	name = "NSS Southern Cross"
 	start_x = 10
 	start_y = 10
