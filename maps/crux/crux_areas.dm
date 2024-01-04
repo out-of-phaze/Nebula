@@ -1,20 +1,13 @@
 #define AMBIENCE_SPACE list('sound/ambience/ambispace1.ogg','sound/ambience/ambispace2.ogg','sound/ambience/ambispace3.ogg','sound/ambience/ambispace4.ogg','sound/ambience/ambispace5.ogg')
 
-/*
 /datum/map/crux
-
-	post_round_safe_areas = list (
-		/area/centcom,
-		/area/shuttle/escape/centcom,
-		/area/shuttle/escape_pod1/centcom,
-		/area/shuttle/escape_pod2/centcom,
-		/area/shuttle/escape_pod3/centcom,
-		/area/shuttle/escape_pod5/centcom,
-		/area/shuttle/transport1/centcom,
-		/area/shuttle/administration/centcom,
-		/area/shuttle/response_ship,
+	apc_test_exempt_areas = list(
+		/area/surface   = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/space     = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/turbolift = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/shuttle   = NO_SCRUBBER|NO_VENT|NO_APC
 	)
-*/
+
 
 //Planetside
 
@@ -32,21 +25,6 @@
 	requires_power = 0
 	dynamic_lighting = 1
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/turbolift/start
-	name = "\improper Turbolift Start"
-
-/area/turbolift/firstdeck
-	name = "\improper first deck"
-	base_turf = /turf/simulated/floor/plating
-
-/area/turbolift/seconddeck
-	name = "\improper second deck"
-	base_turf = /turf/simulated/open
-
-/area/turbolift/thirddeck
-	name = "\improper third deck"
-	base_turf = /turf/simulated/open
 
 // Elevator areas.
 /area/turbolift/port_deck_one
@@ -79,7 +57,7 @@
 	name = "lift (first deck)"
 	lift_floor_label = "Deck 1"
 	lift_floor_name = "Hangar Deck"
-	lift_announce_str = "Arriving at Hangar Deck: Main Hangars.Cargo Delivery. Telecommunications. Auxiliary Shuttle Docks. Escape Pods."
+	lift_announce_str = "Arriving at Hangar Deck: Main Hangars .Cargo Delivery. Telecommunications. Auxiliary Shuttle Docks. Escape Pods."
 	base_turf = /turf/simulated/floor
 
 /area/turbolift/center_deck_two
@@ -364,20 +342,7 @@
 /area/construction/seconddeck/construction2
 	name = "\improper Abandoned Locker Room"
 
-/area/crew_quarters/seconddeck/locker
-	name = "\improper Locker Room"
-	icon_state = "locker"
-
-/area/crew_quarters/seconddeck/locker/locker_toilet
-	name = "\improper Locker Toilets"
-	icon_state = "toilet"
-	sound_env = SMALL_ENCLOSED
-
-/area/crew_quarters/seconddeck/barrestroom
-	name = "\improper Bar Restroom"
-	icon_state = "bar"
-
-/area/crew_quarters/heads/sc/
+/area/crew_quarters/heads/sc
 	name = "\improper Command - Head Office"
 	icon_state = "head_quarters"
 	area_flags = AREA_FLAG_RAD_SHIELDED
@@ -693,174 +658,22 @@
 
 // Shuttles
 
-//NT response shuttle
-
-/area/shuttle/response_ship
-	name = "\improper Response Team Ship"
-	icon_state = "centcom"
-	requires_power = 0
-	area_flags = AREA_FLAG_RAD_SHIELDED
-//	ambience = AMBIENCE_HIGHSEC
-
-/area/shuttle/response_ship/start
-	name = "\improper Response Team Base"
-	icon_state = "shuttlered"
-	base_turf = /turf/unsimulated/floor/
-
-/area/shuttle/response_ship/firstdeck
-	name = "north-west of first deck"
-	icon_state = "northwest"
-
-/area/shuttle/response_ship/seconddeck
-	name = "south-east of second deck"
-	icon_state = "southeast"
-
-/area/shuttle/response_ship/thirddeck
-	name = "north-east of third deck"
-	icon_state = "northeast"
-
-/area/shuttle/response_ship/planet
-	name = "planetside outpost"
-	icon_state = "shuttlered"
-	base_turf = /turf/exterior/dirt
-
-/area/shuttle/response_ship/mining
-	name = "mining site"
-	icon_state = "shuttlered"
-	base_turf = /turf/space
-
-/area/shuttle/response_ship/arrivals_dock
-	name = "\improper docked with Southern Cross"
-	icon_state = "shuttle"
-
-/area/shuttle/response_ship/orbit
-	name = "in orbit of Sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/space
-
-/area/shuttle/response_ship/sky
-	name = "hovering over skies of sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/exterior/open/sky/west
-
-/area/shuttle/response_ship/sky_transit
-	name = "in flight over sif"
-	icon_state = "shuttlered"
-	base_turf = /turf/exterior/open/sky/moving/west
-
-/area/shuttle/response_ship/transit
-	name = "transit"
-	icon_state = "shuttlered"
-	base_turf = /turf/space
-
 //Shuttle One
 
-/area/shuttle/shuttle1
-	name = "\improper Hangar Deck"
-	icon_state = "yellow"
-	requires_power = 0
-	dynamic_lighting = 1
-	area_flags = AREA_FLAG_RAD_SHIELDED
-
-/area/shuttle/shuttle1/start
+/area/shuttle/shuttle_start
 	name = "Shuttle One"
 	icon_state = "shuttlered"
-
-/area/shuttle/shuttle1/arrivals_dock
-	name = "\improper docked with Southern Cross"
-	icon_state = "shuttle"
-
-/area/shuttle/shuttle1/seconddeck
-	name = "south of second deck"
-	icon_state = "south"
-
-/area/shuttle/shuttle1/mining
-	name = "wilderness site"
-	icon_state = "shuttlered"
-
-/area/shuttle/shuttle1/planet
-	name = "planetside outpost"
-	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor
-
-/area/shuttle/shuttle1/transit
-	name = "transit"
-	icon_state = "shuttlered"
-	base_turf = /turf/space/transit/north
-
-/area/shuttle/shuttle1/orbit
-	name = "in orbit of Sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/space
-
-/area/shuttle/shuttle1/sky
-	name = "hovering over skies of sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/exterior/open/sky
-
-/area/shuttle/shuttle1/sky_transit
-	name = "in flight over sif"
-	icon_state = "shuttlered"
-	base_turf = /turf/exterior/open/sky/moving
-
-//Shuttle Two
-
-/area/shuttle/shuttle2
-	name = "\improper Hangar Deck"
-	icon_state = "yellow"
 	requires_power = 0
 	dynamic_lighting = 1
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
-/area/shuttle/shuttle2/start
+//Shuttle Two
+/area/shuttle/shuttle_start_2
 	name = "Shuttle Two"
 	icon_state = "shuttlered"
-
-/area/shuttle/shuttle2/arrivals_dock
-	name = "\improper docked with Southern Cross"
-	icon_state = "shuttle"
-
-/area/shuttle/shuttle2/seconddeck
-	name = "south of second deck"
-	icon_state = "south"
-
-/area/shuttle/shuttle2/mining
-	name = "wilderness site"
-	icon_state = "shuttlered"
-
-/area/shuttle/shuttle2/planet
-	name = "planetside outpost"
-	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor
-
-/area/shuttle/shuttle2/transit
-	name = "transit"
-	icon_state = "shuttlered"
-	base_turf = /turf/space/transit/north
-
-/area/shuttle/shuttle2/orbit
-	name = "in orbit of Sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/space
-
-/area/shuttle/shuttle2/sky
-	name = "hovering over skies of sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/exterior/open/sky
-
-/area/shuttle/shuttle2/sky_transit
-	name = "in flight over sif"
-	icon_state = "shuttlered"
-	base_turf = /turf/exterior/open/sky/moving
-
-// Centcom Transport Shuttle
-/area/shuttle/transport1/centcom
-	icon_state = "shuttle"
-	name = "\improper Transport Shuttle"
-
-/area/shuttle/transport1/station
-	icon_state = "shuttle"
-	name = "\improper Transport Shuttle Station"
+	requires_power = 0
+	dynamic_lighting = 1
+	area_flags = AREA_FLAG_RAD_SHIELDED
 
 //Small Escape Pods
 
@@ -986,12 +799,6 @@
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/airless
 
-/area/shuttle/large_escape_pod1/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/large_escape_pod1/transit
-	icon_state = "shuttle"
-
 /area/shuttle/large_escape_pod2
 	name = "\improper Large Escape Pod Two"
 //	music = "music/escape.ogg"
@@ -1000,212 +807,372 @@
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/airless
 
-/area/shuttle/large_escape_pod2/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/large_escape_pod2/transit
-	icon_state = "shuttle"
-
-/area/shuttle/cryo
+/area/shuttle/cryo_station
 	name = "\improper Cryogenic Storage"
-
-/area/shuttle/cryo/station
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/airless
 
-/area/shuttle/cryo/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/cryo/transit
-	icon_state = "shuttle"
 
 // Misc
-
-/area/wreck/ufoship
-	name = "\improper Wreck"
-	icon_state = "storage"
-//	ambience = AMBIENCE_OTHERWORLDLY
-
-/area/wreck/supplyshuttle
-	name = "\improper Wreck"
-	icon_state = "storage"
-//	ambience = AMBIENCE_RUINS
-
 /area/security/nuke_storage
+	name = "\improper Nuclear Material Storage"
+
 /area/rnd/xenobiology/xenoflora
+	name = "\improper Xenoflora Lab"
+
 /area/quartermaster/storage
+	name = "\improper Quartermaster Storage"
+
 /area/security/brig
+	name = "\improper Brig"
+
 /area/security/security_equiptment_storage
+	name = "\improper Security Equipment Storage"
+
 /area/rnd/research_foyer
+	name = "\improper Research Foyer"
+
 /area/security/armoury
+	name = "\improper Armoury"
+
 /area/security/tactical
+	name = "\improper Tactical Storage"
+
 /area/rnd/test_area
+	name = "\improper Research Test Area"
+
 /area/security/prison
+	name = "\improper Prison"
+
 /area/security/security_lockerroom
+	name = "\improper Security Locker Room"
+
 /area/security/range
+	name = "\improper Firing Range"
+
 /area/storage/tech
+	name = "\improper Technical Storage"
+
 /area/medical/genetics_cloning
+	name = "\improper Cloning Lab"
+
 /area/medical/ward
+	name = "\improper Medical Ward"
+
 /area/medical/morgue
+	name = "\improper Morgue"
+
 /area/crew_quarters/locker/locker_toilet
+	name = "\improper Toilets"
+
 /area/crew_quarters/bar
-/area/shuttle/syndicate_elite/station
+	name = "\improper Bar"
+
 /area/security/main
+	name = "\improper Security"
+
 /area/security/warden
+	name = "\improper Warden Office"
+
 /area/engineering/atmos
+	name = "\improper Atmospherics"
+
 /area/security/evidence_storage
+	name = "\improper Evidence Storage"
+
 /area/security/security_cell_hallway
+	name = "\improper Brig Hallway"
+
 /area/security/security_processing
+	name = "\improper Processing"
+
 /area/maintenance/security_starboard
-/area/maintenance/substation/security
+	name = "\improper Starboard Security"
+
 /area/maintenance/security_port
+	name = "\improper Port Security"
+
+/area/maintenance/substation/security
+	name = "\improper Security Substation"
+
 /area/lawoffice
+	name = "\improper Legal Office"
+
 /area/security/lobby
+	name = "\improper Security Lobby"
+
 /area/security/riot_control
+	name = "\improper Riot Control"
+
 /area/security/detectives_office
+	name = "\improper Detective Office"
+
 /area/hallway/secondary/eva_hallway
+	name = "\improper EVA Hallway"
+
 /area/maintenance/engineering
+	name = "\improper Engineering Maintenance"
+
 /area/maintenance/research
+	name = "\improper Research Maintenance"
+
 /area/maintenance/substation/engineering
+	name = "\improper Engineering Substation"
+
 /area/storage/auxillary
+	name = "\improper Auxillary Storage"
+
 /area/janitor
+	name = "\improper Custodial Office"
+
 /area/maintenance/substation/engineering
+	name = "\improper Engineering Substration"
+
 /area/engineering/atmos/monitoring
+	name = "\improper Atmospherics Monitoring"
+
 /area/crew_quarters/locker
+	name = "\improper Locker Room"
+
 /area/maintenance/research
+	name = "\improper Research Maintenance"
+
 /area/engineering/storage
+	name = "\improper Engineering Storage"
+
 /area/rnd/storage
-/area/engineering/storage
+	name = "\improper Research Storage"
+
 /area/engineering/drone_fabrication
+	name = "\improper Drone Fabrication"
+
 /area/medical/medbay_emt_bay
+	name = "\improper EMT Bay"
+
 /area/quartermaster/qm
+	name = "\improper Quartermaster Office"
+
 /area/quartermaster/foyer
+	name = "\improper Quartermaster Foyer"
+
 /area/quartermaster/delivery
+	name = "\improper Delivery Office"
+
 /area/medical/biostorage
+	name = "\improper Biological Storage"
+
 /area/medical/medbay_primary_storage
+	name = "\improper Primary Medical Storage"
+
 /area/medical/chemistry
+	name = "\improper Chemistry"
+
 /area/medical/reception
-/area/medical/reception
+	name = "\improper Medical Reception"
+
 /area/medical/exam_room
-/area/medical/medbay_emt_bay
-/area/quartermaster/office
+	name = "\improper Exam Room"
+
 /area/medical/medbay
+	name = "\improper Medbay"
+
 /area/quartermaster/warehouse
+	name = "\improper Warehouse"
+
 /area/maintenance/cargo
+	name = "\improper Cargo Maintenance"
+
 /area/maintenance/disposal
+	name = "\improper Disposals"
+
 /area/quartermaster/office
+	name = "\improper Quartermaster's Office"
+
 /area/medical/psych
+	name = "\improper Psychiatrist's Office"
+
 /area/medical/cryo
+	name = "\improper Cryogenics"
+
 /area/medical/sleeper
+	name = "\improper Sleepers"
+
 /area/maintenance/substation/medical
+	name = "\improper Medical Substation"
+
 /area/maintenance/substation/cargo
+	name = "\improper Cargo Substation"
+
 /area/maintenance/substation/medical
+	name = "\improper Medical Substation"
+
 /area/engineering/engine_smes
+	name = "\improper SMES Chamber"
+
 /area/ai_monitored/storage/emergency/eva
+	name = "\improper EVA Storage"
+
 /area/maintenance/medbay_fore
+	name = "\improper Fore Medbay"
+
 /area/maintenance/medbay
+	name = "\improper Medbay Maintenance"
+
 /area/maintenance/bar
-/area/ai_monitored/storage/emergency/eva
+	name = "\improper Bar Maintenance"
+
 /area/engineering/engine_waste
-/area/engineering/engine_waste
+	name = "\improper Engine Waste Handling"
+
 /area/rnd/mixing
+	name = "\improper Toxins Mixing"
+
 /area/rnd/workshop
+	name = "\improper Research Workshop"
+
 /area/engineering/locker_room
+	name = "\improper Engineering Locker Room"
+
 /area/engineering/break_room
+	name = "\improper Engineering Break Room"
+
 /area/engineering/workshop
+	name = "\improper Engineering Workshop"
+
 /area/server
+	name = "\improper Server"
+
 /area/rnd/misc_lab
+	name = "\improper Miscellaneous Testing"
+
 /area/assembly/robotics
+	name = "\improper Robotics"
+
 /area/rnd/lab
+	name = "\improper Research and Development"
+
 /area/engineering/engine_room
+	name = "\improper Engine Room"
+
 /area/maintenance/substation/research
+	name = "\improper Research Substation"
+
 /area/engineering/foyer
+	name = "\improper Engineering Foyer"
+
 /area/teleporter
+	name = "\improper Teleporter"
+
 /area/maintenance/central
+	name = "\improper Central Maintenance"
+
 /area/medical/virology
+	name = "\improper Virology"
+
 /area/assembly/chargebay
+	name = "\improper Recharging Bay"
+
 /area/engineering/engine_airlock
-/area/medical/virology
+	name = "\improper Engine Airlock"
+
 /area/maintenance/apmaint
+	name = "\improper AP Maintenance"
+
 /area/engineering/engine_monitoring
+	name = "\improper Engine MOnitoring"
+
 /area/medical/medbay2
+	name = "\improper Medbay 2"
+
 /area/medical/genetics
-/area/crew_quarters/sleep/vistor_room_1
-/area/crew_quarters/sleep/vistor_room_2
+	name = "\improper Genetics"
+
+/area/crew_quarters/vistor_room_1
+	name = "\improper Visitor Room 1"
+
+/area/crew_quarters/vistor_room_2
+	name = "\improper Visitor Room 2"
+
 /area/crew_quarters/kitchen
+	name = "\improper Kitchen"
+
 /area/medical/patient_wing
+	name = "\improper Patient Wing"
+
 /area/medical/patient_a
+	name = "\improper Patient Room A"
+
 /area/medical/patient_b
+	name = "\improper Patient Room B"
+
 /area/crew_quarters/cafeteria
+	name = "\improper Cafeteria"
+
 /area/medical/surgery_storage
+	name = "\improper Surgical Storage"
+
 /area/medical/surgery2
+	name = "\improper Secondary Surgery"
+
 /area/medical/surgery
-/area/crew_quarters/cafeteria
+	name = "\improper Primary Surgery"
+
 /area/medical/surgeryobs
+	name = "\improper Surgery Observation"
+
 /area/maintenance/locker
+	name = "\improper Locker Room Maintenance"
+
 /area/maintenance/chapel
+	name = "\improper Chapel"
+
 /area/hydroponics
+	name = "\improper Hydroponics"
+
 /area/maintenance/substation/civilian
+	name = "\improper Civilian Substation"
+
 /area/maintenance/substation/command
+	name = "\improper Command Substation"
+
 /area/holodeck/alphadeck
+	name = "\improper Holodeck"
+
 /area/chapel/main
+	name = "\improper Chapel"
+
 /area/library
+	name = "\improper Library"
+
 /area/chapel/office
+	name = "\improper Chapel Office"
+
 /area/hallway/secondary/docking_hallway2
+	name = "\improper Secondary Docking Hallway"
+
 /area/storage/primary
+	name = "\improper Primary Tool Storage"
+
 /area/security/checkpoint2
+	name = "\improper Secondary Security Checkpoint"
+
 /area/hallway/secondary/entry/docking_lounge
-/area/hallway/secondary/entry/D1/arrivals
+	name = "\improper Docking Lounge"
+
 /area/hallway/secondary/entry/D2/arrivals
-/area/hallway/secondary/entry/D3/arrivals
-/area/shuttle/escape/station
+	name = "\improper Deck Two Arrivals"
+
 /area/bridge
+	name = "\improper Bridge"
+
 /area/bridge/meeting_room
-/area/shuttle/arrival/station
-/area/derelict/ship
-/area/mine/explored
-/area/mine/unexplored
-/area/holodeck/source_picnicarea
-/area/holodeck/source_emptycourt
-/area/holodeck/source_theatre
-/area/holodeck/source_courtroom
-/area/holodeck/source_wildlife
-/area/holodeck/source_desert
-/area/holodeck/source_boxingcourt
-/area/holodeck/source_snowfield
-/area/holodeck/source_thunderdomecourt
-/area/holodeck/source_meetinghall
-/area/holodeck/source_basketball
-/area/holodeck/source_beach
-/area/holodeck/source_plating
-/area/holodeck/source_space
-/area/centcom/specops
-/area/tdome
-/area/shuttle/supply
-/area/centcom/creed
-/area/centcom/command
-/area/centcom/main_hall
-/area/ai_multicam_room
-/area/centcom/suppy
-/area/centcom/evac
-/area/centcom/bar
-/area/tdome/tdomeadmin
-/area/tdome/tdomeobserve
-/area/tdome/tdome2
-/area/centcom/living
-/area/shuttle/trade
-/area/tdome/tdome1
-/area/centcom/medical
-/area/centcom/security
-/area/centcom/terminal
-/area/wizard_station
-/area/beach
-/area/shuttle/syndicate_elite/mothership
-/area/syndicate_mothership/elite_squad
-/area/prison/solitary
-/area/shuttle/syndicate_elite/mothership
-/area/skipjack_station/start
-/area/holodeck/source_chess
-/area/virtual_reality
-/area/shuttle/arrival/pre_game
-/area/shuttle/escape/transit
+	name = "\improper Meeting Room"
+
+/area/hallway/secondary/entry/D1
+	name = "\improper Deck One Entry"
+
+/area/hallway/secondary/entry/D2
+	name = "\improper Deck Two Entry"
+
+/area/hallway/secondary/entry/D3
+	name = "\improper Deck Three Entry"

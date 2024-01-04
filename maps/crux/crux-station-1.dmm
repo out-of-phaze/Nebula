@@ -56,7 +56,7 @@
 	},
 /turf/simulated/floor,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "aOv" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
@@ -64,7 +64,7 @@
 	},
 /turf/simulated/floor,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "aRC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -51969,7 +51969,7 @@
 /area/crew_quarters/kitchen)
 "cVa" = (
 /turf/simulated/wall,
-/area/crew_quarters/sleep/vistor_room_1)
+/area/crew_quarters/vistor_room_1)
 "cVb" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/brown,
@@ -51978,7 +51978,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_1)
+/area/crew_quarters/vistor_room_1)
 "cVc" = (
 /obj/machinery/newscaster{
 	pixel_y = 30
@@ -51992,7 +51992,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_1)
+/area/crew_quarters/vistor_room_1)
 "cVd" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/button/access/interior{
@@ -52485,7 +52485,7 @@
 /obj/structure/bed/padded,
 /obj/item/bedsheet/brown,
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_1)
+/area/crew_quarters/vistor_room_1)
 "cWe" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -52495,7 +52495,7 @@
 /area/maintenance/medbay)
 "cWf" = (
 /turf/simulated/wall,
-/area/crew_quarters/sleep/vistor_room_2)
+/area/crew_quarters/vistor_room_2)
 "cWg" = (
 /obj/structure/kitchenspike,
 /obj/machinery/alarm{
@@ -52541,7 +52541,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_2)
+/area/crew_quarters/vistor_room_2)
 "cWl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/wall/r_wall,
@@ -52565,12 +52565,12 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_2)
+/area/crew_quarters/vistor_room_2)
 "cWo" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/brown,
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_2)
+/area/crew_quarters/vistor_room_2)
 "cWp" = (
 /obj/structure/hygiene/toilet{
 	dir = 4
@@ -53112,7 +53112,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_1)
+/area/crew_quarters/vistor_room_1)
 "cXh" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -53145,7 +53145,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_1)
+/area/crew_quarters/vistor_room_1)
 "cXk" = (
 /obj/random/contraband,
 /obj/random/contraband,
@@ -53672,13 +53672,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_1)
+/area/crew_quarters/vistor_room_1)
 "cYs" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_2)
+/area/crew_quarters/vistor_room_2)
 "cYt" = (
 /obj/item/stool/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -53688,7 +53688,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_2)
+/area/crew_quarters/vistor_room_2)
 "cYu" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light{
@@ -53711,7 +53711,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_2)
+/area/crew_quarters/vistor_room_2)
 "cYw" = (
 /turf/simulated/wall,
 /area/crew_quarters/cafeteria)
@@ -53740,7 +53740,7 @@
 	pixel_x = -24
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_1)
+/area/crew_quarters/vistor_room_1)
 "cYz" = (
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -53748,7 +53748,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_1)
+/area/crew_quarters/vistor_room_1)
 "cYA" = (
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
@@ -53781,7 +53781,7 @@
 	pixel_y = -24
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_1)
+/area/crew_quarters/vistor_room_1)
 "cYD" = (
 /obj/item/radio/intercom{
 	desc = "Talk... listen through this.";
@@ -53797,7 +53797,7 @@
 	pixel_x = -24
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_2)
+/area/crew_quarters/vistor_room_2)
 "cYE" = (
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -53805,7 +53805,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_2)
+/area/crew_quarters/vistor_room_2)
 "cYF" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -54115,7 +54115,7 @@
 	pixel_y = -24
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/vistor_room_2)
+/area/crew_quarters/vistor_room_2)
 "cZp" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -54259,7 +54259,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/steel_grid,
-/area/crew_quarters/sleep/vistor_room_1)
+/area/crew_quarters/vistor_room_1)
 "cZD" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
@@ -54271,7 +54271,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/steel_grid,
-/area/crew_quarters/sleep/vistor_room_2)
+/area/crew_quarters/vistor_room_2)
 "cZE" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -61021,10 +61021,10 @@
 /area/maintenance/locker)
 "dmH" = (
 /turf/simulated/shuttle/wall,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "dmI" = (
 /turf/simulated/shuttle/wall,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "dmJ" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -61162,7 +61162,7 @@
 /area/construction/seconddeck/construction2)
 "dni" = (
 /turf/simulated/shuttle/wall,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "dnj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -61475,7 +61475,7 @@
 "dnP" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/shuttle/wall,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "dnQ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -61490,7 +61490,7 @@
 	dir = 2
 	},
 /turf/simulated/floor/shuttle,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "dnR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -61502,7 +61502,7 @@
 	dir = 2
 	},
 /turf/simulated/floor/shuttle,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "dnS" = (
 /obj/structure/closet/emcloset,
 /obj/item/storage/toolbox/emergency,
@@ -61510,7 +61510,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/shuttle,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "dnT" = (
 /obj/structure/sign/directions/cryo{
 	dir = 8
@@ -61937,23 +61937,23 @@
 	name = "JoinLateCryo"
 	},
 /turf/simulated/floor/shuttle,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "doH" = (
 /obj/abstract/landmark{
 	name = "JoinLateCryo"
 	},
 /turf/simulated/floor/shuttle,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "doI" = (
 /turf/simulated/floor/shuttle,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "doJ" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "cryostorage_shuttle_hatch";
 	name = "Cryogenic Storage Hatch"
 	},
 /turf/simulated/floor/shuttle,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "doK" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -61969,7 +61969,7 @@
 	icon_state = "body_scanner_1"
 	},
 /turf/simulated/floor/shuttle,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "doL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/industrial/warning{
@@ -62208,7 +62208,7 @@
 	name = "JoinLateCryo"
 	},
 /turf/simulated/floor/shuttle,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "dpu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/borderfloor{
@@ -62393,7 +62393,7 @@
 "dpS" = (
 /obj/machinery/status_display,
 /turf/simulated/shuttle/wall,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "dpT" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -62406,7 +62406,7 @@
 	icon_state = "body_scanner_1"
 	},
 /turf/simulated/floor/shuttle,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "dpU" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -62701,7 +62701,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/cee,
 /turf/simulated/floor/shuttle,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "dqE" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -62979,7 +62979,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/shuttle,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "drh" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -69142,7 +69142,7 @@
 "ecT" = (
 /obj/effect/polaris_placeholder_landmark/cryostorage_station,
 /turf/simulated/floor/shuttle,
-/area/shuttle/cryo/station)
+/area/shuttle/cryo_station)
 "ecU" = (
 /obj/machinery/atmospherics/valve/shutoff{
 	dir = 4;

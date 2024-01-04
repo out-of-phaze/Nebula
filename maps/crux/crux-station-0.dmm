@@ -2462,7 +2462,7 @@
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "afI" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -2471,7 +2471,7 @@
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "afJ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -2484,7 +2484,7 @@
 	health = 1e+006
 	},
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "afK" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -2739,11 +2739,11 @@
 /area/hangar/three)
 "agq" = (
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "agr" = (
 /obj/structure/flight_left,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "agt" = (
 /obj/structure/flight_right,
 /obj/machinery/button/alternate/door{
@@ -2754,7 +2754,7 @@
 	pixel_x = 26;
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "agu" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -3049,7 +3049,7 @@
 	health = 1e+006
 	},
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "agX" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light{
@@ -3063,16 +3063,16 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "agY" = (
 /obj/structure/bed/chair/comfy/blue{
 	dir = 1
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "agZ" = (
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "aha" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light{
@@ -3084,7 +3084,7 @@
 	pixel_y = 3
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "ahb" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
@@ -3276,11 +3276,11 @@
 /area/hangar/one)
 "ahB" = (
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "ahC" = (
 /obj/machinery/door/airlock/external/glass,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "ahE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -3566,7 +3566,7 @@
 "aim" = (
 /obj/structure/bed/chair/shuttle,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "ain" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/light/spot{
@@ -3705,7 +3705,7 @@
 /area/hangar/one)
 "aiD" = (
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "aiE" = (
 /obj/machinery/light{
 	dir = 8
@@ -3714,7 +3714,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "aiF" = (
 /obj/machinery/light{
 	dir = 4
@@ -3723,7 +3723,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "aiG" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -3837,7 +3837,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "aiX" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 1
@@ -3847,13 +3847,13 @@
 	pixel_y = -21
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "aiY" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 1
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "aiZ" = (
 /obj/item/t_scanner,
 /obj/item/storage/box/lights/mixed,
@@ -3944,7 +3944,7 @@
 "ajk" = (
 /obj/machinery/door/airlock/centcom,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "ajl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4119,24 +4119,24 @@
 /area/hangar/one)
 "ajF" = (
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "ajG" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/shuttle/red,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "ajH" = (
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/shuttle/red,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "ajI" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "ajJ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -4154,7 +4154,7 @@
 	id_tag = "shuttle1_pump"
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "ajK" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -4167,7 +4167,7 @@
 	pixel_y = 28
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "ajL" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
@@ -4369,7 +4369,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "aki" = (
 /obj/machinery/door/airlock/external/bolted{
 	id_tag = "shuttle1_inner";
@@ -4384,7 +4384,7 @@
 	pixel_y = -26;
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "akj" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -4392,7 +4392,7 @@
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
 /obj/machinery/meter,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "akk" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -4416,7 +4416,7 @@
 	pixel_y = 26;
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "akm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -4668,7 +4668,7 @@
 "akN" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "akO" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -4676,11 +4676,11 @@
 	},
 /obj/machinery/light,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "akP" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "akQ" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/industrial/warning{
@@ -4691,7 +4691,7 @@
 	id_tag = "shuttle1_pump"
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "akR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -4702,7 +4702,7 @@
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "akT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -4969,7 +4969,7 @@
 	},
 /turf/simulated/floor/reinforced,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "alw" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -5003,26 +5003,26 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/space_heater,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "alA" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "alB" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "alC" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "alD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -5304,7 +5304,7 @@
 	},
 /turf/simulated/floor/reinforced,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "ams" = (
 /obj/machinery/vending/cigarette{
 	dir = 4
@@ -8404,7 +8404,7 @@
 	},
 /turf/simulated/floor/reinforced,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "atg" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/flora/pottedplant/tall,
@@ -10862,7 +10862,7 @@
 	},
 /turf/simulated/floor/reinforced,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "axJ" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/borderfloor,
@@ -12022,11 +12022,11 @@
 	dir = 4
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "aAy" = (
 /obj/machinery/atmospherics/pipe/manifold/visible,
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "aAz" = (
 /turf/simulated/wall/r_wall,
 /area/tcomm/tcomfoyer)
@@ -13339,7 +13339,7 @@
 	},
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "aDe" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -15292,7 +15292,7 @@
 /area/shuttle/escape_pod4/station)
 "aHk" = (
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aHm" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -15575,7 +15575,7 @@
 /area/hangar/two)
 "aHO" = (
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aHP" = (
 /turf/simulated/floor/tiled,
 /area/tcomm/entrance)
@@ -15584,7 +15584,7 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aHR" = (
 /obj/machinery/teleport/station,
 /obj/effect/floor_decal/industrial/warning{
@@ -15609,14 +15609,14 @@
 /area/tcomm/entrance)
 "aHU" = (
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aHV" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aHW" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -15956,7 +15956,7 @@
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aIC" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -15968,17 +15968,17 @@
 	id_tag = "shuttle2_pump"
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aID" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aIE" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aIF" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -15990,7 +15990,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aIG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -16422,7 +16422,7 @@
 	pixel_y = -26;
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aJt" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -16438,7 +16438,7 @@
 	name = "Hangar One"
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle1/start)
+/area/shuttle/shuttle_start)
 "aJu" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -16446,7 +16446,7 @@
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
 /obj/machinery/meter,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aJv" = (
 /obj/machinery/door/airlock/external/bolted{
 	id_tag = "shuttle2_inner";
@@ -16461,7 +16461,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aJx" = (
 /obj/machinery/button/alternate/door{
 	id_tag = "expshuttle2_door_L";
@@ -16475,7 +16475,7 @@
 	name = "shuttle side hatch"
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aJy" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -16763,7 +16763,7 @@
 	id_tag = "shuttle2_pump"
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aKg" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -16782,7 +16782,7 @@
 	id_tag = "shuttle2_pump"
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aKh" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -16798,13 +16798,13 @@
 	health = 1e+006
 	},
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aKi" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aKj" = (
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = -32
@@ -16813,13 +16813,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/shuttle/red,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aKk" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/shuttle/red,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aKm" = (
 /obj/structure/lattice,
 /obj/structure/grille/broken,
@@ -16951,7 +16951,7 @@
 "aKD" = (
 /obj/machinery/door/airlock/centcom,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aKE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -17126,7 +17126,7 @@
 "aKZ" = (
 /obj/structure/bed/chair/shuttle,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aLa" = (
 /obj/structure/bed/chair/shuttle,
 /obj/item/radio/intercom{
@@ -17135,13 +17135,13 @@
 	pixel_y = 21
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aLc" = (
 /obj/machinery/sleeper{
 	dir = 4
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aLe" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -17296,7 +17296,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aLz" = (
 /obj/machinery/light{
 	dir = 4
@@ -17305,7 +17305,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aLA" = (
 /obj/machinery/ai_status_display{
 	pixel_x = -32
@@ -17504,7 +17504,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aLY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/light/spot{
@@ -17721,7 +17721,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aMA" = (
 /obj/random/obstruction,
 /turf/simulated/floor/plating,
@@ -17763,11 +17763,11 @@
 /area/hangar/two)
 "aMF" = (
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aMG" = (
 /obj/machinery/door/airlock/external/glass,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aMH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -18023,11 +18023,11 @@
 	pixel_y = 3
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aNm" = (
 /obj/structure/bed/chair/comfy/blue,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aNn" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light,
@@ -18040,7 +18040,7 @@
 	pixel_y = -32
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aNp" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
@@ -18496,16 +18496,16 @@
 	pixel_x = -26;
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aOm" = (
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aOn" = (
 /obj/structure/flight_left{
 	dir = 1
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aOo" = (
 /obj/machinery/light/spot,
 /obj/effect/floor_decal/borderfloor,
@@ -18845,7 +18845,7 @@
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aPe" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -18854,7 +18854,7 @@
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aPf" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -18867,7 +18867,7 @@
 	health = 1e+006
 	},
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aPg" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
@@ -21193,7 +21193,7 @@
 	name = "Hangar Two"
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "aTK" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
@@ -22581,7 +22581,7 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/wall,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "brr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
@@ -22607,14 +22607,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "bsm" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/shuttle/plating,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "btc" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/modular/preset/cardslot/command{
@@ -22653,7 +22653,7 @@
 	},
 /obj/machinery/space_heater,
 /turf/simulated/floor/shuttle/black,
-/area/shuttle/shuttle2/start)
+/area/shuttle/shuttle_start_2)
 "bwD" = (
 /obj/machinery/computer/modular/preset/security{
 	dir = 8
