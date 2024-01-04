@@ -58,13 +58,11 @@
 	id_tag = "d1fore_port2_outer";
 	locked = 1;
 	name = "Dock External Airlock";
-	req_access = list(13)
 	},
 /obj/machinery/button/access/exterior{
 	id_tag = "d1fore_port2_airlock";
 	name = "exterior access button";
-	pixel_x = 26;
-	req_access = list(13)
+	pixel_x = 26
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockfore)
@@ -293,7 +291,6 @@
 	id_tag = "d1fore_port2_inner";
 	locked = 1;
 	name = "Dock Internal Airlock";
-	req_access = list(13)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -391,7 +388,6 @@
 	id_tag = "d1fore_port_airlock";
 	name = "exterior access button";
 	pixel_x = -26;
-	req_access = list(13)
 	},
 /obj/machinery/light/small{
 	dir = 8
@@ -432,7 +428,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "d1fore_port2_airlock";
 	pixel_y = -26;
-	req_access = list(13);
 	tag_airpump = "d1fore_port2_pump";
 	tag_chamber_sensor = "d1fore_port2_sensor";
 	tag_exterior_door = "d1fore_port2_outer";
@@ -574,7 +569,6 @@
 	id_tag = "d1fore_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = 26;
-	req_access = list(13)
 	},
 /obj/machinery/light/small{
 	dir = 4
@@ -587,7 +581,6 @@
 	id_tag = "d1fore_port_outer";
 	locked = 1;
 	name = "External Airlock Access";
-	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
@@ -636,7 +629,6 @@
 	id_tag = "d1fore_starboard_outer";
 	locked = 1;
 	name = "External Airlock Access";
-	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
@@ -661,7 +653,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "d1fore_port_airlock";
 	pixel_x = 26;
-	req_access = list(13);
 	tag_airpump = "d1fore_port_pump";
 	tag_chamber_sensor = "d1fore_port_sensor";
 	tag_exterior_door = "d1fore_port_outer";
@@ -802,7 +793,6 @@
 	id_tag = "escape_pod_1_hatch";
 	locked = 1;
 	name = "Escape Pod 1 Hatch";
-	req_access = list(13)
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod1/station)
@@ -817,7 +807,6 @@
 	id_tag = "escape_pod_2_hatch";
 	locked = 1;
 	name = "Escape Pod 2 Hatch";
-	req_access = list(13)
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod2/station)
@@ -831,7 +820,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "d1fore_starboard_airlock";
 	pixel_x = -26;
-	req_access = list(13);
 	tag_airpump = "d1fore_starboard_pump";
 	tag_chamber_sensor = "d1fore_starboard_sensor";
 	tag_exterior_door = "d1fore_starboard_outer";
@@ -1006,7 +994,6 @@
 	id_tag = "escape_pod_1_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 1";
-	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/firstdeck/fore)
@@ -1020,7 +1007,6 @@
 	id_tag = "escape_pod_2_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 2";
-	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/firstdeck/fore)
@@ -1068,7 +1054,6 @@
 	id_tag = "d1fore_port_inner";
 	locked = 1;
 	name = "Internal Airlock Access";
-	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
@@ -1081,7 +1066,6 @@
 	id_tag = "d1fore_port_inner";
 	locked = 1;
 	name = "Internal Airlock Access";
-	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
@@ -1227,7 +1211,6 @@
 	id_tag = "d1fore_starboard_inner";
 	locked = 1;
 	name = "Internal Airlock Access";
-	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
@@ -1240,7 +1223,6 @@
 	id_tag = "d1fore_starboard_inner";
 	locked = 1;
 	name = "Internal Airlock Access";
-	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
@@ -1268,7 +1250,6 @@
 	id_tag = "d1fore_port_airlock";
 	name = "interior access button";
 	pixel_x = 26;
-	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
@@ -1477,7 +1458,6 @@
 	id_tag = "d1fore_starboard_airlock";
 	name = "interior access button";
 	pixel_x = -26;
-	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
@@ -1543,9 +1523,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "adP" = (
@@ -1825,9 +1803,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
 "aeh" = (
@@ -1887,7 +1863,6 @@
 	},
 /obj/machinery/door/airlock/engineering{
 	name = "Construction Area";
-	req_access = list(32)
 	},
 /turf/simulated/floor/tiled,
 /area/construction/firstdeck/construction5)
@@ -2399,7 +2374,6 @@
 /area/security/nuke_storage)
 "afu" = (
 /obj/machinery/door/airlock/vault/bolted{
-	req_access = list(53)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2778,7 +2752,6 @@
 	id_tag = "expshuttle1_door_cargo";
 	name = "Rear Hatch Control";
 	pixel_x = 26;
-	req_access = list(67)
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle1/start)
@@ -2791,9 +2764,7 @@
 /area/hangar/one)
 "agv" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/hangar/one)
 "agw" = (
@@ -3051,9 +3022,7 @@
 "agU" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/rust,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/hangar/three)
 "agV" = (
@@ -3143,9 +3112,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/firstdeck/fp_emergency)
 "ahg" = (
@@ -3258,9 +3225,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/firstdeck/fs_emergency)
 "ahv" = (
@@ -3344,9 +3309,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "ahH" = (
@@ -3470,7 +3433,6 @@
 	},
 /obj/structure/closet/crate/secure{
 	name = "Silver Crate";
-	req_access = list(19)
 	},
 /obj/item/coin/silver{
 	pixel_x = 4;
@@ -3507,7 +3469,6 @@
 /obj/item/coin/gold,
 /obj/structure/closet/crate/secure{
 	name = "Gold Crate";
-	req_access = list(19)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
@@ -3536,9 +3497,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
 "aif" = (
@@ -3776,9 +3735,7 @@
 /area/hangar/one)
 "aiH" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/firstdeck/fp_emergency)
 "aiI" = (
@@ -3853,9 +3810,7 @@
 /area/storage/emergency_storage/firstdeck/fs_emergency)
 "aiR" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/firstdeck/fs_emergency)
 "aiS" = (
@@ -4427,7 +4382,6 @@
 	id_tag = "shuttle1_shuttle";
 	name = "interior access button";
 	pixel_y = -26;
-	req_access = null
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle1/start)
@@ -4460,7 +4414,6 @@
 	id_tag = "shuttle1_shuttle";
 	name = "exterior access button";
 	pixel_y = 26;
-	req_access = null
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle1/start)
@@ -5763,7 +5716,6 @@
 	id_tag = "server_access_inner";
 	locked = 1;
 	name = "Telecoms Server Access";
-	req_access = list(61)
 	},
 /turf/simulated/floor/plating,
 /area/tcomm/computer)
@@ -5904,7 +5856,6 @@
 	id_tag = "large_escape_pod_2_hatch";
 	locked = 1;
 	name = "Large Escape Pod Hatch 2";
-	req_access = list(13)
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/large_escape_pod2/station)
@@ -6156,7 +6107,6 @@
 	id_tag = "server_access_outer";
 	locked = 1;
 	name = "Telecoms Server Access";
-	req_access = list(61)
 	},
 /turf/simulated/floor/plating,
 /area/tcomm/computer)
@@ -6364,7 +6314,6 @@
 	id_tag = "large_escape_pod_2_berth_hatch";
 	locked = 1;
 	name = "Large Escape Pod 2";
-	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
 /area/hallway/secondary/escape/firstdeck/ep_port)
@@ -7346,7 +7295,6 @@
 "aqG" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	req_access = list(12)
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -7772,7 +7720,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
 	name = "Hangar Control Room Access";
-	req_access = null
 	},
 /turf/simulated/floor/plating,
 /area/hangar/threecontrol)
@@ -8156,7 +8103,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/hatch{
 	name = "Telecoms Control Room";
-	req_access = list(61)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tcomm/computer)
@@ -8410,7 +8356,6 @@
 	},
 /obj/machinery/door/airlock/engineering{
 	name = "Construction Area";
-	req_access = list(32)
 	},
 /turf/simulated/floor/plating,
 /area/construction/firstdeck/construction1)
@@ -8677,9 +8622,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
 "atF" = (
@@ -8727,7 +8670,6 @@
 	},
 /obj/machinery/door/airlock/engineering{
 	name = "Construction Area";
-	req_access = list(32)
 	},
 /turf/simulated/floor/plating,
 /area/construction/firstdeck/construction4)
@@ -8741,7 +8683,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/double/glass{
 	name = "Research Division Access";
-	req_access = list(47)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research/firstdeck/hallway)
@@ -9983,7 +9924,6 @@
 	},
 /obj/machinery/door/airlock/hatch/maintenance{
 	name = "Telecoms Storage";
-	req_access = list(61)
 	},
 /turf/simulated/floor,
 /area/tcomm/tcomstorage)
@@ -10998,7 +10938,6 @@
 "axU" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	req_access = list(12)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport)
@@ -11032,7 +10971,6 @@
 	},
 /obj/machinery/door/airlock/engineering{
 	name = "Construction Area";
-	req_access = list(32)
 	},
 /turf/simulated/floor/plating,
 /area/construction/firstdeck/construction2)
@@ -11240,9 +11178,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "ayx" = (
@@ -11299,7 +11235,6 @@
 	},
 /obj/machinery/door/airlock/engineering{
 	name = "Construction Area";
-	req_access = list(32)
 	},
 /turf/simulated/floor/plating,
 /area/construction/firstdeck/construction3)
@@ -11877,7 +11812,6 @@
 "aAb" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	req_access = list(12)
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled,
@@ -11966,7 +11900,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/hatch{
 	name = "Telecoms Hallway";
-	req_access = list(61)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tcomm/tcomstorage)
@@ -12084,7 +12017,6 @@
 	id_tag = "expshuttle1_door_cargo";
 	name = "Rear Hatch Control";
 	pixel_x = -26;
-	req_access = list(67)
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -12152,7 +12084,6 @@
 	desc = "A firewall prevents AIs from interacting with this device.";
 	name = "Telecoms lethal turret control";
 	pixel_y = 29;
-	req_access = list(61)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tcomm/tcomfoyer)
@@ -12208,7 +12139,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
 	name = "Hangar Control Room Access";
-	req_access = null
 	},
 /turf/simulated/floor/plating,
 /area/hangar/twocontrol)
@@ -13010,7 +12940,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
 	name = "Cargo Maintenance";
-	req_access = list(31)
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
@@ -13021,7 +12950,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
 	name = "Cargo Hallway";
-	req_access = list(50)
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
@@ -13035,7 +12963,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
 	name = "Cargo Hallway";
-	req_access = list(50)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/hallway)
@@ -13091,7 +13018,6 @@
 /obj/item/rig/industrial/equipped,
 /obj/machinery/door/window/southleft{
 	name = "Mining Suits";
-	req_access = list(50)
 	},
 /obj/structure/rack{
 	dir = 8;
@@ -13121,7 +13047,6 @@
 	},
 /obj/machinery/door/window/southright{
 	name = "Mining Suit";
-	req_access = list(50)
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -13216,7 +13141,6 @@
 	},
 /obj/structure/closet/crate/secure/gear{
 	name = "parachute crate";
-	req_access = list(67)
 	},
 /obj/item/storage/backpack/parachute,
 /obj/item/storage/backpack/parachute,
@@ -13333,7 +13257,6 @@
 	control_area = "\improper Telecomms Teleporter";
 	name = "Telecomms Teleporter turret control";
 	pixel_x = 28;
-	req_access = list(19)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/firstdeck/elevator)
@@ -13375,7 +13298,6 @@
 	},
 /obj/machinery/door/airlock/hatch{
 	name = "Power Control";
-	req_access = list(61)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tcomm/tcomfoyer)
@@ -13527,7 +13449,6 @@
 	id_tag = "large_escape_pod_1_berth_hatch";
 	locked = 1;
 	name = "Large Escape Pod 1";
-	req_access = list(13)
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_starboard2)
@@ -13938,7 +13859,6 @@
 	},
 /obj/machinery/door/airlock/highsecurity{
 	name = "Telecommunications";
-	req_access = list(61)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tcomm/entrance)
@@ -14239,7 +14159,6 @@
 	id_tag = "large_escape_pod_1_hatch";
 	locked = 1;
 	name = "Large Escape Pod Hatch 1";
-	req_access = list(13)
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/large_escape_pod1/station)
@@ -14464,7 +14383,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
 	name = "Mining Maintenance";
-	req_access = list(48)
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/mininglockerroom)
@@ -14826,7 +14744,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
 	name = "Mining Locker Room";
-	req_access = list(50)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/mininglockerroom)
@@ -15559,7 +15476,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
 	name = "Mining Locker Room";
-	req_access = list(50)
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -16155,7 +16071,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
 	name = "Cargo Bay";
-	req_access = list(31)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/hallway)
@@ -16248,7 +16163,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
 	name = "Cargo Maintenance";
-	req_access = list(50)
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hallway)
@@ -16506,7 +16420,6 @@
 	id_tag = "shuttle2";
 	name = "exterior access button";
 	pixel_y = -26;
-	req_access = null
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle2/start)
@@ -16543,7 +16456,6 @@
 	id_tag = "shuttle2";
 	name = "interior access button";
 	pixel_y = 26;
-	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 9
@@ -17276,7 +17188,6 @@
 "aLj" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	req_access = list(12)
 	},
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/firstdeck/ap_emergency)
@@ -17366,9 +17277,7 @@
 /area/storage/emergency_storage/firstdeck/as_emergency)
 "aLv" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/firstdeck/as_emergency)
 "aLw" = (
@@ -17645,7 +17554,6 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	req_access = list(12)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
@@ -17829,9 +17737,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "aMD" = (
@@ -17945,7 +17851,6 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	req_access = list(12)
 	},
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/firstdeck/ap_emergency)
@@ -18085,9 +17990,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/firstdeck/as_emergency)
 "aNi" = (
@@ -18379,7 +18282,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/highsecurity{
 	name = "Secure Tech Storage";
-	req_access = list(19,23)
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -18576,9 +18478,7 @@
 /area/maintenance/firstdeck/aftstarboard)
 "aOj" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/hangar/two)
 "aOk" = (
@@ -18594,7 +18494,6 @@
 	id_tag = "expshuttle2_door_cargo";
 	name = "Rear Hatch Control";
 	pixel_x = -26;
-	req_access = list(67)
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle2/start)
@@ -18668,7 +18567,6 @@
 "aOy" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	req_access = list(12)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
@@ -19547,7 +19445,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/engineering{
 	name = "Tech Storage";
-	req_access = list(23)
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -19670,7 +19567,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/maintenance{
-	req_access = list(12)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
@@ -19965,9 +19861,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "aQY" = (
@@ -20504,7 +20398,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/door/window/brigdoor/southright{
 	name = "Containment Pen";
-	req_access = list(47)
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/xenobiology)
@@ -20532,7 +20425,6 @@
 	id_tag = "escape_pod_3_hatch";
 	locked = 1;
 	name = "Escape Pod Hatch 3";
-	req_access = list(13)
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod3/station)
@@ -20542,7 +20434,6 @@
 	id_tag = "escape_pod_3_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 3";
-	req_access = list(13)
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftport)
@@ -20706,7 +20597,6 @@
 	id_tag = "escape_pod_5_hatch";
 	locked = 1;
 	name = "Escape Pod Hatch 5";
-	req_access = list(13)
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod5/station)
@@ -20848,7 +20738,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
 	name = "Security Checkpoint";
-	req_access = list(1)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -21311,7 +21200,6 @@
 	id_tag = "escape_pod_4_hatch";
 	locked = 1;
 	name = "Escape Pod Hatch 4";
-	req_access = list(13)
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod4/station)
@@ -21321,7 +21209,6 @@
 	id_tag = "escape_pod_4_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 4";
-	req_access = list(13)
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftport)
@@ -21476,7 +21363,6 @@
 	id_tag = "escape_pod_6_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 6";
-	req_access = list(13)
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
@@ -21486,7 +21372,6 @@
 	id_tag = "escape_pod_6_hatch";
 	locked = 1;
 	name = "Escape Pod Hatch 6";
-	req_access = list(13)
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod6/station)
@@ -21753,7 +21638,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "d1aft_port_airlock";
 	pixel_y = 26;
-	req_access = list(13);
 	tag_airpump = "d1aft_port_pump";
 	tag_chamber_sensor = "d1aft_port_sensor";
 	tag_exterior_door = "d1aft_port_outer";
@@ -22097,7 +21981,6 @@
 	frequency = 1331;
 	id_tag = "ninja_shuttle_dock_airlock";
 	pixel_y = 26;
-	req_access = list(0);
 	tag_airpump = "ninja_shuttle_dock_pump";
 	tag_chamber_sensor = "ninja_shuttle_dock_sensor";
 	tag_exterior_door = "ninja_shuttle_dock_outer";
@@ -22117,13 +22000,11 @@
 	id_tag = "d1aft_port_outer";
 	locked = 1;
 	name = "Dock External Airlock";
-	req_access = list(13)
 	},
 /obj/machinery/button/access/exterior{
 	id_tag = "d1aft_port_airlock";
 	name = "exterior access button";
 	pixel_y = -26;
-	req_access = list(13)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22155,7 +22036,6 @@
 	id_tag = "d1aft_port_inner";
 	locked = 1;
 	name = "Dock Internal Airlock";
-	req_access = list(13)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22294,7 +22174,6 @@
 	name = "exterior access button";
 	pixel_x = -26;
 	pixel_y = -26;
-	req_access = list(13)
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22340,7 +22219,6 @@
 	id_tag = "ninja_shuttle_dock_inner";
 	locked = 1;
 	name = "Dock Internal Airlock";
-	req_access = list(13)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22370,7 +22248,6 @@
 	id_tag = "ninja_shuttle_dock_outer";
 	locked = 1;
 	name = "Dock External Airlock";
-	req_access = list(13)
 	},
 /obj/machinery/button/access/shuttle/exterior{
 	id_tag = "ninja_shuttle_dock_airlock";
@@ -22390,7 +22267,6 @@
 	id_tag = "skipjack_shuttle_dock_inner";
 	locked = 1;
 	name = "Dock Internal Airlock";
-	req_access = list(13)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22436,7 +22312,6 @@
 	id_tag = "d1aft_starboard_inner";
 	locked = 1;
 	name = "Dock Internal Airlock";
-	req_access = list(13)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22577,7 +22452,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "d1aft_starboard_airlock";
 	pixel_x = -26;
-	req_access = list(13);
 	tag_airpump = "d1aft_starboard_pump";
 	tag_chamber_sensor = "d1aft_starboard_sensor";
 	tag_exterior_door = "d1aft_starboard_outer";
@@ -22611,7 +22485,6 @@
 	id_tag = "skipjack_shuttle_dock_outer";
 	locked = 1;
 	name = "Dock External Airlock";
-	req_access = list(13)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22623,7 +22496,6 @@
 	id_tag = "skipjack_shuttle_dock_outer";
 	locked = 1;
 	name = "Dock External Airlock";
-	req_access = list(13)
 	},
 /obj/machinery/button/access/shuttle/exterior{
 	id_tag = "skipjack_shuttle_dock_airlock";
@@ -22640,13 +22512,11 @@
 	id_tag = "d1aft_starboard_outer";
 	locked = 1;
 	name = "Dock External Airlock";
-	req_access = list(13)
 	},
 /obj/machinery/button/access/exterior{
 	id_tag = "d1aft_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = -26;
-	req_access = list(13)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22658,7 +22528,6 @@
 	id_tag = "d1aft_starboard_outer";
 	locked = 1;
 	name = "Dock External Airlock";
-	req_access = list(13)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22733,7 +22602,6 @@
 	id_tag = "expshuttle2_door_cargo";
 	name = "Rear Hatch Control";
 	pixel_x = 26;
-	req_access = list(67)
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -22768,7 +22636,6 @@
 	frequency = 1331;
 	id_tag = "skipjack_shuttle_dock_airlock";
 	pixel_x = 28;
-	req_access = list(0);
 	tag_airpump = "skipjack_shuttle_dock_pump";
 	tag_chamber_sensor = "skipjack_shuttle_dock_sensor";
 	tag_exterior_door = "skipjack_shuttle_dock_outer";
@@ -23159,7 +23026,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research{
 	name = "Xenoflora Research";
-	req_access = list(55)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/xenobiology/xenoflora)
@@ -23271,7 +23137,6 @@
 	},
 /obj/machinery/door/airlock/research{
 	name = "Xenoflora Isolation";
-	req_access = list(55)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/xenobiology/xenoflora)
@@ -23364,7 +23229,6 @@
 	id_tag = "escape_pod_5_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 5";
-	req_access = list(13)
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
@@ -23932,7 +23796,6 @@
 	},
 /obj/machinery/door/airlock/research{
 	name = "Xenoflora Research";
-	req_access = list(55)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/xenobiology/xenoflora)
@@ -23946,7 +23809,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/research{
 	name = "Xenoflora Research";
-	req_access = list(55)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/xenobiology/xenoflora)
@@ -24790,7 +24652,6 @@
 	},
 /obj/machinery/door/window/brigdoor/northleft{
 	name = "Containment Pen";
-	req_access = list(47)
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -24846,7 +24707,6 @@
 	},
 /obj/machinery/door/window/brigdoor/northleft{
 	name = "Containment Pen";
-	req_access = list(47)
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -24919,9 +24779,7 @@
 /area/hallway/secondary/escape/firstdeck/ep_starboard1)
 "dYI" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
 "dYJ" = (
@@ -25000,7 +24858,6 @@
 	id_tag = "xenobio6station";
 	name = "Containment Blast Doors";
 	pixel_y = 4;
-	req_access = list(55)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
@@ -25027,7 +24884,6 @@
 	id_tag = "xenobio5station";
 	name = "Containment Blast Doors";
 	pixel_y = 4;
-	req_access = list(55)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
@@ -25039,7 +24895,6 @@
 	id_tag = "xenobioout7station";
 	name = "Containment Divider Switch";
 	pixel_y = 28;
-	req_access = list(55)
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/light{
@@ -25353,7 +25208,6 @@
 	},
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Containment Pen";
-	req_access = list(47)
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/xenobiology)
@@ -25377,7 +25231,6 @@
 	},
 /obj/machinery/door/window/brigdoor/eastright{
 	name = "Containment Pen";
-	req_access = list(47)
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -25462,7 +25315,6 @@
 	id_tag = "xenobio2station";
 	name = "Containment Blast Doors";
 	pixel_y = 4;
-	req_access = list(55)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
@@ -25505,7 +25357,6 @@
 	name = "Xenobiology Access Button";
 	pixel_x = -26;
 	pixel_y = 6;
-	req_access = list(55)
 	},
 /obj/machinery/door/airlock/research{
 	autoclose = 0;
@@ -25513,7 +25364,6 @@
 	id_tag = "xenostation_airlock_exterior";
 	locked = 1;
 	name = "Xenobiology External Airlock";
-	req_access = list(55)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/xenobiology)
@@ -25754,7 +25604,6 @@
 	id_tag = "xenobio1station";
 	name = "Containment Blast Doors";
 	pixel_y = 4;
-	req_access = list(55)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
@@ -25864,13 +25713,11 @@
 	id_tag = "xenostation_airlock_interior";
 	locked = 1;
 	name = "Xenobiology Internal Airlock";
-	req_access = list(55)
 	},
 /obj/machinery/button/access/interior{
 	id_tag = "xenostation_airlock_control";
 	name = "Xenobiology Access Button";
 	pixel_y = -26;
-	req_access = list(55)
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -25930,7 +25777,6 @@
 "eat" = (
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Containment Pen";
-	req_access = list(47)
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -25953,7 +25799,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/window/brigdoor/eastright{
 	name = "Containment Pen";
-	req_access = list(47)
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -26015,7 +25860,6 @@
 	id_tag = "xenobiocontainstation";
 	name = "Containment Switch";
 	pixel_y = -6;
-	req_access = null
 	},
 /turf/simulated/wall/r_wall,
 /area/rnd/xenobiology)
@@ -26116,9 +25960,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = null
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
 "eaL" = (
@@ -26165,7 +26007,6 @@
 	id_tag = "xenobio3station";
 	name = "Containment Blast Doors";
 	pixel_y = 4;
-	req_access = list(55)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
@@ -26175,7 +26016,6 @@
 	},
 /obj/machinery/door/window/brigdoor/northright{
 	name = "Containment Pen";
-	req_access = list(47)
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -26194,7 +26034,6 @@
 	id_tag = "xenobio4station";
 	name = "Containment Blast Doors";
 	pixel_y = 4;
-	req_access = list(55)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
@@ -26240,7 +26079,6 @@
 	id_tag = "xenobiostationext";
 	name = "Containment Release Switch";
 	pixel_x = 28;
-	req_access = list(55)
 	},
 /obj/structure/hygiene/sink{
 	dir = 4;
@@ -26289,7 +26127,6 @@
 	},
 /obj/machinery/door/window/brigdoor/southright{
 	name = "Containment Pen";
-	req_access = list(47)
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -26342,7 +26179,6 @@
 	},
 /obj/machinery/door/window/brigdoor/southright{
 	name = "Containment Pen";
-	req_access = list(47)
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
