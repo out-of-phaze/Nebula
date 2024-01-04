@@ -33,7 +33,7 @@
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/firstdeck/auxdockfore)
 "aak" = (
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/hallway/primary/firstdeck/auxdockfore)
 "aam" = (
 /obj/machinery/door/firedoor,
@@ -399,11 +399,11 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/maintenance/firstdeck/foreport)
 "abe" = (
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/maintenance/firstdeck/foreport)
 "abf" = (
 /obj/effect/floor_decal/borderfloor{
@@ -576,7 +576,7 @@
 /area/shuttle/escape_pod2/station)
 "abw" = (
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/maintenance/firstdeck/forestarboard)
 "abx" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -589,7 +589,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/maintenance/firstdeck/forestarboard)
 "aby" = (
 /obj/machinery/door/airlock/external{
@@ -3836,7 +3836,7 @@
 	dir = 4;
 	icon_state = "propulsion_r"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod2/station)
 "air" = (
@@ -3882,7 +3882,7 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod2/station)
 "aix" = (
@@ -5252,7 +5252,7 @@
 /turf/simulated/wall/r_wall,
 /area/maintenance/firstdeck/centralstarboard)
 "als" = (
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/maintenance/firstdeck/centralport)
 "alt" = (
 /turf/simulated/shuttle/wall,
@@ -5488,7 +5488,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/shuttle/large_escape_pod2/station)
 "amb" = (
 /obj/machinery/vending/fitness{
@@ -5753,7 +5753,7 @@
 	dir = 4;
 	icon_state = "propulsion_l"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod2/station)
 "amO" = (
@@ -5761,7 +5761,7 @@
 	dir = 8;
 	icon_state = "propulsion_l"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod1/station)
 "amP" = (
@@ -5777,7 +5777,7 @@
 /turf/simulated/floor/tiled,
 /area/hangar/three)
 "amQ" = (
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/rnd/xenobiology/xenoflora)
 "amR" = (
 /obj/structure/bed/chair{
@@ -6168,7 +6168,7 @@
 	icon_state = "map_vent_out";
 	use_power = 1
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/rnd/xenobiology/xenoflora)
 "anC" = (
 /obj/machinery/door/firedoor,
@@ -6857,7 +6857,7 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod1/station)
 "aoU" = (
@@ -11726,7 +11726,7 @@
 	dir = 8;
 	icon_state = "propulsion_r"
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/large_escape_pod1/station)
 "ayd" = (
@@ -15097,7 +15097,7 @@
 /turf/simulated/shuttle/wall/no_join,
 /area/shuttle/large_escape_pod1/station)
 "aED" = (
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/maintenance/firstdeck/centralstarboard)
 "aEE" = (
 /obj/effect/floor_decal/borderfloor{
@@ -15526,7 +15526,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/shuttle/large_escape_pod1/station)
 "aFF" = (
 /obj/structure/window/reinforced{
@@ -21455,7 +21455,7 @@
 /turf/simulated/wall/r_wall,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "aRI" = (
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftport)
 "aRJ" = (
 /turf/simulated/shuttle/wall,
@@ -21633,7 +21633,7 @@
 /turf/simulated/shuttle/wall/no_join,
 /area/shuttle/escape_pod5/station)
 "aSe" = (
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "aSg" = (
 /obj/structure/grille,
@@ -23871,7 +23871,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/firstdeck/hallway)
 "bhg" = (
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/space)
 "bmq" = (
 /turf/simulated/wall,
@@ -26202,7 +26202,7 @@
 	dir = 4
 	},
 /obj/machinery/shield_diffuser,
-/turf/simulated/floor/airless,
+/turf/simulated/floor,
 /area/rnd/xenobiology)
 "dYH" = (
 /obj/item/radio/intercom{
