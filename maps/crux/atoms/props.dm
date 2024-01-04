@@ -8,7 +8,6 @@
 
 // TODO: port AI multicam system
 /obj/abstract/landmark/ai_multicam_room
-/turf/unsimulated/ai_visible
 
 // TODO: port engine submap loader.
 /obj/abstract/landmark/engine_loader
@@ -88,10 +87,6 @@
 
 // TODO implement passive vents
 /obj/machinery/atmospherics/pipe/vent
-
-// TODO port rigs
-/obj/item/rig/breacher
-/obj/item/rig/internalaffairs
 
 // TODO port tabloids
 /obj/item/tabloid

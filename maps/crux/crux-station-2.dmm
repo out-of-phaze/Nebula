@@ -4487,7 +4487,7 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod7/station)
 "dKB" = (
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod7/station)
 "dKC" = (
 /obj/structure/shuttle/engine/propulsion/burst{
@@ -4685,7 +4685,7 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod8/station)
 "dLg" = (
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod8/station)
 "dLh" = (
 /obj/structure/grille,
@@ -4701,7 +4701,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod7/station)
 "dLi" = (
 /obj/structure/bed/chair{
@@ -4719,7 +4719,7 @@
 	pixel_y = -25;
 	tag_door = "escape_pod_7_hatch"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod7/station)
 "dLj" = (
 /obj/structure/bed/chair{
@@ -4733,7 +4733,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = -32
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod7/station)
 "dLl" = (
 /obj/machinery/door/airlock/external{
@@ -4742,7 +4742,7 @@
 	locked = 1;
 	name = "Escape Pod Hatch 7";
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod7/station)
 "dLm" = (
 /obj/machinery/door/airlock/external/glass{
@@ -5016,7 +5016,7 @@
 	locked = 1;
 	name = "Escape Pod Hatch 8";
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod8/station)
 "dLO" = (
 /obj/structure/bed/chair{
@@ -5029,7 +5029,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = 32
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod8/station)
 "dLP" = (
 /obj/structure/bed/chair{
@@ -5047,7 +5047,7 @@
 	pixel_y = 25;
 	tag_door = "escape_pod_8_hatch"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod8/station)
 "dLQ" = (
 /obj/structure/grille,
@@ -5063,7 +5063,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod8/station)
 "dLR" = (
 /obj/structure/sign/warning/pods{
@@ -9716,7 +9716,7 @@
 	pixel_y = -30
 	},
 /obj/effect/polaris_placeholder_landmark/escape_pod7/station,
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod7/station)
 "edE" = (
 /obj/structure/cable{
@@ -9745,7 +9745,7 @@
 	pixel_y = 30
 	},
 /obj/effect/polaris_placeholder_landmark/escape_pod8/station,
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod8/station)
 "edG" = (
 /obj/machinery/power/breakerbox/activated{

@@ -55,7 +55,7 @@
 	icon_state = "burst_r"
 	},
 /turf/simulated/floor,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/cryo/station)
 "aOv" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -63,7 +63,7 @@
 	icon_state = "burst_l"
 	},
 /turf/simulated/floor,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/cryo/station)
 "aRC" = (
 /obj/structure/disposalpipe/segment{
@@ -13789,7 +13789,6 @@
 	health = 1e+006
 	},
 /obj/item/clothing/mask/breath,
-/obj/item/rig/breacher,
 /obj/machinery/door/window/eastleft{
 	name = "E.V.A."
 	},
@@ -61024,7 +61023,7 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/cryo/station)
 "dmI" = (
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/cryo/station)
 "dmJ" = (
 /obj/effect/wingrille_spawn/reinforced,
@@ -61162,7 +61161,7 @@
 /turf/simulated/floor/plating,
 /area/construction/seconddeck/construction2)
 "dni" = (
-/turf/simulated/shuttle/wall/hard_corner,
+/turf/simulated/shuttle/wall,
 /area/shuttle/cryo/station)
 "dnj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -61475,7 +61474,7 @@
 /area/chapel/main)
 "dnP" = (
 /obj/machinery/ai_status_display,
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/cryo/station)
 "dnQ" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -61490,7 +61489,7 @@
 /obj/machinery/cryopod{
 	dir = 2
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/cryo/station)
 "dnR" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -61502,7 +61501,7 @@
 /obj/machinery/cryopod{
 	dir = 2
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/cryo/station)
 "dnS" = (
 /obj/structure/closet/emcloset,
@@ -61510,7 +61509,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/cryo/station)
 "dnT" = (
 /obj/structure/sign/directions/cryo{
@@ -61937,23 +61936,23 @@
 /obj/abstract/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/cryo/station)
 "doH" = (
 /obj/abstract/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/cryo/station)
 "doI" = (
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/cryo/station)
 "doJ" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "cryostorage_shuttle_hatch";
 	name = "Cryogenic Storage Hatch"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/cryo/station)
 "doK" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -61969,7 +61968,7 @@
 	dir = 1;
 	icon_state = "body_scanner_1"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/cryo/station)
 "doL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -62208,7 +62207,7 @@
 /obj/abstract/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/cryo/station)
 "dpu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -62393,7 +62392,7 @@
 /area/construction/seconddeck/construction2)
 "dpS" = (
 /obj/machinery/status_display,
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/cryo/station)
 "dpT" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -62406,7 +62405,7 @@
 	dir = 1;
 	icon_state = "body_scanner_1"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/cryo/station)
 "dpU" = (
 /obj/machinery/alarm{
@@ -62701,7 +62700,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning/cee,
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/cryo/station)
 "dqE" = (
 /obj/structure/cable{
@@ -62979,7 +62978,7 @@
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/cryo/station)
 "drh" = (
 /obj/structure/cable{
@@ -69142,7 +69141,7 @@
 /area/engineering/foyer)
 "ecT" = (
 /obj/effect/polaris_placeholder_landmark/cryostorage_station,
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/cryo/station)
 "ecU" = (
 /obj/machinery/atmospherics/valve/shutoff{

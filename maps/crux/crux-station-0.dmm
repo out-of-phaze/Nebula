@@ -228,7 +228,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod1/station)
 "aaN" = (
 /turf/simulated/shuttle/wall,
@@ -247,7 +247,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod2/station)
 "aaP" = (
 /obj/structure/table,
@@ -357,7 +357,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod1/station)
 "abb" = (
 /obj/structure/bed/chair{
@@ -375,7 +375,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod2/station)
 "abc" = (
 /obj/structure/lattice,
@@ -521,7 +521,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockfore)
 "abr" = (
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod1/station)
 "abs" = (
 /obj/structure/bed/chair{
@@ -536,13 +536,13 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod1/station)
 "abt" = (
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/firstdeck/fore)
 "abu" = (
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod2/station)
 "abv" = (
 /obj/structure/bed/chair{
@@ -557,7 +557,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod2/station)
 "abw" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -785,7 +785,7 @@
 "ace" = (
 /obj/structure/shuttle/engine/propulsion/burst,
 /turf/simulated/shuttle/wall,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod1/station)
 "acf" = (
 /obj/machinery/door/airlock/external{
@@ -794,12 +794,12 @@
 	locked = 1;
 	name = "Escape Pod 1 Hatch";
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod1/station)
 "acg" = (
 /obj/structure/shuttle/engine/propulsion/burst,
 /turf/simulated/shuttle/wall,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod2/station)
 "ach" = (
 /obj/machinery/door/airlock/external{
@@ -808,7 +808,7 @@
 	locked = 1;
 	name = "Escape Pod 2 Hatch";
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod2/station)
 "aci" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -2461,7 +2461,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle1/start)
 "afI" = (
 /obj/structure/grille,
@@ -2470,7 +2470,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle1/start)
 "afJ" = (
 /obj/structure/grille,
@@ -2483,7 +2483,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle1/start)
 "afK" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -2738,11 +2738,11 @@
 /turf/simulated/floor/tiled,
 /area/hangar/three)
 "agq" = (
-/turf/simulated/shuttle/wall/voidcraft/hard_corner,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle1/start)
 "agr" = (
 /obj/structure/flight_left,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "agt" = (
 /obj/structure/flight_right,
@@ -2753,7 +2753,7 @@
 	name = "Rear Hatch Control";
 	pixel_x = 26;
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "agu" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4,
@@ -3048,7 +3048,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle1/start)
 "agX" = (
 /obj/structure/table/reinforced,
@@ -3062,16 +3062,16 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = 32
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "agY" = (
 /obj/structure/bed/chair/comfy/blue{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "agZ" = (
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "aha" = (
 /obj/structure/table/reinforced,
@@ -3083,7 +3083,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "ahb" = (
 /obj/effect/floor_decal/borderfloor/corner,
@@ -3275,11 +3275,11 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/one)
 "ahB" = (
-/turf/simulated/shuttle/wall/voidcraft,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle1/start)
 "ahC" = (
 /obj/machinery/door/airlock/external/glass,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "ahE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3565,7 +3565,7 @@
 /area/hangar/one)
 "aim" = (
 /obj/structure/bed/chair/shuttle,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "ain" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3599,7 +3599,7 @@
 	icon_state = "propulsion_r"
 	},
 /turf/simulated/floor,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/large_escape_pod2/station)
 "air" = (
 /obj/structure/ladder,
@@ -3645,7 +3645,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/large_escape_pod2/station)
 "aix" = (
 /obj/item/storage/box/lights/mixed,
@@ -3704,7 +3704,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/one)
 "aiD" = (
-/turf/simulated/shuttle/wall/voidcraft/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle1/start)
 "aiE" = (
 /obj/machinery/light{
@@ -3713,7 +3713,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = -32
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "aiF" = (
 /obj/machinery/light{
@@ -3722,7 +3722,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = 32
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "aiG" = (
 /obj/effect/floor_decal/borderfloor{
@@ -3836,7 +3836,7 @@
 /obj/machinery/sleeper{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "aiX" = (
 /obj/structure/bed/chair/shuttle{
@@ -3846,13 +3846,13 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "aiY" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "aiZ" = (
 /obj/item/t_scanner,
@@ -3943,7 +3943,7 @@
 /area/hangar/one)
 "ajk" = (
 /obj/machinery/door/airlock/centcom,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "ajl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4118,7 +4118,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/one)
 "ajF" = (
-/turf/simulated/shuttle/wall/voidcraft/blue,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle1/start)
 "ajG" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -4135,7 +4135,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "ajJ" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -4153,7 +4153,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	id_tag = "shuttle1_pump"
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "ajK" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -4166,7 +4166,7 @@
 	id_tag = "shuttle1_sensor";
 	pixel_y = 28
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "ajL" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -4368,7 +4368,7 @@
 	name = "Side Hatch Control";
 	pixel_y = -26
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "aki" = (
 /obj/machinery/door/airlock/external/bolted{
@@ -4383,7 +4383,7 @@
 	name = "interior access button";
 	pixel_y = -26;
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "akj" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -4391,7 +4391,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
 /obj/machinery/meter,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "akk" = (
 /obj/structure/bed/chair{
@@ -4403,7 +4403,7 @@
 /obj/effect/polaris_placeholder_landmark/escape_pod1/station{
 	base_area = /area/hallway/primary/firstdeck/auxdockfore
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod1/station)
 "akl" = (
 /obj/machinery/door/airlock/external/bolted{
@@ -4415,7 +4415,7 @@
 	name = "exterior access button";
 	pixel_y = 26;
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "akm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4667,7 +4667,7 @@
 /area/hangar/one)
 "akN" = (
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "akO" = (
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -4675,11 +4675,11 @@
 	dir = 8
 	},
 /obj/machinery/light,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "akP" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
-/turf/simulated/shuttle/wall/voidcraft,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle1/start)
 "akQ" = (
 /obj/machinery/light,
@@ -4690,7 +4690,7 @@
 	dir = 1;
 	id_tag = "shuttle1_pump"
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "akR" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -4701,7 +4701,7 @@
 	id_tag = "shuttle1_pump"
 	},
 /obj/structure/closet/emcloset,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "akT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4961,14 +4961,14 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/large_escape_pod2/station)
 "alu" = (
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/large_escape_pod2/station)
 "alv" = (
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "burst_l"
 	},
 /turf/simulated/floor/reinforced,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle1/start)
 "alw" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -5002,26 +5002,26 @@
 "alz" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/space_heater,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "alA" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle1/start)
 "alB" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
-/turf/simulated/shuttle/wall/voidcraft/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle1/start)
 "alC" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "alD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -5114,7 +5114,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "alR" = (
-/turf/simulated/shuttle/wall/hard_corner,
+/turf/simulated/shuttle/wall,
 /area/shuttle/large_escape_pod2/station)
 "alS" = (
 /obj/structure/bed/chair,
@@ -5123,30 +5123,30 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod2/station)
 "alT" = (
 /obj/structure/bed/chair,
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod2/station)
 "alU" = (
 /obj/structure/bed/chair,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod2/station)
 "alV" = (
 /obj/item/radio/intercom/department_medbay{
 	pixel_y = 21
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod2/station)
 "alW" = (
 /obj/machinery/sleeper{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod2/station)
 "alX" = (
 /obj/structure/table,
@@ -5160,14 +5160,14 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod2/station)
 "alY" = (
 /obj/structure/bed/chair,
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = 32
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod2/station)
 "alZ" = (
 /obj/structure/window/reinforced{
@@ -5175,7 +5175,7 @@
 	health = 1e+006
 	},
 /obj/structure/bed/chair,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod2/station)
 "ama" = (
 /obj/structure/shuttle/engine/heater{
@@ -5267,23 +5267,23 @@
 "amm" = (
 /obj/structure/grille,
 /obj/structure/shuttle/window,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/large_escape_pod2/station)
 "amn" = (
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod2/station)
 "amo" = (
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod2/station)
 "amp" = (
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod2/station)
 "amq" = (
 /obj/structure/extinguisher_cabinet{
@@ -5303,7 +5303,7 @@
 	icon_state = "burst_r"
 	},
 /turf/simulated/floor/reinforced,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle1/start)
 "ams" = (
 /obj/machinery/vending/cigarette{
@@ -5445,7 +5445,7 @@
 	icon_state = "propulsion_l"
 	},
 /turf/simulated/floor,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/large_escape_pod2/station)
 "amO" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -5453,7 +5453,7 @@
 	icon_state = "propulsion_l"
 	},
 /turf/simulated/floor,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/large_escape_pod1/station)
 "amP" = (
 /obj/structure/extinguisher_cabinet{
@@ -5478,7 +5478,7 @@
 	name = "Emergency NanoMed";
 	pixel_x = -28
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod2/station)
 "amS" = (
 /obj/structure/bed/chair{
@@ -5487,14 +5487,14 @@
 /obj/machinery/ai_status_display{
 	pixel_y = -32
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod2/station)
 "amT" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
 /obj/machinery/light,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod2/station)
 "amU" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -5504,7 +5504,7 @@
 	pixel_y = -26;
 	tag_door = "large_escape_pod_2_hatch"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod2/station)
 "amV" = (
 /obj/structure/table,
@@ -5516,7 +5516,7 @@
 /obj/item/chems/spray/extinguisher,
 /obj/item/crowbar,
 /obj/random/medical/lite,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod2/station)
 "amW" = (
 /obj/structure/bed/chair{
@@ -5525,7 +5525,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = -32
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod2/station)
 "amX" = (
 /obj/structure/window/reinforced{
@@ -5535,7 +5535,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod2/station)
 "amY" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -5857,7 +5857,7 @@
 	locked = 1;
 	name = "Large Escape Pod Hatch 2";
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod2/station)
 "anE" = (
 /obj/effect/floor_decal/borderfloor{
@@ -6484,7 +6484,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/large_escape_pod1/station)
 "aoU" = (
 /obj/structure/cable/cyan{
@@ -8403,7 +8403,7 @@
 	icon_state = "propulsion_r"
 	},
 /turf/simulated/floor/reinforced,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle2/start)
 "atg" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -10861,7 +10861,7 @@
 	icon_state = "propulsion_l"
 	},
 /turf/simulated/floor/reinforced,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle2/start)
 "axJ" = (
 /obj/machinery/door/firedoor,
@@ -11003,7 +11003,7 @@
 	icon_state = "propulsion_r"
 	},
 /turf/simulated/floor,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/large_escape_pod1/station)
 "ayd" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -12021,11 +12021,11 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "aAy" = (
 /obj/machinery/atmospherics/pipe/manifold/visible,
-/turf/simulated/shuttle/wall/voidcraft/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle1/start)
 "aAz" = (
 /turf/simulated/wall/r_wall,
@@ -13338,7 +13338,7 @@
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle1/start)
 "aDe" = (
 /obj/effect/floor_decal/borderfloor{
@@ -14151,7 +14151,7 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/large_escape_pod1/station)
 "aEA" = (
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/large_escape_pod1/station)
 "aEB" = (
 /obj/machinery/door/airlock/external{
@@ -14160,13 +14160,13 @@
 	locked = 1;
 	name = "Large Escape Pod Hatch 1";
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod1/station)
 "aEC" = (
 /obj/structure/sign/department/greencross{
 	name = "Medical Pod"
 	},
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/large_escape_pod1/station)
 "aED" = (
 /turf/simulated/floor,
@@ -14596,18 +14596,18 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
 "aFG" = (
 /obj/structure/bed/roller,
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = 32
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
 "aFH" = (
 /obj/structure/bed/roller,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
 "aFI" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -14617,24 +14617,24 @@
 	pixel_y = 26;
 	tag_door = "large_escape_pod_1_hatch"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod1/station)
 "aFJ" = (
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod1/station)
 "aFK" = (
 /obj/structure/bed/chair,
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
 "aFL" = (
 /obj/structure/bed/chair,
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
 "aFM" = (
 /obj/structure/bed/chair,
@@ -14642,10 +14642,10 @@
 	name = "Emergency NanoMed";
 	pixel_x = 28
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
 "aFN" = (
-/turf/simulated/shuttle/wall/hard_corner,
+/turf/simulated/shuttle/wall,
 /area/shuttle/large_escape_pod1/station)
 "aFO" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -14669,7 +14669,7 @@
 /obj/effect/polaris_placeholder_landmark/escape_pod2/station{
 	base_area = /area/hallway/primary/firstdeck/auxdockfore
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod2/station)
 "aFR" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -14973,7 +14973,7 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/wall,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod3/station)
 "aGB" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -14989,25 +14989,25 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/wall,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod5/station)
 "aGD" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod1/station)
 "aGE" = (
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
 "aGF" = (
 /obj/structure/grille,
 /obj/structure/shuttle/window,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/large_escape_pod1/station)
 "aGG" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -15288,10 +15288,10 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/wall,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod4/station)
 "aHk" = (
-/turf/simulated/shuttle/wall/voidcraft/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle2/start)
 "aHm" = (
 /obj/effect/floor_decal/borderfloor{
@@ -15311,7 +15311,7 @@
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
 "aHo" = (
 /obj/structure/table,
@@ -15320,7 +15320,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = -32
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
 "aHp" = (
 /obj/structure/closet/crate/medical,
@@ -15361,27 +15361,27 @@
 /obj/item/chems/ivbag,
 /obj/item/chems/ivbag,
 /obj/machinery/light,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
 "aHq" = (
 /obj/machinery/sleeper{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod1/station)
 "aHr" = (
 /obj/item/radio/intercom/department_medbay{
 	dir = 1;
 	pixel_y = -21
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod1/station)
 "aHs" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
 /obj/machinery/light,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
 "aHt" = (
 /obj/structure/bed/chair{
@@ -15390,7 +15390,7 @@
 /obj/machinery/status_display{
 	pixel_y = -32
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
 "aHu" = (
 /obj/structure/bed/chair{
@@ -15400,7 +15400,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
 "aHv" = (
 /obj/machinery/status_display{
@@ -15574,7 +15574,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/two)
 "aHO" = (
-/turf/simulated/shuttle/wall/voidcraft/blue,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle2/start)
 "aHP" = (
 /turf/simulated/floor/tiled,
@@ -15583,7 +15583,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
-/turf/simulated/shuttle/wall/voidcraft/hard_corner,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle2/start)
 "aHR" = (
 /obj/machinery/teleport/station,
@@ -15597,7 +15597,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/wall,
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod6/station)
 "aHT" = (
 /obj/machinery/teleport/hub,
@@ -15608,14 +15608,14 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/tcomm/entrance)
 "aHU" = (
-/turf/simulated/shuttle/wall/voidcraft/hard_corner,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle2/start)
 "aHV" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle2/start)
 "aHW" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -15955,7 +15955,7 @@
 	id_tag = "shuttle2_pump"
 	},
 /obj/structure/closet/emcloset,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aIC" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -15967,17 +15967,17 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	id_tag = "shuttle2_pump"
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aID" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
-/turf/simulated/shuttle/wall/voidcraft,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle2/start)
 "aIE" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aIF" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -15989,7 +15989,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aIG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -16421,7 +16421,7 @@
 	name = "exterior access button";
 	pixel_y = -26;
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aJt" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -16437,7 +16437,7 @@
 	landmark_tag = "hangar_1";
 	name = "Hangar One"
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle1/start)
 "aJu" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -16445,7 +16445,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
 /obj/machinery/meter,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aJv" = (
 /obj/machinery/door/airlock/external/bolted{
@@ -16460,7 +16460,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 9
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aJx" = (
 /obj/machinery/button/alternate/door{
@@ -16474,7 +16474,7 @@
 	locked = 1;
 	name = "shuttle side hatch"
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aJy" = (
 /obj/effect/floor_decal/borderfloor{
@@ -16762,7 +16762,7 @@
 	dir = 1;
 	id_tag = "shuttle2_pump"
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aKg" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -16781,7 +16781,7 @@
 	dir = 1;
 	id_tag = "shuttle2_pump"
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aKh" = (
 /obj/structure/grille,
@@ -16797,13 +16797,13 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle2/start)
 "aKi" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aKj" = (
 /obj/structure/closet/walllocker/emerglocker{
@@ -16950,7 +16950,7 @@
 /area/hangar/two)
 "aKD" = (
 /obj/machinery/door/airlock/centcom,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aKE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -17125,7 +17125,7 @@
 /area/hangar/two)
 "aKZ" = (
 /obj/structure/bed/chair/shuttle,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aLa" = (
 /obj/structure/bed/chair/shuttle,
@@ -17134,13 +17134,13 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aLc" = (
 /obj/machinery/sleeper{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aLe" = (
 /obj/machinery/light/small{
@@ -17295,7 +17295,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = -32
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aLz" = (
 /obj/machinery/light{
@@ -17304,7 +17304,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = 32
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aLA" = (
 /obj/machinery/ai_status_display{
@@ -17503,7 +17503,7 @@
 /obj/structure/bed/chair/shuttle{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aLY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -17720,7 +17720,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aMA" = (
 /obj/random/obstruction,
@@ -17762,11 +17762,11 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/two)
 "aMF" = (
-/turf/simulated/shuttle/wall/voidcraft,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle2/start)
 "aMG" = (
 /obj/machinery/door/airlock/external/glass,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aMH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -18022,11 +18022,11 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aNm" = (
 /obj/structure/bed/chair/comfy/blue,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aNn" = (
 /obj/structure/table/reinforced,
@@ -18039,7 +18039,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = -32
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aNp" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -18495,16 +18495,16 @@
 	name = "Rear Hatch Control";
 	pixel_x = -26;
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aOm" = (
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aOn" = (
 /obj/structure/flight_left{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aOo" = (
 /obj/machinery/light/spot,
@@ -18844,7 +18844,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle2/start)
 "aPe" = (
 /obj/structure/grille,
@@ -18853,7 +18853,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle2/start)
 "aPf" = (
 /obj/structure/grille,
@@ -18866,7 +18866,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle2/start)
 "aPg" = (
 /obj/structure/closet/emcloset,
@@ -20207,7 +20207,7 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod3/station)
 "aRK" = (
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod3/station)
 "aRL" = (
 /obj/item/storage/box/lights/mixed,
@@ -20370,7 +20370,7 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod5/station)
 "aSd" = (
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod5/station)
 "aSe" = (
 /turf/simulated/floor,
@@ -20389,7 +20389,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod3/station)
 "aSh" = (
 /obj/structure/cable/green{
@@ -20413,11 +20413,11 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = -32
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod3/station)
 "aSj" = (
 /obj/effect/polaris_placeholder_landmark/large_escape_pod2/station,
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod2/station)
 "aSk" = (
 /obj/machinery/door/airlock/external{
@@ -20426,7 +20426,7 @@
 	locked = 1;
 	name = "Escape Pod Hatch 3";
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod3/station)
 "aSl" = (
 /obj/machinery/door/airlock/external/glass{
@@ -20598,11 +20598,11 @@
 	locked = 1;
 	name = "Escape Pod Hatch 5";
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod5/station)
 "aSB" = (
 /obj/effect/polaris_placeholder_landmark/large_escape_pod1/station,
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod1/station)
 "aSC" = (
 /obj/structure/bed/chair{
@@ -20615,7 +20615,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = 32
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod5/station)
 "aSD" = (
 /obj/structure/bed/chair{
@@ -20633,7 +20633,7 @@
 	pixel_y = 25;
 	tag_door = "escape_pod_5_hatch"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod5/station)
 "aSE" = (
 /obj/structure/grille,
@@ -20649,7 +20649,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod5/station)
 "aSF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -21003,7 +21003,7 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod4/station)
 "aTm" = (
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod4/station)
 "aTn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
@@ -21128,7 +21128,7 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod6/station)
 "aTF" = (
-/turf/simulated/shuttle/wall/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod6/station)
 "aTG" = (
 /obj/structure/grille,
@@ -21144,7 +21144,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod4/station)
 "aTH" = (
 /obj/structure/bed/chair{
@@ -21162,7 +21162,7 @@
 	pixel_y = -25;
 	tag_door = "escape_pod_4_hatch"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod4/station)
 "aTI" = (
 /obj/structure/bed/chair{
@@ -21176,7 +21176,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = -32
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod4/station)
 "aTJ" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -21192,7 +21192,7 @@
 	landmark_tag = "hangar_2";
 	name = "Hangar Two"
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "aTK" = (
 /obj/machinery/door/airlock/external{
@@ -21201,7 +21201,7 @@
 	locked = 1;
 	name = "Escape Pod Hatch 4";
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod4/station)
 "aTL" = (
 /obj/machinery/door/airlock/external/glass{
@@ -21373,7 +21373,7 @@
 	locked = 1;
 	name = "Escape Pod Hatch 6";
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod6/station)
 "aUc" = (
 /obj/effect/polaris_placeholder_landmark/supply_station,
@@ -21390,7 +21390,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = 32
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod6/station)
 "aUe" = (
 /obj/structure/bed/chair{
@@ -21408,7 +21408,7 @@
 	pixel_y = 25;
 	tag_door = "escape_pod_6_hatch"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod6/station)
 "aUf" = (
 /obj/structure/grille,
@@ -21424,7 +21424,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/escape_pod6/station)
 "aUg" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -22580,7 +22580,7 @@
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 1
 	},
-/turf/simulated/shuttle/wall/voidcraft/no_join,
+/turf/simulated/shuttle/wall,
 /area/shuttle/shuttle2/start)
 "brr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -22606,14 +22606,14 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "bsm" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/shuttle/plating,
 /area/shuttle/shuttle2/start)
 "btc" = (
 /obj/structure/table/reinforced,
@@ -22652,7 +22652,7 @@
 	dir = 1
 	},
 /obj/machinery/space_heater,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle2/start)
 "bwD" = (
 /obj/machinery/computer/modular/preset/security{
@@ -22820,7 +22820,7 @@
 	pixel_y = -25;
 	tag_door = "escape_pod_3_hatch"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod3/station)
 "bFF" = (
 /obj/machinery/portable_atmospherics/hydroponics,
@@ -23277,7 +23277,7 @@
 /obj/effect/polaris_placeholder_landmark/escape_pod3/station{
 	base_area = /area/hallway/secondary/escape/firstdeck/ep_aftport
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod3/station)
 "dLk" = (
 /obj/structure/bed/chair{
@@ -23290,7 +23290,7 @@
 /obj/effect/polaris_placeholder_landmark/escape_pod5/station{
 	base_area = /area/hallway/secondary/escape/firstdeck/ep_aftstarboard
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod5/station)
 "dOZ" = (
 /obj/machinery/botany/extractor,
@@ -23311,7 +23311,7 @@
 /obj/effect/polaris_placeholder_landmark/escape_pod4/station{
 	base_area = /area/hallway/secondary/escape/firstdeck/ep_aftport
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod4/station)
 "dVs" = (
 /obj/structure/cable/green{
@@ -24872,7 +24872,7 @@
 /obj/effect/polaris_placeholder_landmark/escape_pod6/station{
 	base_area = /area/hallway/secondary/escape/firstdeck/ep_aftstarboard
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod6/station)
 "dYQ" = (
 /obj/structure/table/reinforced,
