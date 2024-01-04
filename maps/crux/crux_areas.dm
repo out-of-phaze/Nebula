@@ -685,12 +685,6 @@
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/airless
 
-/area/shuttle/escape_pod1/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod1/transit
-	icon_state = "shuttle"
-
 /area/shuttle/escape_pod2
 	name = "\improper Escape Pod Two"
 //	music = "music/escape.ogg"
@@ -698,12 +692,6 @@
 /area/shuttle/escape_pod2/station
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod2/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod2/transit
-	icon_state = "shuttle"
 
 /area/shuttle/escape_pod3
 	name = "\improper Escape Pod Three"
@@ -713,12 +701,6 @@
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/airless
 
-/area/shuttle/escape_pod3/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod3/transit
-	icon_state = "shuttle"
-
 /area/shuttle/escape_pod4
 	name = "\improper Escape Pod Four"
 //	music = "music/escape.ogg"
@@ -726,12 +708,6 @@
 /area/shuttle/escape_pod4/station
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod4/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod4/transit
-	icon_state = "shuttle"
 
 /area/shuttle/escape_pod5
 	name = "\improper Escape Pod Five"
@@ -741,12 +717,6 @@
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/airless
 
-/area/shuttle/escape_pod5/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod5/transit
-	icon_state = "shuttle"
-
 /area/shuttle/escape_pod6
 	name = "\improper Escape Pod Six"
 //	music = "music/escape.ogg"
@@ -754,12 +724,6 @@
 /area/shuttle/escape_pod6/station
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod6/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod6/transit
-	icon_state = "shuttle"
 
 /area/shuttle/escape_pod7
 	name = "\improper Escape Pod Seven"
@@ -769,12 +733,6 @@
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/reinforced/airless
 
-/area/shuttle/escape_pod7/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod7/transit
-	icon_state = "shuttle"
-
 /area/shuttle/escape_pod8
 	name = "\improper Escape Pod Eight"
 //	music = "music/escape.ogg"
@@ -782,12 +740,6 @@
 /area/shuttle/escape_pod8/station
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/reinforced/airless
-
-/area/shuttle/escape_pod8/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod8/transit
-	icon_state = "shuttle"
 
 //Large Escape Pods
 

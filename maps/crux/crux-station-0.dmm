@@ -57,7 +57,7 @@
 	icon_state = "door_locked";
 	id_tag = "d1fore_port2_outer";
 	locked = 1;
-	name = "Dock External Airlock";
+	name = "Dock External Airlock"
 	},
 /obj/machinery/button/access/exterior{
 	id_tag = "d1fore_port2_airlock";
@@ -290,7 +290,7 @@
 	icon_state = "door_locked";
 	id_tag = "d1fore_port2_inner";
 	locked = 1;
-	name = "Dock Internal Airlock";
+	name = "Dock Internal Airlock"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -387,7 +387,7 @@
 /obj/machinery/button/access/exterior{
 	id_tag = "d1fore_port_airlock";
 	name = "exterior access button";
-	pixel_x = -26;
+	pixel_x = -26
 	},
 /obj/machinery/light/small{
 	dir = 8
@@ -520,9 +520,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockfore)
-"abr" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod1/station)
 "abs" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -541,9 +538,6 @@
 "abt" = (
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/firstdeck/fore)
-"abu" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod2/station)
 "abv" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -568,7 +562,7 @@
 /obj/machinery/button/access/exterior{
 	id_tag = "d1fore_starboard_airlock";
 	name = "exterior access button";
-	pixel_x = 26;
+	pixel_x = 26
 	},
 /obj/machinery/light/small{
 	dir = 4
@@ -580,7 +574,7 @@
 	icon_state = "door_locked";
 	id_tag = "d1fore_port_outer";
 	locked = 1;
-	name = "External Airlock Access";
+	name = "External Airlock Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
@@ -628,7 +622,7 @@
 	icon_state = "door_locked";
 	id_tag = "d1fore_starboard_outer";
 	locked = 1;
-	name = "External Airlock Access";
+	name = "External Airlock Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
@@ -792,7 +786,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_1_hatch";
 	locked = 1;
-	name = "Escape Pod 1 Hatch";
+	name = "Escape Pod 1 Hatch"
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod1/station)
@@ -806,7 +800,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_2_hatch";
 	locked = 1;
-	name = "Escape Pod 2 Hatch";
+	name = "Escape Pod 2 Hatch"
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod2/station)
@@ -993,7 +987,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_1_berth_hatch";
 	locked = 1;
-	name = "Escape Pod 1";
+	name = "Escape Pod 1"
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/firstdeck/fore)
@@ -1006,7 +1000,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_2_berth_hatch";
 	locked = 1;
-	name = "Escape Pod 2";
+	name = "Escape Pod 2"
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/firstdeck/fore)
@@ -1053,7 +1047,7 @@
 	icon_state = "door_locked";
 	id_tag = "d1fore_port_inner";
 	locked = 1;
-	name = "Internal Airlock Access";
+	name = "Internal Airlock Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
@@ -1065,7 +1059,7 @@
 	icon_state = "door_locked";
 	id_tag = "d1fore_port_inner";
 	locked = 1;
-	name = "Internal Airlock Access";
+	name = "Internal Airlock Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
@@ -1210,7 +1204,7 @@
 	icon_state = "door_locked";
 	id_tag = "d1fore_starboard_inner";
 	locked = 1;
-	name = "Internal Airlock Access";
+	name = "Internal Airlock Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
@@ -1222,7 +1216,7 @@
 	icon_state = "door_locked";
 	id_tag = "d1fore_starboard_inner";
 	locked = 1;
-	name = "Internal Airlock Access";
+	name = "Internal Airlock Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
@@ -1249,7 +1243,7 @@
 /obj/machinery/button/access/interior{
 	id_tag = "d1fore_port_airlock";
 	name = "interior access button";
-	pixel_x = 26;
+	pixel_x = 26
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
@@ -1457,7 +1451,7 @@
 /obj/machinery/button/access/interior{
 	id_tag = "d1fore_starboard_airlock";
 	name = "interior access button";
-	pixel_x = -26;
+	pixel_x = -26
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
@@ -1862,7 +1856,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/engineering{
-	name = "Construction Area";
+	name = "Construction Area"
 	},
 /turf/simulated/floor/tiled,
 /area/construction/firstdeck/construction5)
@@ -2373,8 +2367,7 @@
 /turf/simulated/wall/r_wall,
 /area/security/nuke_storage)
 "afu" = (
-/obj/machinery/door/airlock/vault/bolted{
-	},
+/obj/machinery/door/airlock/vault/bolted,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
@@ -2737,9 +2730,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/three)
-"agq" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/shuttle_start)
 "agr" = (
 /obj/structure/flight_left,
 /turf/simulated/floor/shuttle/black,
@@ -2751,7 +2741,7 @@
 	dir = 8;
 	id_tag = "expshuttle1_door_cargo";
 	name = "Rear Hatch Control";
-	pixel_x = 26;
+	pixel_x = 26
 	},
 /turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle_start)
@@ -3274,9 +3264,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/one)
-"ahB" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/shuttle_start)
 "ahC" = (
 /obj/machinery/door/airlock/external/glass,
 /turf/simulated/floor/shuttle/black,
@@ -3432,7 +3419,7 @@
 	pixel_y = -22
 	},
 /obj/structure/closet/crate/secure{
-	name = "Silver Crate";
+	name = "Silver Crate"
 	},
 /obj/item/coin/silver{
 	pixel_x = 4;
@@ -3468,7 +3455,7 @@
 /obj/item/coin/gold,
 /obj/item/coin/gold,
 /obj/structure/closet/crate/secure{
-	name = "Gold Crate";
+	name = "Gold Crate"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
@@ -4117,9 +4104,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/one)
-"ajF" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/shuttle_start)
 "ajG" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/shuttle/red,
@@ -4336,7 +4320,7 @@
 /area/maintenance/firstdeck/forestarboard)
 "ake" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/tank/oxygen,
 /obj/item/tank/oxygen,
@@ -4381,7 +4365,7 @@
 /obj/machinery/button/access/interior{
 	id_tag = "shuttle1_shuttle";
 	name = "interior access button";
-	pixel_y = -26;
+	pixel_y = -26
 	},
 /turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle_start)
@@ -4413,7 +4397,7 @@
 /obj/machinery/button/access/exterior{
 	id_tag = "shuttle1_shuttle";
 	name = "exterior access button";
-	pixel_y = 26;
+	pixel_y = 26
 	},
 /turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle_start)
@@ -4957,12 +4941,6 @@
 "als" = (
 /turf/simulated/floor,
 /area/maintenance/firstdeck/centralport)
-"alt" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/large_escape_pod2/station)
-"alu" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/large_escape_pod2/station)
 "alv" = (
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "burst_l"
@@ -5715,7 +5693,7 @@
 	icon_state = "door_locked";
 	id_tag = "server_access_inner";
 	locked = 1;
-	name = "Telecoms Server Access";
+	name = "Telecoms Server Access"
 	},
 /turf/simulated/floor/plating,
 /area/tcomm/computer)
@@ -5855,7 +5833,7 @@
 	icon_state = "door_locked";
 	id_tag = "large_escape_pod_2_hatch";
 	locked = 1;
-	name = "Large Escape Pod Hatch 2";
+	name = "Large Escape Pod Hatch 2"
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod2/station)
@@ -6106,7 +6084,7 @@
 	icon_state = "door_locked";
 	id_tag = "server_access_outer";
 	locked = 1;
-	name = "Telecoms Server Access";
+	name = "Telecoms Server Access"
 	},
 /turf/simulated/floor/plating,
 /area/tcomm/computer)
@@ -6313,7 +6291,7 @@
 	icon_state = "door_locked";
 	id_tag = "large_escape_pod_2_berth_hatch";
 	locked = 1;
-	name = "Large Escape Pod 2";
+	name = "Large Escape Pod 2"
 	},
 /turf/simulated/floor/plating,
 /area/hallway/secondary/escape/firstdeck/ep_port)
@@ -7294,8 +7272,7 @@
 /area/maintenance/firstdeck/centralport)
 "aqG" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -7719,7 +7696,7 @@
 "arz" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	name = "Hangar Control Room Access";
+	name = "Hangar Control Room Access"
 	},
 /turf/simulated/floor/plating,
 /area/hangar/threecontrol)
@@ -8102,7 +8079,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/hatch{
-	name = "Telecoms Control Room";
+	name = "Telecoms Control Room"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tcomm/computer)
@@ -8355,7 +8332,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/engineering{
-	name = "Construction Area";
+	name = "Construction Area"
 	},
 /turf/simulated/floor/plating,
 /area/construction/firstdeck/construction1)
@@ -8669,7 +8646,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/engineering{
-	name = "Construction Area";
+	name = "Construction Area"
 	},
 /turf/simulated/floor/plating,
 /area/construction/firstdeck/construction4)
@@ -8682,7 +8659,7 @@
 "atL" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/double/glass{
-	name = "Research Division Access";
+	name = "Research Division Access"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research/firstdeck/hallway)
@@ -9923,7 +9900,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/hatch/maintenance{
-	name = "Telecoms Storage";
+	name = "Telecoms Storage"
 	},
 /turf/simulated/floor,
 /area/tcomm/tcomstorage)
@@ -10937,8 +10914,7 @@
 /area/maintenance/firstdeck/centralport)
 "axU" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport)
 "axV" = (
@@ -10970,7 +10946,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/engineering{
-	name = "Construction Area";
+	name = "Construction Area"
 	},
 /turf/simulated/floor/plating,
 /area/construction/firstdeck/construction2)
@@ -11234,7 +11210,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/engineering{
-	name = "Construction Area";
+	name = "Construction Area"
 	},
 /turf/simulated/floor/plating,
 /area/construction/firstdeck/construction3)
@@ -11266,7 +11242,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/secondary/escape/firstdeck/ep_starboard2)
 "ayI" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/glass{
 	name = "Escape Pod"
@@ -11490,7 +11465,7 @@
 /area/ai_monitored/storage/eva/pilot)
 "azo" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -11504,7 +11479,7 @@
 /area/ai_monitored/storage/eva/pilot)
 "azp" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -11604,7 +11579,7 @@
 /area/maintenance/firstdeck/aftstarboard)
 "azC" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
@@ -11811,8 +11786,7 @@
 /area/hallway/primary/firstdeck/port)
 "aAb" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled,
 /area/maintenance/firstdeck/aftport)
@@ -11899,7 +11873,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/hatch{
-	name = "Telecoms Hallway";
+	name = "Telecoms Hallway"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tcomm/tcomstorage)
@@ -12016,7 +11990,7 @@
 	dir = 4;
 	id_tag = "expshuttle1_door_cargo";
 	name = "Rear Hatch Control";
-	pixel_x = -26;
+	pixel_x = -26
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -12083,7 +12057,7 @@
 	control_area = "\improper Telecomms Storage";
 	desc = "A firewall prevents AIs from interacting with this device.";
 	name = "Telecoms lethal turret control";
-	pixel_y = 29;
+	pixel_y = 29
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tcomm/tcomfoyer)
@@ -12138,7 +12112,7 @@
 "aAJ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	name = "Hangar Control Room Access";
+	name = "Hangar Control Room Access"
 	},
 /turf/simulated/floor/plating,
 /area/hangar/twocontrol)
@@ -12366,7 +12340,7 @@
 /area/maintenance/firstdeck/centralport)
 "aBl" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/random/maintenance/clean,
 /obj/random/tech_supply,
@@ -12939,7 +12913,7 @@
 "aCu" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	name = "Cargo Maintenance";
+	name = "Cargo Maintenance"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
@@ -12949,7 +12923,7 @@
 "aCw" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
-	name = "Cargo Hallway";
+	name = "Cargo Hallway"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
@@ -12962,7 +12936,7 @@
 "aCy" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
-	name = "Cargo Hallway";
+	name = "Cargo Hallway"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/hallway)
@@ -13017,10 +12991,10 @@
 /obj/item/scanner/mining,
 /obj/item/rig/industrial/equipped,
 /obj/machinery/door/window/southleft{
-	name = "Mining Suits";
+	name = "Mining Suits"
 	},
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -13043,10 +13017,10 @@
 /obj/item/clothing/suit/space/void/mining,
 /obj/item/clothing/head/helmet/space/void/mining,
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/machinery/door/window/southright{
-	name = "Mining Suit";
+	name = "Mining Suit"
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -13140,7 +13114,7 @@
 	pixel_y = -24
 	},
 /obj/structure/closet/crate/secure/gear{
-	name = "parachute crate";
+	name = "parachute crate"
 	},
 /obj/item/storage/backpack/parachute,
 /obj/item/storage/backpack/parachute,
@@ -13256,7 +13230,7 @@
 	check_records = 0;
 	control_area = "\improper Telecomms Teleporter";
 	name = "Telecomms Teleporter turret control";
-	pixel_x = 28;
+	pixel_x = 28
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/firstdeck/elevator)
@@ -13297,7 +13271,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/hatch{
-	name = "Power Control";
+	name = "Power Control"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tcomm/tcomfoyer)
@@ -13448,7 +13422,7 @@
 	icon_state = "door_locked";
 	id_tag = "large_escape_pod_1_berth_hatch";
 	locked = 1;
-	name = "Large Escape Pod 1";
+	name = "Large Escape Pod 1"
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_starboard2)
@@ -13858,7 +13832,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/highsecurity{
-	name = "Telecommunications";
+	name = "Telecommunications"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tcomm/entrance)
@@ -14150,15 +14124,12 @@
 "aEz" = (
 /turf/simulated/shuttle/wall,
 /area/shuttle/large_escape_pod1/station)
-"aEA" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/large_escape_pod1/station)
 "aEB" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
 	id_tag = "large_escape_pod_1_hatch";
 	locked = 1;
-	name = "Large Escape Pod Hatch 1";
+	name = "Large Escape Pod Hatch 1"
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod1/station)
@@ -14382,7 +14353,7 @@
 "aFb" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	name = "Mining Maintenance";
+	name = "Mining Maintenance"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/mininglockerroom)
@@ -14644,9 +14615,6 @@
 	},
 /turf/simulated/floor/shuttle/white,
 /area/shuttle/large_escape_pod1/station)
-"aFN" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/large_escape_pod1/station)
 "aFO" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -14743,7 +14711,7 @@
 "aFZ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
-	name = "Mining Locker Room";
+	name = "Mining Locker Room"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/mininglockerroom)
@@ -15475,7 +15443,7 @@
 "aHC" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
-	name = "Mining Locker Room";
+	name = "Mining Locker Room"
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -15573,9 +15541,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/two)
-"aHO" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/shuttle_start_2)
 "aHP" = (
 /turf/simulated/floor/tiled,
 /area/tcomm/entrance)
@@ -15607,9 +15572,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcomm/entrance)
-"aHU" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/shuttle_start_2)
 "aHV" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -16070,7 +16032,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
-	name = "Cargo Bay";
+	name = "Cargo Bay"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/hallway)
@@ -16162,7 +16124,7 @@
 "aIT" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
-	name = "Cargo Maintenance";
+	name = "Cargo Maintenance"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hallway)
@@ -16419,7 +16381,7 @@
 /obj/machinery/button/access/exterior{
 	id_tag = "shuttle2";
 	name = "exterior access button";
-	pixel_y = -26;
+	pixel_y = -26
 	},
 /turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle_start_2)
@@ -16455,7 +16417,7 @@
 /obj/machinery/button/access/interior{
 	id_tag = "shuttle2";
 	name = "interior access button";
-	pixel_y = 26;
+	pixel_y = 26
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 9
@@ -17187,8 +17149,7 @@
 /area/maintenance/firstdeck/aftport)
 "aLj" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/firstdeck/ap_emergency)
 "aLk" = (
@@ -17335,7 +17296,7 @@
 	pixel_y = -24
 	},
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
@@ -17553,8 +17514,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
 "aMh" = (
@@ -17577,7 +17537,7 @@
 /area/storage/tech)
 "aMk" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/stock_parts/circuitboard/robotics{
 	pixel_x = -2;
@@ -17587,7 +17547,7 @@
 /area/storage/tech)
 "aMl" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -17602,7 +17562,7 @@
 /area/storage/tech)
 "aMm" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/stock_parts/circuitboard/borgupload{
 	pixel_x = -1;
@@ -17761,9 +17721,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/two)
-"aMF" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/shuttle_start_2)
 "aMG" = (
 /obj/machinery/door/airlock/external/glass,
 /turf/simulated/floor/shuttle/black,
@@ -17850,8 +17807,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/firstdeck/ap_emergency)
 "aMQ" = (
@@ -18255,7 +18211,7 @@
 /area/storage/tech)
 "aNK" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/storage/toolbox/electrical{
 	pixel_x = 1;
@@ -18281,7 +18237,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/highsecurity{
-	name = "Secure Tech Storage";
+	name = "Secure Tech Storage"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -18290,7 +18246,7 @@
 /area/storage/tech)
 "aNO" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/stock_parts/manipulator,
 /obj/item/stock_parts/matter_bin,
@@ -18493,7 +18449,7 @@
 	dir = 4;
 	id_tag = "expshuttle2_door_cargo";
 	name = "Rear Hatch Control";
-	pixel_x = -26;
+	pixel_x = -26
 	},
 /turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle_start_2)
@@ -18566,8 +18522,7 @@
 /area/maintenance/firstdeck/aftport)
 "aOy" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
 "aOz" = (
@@ -18579,7 +18534,7 @@
 /area/storage/tech)
 "aOB" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/storage/toolbox/electrical{
 	pixel_x = 1;
@@ -18591,7 +18546,7 @@
 /area/storage/tech)
 "aOC" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/stock_parts/circuitboard/destructive_analyzer,
 /obj/item/stock_parts/circuitboard/protolathe,
@@ -18627,7 +18582,7 @@
 /area/storage/tech)
 "aOG" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/stock_parts/circuitboard/autolathe{
 	pixel_x = 3;
@@ -18637,7 +18592,7 @@
 /area/storage/tech)
 "aOH" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/stock_parts/matter_bin,
 /obj/item/stock_parts/matter_bin,
@@ -19184,13 +19139,13 @@
 /area/storage/tech)
 "aPO" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "aPP" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/stock_parts/circuitboard/unary_atmos/heater,
 /obj/item/stock_parts/circuitboard/unary_atmos/cooler{
@@ -19202,7 +19157,7 @@
 /area/storage/tech)
 "aPQ" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/stock_parts/circuitboard/atmos_alert{
 	pixel_x = 3;
@@ -19252,7 +19207,7 @@
 /area/storage/tech)
 "aPU" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/stock_parts/circuitboard/cloning,
 /obj/item/stock_parts/circuitboard/clonescanner,
@@ -19262,7 +19217,7 @@
 /area/storage/tech)
 "aPV" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/stock_parts/circuitboard/message_monitor{
 	pixel_x = 3;
@@ -19273,7 +19228,7 @@
 /area/storage/tech)
 "aPW" = (
 /obj/structure/rack{
-	dir = 8;
+	dir = 8
 	},
 /obj/item/scanner/plant,
 /obj/item/scanner/health,
@@ -19444,7 +19399,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/engineering{
-	name = "Tech Storage";
+	name = "Tech Storage"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -19566,8 +19521,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
 "aQC" = (
@@ -20206,9 +20160,6 @@
 "aRJ" = (
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod3/station)
-"aRK" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod3/station)
 "aRL" = (
 /obj/item/storage/box/lights/mixed,
 /obj/item/stack/cable_coil/random,
@@ -20366,9 +20317,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/auxiliary_engineering)
-"aSc" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod5/station)
 "aSd" = (
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod5/station)
@@ -20397,7 +20345,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/door/window/brigdoor/southright{
-	name = "Containment Pen";
+	name = "Containment Pen"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/xenobiology)
@@ -20424,7 +20372,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_3_hatch";
 	locked = 1;
-	name = "Escape Pod Hatch 3";
+	name = "Escape Pod Hatch 3"
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod3/station)
@@ -20433,7 +20381,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_3_berth_hatch";
 	locked = 1;
-	name = "Escape Pod 3";
+	name = "Escape Pod 3"
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftport)
@@ -20596,7 +20544,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_5_hatch";
 	locked = 1;
-	name = "Escape Pod Hatch 5";
+	name = "Escape Pod Hatch 5"
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod5/station)
@@ -20737,7 +20685,7 @@
 "aSL" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
-	name = "Security Checkpoint";
+	name = "Security Checkpoint"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -20999,9 +20947,6 @@
 /obj/structure/sign/warning/caution,
 /turf/simulated/wall/r_wall,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aTl" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod4/station)
 "aTm" = (
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod4/station)
@@ -21127,9 +21072,6 @@
 "aTE" = (
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod6/station)
-"aTF" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod6/station)
 "aTG" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -21199,7 +21141,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_4_hatch";
 	locked = 1;
-	name = "Escape Pod Hatch 4";
+	name = "Escape Pod Hatch 4"
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod4/station)
@@ -21208,7 +21150,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_4_berth_hatch";
 	locked = 1;
-	name = "Escape Pod 4";
+	name = "Escape Pod 4"
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftport)
@@ -21362,7 +21304,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_6_berth_hatch";
 	locked = 1;
-	name = "Escape Pod 6";
+	name = "Escape Pod 6"
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
@@ -21371,7 +21313,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_6_hatch";
 	locked = 1;
-	name = "Escape Pod Hatch 6";
+	name = "Escape Pod Hatch 6"
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod6/station)
@@ -21999,12 +21941,12 @@
 	icon_state = "door_locked";
 	id_tag = "d1aft_port_outer";
 	locked = 1;
-	name = "Dock External Airlock";
+	name = "Dock External Airlock"
 	},
 /obj/machinery/button/access/exterior{
 	id_tag = "d1aft_port_airlock";
 	name = "exterior access button";
-	pixel_y = -26;
+	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22035,7 +21977,7 @@
 	icon_state = "door_locked";
 	id_tag = "d1aft_port_inner";
 	locked = 1;
-	name = "Dock Internal Airlock";
+	name = "Dock Internal Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22173,7 +22115,7 @@
 	id_tag = "d1aft_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = -26;
-	pixel_y = -26;
+	pixel_y = -26
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22218,7 +22160,7 @@
 	icon_state = "door_locked";
 	id_tag = "ninja_shuttle_dock_inner";
 	locked = 1;
-	name = "Dock Internal Airlock";
+	name = "Dock Internal Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22247,7 +22189,7 @@
 	icon_state = "door_locked";
 	id_tag = "ninja_shuttle_dock_outer";
 	locked = 1;
-	name = "Dock External Airlock";
+	name = "Dock External Airlock"
 	},
 /obj/machinery/button/access/shuttle/exterior{
 	id_tag = "ninja_shuttle_dock_airlock";
@@ -22266,7 +22208,7 @@
 	icon_state = "door_locked";
 	id_tag = "skipjack_shuttle_dock_inner";
 	locked = 1;
-	name = "Dock Internal Airlock";
+	name = "Dock Internal Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22311,7 +22253,7 @@
 	icon_state = "door_locked";
 	id_tag = "d1aft_starboard_inner";
 	locked = 1;
-	name = "Dock Internal Airlock";
+	name = "Dock Internal Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22484,7 +22426,7 @@
 	icon_state = "door_locked";
 	id_tag = "skipjack_shuttle_dock_outer";
 	locked = 1;
-	name = "Dock External Airlock";
+	name = "Dock External Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22495,7 +22437,7 @@
 	icon_state = "door_locked";
 	id_tag = "skipjack_shuttle_dock_outer";
 	locked = 1;
-	name = "Dock External Airlock";
+	name = "Dock External Airlock"
 	},
 /obj/machinery/button/access/shuttle/exterior{
 	id_tag = "skipjack_shuttle_dock_airlock";
@@ -22511,12 +22453,12 @@
 	icon_state = "door_locked";
 	id_tag = "d1aft_starboard_outer";
 	locked = 1;
-	name = "Dock External Airlock";
+	name = "Dock External Airlock"
 	},
 /obj/machinery/button/access/exterior{
 	id_tag = "d1aft_starboard_airlock";
 	name = "exterior access button";
-	pixel_x = -26;
+	pixel_x = -26
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22527,7 +22469,7 @@
 	icon_state = "door_locked";
 	id_tag = "d1aft_starboard_outer";
 	locked = 1;
-	name = "Dock External Airlock";
+	name = "Dock External Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
@@ -22601,7 +22543,7 @@
 	dir = 8;
 	id_tag = "expshuttle2_door_cargo";
 	name = "Rear Hatch Control";
-	pixel_x = 26;
+	pixel_x = 26
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -22775,7 +22717,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "bDE" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
@@ -23025,7 +22966,7 @@
 "cfn" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research{
-	name = "Xenoflora Research";
+	name = "Xenoflora Research"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/xenobiology/xenoflora)
@@ -23136,7 +23077,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/research{
-	name = "Xenoflora Isolation";
+	name = "Xenoflora Isolation"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/xenobiology/xenoflora)
@@ -23228,7 +23169,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_5_berth_hatch";
 	locked = 1;
-	name = "Escape Pod 5";
+	name = "Escape Pod 5"
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
@@ -23795,7 +23736,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/research{
-	name = "Xenoflora Research";
+	name = "Xenoflora Research"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/xenobiology/xenoflora)
@@ -23808,7 +23749,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/research{
-	name = "Xenoflora Research";
+	name = "Xenoflora Research"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/xenobiology/xenoflora)
@@ -24651,7 +24592,7 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/door/window/brigdoor/northleft{
-	name = "Containment Pen";
+	name = "Containment Pen"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -24706,7 +24647,7 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/door/window/brigdoor/northleft{
-	name = "Containment Pen";
+	name = "Containment Pen"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -24857,7 +24798,7 @@
 /obj/machinery/button/alternate/door{
 	id_tag = "xenobio6station";
 	name = "Containment Blast Doors";
-	pixel_y = 4;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
@@ -24883,7 +24824,7 @@
 /obj/machinery/button/alternate/door{
 	id_tag = "xenobio5station";
 	name = "Containment Blast Doors";
-	pixel_y = 4;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
@@ -24894,7 +24835,7 @@
 	desc = "A remote control-switch for the divider between pens.";
 	id_tag = "xenobioout7station";
 	name = "Containment Divider Switch";
-	pixel_y = 28;
+	pixel_y = 28
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/light{
@@ -25207,7 +25148,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/window/brigdoor/westleft{
-	name = "Containment Pen";
+	name = "Containment Pen"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/xenobiology)
@@ -25230,7 +25171,7 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/door/window/brigdoor/eastright{
-	name = "Containment Pen";
+	name = "Containment Pen"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -25314,7 +25255,7 @@
 /obj/machinery/button/alternate/door{
 	id_tag = "xenobio2station";
 	name = "Containment Blast Doors";
-	pixel_y = 4;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
@@ -25356,14 +25297,14 @@
 	id_tag = "xenostation_airlock_control";
 	name = "Xenobiology Access Button";
 	pixel_x = -26;
-	pixel_y = 6;
+	pixel_y = 6
 	},
 /obj/machinery/door/airlock/research{
 	autoclose = 0;
 	icon_state = "door_locked";
 	id_tag = "xenostation_airlock_exterior";
 	locked = 1;
-	name = "Xenobiology External Airlock";
+	name = "Xenobiology External Airlock"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/xenobiology)
@@ -25603,7 +25544,7 @@
 /obj/machinery/button/alternate/door{
 	id_tag = "xenobio1station";
 	name = "Containment Blast Doors";
-	pixel_y = 4;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
@@ -25712,12 +25653,12 @@
 	icon_state = "door_locked";
 	id_tag = "xenostation_airlock_interior";
 	locked = 1;
-	name = "Xenobiology Internal Airlock";
+	name = "Xenobiology Internal Airlock"
 	},
 /obj/machinery/button/access/interior{
 	id_tag = "xenostation_airlock_control";
 	name = "Xenobiology Access Button";
-	pixel_y = -26;
+	pixel_y = -26
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -25776,7 +25717,7 @@
 /area/rnd/xenobiology)
 "eat" = (
 /obj/machinery/door/window/brigdoor/westleft{
-	name = "Containment Pen";
+	name = "Containment Pen"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -25798,7 +25739,7 @@
 "eav" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/window/brigdoor/eastright{
-	name = "Containment Pen";
+	name = "Containment Pen"
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -25859,7 +25800,7 @@
 	desc = "A remote control-switch for containment.";
 	id_tag = "xenobiocontainstation";
 	name = "Containment Switch";
-	pixel_y = -6;
+	pixel_y = -6
 	},
 /turf/simulated/wall/r_wall,
 /area/rnd/xenobiology)
@@ -26006,7 +25947,7 @@
 /obj/machinery/button/alternate/door{
 	id_tag = "xenobio3station";
 	name = "Containment Blast Doors";
-	pixel_y = 4;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
@@ -26015,7 +25956,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/window/brigdoor/northright{
-	name = "Containment Pen";
+	name = "Containment Pen"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -26033,7 +25974,7 @@
 /obj/machinery/button/alternate/door{
 	id_tag = "xenobio4station";
 	name = "Containment Blast Doors";
-	pixel_y = 4;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
@@ -26078,7 +26019,7 @@
 	desc = "A remote control-switch for a door to space.";
 	id_tag = "xenobiostationext";
 	name = "Containment Release Switch";
-	pixel_x = 28;
+	pixel_x = 28
 	},
 /obj/structure/hygiene/sink{
 	dir = 4;
@@ -26126,7 +26067,7 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/door/window/brigdoor/southright{
-	name = "Containment Pen";
+	name = "Containment Pen"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -26178,7 +26119,7 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/door/window/brigdoor/southright{
-	name = "Containment Pen";
+	name = "Containment Pen"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -45684,9 +45625,9 @@ ndk
 ndk
 akL
 als
-alt
+alR
 amm
-alt
+alR
 als
 atT
 apk
@@ -45940,11 +45881,11 @@ ndk
 ndk
 ndk
 akL
-alt
+alR
 alR
 amn
 alR
-alt
+alR
 akL
 apl
 aqE
@@ -46197,11 +46138,11 @@ ndk
 ndk
 ndk
 akL
-alt
+alR
 alS
 amo
 amR
-alt
+alR
 akL
 apm
 aqF
@@ -46454,11 +46395,11 @@ jaY
 jaY
 jaY
 akL
-alt
+alR
 alT
 amo
 amS
-alt
+alR
 akL
 apn
 aqF
@@ -46711,11 +46652,11 @@ ndk
 ndk
 ndk
 akL
-alu
+alR
 alU
 amo
 amT
-alu
+alR
 akL
 akL
 aqG
@@ -46968,7 +46909,7 @@ ndk
 ndk
 ndk
 akL
-alt
+alR
 alV
 amo
 aSj
@@ -47225,7 +47166,7 @@ ndk
 ndk
 ndk
 akL
-alt
+alR
 alW
 amo
 amU
@@ -47482,11 +47423,11 @@ ndk
 ndk
 ndk
 akL
-alu
+alR
 alX
 amo
 amV
-alu
+alR
 aoy
 app
 aqJ
@@ -47739,11 +47680,11 @@ ndk
 ndk
 ndk
 akL
-alt
+alR
 alY
 amo
 amW
-alt
+alR
 aoy
 apq
 aqK
@@ -47996,11 +47937,11 @@ ndk
 ndk
 ndk
 akL
-alt
+alR
 alZ
 amp
 amX
-alt
+alR
 aoy
 apr
 aqL
@@ -48253,11 +48194,11 @@ ndk
 ndk
 ndk
 akL
-alt
+alR
 ama
 ama
 ama
-alt
+alR
 aoy
 aps
 aqM
@@ -50048,11 +49989,11 @@ afF
 afF
 afF
 afF
-ajF
-ajF
+aiD
+aiD
 akh
-ajF
-ajF
+aiD
+aiD
 aiD
 alv
 anb
@@ -50299,13 +50240,13 @@ ndk
 aeF
 afc
 afF
-ajF
-agW
-ajF
+aiD
 agW
 aiD
-ajF
-ajF
+agW
+aiD
+aiD
+aiD
 ajG
 agZ
 alz
@@ -50555,19 +50496,19 @@ ndk
 ndk
 aeF
 afc
-ajF
-agq
+aiD
+aiD
 agX
-ahB
+aiD
 aim
 aiE
 aiV
-ahB
+aiD
 ajH
 agZ
 akO
 alB
-ahB
+aiD
 afF
 anb
 anH
@@ -51583,19 +51524,19 @@ ndk
 ndk
 aeF
 afc
-ajF
-agq
+aiD
+aiD
 aha
-ahB
+aiD
 aim
 aiF
 aiY
-ahB
+aiD
 ajJ
 akj
 akQ
 alB
-ahB
+aiD
 afF
 anb
 anM
@@ -51841,13 +51782,13 @@ ndk
 aeF
 afc
 afF
-ajF
-agW
-ajF
+aiD
 agW
 aiD
-ajF
-ajF
+agW
+aiD
+aiD
+aiD
 ajK
 aJt
 akR
@@ -52104,11 +52045,11 @@ afF
 afF
 afF
 afF
-ajF
-ajF
+aiD
+aiD
 akl
-ajF
-ajF
+aiD
+aiD
 aiD
 amr
 anb
@@ -55236,9 +55177,9 @@ aRJ
 aSg
 aRJ
 aRy
-aTl
+aTm
 aTG
-aTl
+aTm
 aUv
 aUG
 aVh
@@ -55493,9 +55434,9 @@ aRJ
 bEo
 aRJ
 aRy
-aTl
+aTm
 aTH
-aTl
+aTm
 aUv
 aUH
 aVi
@@ -55746,9 +55687,9 @@ aNM
 aQC
 aRa
 aLO
-aRK
+aRJ
 aSi
-aRK
+aRJ
 aRy
 aTm
 aTI
@@ -56007,9 +55948,9 @@ aRJ
 dHc
 aRJ
 aRy
-aTl
+aTm
 dPJ
-aTl
+aTm
 aUv
 aUI
 aVk
@@ -60825,7 +60766,7 @@ ndk
 aak
 aaL
 aaL
-abr
+aaL
 aaL
 ace
 acD
@@ -61339,7 +61280,7 @@ ndk
 aak
 aaL
 aaL
-abr
+aaL
 aaL
 ace
 acF
@@ -61853,7 +61794,7 @@ ndk
 aak
 aaN
 aaN
-abu
+aaN
 aaN
 acg
 acD
@@ -62171,9 +62112,9 @@ aQu
 aQV
 aRj
 aLO
-aSc
+aSd
 dLk
-aSc
+aSd
 aRE
 aTE
 dYP
@@ -62367,7 +62308,7 @@ ndk
 aak
 aaN
 aaN
-abu
+aaN
 aaN
 acg
 acF
@@ -62432,9 +62373,9 @@ aSd
 aSC
 aSd
 aRE
-aTF
+aTE
 aUd
-aTF
+aTE
 aUv
 aUF
 aVA
@@ -62685,9 +62626,9 @@ aLR
 aQX
 ayx
 aPI
-aSc
+aSd
 aSD
-aSc
+aSd
 aRE
 aTE
 aUe
@@ -62942,9 +62883,9 @@ byk
 bzn
 azB
 aPI
-aSc
+aSd
 aSE
-aSc
+aSd
 aRE
 aTE
 aUf
@@ -66008,11 +65949,11 @@ aEp
 aFz
 atf
 aHk
-aHO
-aHO
+aHk
+aHk
 aJs
-aHO
-aHO
+aHk
+aHk
 aGy
 aGy
 aGy
@@ -66269,13 +66210,13 @@ aHV
 aIB
 aTJ
 aKf
-aHO
-aHO
+aHk
+aHk
 aHk
 aKh
-aHO
+aHk
 aKh
-aHO
+aHk
 aGy
 aPK
 aDj
@@ -66521,19 +66462,19 @@ aDk
 aEq
 aFz
 aGy
-aMF
+aHk
 aHQ
 aIC
 aJu
 aKg
-aMF
+aHk
 aKZ
 aLy
 aLX
-aMF
+aHk
 aNl
-aHU
-aHO
+aHk
+aHk
 aPK
 aDj
 ndk
@@ -67549,19 +67490,19 @@ aDk
 aEu
 aFz
 aGy
-aMF
+aHk
 aHQ
 aIF
 aOm
 aKj
-aMF
+aHk
 aLc
 aLz
 aLX
-aMF
+aHk
 aNn
-aHU
-aHO
+aHk
+aHk
 aPK
 aDj
 ndk
@@ -67811,13 +67752,13 @@ bsm
 bws
 aOm
 aKk
-aHO
-aHO
+aHk
+aHk
 aHk
 aKh
-aHO
+aHk
 aKh
-aHO
+aHk
 aGy
 aPK
 aDj
@@ -68064,11 +68005,11 @@ aEv
 aFz
 axI
 aHk
-aHO
-aHO
+aHk
+aHk
 aJx
-aHO
-aHO
+aHk
+aHk
 aGy
 aGy
 aGy
@@ -70630,11 +70571,11 @@ azT
 aAZ
 aCm
 azU
-aEA
+aEz
 aFH
 aFJ
 aHp
-aEA
+aEz
 alr
 ndk
 ndk
@@ -72173,9 +72114,9 @@ aBe
 aCp
 alr
 aEz
-aFN
+aEz
 aGE
-aFN
+aEz
 aEz
 alr
 ndk
