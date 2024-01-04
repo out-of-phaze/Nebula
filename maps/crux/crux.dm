@@ -31,7 +31,6 @@
 	#include "atoms/props.dm"
 	#include "atoms/telecoms.dm"
 	#include "atoms/guns.dm"
-	#include "atoms/turfs.dm"
 
 	#include "jobs/jobs.dm"
 	#include "jobs/departments.dm"

@@ -8,7 +8,6 @@
 
 // TODO: port AI multicam system
 /obj/abstract/landmark/ai_multicam_room
-/turf/unsimulated/ai_visible
 
 // TODO: port engine submap loader.
 /obj/abstract/landmark/engine_loader
@@ -89,10 +88,6 @@
 // TODO implement passive vents
 /obj/machinery/atmospherics/pipe/vent
 
-// TODO port rigs
-/obj/item/rig/breacher
-/obj/item/rig/internalaffairs
-
 // TODO port tabloids
 /obj/item/tabloid
 
@@ -148,3 +143,31 @@
 /obj/machinery/smartfridge/produce/persistent
 /obj/machinery/smartfridge/secure/extract
 /obj/machinery/smartfridge/sheets/persistent
+
+/obj/item/towel/gold
+	name = "gold towel"
+	color = "#ffd700"
+
+/obj/item/towel/red
+	name = "red towel"
+	color = "#ff0000"
+
+/obj/item/towel/purple
+	name = "purple towel"
+	color = "#800080"
+
+/obj/item/towel/cyan
+	name = "cyan towel"
+	color = "#00ffff"
+
+/obj/item/towel/orange
+	name = "orange towel"
+	color = "#ff8c00"
+
+/obj/item/towel/pink
+	name = "pink towel"
+	color = "#ff6666"
+
+/obj/item/towel/light_blue
+	name = "light blue towel"
+	color = "#3fc0ea"

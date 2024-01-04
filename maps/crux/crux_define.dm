@@ -48,6 +48,13 @@
 		/decl/material/gas/nitrogen = MOLES_N2STANDARD
 	)
 	strata = /decl/strata/sedimentary
+	// Firedoors can be mapped over maintenance shafts.
+	UT_turf_exceptions_by_door_type = list(
+		/obj/machinery/door/firedoor = list(
+			/turf/simulated/open,
+			/turf/exterior/open
+		)
+	)
 
 /obj/abstract/level_data_spawner/crux_ground_floor
 	name = "Southern Cross - Ground Floor"
