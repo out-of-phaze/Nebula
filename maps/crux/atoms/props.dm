@@ -171,7 +171,7 @@
 
 /obj/item/towel/pink
 	name = "pink towel"
-	color = "#FF6666"
+	color = "#ff6666"
 
 /obj/item/towel/light_blue
 	name = "light blue towel"
