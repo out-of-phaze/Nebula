@@ -283,15 +283,12 @@
 /area/security/prison)
 "aWE" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -307,11 +304,9 @@
 /area/security/prison)
 "aWF" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -327,7 +322,6 @@
 /area/security/prison)
 "aWG" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/firedoor,
@@ -344,7 +338,6 @@
 "aWH" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -368,7 +361,6 @@
 "aWI" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -395,7 +387,6 @@
 "aWJ" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -427,7 +418,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -484,7 +474,6 @@
 "aWQ" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -504,7 +493,6 @@
 "aWR" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -527,7 +515,6 @@
 /area/security/security_restroom)
 "aWT" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -536,15 +523,12 @@
 /area/security/security_lockerroom)
 "aWU" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/firedoor,
@@ -553,7 +537,6 @@
 /area/security/security_lockerroom)
 "aWV" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/firedoor,
@@ -673,7 +656,6 @@
 "aXk" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -749,7 +731,6 @@
 "aXs" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -776,7 +757,6 @@
 "aXw" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -967,7 +947,6 @@
 "aXP" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -1095,7 +1074,6 @@
 "aXZ" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -1307,7 +1285,6 @@
 "aYt" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -1336,7 +1313,6 @@
 "aYv" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -1448,7 +1424,6 @@
 "aYF" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -1674,7 +1649,6 @@
 "aYY" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -1714,7 +1688,7 @@
 	},
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
+
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -1819,7 +1793,6 @@
 "aZi" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -1836,7 +1809,6 @@
 "aZj" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -1854,7 +1826,6 @@
 /area/security/tactical)
 "aZk" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -1982,7 +1953,6 @@
 "aZy" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -2138,7 +2108,6 @@
 "aZK" = (
 /obj/structure/closet/secure_closet/security,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -2217,7 +2186,6 @@
 /area/rnd/test_area)
 "aZR" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/door/firedoor,
@@ -2389,7 +2357,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/firealarm{
@@ -2447,7 +2414,6 @@
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -2523,7 +2489,6 @@
 /area/security/security_lockerroom)
 "bay" = (
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /obj/machinery/camera/network/security{
@@ -2576,12 +2541,10 @@
 /area/rnd/test_area)
 "baF" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -3200,7 +3163,6 @@
 	icon_state = "pipe-c"
 	},
 /obj/machinery/computer/cryopod{
-	layer = 3.3;
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -3285,7 +3247,6 @@
 "bbL" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green,
@@ -3503,7 +3464,6 @@
 /area/rnd/test_area)
 "bci" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -3539,7 +3499,6 @@
 /area/security/prison)
 "bck" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/firedoor,
@@ -3555,7 +3514,6 @@
 /area/security/prison)
 "bcl" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -3642,7 +3600,6 @@
 "bct" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -3652,7 +3609,6 @@
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -3929,7 +3885,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -4025,7 +3980,6 @@
 "bdc" = (
 /obj/structure/closet/secure_closet/warden,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -4459,7 +4413,6 @@
 /area/security/brig)
 "bdO" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/door/firedoor,
@@ -4629,7 +4582,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -4742,7 +4694,6 @@
 /area/security/security_cell_hallway)
 "bej" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -4762,7 +4713,6 @@
 /area/hallway/primary/seconddeck/fscenter)
 "bel" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/firedoor,
@@ -4771,7 +4721,6 @@
 /area/security/security_cell_hallway)
 "bem" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -4851,7 +4800,6 @@
 "ber" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -5017,7 +4965,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -5084,7 +5031,6 @@
 /area/surface/level_one)
 "beO" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/door/firedoor,
@@ -5349,7 +5295,6 @@
 /area/security/brig)
 "bfh" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/door/firedoor,
@@ -5495,7 +5440,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/item/chems/syringe/stabilizer,
@@ -5565,7 +5509,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled,
@@ -5619,7 +5562,6 @@
 /area/rnd/test_area)
 "bfE" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -5648,11 +5590,9 @@
 /area/surface/level_one)
 "bfH" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green,
@@ -5768,7 +5708,6 @@
 	dir = 4
 	},
 /obj/machinery/computer/cryopod{
-	layer = 3.3;
 	pixel_y = -32
 	},
 /obj/machinery/hologram/holopad,
@@ -5920,7 +5859,6 @@
 /area/security/warden)
 "bfZ" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -5939,7 +5877,6 @@
 "bgb" = (
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -5985,7 +5922,6 @@
 /area/security/security_processing)
 "bgf" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -6249,7 +6185,6 @@
 /area/security/brig)
 "bgH" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -6259,11 +6194,9 @@
 /area/security/warden)
 "bgI" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/firedoor,
@@ -6294,11 +6227,9 @@
 /area/security/warden)
 "bgK" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -6307,7 +6238,6 @@
 /area/security/warden)
 "bgL" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green,
@@ -6347,7 +6277,6 @@
 /area/security/brig)
 "bgP" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green,
@@ -6359,11 +6288,9 @@
 /area/security/security_processing)
 "bgQ" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/firedoor,
@@ -6675,7 +6602,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -6738,7 +6664,6 @@
 /area/security/security_cell_hallway)
 "bhx" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -7755,7 +7680,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
 	id_tag = "BrigFoyer";
-	layer = 2.8;
 	name = "Security Wing";
 	req_access = list(63)
 	},
@@ -7929,7 +7853,6 @@
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -8147,7 +8070,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/security{
 	id_tag = "BrigFoyer";
-	layer = 2.8;
 	name = "Security Wing";
 	req_access = list(63)
 	},
@@ -8215,7 +8137,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/security{
 	id_tag = "BrigFoyer";
-	layer = 2.8;
 	name = "Security Wing";
 	req_access = list(63)
 	},
@@ -8303,7 +8224,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
 	id_tag = "BrigFoyer";
-	layer = 2.8;
 	name = "Security Wing";
 	req_access = list(63)
 	},
@@ -8410,7 +8330,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -8512,7 +8431,6 @@
 	pixel_y = 2
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/lino,
@@ -8669,7 +8587,6 @@
 /area/crew_quarters/heads/sc/hos)
 "bks" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -8703,7 +8620,6 @@
 /area/crew_quarters/heads/sc/hos)
 "bku" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/firedoor,
@@ -8968,9 +8884,7 @@
 /obj/item/folder/yellow{
 	pixel_y = -5
 	},
-/obj/item/storage/box/swabs{
-	layer = 5
-	},
+/obj/item/storage/box/swabs,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -9038,7 +8952,6 @@
 "blb" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/wingrille_spawn/reinforced/polarized{
@@ -9061,7 +8974,6 @@
 /area/security/lobby)
 "ble" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -9121,7 +9033,6 @@
 /area/security/lobby)
 "bli" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -9143,7 +9054,6 @@
 "bll" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/wingrille_spawn/reinforced/polarized{
@@ -9197,7 +9107,6 @@
 "blq" = (
 /obj/machinery/photocopier,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -9347,11 +9256,9 @@
 /area/maintenance/substation/security)
 "blA" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/smes/buildable{
@@ -9361,11 +9268,9 @@
 /area/maintenance/substation/security)
 "blB" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green,
@@ -9967,7 +9872,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/light/small,
@@ -10648,7 +10552,6 @@
 /area/security/lobby)
 "bom" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -11233,7 +11136,6 @@
 	pixel_y = -4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -11531,7 +11433,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -11671,7 +11572,6 @@
 "bqs" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/storage/briefcase{
 	pixel_x = -2;
@@ -11780,7 +11680,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -11881,11 +11780,9 @@
 /area/engineering/atmos)
 "bqQ" = (
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/sensor{
@@ -11907,7 +11804,6 @@
 /area/maintenance/substation/atmospherics)
 "bqR" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/smes/buildable{
@@ -11916,7 +11812,6 @@
 	input_attempt = 1
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
@@ -12232,7 +12127,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/terminal{
@@ -12501,7 +12395,6 @@
 "bsn" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -13028,7 +12921,6 @@
 /area/maintenance/substation/atmospherics)
 "btl" = (
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -13876,7 +13768,6 @@
 	},
 /obj/machinery/door/blast/shutters{
 	id_tag = "janitor_blast";
-	layer = 3.1;
 	name = "Janitorial Shutters"
 	},
 /turf/simulated/floor/tiled,
@@ -14112,11 +14003,9 @@
 	RCon_tag = "Substation - Engineering"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -14216,7 +14105,6 @@
 "bvM" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -14391,7 +14279,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -14430,7 +14317,6 @@
 "bwf" = (
 /obj/structure/table/steel,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -14786,7 +14672,6 @@
 /area/maintenance/substation/engineering)
 "bwO" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/terminal{
@@ -14897,7 +14782,6 @@
 "bwY" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -14918,7 +14802,6 @@
 "bwZ" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -14945,7 +14828,6 @@
 /obj/item/clothing/mask/breath,
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/item/rig/eva/equipped,
 /obj/machinery/door/window/westright{
@@ -14964,7 +14846,6 @@
 /obj/item/clothing/mask/breath,
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/suit/space/void/security,
@@ -14987,7 +14868,6 @@
 /obj/item/clothing/suit/space/void/medical,
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/machinery/door/window/westright{
 	name = "Medical Hardsuits"
@@ -14997,7 +14877,6 @@
 /area/ai_monitored/storage/eva)
 "bxd" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -15599,7 +15478,6 @@
 "byo" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -15618,7 +15496,6 @@
 "byp" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -15651,7 +15528,6 @@
 /obj/item/clothing/mask/breath,
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/suit/space/void/atmos,
@@ -15669,7 +15545,6 @@
 /obj/item/clothing/mask/breath,
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/suit/space/void/security,
@@ -15692,7 +15567,6 @@
 	},
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/item/clothing/head/helmet/space/void/medical,
 /turf/simulated/floor/tiled/dark,
@@ -16296,7 +16170,6 @@
 	},
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
@@ -16556,7 +16429,6 @@
 "bAf" = (
 /obj/machinery/computer/modular/telescreen/preset/security{
 	desc = "Used for watching the test chamber.";
-	layer = 4;
 	name = "Test Chamber Telescreen";
 	pixel_y = 32
 	},
@@ -16583,7 +16455,6 @@
 "bAg" = (
 /obj/machinery/computer/modular/telescreen/preset/security{
 	desc = "Used for watching the test chamber.";
-	layer = 4;
 	name = "Test Chamber Telescreen";
 	pixel_y = 32
 	},
@@ -16657,7 +16528,6 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -16800,7 +16670,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -17363,7 +17232,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled,
@@ -17865,7 +17733,6 @@
 	},
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 9
@@ -18598,7 +18465,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -18839,7 +18705,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/catwalk,
@@ -18982,7 +18847,6 @@
 /obj/item/clothing/head/helmet/space/void/engineering,
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/item/clothing/suit/space/void/engineering,
 /obj/structure/window/reinforced{
@@ -19057,7 +18921,6 @@
 	},
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/machinery/door/window/westright{
 	name = "Jetpack Storage"
@@ -20074,7 +19937,6 @@
 /obj/item/clothing/head/helmet/space/void/engineering,
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/item/clothing/suit/space/void/engineering,
 /obj/structure/window/reinforced{
@@ -20125,7 +19987,6 @@
 /obj/structure/window/reinforced,
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/machinery/door/window/westleft{
 	name = "Jetpack Storage"
@@ -20221,7 +20082,6 @@
 /area/hallway/primary/seconddeck/fscenter)
 "bHd" = (
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/borderfloor/corner,
@@ -20309,7 +20169,6 @@
 /area/maintenance/substation/research)
 "bHm" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/terminal{
@@ -20756,7 +20615,6 @@
 /obj/item/clothing/head/helmet/space/void/engineering,
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/item/clothing/suit/space/void/engineering,
 /obj/structure/window/reinforced{
@@ -20840,7 +20698,6 @@
 	},
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/machinery/door/window/westright{
 	name = "Atmospherics Suits";
@@ -20896,7 +20753,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/catwalk,
@@ -20960,7 +20816,6 @@
 /area/hallway/primary/seconddeck/fscenter)
 "bIJ" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
@@ -21012,7 +20867,6 @@
 /area/maintenance/research)
 "bIO" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -21027,11 +20881,9 @@
 /area/maintenance/substation/research)
 "bIP" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/sensor{
@@ -21039,7 +20891,6 @@
 	id_tag = "Research Subgrid"
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -21197,7 +21048,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -21369,7 +21219,6 @@
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
@@ -21623,7 +21472,6 @@
 	},
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engineer_eva)
@@ -21668,7 +21516,6 @@
 "bKe" = (
 /obj/structure/closet/secure_closet/engineering_personal,
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
@@ -22191,7 +22038,6 @@
 /area/engineering/locker_room)
 "bLx" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -23078,7 +22924,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -24769,7 +24614,6 @@
 "bQl" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/wingrille_spawn/reinforced/polarized{
@@ -24780,11 +24624,9 @@
 "bQm" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/wingrille_spawn/reinforced/polarized{
@@ -24818,11 +24660,9 @@
 "bQo" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/wingrille_spawn/reinforced/polarized{
@@ -24833,7 +24673,6 @@
 "bQp" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/wingrille_spawn/reinforced/polarized{
@@ -24848,7 +24687,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/camera/network/engineering{
@@ -24962,7 +24800,6 @@
 "bQA" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -25247,7 +25084,6 @@
 /area/rnd/lab)
 "bRd" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -25614,11 +25450,9 @@
 	req_access = list(47)
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/window/reinforced,
@@ -25755,7 +25589,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -25808,7 +25641,6 @@
 /area/engineering/hallway/engineer_hallway)
 "bRV" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -25990,11 +25822,8 @@
 /area/crew_quarters/heads/sc/chief)
 "bSh" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/status_display{
-	layer = 4
-	},
+/obj/machinery/status_display,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/wingrille_spawn/reinforced/polarized{
@@ -26039,9 +25868,7 @@
 "bSm" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/ai_status_display{
-	layer = 4
-	},
+/obj/machinery/ai_status_display,
 /turf/simulated/floor,
 /area/engineering/break_room)
 "bSn" = (
@@ -26601,7 +26428,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -26926,7 +26752,6 @@
 "bTY" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green,
@@ -27074,7 +26899,6 @@
 /obj/random/soap,
 /obj/random/soap,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -28126,7 +27950,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -28173,7 +27996,6 @@
 "bWJ" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
@@ -28521,7 +28343,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -28613,7 +28434,6 @@
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/wingrille_spawn/reinforced/polarized{
@@ -28768,7 +28588,6 @@
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -28828,7 +28647,6 @@
 "bYl" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
@@ -28945,7 +28763,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
@@ -29090,7 +28907,6 @@
 /area/rnd/misc_lab)
 "bYM" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -29447,7 +29263,6 @@
 /area/maintenance/substation/central)
 "bZE" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green,
@@ -29455,7 +29270,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/sensor{
@@ -29486,7 +29300,6 @@
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -29780,7 +29593,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/item/radio/intercom{
@@ -29837,7 +29649,6 @@
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/window/reinforced{
@@ -29960,7 +29771,6 @@
 "caN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /obj/structure/disposalpipe/segment,
@@ -30188,7 +29998,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/light_switch{
@@ -30985,7 +30794,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -31108,7 +30916,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -31242,7 +31049,6 @@
 "cdl" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
@@ -31288,7 +31094,6 @@
 	req_access = list(29)
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -31589,7 +31394,6 @@
 	},
 /obj/machinery/airlock_sensor{
 	id_tag = "eng_al_ext_snsr";
-	layer = 3.3;
 	pixel_y = -22;
 	req_access = list(10)
 	},
@@ -31844,7 +31648,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -31977,7 +31780,6 @@
 /area/maintenance/research)
 "ceR" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -32139,7 +31941,6 @@
 /area/maintenance/research_medical)
 "cfl" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -32390,7 +32191,6 @@
 /area/maintenance/apmaint)
 "cfQ" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/sensor{
@@ -32842,7 +32642,6 @@
 /area/maintenance/robotics)
 "cgI" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -33060,7 +32859,6 @@
 "chj" = (
 /obj/structure/table/reinforced,
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -33782,7 +33580,6 @@
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -33955,7 +33752,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -34130,7 +33926,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -35966,7 +35761,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -37304,7 +37098,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/catwalk,
@@ -37693,7 +37486,6 @@
 /area/maintenance/medbay_fore)
 "cqZ" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -37852,7 +37644,6 @@
 /area/medical/genetics)
 "crs" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/table,
@@ -37927,7 +37718,6 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/terminal,
@@ -38176,7 +37966,6 @@
 "csd" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -38768,7 +38557,6 @@
 /area/medical/virology)
 "ctx" = (
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/smes/buildable{
@@ -38790,7 +38578,6 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -38838,7 +38625,6 @@
 /area/engineering/engine_smes)
 "ctA" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/terminal{
@@ -38938,7 +38724,6 @@
 "ctQ" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -38977,7 +38762,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/disposalpipe/segment,
@@ -39103,7 +38887,6 @@
 /area/hallway/primary/seconddeck/apcenter)
 "cuj" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/wingrille_spawn/reinforced/polarized{
@@ -39495,7 +39278,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/light_switch{
@@ -39528,9 +39310,7 @@
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "quart_tint"
 	},
-/obj/machinery/ai_status_display{
-	layer = 4
-	},
+/obj/machinery/ai_status_display,
 /turf/simulated/floor/plating,
 /area/quartermaster/qm)
 "cvo" = (
@@ -39646,7 +39426,6 @@
 "cvC" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
@@ -39722,7 +39501,6 @@
 /area/hallway/primary/seconddeck/apcenter)
 "cvL" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green,
@@ -39871,7 +39649,6 @@
 /obj/item/suit_cooling_unit,
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/medbay_emt_bay)
@@ -39996,7 +39773,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -40102,7 +39878,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -40440,7 +40215,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/random/maintenance/clean,
@@ -40484,9 +40258,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "cxi" = (
-/obj/machinery/status_display{
-	layer = 4
-	},
+/obj/machinery/status_display,
 /turf/simulated/wall,
 /area/quartermaster/delivery)
 "cxj" = (
@@ -40792,7 +40564,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/carpet,
@@ -40880,7 +40651,6 @@
 /obj/item/tank/oxygen,
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/medbay_emt_bay)
@@ -42509,7 +42279,6 @@
 	},
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/medbay_emt_bay)
@@ -42560,7 +42329,6 @@
 	pixel_y = 6
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -42818,7 +42586,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/camera/network/medbay{
@@ -43017,7 +42784,6 @@
 	id_tag = "packageSort1"
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
@@ -43068,7 +42834,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/item/stack/package_wrap,
@@ -43454,7 +43219,6 @@
 /obj/random/medical,
 /obj/random/medical,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/status_display{
@@ -43518,7 +43282,6 @@
 	},
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/medbay_emt_bay)
@@ -44080,7 +43843,6 @@
 /area/quartermaster/office)
 "cEf" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -44616,7 +44378,6 @@
 	pixel_x = 21
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/item/storage/box/pillbottles,
@@ -44675,7 +44436,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/disposalpipe/segment,
@@ -44713,7 +44473,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -44878,14 +44637,12 @@
 	},
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/cargo)
 "cFw" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/cargo)
@@ -45086,7 +44843,6 @@
 /area/quartermaster/qm)
 "cFP" = (
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -45493,7 +45249,6 @@
 	pixel_x = 21
 	},
 /obj/machinery/firealarm{
-	layer = 3.3;
 	pixel_y = 26
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -45544,7 +45299,6 @@
 "cGU" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 8
@@ -45787,7 +45541,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -47991,7 +47744,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/borderfloor/corner,
@@ -48199,7 +47951,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
@@ -48456,7 +48207,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/catwalk,
@@ -48501,7 +48251,6 @@
 /area/hallway/primary/seconddeck/apcenter)
 "cMi" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable{
@@ -48531,7 +48280,6 @@
 /area/maintenance/medbay)
 "cMl" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -48547,11 +48295,9 @@
 	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/sensor{
@@ -48719,7 +48465,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/alarm{
@@ -49044,7 +48789,6 @@
 "cNe" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
@@ -49053,7 +48797,6 @@
 "cNf" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/stock_parts/circuitboard/apc,
 /obj/item/cell{
@@ -49119,11 +48862,9 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/sensor{
@@ -49145,12 +48886,10 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green,
@@ -49221,7 +48960,6 @@
 /area/storage/emergency_storage/seconddeck/ap_emergency)
 "cNu" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable{
@@ -49288,7 +49026,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/floodlight,
@@ -49330,7 +49067,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -49344,7 +49080,6 @@
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -49782,14 +49517,12 @@
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/cargo)
 "cOA" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/terminal{
@@ -49906,7 +49639,6 @@
 "cOM" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = 32
 	},
 /obj/machinery/camera/network/second_deck{
@@ -50145,7 +49877,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -50769,7 +50500,6 @@
 	pixel_y = 6
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -51693,7 +51423,6 @@
 	dir = 10
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -51806,7 +51535,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -51926,7 +51654,6 @@
 /area/maintenance/cargo)
 "cSi" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -52801,7 +52528,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/button/alternate/door{
@@ -54342,7 +54068,6 @@
 /obj/machinery/door/blast/shutters{
 	dir = 2;
 	id_tag = "bar";
-	layer = 3.1;
 	name = "Bar Shutters"
 	},
 /obj/structure/cable/green{
@@ -54371,7 +54096,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -54382,7 +54106,6 @@
 /obj/machinery/door/blast/shutters{
 	dir = 2;
 	id_tag = "bar";
-	layer = 3.1;
 	name = "Bar Shutters"
 	},
 /obj/machinery/door/firedoor,
@@ -54398,7 +54121,6 @@
 /obj/machinery/door/blast/shutters{
 	dir = 2;
 	id_tag = "bar";
-	layer = 3.1;
 	name = "Bar Shutters"
 	},
 /obj/machinery/door/firedoor,
@@ -54409,7 +54131,6 @@
 /obj/machinery/door/blast/shutters{
 	dir = 2;
 	id_tag = "bar";
-	layer = 3.1;
 	name = "Bar Shutters"
 	},
 /obj/machinery/door/firedoor,
@@ -55159,7 +54880,6 @@
 	},
 /obj/structure/closet/secure_closet/personal,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/light_switch{
@@ -55506,7 +55226,6 @@
 	},
 /obj/structure/closet/secure_closet/personal,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/light_switch{
@@ -55530,7 +55249,6 @@
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	id_tag = "kitchen";
-	layer = 3.3;
 	name = "Kitchen Shutters"
 	},
 /obj/machinery/door/firedoor,
@@ -55762,7 +55480,6 @@
 	dir = 1
 	},
 /obj/machinery/firealarm{
-	layer = 3.3;
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
@@ -55855,7 +55572,6 @@
 /obj/item/hemostat,
 /obj/item/cautery,
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -55883,7 +55599,6 @@
 	pixel_y = 22
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/item/bonesetter,
@@ -56000,7 +55715,6 @@
 	pixel_y = 22
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/item/bonesetter,
@@ -56070,7 +55784,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -56092,7 +55805,6 @@
 	pixel_y = 6
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -56176,7 +55888,6 @@
 	pixel_y = 6
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -56447,7 +56158,6 @@
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	id_tag = "kitchen";
-	layer = 3.3;
 	name = "Kitchen Shutters"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -56754,7 +56464,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -57081,7 +56790,6 @@
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	id_tag = "kitchen";
-	layer = 3.3;
 	name = "Kitchen Shutters"
 	},
 /obj/machinery/door/firedoor,
@@ -57494,7 +57202,6 @@
 	},
 /obj/machinery/computer/modular/telescreen/preset/entertainment{
 	icon_state = "frame";
-	layer = 4;
 	pixel_y = -32
 	},
 /obj/machinery/light,
@@ -57540,7 +57247,6 @@
 	},
 /obj/machinery/computer/modular/telescreen/preset/entertainment{
 	icon_state = "frame";
-	layer = 4;
 	pixel_y = -32
 	},
 /obj/machinery/light,
@@ -58058,7 +57764,6 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /obj/machinery/chem_master/condimaster{
@@ -58206,7 +57911,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/portable_atmospherics/powered/pump/filled,
@@ -58432,7 +58136,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/closet/secure_closet/freezer/kitchen,
@@ -58624,7 +58327,6 @@
 	pixel_x = 38
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -58770,7 +58472,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/light_switch{
@@ -60152,7 +59853,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/lino,
@@ -60776,7 +60476,6 @@
 	name = "Forbidden Knowledge"
 	},
 /obj/machinery/firealarm{
-	layer = 3.3;
 	pixel_y = 26
 	},
 /turf/simulated/floor/carpet,
@@ -60947,7 +60646,6 @@
 "djo" = (
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable{
@@ -60999,7 +60697,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/wood,
@@ -61495,7 +61192,6 @@
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	id_tag = "coffeeshop";
-	layer = 3.1;
 	name = "Cafe Shutters"
 	},
 /obj/item/tabloid,
@@ -61759,7 +61455,6 @@
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	id_tag = "coffeeshop";
-	layer = 3.1;
 	name = "Cafe Shutters"
 	},
 /turf/simulated/floor/tiled,
@@ -61825,7 +61520,6 @@
 "dle" = (
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/sensor{
@@ -62143,7 +61837,6 @@
 /area/library)
 "dlJ" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -62843,7 +62536,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -62882,7 +62574,6 @@
 	dir = 4
 	},
 /obj/machinery/firealarm{
-	layer = 3.3;
 	pixel_y = 26
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -63421,7 +63112,6 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -63462,7 +63152,6 @@
 /obj/machinery/mass_driver{
 	dir = 4;
 	id_tag = "chapelgun";
-	layer = 2.8
 	},
 /obj/machinery/airlock_sensor{
 	pixel_y = 25
@@ -63876,7 +63565,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/flora/pottedplant/shoot,
@@ -63982,7 +63670,6 @@
 	dir = 1
 	},
 /obj/machinery/firealarm{
-	layer = 3.3;
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
@@ -64132,7 +63819,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -64396,7 +64082,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled,
@@ -65108,7 +64793,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -65430,7 +65114,6 @@
 "dsP" = (
 /obj/item/frame/apc,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/item/stock_parts/circuitboard/apc,
@@ -65601,7 +65284,6 @@
 	dir = 6
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -65738,7 +65420,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -65780,7 +65461,6 @@
 /area/hallway/primary/seconddeck/dockhallway)
 "dtJ" = (
 /obj/machinery/firealarm{
-	layer = 3.3;
 	pixel_y = 26
 	},
 /obj/machinery/light{
@@ -65838,7 +65518,6 @@
 /area/hallway/primary/seconddeck/dockhallway)
 "dtQ" = (
 /obj/machinery/firealarm{
-	layer = 3.3;
 	pixel_y = 26
 	},
 /obj/structure/bed/chair,
@@ -65967,7 +65646,6 @@
 /area/hallway/primary/seconddeck/dockhallway)
 "due" = (
 /obj/machinery/firealarm{
-	layer = 3.3;
 	pixel_y = 26
 	},
 /obj/machinery/light{
@@ -67119,7 +66797,6 @@
 	dir = 8
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
@@ -67176,7 +66853,6 @@
 "dwF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
@@ -67520,7 +67196,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/space_heater,
@@ -67980,7 +67655,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -68005,7 +67679,6 @@
 	dir = 8
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
@@ -68015,7 +67688,6 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
@@ -68025,7 +67697,6 @@
 	dir = 8
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
@@ -68035,7 +67706,6 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
@@ -69555,7 +69225,6 @@
 "dGG" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
@@ -69795,7 +69464,6 @@
 "dUV" = (
 /obj/structure/lattice,
 /obj/structure/cable/green{
-	d1 = 32;
 	icon_state = "32-1"
 	},
 /obj/machinery/door/firedoor,
@@ -70041,7 +69709,6 @@
 "ebn" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green,
@@ -70057,7 +69724,6 @@
 	id = "hosoffice"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -70153,11 +69819,9 @@
 	charge = 1e+007
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -70337,7 +70001,6 @@
 	icon_state = "16-0"
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/railing{

@@ -190,7 +190,6 @@
 /area/hallway/primary/firstdeck/auxdockfore)
 "aaH" = (
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -350,7 +349,6 @@
 	dir = 1
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = 32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -369,7 +367,6 @@
 	dir = 1
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = 32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -509,7 +506,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled,
@@ -537,7 +533,6 @@
 	dir = 1
 	},
 /obj/machinery/vending/wallmed1{
-	layer = 3.3;
 	name = "Emergency NanoMed";
 	pixel_x = -28
 	},
@@ -559,7 +554,6 @@
 	dir = 1
 	},
 /obj/machinery/vending/wallmed1{
-	layer = 3.3;
 	name = "Emergency NanoMed";
 	pixel_x = -28
 	},
@@ -744,7 +738,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -903,7 +896,6 @@
 "acr" = (
 /obj/structure/closet/athletic_mixed,
 /obj/machinery/newscaster{
-	layer = 3.3;
 	pixel_y = -27
 	},
 /turf/simulated/floor/tiled,
@@ -933,7 +925,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled,
@@ -1347,7 +1338,6 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -2001,7 +1991,6 @@
 /area/hallway/primary/firstdeck/fore)
 "aey" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -2010,11 +1999,9 @@
 /area/hallway/primary/firstdeck/fore)
 "aez" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -2023,15 +2010,12 @@
 /area/hallway/primary/firstdeck/fore)
 "aeA" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/door/firedoor,
@@ -2054,7 +2038,6 @@
 /area/hallway/primary/firstdeck/fore)
 "aeC" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/firedoor,
@@ -2119,7 +2102,6 @@
 /area/construction/firstdeck/construction5)
 "aeK" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -2369,7 +2351,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -2932,7 +2913,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -3347,7 +3327,6 @@
 	dir = 8
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -3443,7 +3422,6 @@
 /area/crew_quarters/toilet/firstdeck)
 "ahT" = (
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals5{
@@ -3602,7 +3580,6 @@
 	dir = 8
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -4405,7 +4382,6 @@
 "ake" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/tank/oxygen,
 /obj/item/tank/oxygen,
@@ -4501,7 +4477,6 @@
 /area/maintenance/firstdeck/foreport)
 "akn" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -4704,7 +4679,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/portable_atmospherics/powered/scrubber,
@@ -5067,7 +5041,6 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -5169,7 +5142,6 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -5224,7 +5196,6 @@
 "alT" = (
 /obj/structure/bed/chair,
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = 32
 	},
 /turf/simulated/shuttle/floor/white,
@@ -5483,7 +5454,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/dark{
@@ -5575,7 +5545,6 @@
 	dir = 1
 	},
 /obj/machinery/vending/wallmed1{
-	layer = 3.3;
 	name = "Emergency NanoMed";
 	pixel_x = -28
 	},
@@ -5723,7 +5692,6 @@
 /area/maintenance/firstdeck/foreport)
 "ang" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -5860,7 +5828,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -6113,7 +6080,6 @@
 	dir = 9
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -6289,7 +6255,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -6562,7 +6527,6 @@
 /area/maintenance/substation/firstdeck)
 "aoK" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
@@ -6597,7 +6561,6 @@
 /area/tcomm/chamber)
 "aoS" = (
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/door/firedoor,
@@ -6771,7 +6734,6 @@
 /area/maintenance/firstdeck/centralport)
 "apl" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -6820,7 +6782,6 @@
 	c_tag = "First Deck - Port Escape Pod"
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = 32
 	},
 /obj/machinery/light{
@@ -6842,7 +6803,6 @@
 /area/hallway/secondary/escape/firstdeck/ep_port)
 "apr" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -6902,7 +6862,6 @@
 /area/construction/firstdeck/construction1)
 "apx" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -6963,7 +6922,6 @@
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers,
 /obj/machinery/atmospherics/pipe/zpipe/up/supply,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable{
@@ -7077,11 +7035,9 @@
 "apS" = (
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -7139,7 +7095,6 @@
 /area/tcomm/computer)
 "apX" = (
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -7291,7 +7246,6 @@
 /area/construction/firstdeck/construction4)
 "aqp" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -7309,9 +7263,7 @@
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
 /obj/random/drinkbottle,
-/obj/item/chems/condiment/enzyme{
-	layer = 5
-	},
+/obj/item/chems/condiment/enzyme,
 /obj/random/crate,
 /turf/simulated/floor/wood,
 /area/construction/firstdeck/construction4)
@@ -7345,7 +7297,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -7358,7 +7309,6 @@
 /area/hallway/secondary/escape/firstdeck/ep_starboard1)
 "aqv" = (
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = 32
 	},
 /obj/machinery/camera/network/first_deck{
@@ -7738,7 +7688,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
@@ -8857,7 +8806,6 @@
 	icon_state = "16-0"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/disposalpipe/up{
@@ -9097,7 +9045,6 @@
 /area/hallway/primary/firstdeck/port)
 "aum" = (
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = 32
 	},
 /obj/structure/disposalpipe/segment{
@@ -9177,7 +9124,6 @@
 /area/hallway/primary/firstdeck/port)
 "aut" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -9290,7 +9236,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -10046,7 +9991,6 @@
 /obj/item/stock_parts/subspace/amplifier,
 /obj/item/stock_parts/subspace/amplifier,
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -10889,7 +10833,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -10961,7 +10904,6 @@
 /area/hallway/primary/firstdeck/starboard)
 "axA" = (
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = -32
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals5{
@@ -11681,7 +11623,6 @@
 "azo" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -11696,7 +11637,6 @@
 "azp" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -11799,7 +11739,6 @@
 "azC" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
@@ -11866,7 +11805,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/light_switch{
@@ -12232,7 +12170,6 @@
 /area/tcomm/tcomfoyer)
 "aAA" = (
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -12277,7 +12214,6 @@
 	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/sensor{
@@ -12576,7 +12512,6 @@
 "aBl" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/random/maintenance/clean,
 /obj/random/tech_supply,
@@ -12774,7 +12709,6 @@
 /area/hallway/primary/firstdeck/elevator)
 "aBF" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -13096,7 +13030,6 @@
 /area/hallway/secondary/escape/firstdeck/ep_starboard2)
 "aCl" = (
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = -32
 	},
 /obj/machinery/camera/network/first_deck{
@@ -13252,7 +13185,6 @@
 	},
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -13276,7 +13208,6 @@
 /obj/item/clothing/head/helmet/space/void/mining,
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/machinery/door/window/southright{
 	name = "Mining Suit";
@@ -13561,7 +13492,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -14257,7 +14187,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -14596,7 +14525,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light_switch{
@@ -14898,7 +14826,6 @@
 "aFM" = (
 /obj/structure/bed/chair,
 /obj/machinery/vending/wallmed1{
-	layer = 3.3;
 	name = "Emergency NanoMed";
 	pixel_x = 28
 	},
@@ -15147,7 +15074,6 @@
 /area/hallway/primary/firstdeck/elevator)
 "aGo" = (
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -15609,7 +15535,6 @@
 	pixel_x = 5
 	},
 /obj/item/storage/firstaid/o2{
-	layer = 2.8;
 	pixel_x = 4;
 	pixel_y = 6
 	},
@@ -15620,7 +15545,6 @@
 	},
 /obj/item/storage/firstaid/toxin,
 /obj/item/storage/firstaid/fire{
-	layer = 2.9;
 	pixel_x = 2;
 	pixel_y = 3
 	},
@@ -15660,7 +15584,6 @@
 	dir = 1
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = -32
 	},
 /turf/simulated/shuttle/floor/white,
@@ -15677,7 +15600,6 @@
 /area/shuttle/large_escape_pod1/station)
 "aHv" = (
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -15733,7 +15655,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/light_switch{
@@ -15834,7 +15755,6 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -16480,7 +16400,6 @@
 /area/maintenance/firstdeck/aftport)
 "aIV" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -16681,7 +16600,6 @@
 /area/hallway/primary/firstdeck/ascenter)
 "aJp" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -17314,7 +17232,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -17360,7 +17277,6 @@
 /area/storage/emergency_storage/firstdeck/ap_emergency)
 "aKP" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -17405,7 +17321,6 @@
 /area/hallway/primary/firstdeck/aft)
 "aKV" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -17652,7 +17567,6 @@
 	},
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.6
 	},
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
@@ -17708,11 +17622,9 @@
 "aLK" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -17721,11 +17633,9 @@
 "aLL" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -17734,15 +17644,12 @@
 "aLM" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -17751,11 +17658,9 @@
 "aLN" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -17898,7 +17803,6 @@
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -17907,7 +17811,6 @@
 "aMk" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/stock_parts/circuitboard/robotics{
 	pixel_x = -2;
@@ -17918,7 +17821,6 @@
 "aMl" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -17934,7 +17836,6 @@
 "aMm" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/stock_parts/circuitboard/borgupload{
 	pixel_x = -1;
@@ -18113,7 +18014,6 @@
 	dir = 8
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -18594,7 +18494,6 @@
 "aNK" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/storage/toolbox/electrical{
 	pixel_x = 1;
@@ -18631,7 +18530,6 @@
 "aNO" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/stock_parts/manipulator,
 /obj/item/stock_parts/matter_bin,
@@ -18925,7 +18823,6 @@
 "aOB" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/storage/toolbox/electrical{
 	pixel_x = 1;
@@ -18938,7 +18835,6 @@
 "aOC" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/stock_parts/circuitboard/destructive_analyzer,
 /obj/item/stock_parts/circuitboard/protolathe,
@@ -18975,7 +18871,6 @@
 "aOG" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/stock_parts/circuitboard/autolathe{
 	pixel_x = 3;
@@ -18986,7 +18881,6 @@
 "aOH" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/stock_parts/matter_bin,
 /obj/item/stock_parts/matter_bin,
@@ -19326,7 +19220,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -19411,7 +19304,6 @@
 /area/engineering/auxiliary_engineering)
 "aPA" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/terminal,
@@ -19536,14 +19428,12 @@
 "aPO" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "aPP" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/stock_parts/circuitboard/unary_atmos/heater,
 /obj/item/stock_parts/circuitboard/unary_atmos/cooler{
@@ -19556,7 +19446,6 @@
 "aPQ" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/stock_parts/circuitboard/atmos_alert{
 	pixel_x = 3;
@@ -19574,7 +19463,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -19608,7 +19496,6 @@
 "aPU" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/stock_parts/circuitboard/cloning,
 /obj/item/stock_parts/circuitboard/clonescanner,
@@ -19619,7 +19506,6 @@
 "aPV" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/stock_parts/circuitboard/message_monitor{
 	pixel_x = 3;
@@ -19631,7 +19517,6 @@
 "aPW" = (
 /obj/structure/rack{
 	dir = 8;
-	layer = 2.9
 	},
 /obj/item/scanner/plant,
 /obj/item/scanner/health,
@@ -19665,7 +19550,6 @@
 /area/hallway/primary/firstdeck/aft)
 "aQa" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -19719,11 +19603,9 @@
 	pixel_y = -2
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/sensor{
@@ -19735,7 +19617,6 @@
 /area/engineering/auxiliary_engineering)
 "aQf" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/smes/buildable/four_coils{
@@ -20404,7 +20285,6 @@
 "aRo" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
@@ -20895,7 +20775,6 @@
 "aSu" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -20998,7 +20877,6 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = -32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -21529,7 +21407,6 @@
 	dir = 8
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = 32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -21780,7 +21657,6 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = -32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -22116,7 +21992,6 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -22179,7 +22054,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -22278,7 +22152,6 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = 32
 	},
 /obj/machinery/light{
@@ -23214,7 +23087,6 @@
 	dir = 8
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = 32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -24032,7 +23904,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -24597,7 +24468,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light_switch{
@@ -25059,7 +24929,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
@@ -25075,7 +24944,6 @@
 "dYv" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
@@ -25115,7 +24983,6 @@
 "dYx" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
@@ -25135,7 +25002,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
@@ -25440,7 +25306,6 @@
 	opacity = 0
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -25529,7 +25394,6 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/door/blast/regular{
@@ -25629,7 +25493,6 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -25876,7 +25739,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/light_switch{
@@ -26111,7 +25973,6 @@
 "eah" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/door/blast/regular{
@@ -26616,7 +26477,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
@@ -26632,7 +26492,6 @@
 "eaW" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
@@ -26672,7 +26531,6 @@
 "eaY" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
@@ -26689,7 +26547,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{

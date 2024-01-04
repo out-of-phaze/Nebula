@@ -71,7 +71,6 @@
 /area/surface/level_two)
 "deo" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green,
@@ -258,7 +257,6 @@
 	name = "Port Solar Array"
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor{
@@ -279,7 +277,6 @@
 /area/solar/foreportsolar)
 "dBu" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar{
@@ -323,7 +320,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/greengrid,
@@ -370,7 +366,6 @@
 /area/ai)
 "dBD" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/solar{
@@ -395,7 +390,6 @@
 /area/solar/forestarboardsolar)
 "dBF" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar{
@@ -408,7 +402,6 @@
 /area/solar/forestarboardsolar)
 "dBG" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/solar{
@@ -568,7 +561,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -826,7 +818,6 @@
 /area/maintenance/solars/foreportsolar)
 "dCH" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -943,7 +934,6 @@
 /area/maintenance/solars/forestarboardsolar)
 "dCX" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -982,7 +972,6 @@
 "dDc" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor,
@@ -1023,7 +1012,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/button/access/exterior{
-	layer = 3.3;
 	id_tag = "fore_port_solar_airlock";
 	name = "exterior access button";
 	pixel_x = 25;
@@ -1048,7 +1036,6 @@
 /area/maintenance/solars/foreportsolar)
 "dDi" = (
 /obj/structure/cable/yellow{
-
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning/cee{
@@ -1056,7 +1043,6 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "fore_port_solar_airlock";
-	layer = 3.3;
 	pixel_y = -25;
 	req_access = list(13);
 	tag_airpump = "fore_port_solar_pump";
@@ -1066,7 +1052,6 @@
 	},
 /obj/machinery/airlock_sensor{
 	id_tag = "fore_port_solar_sensor";
-	layer = 3.3;
 	pixel_y = 25
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -1119,7 +1104,6 @@
 	},
 /obj/machinery/meter,
 /obj/machinery/button/access/interior{
-	layer = 3.3;
 	id_tag = "fore_port_solar_airlock";
 	name = "interior access button";
 	pixel_x = -25;
@@ -1368,7 +1352,6 @@
 	},
 /obj/machinery/meter,
 /obj/machinery/button/access/interior{
-	layer = 3.3;
 	id_tag = "fore_starboard_solar_airlock";
 	name = "interior access button";
 	pixel_x = 25;
@@ -1417,7 +1400,6 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "fore_starboard_solar_airlock";
-	layer = 3.3;
 	pixel_y = -25;
 	req_access = list(13);
 	tag_airpump = "fore_starboard_solar_pump";
@@ -1427,7 +1409,6 @@
 	},
 /obj/machinery/airlock_sensor{
 	id_tag = "fore_starboard_solar_sensor";
-	layer = 3.3;
 	pixel_y = 25
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -1455,7 +1436,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/button/access/exterior{
-	layer = 3.3;
 	id_tag = "fore_starboard_solar_airlock";
 	name = "exterior access button";
 	pixel_x = -25;
@@ -1474,7 +1454,6 @@
 /area/solar/forestarboardsolar)
 "dDP" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
@@ -1484,7 +1463,6 @@
 /area/solar/forestarboardsolar)
 "dDR" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor,
@@ -1492,7 +1470,6 @@
 "dDS" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
@@ -1585,7 +1562,6 @@
 "dEb" = (
 /obj/structure/lattice,
 /obj/structure/cable{
-	d1 = 32;
 	icon_state = "32-1"
 	},
 /obj/machinery/door/firedoor,
@@ -1680,7 +1656,6 @@
 /area/maintenance/solars/forestarboardsolar)
 "dEm" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -2216,7 +2191,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -2308,7 +2282,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -2360,7 +2333,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -2378,7 +2350,6 @@
 /area/maintenance/thirddeck/foreport)
 "dFM" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/solar_control{
@@ -2557,7 +2528,6 @@
 /area/ai/ai_cyborg_station)
 "dFY" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/solar_control{
@@ -2882,7 +2852,6 @@
 /area/maintenance/thirddeck/foreport)
 "dGZ" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -2983,7 +2952,6 @@
 /area/hallway/primary/thirddeck/central)
 "dHl" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -3065,7 +3033,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/light_switch{
@@ -3141,11 +3108,9 @@
 /area/crew_quarters/heads/sc/hop/quarters)
 "dHy" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/smes/buildable{
@@ -3621,7 +3586,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -4563,7 +4527,6 @@
 "dKm" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -4944,7 +4907,6 @@
 	dir = 8
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = 32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -5056,7 +5018,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/light_switch{
@@ -5284,7 +5245,6 @@
 	dir = 4
 	},
 /obj/machinery/status_display{
-	layer = 4;
 	pixel_y = -32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
@@ -5419,7 +5379,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/button/windowtint{
@@ -5504,7 +5463,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light_switch{
@@ -6260,7 +6218,6 @@
 	pixel_x = 36
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/wood,
@@ -6456,7 +6413,6 @@
 	opacity = 0
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green,
@@ -7028,7 +6984,6 @@
 "dPB" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
@@ -7064,7 +7019,6 @@
 	opacity = 0
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/wingrille_spawn/reinforced/polarized{
@@ -7075,7 +7029,6 @@
 "dPD" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
@@ -7108,7 +7061,6 @@
 /area/crew_quarters/heads/sc/sd)
 "dPH" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -7150,7 +7102,6 @@
 /area/maintenance/thirddeck/aftstarboard)
 "dPN" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/solar{
@@ -7175,7 +7126,6 @@
 /area/solar/aftportsolar)
 "dPP" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar{
@@ -7475,7 +7425,6 @@
 /area/maintenance/thirddeck/aftstarboard)
 "dQv" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/solar{
@@ -7500,7 +7449,6 @@
 /area/solar/aftstarboardsolar)
 "dQx" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar{
@@ -8536,7 +8484,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/alarm{
@@ -8552,7 +8499,6 @@
 /area/maintenance/solars/aftportsolar)
 "dSA" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable{
@@ -8642,7 +8588,6 @@
 "dSK" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
@@ -8659,11 +8604,9 @@
 "dSL" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
@@ -8681,7 +8624,6 @@
 "dSM" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
@@ -8808,7 +8750,6 @@
 "dSU" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -8825,11 +8766,9 @@
 "dSV" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green,
@@ -8847,7 +8786,6 @@
 "dSW" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -8931,7 +8869,6 @@
 /area/maintenance/solars/aftstarboardsolar)
 "dTg" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable{
@@ -8953,7 +8890,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -9005,7 +8941,6 @@
 "dTo" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor,
@@ -9046,7 +8981,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/button/access/exterior{
-	layer = 3.3;
 	id_tag = "aft_port_solar_airlock";
 	name = "exterior access button";
 	pixel_x = 25;
@@ -9076,7 +9010,6 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "aft_port_solar_airlock";
-	layer = 3.3;
 	pixel_y = 25;
 	req_access = list(13);
 	tag_airpump = "aft_port_solar_pump";
@@ -9089,7 +9022,6 @@
 	},
 /obj/machinery/airlock_sensor{
 	id_tag = "aft_port_solar_sensor";
-	layer = 3.3;
 	pixel_y = -25
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -9145,7 +9077,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/button/access/interior{
-	layer = 3.3;
+
 	id_tag = "aft_port_solar_airlock";
 	name = "interior access button";
 	pixel_x = -25;
@@ -9236,7 +9168,6 @@
 "dTF" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
@@ -9253,11 +9184,9 @@
 "dTG" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
@@ -9275,11 +9204,9 @@
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
@@ -9296,7 +9223,6 @@
 "dTI" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
@@ -9317,11 +9243,9 @@
 "dTK" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
@@ -9339,11 +9263,9 @@
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
@@ -9360,11 +9282,9 @@
 "dTM" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
@@ -9385,7 +9305,6 @@
 "dTO" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
@@ -9402,11 +9321,9 @@
 "dTP" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green,
@@ -9424,11 +9341,9 @@
 "dTQ" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
@@ -9445,7 +9360,6 @@
 "dTR" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
@@ -9557,7 +9471,6 @@
 	},
 /obj/machinery/meter,
 /obj/machinery/button/access/interior{
-	layer = 3.3;
 	id_tag = "aft_starboard_solar_airlock";
 	name = "interior access button";
 	pixel_x = 25;
@@ -9610,7 +9523,6 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "aft_starboard_solar_airlock";
-	layer = 3.3;
 	pixel_y = 25;
 	req_access = list(13);
 	tag_airpump = "aft_starboard_solar_pump";
@@ -9620,7 +9532,6 @@
 	},
 /obj/machinery/airlock_sensor{
 	id_tag = "aft_starboard_solar_sensor";
-	layer = 3.3;
 	pixel_y = -25
 	},
 /obj/effect/floor_decal/industrial/warning/cee{
@@ -9648,7 +9559,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/button/access/exterior{
-	layer = 3.3;
 	id_tag = "aft_starboard_solar_airlock";
 	name = "exterior access button";
 	pixel_x = -25;
@@ -9690,7 +9600,6 @@
 "dUj" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
@@ -10063,11 +9972,9 @@
 	opacity = 0
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green,
@@ -10080,7 +9987,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/button/windowtint{
@@ -10112,11 +10018,9 @@
 /area/maintenance/substation/command)
 "edA" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -10152,7 +10056,6 @@
 /area/maintenance/substation/command)
 "edC" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/terminal,
