@@ -19302,6 +19302,9 @@
 /obj/machinery/power/breakerbox{
 	RCon_tag = "Auxiliary Bypass"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/auxiliary_engineering)
 "aQe" = (

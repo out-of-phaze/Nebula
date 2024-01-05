@@ -23647,15 +23647,6 @@
 "bPm" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck/fscenter)
 "bPn" = (
@@ -32378,15 +32369,6 @@
 "chK" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck/fpcenter)
 "chL" = (
@@ -32482,15 +32464,6 @@
 "chX" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck/ascenter)
 "chY" = (
@@ -36922,9 +36895,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
 /obj/machinery/power/terminal,
 /obj/machinery/button/alternate/door{
 	id_tag = "engine_electrical_maintenance";
@@ -36972,6 +36942,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_smes)
@@ -38104,6 +38077,9 @@
 	},
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/sc/hop)
 "cum" = (
@@ -38689,10 +38665,15 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/structure/cable/green,
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "hop_office"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/sc/hop)
@@ -44739,15 +44720,6 @@
 "cHE" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck/apcenter)
 "cHF" = (
@@ -58759,12 +58731,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
-"dhU" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/seconddeck/aft)
 "dhV" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -58776,9 +58742,6 @@
 "dhW" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
@@ -60298,24 +60261,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/library)
-"dli" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/green/bordercorner2{
-	dir = 5
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/seconddeck/aft)
 "dlj" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass{
@@ -60431,12 +60376,6 @@
 /turf/simulated/floor/carpet,
 /area/library)
 "dlz" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -60446,6 +60385,10 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
+	},
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
@@ -60650,9 +60593,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -60848,9 +60788,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "dms" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 28
 	},
@@ -62858,7 +62795,7 @@
 "dqZ" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
-	icon_state = "4-8"
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/construction/seconddeck/construction2)
@@ -101949,7 +101886,7 @@ dgi
 dgI
 dhc
 cTB
-dhU
+dfk
 div
 dfk
 dbK
@@ -102206,7 +102143,7 @@ dfX
 cTA
 dhd
 cTA
-dhV
+cUK
 cVW
 cUK
 cUK
@@ -102469,7 +102406,7 @@ diY
 dld
 dlz
 dlT
-dli
+dew
 dms
 dow
 dmT
