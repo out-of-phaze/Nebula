@@ -5449,15 +5449,14 @@
 /turf/exterior/open,
 /area/surface/level_one)
 "bfH" = (
+/obj/machinery/door/firedoor,
+/obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
-	icon_state = "0-2"
+	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/structure/cable/green,
-/obj/machinery/door/firedoor,
-/obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/security/security_cell_hallway)
 "bfI" = (
@@ -5532,9 +5531,6 @@
 "bfM" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -14215,8 +14211,6 @@
 /obj/machinery/door/airlock/engineering{
 	name = "Atmospherics Monitoring Room"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
@@ -17012,8 +17006,6 @@
 /obj/machinery/door/airlock/engineering{
 	name = "Atmospherics Monitoring Room"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/atmos)
@@ -17287,10 +17279,6 @@
 	name = "Custodial Maintenance"
 	},
 /obj/machinery/door/firedoor,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
@@ -17736,8 +17724,6 @@
 /obj/machinery/door/airlock/engineering{
 	name = "Atmospherics Monitoring Room"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/atmos)
@@ -23254,6 +23240,12 @@
 	pixel_x = -8;
 	pixel_y = -18
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/mixing)
 "bOv" = (
@@ -23263,6 +23255,9 @@
 	id_tag = "tox_airlock_exterior";
 	locked = 1;
 	name = "Mixing Room Exterior Airlock"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/mixing)
@@ -23507,16 +23502,6 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/hallway/engineer_hallway)
-"bOW" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering Hallway"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_grid,
 /area/engineering/hallway/engineer_hallway)
 "bOX" = (
 /obj/structure/disposalpipe/segment,
@@ -36908,6 +36893,9 @@
 	name = "Powernet Sensor - Engine Output";
 	id_tag = "Engine Output"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_smes)
 "crI" = (
@@ -38077,9 +38065,6 @@
 	},
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/sc/hop)
 "cum" = (
@@ -46720,7 +46705,6 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -47225,7 +47209,6 @@
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/seconddeck/as_emergency)
 "cMk" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -47990,7 +47973,6 @@
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/seconddeck/as_emergency)
 "cND" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -48078,9 +48060,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/heads/sc/cmo)
 "cNN" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
@@ -48090,30 +48069,17 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "cNO" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
-"cNP" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled/white,
-/area/medical/sleeper)
 "cNQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
@@ -48121,9 +48087,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "cNR" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9
-	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
@@ -48191,27 +48154,28 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
 "cNZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
 "cOa" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
 "cOb" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo)
 "cOc" = (
@@ -53796,8 +53760,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
@@ -66392,6 +66354,7 @@
 	},
 /obj/structure/closet/emcloset,
 /obj/item/crowbar/red,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D2)
 "dyA" = (
@@ -68071,13 +68034,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D3)
-"dVj" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
-	},
-/turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D2)
 "dVk" = (
 /obj/structure/sign/warning/secure_area{
 	desc = "A warning sign which reads 'KEEP CLEAR OF DOCKING AREA'.";
@@ -91295,7 +91251,7 @@ bCf
 bCf
 bLh
 bNi
-bOW
+bNi
 bQk
 bSh
 bTY
@@ -102947,7 +102903,7 @@ aaa
 aaa
 aaa
 aaa
-dVj
+dxV
 dxp
 dxK
 dvk
@@ -102957,7 +102913,7 @@ duY
 dvk
 dzm
 dzF
-dVj
+dxV
 aaa
 aaa
 aaa
@@ -103204,17 +103160,17 @@ aaa
 aaa
 aaa
 aaa
-dVj
+dxV
 dxq
 dxL
-dVj
+dxV
 aaa
 aaa
 aaa
-dVj
+dxV
 dzn
 dzG
-dVj
+dxV
 aaa
 aaa
 aaa
@@ -103464,11 +103420,11 @@ aaa
 dVk
 dxI
 dzk
-dVj
+dxV
 aaa
 aaa
 aaa
-dVj
+dxV
 dzD
 dCP
 dVk
@@ -110857,7 +110813,7 @@ cHZ
 cJJ
 cLd
 cMv
-cNP
+cNU
 cPb
 cQx
 cRz
