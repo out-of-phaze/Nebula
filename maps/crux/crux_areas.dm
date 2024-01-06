@@ -2,22 +2,69 @@
 
 /datum/map/crux
 	apc_test_exempt_areas = list(
-		/area/surface   = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/space     = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/turbolift = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/shuttle   = NO_SCRUBBER|NO_VENT|NO_APC
+		/area/exoplanet                                              = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/engineering/engine_room                                = NO_SCRUBBER|NO_VENT|NO_APC, // TODO port engine
+		/area/engineering/engine_waste                               = NO_SCRUBBER|NO_VENT|NO_APC, // TODO port engine
+		/area/holodeck                                               = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/surface                                                = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/space                                                  = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/turbolift                                              = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/shuttle                                                = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/solar                                                  = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/shuttle/shuttle_start_2                                = NO_SCRUBBER|NO_APC,
+		/area/shuttle/shuttle_start                                  = NO_SCRUBBER|NO_APC,
+		/area/construction/firstdeck                                 = NO_SCRUBBER|NO_VENT,
+		/area/construction/seconddeck/construction1                  = NO_SCRUBBER|NO_VENT,
+		/area/storage/emergency_storage                              = NO_SCRUBBER|NO_VENT,
+		/area/security/riot_control                                  = NO_SCRUBBER|NO_VENT,
+		/area/rnd/test_area                                          = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/firstdeck                                  = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/firstdeck/foreport                         = NO_SCRUBBER,
+		/area/maintenance/firstdeck/forestarboard                    = NO_SCRUBBER,
+		/area/maintenance/substation                                 = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/robotics                                   = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/emergencyeva                               = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/medbay_fore                                = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/research_medical                           = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/engineering                                = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/chapel                                     = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/bar                                        = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/locker                                     = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/disposal                                   = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/apmaint                                    = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/central                                    = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/thirddeck                                  = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/security_starboard                         = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/solars/aftportsolar                        = NO_SCRUBBER,
+		/area/maintenance/solars/aftstarboardsolar                   = NO_SCRUBBER,
+		/area/maintenance/security_port                              = NO_SCRUBBER,
+		/area/maintenance/medbay                                     = NO_SCRUBBER,
+		/area/maintenance/cargo                                      = NO_SCRUBBER,
+		/area/maintenance/research                                   = NO_SCRUBBER,
+		/area/maintenance/solars/foreportsolar                       = NO_SCRUBBER,
+		/area/maintenance/solars/forestarboardsolar                  = NO_SCRUBBER,
+		/area/tcomm/chamber                                          = NO_SCRUBBER,
+		/area/server                                                 = NO_SCRUBBER,
+		/area/medical/genetics                                       = NO_APC
+	)
+	area_coherency_test_exempt_areas = list(
+		/area/space,
+		/area/surface,
+		/area/surface/level_one,
+		/area/surface/level_two
 	)
 
-
 //Planetside
-
 /area
 /area/surface
+	name = "\improper Crux Surface"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/surface/level_one
+	name = "\improper Crux Exterior"
 
 /area/surface/level_two
+	name = "\improper Crux Heights"
 
 /area/turbolift
 	name = "\improper Turbolift"
@@ -95,7 +142,7 @@
 	name = "\improper Station Gym"
 	icon_state = "fitness"
 
-/area/construction/firstdeck/
+/area/construction/firstdeck
 	name = "\improper Engineering Construction Area"
 	icon_state = "construction"
 
@@ -144,12 +191,6 @@
 /area/maintenance/firstdeck/centralport
 	name = "First Deck Port Maintenance"
 	icon_state = "pmaint"
-
-/area/maintenance/substation/firstdeck
-	name = "First Deck Utility Access"
-
-/area/maintenance/substation/firstdeck/cargo
-	name = "First Deck Cargo Substation"
 
 /area/hallway/primary/firstdeck/elevator
 	name = "\improper First Deck Central Elevator Access"
@@ -253,7 +294,7 @@
 /area/medical/first_aid_station/firstdeck/
 	name = "\improper First Deck First-Aid Station"
 
-/area/storage/emergency_storage/
+/area/storage/emergency_storage
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	name = "Emergency Storage"
 	icon_state = "emergencystorage"
@@ -314,15 +355,9 @@
 
 //Deck Two (Z-2)
 
-/area/maintenance/substation/atmospherics
-	name = "Atmospherics Substation"
-
 /area/maintenance/emergencyeva
 	name = "\improper Emergency EVA Maintenance"
 	icon_state = "maint_eva"
-
-/area/maintenance/substation/central // n/a
-	name = "Central Substation"
 
 /area/maintenance/robotics
 	name = "Robotics Maintenance"
@@ -332,7 +367,7 @@
 	name = "Research Medical Maintenance"
 	icon_state = "maint_research"
 
-/area/construction/seconddeck/
+/area/construction/seconddeck
 	name = "\improper Second Deck Engineering Construction Area"
 	icon_state = "construction"
 
@@ -650,12 +685,6 @@
 	name = "\improper Fore Starboard Solar Array"
 	icon_state = "panelsS"
 
-/area/thirddeck/roof
-	name = "\improper Third Deck Plating"
-	dynamic_lighting = 0
-	ambience = AMBIENCE_SPACE
-	area_flags = AREA_FLAG_IS_NOT_PERSISTENT
-
 // Shuttles
 
 //Shuttle One
@@ -844,9 +873,6 @@
 /area/maintenance/security_port
 	name = "\improper Port Security"
 
-/area/maintenance/substation/security
-	name = "\improper Security Substation"
-
 /area/lawoffice
 	name = "\improper Legal Office"
 
@@ -868,17 +894,12 @@
 /area/maintenance/research
 	name = "\improper Research Maintenance"
 
-/area/maintenance/substation/engineering
-	name = "\improper Engineering Substation"
-
 /area/storage/auxillary
 	name = "\improper Auxillary Storage"
 
 /area/janitor
 	name = "\improper Custodial Office"
 
-/area/maintenance/substation/engineering
-	name = "\improper Engineering Substration"
 
 /area/engineering/atmos/monitoring
 	name = "\improper Atmospherics Monitoring"
@@ -949,15 +970,6 @@
 /area/medical/sleeper
 	name = "\improper Sleepers"
 
-/area/maintenance/substation/medical
-	name = "\improper Medical Substation"
-
-/area/maintenance/substation/cargo
-	name = "\improper Cargo Substation"
-
-/area/maintenance/substation/medical
-	name = "\improper Medical Substation"
-
 /area/engineering/engine_smes
 	name = "\improper SMES Chamber"
 
@@ -1005,9 +1017,6 @@
 
 /area/engineering/engine_room
 	name = "\improper Engine Room"
-
-/area/maintenance/substation/research
-	name = "\improper Research Substation"
 
 /area/engineering/foyer
 	name = "\improper Engineering Foyer"
@@ -1081,12 +1090,6 @@
 /area/hydroponics
 	name = "\improper Hydroponics"
 
-/area/maintenance/substation/civilian
-	name = "\improper Civilian Substation"
-
-/area/maintenance/substation/command
-	name = "\improper Command Substation"
-
 /area/holodeck/alphadeck
 	name = "\improper Holodeck"
 
@@ -1111,20 +1114,50 @@
 /area/hallway/secondary/entry/docking_lounge
 	name = "\improper Docking Lounge"
 
-/area/hallway/secondary/entry/D2/arrivals
-	name = "\improper Deck Two Arrivals"
-
 /area/bridge
 	name = "\improper Bridge"
 
 /area/bridge/meeting_room
 	name = "\improper Meeting Room"
 
-/area/hallway/secondary/entry/D1
-	name = "\improper Deck One Entry"
+/area/hallway/secondary/entry/dock_one
+	name = "\improper Dock One"
 
-/area/hallway/secondary/entry/D2
-	name = "\improper Deck Two Entry"
+/area/hallway/secondary/entry/dock_two
+	name = "\improper Dock Two"
 
-/area/hallway/secondary/entry/D3
-	name = "\improper Deck Three Entry"
+/area/hallway/secondary/entry/dock_three
+	name = "\improper Dock Three"
+
+/area/maintenance/substation/civilian
+	name = "\improper Civilian Substation"
+
+/area/maintenance/substation/command
+	name = "\improper Command Substation"
+
+/area/maintenance/substation/research
+	name = "\improper Research Substation"
+
+/area/maintenance/substation/cargo
+	name = "\improper Cargo Substation"
+
+/area/maintenance/substation/medical
+	name = "\improper Medical Substation"
+
+/area/maintenance/substation/engineering
+	name = "\improper Engineering Substration"
+
+/area/maintenance/substation/firstdeck
+	name = "First Deck Utility Access"
+
+/area/maintenance/substation/firstdeck/cargo
+	name = "First Deck Cargo Substation"
+
+/area/maintenance/substation/atmospherics
+	name = "Atmospherics Substation"
+
+/area/maintenance/substation/central // n/a
+	name = "Central Substation"
+
+/area/maintenance/substation/security
+	name = "\improper Security Substation"

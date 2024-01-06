@@ -29,3 +29,15 @@
 		/obj/item/clothing/suit/space = 2,
 		/obj/item/tank/oxygen = 2
 	)
+
+/obj/structure/closet/walllocker/emerglocker
+	name = "emergency locker"
+	desc = "A wall mounted locker with emergency supplies."
+	closet_appearance = /decl/closet_appearance/wall/emergency
+
+/obj/structure/closet/walllocker/emerglocker/WillContain()
+	return list(
+		/obj/item/tank/emergency/oxygen = 2,
+		/obj/item/clothing/mask/breath  = 2,
+		/obj/item/crowbar/red           = 2
+	)
