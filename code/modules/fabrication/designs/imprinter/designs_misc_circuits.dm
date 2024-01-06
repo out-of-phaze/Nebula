@@ -218,9 +218,6 @@
 /datum/fabricator_recipe/imprinter/circuit/chemical_dispenser
 	path = /obj/item/stock_parts/circuitboard/chemical_dispenser
 
-/datum/fabricator_recipe/imprinter/circuit/atmos_control
-	path = /obj/item/stock_parts/circuitboard/atmoscontrol
-
 /datum/fabricator_recipe/imprinter/circuit/pipe_dispenser
 	path = /obj/item/stock_parts/circuitboard/pipedispensor
 

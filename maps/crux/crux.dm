@@ -21,7 +21,6 @@
 	#include "../../mods/species/bayliens/_bayliens.dme"
 	#include "../../mods/species/vox/_vox.dme"
 
-	#include "datum/shuttles.dm"
 	#include "datum/turbolifts.dm"
 
 	#include "atoms/cameras.dm"

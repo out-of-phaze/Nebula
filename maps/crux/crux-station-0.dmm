@@ -54,7 +54,6 @@
 "aar" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "d1fore_port2_outer";
 	locked = 1;
 	name = "Dock External Airlock"
@@ -287,7 +286,6 @@
 "aaT" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "d1fore_port2_inner";
 	locked = 1;
 	name = "Dock Internal Airlock"
@@ -571,7 +569,6 @@
 /area/maintenance/firstdeck/forestarboard)
 "aby" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "d1fore_port_outer";
 	locked = 1;
 	name = "External Airlock Access"
@@ -619,7 +616,6 @@
 /area/hallway/primary/firstdeck/auxdockfore)
 "abI" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "d1fore_starboard_outer";
 	locked = 1;
 	name = "External Airlock Access"
@@ -783,7 +779,6 @@
 /area/shuttle/escape_pod1/station)
 "acf" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_1_hatch";
 	locked = 1;
 	name = "Escape Pod 1 Hatch"
@@ -797,7 +792,6 @@
 /area/shuttle/escape_pod2/station)
 "ach" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_2_hatch";
 	locked = 1;
 	name = "Escape Pod 2 Hatch"
@@ -984,7 +978,6 @@
 /area/hallway/primary/firstdeck/fore)
 "acE" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_1_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 1"
@@ -997,7 +990,6 @@
 /area/hallway/primary/firstdeck/fore)
 "acG" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_2_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 2"
@@ -1044,7 +1036,6 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "d1fore_port_inner";
 	locked = 1;
 	name = "Internal Airlock Access"
@@ -1056,7 +1047,6 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "d1fore_port_inner";
 	locked = 1;
 	name = "Internal Airlock Access"
@@ -1201,7 +1191,6 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "d1fore_starboard_inner";
 	locked = 1;
 	name = "Internal Airlock Access"
@@ -1213,7 +1202,6 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "d1fore_starboard_inner";
 	locked = 1;
 	name = "Internal Airlock Access"
@@ -4337,7 +4325,6 @@
 /area/hangar/three)
 "akh" = (
 /obj/machinery/door/airlock{
-	icon_state = "door_locked";
 	id_tag = "expshuttle1_door_L";
 	locked = 1;
 	name = "shuttle side hatch"
@@ -4378,9 +4365,6 @@
 	},
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = -28
-	},
-/obj/effect/polaris_placeholder_landmark/escape_pod1/station{
-	base_area = /area/hallway/primary/firstdeck/auxdockfore
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod1/station)
@@ -5677,7 +5661,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/hatch/maintenance{
-	icon_state = "door_locked";
 	id_tag = "server_access_inner";
 	locked = 1;
 	name = "Telecoms Server Access"
@@ -5817,7 +5800,6 @@
 /area/rnd/xenobiology/xenoflora_isolation)
 "anD" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "large_escape_pod_2_hatch";
 	locked = 1;
 	name = "Large Escape Pod Hatch 2"
@@ -6067,7 +6049,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/hatch/maintenance{
-	icon_state = "door_locked";
 	id_tag = "server_access_outer";
 	locked = 1;
 	name = "Telecoms Server Access"
@@ -6274,7 +6255,6 @@
 /area/rnd/xenobiology/xenoflora_isolation)
 "aox" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "large_escape_pod_2_berth_hatch";
 	locked = 1;
 	name = "Large Escape Pod 2"
@@ -11961,7 +11941,6 @@
 /area/tcomm/entrance)
 "aAx" = (
 /obj/machinery/door/airlock/double{
-	icon_state = "door_locked";
 	id_tag = "expshuttle1_door_cargo";
 	locked = 1
 	},
@@ -12332,7 +12311,6 @@
 "aBm" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "crglockdown";
 	name = "Cargo Lockdown";
 	opacity = 0
@@ -12373,7 +12351,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "crglockdown";
 	name = "Cargo Lockdown";
 	opacity = 0
@@ -12385,7 +12362,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "crglockdown";
 	name = "Cargo Lockdown";
 	opacity = 0
@@ -13399,7 +13375,6 @@
 /area/hangar/two)
 "aDo" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "large_escape_pod_1_berth_hatch";
 	locked = 1;
 	name = "Large Escape Pod 1"
@@ -13630,7 +13605,6 @@
 "aDO" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "crglockdown";
 	name = "Cargo Lockdown";
 	opacity = 0
@@ -14104,7 +14078,6 @@
 /area/shuttle/large_escape_pod1/station)
 "aEB" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "large_escape_pod_1_hatch";
 	locked = 1;
 	name = "Large Escape Pod Hatch 1"
@@ -14610,9 +14583,6 @@
 	},
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = -28
-	},
-/obj/effect/polaris_placeholder_landmark/escape_pod2/station{
-	base_area = /area/hallway/primary/firstdeck/auxdockfore
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod2/station)
@@ -16402,7 +16372,6 @@
 	pixel_y = 26
 	},
 /obj/machinery/door/airlock/external/bolted{
-	icon_state = "door_locked";
 	id_tag = "expshuttle2_door_L";
 	locked = 1;
 	name = "shuttle side hatch"
@@ -17640,7 +17609,6 @@
 /area/engineering/auxiliary_engineering)
 "aMz" = (
 /obj/machinery/door/airlock/double{
-	icon_state = "door_locked";
 	id_tag = "expshuttle2_door_cargo";
 	locked = 1
 	},
@@ -20313,12 +20281,10 @@
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod3/station)
 "aSj" = (
-/obj/effect/polaris_placeholder_landmark/large_escape_pod2/station,
 /turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod2/station)
 "aSk" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_3_hatch";
 	locked = 1;
 	name = "Escape Pod Hatch 3"
@@ -20327,7 +20293,6 @@
 /area/shuttle/escape_pod3/station)
 "aSl" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_3_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 3"
@@ -20490,7 +20455,6 @@
 /area/construction/firstdeck/construction4)
 "aSA" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_5_hatch";
 	locked = 1;
 	name = "Escape Pod Hatch 5"
@@ -20498,7 +20462,6 @@
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod5/station)
 "aSB" = (
-/obj/effect/polaris_placeholder_landmark/large_escape_pod1/station,
 /turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod1/station)
 "aSC" = (
@@ -21087,7 +21050,6 @@
 /area/shuttle/shuttle_start_2)
 "aTK" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_4_hatch";
 	locked = 1;
 	name = "Escape Pod Hatch 4"
@@ -21096,7 +21058,6 @@
 /area/shuttle/escape_pod4/station)
 "aTL" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_4_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 4"
@@ -21250,7 +21211,6 @@
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "aUa" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_6_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 6"
@@ -21259,7 +21219,6 @@
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "aUb" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_6_hatch";
 	locked = 1;
 	name = "Escape Pod Hatch 6"
@@ -21267,7 +21226,6 @@
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod6/station)
 "aUc" = (
-/obj/effect/polaris_placeholder_landmark/supply_station,
 /turf/simulated/floor/reinforced,
 /area/quartermaster/storage)
 "aUd" = (
@@ -21887,7 +21845,6 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "d1aft_port_outer";
 	locked = 1;
 	name = "Dock External Airlock"
@@ -21923,7 +21880,6 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "d1aft_port_inner";
 	locked = 1;
 	name = "Dock Internal Airlock"
@@ -22106,7 +22062,6 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "ninja_shuttle_dock_inner";
 	locked = 1;
 	name = "Dock Internal Airlock"
@@ -22135,7 +22090,6 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/shuttle{
-	icon_state = "door_locked";
 	id_tag = "ninja_shuttle_dock_outer";
 	locked = 1;
 	name = "Dock External Airlock"
@@ -22154,7 +22108,6 @@
 "aVG" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "skipjack_shuttle_dock_inner";
 	locked = 1;
 	name = "Dock Internal Airlock"
@@ -22199,7 +22152,6 @@
 "aVM" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "d1aft_starboard_inner";
 	locked = 1;
 	name = "Dock Internal Airlock"
@@ -22372,7 +22324,6 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/shuttle{
-	icon_state = "door_locked";
 	id_tag = "skipjack_shuttle_dock_outer";
 	locked = 1;
 	name = "Dock External Airlock"
@@ -22383,7 +22334,6 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/shuttle{
-	icon_state = "door_locked";
 	id_tag = "skipjack_shuttle_dock_outer";
 	locked = 1;
 	name = "Dock External Airlock"
@@ -22399,7 +22349,6 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "d1aft_starboard_outer";
 	locked = 1;
 	name = "Dock External Airlock"
@@ -22415,7 +22364,6 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "d1aft_starboard_outer";
 	locked = 1;
 	name = "Dock External Airlock"
@@ -23115,7 +23063,6 @@
 /area/rnd/research/firstdeck/hallway)
 "dgE" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_5_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 5"
@@ -23164,9 +23111,6 @@
 	name = "NanoMed Wall";
 	pixel_y = -30
 	},
-/obj/effect/polaris_placeholder_landmark/escape_pod3/station{
-	base_area = /area/hallway/secondary/escape/firstdeck/ep_aftport
-	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod3/station)
 "dLk" = (
@@ -23176,9 +23120,6 @@
 /obj/machinery/vending/wallmed1{
 	name = "NanoMed Wall";
 	pixel_y = 30
-	},
-/obj/effect/polaris_placeholder_landmark/escape_pod5/station{
-	base_area = /area/hallway/secondary/escape/firstdeck/ep_aftstarboard
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod5/station)
@@ -23197,9 +23138,6 @@
 /obj/machinery/vending/wallmed1{
 	name = "NanoMed Wall";
 	pixel_y = -30
-	},
-/obj/effect/polaris_placeholder_landmark/escape_pod4/station{
-	base_area = /area/hallway/secondary/escape/firstdeck/ep_aftport
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod4/station)
@@ -23519,7 +23457,7 @@
 "dWo" = (
 /obj/structure/table/glass,
 /obj/item/scanner/plant,
-/obj/item/stack/tape_roll,
+/obj/item/stack/tape_roll/duct_tape,
 /obj/item/scanner/plant,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
@@ -24355,7 +24293,6 @@
 "dYg" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -24368,7 +24305,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -24381,7 +24317,6 @@
 "dYi" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -24504,7 +24439,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "xenobio6station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -24519,7 +24453,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "xenobio6station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -24540,7 +24473,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "xenobio6station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -24555,7 +24487,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "xenobio5station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -24574,7 +24505,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "xenobio5station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -24595,7 +24525,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "xenobio5station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -24753,9 +24682,6 @@
 	name = "NanoMed Wall";
 	pixel_y = 30
 	},
-/obj/effect/polaris_placeholder_landmark/escape_pod6/station{
-	base_area = /area/hallway/secondary/escape/firstdeck/ep_aftstarboard
-	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod6/station)
 "dYQ" = (
@@ -24857,7 +24783,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "xenobiocontainstation";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -24948,7 +24873,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "xenobio2station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -25026,7 +24950,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "xenobiocontainstation";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -25116,7 +25039,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "xenobio2station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -25157,7 +25079,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "xenobiocontainstation";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -25212,7 +25133,6 @@
 /obj/structure/cable/green,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "xenobio2station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -25242,7 +25162,6 @@
 	},
 /obj/machinery/door/airlock/research{
 	autoclose = 0;
-	icon_state = "door_locked";
 	id_tag = "xenostation_airlock_exterior";
 	locked = 1;
 	name = "Xenobiology External Airlock"
@@ -25502,7 +25421,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "xenobio1station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -25591,7 +25509,6 @@
 	},
 /obj/machinery/door/airlock/research{
 	autoclose = 0;
-	icon_state = "door_locked";
 	id_tag = "xenostation_airlock_interior";
 	locked = 1;
 	name = "Xenobiology Internal Airlock"
@@ -25688,7 +25605,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "xenobio1station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -25799,7 +25715,6 @@
 /obj/structure/cable/green,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "xenobio1station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -25974,7 +25889,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "xenobio3station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -25989,7 +25903,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "xenobio3station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -26010,7 +25923,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "xenobio3station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -26025,7 +25937,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "xenobio4station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -26041,7 +25952,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "xenobio4station";
 	name = "Containment Blast Doors";
 	opacity = 0
@@ -26062,7 +25972,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "xenobio4station";
 	name = "Containment Blast Doors";
 	opacity = 0

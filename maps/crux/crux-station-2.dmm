@@ -498,7 +498,6 @@
 /area/ai)
 "dBU" = (
 /obj/machinery/door/airlock/hatch{
-	icon_state = "door_locked";
 	locked = 1;
 	name = "AI Core"
 	},
@@ -544,7 +543,6 @@
 /area/ai)
 "dBW" = (
 /obj/machinery/door/airlock/hatch{
-	icon_state = "door_locked";
 	locked = 1;
 	name = "AI Core"
 	},
@@ -983,7 +981,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "fore_port_solar_outer";
 	locked = 1;
 	name = "Engineering External Access"
@@ -1035,7 +1032,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "fore_port_solar_inner";
 	locked = 1;
 	name = "Engineering External Access"
@@ -1308,7 +1304,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "fore_starboard_solar_inner";
 	locked = 1;
 	name = "Engineering External Access"
@@ -1357,7 +1352,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "fore_starboard_solar_outer";
 	locked = 1;
 	name = "Engineering External Access"
@@ -3343,7 +3337,6 @@
 /area/hallway/primary/thirddeck/port)
 "dIw" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "d3_port_outer";
 	locked = 1;
 	name = "External Airlock Access"
@@ -3379,7 +3372,6 @@
 /area/hallway/primary/thirddeck/port)
 "dIz" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "d3_port_inner";
 	locked = 1;
 	name = "Internal Airlock Access"
@@ -3722,7 +3714,6 @@
 /area/hallway/primary/thirddeck/starboard)
 "dJj" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "d3_starboard_inner";
 	locked = 1;
 	name = "Internal Airlock Access"
@@ -3758,7 +3749,6 @@
 /area/hallway/primary/thirddeck/starboard)
 "dJm" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "d3_starboard_outer";
 	locked = 1;
 	name = "External Airlock Access"
@@ -4726,7 +4716,6 @@
 /area/shuttle/escape_pod7/station)
 "dLl" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_7_hatch";
 	locked = 1;
 	name = "Escape Pod Hatch 7"
@@ -4735,7 +4724,6 @@
 /area/shuttle/escape_pod7/station)
 "dLm" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_7_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 7"
@@ -4991,7 +4979,6 @@
 /area/hallway/primary/thirddeck/starboard)
 "dLL" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_8_berth_hatch";
 	locked = 1;
 	name = "Escape Pod 8"
@@ -5000,7 +4987,6 @@
 /area/hallway/primary/thirddeck/starboard)
 "dLM" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_pod_8_hatch";
 	locked = 1;
 	name = "Escape Pod Hatch 8"
@@ -5771,7 +5757,6 @@
 "dNB" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -5787,7 +5772,6 @@
 "dNC" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -5820,7 +5804,6 @@
 "dNI" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -5831,7 +5814,6 @@
 "dNJ" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -6153,7 +6135,6 @@
 /obj/machinery/door/blast/shutters{
 	density = 0;
 	dir = 8;
-	icon_state = "shutter0";
 	id_tag = "heads_meeting";
 	name = "Meeting Room Window Shutters";
 	opacity = 0
@@ -6676,7 +6657,6 @@
 /obj/machinery/door/blast/shutters{
 	density = 0;
 	dir = 8;
-	icon_state = "shutter0";
 	id_tag = "heads_meeting";
 	name = "Meeting Room Window Shutters";
 	opacity = 0
@@ -6717,7 +6697,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -6739,7 +6718,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -6760,7 +6738,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -8265,7 +8242,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -8284,7 +8260,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -8301,7 +8276,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -8427,7 +8401,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -8447,7 +8420,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -8463,7 +8435,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -8657,7 +8628,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "aft_port_solar_outer";
 	locked = 1;
 	name = "Engineering External Access"
@@ -8713,7 +8683,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "aft_port_solar_inner";
 	locked = 1;
 	name = "Engineering External Access"
@@ -8825,7 +8794,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "csblast";
 	name = "Blast Doors";
 	opacity = 0
@@ -8844,7 +8812,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "csblast";
 	name = "Blast Doors";
 	opacity = 0
@@ -8864,7 +8831,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "csblast";
 	name = "Blast Doors";
 	opacity = 0
@@ -8880,7 +8846,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "csblast";
 	name = "Blast Doors";
 	opacity = 0
@@ -8903,7 +8868,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -8923,7 +8887,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -8942,7 +8905,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "bridge blast";
 	name = "Bridge Blast Doors";
 	opacity = 0
@@ -8962,7 +8924,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "directorblast";
 	name = "Blast Doors";
 	opacity = 0
@@ -8982,7 +8943,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "directorblast";
 	name = "Blast Doors";
 	opacity = 0
@@ -9001,7 +8961,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "directorblast";
 	name = "Blast Doors";
 	opacity = 0
@@ -9017,7 +8976,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "directorblast";
 	name = "Blast Doors";
 	opacity = 0
@@ -9135,7 +9093,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "aft_starboard_solar_inner";
 	locked = 1;
 	name = "Engineering External Access"
@@ -9188,7 +9145,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "aft_starboard_solar_outer";
 	locked = 1;
 	name = "Engineering External Access"
@@ -9592,7 +9548,6 @@
 /obj/machinery/door/blast/shutters{
 	density = 0;
 	dir = 8;
-	icon_state = "shutter0";
 	id_tag = "heads_meeting";
 	name = "Meeting Room Window Shutters";
 	opacity = 0
@@ -9700,7 +9655,6 @@
 	name = "NanoMed Wall";
 	pixel_y = -30
 	},
-/obj/effect/polaris_placeholder_landmark/escape_pod7/station,
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod7/station)
 "edE" = (
@@ -9729,7 +9683,6 @@
 	name = "NanoMed Wall";
 	pixel_y = 30
 	},
-/obj/effect/polaris_placeholder_landmark/escape_pod8/station,
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod8/station)
 "edG" = (

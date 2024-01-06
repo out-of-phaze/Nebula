@@ -294,7 +294,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Prison Gate";
 	name = "Communal Brig Blast Door";
 	opacity = 0
@@ -312,7 +311,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Prison Gate";
 	name = "Communal Brig Blast Door";
 	opacity = 0
@@ -327,7 +325,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Prison Gate";
 	name = "Communal Brig Blast Door";
 	opacity = 0
@@ -2143,7 +2140,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Prison Gate";
 	name = "Communal Brig Blast Door";
 	opacity = 0
@@ -2497,7 +2493,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Prison Gate";
 	name = "Communal Brig Blast Door";
 	opacity = 0
@@ -2959,7 +2954,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Prison Gate";
 	name = "Communal Brig Blast Door";
 	opacity = 0
@@ -3392,7 +3386,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Prison Gate";
 	name = "Communal Brig Blast Door";
 	opacity = 0
@@ -3424,7 +3417,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Prison Gate";
 	name = "Communal Brig Blast Door";
 	opacity = 0
@@ -3438,7 +3430,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Prison Gate";
 	name = "Communal Brig Blast Door";
 	opacity = 0
@@ -3816,7 +3807,6 @@
 /obj/machinery/door/blast/shutters{
 	density = 0;
 	dir = 2;
-	icon_state = "shutter0";
 	id_tag = "visit_blast";
 	name = "Privacy Shutters";
 	opacity = 0
@@ -4674,7 +4664,6 @@
 /obj/item/book/manual/nt_regs,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Prison Gate";
 	name = "Communal Brig Blast Door";
 	opacity = 0
@@ -4689,7 +4678,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Prison Gate";
 	name = "Communal Brig Blast Door";
 	opacity = 0
@@ -7615,7 +7603,6 @@
 /obj/machinery/meter,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -7629,7 +7616,6 @@
 /obj/machinery/meter,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -7646,7 +7632,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -7663,7 +7648,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -8409,7 +8393,6 @@
 /obj/machinery/meter,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -8429,7 +8412,6 @@
 /obj/machinery/meter,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -8454,7 +8436,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -8466,7 +8447,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -8479,14 +8459,12 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -8501,7 +8479,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -8514,7 +8491,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -8527,7 +8503,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -8540,7 +8515,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -9006,7 +8980,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -9082,7 +9055,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -9097,7 +9069,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -9112,7 +9083,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -9125,7 +9095,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -9243,7 +9212,6 @@
 "blV" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "security_lockdown";
 	name = "Security Blast Door";
 	opacity = 0
@@ -9529,7 +9497,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "security_lockdown";
 	name = "Security Blast Door";
 	opacity = 0
@@ -9544,7 +9511,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "security_lockdown";
 	name = "Security Blast Door";
 	opacity = 0
@@ -10503,7 +10469,6 @@
 /obj/machinery/meter,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -10579,7 +10544,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -10962,7 +10926,6 @@
 /obj/machinery/meter,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -11020,7 +10983,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -11223,7 +11185,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "security_lockdown";
 	name = "Security Blast Door";
 	opacity = 0
@@ -11238,7 +11199,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "security_lockdown";
 	name = "Security Blast Door";
 	opacity = 0
@@ -11249,7 +11209,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "security_lockdown";
 	name = "Security Blast Door";
 	opacity = 0
@@ -11392,7 +11351,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -11875,7 +11833,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -11890,7 +11847,6 @@
 /area/maintenance/security_port)
 "brS" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "eva_port_outer";
 	locked = 1;
 	name = "External Airlock Access"
@@ -11926,7 +11882,6 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "eva_port_inner";
 	locked = 1;
 	name = "Internal Airlock Access"
@@ -12364,7 +12319,6 @@
 /area/hallway/secondary/eva_hallway)
 "bsL" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "eva_starboard_inner";
 	locked = 1;
 	name = "Internal Airlock Access"
@@ -12404,7 +12358,6 @@
 /area/hallway/secondary/eva_hallway)
 "bsO" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "eva_starboard_outer";
 	locked = 1;
 	name = "External Airlock Access"
@@ -12510,7 +12463,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -12559,7 +12511,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -12624,7 +12575,6 @@
 "bto" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
@@ -12691,7 +12641,6 @@
 "btu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "eva_port_inner";
 	locked = 1;
 	name = "Internal Airlock Access"
@@ -13495,7 +13444,6 @@
 /area/maintenance/research)
 "bvh" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "fore_starboard_outer";
 	locked = 1;
 	name = "External Airlock Access"
@@ -13683,7 +13631,6 @@
 "bvC" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "englockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
@@ -14044,11 +13991,11 @@
 /obj/structure/table/steel,
 /obj/item/storage/box,
 /obj/item/storage/box,
-/obj/item/stack/tape_roll{
+/obj/item/stack/tape_roll/duct_tape{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/stack/tape_roll,
+/obj/item/stack/tape_roll/duct_tape,
 /obj/item/stack/package_wrap,
 /obj/item/stack/package_wrap,
 /obj/machinery/firealarm{
@@ -14366,7 +14313,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "englockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
@@ -15392,7 +15338,6 @@
 /area/maintenance/research)
 "byM" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "fore_starboard_inner";
 	locked = 1;
 	name = "Internal Airlock Access"
@@ -15420,7 +15365,6 @@
 "byT" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -15482,7 +15426,6 @@
 /area/rnd/toxins_launch)
 "bzb" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "toxins_outer";
 	locked = 1;
 	name = "Toxins External Access"
@@ -15986,7 +15929,6 @@
 "bzZ" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -16699,7 +16641,6 @@
 "bBm" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -16713,7 +16654,6 @@
 "bBn" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -16727,7 +16667,6 @@
 "bBo" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -16740,7 +16679,6 @@
 "bBp" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -16753,7 +16691,6 @@
 "bBq" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -16866,7 +16803,6 @@
 "bBD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "toxins_inner";
 	locked = 1;
 	name = "Toxins External Access"
@@ -17660,7 +17596,6 @@
 /area/rnd/toxins_launch)
 "bDh" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "eng_port_outer";
 	locked = 1;
 	name = "Engineering External Access"
@@ -18806,7 +18741,6 @@
 "bFD" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -19567,7 +19501,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "englockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
@@ -19688,7 +19621,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -19973,7 +19905,6 @@
 /area/engineering/drone_fabrication)
 "bHY" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "eng_port_inner";
 	locked = 1;
 	name = "Engineering Internal Access"
@@ -19983,7 +19914,6 @@
 "bHZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "eng_port_inner";
 	locked = 1;
 	name = "Engineering Internal Access"
@@ -20873,7 +20803,7 @@
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced,
 /obj/machinery/recharger,
-/obj/item/stack/tape_roll,
+/obj/item/stack/tape_roll/duct_tape,
 /obj/machinery/button/alternate/door{
 	id_tag = "englockdown";
 	name = "Engineering Lockdown";
@@ -23219,7 +23149,6 @@
 "bOt" = (
 /obj/machinery/door/airlock/research{
 	autoclose = 0;
-	icon_state = "door_locked";
 	id_tag = "tox_airlock_interior";
 	locked = 1;
 	name = "Mixing Room Interior Airlock"
@@ -23243,7 +23172,6 @@
 "bOv" = (
 /obj/machinery/door/airlock/research{
 	autoclose = 0;
-	icon_state = "door_locked";
 	id_tag = "tox_airlock_exterior";
 	locked = 1;
 	name = "Mixing Room Exterior Airlock"
@@ -24840,7 +24768,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "misclab";
 	name = "Test Chamber Blast Doors";
 	opacity = 0
@@ -25826,7 +25753,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "misclab";
 	name = "Test Chamber Blast Doors";
 	opacity = 0
@@ -26647,7 +26573,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "englockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
@@ -26787,7 +26712,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "misclab";
 	name = "Test Chamber Blast Doors";
 	opacity = 0
@@ -27482,7 +27406,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "misclab";
 	name = "Test Chamber Blast Doors";
 	opacity = 0
@@ -28205,7 +28128,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "misclab";
 	name = "Test Chamber Blast Doors";
 	opacity = 0
@@ -28942,7 +28864,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "misclab";
 	name = "Test Chamber Blast Doors";
 	opacity = 0
@@ -30378,7 +30299,6 @@
 "cds" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -30666,7 +30586,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "englockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
@@ -30751,7 +30670,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "englockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
@@ -30765,7 +30683,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "englockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
@@ -30777,7 +30694,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "englockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
@@ -30788,7 +30704,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "englockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
@@ -31056,7 +30971,6 @@
 "ceV" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -31070,7 +30984,6 @@
 "ceW" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -31081,7 +30994,6 @@
 "ceX" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -31093,7 +31005,6 @@
 "ceY" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -32165,7 +32076,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "englockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
@@ -32622,7 +32532,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "EngineBlast";
 	name = "Engine Monitoring Room Blast Doors";
 	opacity = 0
@@ -32745,7 +32654,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "englockdown";
 	name = "Engineering Lockdown";
 	opacity = 0
@@ -33436,7 +33344,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -33451,7 +33358,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -33463,7 +33369,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
 	opacity = 0
@@ -33526,7 +33431,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "virologyquar";
 	name = "Virology Emergency Quarantine Blast Doors";
 	opacity = 0
@@ -33613,7 +33517,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "EngineBlast";
 	name = "Engine Monitoring Room Blast Doors";
 	opacity = 0
@@ -34536,7 +34439,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "virologyquar";
 	name = "Virology Emergency Quarantine Blast Doors";
 	opacity = 0
@@ -34553,7 +34455,6 @@
 	},
 /obj/machinery/door/airlock/medical{
 	autoclose = 0;
-	icon_state = "door_locked";
 	id_tag = "virology_airlock_exterior";
 	locked = 1;
 	name = "Virology Exterior Airlock"
@@ -34604,7 +34505,6 @@
 	},
 /obj/machinery/door/airlock/medical{
 	autoclose = 0;
-	icon_state = "door_locked";
 	id_tag = "virology_airlock_interior";
 	locked = 1;
 	name = "Virology Interior Airlock"
@@ -34711,7 +34611,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "EngineBlast";
 	name = "Engine Monitoring Room Blast Doors";
 	opacity = 0
@@ -35438,7 +35337,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
@@ -35454,7 +35352,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
@@ -35466,7 +35363,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
@@ -35536,7 +35432,6 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "virologyquar";
 	name = "Virology Emergency Quarantine Blast Doors";
 	opacity = 0
@@ -36827,7 +36722,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/hatch{
-	icon_state = "door_locked";
 	id_tag = "engine_electrical_maintenance";
 	locked = 1;
 	name = "SMES Access"
@@ -37050,7 +36944,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "crglockdown";
 	name = "Cargo Lockdown";
 	opacity = 0
@@ -37215,7 +37108,6 @@
 /obj/machinery/door/blast/shutters{
 	density = 0;
 	dir = 8;
-	icon_state = "shutter0";
 	id_tag = "hop_office_desk";
 	name = "HoP Office Privacy Shutters";
 	opacity = 0
@@ -37324,15 +37216,12 @@
 /area/maintenance/medbay)
 "csG" = (
 /obj/structure/sign/department/redcross{
-	desc = "The Star of Life, a symbol of Medical Aid.";
-	icon_state = "lifestar";
 	name = "Medbay";
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
@@ -37341,15 +37230,12 @@
 /area/hallway/primary/seconddeck/starboard)
 "csH" = (
 /obj/structure/sign/department/redcross{
-	desc = "The Star of Life, a symbol of Medical Aid.";
-	icon_state = "lifestar";
 	name = "Medbay";
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
@@ -37450,14 +37336,11 @@
 "csT" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/sign/department/redcross{
-	desc = "The Star of Life, a symbol of Medical Aid.";
-	icon_state = "lifestar";
 	name = "Medbay";
 	pixel_x = -32
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
@@ -37468,7 +37351,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
@@ -37480,7 +37362,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
@@ -37490,14 +37371,11 @@
 "csW" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/sign/department/redcross{
-	desc = "The Star of Life, a symbol of Medical Aid.";
-	icon_state = "lifestar";
 	name = "Medbay";
 	pixel_x = 32
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
@@ -38323,7 +38201,6 @@
 "cvg" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "crglockdown";
 	name = "Cargo Lockdown";
 	opacity = 0
@@ -39001,7 +38878,6 @@
 /obj/machinery/door/blast/shutters{
 	density = 0;
 	dir = 8;
-	icon_state = "shutter0";
 	id_tag = "chemwindow";
 	name = "Chemistry Window Shutters";
 	opacity = 0
@@ -39979,7 +39855,6 @@
 /obj/machinery/door/blast/shutters{
 	density = 0;
 	dir = 8;
-	icon_state = "shutter0";
 	id_tag = "chemwindow";
 	name = "Chemistry Window Shutters";
 	opacity = 0
@@ -40724,7 +40599,6 @@
 /obj/machinery/door/blast/shutters{
 	density = 0;
 	dir = 8;
-	icon_state = "shutter0";
 	id_tag = "chemcounter";
 	name = "Pharmacy Counter Shutters";
 	opacity = 0
@@ -41808,7 +41682,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "crglockdown";
 	name = "Cargo Lockdown";
 	opacity = 0
@@ -41822,7 +41695,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "crglockdown";
 	name = "Cargo Lockdown";
 	opacity = 0
@@ -41835,7 +41707,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "crglockdown";
 	name = "Cargo Lockdown";
 	opacity = 0
@@ -43264,7 +43135,6 @@
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
-	icon_state = "shutter0";
 	id_tag = "medbayrecquar";
 	name = "Medbay Emergency Quarantine Shutters";
 	opacity = 0
@@ -43278,7 +43148,6 @@
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
-	icon_state = "shutter0";
 	id_tag = "medbayrecquar";
 	name = "Medbay Emergency Quarantine Shutters";
 	opacity = 0
@@ -43295,7 +43164,6 @@
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
-	icon_state = "shutter0";
 	id_tag = "medbayrecquar";
 	name = "Medbay Emergency Quarantine Shutters";
 	opacity = 0
@@ -43315,7 +43183,6 @@
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
-	icon_state = "shutter0";
 	id_tag = "medbayrecquar";
 	name = "Medbay Emergency Quarantine Shutters";
 	opacity = 0
@@ -43331,7 +43198,6 @@
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
-	icon_state = "shutter0";
 	id_tag = "medbayrecquar";
 	name = "Medbay Emergency Quarantine Shutters";
 	opacity = 0
@@ -44008,7 +43874,6 @@
 "cGj" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
@@ -44568,7 +44433,6 @@
 "cHt" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "crglockdown";
 	name = "Cargo Lockdown";
 	opacity = 0
@@ -46580,7 +46444,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/lockerroom)
 "cKL" = (
-/obj/item/stack/tape_roll,
+/obj/item/stack/tape_roll/duct_tape,
 /obj/item/storage/firstaid/regular{
 	pixel_x = 6;
 	pixel_y = -5
@@ -47618,7 +47482,6 @@
 /area/maintenance/cargo)
 "cMZ" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "crg_aft_inner";
 	locked = 1;
 	name = "Internal Airlock Access"
@@ -47628,7 +47491,6 @@
 "cNa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "crg_aft_inner";
 	locked = 1;
 	name = "Internal Airlock Access"
@@ -49605,7 +49467,6 @@
 /area/medical/medbay2)
 "cQN" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "crg_aft_outer";
 	locked = 1;
 	name = "External Airlock Access"
@@ -49615,7 +49476,6 @@
 "cQO" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "crglockdown";
 	name = "Cargo Lockdown";
 	opacity = 0
@@ -49892,7 +49752,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
@@ -49905,7 +49764,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
@@ -50514,7 +50372,6 @@
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "crglockdown";
 	name = "Cargo Lockdown";
 	opacity = 0
@@ -52399,7 +52256,6 @@
 /area/maintenance/medbay)
 "cWm" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "aft_starboard_inner";
 	locked = 1;
 	name = "Internal Airlock Access"
@@ -53025,7 +52881,6 @@
 "cXn" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
-	icon_state = "pdoor0";
 	id_tag = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
 	opacity = 0
@@ -54280,7 +54135,6 @@
 /area/maintenance/chapel)
 "cZT" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "aft_starboard_outer";
 	locked = 1;
 	name = "External Airlock Access"
@@ -55149,7 +55003,6 @@
 /obj/machinery/door/blast/shutters{
 	density = 0;
 	dir = 4;
-	icon_state = "shutter0";
 	id_tag = "surgeryobs";
 	name = "Operating Theatre Privacy Shutters";
 	opacity = 0
@@ -55223,7 +55076,6 @@
 /obj/machinery/door/blast/shutters{
 	density = 0;
 	dir = 8;
-	icon_state = "shutter0";
 	id_tag = "surgeryobs2";
 	name = "Operating Theatre Privacy Shutters";
 	opacity = 0
@@ -57969,7 +57821,7 @@
 /area/crew_quarters/locker)
 "dgy" = (
 /obj/structure/table/glass,
-/obj/item/stack/tape_roll,
+/obj/item/stack/tape_roll/duct_tape,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "dgz" = (
@@ -59347,7 +59199,7 @@
 	pixel_y = 9
 	},
 /obj/item/folder/yellow,
-/obj/item/stack/tape_roll,
+/obj/item/stack/tape_roll/duct_tape,
 /obj/item/stack/package_wrap,
 /turf/simulated/floor/wood,
 /area/library)
@@ -61704,9 +61556,6 @@
 /area/shuttle/cryo_station)
 "doH" = (
 /obj/abstract/landmark/latejoin/cryo,
-/turf/simulated/floor/shuttle,
-/area/shuttle/cryo_station)
-"doI" = (
 /turf/simulated/floor/shuttle,
 /area/shuttle/cryo_station)
 "doJ" = (
@@ -64869,7 +64718,6 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "s1s_dock_outer";
 	locked = 1;
 	name = "Dock One External Airlock"
@@ -64918,7 +64766,6 @@
 /area/hallway/secondary/entry/dock_one)
 "dvS" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "s1s_dock_inner";
 	locked = 1;
 	name = "Dock One Internal Airlock"
@@ -65002,7 +64849,6 @@
 /area/hallway/secondary/entry/dock_three)
 "dwb" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "centcom_dock_inner";
 	locked = 1;
 	name = "Dock Three Internal Airlock"
@@ -65054,7 +64900,6 @@
 	pixel_y = -26
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "centcom_dock_outer";
 	locked = 1;
 	name = "Dock Three External Airlock"
@@ -65458,7 +65303,6 @@
 /area/hallway/secondary/entry/dock_one)
 "dxd" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "escape_dock_north_inner";
 	locked = 1;
 	name = "Escape Airlock"
@@ -65501,7 +65345,6 @@
 /area/hallway/secondary/entry/dock_one)
 "dxg" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_dock_north_outer";
 	locked = 1;
 	name = "Escape Airlock"
@@ -65512,7 +65355,6 @@
 /area/hallway/secondary/entry/dock_one)
 "dxh" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_dock_north_starboard_outer";
 	locked = 1;
 	name = "Escape Airlock"
@@ -65556,7 +65398,6 @@
 /area/hallway/secondary/entry/dock_two)
 "dxk" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "escape_dock_north_starboard_inner";
 	locked = 1;
 	name = "Escape Airlock"
@@ -65593,7 +65434,6 @@
 "dxn" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "arrivals_dock_north_inner";
 	locked = 1;
 	name = "Arrivals Airlock"
@@ -65645,7 +65485,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "dock3_north_outer";
 	locked = 1;
 	name = "External Airlock Access"
@@ -65684,7 +65523,6 @@
 "dxu" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "dock3_north_inner";
 	locked = 1;
 	name = "Dock Three Internal Airlock"
@@ -65750,7 +65588,6 @@
 	pixel_y = -26
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_dock_north_outer";
 	locked = 1;
 	name = "Escape Airlock"
@@ -65826,7 +65663,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "arrivals_dock_north_outer";
 	locked = 1;
 	name = "Arrivals Airlock"
@@ -65839,7 +65675,6 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "arrivals_dock_north_inner";
 	locked = 1;
 	name = "Arrivals Airlock"
@@ -65878,7 +65713,6 @@
 	pixel_y = -26
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "dock3_north_outer";
 	locked = 1;
 	name = "External Airlock Access"
@@ -66146,7 +65980,6 @@
 "dyr" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "specops_dock_outer";
 	locked = 1;
 	name = "Dock One External Airlock"
@@ -66198,7 +66031,6 @@
 /area/hallway/secondary/entry/dock_one)
 "dyu" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "specops_dock_inner";
 	locked = 1;
 	name = "Dock One Internal Airlock"
@@ -66272,7 +66104,6 @@
 "dyC" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "s2s_dock_inner";
 	locked = 1;
 	name = "Dock Three Internal Airlock"
@@ -66316,7 +66147,6 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "s2s_dock_outer";
 	locked = 1;
 	name = "Dock Three External Airlock"
@@ -66483,7 +66313,6 @@
 /area/hallway/secondary/entry/dock_one)
 "dza" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "escape_dock_south_inner";
 	locked = 1;
 	name = "Escape Airlock"
@@ -66517,7 +66346,6 @@
 /area/hallway/secondary/entry/dock_one)
 "dzd" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_dock_south_outer";
 	locked = 1;
 	name = "Escape Airlock"
@@ -66574,7 +66402,6 @@
 /area/hallway/secondary/entry/dock_two)
 "dzh" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "escape_dock_south_starboard_inner";
 	locked = 1;
 	name = "Escape Airlock"
@@ -66597,7 +66424,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "arrivals_dock_north_outer";
 	locked = 1;
 	name = "Arrivals Airlock"
@@ -66613,7 +66439,6 @@
 "dzl" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "arrivals_dock_south_inner";
 	locked = 1;
 	name = "Arrivals Airlock"
@@ -66647,7 +66472,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "dock3_south_outer";
 	locked = 1;
 	name = "External Airlock Access"
@@ -66690,7 +66514,6 @@
 "dzr" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "dock3_south_inner";
 	locked = 1;
 	name = "Dock Three Internal Airlock"
@@ -66748,7 +66571,6 @@
 /area/hallway/secondary/entry/dock_one)
 "dzw" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_dock_south_outer";
 	locked = 1;
 	name = "Escape Airlock"
@@ -66759,7 +66581,6 @@
 /area/hallway/secondary/entry/dock_one)
 "dzx" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_dock_south_starboard_outer";
 	locked = 1;
 	name = "Escape Airlock"
@@ -66829,7 +66650,6 @@
 /area/hallway/secondary/entry/dock_two)
 "dzD" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "arrivals_dock_south_outer";
 	locked = 1;
 	name = "Arrivals Airlock"
@@ -66850,7 +66670,6 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "arrivals_dock_south_inner";
 	locked = 1;
 	name = "Arrivals Airlock"
@@ -66888,7 +66707,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "dock3_south_outer";
 	locked = 1;
 	name = "External Airlock Access"
@@ -67175,7 +66993,6 @@
 /area/hallway/secondary/entry/dock_one)
 "dAo" = (
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "trade_shuttle_dock_inner";
 	locked = 1;
 	name = "Dock One Internal Airlock"
@@ -67186,7 +67003,6 @@
 "dAp" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "trade_shuttle_dock_inner";
 	locked = 1;
 	name = "Dock One Internal Airlock"
@@ -67196,7 +67012,6 @@
 "dAq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "admin_shuttle_dock_inner";
 	locked = 1;
 	name = "Dock Two Internal Airlock"
@@ -67211,7 +67026,6 @@
 "dAs" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
-	icon_state = "door_locked";
 	id_tag = "nuke_shuttle_dock_inner";
 	locked = 1;
 	name = "Dock Three Internal Airlock"
@@ -67440,7 +67254,6 @@
 "dAM" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "trade_shuttle_dock_outer";
 	locked = 1;
 	name = "Dock One External Access"
@@ -67458,7 +67271,6 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "trade_shuttle_dock_outer";
 	locked = 1;
 	name = "Dock One External Access"
@@ -67478,7 +67290,6 @@
 	pixel_y = -6
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "admin_shuttle_dock_outer";
 	locked = 1;
 	name = "Dock Two External Airlock"
@@ -67494,7 +67305,6 @@
 	pixel_y = -6
 	},
 /obj/machinery/door/airlock/external/shuttle{
-	icon_state = "door_locked";
 	id_tag = "nuke_shuttle_dock_outer";
 	locked = 1;
 	name = "Dock Three External Airlock"
@@ -67507,7 +67317,6 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/shuttle{
-	icon_state = "door_locked";
 	id_tag = "nuke_shuttle_dock_outer";
 	locked = 1;
 	name = "Dock Three External Airlock"
@@ -67559,7 +67368,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "arrivals_dock_south_outer";
 	locked = 1;
 	name = "Arrivals Airlock"
@@ -68841,7 +68649,6 @@
 	pixel_y = -26
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_dock_north_starboard_outer";
 	locked = 1;
 	name = "Escape Airlock"
@@ -68858,7 +68665,6 @@
 	pixel_y = 26
 	},
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
 	id_tag = "escape_dock_south_starboard_outer";
 	locked = 1;
 	name = "Escape Airlock"
@@ -68886,7 +68692,6 @@
 /turf/simulated/floor/plating,
 /area/engineering/foyer)
 "ecT" = (
-/obj/effect/polaris_placeholder_landmark/cryostorage_station,
 /turf/simulated/floor/shuttle,
 /area/shuttle/cryo_station)
 "ecU" = (
@@ -95592,7 +95397,7 @@ dni
 dni
 dnS
 ecT
-doI
+ecT
 dnS
 dni
 dni

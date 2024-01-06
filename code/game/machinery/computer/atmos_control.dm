@@ -1,7 +1,3 @@
-/obj/item/stock_parts/circuitboard/atmoscontrol
-	name = "\improper Central Atmospherics Computer Circuitboard"
-	build_path = /obj/machinery/computer/atmoscontrol
-
 /obj/machinery/computer/atmoscontrol
 	name = "\improper Central Atmospherics Computer"
 	icon = 'icons/obj/computer.dmi'
