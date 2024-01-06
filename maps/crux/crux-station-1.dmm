@@ -3877,7 +3877,6 @@
 /obj/item/crowbar,
 /obj/item/radio/off,
 /obj/item/wrench,
-/obj/item/retail_scanner/security,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/light{
 	dir = 1
@@ -11631,7 +11630,6 @@
 /area/hallway/secondary/eva_hallway)
 "brl" = (
 /obj/structure/table/glass,
-/obj/item/book/codex/lore/vir,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/eva_hallway)
 "brm" = (
@@ -15105,7 +15103,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/engineering)
 "byj" = (
-/obj/machinery/power/grid_checker,
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/engineering)
@@ -20521,7 +20518,6 @@
 	icon_state = "frame";
 	pixel_y = -32
 	},
-/obj/item/tabloid,
 /turf/simulated/floor/wood,
 /area/rnd/research)
 "bIZ" = (
@@ -22737,7 +22733,6 @@
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Second Deck - Center Eight"
 	},
-/obj/item/book/codex/lore/vir,
 /turf/simulated/floor/tiled/freezer,
 /area/hallway/primary/seconddeck/fpcenter)
 "bNz" = (
@@ -23232,7 +23227,7 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/mixing)
 "bOu" = (
-/obj/machinery/atmospherics/binary/dp_vent_pump/high_volume{
+/obj/machinery/atmospherics/binary/pump/high_power{
 	id_tag = "tox_airlock_pump"
 	},
 /obj/machinery/air_sensor{
@@ -23619,7 +23614,6 @@
 "bPk" = (
 /obj/structure/table/woodentable,
 /obj/effect/floor_decal/spline/plain,
-/obj/item/communicator,
 /turf/simulated/floor/tiled/freezer,
 /area/hallway/primary/seconddeck/fpcenter)
 "bPl" = (
@@ -26886,7 +26880,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/obj/machinery/constructable_frame{
+/obj/machinery/constructable_frame/machine_frame{
 	anchored = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -27137,7 +27131,6 @@
 "bWj" = (
 /obj/structure/table/woodentable,
 /obj/item/chems/food/chips,
-/obj/item/tabloid,
 /turf/simulated/floor/carpet,
 /area/engineering/break_room)
 "bWk" = (
@@ -29014,7 +29007,6 @@
 /area/engineering/break_room)
 "caA" = (
 /obj/structure/table/steel,
-/obj/item/storage/bag/circuits/basic,
 /obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
@@ -29087,7 +29079,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "caR" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/research_director,
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
@@ -29598,7 +29590,6 @@
 /turf/simulated/floor/tiled,
 /area/teleporter)
 "cbH" = (
-/obj/machinery/bluespace_beacon,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -30051,7 +30042,7 @@
 /turf/simulated/floor/tiled,
 /area/engineering/engine_airlock)
 "ccH" = (
-/obj/machinery/atmospherics/binary/dp_vent_pump/high_volume{
+/obj/machinery/atmospherics/binary/pump/high_power{
 	dir = 8;
 	id_tag = "engine_airlock_pump"
 	},
@@ -30559,7 +30550,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "cdN" = (
-/obj/machinery/smartfridge/secure/virology,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
@@ -31291,11 +31281,6 @@
 /area/medical/virology)
 "cfw" = (
 /obj/structure/table/glass,
-/obj/item/antibody_scanner{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/antibody_scanner,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
@@ -32637,9 +32622,6 @@
 /obj/structure/table/glass,
 /obj/item/folder,
 /obj/item/hand_labeler,
-/obj/structure/reagent_dispensers/virusfood{
-	pixel_x = 30
-	},
 /obj/item/radio/intercom/department_medbay{
 	pixel_y = 21
 	},
@@ -33628,7 +33610,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "ckw" = (
-/obj/machinery/disease2/isolator,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 5
 	},
@@ -34673,10 +34654,6 @@
 "cmp" = (
 /obj/structure/table/glass,
 /obj/item/storage/lockbox/vials,
-/obj/item/chems/syringe/antiviral,
-/obj/item/chems/syringe/antiviral,
-/obj/item/chems/syringe/antiviral,
-/obj/item/chems/syringe/antiviral,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -34725,7 +34702,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "cmu" = (
-/obj/machinery/computer/centrifuge,
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Virology Starboard";
 	dir = 8
@@ -35666,7 +35642,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "cot" = (
-/obj/machinery/disease2/incubator,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 6
 	},
@@ -36065,7 +36040,6 @@
 /obj/structure/table/steel,
 /obj/random/tech_supply,
 /obj/random/technology_scanner,
-/obj/item/storage/bag/circuits/basic,
 /obj/random/tech_supply,
 /turf/simulated/floor/plating,
 /area/maintenance/research_medical)
@@ -36787,7 +36761,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "crp" = (
-/obj/machinery/constructable_frame{
+/obj/machinery/constructable_frame/machine_frame{
 	anchored = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -36845,7 +36819,6 @@
 /area/medical/virology)
 "crx" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/virusdish/random,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
@@ -38272,9 +38245,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "cuO" = (
-/obj/machinery/computer/diseasesplicer{
-	dir = 8
-	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
@@ -39300,7 +39270,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "cwO" = (
-/obj/machinery/disease2/diseaseanalyser,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 6
 	},
@@ -43797,9 +43766,6 @@
 	pixel_y = 3
 	},
 /obj/item/coin/silver,
-/obj/item/retail_scanner/civilian{
-	dir = 1
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -44397,7 +44363,6 @@
 	},
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/abstract/landmark/robot_platform/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "cHa" = (
@@ -44725,7 +44690,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/obj/item/communicator,
 /turf/simulated/floor/tiled/freezer,
 /area/hallway/primary/seconddeck/ascenter)
 "cHI" = (
@@ -45916,7 +45880,6 @@
 /area/hallway/primary/seconddeck/ascenter)
 "cJt" = (
 /obj/structure/table/woodentable,
-/obj/item/book/codex/lore/vir,
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Second Deck - Center Four";
 	dir = 1
@@ -47530,7 +47493,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/psych,
+/obj/structure/closet/secure_closet/psychiatry,
 /turf/simulated/floor/carpet/blue3,
 /area/medical/psych)
 "cMN" = (
@@ -48283,9 +48246,6 @@
 	pixel_y = 6
 	},
 /obj/item/pen,
-/obj/item/retail_scanner/civilian{
-	dir = 1
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -49818,8 +49778,6 @@
 	name = "formal wardrobe"
 	},
 /obj/item/glass_jar,
-/obj/item/retail_scanner/civilian,
-/obj/item/retail_scanner/civilian,
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Bar Storage"
 	},
@@ -49969,7 +49927,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
 "cRs" = (
-/obj/structure/closet/secure_closet/CMO,
+/obj/structure/closet/secure_closet/cmo,
 /obj/machinery/ai_status_display{
 	pixel_x = -32
 	},
@@ -51476,11 +51434,11 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 10
 	},
-/obj/machinery/clonepod/full,
+/obj/machinery/constructable_frame/computerframe,
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics_cloning)
 "cUh" = (
-/obj/machinery/dna_scannernew,
+/obj/machinery/constructable_frame/computerframe,
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 8
 	},
@@ -52352,7 +52310,6 @@
 	},
 /obj/structure/closet/chefcloset,
 /obj/item/glass_jar,
-/obj/item/retail_scanner/civilian,
 /obj/random/soap,
 /obj/item/destTagger{
 	pixel_x = 4;
@@ -52468,7 +52425,6 @@
 	pixel_y = 30
 	},
 /obj/structure/table,
-/obj/item/communicator,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -52929,9 +52885,6 @@
 /area/crew_quarters/bar)
 "cWY" = (
 /obj/structure/table/marble,
-/obj/machinery/cash_register/civilian{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/blast/shutters{
@@ -53215,7 +53168,7 @@
 /turf/simulated/wall/r_wall,
 /area/maintenance/medbay)
 "cXC" = (
-/obj/machinery/computer/cloning{
+/obj/machinery/constructable_frame/computerframe{
 	dir = 1
 	},
 /obj/machinery/light,
@@ -54250,7 +54203,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "cZL" = (
-/obj/machinery/appliance/cooker/fryer,
+/obj/machinery/cooker/fryer,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -54742,7 +54695,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/locker)
 "dau" = (
-/obj/machinery/appliance/mixer/candy,
+/obj/machinery/cooker/candy,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -55485,7 +55438,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
 "dby" = (
-/obj/machinery/appliance/mixer/cereal,
+/obj/machinery/cooker/cereal,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -55563,9 +55516,6 @@
 /area/crew_quarters/kitchen)
 "dbE" = (
 /obj/structure/table/marble,
-/obj/machinery/cash_register/civilian{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -55923,7 +55873,6 @@
 /turf/simulated/floor/tiled/freezer,
 /area/medical/surgery_storage)
 "dcn" = (
-/obj/structure/closet/secure_closet/medical2,
 /turf/simulated/floor/tiled/freezer,
 /area/medical/surgery_storage)
 "dco" = (
@@ -56079,7 +56028,6 @@
 /area/crew_quarters/cafeteria)
 "dcA" = (
 /obj/structure/table/woodentable,
-/obj/item/book/codex/lore/vir,
 /obj/item/deck/cards,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
@@ -56685,9 +56633,6 @@
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 10
 	},
-/obj/structure/closet/secure_closet/medical_wall/anesthetics{
-	pixel_x = -32
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
 "ddO" = (
@@ -56799,9 +56744,6 @@
 	},
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 6
-	},
-/obj/structure/closet/secure_closet/medical_wall/anesthetics{
-	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
@@ -57136,7 +57078,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
 "deC" = (
-/obj/machinery/appliance/cooker/grill,
+/obj/machinery/cooker/grill,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -57171,7 +57113,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "deF" = (
-/obj/machinery/appliance/cooker/oven,
+/obj/machinery/cooker/oven,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -57273,7 +57215,7 @@
 /area/maintenance/bar)
 "deS" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/smartfridge/produce/persistent,
+/obj/machinery/smartfridge/produce,
 /turf/simulated/floor/plating,
 /area/hydroponics)
 "deT" = (
@@ -58620,7 +58562,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
 "dhM" = (
-/obj/machinery/vending/giftvendor,
+/obj/random/vendor,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/locker)
 "dhN" = (
@@ -58669,7 +58611,6 @@
 	pixel_x = -28
 	},
 /obj/structure/table/glass,
-/obj/item/communicator,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "dhS" = (
@@ -59393,7 +59334,7 @@
 /area/hydroponics)
 "djw" = (
 /obj/structure/table/woodentable,
-/obj/machinery/librarycomp,
+/obj/machinery/constructable_frame/computerframe,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -59435,9 +59376,6 @@
 "djF" = (
 /obj/machinery/door/airlock/glass{
 	name = "Kitchen"
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -59554,7 +59492,6 @@
 	pixel_y = 5
 	},
 /obj/item/pen,
-/obj/item/book/codex/lore/news,
 /turf/simulated/floor/wood,
 /area/library)
 "djR" = (
@@ -59584,7 +59521,6 @@
 	pixel_y = 7
 	},
 /obj/item/pen/invisible,
-/obj/item/book/codex/lore/news,
 /obj/item/camera/tvcamera,
 /turf/simulated/floor/carpet,
 /area/library)
@@ -59597,7 +59533,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/item/barcodescanner,
 /turf/simulated/floor/carpet,
 /area/library)
 "djW" = (
@@ -59807,12 +59742,6 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -28
 	},
-/obj/machinery/button/neonsign{
-	id_tag = "cafeopen";
-	name = "Cafe Sign Switch";
-	pixel_x = 11;
-	pixel_y = 27
-	},
 /turf/simulated/floor/tiled,
 /area/library)
 "dku" = (
@@ -59853,7 +59782,6 @@
 	id_tag = "coffeeshop";
 	name = "Cafe Shutters"
 	},
-/obj/item/tabloid,
 /turf/simulated/floor/tiled,
 /area/library)
 "dkx" = (
@@ -60213,9 +60141,6 @@
 /obj/structure/table/marble,
 /obj/item/hand_labeler,
 /obj/item/chems/condiment/small/sugar,
-/obj/item/retail_scanner/civilian{
-	dir = 1
-	},
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
@@ -60583,9 +60508,6 @@
 /turf/simulated/floor/carpet,
 /area/library)
 "dlX" = (
-/obj/machinery/neonsign/cafe{
-	id_tag = "cafeopen"
-	},
 /turf/simulated/wall,
 /area/library)
 "dlY" = (
@@ -60716,9 +60638,6 @@
 /obj/structure/bookcase{
 	name = "bookcase (Reference)"
 	},
-/obj/item/book/codex/lore/vir,
-/obj/item/book/codex/lore/vir,
-/obj/item/book/codex/lore/robutt,
 /obj/item/book/manual/nt_regs,
 /turf/simulated/floor/wood,
 /area/library)
@@ -61786,7 +61705,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/construction/seconddeck/construction2)
 "doF" = (
-/obj/machinery/constructable_frame{
+/obj/machinery/constructable_frame/machine_frame{
 	anchored = 1
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -62510,7 +62429,9 @@
 /turf/simulated/floor/plating,
 /area/construction/seconddeck/construction2)
 "dqy" = (
-/obj/structure/closet/crate/engineering,
+/obj/structure/closet/crate{
+	name = "engineering crate";
+},
 /obj/item/bedsheet/brown,
 /obj/item/coin/silver,
 /obj/item/bedsheet/brown,
@@ -62587,7 +62508,6 @@
 /area/hallway/secondary/docking_hallway2)
 "dqG" = (
 /obj/structure/table/woodentable,
-/obj/item/book/codex/lore/vir,
 /obj/item/paicard,
 /turf/simulated/floor/carpet,
 /area/hallway/secondary/entry/docking_lounge)
@@ -63698,7 +63618,7 @@
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)
 "dsY" = (
-/obj/machinery/libraryscanner,
+/obj/machinery/constructable_frame/computerframe,
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Arrivals Lounge";
 	dir = 1
@@ -64141,7 +64061,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
 "dua" = (
-/obj/item/book/codex/lore/vir,
 /obj/structure/table/glass,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -68152,8 +68071,6 @@
 /area/hallway/primary/seconddeck/aft)
 "ebl" = (
 /obj/structure/table/steel,
-/obj/item/communicator,
-/obj/item/communicator,
 /obj/item/radio/headset,
 /obj/item/radio/headset,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -69277,7 +69194,7 @@
 /turf/simulated/floor/tiled,
 /area/rnd/research)
 "tZc" = (
-/obj/abstract/landmark/engine_loader,
+/obj/abstract/landmark/map_load_mark/engine_loader,
 /turf/exterior/open,
 /area/surface/level_one)
 "vTW" = (
@@ -69287,7 +69204,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/stairwell)
 "xjf" = (
-/obj/machinery/smartfridge/sheets/persistent,
+/obj/machinery/smartfridge/sheets,
 /turf/simulated/floor/plating,
 /area/quartermaster/foyer)
 

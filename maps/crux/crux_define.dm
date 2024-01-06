@@ -72,3 +72,5 @@
 /obj/abstract/level_data_spawner/crux_level_two
 	name = "Southern Cross - Level Two"
 	level_data_type = /datum/level_data/crux/level_two
+
+/obj/abstract/landmark/map_load_mark/engine_loader // todo

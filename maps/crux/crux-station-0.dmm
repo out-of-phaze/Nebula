@@ -2059,7 +2059,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aeJ" = (
-/obj/structure/closet/crate/engineering,
+/obj/structure/closet/crate{
+	name = "engineering crate";
+},
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
 /obj/random/tool,
@@ -2252,7 +2254,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "afi" = (
-/obj/structure/closet/crate/engineering,
+/obj/structure/closet/crate{
+	name = "engineering crate";
+},
 /obj/item/stack/material/sheet/mapped/steel/fifty,
 /obj/item/stack/material/pane/mapped/glass/fifty,
 /turf/simulated/floor/plating,
@@ -2731,11 +2735,9 @@
 /turf/simulated/floor/tiled,
 /area/hangar/three)
 "agr" = (
-/obj/structure/flight_left,
 /turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle_start)
 "agt" = (
-/obj/structure/flight_right,
 /obj/machinery/button/alternate/door{
 	state = 1;
 	dir = 8;
@@ -4157,7 +4159,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "ajM" = (
-/obj/structure/loot_pile/maint/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "ajN" = (
@@ -5080,7 +5081,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
 "alP" = (
-/obj/structure/loot_pile/maint/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
 "alQ" = (
@@ -5339,15 +5339,11 @@
 	},
 /area/tcomm/chamber)
 "amC" = (
-/obj/machinery/exonet_node{
-	anchored = 1
-	},
 /turf/simulated/floor/tiled/dark{
 	temperature = 80
 	},
 /area/tcomm/chamber)
 "amD" = (
-/obj/machinery/pda_multicaster/prebuilt,
 /obj/structure/sign/warning/nosmoking_2{
 	pixel_y = 32
 	},
@@ -6027,7 +6023,6 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/structure/loot_pile/maint/technical,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
@@ -6787,7 +6782,6 @@
 	dir = 4;
 	pixel_x = -22
 	},
-/obj/item/communicator,
 /turf/simulated/floor/tiled,
 /area/hangar/onecontrol)
 "apE" = (
@@ -13564,7 +13558,6 @@
 "aDD" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/clothing/accessory/armband/cargo,
-/obj/item/retail_scanner/cargo,
 /obj/machinery/network/requests_console{
 	department = "Cargo Bay";
 	pixel_y = 28
@@ -13747,7 +13740,6 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/communicator,
 /obj/item/hand_labeler,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/elevator)
@@ -14427,7 +14419,6 @@
 /turf/simulated/floor/tiled,
 /area/tcomm/entrance)
 "aFo" = (
-/obj/machinery/bluespace_beacon,
 /turf/simulated/floor/tiled,
 /area/tcomm/entrance)
 "aFp" = (
@@ -15453,7 +15444,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/mininglockerroom)
 "aHD" = (
-/obj/structure/loot_pile/maint/junk,
 /turf/simulated/floor,
 /area/maintenance/firstdeck/aftport)
 "aHE" = (
@@ -17078,7 +17068,6 @@
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/firstdeck/as_emergency)
 "aKX" = (
-/obj/structure/loot_pile/maint/technical,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "aKY" = (
@@ -18109,7 +18098,6 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
 "aNz" = (
@@ -18441,9 +18429,6 @@
 /turf/simulated/floor/tiled,
 /area/hangar/two)
 "aOl" = (
-/obj/structure/flight_right{
-	dir = 1
-	},
 /obj/machinery/button/alternate/door{
 	state = 1;
 	dir = 4;
@@ -18457,9 +18442,6 @@
 /turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle_start_2)
 "aOn" = (
-/obj/structure/flight_left{
-	dir = 1
-	},
 /turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle_start_2)
 "aOo" = (
@@ -18891,7 +18873,6 @@
 /area/storage/tech)
 "aPp" = (
 /obj/structure/table/steel,
-/obj/item/storage/bag/circuits/basic,
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
@@ -19209,10 +19190,6 @@
 /obj/structure/rack{
 	dir = 8
 	},
-/obj/item/stock_parts/circuitboard/cloning,
-/obj/item/stock_parts/circuitboard/clonescanner,
-/obj/item/stock_parts/circuitboard/clonepod,
-/obj/item/stock_parts/circuitboard/scan_consolenew,
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "aPV" = (
@@ -25130,8 +25107,6 @@
 	dir = 1;
 	health = 1e+006
 	},
-/obj/item/baton/slime/loaded,
-/obj/item/gun/energy/taser/xeno,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
 "dZx" = (
@@ -25699,15 +25674,13 @@
 /obj/structure/window/reinforced,
 /obj/item/clothing/gloves/latex,
 /obj/item/hand_labeler,
-/obj/item/scanner/slime,
-/obj/item/scanner/slime,
+/obj/item/scanner/xenobio,
+/obj/item/scanner/xenobio,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
 "ear" = (
 /obj/structure/table,
 /obj/structure/window/reinforced,
-/obj/item/baton/slime/loaded,
-/obj/item/gun/energy/taser/xeno,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
 "eas" = (
@@ -25791,7 +25764,6 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/mob/living/bot/secbot/slime,
 /turf/simulated/floor/tiled/monotile,
 /area/rnd/xenobiology)
 "eaz" = (

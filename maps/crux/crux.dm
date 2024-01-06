@@ -28,14 +28,11 @@
 	#include "atoms/flora.dm"
 	#include "atoms/mobs.dm"
 	#include "atoms/machinery.dm"
-	#include "atoms/props.dm"
 	#include "atoms/telecoms.dm"
 	#include "atoms/guns.dm"
 
 	#include "jobs/jobs.dm"
 	#include "jobs/departments.dm"
-
-	#include "todo_stubs.dm"
 
 	#include "crux_areas.dm"
 	#include "crux_cryo.dm"

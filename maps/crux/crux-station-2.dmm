@@ -1154,7 +1154,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/obj/abstract/landmark/free_ai_shell,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
 "dDw" = (
@@ -2668,7 +2667,7 @@
 /turf/simulated/wall/r_wall,
 /area/ai/ai_cyborg_station)
 "dGP" = (
-/obj/structure/closet/secure_closet/CMO_wardrobe,
+/obj/structure/closet/secure_closet/cmo,
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/cmo/quarters)
 "dGQ" = (
@@ -2705,7 +2704,7 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hor/quarters)
 "dGV" = (
-/obj/structure/closet/secure_closet/RD_wardrobe,
+/obj/structure/closet/secure_closet/research_director,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hor/quarters)
 "dGW" = (
@@ -5420,7 +5419,7 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/chief/quarters)
 "dMH" = (
-/obj/structure/closet/secure_closet/engineering_chief_wardrobe,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/chief/quarters)
 "dMI" = (
@@ -5544,7 +5543,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
 "dMS" = (
-/obj/structure/closet/secure_closet/hos_wardrobe,
+/obj/structure/closet/secure_closet/hos,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hos/quarters)
 "dMT" = (
@@ -5876,9 +5875,6 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/sd)
 "dNO" = (
-/obj/structure/closet/wardrobe/captain{
-	name = "station director's wardrobe"
-	},
 /obj/random/drinkbottle,
 /obj/machinery/light{
 	dir = 1
@@ -6879,7 +6875,6 @@
 "dPS" = (
 /obj/structure/table/woodentable_reinforced,
 /obj/item/hand_labeler,
-/obj/item/retail_scanner/command,
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
