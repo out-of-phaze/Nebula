@@ -120,34 +120,34 @@
 /area/maintenance/substation/command)
 "djC" = (
 /turf/exterior/open,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "djD" = (
 /obj/structure/lattice,
 /turf/exterior/open,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dnd" = (
 /turf/simulated/floor/reinforced,
 /area/surface/level_two)
 "dAV" = (
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dAX" = (
 /turf/simulated/floor,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dAZ" = (
 /obj/structure/grille,
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dBa" = (
 /turf/simulated/wall/r_wall,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dBb" = (
 /obj/machinery/camera/network/command{
 	c_tag = "AI - Fore";
 	dir = 1
 	},
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dBc" = (
 /turf/simulated/wall/r_wall,
 /area/ai)
@@ -456,7 +456,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dBQ" = (
 /obj/abstract/landmark{
 	name = "tripai"
@@ -603,7 +603,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dCc" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/thirddeck/foreport)
@@ -668,13 +668,13 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dCo" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dCp" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -767,7 +767,7 @@
 "dCD" = (
 /obj/item/stack/cable_coil/yellow,
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dCE" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -820,7 +820,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dCM" = (
 /obj/machinery/porta_turret,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -1142,7 +1142,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dDv" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 1
@@ -1206,7 +1206,7 @@
 "dDA" = (
 /obj/structure/catwalk,
 /turf/simulated/floor,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dDB" = (
 /obj/structure/lattice,
 /obj/structure/cable{
@@ -1758,7 +1758,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dEL" = (
 /obj/structure/cable/cyan{
 	icon_state = "2-4"
@@ -9305,25 +9305,25 @@
 	dir = 4
 	},
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dUr" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dUs" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dUt" = (
 /obj/structure/sign/warning/high_voltage{
 	pixel_y = 32
 	},
 /turf/simulated/floor/reinforced,
-/area/thirddeck/roof)
+/area/surface/level_two)
 "dUu" = (
 /obj/structure/ladder,
 /obj/effect/floor_decal/industrial/outline/yellow,

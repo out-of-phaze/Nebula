@@ -7,17 +7,23 @@
 		/area/turbolift = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/shuttle   = NO_SCRUBBER|NO_VENT|NO_APC
 	)
-
+	area_coherency_test_exempt_areas = list(
+		/area/surface,
+		/area/surface/level_one,
+		/area/surface/level_two
+	)
 
 //Planetside
-
 /area
 /area/surface
+	name = "\improper Crux Surface"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/surface/level_one
+	name = "\improper Crux Exterior"
 
 /area/surface/level_two
+	name = "\improper Crux Heights"
 
 /area/turbolift
 	name = "\improper Turbolift"
@@ -649,12 +655,6 @@
 /area/solar/forestarboardsolar
 	name = "\improper Fore Starboard Solar Array"
 	icon_state = "panelsS"
-
-/area/thirddeck/roof
-	name = "\improper Third Deck Plating"
-	dynamic_lighting = 0
-	ambience = AMBIENCE_SPACE
-	area_flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 // Shuttles
 
