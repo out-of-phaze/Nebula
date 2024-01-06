@@ -500,7 +500,7 @@
 /obj/machinery/door/airlock/hatch{
 	icon_state = "door_locked";
 	locked = 1;
-	name = "AI Core";
+	name = "AI Core"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
@@ -524,7 +524,7 @@
 	id_tag = "AICore";
 	name = "AI Maintenance Hatch";
 	pixel_x = 14;
-	pixel_y = 25;
+	pixel_y = 25
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -546,7 +546,7 @@
 /obj/machinery/door/airlock/hatch{
 	icon_state = "door_locked";
 	locked = 1;
-	name = "AI Core";
+	name = "AI Core"
 	},
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
@@ -986,7 +986,7 @@
 	icon_state = "door_locked";
 	id_tag = "fore_port_solar_outer";
 	locked = 1;
-	name = "Engineering External Access";
+	name = "Engineering External Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/foreportsolar)
@@ -1038,7 +1038,7 @@
 	icon_state = "door_locked";
 	id_tag = "fore_port_solar_inner";
 	locked = 1;
-	name = "Engineering External Access";
+	name = "Engineering External Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/foreportsolar)
@@ -1312,7 +1312,7 @@
 	icon_state = "door_locked";
 	id_tag = "fore_starboard_solar_inner";
 	locked = 1;
-	name = "Engineering External Access";
+	name = "Engineering External Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/forestarboardsolar)
@@ -1361,7 +1361,7 @@
 	icon_state = "door_locked";
 	id_tag = "fore_starboard_solar_outer";
 	locked = 1;
-	name = "Engineering External Access";
+	name = "Engineering External Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/forestarboardsolar)
@@ -1619,7 +1619,7 @@
 /area/ai/ai_upload)
 "dEs" = (
 /obj/machinery/door/airlock/vault/bolted{
-	name = "AI core";
+	name = "AI core"
 	},
 /obj/machinery/door/blast/regular{
 	id_tag = "AICore";
@@ -1933,7 +1933,7 @@
 /obj/machinery/door/window{
 	base_state = "right";
 	icon_state = "right";
-	name = "Core Modules";
+	name = "Core Modules"
 	},
 /obj/item/aiModule/corp,
 /obj/item/aiModule/paladin,
@@ -1981,7 +1981,7 @@
 /obj/item/aiModule/oneHuman,
 /obj/machinery/door/window{
 	dir = 8;
-	name = "High-Risk Modules";
+	name = "High-Risk Modules"
 	},
 /obj/item/aiModule/purge,
 /obj/item/aiModule/antimov,
@@ -2049,7 +2049,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/highsecurity{
-	name = "AI Upload";
+	name = "AI Upload"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload)
@@ -2308,7 +2308,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/highsecurity{
-	name = "Messaging Server";
+	name = "Messaging Server"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_server_room)
@@ -2375,7 +2375,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/highsecurity{
-	name = "Synthetic Storage Access";
+	name = "Synthetic Storage Access"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_cyborg_station)
@@ -2521,7 +2521,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/highsecurity{
-	name = "AI Upload Access";
+	name = "AI Upload Access"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload_foyer)
@@ -3208,7 +3208,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	name = "Head of Personnel Quarters";
+	name = "Head of Personnel Quarters"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -3250,7 +3250,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	name = "CMO's Quarters";
+	name = "CMO's Quarters"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3265,7 +3265,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	name = "Research Director Quarters";
+	name = "Research Director Quarters"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3351,7 +3351,7 @@
 	icon_state = "door_locked";
 	id_tag = "d3_port_outer";
 	locked = 1;
-	name = "External Airlock Access";
+	name = "External Airlock Access"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/thirddeck/port)
@@ -3387,7 +3387,7 @@
 	icon_state = "door_locked";
 	id_tag = "d3_port_inner";
 	locked = 1;
-	name = "Internal Airlock Access";
+	name = "Internal Airlock Access"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/thirddeck/port)
@@ -3399,7 +3399,7 @@
 	id_tag = "d3_port_airlock";
 	name = "interior access button";
 	pixel_x = -25;
-	pixel_y = 26;
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/port)
@@ -3721,7 +3721,7 @@
 	id_tag = "d3_starboard_airlock";
 	name = "interior access button";
 	pixel_x = 25;
-	pixel_y = 26;
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/starboard)
@@ -3730,7 +3730,7 @@
 	icon_state = "door_locked";
 	id_tag = "d3_starboard_inner";
 	locked = 1;
-	name = "Internal Airlock Access";
+	name = "Internal Airlock Access"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/thirddeck/starboard)
@@ -3766,7 +3766,7 @@
 	icon_state = "door_locked";
 	id_tag = "d3_starboard_outer";
 	locked = 1;
-	name = "External Airlock Access";
+	name = "External Airlock Access"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/thirddeck/starboard)
@@ -3787,7 +3787,7 @@
 	id_tag = "d3_port_airlock";
 	name = "exterior access button";
 	pixel_x = 25;
-	pixel_y = -26;
+	pixel_y = -26
 	},
 /turf/simulated/floor,
 /area/hallway/primary/thirddeck/port)
@@ -4214,7 +4214,7 @@
 	id_tag = "d3_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = -25;
-	pixel_y = -26;
+	pixel_y = -26
 	},
 /turf/simulated/floor,
 /area/hallway/primary/thirddeck/starboard)
@@ -4486,9 +4486,6 @@
 "dKA" = (
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod7/station)
-"dKB" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod7/station)
 "dKC" = (
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 4
@@ -4535,7 +4532,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	name = "Command Restroom";
+	name = "Command Restroom"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -4553,7 +4550,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	name = "Chief Engineer Quarters";
+	name = "Chief Engineer Quarters"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -4615,7 +4612,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	name = "Head of Security Quarters";
+	name = "Head of Security Quarters"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4636,7 +4633,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	name = "Secretary Quarters";
+	name = "Secretary Quarters"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4679,9 +4676,6 @@
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 8
 	},
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod8/station)
-"dLf" = (
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod8/station)
 "dLg" = (
@@ -4740,7 +4734,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_7_hatch";
 	locked = 1;
-	name = "Escape Pod Hatch 7";
+	name = "Escape Pod Hatch 7"
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod7/station)
@@ -4749,7 +4743,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_7_berth_hatch";
 	locked = 1;
-	name = "Escape Pod 7";
+	name = "Escape Pod 7"
 	},
 /turf/simulated/floor,
 /area/hallway/primary/thirddeck/port)
@@ -5005,7 +4999,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_8_berth_hatch";
 	locked = 1;
-	name = "Escape Pod 8";
+	name = "Escape Pod 8"
 	},
 /turf/simulated/floor,
 /area/hallway/primary/thirddeck/starboard)
@@ -5014,7 +5008,7 @@
 	icon_state = "door_locked";
 	id_tag = "escape_pod_8_hatch";
 	locked = 1;
-	name = "Escape Pod Hatch 8";
+	name = "Escape Pod Hatch 8"
 	},
 /turf/simulated/floor/shuttle,
 /area/shuttle/escape_pod8/station)
@@ -5996,7 +5990,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/command{
-	name = "Bridge";
+	name = "Bridge"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/bridge)
@@ -6004,7 +5998,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/command{
-	name = "Bridge";
+	name = "Bridge"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/bridge)
@@ -6043,7 +6037,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
 	id_tag = "sbridgedoor";
-	name = "Bridge";
+	name = "Bridge"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/bridge)
@@ -6053,7 +6047,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/command{
 	id_tag = "sbridgedoor";
-	name = "Bridge";
+	name = "Bridge"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/bridge)
@@ -6175,7 +6169,6 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
 "dOv" = (
@@ -6268,7 +6261,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/command{
-	name = "Conference Room";
+	name = "Conference Room"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/bridge/meeting_room)
@@ -6658,7 +6651,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/command{
-	name = "Station Director's Quarters";
+	name = "Station Director's Quarters"
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/sd)
@@ -7226,7 +7219,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/command{
-	name = "Conference Room";
+	name = "Conference Room"
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
@@ -7337,7 +7330,7 @@
 "dQM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/window/southleft{
-	name = "Director's Desk Door";
+	name = "Director's Desk Door"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
@@ -7446,7 +7439,7 @@
 "dQZ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
-	name = "Secretary Office";
+	name = "Secretary Office"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/bridge/meeting_room)
@@ -7651,7 +7644,7 @@
 	},
 /obj/machinery/door/airlock/command{
 	id_tag = "captaindoor";
-	name = "Station Director's Office";
+	name = "Station Director's Office"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/heads/sc/sd)
@@ -8676,7 +8669,7 @@
 	icon_state = "door_locked";
 	id_tag = "aft_port_solar_outer";
 	locked = 1;
-	name = "Engineering External Access";
+	name = "Engineering External Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftportsolar)
@@ -8732,7 +8725,7 @@
 	icon_state = "door_locked";
 	id_tag = "aft_port_solar_inner";
 	locked = 1;
-	name = "Engineering External Access";
+	name = "Engineering External Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftportsolar)
@@ -8747,7 +8740,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/button/access/interior{
-
 	id_tag = "aft_port_solar_airlock";
 	name = "interior access button";
 	pixel_x = -25;
@@ -9155,7 +9147,7 @@
 	icon_state = "door_locked";
 	id_tag = "aft_starboard_solar_inner";
 	locked = 1;
-	name = "Engineering External Access";
+	name = "Engineering External Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftstarboardsolar)
@@ -9208,7 +9200,7 @@
 	icon_state = "door_locked";
 	id_tag = "aft_starboard_solar_outer";
 	locked = 1;
-	name = "Engineering External Access";
+	name = "Engineering External Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftstarboardsolar)
@@ -9615,12 +9607,14 @@
 	opacity = 0
 	},
 /obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
 "ecS" = (
@@ -36163,9 +36157,9 @@ dHQ
 dIw
 dIw
 dHQ
-dKB
+dKA
 dLj
-dKB
+dKA
 dMx
 dAV
 dAV
@@ -48756,9 +48750,9 @@ dIt
 dJl
 dJX
 dKz
-dLf
+dLg
 edF
-dLf
+dLg
 dMY
 dAV
 dAV
@@ -49270,9 +49264,9 @@ dIu
 dJn
 dJY
 dIu
-dLf
+dLg
 dLP
-dLf
+dLg
 dMY
 dAV
 dAV
@@ -49527,9 +49521,9 @@ dAV
 dAV
 dAV
 dAV
-dLf
+dLg
 dLQ
-dLf
+dLg
 dAV
 dAV
 dAV

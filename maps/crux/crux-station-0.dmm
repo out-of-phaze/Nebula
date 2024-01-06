@@ -19302,6 +19302,9 @@
 /obj/machinery/power/breakerbox{
 	RCon_tag = "Auxiliary Bypass"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/auxiliary_engineering)
 "aQe" = (
@@ -24406,7 +24409,9 @@
 "dYf" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology)
 "dYg" = (
@@ -77496,7 +77501,7 @@ ndk
 ndk
 ndk
 bhg
-dYf
+dYe
 dYo
 dYD
 dYW
