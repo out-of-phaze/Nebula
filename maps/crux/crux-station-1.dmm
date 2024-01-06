@@ -64642,7 +64642,7 @@
 /area/hallway/primary/seconddeck/dockhallway)
 "duU" = (
 /turf/simulated/wall/r_wall,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "duV" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -64650,7 +64650,7 @@
 	name = "Dock"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "duW" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -64662,7 +64662,7 @@
 	name = "Dock"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "duX" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
@@ -64670,7 +64670,7 @@
 /area/hallway/primary/seconddeck/dockhallway)
 "duY" = (
 /turf/simulated/wall/r_wall,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "duZ" = (
 /obj/structure/sign/directions/engineering{
 	dir = 1;
@@ -64684,7 +64684,7 @@
 	pixel_y = -10
 	},
 /turf/simulated/wall,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dva" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -64694,7 +64694,7 @@
 	name = "Dock"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvb" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -64702,14 +64702,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvc" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass{
 	name = "Dock"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvd" = (
 /obj/structure/sign/directions/bridge{
 	dir = 1;
@@ -64723,10 +64723,10 @@
 	pixel_y = -10
 	},
 /turf/simulated/wall,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dve" = (
 /turf/simulated/wall/r_wall,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvf" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -64738,7 +64738,7 @@
 	name = "Dock"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvg" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -64746,7 +64746,7 @@
 	name = "Dock"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -64756,7 +64756,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvi" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -64770,17 +64770,17 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvj" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvk" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvl" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -64792,13 +64792,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvn" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
@@ -64807,12 +64807,12 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvo" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvp" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -64826,7 +64826,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -64836,7 +64836,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/alarm{
@@ -64844,7 +64844,7 @@
 	pixel_x = -22
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvs" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -64852,22 +64852,22 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvv" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvx" = (
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvz" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -64875,7 +64875,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/alarm{
@@ -64883,16 +64883,16 @@
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvC" = (
 /obj/structure/sign/warning/docking_area,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvD" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvE" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/light{
@@ -64902,14 +64902,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvG" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -64919,7 +64919,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvI" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -64927,7 +64927,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvJ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -64936,7 +64936,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvK" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -64946,14 +64946,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvL" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvM" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/closet/emcloset,
@@ -64961,16 +64961,16 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvN" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvO" = (
 /obj/structure/sign/warning/docking_area,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvP" = (
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -64987,7 +64987,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvQ" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 8
@@ -64999,7 +64999,7 @@
 	id_tag = "s1s_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvR" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 4
@@ -65021,7 +65021,7 @@
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvS" = (
 /obj/machinery/door/airlock/external/glass{
 	icon_state = "door_locked";
@@ -65031,7 +65031,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvT" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -65043,13 +65043,13 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvV" = (
 /obj/structure/cable,
 /obj/machinery/power/apc{
@@ -65060,7 +65060,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dvW" = (
 /obj/structure/cable,
 /obj/machinery/power/apc{
@@ -65069,14 +65069,14 @@
 	pixel_x = -24
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvX" = (
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dvY" = (
 /obj/structure/cable,
 /obj/machinery/power/apc{
@@ -65087,13 +65087,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dvZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwa" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -65105,7 +65105,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwb" = (
 /obj/machinery/door/airlock/external/glass{
 	icon_state = "door_locked";
@@ -65115,7 +65115,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwc" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 8
@@ -65137,7 +65137,7 @@
 	id_tag = "centcom_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwd" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 4
@@ -65149,7 +65149,7 @@
 	id_tag = "centcom_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwe" = (
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -65166,14 +65166,14 @@
 	name = "Dock Three External Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwg" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -65196,7 +65196,7 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -65205,35 +65205,35 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwo" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -65242,7 +65242,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwp" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -65250,7 +65250,7 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -65271,25 +65271,25 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dws" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dww" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -65298,14 +65298,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwx" = (
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Second Deck - Dock Two Fore";
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dwy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -65314,7 +65314,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwz" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -65323,7 +65323,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/item/radio/intercom{
@@ -65336,7 +65336,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwB" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -65346,7 +65346,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dwC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -65354,7 +65354,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dwD" = (
 /obj/item/radio/intercom{
 	dir = 4;
@@ -65362,7 +65362,7 @@
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dwE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -65372,18 +65372,18 @@
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/status_display{
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwG" = (
 /obj/structure/sign/warning/docking_area,
 /turf/simulated/wall/r_wall,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwH" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -65391,7 +65391,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -65402,7 +65402,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwJ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -65410,31 +65410,31 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwL" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/sign/warning/evac,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dwM" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/sign/warning/evac,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dwN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dwO" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -65442,7 +65442,7 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dwP" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -65450,7 +65450,7 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dwQ" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -65462,7 +65462,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dwR" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
@@ -65470,11 +65470,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dwS" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dwT" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
@@ -65490,7 +65490,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -65510,7 +65510,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwY" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -65526,7 +65526,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dwZ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -65536,18 +65536,18 @@
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dxa" = (
 /obj/structure/sign/warning/docking_area,
 /turf/simulated/wall/r_wall,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dxb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/ai_status_display{
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/button/access/interior{
@@ -65561,7 +65561,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxd" = (
 /obj/machinery/door/airlock/external/glass{
 	icon_state = "door_locked";
@@ -65571,7 +65571,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxe" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -65584,7 +65584,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxf" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -65604,7 +65604,7 @@
 	tag_interior_door = "escape_dock_north_inner"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxg" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
@@ -65615,7 +65615,7 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxh" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
@@ -65626,7 +65626,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxi" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -65646,7 +65646,7 @@
 	tag_interior_door = "escape_dock_north_starboard_inner"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxj" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -65659,7 +65659,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxk" = (
 /obj/machinery/door/airlock/external/glass{
 	icon_state = "door_locked";
@@ -65669,7 +65669,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxl" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/stack/material/panel/mapped/plastic{
@@ -65695,7 +65695,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxn" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
@@ -65705,7 +65705,7 @@
 	name = "Arrivals Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dxo" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -65736,7 +65736,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dxq" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
@@ -65746,7 +65746,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dxr" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
@@ -65757,7 +65757,7 @@
 	name = "External Airlock Access"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dxs" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -65767,7 +65767,7 @@
 	id_tag = "dock3_north_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dxt" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1381;
@@ -65786,7 +65786,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dxu" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
@@ -65796,7 +65796,7 @@
 	name = "Dock Three Internal Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dxv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/industrial/warning{
@@ -65810,14 +65810,14 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dxw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/ai_status_display{
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dxy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -65825,7 +65825,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxz" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	id_tag = "escape_dock_north_pump"
@@ -65834,7 +65834,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxA" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	id_tag = "escape_dock_north_pump"
@@ -65847,7 +65847,7 @@
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxB" = (
 /obj/machinery/button/access/exterior{
 	id_tag = "escape_dock_north_airlock";
@@ -65864,7 +65864,7 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxC" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/stack/material/pane/mapped/glass{
@@ -65895,7 +65895,7 @@
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxE" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	id_tag = "escape_dock_north_starboard_pump"
@@ -65904,13 +65904,13 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -65918,7 +65918,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxH" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -65927,7 +65927,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
@@ -65938,7 +65938,7 @@
 	name = "Arrivals Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dxJ" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -65951,7 +65951,7 @@
 	name = "Arrivals Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dxK" = (
 /obj/machinery/light/small,
 /obj/effect/floor_decal/industrial/loading{
@@ -65959,7 +65959,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dxL" = (
 /obj/machinery/airlock_sensor{
 	id_tag = "arrivals_dock_north_sensor";
@@ -65973,7 +65973,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dxM" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
@@ -65990,7 +65990,7 @@
 	name = "External Airlock Access"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_three)
 "dxN" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -66003,7 +66003,7 @@
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dxO" = (
 /obj/machinery/light/small,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -66013,7 +66013,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dxP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/industrial/warning{
@@ -66021,12 +66021,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dxR" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxS" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -66037,37 +66037,37 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxT" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dxV" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxX" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxY" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -66077,7 +66077,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dxZ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -66086,14 +66086,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dya" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dyb" = (
 /obj/structure/table/glass,
 /obj/machinery/recharger,
@@ -66119,14 +66119,14 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyd" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dye" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -66137,24 +66137,24 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyf" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyg" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/sign/warning/airlock,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyi" = (
 /obj/structure/bed/roller,
 /obj/machinery/power/apc{
@@ -66184,7 +66184,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyk" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -66193,7 +66193,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyl" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -66202,7 +66202,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dym" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -66211,7 +66211,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dyn" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -66220,14 +66220,14 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyo" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -66248,7 +66248,7 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyr" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
@@ -66265,7 +66265,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dys" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 8
@@ -66278,7 +66278,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyt" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 4
@@ -66301,7 +66301,7 @@
 	tag_interior_door = "specops_dock_inner"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyu" = (
 /obj/machinery/door/airlock/external/glass{
 	icon_state = "door_locked";
@@ -66311,7 +66311,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -66323,14 +66323,14 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyw" = (
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyx" = (
 /obj/structure/closet/emcloset,
 /obj/structure/extinguisher_cabinet{
@@ -66338,7 +66338,7 @@
 	},
 /obj/item/crowbar/red,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dyy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -66346,7 +66346,7 @@
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dyz" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -66356,14 +66356,14 @@
 /obj/item/crowbar/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dyA" = (
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -22
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyB" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -66375,7 +66375,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyC" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
@@ -66385,7 +66385,7 @@
 	name = "Dock Three Internal Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyD" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 8
@@ -66408,7 +66408,7 @@
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyE" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 4
@@ -66418,7 +66418,7 @@
 	id_tag = "s2s_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyF" = (
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -66435,28 +66435,28 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyG" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyJ" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -66465,7 +66465,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyK" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -66474,7 +66474,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dyL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -66482,13 +66482,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dyM" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dyN" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -66497,7 +66497,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dyO" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -66506,42 +66506,42 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyR" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyT" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dyU" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -66550,21 +66550,21 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dyV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dyW" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dyX" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -66573,21 +66573,21 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dyZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dza" = (
 /obj/machinery/door/airlock/external/glass{
 	icon_state = "door_locked";
@@ -66597,7 +66597,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dzb" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -66607,7 +66607,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dzc" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -66621,7 +66621,7 @@
 	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dzd" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
@@ -66638,7 +66638,7 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dze" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/stack/material/sheet/mapped/steel/fifty{
@@ -66668,7 +66668,7 @@
 	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzg" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -66678,7 +66678,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzh" = (
 /obj/machinery/door/airlock/external/glass{
 	icon_state = "door_locked";
@@ -66688,18 +66688,18 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzj" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzk" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
@@ -66716,7 +66716,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dzl" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
@@ -66726,7 +66726,7 @@
 	name = "Arrivals Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dzm" = (
 /obj/effect/floor_decal/industrial/loading{
 	dir = 8
@@ -66735,7 +66735,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dzn" = (
 /obj/machinery/airlock_sensor{
 	id_tag = "arrivals_dock_south_sensor";
@@ -66749,7 +66749,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dzo" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
@@ -66766,7 +66766,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dzp" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -66780,7 +66780,7 @@
 	id_tag = "dock3_south_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dzq" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -66793,7 +66793,7 @@
 	id_tag = "dock3_south_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dzr" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
@@ -66803,14 +66803,14 @@
 	name = "Dock Three Internal Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dzs" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dzt" = (
 /obj/machinery/button/access/interior{
 	id_tag = "escape_dock_south_airlock";
@@ -66823,7 +66823,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dzu" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	id_tag = "escape_dock_south_pump"
@@ -66833,7 +66833,7 @@
 	},
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dzv" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	id_tag = "escape_dock_south_pump"
@@ -66852,7 +66852,7 @@
 	tag_interior_door = "escape_dock_south_inner"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dzw" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
@@ -66863,7 +66863,7 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dzx" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
@@ -66874,7 +66874,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzy" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	id_tag = "escape_dock_south_starboard_pump"
@@ -66893,7 +66893,7 @@
 	tag_interior_door = "escape_dock_south_starboard_inner"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzz" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	id_tag = "escape_dock_south_starboard_pump"
@@ -66903,7 +66903,7 @@
 	},
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzA" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -66918,7 +66918,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzC" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -66933,7 +66933,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzD" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
@@ -66950,7 +66950,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dzE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -66963,7 +66963,7 @@
 	name = "Arrivals Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dzF" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
 	frequency = 1381;
@@ -66980,7 +66980,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dzG" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
@@ -66990,7 +66990,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dzH" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
@@ -67001,7 +67001,7 @@
 	name = "External Airlock Access"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_three)
 "dzI" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -67010,7 +67010,7 @@
 	id_tag = "dock3_south_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dzJ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -67028,7 +67028,7 @@
 	id_tag = "dock3_south_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dzK" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -67041,7 +67041,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dzL" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -67053,7 +67053,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dzM" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -67062,7 +67062,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dzN" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -67075,13 +67075,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzO" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzP" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -67090,7 +67090,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dzQ" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -67102,7 +67102,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dzR" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -67111,7 +67111,7 @@
 	pixel_x = -28
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dzS" = (
 /obj/item/radio/intercom{
 	dir = 4;
@@ -67120,7 +67120,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dzT" = (
 /obj/item/radio/intercom{
 	dir = 8;
@@ -67131,21 +67131,21 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzV" = (
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dzW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/item/radio/intercom{
@@ -67154,7 +67154,7 @@
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dzX" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -67163,40 +67163,40 @@
 	pixel_x = 28
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dzY" = (
 /obj/effect/floor_decal/sign/d/one,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dzZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAa" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dAb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/sign/d/two,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dAc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAd" = (
 /obj/effect/floor_decal/sign/d/three,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAe" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -67204,7 +67204,7 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAf" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -67217,12 +67217,12 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAg" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAh" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -67230,7 +67230,7 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/industrial/warning,
@@ -67241,7 +67241,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dAj" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -67249,12 +67249,12 @@
 	},
 /obj/item/crowbar/red,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dAk" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAl" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -67267,7 +67267,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAm" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -67275,11 +67275,11 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/wall/r_wall,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAo" = (
 /obj/machinery/door/airlock/external/glass{
 	icon_state = "door_locked";
@@ -67289,7 +67289,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAp" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
@@ -67299,7 +67299,7 @@
 	name = "Dock One Internal Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/external/glass{
@@ -67310,11 +67310,11 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dAr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/wall/r_wall,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAs" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/glass{
@@ -67324,7 +67324,7 @@
 	name = "Dock Three Internal Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAt" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
@@ -67332,7 +67332,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAu" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -67342,7 +67342,7 @@
 	id_tag = "trade_shuttle_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -67355,7 +67355,7 @@
 	id_tag = "trade_shuttle_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAw" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
@@ -67363,7 +67363,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAx" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -67373,14 +67373,14 @@
 	id_tag = "admin_shuttle_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dAy" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dAz" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -67393,7 +67393,7 @@
 	id_tag = "admin_shuttle_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dAA" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -67401,7 +67401,7 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAB" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -67414,7 +67414,7 @@
 	id_tag = "nuke_shuttle_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAC" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -67424,7 +67424,7 @@
 	id_tag = "nuke_shuttle_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAD" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -67432,7 +67432,7 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAE" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -67446,7 +67446,7 @@
 	pixel_x = -28
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -67465,7 +67465,7 @@
 	tag_interior_door = "trade_shuttle_dock_inner"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAG" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -67484,12 +67484,12 @@
 	tag_interior_door = "admin_shuttle_dock_inner"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dAH" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dAI" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -67503,14 +67503,14 @@
 	pixel_x = 28
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dAJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAK" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -67524,7 +67524,7 @@
 	id_tag = "nuke_shuttle_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAL" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -67543,7 +67543,7 @@
 	id_tag = "nuke_shuttle_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAM" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
@@ -67554,7 +67554,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAN" = (
 /obj/machinery/button/access/exterior{
 	id_tag = "trade_shuttle_dock_airlock";
@@ -67571,11 +67571,11 @@
 	name = "Dock One External Access"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dAO" = (
 /obj/structure/sign/warning/docking_area,
 /turf/simulated/wall/r_wall,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dAP" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/button/access/exterior{
@@ -67592,7 +67592,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dAQ" = (
 /obj/machinery/button/access/shuttle/exterior{
 	id_tag = "nuke_shuttle_dock_airlock";
@@ -67609,7 +67609,7 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dAR" = (
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -67620,7 +67620,7 @@
 	name = "Dock Three External Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dBM" = (
 /obj/machinery/newscaster{
 	pixel_x = 30
@@ -67672,7 +67672,7 @@
 	name = "Arrivals Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2/arrivals)
+/area/hallway/secondary/entry/dock_two)
 "dCZ" = (
 /obj/machinery/computer/modular/preset/security{
 	dir = 4
@@ -68028,12 +68028,12 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dVi" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dVk" = (
 /obj/structure/sign/warning/secure_area{
 	desc = "A warning sign which reads 'KEEP CLEAR OF DOCKING AREA'.";
@@ -68041,21 +68041,21 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "dVl" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dVm" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dVn" = (
 /obj/structure/sign/warning/secure_area{
 	desc = "A warning sign which reads 'KEEP CLEAR OF DOCKING AREA'.";
@@ -68063,33 +68063,33 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dVo" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dVp" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D1)
+/area/hallway/secondary/entry/dock_one)
 "dVq" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dVr" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/plating,
-/area/hallway/secondary/entry/D3)
+/area/hallway/secondary/entry/dock_three)
 "dVt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/wall,
@@ -68941,7 +68941,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "ecO" = (
 /obj/machinery/button/access/exterior{
 	id_tag = "escape_dock_snorth_airlock";
@@ -68958,7 +68958,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "ecP" = (
 /obj/machinery/button/access/exterior{
 	id_tag = "escape_dock_ssouth_airlock";
@@ -68975,7 +68975,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "ecQ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -68987,7 +68987,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/entry/D2)
+/area/hallway/secondary/entry/dock_two)
 "ecR" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
