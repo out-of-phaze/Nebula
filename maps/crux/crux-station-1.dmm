@@ -8079,12 +8079,12 @@
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/structure/lattice,
 /turf/exterior/open,
-/area/surface/level_one)
+/area/engineering/atmos)
 "bjV" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/structure/lattice,
 /turf/exterior/open,
-/area/surface/level_one)
+/area/engineering/atmos)
 "bjW" = (
 /obj/effect/floor_decal/corner/lime/full{
 	dir = 4
@@ -8441,12 +8441,12 @@
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/exterior/open,
-/area/surface/level_one)
+/area/engineering/atmos)
 "bkF" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/exterior/open,
-/area/surface/level_one)
+/area/engineering/atmos)
 "bkG" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 4
@@ -10516,7 +10516,7 @@
 	},
 /obj/structure/lattice,
 /turf/exterior/open,
-/area/surface/level_one)
+/area/engineering/atmos)
 "boL" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -10975,7 +10975,7 @@
 	},
 /obj/structure/lattice,
 /turf/exterior/open,
-/area/surface/level_one)
+/area/engineering/atmos)
 "bpH" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -13126,7 +13126,7 @@
 "bul" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor,
-/area/surface/level_one)
+/area/maintenance/research)
 "bum" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/binary/pump{
@@ -23227,9 +23227,6 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/mixing)
 "bOu" = (
-/obj/machinery/atmospherics/binary/pump/high_power{
-	id_tag = "tox_airlock_pump"
-	},
 /obj/machinery/air_sensor{
 	id_tag = "toxins_mixing_interior";
 	pixel_x = -8;
@@ -23816,12 +23813,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/meter,
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
 "bPO" = (
-/obj/machinery/atmospherics/valve{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
@@ -23838,6 +23833,9 @@
 	pixel_y = 5
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -26880,9 +26878,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/obj/machinery/constructable_frame/machine_frame{
-	anchored = 1
-	},
+/obj/machinery/constructable_frame/machine_frame,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/decal/cleanable/blood/oil/streak{
 	amount = 0
@@ -27612,9 +27608,7 @@
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "bXz" = (
-/obj/abstract/landmark{
-	name = "JoinLateCyborg"
-	},
+/obj/abstract/landmark/latejoin/cyborg,
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
@@ -29589,12 +29583,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter)
-"cbH" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/teleporter)
 "cbI" = (
 /obj/machinery/atmospherics/unary/tank/air{
 	start_pressure = 4559.63
@@ -30550,14 +30538,11 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "cdN" = (
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 4
+/obj/structure/cable/cyan{
+	icon_state = "0-4"
 	},
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
+/turf/simulated/floor/plating,
+/area/engineering/engine_room)
 "cdO" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -35642,14 +35627,17 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "cot" = (
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 6
+/obj/structure/cable/green{
+	icon_state = "0-4"
 	},
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 6
+/obj/machinery/atmospherics/pipe/cap/hidden/scrubbers{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
+/obj/machinery/atmospherics/pipe/cap/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/engine_waste)
 "coy" = (
 /obj/machinery/computer/modular/preset/engineering/rcon{
 	dir = 4
@@ -36761,9 +36749,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "crp" = (
-/obj/machinery/constructable_frame/machine_frame{
-	anchored = 1
-	},
+/obj/machinery/constructable_frame/machine_frame,
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "crq" = (
@@ -55979,13 +55965,17 @@
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
 "dcv" = (
-/obj/structure/table/marble,
-/obj/effect/floor_decal/corner/grey/diagonal{
+/obj/structure/cable/cyan{
+	icon_state = "0-4"
+	},
+/obj/machinery/atmospherics/pipe/cap/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/cafeteria)
+/obj/machinery/atmospherics/pipe/cap/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/engine_room)
 "dcw" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/wood,
@@ -58999,9 +58989,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
-"diM" = (
-/turf/simulated/wall,
-/area/library)
 "diN" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -61705,24 +61692,18 @@
 /turf/simulated/floor/tiled/freezer,
 /area/construction/seconddeck/construction2)
 "doF" = (
-/obj/machinery/constructable_frame/machine_frame{
-	anchored = 1
-	},
+/obj/machinery/constructable_frame/machine_frame,
 /turf/simulated/floor/tiled/freezer,
 /area/construction/seconddeck/construction2)
 "doG" = (
 /obj/machinery/computer/cryopod{
 	pixel_x = -32
 	},
-/obj/abstract/landmark{
-	name = "JoinLateCryo"
-	},
+/obj/abstract/landmark/latejoin/cryo,
 /turf/simulated/floor/shuttle,
 /area/shuttle/cryo_station)
 "doH" = (
-/obj/abstract/landmark{
-	name = "JoinLateCryo"
-	},
+/obj/abstract/landmark/latejoin/cryo,
 /turf/simulated/floor/shuttle,
 /area/shuttle/cryo_station)
 "doI" = (
@@ -61985,9 +61966,7 @@
 	pixel_x = -26;
 	tag_door = "cryostorage_shuttle_hatch"
 	},
-/obj/abstract/landmark{
-	name = "JoinLateCryo"
-	},
+/obj/abstract/landmark/latejoin/cryo,
 /turf/simulated/floor/shuttle,
 /area/shuttle/cryo_station)
 "dpu" = (
@@ -62430,8 +62409,8 @@
 /area/construction/seconddeck/construction2)
 "dqy" = (
 /obj/structure/closet/crate{
-	name = "engineering crate";
-},
+	name = "engineering crate"
+	},
 /obj/item/bedsheet/brown,
 /obj/item/coin/silver,
 /obj/item/bedsheet/brown,
@@ -64061,15 +64040,11 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
 "dua" = (
-/obj/structure/table/glass,
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
 	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/seconddeck/dockhallway)
+/turf/simulated/floor/plating,
+/area/engineering/engine_room)
 "dub" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -64275,7 +64250,7 @@
 	dir = 4
 	},
 /obj/abstract/landmark/latejoin/observer,
-/obj/abstract/landmark/start,
+/obj/abstract/landmark/latejoin,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
 "dus" = (
@@ -66273,7 +66248,6 @@
 	},
 /obj/structure/closet/emcloset,
 /obj/item/crowbar/red,
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/dock_two)
 "dyA" = (
@@ -69181,10 +69155,24 @@
 /obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
+"eVm" = (
+/obj/machinery/atmospherics/valve{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/mixing)
 "eXX" = (
 /obj/abstract/level_data_spawner/crux_level_one,
 /turf/exterior/open,
 /area/surface/level_one)
+"lSe" = (
+/turf/exterior/open,
+/area/engineering/atmos)
+"mRF" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/structure/lattice,
+/turf/exterior/open,
+/area/engineering/atmos)
 "oJY" = (
 /obj/structure/railing,
 /turf/simulated/floor/tiled,
@@ -84752,15 +84740,15 @@ cAz
 cAz
 cAz
 cAz
+cdN
 cAz
 cAz
 cAz
+dcv
 cAz
 cAz
 cAz
-cAz
-cAz
-cAz
+dua
 cAz
 cAz
 cAz
@@ -84999,7 +84987,7 @@ aaa
 bHW
 bRP
 bRP
-bRP
+cot
 bRP
 bRP
 bRP
@@ -87803,20 +87791,20 @@ aaa
 aaa
 aaa
 aaa
-aaa
+lSe
 boK
 bpG
+lSe
 aaa
-aaa
-aaa
+lSe
 boK
 bpG
+lSe
 aaa
-aaa
-aaa
+lSe
 boK
 bpG
-aaa
+lSe
 aaa
 bAk
 bBK
@@ -88570,7 +88558,7 @@ bgv
 bgv
 bgv
 bgv
-aaa
+lSe
 bkC
 blD
 bmL
@@ -89084,7 +89072,7 @@ bhj
 bTT
 bic
 bjb
-bgw
+mRF
 bkI
 blF
 bmN
@@ -89341,7 +89329,7 @@ bgv
 bgv
 bgv
 bgv
-aaa
+lSe
 bkH
 blL
 bnF
@@ -89855,7 +89843,7 @@ bgv
 bgv
 bgv
 bgv
-aaa
+lSe
 bkJ
 blP
 bmL
@@ -90369,7 +90357,7 @@ bhl
 bYm
 bie
 bjb
-bgw
+mRF
 bkK
 blN
 bmP
@@ -90626,7 +90614,7 @@ bgv
 bgv
 bgv
 bgv
-aaa
+lSe
 bkM
 bnG
 bmQ
@@ -91140,7 +91128,7 @@ bgv
 bgv
 bgv
 bgv
-aaa
+lSe
 bkH
 bmT
 bmT
@@ -91911,7 +91899,7 @@ bgv
 bgv
 bgv
 bgv
-aaa
+lSe
 blH
 bmR
 bnO
@@ -92425,7 +92413,7 @@ bgv
 bgv
 bgv
 bgv
-aaa
+lSe
 blC
 buo
 bnM
@@ -93196,7 +93184,7 @@ bgv
 bgv
 bgv
 bgv
-aaa
+lSe
 bkA
 bmT
 bnP
@@ -96621,13 +96609,13 @@ dgA
 cvw
 ctT
 coV
-diM
-diM
-diM
+dlX
+dlX
+dlX
 dlN
-diM
+dlX
 dkl
-diM
+dlX
 dmM
 dnk
 dnV
@@ -96884,8 +96872,8 @@ dlh
 dlO
 dmO
 dlD
-diM
-diM
+dlX
+dlX
 dnk
 dnW
 doN
@@ -98427,7 +98415,7 @@ dlR
 dkY
 dmB
 doo
-diM
+dlX
 dnp
 doc
 doP
@@ -98684,7 +98672,7 @@ dlt
 dmi
 dmA
 doq
-diM
+dlX
 dnq
 dod
 doO
@@ -98941,7 +98929,7 @@ dmO
 diR
 dmA
 dou
-diM
+dlX
 dnr
 doe
 doS
@@ -99178,7 +99166,7 @@ cYj
 cZr
 daH
 dbE
-dcv
+dbE
 dcW
 deb
 dem
@@ -99198,7 +99186,7 @@ dmO
 dlx
 dmA
 dou
-diM
+dlX
 dns
 dof
 doT
@@ -99455,7 +99443,7 @@ dkz
 dmj
 dmA
 dnL
-diM
+dlX
 dnt
 dog
 doU
@@ -99712,7 +99700,7 @@ dlU
 dlU
 dmC
 dmh
-diM
+dlX
 dnu
 doh
 doV
@@ -99958,7 +99946,7 @@ deV
 dem
 dfO
 dhQ
-diM
+dlX
 diT
 djB
 djQ
@@ -99969,7 +99957,7 @@ djs
 djs
 dmD
 dox
-diM
+dlX
 dnv
 doi
 doW
@@ -100215,7 +100203,7 @@ cYw
 dgL
 dho
 cYw
-diM
+dlX
 djw
 djs
 djS
@@ -100226,7 +100214,7 @@ dlV
 dmk
 dmV
 doy
-diM
+dlX
 dnw
 doj
 doX
@@ -100472,7 +100460,7 @@ dff
 dgN
 dhr
 dhR
-diM
+dlX
 diV
 djE
 dmk
@@ -100483,7 +100471,7 @@ dlH
 dml
 dml
 doz
-diM
+dlX
 dpN
 dok
 doY
@@ -100729,11 +100717,11 @@ dfg
 dgS
 dht
 dhZ
-diM
-diM
+dlX
+dlX
 djG
 djT
-diM
+dlX
 dju
 djN
 dlW
@@ -100986,7 +100974,7 @@ eAB
 dfJ
 dgh
 dia
-diM
+dlX
 diW
 djH
 djU
@@ -101243,7 +101231,7 @@ deX
 dfK
 cUL
 dii
-diM
+dlX
 dlI
 djI
 djV
@@ -101500,11 +101488,11 @@ dfi
 dfL
 dhc
 dfi
-diM
-diM
-diM
+dlX
+dlX
+dlX
 djT
-diM
+dlX
 dkC
 dkD
 dlX
@@ -103510,7 +103498,7 @@ bSJ
 bUE
 bWG
 bZO
-cbH
+cdg
 ceM
 chU
 bYj
@@ -105121,7 +105109,7 @@ dsO
 dpq
 dVb
 dne
-dua
+dtR
 dus
 duF
 dtg
@@ -118410,7 +118398,7 @@ bJq
 bKE
 bMu
 bOr
-bMu
+eVm
 bRI
 bTw
 bVt
@@ -120988,7 +120976,7 @@ aaa
 aaa
 caH
 ccw
-cdN
+cuO
 cfw
 cha
 cis
@@ -122536,7 +122524,7 @@ caH
 caH
 ckw
 cmu
-cot
+cwO
 caH
 caH
 aaa

@@ -92,15 +92,18 @@
 	name = "circuitboard (design database console)"
 	build_path = /obj/machinery/computer/design_console
 
-/obj/item/stock_parts/circuitboard/area_atmos
-	name = "circuitboard (area air control console)"
+/obj/item/stock_parts/circuitboard/atmos_control
+	name = "circuitboard (air control console)"
 	build_path = /obj/machinery/computer/area_atmos
 	origin_tech = "{'programming':2}"
 
-/obj/item/stock_parts/circuitboard/tag_scrubber_control
+/obj/item/stock_parts/circuitboard/atmos_control/area
+	name = "circuitboard (area air control console)"
+	build_path = /obj/machinery/computer/area_atmos/area
+
+/obj/item/stock_parts/circuitboard/atmos_control/tag
 	name = "circuitboard (wireless scrubber control console)"
 	build_path = /obj/machinery/computer/area_atmos/tag
-	origin_tech = "{'programming':2}"
 
 /obj/item/stock_parts/circuitboard/account_database
 	name = "circuitboard (accounts uplink terminal)"

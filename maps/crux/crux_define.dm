@@ -12,6 +12,12 @@
 
 	lobby_screens = list('maps/crux/polaris.png')
 
+	allowed_latejoin_spawns = list(
+		/decl/spawnpoint/arrivals,
+		/decl/spawnpoint/cryo,
+		/decl/spawnpoint/cyborg
+	)
+
 	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the station at docks one and two. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
 	shuttle_called_message = "A crew transfer to %dock_name% has been scheduled. The shuttle has been called. Those leaving should proceed to docks one and two in approximately %ETA%."

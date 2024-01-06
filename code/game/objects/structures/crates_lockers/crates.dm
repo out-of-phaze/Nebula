@@ -259,7 +259,6 @@
 /obj/structure/closet/crate/hydroponics/exotic/WillContain()
 	return list(
 		/obj/item/seeds/random = 6,
-		/obj/item/seeds/diona = 2,
 		/obj/item/seeds/ambrosiavulgarisseed = 2,
 		/obj/item/seeds/kudzuseed,
 		/obj/item/seeds/libertymycelium,

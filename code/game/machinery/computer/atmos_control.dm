@@ -23,6 +23,8 @@
 	icon_keyboard = "laptop_key"
 	icon_screen = "atmoslaptop"
 	density = FALSE
+	construct_state = null
+	base_type = /obj/machinery/computer/atmoscontrol/laptop
 
 /obj/machinery/computer/atmoscontrol/interface_interact(user)
 	ui_interact(user)

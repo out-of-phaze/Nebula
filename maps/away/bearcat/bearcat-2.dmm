@@ -1997,7 +1997,8 @@
 /area/ship/scrap/crew/medbay)
 "eg" = (
 /obj/structure/iv_drip,
-/obj/structure/closet/medical_wall/pills{
+/obj/structure/closet/secure_closet/medical_wall/pills{
+	req_access = null;
 	pixel_x = 26
 	},
 /turf/simulated/floor/tiled/white,

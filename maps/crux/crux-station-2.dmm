@@ -2414,9 +2414,7 @@
 /obj/structure/bed/chair/office/light{
 	dir = 4
 	},
-/obj/abstract/landmark{
-	name = "JoinLateCyborg"
-	},
+/obj/abstract/landmark/latejoin/cyborg,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_cyborg_station)
 "dFY" = (
@@ -2547,9 +2545,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_cyborg_station)
 "dGq" = (
-/obj/abstract/landmark{
-	name = "JoinLateCyborg"
-	},
+/obj/abstract/landmark/latejoin/cyborg,
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
