@@ -3033,7 +3033,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = 32
 	},
 /turf/simulated/floor/shuttle/black,
@@ -3681,7 +3681,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_x = -32
 	},
 /turf/simulated/floor/shuttle/black,
@@ -3690,7 +3690,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_x = 32
 	},
 /turf/simulated/floor/shuttle/black,
@@ -4093,7 +4093,7 @@
 /turf/simulated/floor/shuttle/red,
 /area/shuttle/shuttle_start)
 "ajH" = (
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/industrial/warning,
@@ -4363,7 +4363,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_x = -28
 	},
 /turf/simulated/floor/shuttle,
@@ -5117,7 +5117,7 @@
 /area/shuttle/large_escape_pod2/station)
 "alY" = (
 /obj/structure/bed/chair,
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = 32
 	},
 /turf/simulated/floor/shuttle/white,
@@ -5471,7 +5471,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = -32
 	},
 /turf/simulated/floor/shuttle/white,
@@ -14521,7 +14521,7 @@
 /area/shuttle/large_escape_pod1/station)
 "aFG" = (
 /obj/structure/bed/roller,
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = 32
 	},
 /turf/simulated/floor/shuttle/white,
@@ -14581,7 +14581,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_x = -28
 	},
 /turf/simulated/floor/shuttle,
@@ -15230,7 +15230,7 @@
 /obj/structure/table,
 /obj/item/wrench,
 /obj/random/medical/lite,
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = -32
 	},
 /turf/simulated/floor/shuttle/white,
@@ -16708,7 +16708,7 @@
 /turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle_start_2)
 "aKj" = (
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = -32
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -17189,7 +17189,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_x = -32
 	},
 /turf/simulated/floor/shuttle/black,
@@ -17198,7 +17198,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_x = 32
 	},
 /turf/simulated/floor/shuttle/black,
@@ -17927,7 +17927,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = -32
 	},
 /turf/simulated/floor/shuttle/black,
@@ -20275,7 +20275,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = -32
 	},
 /turf/simulated/floor/shuttle,
@@ -20472,7 +20472,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = 32
 	},
 /turf/simulated/floor/shuttle,
@@ -21027,7 +21027,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = -32
 	},
 /turf/simulated/floor/shuttle,
@@ -21236,7 +21236,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = 32
 	},
 /turf/simulated/floor/shuttle,

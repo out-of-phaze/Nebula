@@ -4709,7 +4709,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = -32
 	},
 /turf/simulated/floor/shuttle,
@@ -5001,7 +5001,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
-/obj/structure/closet/walllocker/emerglocker{
+/obj/structure/emergency_dispenser{
 	pixel_y = 32
 	},
 /turf/simulated/floor/shuttle,
