@@ -482,11 +482,14 @@
 /datum/fabricator_recipe/imprinter/circuit/geothermal_generator
 	path = /obj/item/stock_parts/circuitboard/geothermal
 
-/datum/fabricator_recipe/imprinter/circuit/atmos_control
-	path = /obj/item/stock_parts/circuitboard/atmos_control
+/datum/fabricator_recipe/imprinter/circuit/area_atmos
+	path = /obj/item/stock_parts/circuitboard/area_atmos
 
 /datum/fabricator_recipe/imprinter/circuit/area_atmos_control
-	path = /obj/item/stock_parts/circuitboard/atmos_control/area
+	path = /obj/item/stock_parts/circuitboard/area_atmos/area
 
 /datum/fabricator_recipe/imprinter/circuit/tag_scrubber_control
-	path = /obj/item/stock_parts/circuitboard/atmos_control/tag
+	path = /obj/item/stock_parts/circuitboard/area_atmos/tag
+
+/datum/fabricator_recipe/imprinter/circuit/central_atmos
+	path = /obj/item/stock_parts/circuitboard/central_atmos

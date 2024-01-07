@@ -19404,7 +19404,7 @@
 /turf/simulated/floor/tiled,
 /area/engineering/foyer)
 "bGM" = (
-/obj/machinery/computer/atmoscontrol{
+/obj/machinery/computer/central_atmos{
 	dir = 8
 	},
 /obj/machinery/light{
@@ -27565,7 +27565,7 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 6
 	},
-/obj/machinery/computer/atmoscontrol{
+/obj/machinery/computer/central_atmos{
 	dir = 1
 	},
 /obj/machinery/button/alternate/door{
@@ -53349,7 +53349,7 @@
 "cYo" = (
 /obj/item/stool/padded,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/computer/atmoscontrol{
+/obj/machinery/computer/central_atmos{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -53857,7 +53857,7 @@
 /area/crew_quarters/cafeteria)
 "cZu" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/computer/atmoscontrol{
+/obj/machinery/computer/central_atmos{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -54795,7 +54795,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/computer/atmoscontrol{
+/obj/machinery/computer/central_atmos{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
