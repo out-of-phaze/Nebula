@@ -7,6 +7,7 @@
 		/area/engineering/engine_waste                               = NO_SCRUBBER|NO_VENT|NO_APC, // TODO port engine
 		/area/holodeck                                               = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/surface                                                = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/surface/level_one                                      = NO_VENT|NO_APC,
 		/area/space                                                  = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/turbolift                                              = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/shuttle                                                = NO_SCRUBBER|NO_VENT|NO_APC,
@@ -75,64 +76,64 @@
 
 // Elevator areas.
 /area/turbolift/port_deck_one
-	name = "lift (first deck)"
-	lift_floor_label = "Deck 1"
-	lift_floor_name = "Hangar Deck"
-	lift_announce_str = "Arriving at Hangar Deck: Main Hangars.Cargo Delivery. Telecommunications. Auxiliary Shuttle Docks. Escape Pods."
+	name = "lift (ground floor)"
+	lift_floor_label = "Ground Floor"
+	lift_floor_name = "Ground Floor"
+	lift_announce_str = "Arriving at Ground Floor: Main Hangars. Cargo Delivery. Telecommunications. Auxiliary Shuttle Docks. Escape Pods."
 	base_turf = /turf/simulated/floor
 
 /area/turbolift/port_deck_two
-	name = "lift (second deck)"
-	lift_floor_label = "Deck 2"
-	lift_floor_name = "Operations Deck"
-	lift_announce_str = "Arriving at Operations Deck: Engineering. Cargo. Medbay. Research. Security. Crew Facilities Shuttle Docks. Cryogenic Storage."
+	name = "lift (first floor)"
+	lift_floor_label = "First Floor"
+	lift_floor_name = "First Floor"
+	lift_announce_str = "Arriving at First Floor: Operations. Engineering. Cargo. Medbay. Research. Security. Crew Facilities Shuttle Docks. Cryogenic Storage."
 
 /area/turbolift/starboard_deck_one
-	name = "lift (first deck)"
-	lift_floor_label = "Deck 1"
-	lift_floor_name = "Hangar Deck"
-	lift_announce_str = "Arriving at Hangar Deck: Main Hangars.Cargo Delivery. Telecommunications. Auxiliary Shuttle Docks. Escape Pods."
+	name = "lift (ground floor)"
+	lift_floor_label = "Ground Floor"
+	lift_floor_name = "Ground Floor"
+	lift_announce_str = "Arriving at Ground Floor: Main Hangars. Cargo Delivery. Telecommunications. Auxiliary Shuttle Docks. Escape Pods."
 	base_turf = /turf/simulated/floor
 
 /area/turbolift/starboard_deck_two
-	name = "lift (second deck)"
-	lift_floor_label = "Deck 2"
-	lift_floor_name = "Operations Deck"
-	lift_announce_str = "Arriving at Operations Deck: Engineering. Cargo. Medbay. Research. Security. Crew Facilities, Shuttle Docks. Cryogenic Storage."
+	name = "lift (first floor)"
+	lift_floor_label = "First Floor"
+	lift_floor_name = "First Floor"
+	lift_announce_str = "Arriving at First Floor: Operations. Engineering. Cargo. Medbay. Research. Security. Crew Facilities, Shuttle Docks. Cryogenic Storage."
 
 /area/turbolift/center_deck_one
-	name = "lift (first deck)"
-	lift_floor_label = "Deck 1"
-	lift_floor_name = "Hangar Deck"
-	lift_announce_str = "Arriving at Hangar Deck: Main Hangars .Cargo Delivery. Telecommunications. Auxiliary Shuttle Docks. Escape Pods."
+	name = "lift (ground floor)"
+	lift_floor_label = "Ground Floor"
+	lift_floor_name = "Ground Floor"
+	lift_announce_str = "Arriving at Ground Floor: Main Hangars. Cargo Delivery. Telecommunications. Auxiliary Shuttle Docks. Escape Pods."
 	base_turf = /turf/simulated/floor
 
 /area/turbolift/center_deck_two
-	name = "lift (second deck)"
-	lift_floor_label = "Deck 2"
-	lift_floor_name = "Operations Deck"
-	lift_announce_str = "Arriving at Operations Deck: Engineering. Cargo. Medbay. Research. Security. Crew Facilities Shuttle Docks. Cryogenic Storage."
+	name = "lift (first floor)"
+	lift_floor_label = "First Floor"
+	lift_floor_name = "First Floor"
+	lift_announce_str = "Arriving at First Floor: Operations. Engineering. Cargo. Medbay. Research. Security. Crew Facilities Shuttle Docks. Cryogenic Storage."
 
 /area/turbolift/center_deck_three
-	name = "lift (third deck)"
-	lift_floor_label = "Deck 3"
-	lift_floor_name = "Command Deck"
-	lift_announce_str = "Arriving at Command Deck: Bridge. Meeting Room. Command Quarters. AI Core. Solars."
+	name = "lift (second floor)"
+	lift_floor_label = "Second Floor"
+	lift_floor_name = "Second Floor"
+	lift_announce_str = "Arriving at Second Floor: Command. Bridge. Meeting Room. Command Quarters. AI Core. Solars."
 
 /area/turbolift/cargo_deck_one
-	name = "lift (first deck)"
-	lift_floor_label = "Deck 1"
-	lift_floor_name = "Hangar Deck"
+	name = "lift (ground floor)"
+	lift_floor_label = "Ground Floor"
+	lift_floor_name = "Ground Floor"
 	lift_announce_str = "Arriving at Cargo Delivery."
 	base_turf = /turf/simulated/floor
 
 /area/turbolift/cargo_deck_two
-	name = "lift (second deck)"
-	lift_floor_label = "Deck 2"
-	lift_floor_name = "Operations Deck"
+	name = "lift (first floor)"
+	lift_floor_label = "First Floor"
+	lift_floor_name = "First Floor"
 	lift_announce_str = "Arriving at Cargo."
 
-//Deck One (Z-1)
+//Ground floor (Z-1)
 
 /area/engineering/auxiliary_engineering
 	name = "\improper Auxiliary Engineering Station"
@@ -147,117 +148,117 @@
 	icon_state = "construction"
 
 /area/construction/firstdeck/construction1
-	name = "\improper First Deck Engineering Construction Area 1"
+	name = "\improper Ground Floor Engineering Construction Area 1"
 
 /area/construction/firstdeck/construction2
-	name = "\improper First Deck Engineering Construction Area 2"
+	name = "\improper Ground Floor Engineering Construction Area 2"
 
 /area/construction/firstdeck/construction3
-	name = "\improper First Deck Engineering Construction Area 3"
+	name = "\improper Ground Floor Engineering Construction Area 3"
 
 /area/construction/firstdeck/construction4
-	name = "\improper First Deck Engineering Construction Area 4"
+	name = "\improper Ground Floor Engineering Construction Area 4"
 
 /area/construction/firstdeck/construction5
-	name = "\improper First Deck Engineering Construction Area 5"
+	name = "\improper Ground Floor Engineering Construction Area 5"
 
 /area/crew_quarters/toilet/firstdeck
-	name = "\improper First Deck Restroom"
+	name = "\improper Ground Floor Restroom"
 
 /area/maintenance/firstdeck
-	name = "First Deck Maintenance"
+	name = "Ground Floor Maintenance"
 	icon_state = "maintcentral"
 
 /area/maintenance/firstdeck/aftstarboard
-	name = "First Deck Aft Starboard Maintenance"
+	name = "Ground Floor Southeast Maintenance"
 	icon_state = "asmaint"
 
 /area/maintenance/firstdeck/aftport
-	name = "First Deck Aft Port Maintenance"
+	name = "Ground Floor Southwest Maintenance"
 	icon_state = "apmaint"
 
 /area/maintenance/firstdeck/forestarboard
-	name = "First Deck Fore Starboard Maintenance"
+	name = "Ground Floor Northeast Maintenance"
 	icon_state = "fsmaint"
 
 /area/maintenance/firstdeck/foreport
-	name = "First Deck Fore Port Maintenance"
+	name = "Ground Floor Northwest Maintenance"
 	icon_state = "fpmaint"
 
 /area/maintenance/firstdeck/centralstarboard
-	name = "First Deck Starboard Maintenance"
+	name = "Ground Floor East Maintenance"
 	icon_state = "smaint"
 
 /area/maintenance/firstdeck/centralport
-	name = "First Deck Port Maintenance"
+	name = "Ground Floor West Maintenance"
 	icon_state = "pmaint"
 
 /area/hallway/primary/firstdeck/elevator
-	name = "\improper First Deck Central Elevator Access"
+	name = "\improper Ground Floor Central Elevator Access"
 	icon_state = "hallC"
 
-/area/hallway/primary/firstdeck/fore
-	name = "\improper First Deck Fore Hallway"
+/area/hallway/primary/firstdeck/north
+	name = "\improper Ground Floor North Hallway"
 	icon_state = "hallF"
 
 /area/hallway/primary/firstdeck/fpcenter
-	name = "\improper First Deck Fore Port Central Hallway"
+	name = "\improper Ground Floor Northwest Central Hallway"
 	icon_state = "hallC1"
 
 /area/hallway/primary/firstdeck/fscenter
-	name = "\improper First Deck Fore Starboard Central Hallway"
+	name = "\improper Ground Floor Northeast Central Hallway"
 	icon_state = "hallC2"
 
 /area/hallway/primary/firstdeck/apcenter
-	name = "\improper First Deck Aft Port Central Hallway"
+	name = "\improper Ground Floor Southwest Central Hallway"
 	icon_state = "hallC3"
 
 /area/hallway/primary/firstdeck/ascenter
-	name = "\improper First Deck Aft Starboard Central Hallway"
+	name = "\improper Ground Floor Southeast Central Hallway"
 	icon_state = "hallC4"
 
-/area/hallway/primary/firstdeck/aft
-	name = "\improper First Deck Aft Hallway"
+/area/hallway/primary/firstdeck/south
+	name = "\improper Ground Floor South Hallway"
 	icon_state = "hallA"
 
-/area/hallway/primary/firstdeck/port
-	name = "\improper First Deck Port Hallway"
+/area/hallway/primary/firstdeck/west
+	name = "\improper Ground Floor West Hallway"
 	icon_state = "hallP"
 
-/area/hallway/primary/firstdeck/starboard
-	name = "\improper First Deck Starboard Hallway"
+/area/hallway/primary/firstdeck/east
+	name = "\improper Ground Floor East Hallway"
 	icon_state = "hallS"
 
 /area/hallway/primary/firstdeck/auxdockaft
-	name = "\improper First Deck Aft Auxiliary Dock"
+	name = "\improper Ground Floor South Auxiliary Dock"
 	icon_state = "docking_hallway"
 
 /area/hallway/primary/firstdeck/auxdockfore
-	name = "\improper First Deck Fore Auxiliary Dock"
+	name = "\improper Ground Floor North Auxiliary Dock"
 	icon_state = "docking_hallway"
 
 /area/hallway/secondary/escape/firstdeck/ep_port
-	name = "\improper Large Escape Pod 2 Port"
+	name = "\improper Large Escape Pod 2 West"
 	icon_state = "escape_pod"
 
 /area/hallway/secondary/escape/firstdeck/ep_starboard1
-	name = "\improper First Deck Research Access Hallway"
+	name = "\improper Ground Floor Research Access Hallway"
 	icon_state = "escape_pod"
 
 /area/hallway/secondary/escape/firstdeck/ep_starboard2
-	name = "\improper Large Escape Pod 2 Starboard"
+	name = "\improper Large Escape Pod 2 East"
 	icon_state = "escape_pod"
 
 /area/hallway/secondary/escape/firstdeck/ep_aftport
-	name = "\improper Escape Pods Aft Port"
+	name = "\improper Escape Pods Southwest"
 	icon_state = "escape_pod"
 
 /area/hallway/secondary/escape/firstdeck/ep_aftstarboard
-	name = "\improper Escape Pods Aft Starboard"
+	name = "\improper Escape Pods Southeast"
 	icon_state = "escape_pod"
 
 /area/hangar
-	name = "\improper First Deck Hangar"
+	name = "\improper Ground Floor Hangar"
 	icon_state = "hangar"
 	sound_env = LARGE_ENCLOSED
 //	ambience = AMBIENCE_HANGAR
@@ -291,8 +292,8 @@
 	name = "\improper First-Aid Station"
 	icon_state = "medbay2"
 
-/area/medical/first_aid_station/firstdeck/
-	name = "\improper First Deck First-Aid Station"
+/area/medical/first_aid_station/firstdeck
+	name = "\improper Ground Floor First-Aid Station"
 
 /area/storage/emergency_storage
 	area_flags = AREA_FLAG_RAD_SHIELDED
@@ -300,26 +301,29 @@
 	icon_state = "emergencystorage"
 
 /area/storage/emergency_storage/firstdeck/aft_emergency
-	name = "First Deck Aft Emergency Storage"
+	name = "Ground Floor South Emergency Storage"
 
 /area/storage/emergency_storage/firstdeck/ap_emergency
-	name = "First Deck Aft Port Emergency Storage"
+	name = "Ground Floor Southwest Emergency Storage"
 
 /area/storage/emergency_storage/firstdeck/as_emergency
-	name = "First Deck Aft Starboard Emergency Storage"
+	name = "Ground Floor Southeast Emergency Storage"
 
 /area/storage/emergency_storage/firstdeck/fore_emergency
-	name = "First Deck Fore Emergency Storage"
+	name = "Ground Floor North Emergency Storage"
 
 /area/storage/emergency_storage/firstdeck/fp_emergency
-	name = "First Deck Fore Port Emergency Storage"
+	name = "Ground Floor Northwest Emergency Storage"
 
 /area/storage/emergency_storage/firstdeck/fs_emergency
-	name = "First Deck Fore Starboard Emergency Storage"
+	name = "Ground Floor Northeast Emergency Storage"
 
-/area/ai_monitored/storage/eva/pilot
-	name = "Pilot EVA Storage"
+/area/ai_monitored/eva
+	name = "EVA Storage"
 	icon_state = "eva"
+
+/area/ai_monitored/eva/pilot
+	name = "Pilot EVA Storage"
 
 /area/tcomm/
 	icon_state = "tcomsatcham"
@@ -353,7 +357,7 @@
 	name = "\improper Mining Locker Room"
 	icon_state = "mining"
 
-//Deck Two (Z-2)
+//First floor (Z-2)
 
 /area/maintenance/emergencyeva
 	name = "\improper Emergency EVA Maintenance"
@@ -368,11 +372,11 @@
 	icon_state = "maint_research"
 
 /area/construction/seconddeck
-	name = "\improper Second Deck Engineering Construction Area"
+	name = "\improper First Floor Engineering Construction Area"
 	icon_state = "construction"
 
 /area/construction/seconddeck/construction1
-	name = "\improper Second Deck Engineering Construction Area 1"
+	name = "\improper First Floor Engineering Construction Area 1"
 
 /area/construction/seconddeck/construction2
 	name = "\improper Abandoned Locker Room"
@@ -429,39 +433,39 @@
 	icon_state = "engineering_aft_hallway"
 
 /area/hallway/primary/seconddeck/stairwell
-	name = "\improper Second Deck Central Stairwell Access"
+	name = "\improper First Floor Central Stairwell Access"
 	icon_state = "hallC"
 
-/area/hallway/primary/seconddeck/fore
-	name = "\improper Second Deck Fore Hallway"
+/area/hallway/primary/seconddeck/north
+	name = "\improper First Floor North Hallway"
 	icon_state = "hallF"
 
 /area/hallway/primary/seconddeck/fpcenter
-	name = "\improper Second Deck Fore Port Central Hallway"
+	name = "\improper First Floor Northwest Central Hallway"
 	icon_state = "hallC1"
 
 /area/hallway/primary/seconddeck/fscenter
-	name = "\improper Second Deck Fore Starboard Central Hallway"
+	name = "\improper First Floor Northeast Central Hallway"
 	icon_state = "hallC2"
 
 /area/hallway/primary/seconddeck/apcenter
-	name = "\improper Second Deck Aft Port Central Hallway"
+	name = "\improper First Floor Southwest Central Hallway"
 	icon_state = "hallC3"
 
 /area/hallway/primary/seconddeck/ascenter
-	name = "\improper Second Deck Aft Starboard Central Hallway"
+	name = "\improper First Floor Southeast Central Hallway"
 	icon_state = "hallC4"
 
-/area/hallway/primary/seconddeck/aft
-	name = "\improper Second Deck Aft Hallway"
+/area/hallway/primary/seconddeck/south
+	name = "\improper First Floor South Hallway"
 	icon_state = "hallA"
 
-/area/hallway/primary/seconddeck/port
-	name = "\improper Second Deck Port Hallway"
+/area/hallway/primary/seconddeck/west
+	name = "\improper First Floor West Hallway"
 	icon_state = "hallP"
 
-/area/hallway/primary/seconddeck/starboard
-	name = "\improper Second Deck Starboard Hallway"
+/area/hallway/primary/seconddeck/east
+	name = "\improper First Floor East Hallway"
 	icon_state = "hallS"
 
 /area/hallway/primary/seconddeck/dockhallway
@@ -480,14 +484,14 @@
 /area/medical/first_aid_station/seconddeck/
 	name = "\improper First-Aid Station"
 
-/area/medical/first_aid_station/seconddeck/port
-	name = "\improper Port First-Aid Station"
+/area/medical/first_aid_station/seconddeck/west
+	name = "\improper West First-Aid Station"
 
-/area/medical/first_aid_station/seconddeck/fore
-	name = "\improper Fore First-Aid Station"
+/area/medical/first_aid_station/seconddeck/north
+	name = "\improper North First-Aid Station"
 
-/area/medical/first_aid_station/seconddeck/aft
-	name = "\improper Aft First-Aid Station"
+/area/medical/first_aid_station/seconddeck/south
+	name = "\improper South First-Aid Station"
 
 /area/medical/medical_lockerroom
 	name = "\improper Medbay Locker Room"
@@ -514,22 +518,22 @@
 	sound_env = SMALL_ENCLOSED
 
 /area/storage/emergency_storage/seconddeck/ap_emergency
-	name = "Second Deck Aft Port Emergency Storage"
+	name = "First Floor Southwest Emergency Storage"
 
 /area/storage/emergency_storage/seconddeck/as_emergency
-	name = "Second Deck Aft Starboard Emergency Storage"
+	name = "First Floor Southeast Emergency Storage"
 
 /area/storage/emergency_storage/seconddeck/central_emergency
-	name = "Second Deck Central Emergency Storage"
+	name = "First Floor Central Emergency Storage"
 
 /area/storage/emergency_storage/seconddeck/fp_emergency
-	name = "Second Deck Fore Port Emergency Storage"
+	name = "First Floor Northwest Emergency Storage"
 
 /area/storage/emergency_storage/seconddeck/fs_emergency
-	name = "Second Deck Fore Starboard Emergency Storage"
+	name = "First Floor Northeast Emergency Storage"
 
 /area/storage/emergency_storage/seconddeck/port_emergency
-	name = "Second Deck Port Emergency Storage"
+	name = "First Floor West Emergency Storage"
 
 /area/rnd/research_restroom_sc
 	name = "\improper Research Restroom"
@@ -545,9 +549,15 @@
 	name = "\improper Research - Toxins Launch Room"
 	icon_state = "toxtest"
 
-/area/rnd/research/firstdeck/hallway
-	name = "\improper Research - First Deck Hallway"
+/area/research
+	name = "\improper Research"
 	icon_state = "research"
+
+/area/research/hallway
+	name = "\improper Research - Ground Floor Hallway"
+
+/area/rnd/xenobiology
+	name = "\improper Xenobiology"
 
 /area/rnd/xenobiology/xenoflora_isolation
 	name = "\improper Xenoflora Isolation"
@@ -560,6 +570,9 @@
 //Deck Three (Z-3)
 
 /area/ai
+	name = "AI Core"
+	icon_state = "ai_upload"
+
 //	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 //	ambience = AMBIENCE_AI
 
@@ -616,31 +629,31 @@
 	name = "\improper Command - Secretary Quarters"
 
 /area/hallway/primary/thirddeck/central
-	name = "\improper Third Deck Port Hallway"
+	name = "\improper Second Floor Central Hallway"
 	icon_state = "hallC"
 
-/area/hallway/primary/thirddeck/port
-	name = "\improper Third Deck Port Hallway"
+/area/hallway/primary/thirddeck/west
+	name = "\improper Second Floor West Hallway"
 	icon_state = "hallP"
 
-/area/hallway/primary/thirddeck/starboard
-	name = "\improper Third Deck Starboard Hallway"
+/area/hallway/primary/thirddeck/east
+	name = "\improper Second Floor East Hallway"
 	icon_state = "hallS"
 
 /area/maintenance/thirddeck/aftstarboard
-	name = "Third Deck Aft Starboard Maintenance"
+	name = "Second Floor Southeast Maintenance"
 	icon_state = "asmaint"
 
 /area/maintenance/thirddeck/aftport
-	name = "Third Deck Aft Port Maintenance"
+	name = "Second Floor Southwest Maintenance"
 	icon_state = "apmaint"
 
 /area/maintenance/thirddeck/forestarboard
-	name = "Third  Deck Fore Starboard Maintenance"
+	name = "Third  Deck Northeast Maintenance"
 	icon_state = "fsmaint"
 
 /area/maintenance/thirddeck/foreport
-	name = "Third  Deck Fore Port Maintenance"
+	name = "Third  Deck Northwest Maintenance"
 	icon_state = "fpmaint"
 
 /area/maintenance/solars
@@ -649,19 +662,19 @@
 //	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/maintenance/solars/aftportsolar
-	name = "Solar Maintenance - Aft Port"
+	name = "Solar Maintenance - Southwest"
 	icon_state = "SolarcontrolP"
 
 /area/maintenance/solars/aftstarboardsolar
-	name = "Solar Maintenance - Aft Starboard"
+	name = "Solar Maintenance - Southeast"
 	icon_state = "SolarcontrolS"
 
 /area/maintenance/solars/foreportsolar
-	name = "Solar Maintenance - Fore Port"
+	name = "Solar Maintenance - Northwest"
 	icon_state = "SolarcontrolP"
 
 /area/maintenance/solars/forestarboardsolar
-	name = "Solar Maintenance - Fore Starboard"
+	name = "Solar Maintenance - Northeast"
 	icon_state = "SolarcontrolS"
 
 /area/solar
@@ -670,19 +683,19 @@
 	ambience = AMBIENCE_SPACE
 
 /area/solar/aftportsolar
-	name = "\improper Aft Port Solar Array"
+	name = "\improper Southwest Solar Array"
 	icon_state = "panelsP"
 
 /area/solar/foreportsolar
-	name = "\improper Fore Port Solar Array"
+	name = "\improper Northwest Solar Array"
 	icon_state = "panelsP"
 
 /area/solar/aftstarboardsolar
-	name = "\improper Aft Starboard Solar Array"
+	name = "\improper Southeast Solar Array"
 	icon_state = "panelsS"
 
 /area/solar/forestarboardsolar
-	name = "\improper Fore Starboard Solar Array"
+	name = "\improper Northeast Solar Array"
 	icon_state = "panelsS"
 
 // Shuttles
@@ -868,10 +881,10 @@
 	name = "\improper Processing"
 
 /area/maintenance/security_starboard
-	name = "\improper Starboard Security"
+	name = "\improper East Security"
 
 /area/maintenance/security_port
-	name = "\improper Port Security"
+	name = "\improper West Security"
 
 /area/lawoffice
 	name = "\improper Legal Office"
@@ -973,11 +986,11 @@
 /area/engineering/engine_smes
 	name = "\improper SMES Chamber"
 
-/area/ai_monitored/storage/emergency/eva
+/area/ai_monitored/emergency/eva
 	name = "\improper EVA Storage"
 
 /area/maintenance/medbay_fore
-	name = "\improper Fore Medbay"
+	name = "\improper North Medbay"
 
 /area/maintenance/medbay
 	name = "\improper Medbay Maintenance"
@@ -1148,10 +1161,10 @@
 	name = "\improper Engineering Substration"
 
 /area/maintenance/substation/firstdeck
-	name = "First Deck Utility Access"
+	name = "Ground Floor Utility Access"
 
 /area/maintenance/substation/firstdeck/cargo
-	name = "First Deck Cargo Substation"
+	name = "Ground Floor Cargo Substation"
 
 /area/maintenance/substation/atmospherics
 	name = "Atmospherics Substation"

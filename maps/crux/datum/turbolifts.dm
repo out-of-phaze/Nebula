@@ -4,16 +4,16 @@
 	lift_size_x = 4
 	lift_size_y = 4
 
-/obj/abstract/turbolift_spawner/crux/port
-	name = "Sothern Cross turbolift map placeholder - Port"
+/obj/abstract/turbolift_spawner/crux/west
+	name = "Sothern Cross turbolift map placeholder - West"
 	dir = EAST
 	areas_to_use = list(
 		/area/turbolift/port_deck_one,
 		/area/turbolift/port_deck_two
 		)
 
-/obj/abstract/turbolift_spawner/crux/starboard
-	name = "Sothern Cross turbolift map placeholder - Starboard"
+/obj/abstract/turbolift_spawner/crux/east
+	name = "Sothern Cross turbolift map placeholder - East"
 	dir = WEST
 	areas_to_use = list(
 		/area/turbolift/starboard_deck_one,

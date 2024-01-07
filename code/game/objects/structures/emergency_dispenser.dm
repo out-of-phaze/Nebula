@@ -8,7 +8,11 @@
 	anchored = TRUE
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
 	directional_offset = "{'NORTH':{'y':-32}, 'SOUTH':{'y':32}, 'EAST':{'x':-32}, 'WEST':{'x':32}}"
-	var/static/list/spawnitems = list(/obj/item/tank/emergency/oxygen,/obj/item/clothing/mask/breath)
+	var/static/list/spawnitems = list(
+		/obj/item/tank/emergency/oxygen,
+		/obj/item/clothing/mask/breath,
+		/obj/item/crowbar/red
+	)
 	var/amount = 3 // spawns each items X times.
 
 /obj/structure/emergency_dispenser/attack_hand(mob/user)
