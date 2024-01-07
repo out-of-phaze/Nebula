@@ -13536,10 +13536,10 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "bvs" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
+/obj/machinery/light,
+/obj/machinery/atmospherics/valve/open{
 	dir = 4
 	},
-/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "bvt" = (
@@ -14837,14 +14837,14 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 10
 	},
-/obj/machinery/atmospherics/valve/digital{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
+	},
+/obj/machinery/atmospherics/valve/open{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
@@ -14901,13 +14901,13 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "bxY" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/atmospherics/valve/open,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "bxZ" = (
@@ -16123,11 +16123,12 @@
 /turf/simulated/floor/tiled,
 /area/engineering/hallway/atmos_hallway)
 "bAn" = (
-/obj/machinery/atmospherics/tvalve/mirrored{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/visible/red{
+	dir = 4;
+	initialize_directions = 11
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "bAo" = (
@@ -17700,13 +17701,13 @@
 /turf/simulated/wall,
 /area/engineering/foyer)
 "bDv" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/atmospherics/valve/open,
 /turf/simulated/floor/tiled,
 /area/engineering/hallway/atmos_hallway)
 "bDw" = (
@@ -20639,6 +20640,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/rnd/mixing)
 "bJt" = (
@@ -21169,10 +21171,16 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
 "bKG" = (
-/obj/structure/sign/warning/hot_exhaust,
-/turf/simulated/wall/r_wall,
+/obj/machinery/atmospherics/binary/pump{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
 /area/rnd/mixing)
 "bKH" = (
+/obj/structure/sign/warning/fire,
 /obj/machinery/atmospherics/pipe/simple/hidden/purple{
 	dir = 5
 	},
@@ -22198,22 +22206,9 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
 "bMv" = (
-/obj/machinery/atmospherics/tvalve/bypass{
-	dir = 8
+/obj/machinery/atmospherics/valve/open{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "tox_airlock_control";
-	pixel_x = 24;
-	tag_airpump = "tox_airlock_pump";
-	tag_chamber_sensor = "tox_airlock_sensor";
-	tag_exterior_door = "tox_airlock_exterior";
-	tag_interior_door = "tox_airlock_interior"
-	},
-/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
 "bMw" = (
@@ -23156,28 +23151,30 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/mixing)
 "bOu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	id_tag = "tox_airlock_control";
+	pixel_x = 24;
+	tag_airpump = "tox_airlock_pump";
+	tag_chamber_sensor = "tox_airlock_sensor";
+	tag_exterior_door = "tox_airlock_exterior";
+	tag_interior_door = "tox_airlock_interior"
+	},
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/turf/simulated/floor/tiled/white,
+/area/rnd/mixing)
+"bOv" = (
 /obj/machinery/air_sensor{
 	id_tag = "toxins_mixing_interior";
 	pixel_x = -8;
 	pixel_y = -18
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
-	},
-/turf/simulated/floor/reinforced,
-/area/rnd/mixing)
-"bOv" = (
-/obj/machinery/door/airlock/research{
-	autoclose = 0;
-	id_tag = "tox_airlock_exterior";
-	locked = 1;
-	name = "Mixing Room Exterior Airlock"
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/mixing)
@@ -23778,11 +23775,11 @@
 /turf/simulated/wall/r_wall,
 /area/rnd/mixing)
 "bPQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/obj/machinery/atmospherics/binary/pump{
-	dir = 8
+/obj/machinery/door/airlock/research{
+	autoclose = 0;
+	id_tag = "tox_airlock_exterior";
+	locked = 1;
+	name = "Mixing Room Exterior Airlock"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/mixing)
@@ -25860,13 +25857,10 @@
 /turf/simulated/floor/tiled,
 /area/rnd/mixing)
 "bTy" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
 "bTz" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -53355,6 +53349,9 @@
 "cYo" = (
 /obj/item/stool/padded,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/computer/atmoscontrol{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "cYp" = (
@@ -53860,6 +53857,9 @@
 /area/crew_quarters/cafeteria)
 "cZu" = (
 /obj/structure/disposalpipe/segment,
+/obj/machinery/computer/atmoscontrol{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "cZv" = (
@@ -54794,6 +54794,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/machinery/computer/atmoscontrol{
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
@@ -68970,6 +68973,12 @@
 /obj/abstract/level_data_spawner/crux_level_one,
 /turf/exterior/open,
 /area/surface/level_one)
+"hEd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/purple{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/rnd/mixing)
 "lSe" = (
 /turf/exterior/open,
 /area/engineering/atmos)
@@ -68986,6 +68995,15 @@
 /obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/rnd/research)
+"qIG" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/mixing)
 "tZc" = (
 /obj/abstract/landmark/map_load_mark/engine_loader,
 /turf/exterior/open,
@@ -118457,12 +118475,12 @@ bEA
 bGq
 bHQ
 bJr
-bLk
 bMv
-bOs
-bPO
-bRJ
-bTx
+bMv
+bOr
+bTy
+bRI
+qIG
 bVt
 bXk
 bKB
@@ -118714,12 +118732,12 @@ bEA
 bGn
 bHR
 bJs
-bKB
-bMw
-bOt
-bPP
-bKB
-bTy
+bLk
+bOu
+bOs
+bPO
+bRJ
+bTx
 bVt
 bXl
 bKB
@@ -118971,11 +118989,11 @@ bEA
 bGo
 bHS
 bJt
-bKG
-bMx
-bOu
-bPQ
-bKK
+bKB
+bMw
+bOt
+bPP
+bKB
 bTz
 bVs
 bXm
@@ -119229,9 +119247,9 @@ bJp
 bHT
 bJq
 bKB
-bMy
+bMx
 bOv
-bMy
+bKG
 bKB
 bTA
 bVs
@@ -119486,10 +119504,10 @@ bGr
 bHU
 bJu
 bKH
-bMz
-bOw
-bPR
-bKB
+bMy
+bPQ
+bMy
+bKK
 bTB
 bVu
 bVu
@@ -119742,10 +119760,10 @@ bEA
 bGs
 bJv
 bJv
-bKI
-bMA
-bOx
-bPS
+hEd
+bMz
+bOw
+bPR
 bKB
 bJv
 bJv
@@ -119999,10 +120017,10 @@ aaf
 aaa
 aaa
 aaa
-bKJ
+bKI
 bMA
 bOx
-bTC
+bPS
 bKB
 aaa
 aaa
@@ -120256,11 +120274,11 @@ aaf
 aaa
 aaa
 aaa
-bKK
-bMB
-dgp
-bMB
-bKG
+bKJ
+bMA
+bOx
+bTC
+bKB
 aaa
 aaa
 aaa
@@ -120513,11 +120531,11 @@ aaf
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+bKK
+bMB
+dgp
+bMB
+bKK
 aab
 aaa
 aaa
