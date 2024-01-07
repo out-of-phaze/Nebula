@@ -80,6 +80,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/east)
+"aRW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/wall/r_wall,
+/area/rnd/mixing)
 "aTz" = (
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -956,7 +962,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "aXQ" = (
-/obj/machinery/hologram/holopad,
+/obj/machinery/hologram/holopad{
+	holopad_id = "Armory West"
+	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
@@ -2095,7 +2103,9 @@
 "aZM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/hologram/holopad,
+/obj/machinery/hologram/holopad{
+	holopad_id = "Firing Range North"
+	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/monotile,
 /area/security/range)
@@ -3193,7 +3203,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/hologram/holopad,
+/obj/machinery/hologram/holopad{
+	holopad_id = "Brig North"
+	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -4105,7 +4117,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/hologram/holopad,
+/obj/machinery/hologram/holopad{
+	holopad_id = "Firing Range South"
+	},
 /turf/simulated/floor/tiled,
 /area/security/range)
 "bdx" = (
@@ -6709,7 +6723,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/machinery/hologram/holopad,
+/obj/machinery/hologram/holopad{
+	holopad_id = "Brig South"
+	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
@@ -9726,7 +9742,9 @@
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "bnc" = (
-/obj/machinery/hologram/holopad,
+/obj/machinery/hologram/holopad{
+	holopad_id = "Forensics"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
@@ -21178,9 +21196,7 @@
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/reinforced,
 /area/rnd/mixing)
 "bKH" = (
@@ -21329,6 +21345,9 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
@@ -22218,18 +22237,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /turf/simulated/wall/r_wall,
 /area/rnd/mixing)
 "bMx" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/reinforced,
 /area/rnd/mixing)
 "bMy" = (
@@ -23154,9 +23168,6 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/mixing)
 "bOu" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "tox_airlock_control";
 	pixel_x = 24;
@@ -23167,6 +23178,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/pipe/manifold/visible,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
 "bOv" = (
@@ -23744,9 +23756,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
 "bPO" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/button/ignition{
 	id_tag = "mixingsparker";
@@ -23765,13 +23774,11 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
 "bPP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/wall/r_wall,
@@ -24877,7 +24884,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
 "bRJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/power/apc{
 	dir = 4;
@@ -24890,6 +24896,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/mixing)
@@ -37008,7 +37017,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/hologram/holopad,
+/obj/machinery/hologram/holopad{
+	holopad_id = "Emergency EVA Storage"
+	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
@@ -69014,6 +69025,12 @@
 /obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/south)
+"eKs" = (
+/obj/machinery/hologram/holopad{
+	holopad_id = "Atmospherics Southwest"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "eVm" = (
 /obj/machinery/atmospherics/valve{
 	dir = 4
@@ -69030,9 +69047,19 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/rnd/mixing)
+"juI" = (
+/obj/machinery/hologram/holopad{
+	holopad_id = "Atmospherics East"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "lSe" = (
 /turf/exterior/open,
 /area/engineering/atmos)
+"mBa" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/exterior/open,
+/area/surface/level_one)
 "mRF" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/structure/lattice,
@@ -69071,6 +69098,12 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/secondary/entry/dock_three)
+"tqh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/wall/r_wall,
+/area/rnd/mixing)
 "tZc" = (
 /obj/abstract/landmark/map_load_mark/engine_loader,
 /turf/exterior/open,
@@ -89233,7 +89266,7 @@ bmT
 bmT
 bmT
 bmT
-bqJ
+eKs
 bvr
 bxV
 bzg
@@ -92312,7 +92345,7 @@ bmT
 bnH
 bmT
 brI
-bqJ
+juI
 bmT
 bmT
 bvn
@@ -119056,11 +119089,11 @@ bEA
 bGo
 bHS
 bJt
-bKB
 bMw
+bMy
 bOt
+bMy
 bPP
-bKB
 bTz
 bVs
 bXm
@@ -119313,11 +119346,11 @@ bEA
 bJp
 bHT
 bJq
-bKB
+aRW
 bMx
 bOv
 bKG
-bKB
+tqh
 bTA
 bVs
 bXn
@@ -121624,7 +121657,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+mBa
 aaa
 aaa
 aaa

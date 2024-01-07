@@ -7,6 +7,7 @@
 		/area/engineering/engine_waste                               = NO_SCRUBBER|NO_VENT|NO_APC, // TODO port engine
 		/area/holodeck                                               = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/surface                                                = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/surface/level_one                                      = NO_VENT|NO_APC,
 		/area/space                                                  = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/turbolift                                              = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/shuttle                                                = NO_SCRUBBER|NO_VENT|NO_APC,
@@ -291,7 +292,7 @@
 	name = "\improper First-Aid Station"
 	icon_state = "medbay2"
 
-/area/medical/first_aid_station/firstdeck/
+/area/medical/first_aid_station/firstdeck
 	name = "\improper Ground Floor First-Aid Station"
 
 /area/storage/emergency_storage
@@ -569,6 +570,9 @@
 //Deck Three (Z-3)
 
 /area/ai
+	name = "AI Core"
+	icon_state = "ai_upload"
+
 //	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 //	ambience = AMBIENCE_AI
 
