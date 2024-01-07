@@ -84,7 +84,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/valve/shutoff{
-	name = "Deck 3 automatic shutoff valve"
+	name = "Second Floor automatic shutoff valve"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
@@ -143,7 +143,7 @@
 /area/surface/level_two)
 "dBb" = (
 /obj/machinery/camera/network/command{
-	c_tag = "AI - Fore";
+	c_tag = "AI - North";
 	dir = 1
 	},
 /turf/simulated/floor/reinforced,
@@ -248,7 +248,7 @@
 "dBs" = (
 /obj/machinery/power/solar{
 	id_tag = "foreportsolar";
-	name = "Port Solar Array"
+	name = "West Solar Array"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -273,7 +273,7 @@
 	},
 /obj/machinery/power/solar{
 	id_tag = "foreportsolar";
-	name = "Port Solar Array"
+	name = "West Solar Array"
 	},
 /turf/simulated/floor{
 	icon_state = "solarpanel"
@@ -359,7 +359,7 @@
 	},
 /obj/machinery/power/solar{
 	id_tag = "forestarboardsolar";
-	name = "Starboard Solar Array"
+	name = "East Solar Array"
 	},
 /turf/simulated/floor{
 	icon_state = "solarpanel"
@@ -381,7 +381,7 @@
 	},
 /obj/machinery/power/solar{
 	id_tag = "forestarboardsolar";
-	name = "Starboard Solar Array"
+	name = "East Solar Array"
 	},
 /turf/simulated/floor{
 	icon_state = "solarpanel"
@@ -393,7 +393,7 @@
 	},
 /obj/machinery/power/solar{
 	id_tag = "foreportsolar";
-	name = "Port Solar Array"
+	name = "West Solar Array"
 	},
 /turf/simulated/floor{
 	icon_state = "solarpanel"
@@ -452,7 +452,7 @@
 /area/solar/forestarboardsolar)
 "dBP" = (
 /obj/machinery/camera/network/command{
-	c_tag = "AI - Port 1";
+	c_tag = "AI - West 1";
 	dir = 8
 	},
 /turf/simulated/floor/reinforced,
@@ -597,7 +597,7 @@
 /area/ai)
 "dCb" = (
 /obj/machinery/camera/network/command{
-	c_tag = "AI - Starboard";
+	c_tag = "AI - East";
 	dir = 4
 	},
 /turf/simulated/floor/reinforced,
@@ -775,7 +775,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Fore Port"
+	c_tag = "ENG - Solar Northwest"
 	},
 /obj/item/stack/cable_coil/yellow,
 /turf/simulated/floor/plating,
@@ -916,7 +916,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Fore Starboard"
+	c_tag = "ENG - Solar Northeast"
 	},
 /obj/item/stack/cable_coil/yellow,
 /obj/item/stack/cable_coil/yellow,
@@ -1090,7 +1090,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/engineering{
-	name = "Fore Port Solar Access"
+	name = "Northwest Solar Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/foreportsolar)
@@ -1249,7 +1249,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/engineering{
-	name = "Fore Starboard Solar Access"
+	name = "Northeast Solar Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/forestarboardsolar)
@@ -1448,7 +1448,7 @@
 "dDY" = (
 /obj/structure/cable,
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - Fore Port";
+	RCon_tag = "Solar - Northwest";
 	input_attempt = 1;
 	input_level = 150000;
 	output_level = 100000
@@ -1464,7 +1464,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Fore Port Access";
+	c_tag = "ENG - Solar Northwest Access";
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -1521,7 +1521,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Fore Starboard Access";
+	c_tag = "ENG - Solar Northeast Access";
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -1529,7 +1529,7 @@
 "dEg" = (
 /obj/structure/cable,
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - Fore Starboard";
+	RCon_tag = "Solar - Northeast";
 	input_attempt = 1;
 	input_level = 150000;
 	output_level = 100000
@@ -1747,7 +1747,7 @@
 /area/maintenance/thirddeck/foreport)
 "dEK" = (
 /obj/machinery/camera/network/command{
-	c_tag = "AI - Port 2";
+	c_tag = "AI - West 2";
 	dir = 8
 	},
 /turf/simulated/floor/reinforced,
@@ -2253,7 +2253,7 @@
 /obj/machinery/power/solar_control{
 	dir = 4;
 	id_tag = "foreportsolar";
-	name = "Fore Port Solar Control"
+	name = "Northwest Solar Control"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/foreportsolar)
@@ -2418,7 +2418,7 @@
 /obj/machinery/power/solar_control{
 	dir = 8;
 	id_tag = "forestarboardsolar";
-	name = "Fore Starboard Solar Control"
+	name = "Northeast Solar Control"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/forestarboardsolar)
@@ -3016,7 +3016,7 @@
 /area/hallway/primary/thirddeck/central)
 "dHF" = (
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Central Fore";
+	c_tag = "Second Floor - Central North";
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor,
@@ -3124,25 +3124,25 @@
 /area/maintenance/thirddeck/forestarboard)
 "dHQ" = (
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dHR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dHS" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dHT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dHU" = (
 /obj/machinery/firealarm{
 	pixel_y = 24
@@ -3154,7 +3154,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dHV" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -3170,20 +3170,20 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dHW" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dHX" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dHY" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dHZ" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced/polarized{
@@ -3271,15 +3271,15 @@
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dIn" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dIo" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dIp" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -3295,7 +3295,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dIq" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -3310,22 +3310,22 @@
 	dir = 4
 	},
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dIs" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dIt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
 	},
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dIu" = (
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dIv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -3334,7 +3334,7 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIw" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "d3_port_outer";
@@ -3342,7 +3342,7 @@
 	name = "External Airlock Access"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIx" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -3356,7 +3356,7 @@
 	pixel_y = 25
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIy" = (
 /obj/structure/sign/warning/airlock{
 	pixel_y = 32
@@ -3369,7 +3369,7 @@
 	id_tag = "d3_port_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIz" = (
 /obj/machinery/door/airlock/external/glass{
 	id_tag = "d3_port_inner";
@@ -3377,7 +3377,7 @@
 	name = "Internal Airlock Access"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIA" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -3389,7 +3389,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIB" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -3397,7 +3397,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -3405,14 +3405,14 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dID" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass{
 	name = "Central Access"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIE" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
@@ -3421,7 +3421,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIF" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -3430,7 +3430,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIG" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -3447,7 +3447,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIH" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -3456,7 +3456,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dII" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -3470,13 +3470,13 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIJ" = (
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Port Hallway One"
+	c_tag = "Second Floor - West Hallway One"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIK" = (
 /obj/machinery/firealarm{
 	pixel_y = 24
@@ -3486,7 +3486,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIM" = (
 /obj/structure/sign/warning/high_voltage{
 	pixel_y = 32
@@ -3498,7 +3498,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3508,7 +3508,7 @@
 	name = "Central Access"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dIP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3587,7 +3587,7 @@
 	name = "Central Access"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dIX" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
@@ -3596,7 +3596,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dIY" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -3610,7 +3610,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dIZ" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -3619,7 +3619,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJa" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -3631,10 +3631,10 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJb" = (
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Starboard Hallway One"
+	c_tag = "Second Floor - East Hallway One"
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -3643,7 +3643,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJc" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -3653,7 +3653,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJd" = (
 /obj/machinery/light{
 	dir = 1
@@ -3665,7 +3665,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJe" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -3674,14 +3674,14 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJf" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -3691,7 +3691,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJh" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -3699,7 +3699,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJi" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -3711,7 +3711,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJj" = (
 /obj/machinery/door/airlock/external/glass{
 	id_tag = "d3_starboard_inner";
@@ -3719,7 +3719,7 @@
 	name = "Internal Airlock Access"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJk" = (
 /obj/structure/sign/warning/airlock{
 	pixel_y = 32
@@ -3732,7 +3732,7 @@
 	id_tag = "d3_starboard_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJl" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -3746,7 +3746,7 @@
 	pixel_y = 25
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJm" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "d3_starboard_outer";
@@ -3754,7 +3754,7 @@
 	name = "External Airlock Access"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJn" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -3763,7 +3763,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJo" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -3775,7 +3775,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJp" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -3792,7 +3792,7 @@
 	id_tag = "d3_port_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJq" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -3802,7 +3802,7 @@
 	},
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -3811,7 +3811,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJs" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -3822,7 +3822,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJt" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3834,11 +3834,11 @@
 	dir = 5
 	},
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Port Hallway Two";
+	c_tag = "Second Floor - West Hallway Two";
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJu" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3852,7 +3852,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJv" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3865,7 +3865,7 @@
 	},
 /obj/structure/flora/pottedplant/minitree,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJw" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3877,7 +3877,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJx" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3892,7 +3892,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJy" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3904,7 +3904,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJz" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -3918,7 +3918,7 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJA" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3930,7 +3930,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJB" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3940,7 +3940,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJD" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3955,7 +3955,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJF" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3969,7 +3969,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dJG" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -4036,7 +4036,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJM" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -4051,7 +4051,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJN" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -4065,7 +4065,7 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJO" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -4077,7 +4077,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJP" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -4089,7 +4089,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJQ" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -4099,7 +4099,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJR" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -4114,7 +4114,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJS" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -4127,7 +4127,7 @@
 	},
 /obj/structure/flora/pottedplant/minitree,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJT" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -4139,11 +4139,11 @@
 	dir = 9
 	},
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Starboard Hallway Two";
+	c_tag = "Second Floor - East Hallway Two";
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJU" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -4154,7 +4154,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -4163,7 +4163,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJW" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -4173,7 +4173,7 @@
 	id_tag = "d3_starboard_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJX" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -4190,7 +4190,7 @@
 	tag_interior_door = "d3_starboard_inner"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJY" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -4202,24 +4202,24 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dJZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKa" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKb" = (
 /obj/structure/sign/deck/third,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -4232,7 +4232,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKd" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -4243,25 +4243,25 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKe" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKf" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/blue/bordercorner,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKg" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKh" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -4273,7 +4273,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKi" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -4287,7 +4287,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKj" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -4296,7 +4296,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKk" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -4309,7 +4309,7 @@
 	pixel_y = -21
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKl" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -4383,7 +4383,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dKq" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/blue/bordercorner,
@@ -4392,7 +4392,7 @@
 	pixel_y = -21
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dKr" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -4404,7 +4404,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dKs" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -4413,12 +4413,12 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dKt" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/blue/bordercorner,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dKu" = (
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -4428,7 +4428,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dKv" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -4440,7 +4440,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/monotile,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dKw" = (
 /obj/machinery/firealarm{
 	pixel_y = 24
@@ -4450,24 +4450,24 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dKx" = (
 /obj/structure/sign/deck/third,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dKy" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dKz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dKA" = (
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod7/station)
@@ -4479,7 +4479,7 @@
 /area/shuttle/escape_pod7/station)
 "dKD" = (
 /turf/simulated/wall,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKE" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -4488,14 +4488,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKF" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKG" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -4504,7 +4504,7 @@
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/white/bordercorner,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dKH" = (
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/heads/sc/restroom)
@@ -4559,7 +4559,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Central Port";
+	c_tag = "Second Floor - Central West";
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -4575,7 +4575,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Central Starboard";
+	c_tag = "Second Floor - Central East";
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -4646,17 +4646,17 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dLc" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dLd" = (
 /turf/simulated/wall,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dLe" = (
 /obj/structure/shuttle/engine/propulsion/burst{
 	dir = 8
@@ -4729,7 +4729,7 @@
 	name = "Escape Pod 7"
 	},
 /turf/simulated/floor,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dLn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -4742,7 +4742,7 @@
 	tag_door = "escape_pod_7_berth_hatch"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dLo" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -4751,7 +4751,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dLp" = (
 /obj/machinery/recharge_station,
 /obj/machinery/light/small{
@@ -4963,7 +4963,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dLK" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -4976,7 +4976,7 @@
 	tag_door = "escape_pod_8_berth_hatch"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dLL" = (
 /obj/machinery/door/airlock/external/glass{
 	id_tag = "escape_pod_8_berth_hatch";
@@ -4984,7 +4984,7 @@
 	name = "Escape Pod 8"
 	},
 /turf/simulated/floor,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dLM" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "escape_pod_8_hatch";
@@ -5045,13 +5045,13 @@
 	dir = 8
 	},
 /turf/simulated/wall,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dLS" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dLT" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -5064,7 +5064,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dLU" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/borderfloor{
@@ -5074,7 +5074,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "dLV" = (
 /obj/machinery/status_display,
 /turf/simulated/wall/r_wall,
@@ -5295,7 +5295,7 @@
 "dMs" = (
 /obj/machinery/status_display,
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dMt" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/borderfloor{
@@ -5305,7 +5305,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dMu" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -5319,19 +5319,19 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dMv" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dMw" = (
 /obj/structure/sign/warning/pods{
 	dir = 4
 	},
 /turf/simulated/wall,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dMx" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/thirddeck/aftport)
@@ -5648,7 +5648,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Central Aft";
+	c_tag = "Second Floor - Central South";
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -6551,7 +6551,7 @@
 /area/hallway/primary/thirddeck/central)
 "dPk" = (
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Stairwell";
+	c_tag = "Second Floor - Stairwell";
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -6809,7 +6809,7 @@
 	},
 /obj/machinery/power/solar{
 	id_tag = "aftportsolar";
-	name = "Port Solar Array"
+	name = "West Solar Array"
 	},
 /turf/simulated/floor{
 	icon_state = "solarpanel"
@@ -6831,7 +6831,7 @@
 	},
 /obj/machinery/power/solar{
 	id_tag = "aftportsolar";
-	name = "Port Solar Array"
+	name = "West Solar Array"
 	},
 /turf/simulated/floor{
 	icon_state = "solarpanel"
@@ -6911,7 +6911,7 @@
 	pixel_y = 21
 	},
 /obj/machinery/camera/network/command{
-	c_tag = "COM - Bridge Port";
+	c_tag = "COM - Bridge West";
 	dir = 6
 	},
 /obj/machinery/light{
@@ -7017,7 +7017,7 @@
 	pixel_y = 21
 	},
 /obj/machinery/camera/network/command{
-	c_tag = "COM - Bridge Starboard"
+	c_tag = "COM - Bridge East"
 	},
 /obj/machinery/light{
 	dir = 1
@@ -7084,9 +7084,9 @@
 	name = "Colony Director"
 	},
 /obj/machinery/button/alternate/door{
-	desc = "A remote control switch for the Starboard Bridge Doors.";
+	desc = "A remote control switch for the East Bridge Doors.";
 	id_tag = "sbridgedoor";
-	name = "Starboard Bridge Door Control";
+	name = "East Bridge Door Control";
 	pixel_x = 30;
 	pixel_y = -6
 	},
@@ -7125,7 +7125,7 @@
 	},
 /obj/machinery/power/solar{
 	id_tag = "aftstarboardsolar";
-	name = "Starboard Solar Array"
+	name = "East Solar Array"
 	},
 /turf/simulated/floor{
 	icon_state = "solarpanel"
@@ -7147,7 +7147,7 @@
 	},
 /obj/machinery/power/solar{
 	id_tag = "aftstarboardsolar";
-	name = "Starboard Solar Array"
+	name = "East Solar Array"
 	},
 /turf/simulated/floor{
 	icon_state = "solarpanel"
@@ -8152,7 +8152,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - Aft Port";
+	RCon_tag = "Solar - Southwest";
 	input_attempt = 1;
 	input_level = 150000;
 	output_level = 100000
@@ -8171,7 +8171,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Aft Port Access";
+	c_tag = "ENG - Solar Southwest Access";
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -8500,7 +8500,7 @@
 	pixel_x = 32
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Aft Starboard Access";
+	c_tag = "ENG - Solar Southeast Access";
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -8513,7 +8513,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - Aft Starboard";
+	RCon_tag = "Solar - Southeast";
 	input_attempt = 1;
 	input_level = 150000;
 	output_level = 100000
@@ -8744,7 +8744,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/engineering{
-	name = "Aft Port Solar Access"
+	name = "Southwest Solar Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftportsolar)
@@ -9034,7 +9034,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/engineering{
-	name = "Aft Starboard Solar Access"
+	name = "Southeast Solar Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftstarboardsolar)
@@ -9206,7 +9206,7 @@
 /area/bridge)
 "dUl" = (
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Aft Port";
+	c_tag = "ENG - Solar Southwest";
 	dir = 1
 	},
 /obj/machinery/light/small,
@@ -9309,7 +9309,7 @@
 "dUy" = (
 /obj/machinery/light/small,
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Aft Starboard";
+	c_tag = "ENG - Solar Southeast";
 	dir = 1
 	},
 /turf/simulated/floor/plating,
@@ -9499,7 +9499,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/starboard)
+/area/hallway/primary/thirddeck/east)
 "dVB" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/holomap{
@@ -9513,7 +9513,7 @@
 /obj/machinery/power/solar_control{
 	dir = 4;
 	id_tag = "aftportsolar";
-	name = "Aft Port Solar Control"
+	name = "Southwest Solar Control"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftportsolar)
@@ -9522,7 +9522,7 @@
 /obj/machinery/power/solar_control{
 	dir = 8;
 	id_tag = "aftstarboardsolar";
-	name = "Aft Starboard Solar Control"
+	name = "Southeast Solar Control"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftstarboardsolar)
@@ -9709,7 +9709,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "edK" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -9720,7 +9720,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "edL" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -9733,7 +9733,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "edM" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -9746,7 +9746,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
+/area/hallway/primary/thirddeck/west)
 "ioU" = (
 /obj/structure/railing{
 	dir = 4
