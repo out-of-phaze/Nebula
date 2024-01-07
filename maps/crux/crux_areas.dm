@@ -317,9 +317,12 @@
 /area/storage/emergency_storage/firstdeck/fs_emergency
 	name = "Ground Floor Northeast Emergency Storage"
 
-/area/ai_monitored/storage/eva/pilot
-	name = "Pilot EVA Storage"
+/area/ai_monitored/eva
+	name = "EVA Storage"
 	icon_state = "eva"
+
+/area/ai_monitored/eva/pilot
+	name = "Pilot EVA Storage"
 
 /area/tcomm/
 	icon_state = "tcomsatcham"
@@ -545,9 +548,12 @@
 	name = "\improper Research - Toxins Launch Room"
 	icon_state = "toxtest"
 
-/area/rnd/research/firstdeck/hallway
-	name = "\improper Research - Ground Floor Hallway"
+/area/research
+	name = "\improper Research"
 	icon_state = "research"
+
+/area/research/hallway
+	name = "\improper Research - Ground Floor Hallway"
 
 /area/rnd/xenobiology
 	name = "\improper Xenobiology"
@@ -976,7 +982,7 @@
 /area/engineering/engine_smes
 	name = "\improper SMES Chamber"
 
-/area/ai_monitored/storage/emergency/eva
+/area/ai_monitored/emergency/eva
 	name = "\improper EVA Storage"
 
 /area/maintenance/medbay_fore
