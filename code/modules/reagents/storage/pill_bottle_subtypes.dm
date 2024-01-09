@@ -24,7 +24,7 @@
 
 /obj/item/storage/pill_bottle/antitoxins
 	labeled_name = "antitoxins"
-	desc = "Contains pills used to treat toxic substances in the blood."
+	desc = "Contains pills used to treat toxic substances."
 	wrapper_color = COLOR_GREEN
 
 /obj/item/storage/pill_bottle/antitoxins/WillContain()
