@@ -1,0 +1,5 @@
+#ifndef MODPACK_CRUX
+#define MODPACK_CRUX
+#include "datum/languages.dm"
+#include "_crux.dm"
+#endif
