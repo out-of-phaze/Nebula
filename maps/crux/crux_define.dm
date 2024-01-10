@@ -1,14 +1,19 @@
 /datum/map/crux
-	name = "crux"
-	full_name = "NSS Southern Cross"
-	path = "crux"
-	station_name  = "NLS Southern Cross"
-	station_short = "Southern Cross"
-	dock_name     = "NCS Northern Star" // Now we're the centcom!
-	boss_name     = "Central Command"
-	boss_short    = "Centcom"
-	company_name  = "NanoTrasen"
-	company_short = "NT"
+
+	name          = "crux"
+	full_name     = "Eleostura"
+	path          = "crux"
+
+	station_name  = "Port Eleostura"
+	station_short = "Port Eleostura"
+
+	dock_name     = "Eleostura Spacedock"
+
+	boss_name     = "Novika Colony Administration"
+	boss_short    = "NCA"
+
+	company_name  = "Eleostura Civil Authority"
+	company_short = "ECA"
 
 	lobby_screens = list('maps/crux/polaris.png')
 
@@ -18,12 +23,13 @@
 		/decl/spawnpoint/cyborg
 	)
 
-	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the station at docks one and two. It will depart in approximately %ETD%."
-	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
-	shuttle_called_message = "A crew transfer to %dock_name% has been scheduled. The shuttle has been called. Those leaving should proceed to docks one and two in approximately %ETA%."
-	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
-	emergency_shuttle_docked_message = "The Emergency Shuttle has docked with the station at docks one and two. You have approximately %ETD% to board the Emergency Shuttle."
-	emergency_shuttle_leaving_dock = "The Emergency Shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
+	shuttle_docked_message           = "The scheduled shuttle to the %dock_name% has landed at docks one and two. It will depart in approximately %ETD%."
+	shuttle_leaving_dock             = "The scheduled shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
+	shuttle_called_message           = "A public shuttle to %dock_name% has been scheduled. Those leaving should proceed to docks one and two in approximately %ETA%."
+	shuttle_recall_message           = "The scheduled shuttle has been cancelled."
+
+	emergency_shuttle_docked_message = "The emergency shuttle has landed at docks one and two. You have approximately %ETD% to board the Emergency Shuttle."
+	emergency_shuttle_leaving_dock   = "The emergency shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
 	emergency_shuttle_called_message = "An emergency evacuation shuttle has been called. It will arrive at docks one and two in approximately %ETA%."
 	emergency_shuttle_recall_message = "The emergency shuttle has been recalled."
 
@@ -44,7 +50,7 @@
 	)
 
 /datum/level_data/crux
-	name = "Southern Cross - Ground Floor"
+	name = "Port Eleostura - Ground Floor"
 	use_global_exterior_ambience = FALSE
 	ambient_light_level = 0.7
 	ambient_light_color = "#8497ec"
@@ -63,20 +69,20 @@
 	)
 
 /obj/abstract/level_data_spawner/crux_ground_floor
-	name = "Southern Cross - Ground Floor"
+	name = "Port Eleostura - Ground Floor"
 	level_data_type = /datum/level_data/crux
 
 /datum/level_data/crux/level_one
-	name = "Southern Cross - Level One"
+	name = "Port Eleostura - Level One"
 
 /obj/abstract/level_data_spawner/crux_level_one
-	name = "Southern Cross - Level One"
+	name = "Port Eleostura - Level One"
 	level_data_type = /datum/level_data/crux/level_one
 
 /datum/level_data/crux/level_two
-	name = "Southern Cross - Level Two"
+	name = "Port Eleostura - Level Two"
 /obj/abstract/level_data_spawner/crux_level_two
-	name = "Southern Cross - Level Two"
+	name = "Port Eleostura - Level Two"
 	level_data_type = /datum/level_data/crux/level_two
 
 /obj/abstract/landmark/map_load_mark/engine_loader // todo

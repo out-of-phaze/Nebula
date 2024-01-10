@@ -1,5 +1,7 @@
 #ifndef MODPACK_CRUX
 #define MODPACK_CRUX
+#include "datum/cultures.dm"
 #include "datum/languages.dm"
+#include "datum/species.dm"
 #include "_crux.dm"
 #endif

@@ -1,4 +1,3 @@
-
 /decl/language/human/common
 	name = "Intersolar"
 	desc = "Descending from many Old Earth languages, as well as constructed languages like Lingwa de planeta, Intersolar \

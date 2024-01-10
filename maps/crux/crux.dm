@@ -48,6 +48,6 @@
 
 #elif !defined(MAP_OVERRIDE)
 
-	#warn A map has already been included, ignoring Southern Cross
+	#warn A map has already been included, ignoring Eleostura
 
 #endif

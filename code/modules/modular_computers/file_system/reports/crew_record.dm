@@ -255,8 +255,8 @@ FIELD_SHORT("Fingerprint", fingerprint, access_security, access_security, TRUE, 
 
 // EMPLOYMENT RECORDS
 FIELD_LONG("Employment Record", employment_record, access_bridge, access_bridge, TRUE)
-FIELD_SHORT("Home System", homeSystem, access_bridge, access_change_ids, FALSE, TRUE)
-FIELD_SHORT("Faction", faction, access_bridge, access_bridge, FALSE, TRUE)
+FIELD_SHORT("Residence", homeSystem, access_bridge, access_change_ids, FALSE, TRUE)
+FIELD_SHORT("Association", faction, access_bridge, access_bridge, FALSE, TRUE)
 FIELD_LONG("Qualifications", skillset, access_bridge, access_bridge, TRUE)
 
 // ANTAG RECORDS
