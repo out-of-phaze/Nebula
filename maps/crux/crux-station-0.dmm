@@ -2723,11 +2723,11 @@
 /area/hangar/three)
 "agt" = (
 /obj/machinery/button/alternate/door{
-	state = 1;
 	dir = 8;
 	id_tag = "expshuttle1_door_cargo";
 	name = "Rear Hatch Control";
-	pixel_x = 26
+	pixel_x = 26;
+	state = 1
 	},
 /turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle_start)
@@ -11960,11 +11960,11 @@
 	locked = 1
 	},
 /obj/machinery/button/alternate/door{
-	state = 1;
 	dir = 4;
 	id_tag = "expshuttle1_door_cargo";
 	name = "Rear Hatch Control";
-	pixel_x = -26
+	pixel_x = -26;
+	state = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -14896,12 +14896,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/tcomm/computer)
 "aGA" = (
-/obj/structure/shuttle/engine/propulsion/burst{
-	dir = 4
-	},
-/turf/simulated/shuttle/wall,
-/turf/simulated/floor/shuttle/plating,
-/area/shuttle/escape_pod3/station)
+/obj/structure/table,
+/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/south)
 "aGB" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -14911,13 +14909,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/two)
-"aGC" = (
-/obj/structure/shuttle/engine/propulsion/burst{
-	dir = 8
-	},
-/turf/simulated/shuttle/wall,
-/turf/simulated/floor/shuttle/plating,
-/area/shuttle/escape_pod5/station)
 "aGD" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -15210,12 +15201,11 @@
 /turf/simulated/floor,
 /area/maintenance/firstdeck/aftstarboard)
 "aHj" = (
-/obj/structure/shuttle/engine/propulsion/burst{
-	dir = 4
-	},
-/turf/simulated/shuttle/wall,
-/turf/simulated/floor/shuttle/plating,
-/area/shuttle/escape_pod4/station)
+/obj/structure/table,
+/obj/machinery/recharger,
+/turf/space,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/south)
 "aHk" = (
 /turf/simulated/shuttle/wall,
 /area/shuttle/shuttle_start_2)
@@ -15511,12 +15501,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/tcomm/entrance)
 "aHS" = (
-/obj/structure/shuttle/engine/propulsion/burst{
-	dir = 8
-	},
-/turf/simulated/shuttle/wall,
-/turf/simulated/floor/shuttle/plating,
-/area/shuttle/escape_pod6/station)
+/turf/space,
+/turf/simulated/floor,
+/area/hallway/primary/firstdeck/south)
 "aHT" = (
 /obj/machinery/teleport/hub,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -18388,11 +18375,11 @@
 /area/hangar/two)
 "aOl" = (
 /obj/machinery/button/alternate/door{
-	state = 1;
 	dir = 4;
 	id_tag = "expshuttle2_door_cargo";
 	name = "Rear Hatch Control";
-	pixel_x = -26
+	pixel_x = -26;
+	state = 1
 	},
 /turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle_start_2)
@@ -19250,8 +19237,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/sensor{
-	name = "Powernet Sensor - Auxiliary Subgrid";
-	id_tag = "Auxiliary Subgrid"
+	id_tag = "Auxiliary Subgrid";
+	name = "Powernet Sensor - Auxiliary Subgrid"
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techmaint,
@@ -19995,33 +19982,23 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/south)
 "aRv" = (
-/obj/structure/sign/warning/pods{
-	dir = 1
-	},
-/turf/simulated/wall/r_wall,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/wall,
+/area/hallway/primary/firstdeck/south)
 "aRw" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass{
-	name = "Escape Pod"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/machinery/door/airlock/double/glass,
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
+/area/hallway/primary/firstdeck/south)
 "aRx" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass{
-	name = "Escape Pod"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
-"aRy" = (
-/turf/simulated/wall/r_wall,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
+/area/hallway/primary/firstdeck/south)
 "aRz" = (
 /turf/simulated/wall,
 /area/storage/emergency_storage/firstdeck/aft_emergency)
@@ -20056,41 +20033,33 @@
 "aRD" = (
 /turf/simulated/wall,
 /area/security/checkpoint3)
-"aRE" = (
-/turf/simulated/wall/r_wall,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "aRF" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass{
-	name = "Escape Pod"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/double/glass,
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
+/area/hallway/primary/firstdeck/south)
 "aRG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass{
-	name = "Escape Pod"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
+/area/hallway/primary/firstdeck/south)
 "aRH" = (
-/obj/structure/sign/warning/pods{
-	dir = 1
-	},
-/turf/simulated/wall/r_wall,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/hallway/primary/firstdeck/south)
 "aRI" = (
-/turf/simulated/floor,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/hallway/primary/firstdeck/south)
 "aRJ" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod3/station)
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating,
+/area/hallway/primary/firstdeck/south)
 "aRL" = (
 /obj/item/storage/box/lights/mixed,
 /obj/item/stack/cable_coil/random,
@@ -20100,39 +20069,19 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
 "aRM" = (
-/turf/simulated/wall,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
+/obj/item/stool,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/south)
 "aRN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
-	},
+/obj/structure/table,
+/obj/item/paicard,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
+/area/hallway/primary/firstdeck/south)
 "aRO" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
-	},
+/obj/item/stool,
+/turf/space,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
+/area/hallway/primary/firstdeck/south)
 "aRP" = (
 /obj/structure/closet/hydrant{
 	pixel_x = -32
@@ -20205,39 +20154,6 @@
 "aRX" = (
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora_isolation)
-"aRY" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aRZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/industrial/warning/corner,
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aSa" = (
-/turf/simulated/wall,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "aSb" = (
 /obj/machinery/computer/modular/preset/engineering{
 	dir = 8
@@ -20248,28 +20164,14 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/auxiliary_engineering)
-"aSd" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod5/station)
 "aSe" = (
-/turf/simulated/floor,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
+/obj/structure/table,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/south)
 "aSg" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/turf/simulated/floor/shuttle/plating,
-/area/shuttle/escape_pod3/station)
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/hallway/primary/firstdeck/south)
 "aSh" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -20281,73 +20183,36 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/xenobiology)
 "aSi" = (
-/obj/structure/bed/chair{
-	dir = 8
+/obj/structure/hand_cart{
+	dir = 4
 	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
-	},
-/obj/structure/emergency_dispenser{
-	pixel_y = -32
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod3/station)
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/south)
 "aSj" = (
 /turf/simulated/floor/shuttle,
 /area/shuttle/large_escape_pod2/station)
 "aSk" = (
-/obj/machinery/door/airlock/external{
-	id_tag = "escape_pod_3_hatch";
-	locked = 1;
-	name = "Escape Pod Hatch 3"
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod3/station)
+/obj/structure/table,
+/obj/machinery/cell_charger,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/south)
 "aSl" = (
-/obj/machinery/door/airlock/external/glass{
-	id_tag = "escape_pod_3_berth_hatch";
-	locked = 1;
-	name = "Escape Pod 3"
+/obj/machinery/vending/tool{
+	dir = 1
 	},
-/turf/simulated/floor,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/south)
 "aSm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1381;
-	id_tag = "escape_pod_3_berth";
-	pixel_x = -25;
-	pixel_y = 30;
-	tag_door = "escape_pod_3_berth_hatch"
+/obj/machinery/vending/assist{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/south)
 "aSn" = (
-/obj/machinery/ai_status_display{
-	pixel_x = 32
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/white/bordercorner2{
-	dir = 6
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/dark,
+/area/hallway/primary/firstdeck/auxdockaft)
 "aSo" = (
 /obj/structure/table,
 /obj/item/t_scanner,
@@ -20422,41 +20287,8 @@
 /area/security/checkpoint3)
 "aSw" = (
 /obj/machinery/ai_status_display,
-/turf/simulated/wall/r_wall,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aSx" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/white/bordercorner2{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aSy" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1381;
-	id_tag = "escape_pod_5_berth";
-	pixel_x = 25;
-	pixel_y = 30;
-	tag_door = "escape_pod_5_berth_hatch"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
+/turf/simulated/wall,
+/area/hallway/primary/firstdeck/south)
 "aSz" = (
 /obj/structure/sign/directions/bridge{
 	dir = 4;
@@ -20467,87 +20299,6 @@
 	},
 /turf/simulated/wall,
 /area/construction/firstdeck/construction4)
-"aSA" = (
-/obj/machinery/door/airlock/external{
-	id_tag = "escape_pod_5_hatch";
-	locked = 1;
-	name = "Escape Pod Hatch 5"
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod5/station)
-"aSC" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -21
-	},
-/obj/structure/emergency_dispenser{
-	pixel_y = 32
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod5/station)
-"aSD" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/status_display{
-	pixel_y = -32
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1381;
-	id_tag = "escape_pod_5";
-	pixel_y = 25;
-	tag_door = "escape_pod_5_hatch"
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod5/station)
-"aSE" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/turf/simulated/floor/shuttle/plating,
-/area/shuttle/escape_pod5/station)
-"aSF" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -27
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
-"aSG" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
 "aSH" = (
 /obj/machinery/light{
 	dir = 8
@@ -20658,66 +20409,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/checkpoint3)
-"aSP" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aSQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 25
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aSR" = (
-/obj/structure/sign/warning/caution,
-/turf/simulated/wall/r_wall,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
-"aSS" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/cable,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
-"aST" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 21
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
 "aSU" = (
 /obj/structure/flora/pottedplant/stoutbush,
 /obj/structure/extinguisher_cabinet{
@@ -20836,43 +20527,12 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/auxiliary_engineering)
-"aTh" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
+"aTm" = (
+/obj/structure/closet/crate{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -21
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aTi" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/structure/cable,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aTj" = (
-/obj/structure/sign/warning/caution,
-/turf/simulated/wall/r_wall,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aTm" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod4/station)
+/area/hallway/primary/firstdeck/south)
 "aTn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4
@@ -20883,33 +20543,12 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/auxiliary_engineering)
-"aTo" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
-/obj/machinery/hologram/holopad,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
 "aTp" = (
-/obj/machinery/camera/network/first_deck{
-	c_tag = "Ground Floor - Southwest Escape Pods";
+/obj/machinery/lapvend{
 	dir = 8
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
-"aTq" = (
-/obj/machinery/status_display,
-/turf/simulated/wall/r_wall,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
+/area/hallway/primary/firstdeck/south)
 "aTr" = (
 /obj/machinery/camera/network/first_deck{
 	c_tag = "Ground Floor - South Hallway Stairs";
@@ -20968,81 +20607,12 @@
 /area/security/checkpoint3)
 "aTA" = (
 /obj/machinery/status_display,
-/turf/simulated/wall/r_wall,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aTB" = (
-/obj/machinery/camera/network/first_deck{
-	c_tag = "Ground Floor - Southeast Escape Pods";
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aTC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/effect/floor_decal/industrial/warning/corner,
-/obj/machinery/hologram/holopad,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aTE" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod6/station)
+/turf/simulated/wall,
+/area/hallway/primary/firstdeck/south)
 "aTG" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/turf/simulated/floor/shuttle/plating,
-/area/shuttle/escape_pod4/station)
-"aTH" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/machinery/status_display{
-	pixel_y = 32
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1381;
-	id_tag = "escape_pod_4";
-	pixel_y = -25;
-	tag_door = "escape_pod_4_hatch"
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod4/station)
-"aTI" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
-	},
-/obj/structure/emergency_dispenser{
-	pixel_y = -32
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod4/station)
+/obj/structure/closet/crate,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/south)
 "aTJ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -21059,48 +20629,6 @@
 	},
 /turf/simulated/floor/shuttle/black,
 /area/shuttle/shuttle_start_2)
-"aTK" = (
-/obj/machinery/door/airlock/external{
-	id_tag = "escape_pod_4_hatch";
-	locked = 1;
-	name = "Escape Pod Hatch 4"
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod4/station)
-"aTL" = (
-/obj/machinery/door/airlock/external/glass{
-	id_tag = "escape_pod_4_berth_hatch";
-	locked = 1;
-	name = "Escape Pod 4"
-	},
-/turf/simulated/floor,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
-"aTM" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1381;
-	id_tag = "escape_pod_4_berth";
-	pixel_x = -25;
-	pixel_y = 30;
-	tag_door = "escape_pod_4_berth_hatch"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
-"aTN" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
 "aTO" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -21193,115 +20721,17 @@
 "aTW" = (
 /turf/simulated/floor/tiled/monotile,
 /area/security/checkpoint3)
-"aTY" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aTZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1381;
-	id_tag = "escape_pod_6_berth";
-	pixel_x = 25;
-	pixel_y = 30;
-	tag_door = "escape_pod_6_berth_hatch"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aUa" = (
-/obj/machinery/door/airlock/external/glass{
-	id_tag = "escape_pod_6_berth_hatch";
-	locked = 1;
-	name = "Escape Pod 6"
-	},
-/turf/simulated/floor,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aUb" = (
-/obj/machinery/door/airlock/external{
-	id_tag = "escape_pod_6_hatch";
-	locked = 1;
-	name = "Escape Pod Hatch 6"
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod6/station)
 "aUc" = (
 /turf/simulated/floor/reinforced,
 /area/quartermaster/storage)
-"aUd" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -21
-	},
-/obj/structure/emergency_dispenser{
-	pixel_y = 32
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod6/station)
-"aUe" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/status_display{
-	pixel_y = -32
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1381;
-	id_tag = "escape_pod_6";
-	pixel_y = 25;
-	tag_door = "escape_pod_6_hatch"
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod6/station)
-"aUf" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/turf/simulated/floor/shuttle/plating,
-/area/shuttle/escape_pod6/station)
-"aUg" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
 "aUh" = (
-/obj/structure/closet/emcloset,
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 4
-	},
+/obj/structure/table,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
 /turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
+/area/hallway/primary/firstdeck/south)
 "aUi" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -21337,9 +20767,7 @@
 /area/hallway/primary/firstdeck/auxdockaft)
 "aUm" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass{
-	name = "Auxiliary Dock"
-	},
+/obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aUn" = (
@@ -21391,35 +20819,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/checkpoint3)
-"aUs" = (
-/obj/structure/closet/emcloset,
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
-"aUt" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "aUu" = (
 /obj/structure/sign/warning/docking_area,
 /turf/simulated/wall/r_wall,
-/area/hallway/primary/firstdeck/auxdockaft)
+/area/hallway/primary/firstdeck/south)
 "aUv" = (
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/firstdeck/auxdockaft)
-"aUw" = (
-/obj/machinery/door/firedoor,
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor,
-/area/hallway/secondary/escape/firstdeck/ep_aftport)
 "aUx" = (
 /obj/structure/sign/deck/first,
 /turf/simulated/wall,
@@ -21476,63 +20882,14 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor,
 /area/hallway/primary/firstdeck/auxdockaft)
-"aUD" = (
-/obj/machinery/door/firedoor,
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "aUE" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
+/area/hallway/primary/firstdeck/south)
 "aUF" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aUG" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
-	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "d1aft_port_airlock";
-	pixel_y = 26;
-	tag_airpump = "d1aft_port_pump";
-	tag_chamber_sensor = "d1aft_port_sensor";
-	tag_exterior_door = "d1aft_port_outer";
-	tag_interior_door = "d1aft_port_inner"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = "d1aft_port_pump"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aUH" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
-	},
-/obj/machinery/airlock_sensor{
-	id_tag = "d1aft_port_sensor";
-	pixel_y = 25
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aUI" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aUJ" = (
 /obj/machinery/newscaster{
@@ -21767,19 +21124,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
-"aVa" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/blue/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
 "aVb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -21811,7 +21155,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVd" = (
-/obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -21820,150 +21163,24 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
-"aVe" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
-	},
-/obj/machinery/airlock_sensor{
-	id_tag = "ninja_shuttle_dock_sensor";
-	pixel_y = 25
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVf" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1331;
-	id_tag = "ninja_shuttle_dock_airlock";
-	pixel_y = 26;
-	tag_airpump = "ninja_shuttle_dock_pump";
-	tag_chamber_sensor = "ninja_shuttle_dock_sensor";
-	tag_exterior_door = "ninja_shuttle_dock_outer";
-	tag_interior_door = "ninja_shuttle_dock_inner"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = "ninja_shuttle_dock_pump"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVg" = (
-/obj/machinery/shield_diffuser,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/external{
-	id_tag = "d1aft_port_outer";
-	locked = 1;
-	name = "Dock External Airlock"
-	},
-/obj/machinery/button/access/exterior{
-	id_tag = "d1aft_port_airlock";
-	name = "exterior access button";
-	pixel_y = -26
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVh" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 10
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = "d1aft_port_pump"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVi" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 6
-	},
-/obj/machinery/light/small,
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVj" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/external/glass{
-	id_tag = "d1aft_port_inner";
-	locked = 1;
-	name = "Dock Internal Airlock"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVk" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/machinery/button/access/interior{
-	id_tag = "d1aft_port_airlock";
-	name = "interior access button";
-	pixel_x = -26;
-	pixel_y = 26
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVl" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
 "aVm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVn" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVo" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
-"aVp" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/button/access/shuttle/interior{
-	id_tag = "skipjack_shuttle_dock_airlock";
-	name = "interior access button";
-	pixel_x = 26;
-	pixel_y = -26
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
 "aVq" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -21973,34 +21190,22 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVs" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVt" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVu" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -22010,9 +21215,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVv" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -22020,25 +21222,13 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVw" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/button/access/exterior{
-	id_tag = "d1aft_starboard_airlock";
-	name = "exterior access button";
-	pixel_x = -26;
-	pixel_y = -26
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVx" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
@@ -22046,84 +21236,17 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVy" = (
-/obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
-"aVz" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/machinery/button/access/shuttle/interior{
-	id_tag = "ninja_shuttle_dock_airlock";
-	name = "interior access button";
-	pixel_x = 26;
-	pixel_y = 26
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVA" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/external/glass{
-	id_tag = "ninja_shuttle_dock_inner";
-	locked = 1;
-	name = "Dock Internal Airlock"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/firstdeck/auxdockaft)
 "aVB" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 10
-	},
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVC" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 6
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = "ninja_shuttle_dock_pump"
-	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVD" = (
-/obj/machinery/shield_diffuser,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/external/shuttle{
-	id_tag = "ninja_shuttle_dock_outer";
-	locked = 1;
-	name = "Dock External Airlock"
-	},
-/obj/machinery/button/access/shuttle/exterior{
-	id_tag = "ninja_shuttle_dock_airlock";
-	name = "exterior access button";
-	pixel_y = -28
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVF" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/wall/r_wall,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVG" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/external/glass{
-	id_tag = "skipjack_shuttle_dock_inner";
-	locked = 1;
-	name = "Dock Internal Airlock"
-	},
-/turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVH" = (
 /obj/structure/closet/emcloset,
@@ -22162,49 +21285,8 @@
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVM" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/external/glass{
-	id_tag = "d1aft_starboard_inner";
-	locked = 1;
-	name = "Dock Internal Airlock"
-	},
+/obj/machinery/door/airlock/double/glass,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVN" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVO" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = "skipjack_shuttle_dock_pump"
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVP" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = "skipjack_shuttle_dock_pump"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVQ" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
-	},
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor,
 /area/hallway/primary/firstdeck/auxdockaft)
 "aVR" = (
 /obj/structure/table/bench,
@@ -22236,50 +21318,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
-"aVU" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = "d1aft_port_pump"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVV" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = "d1aft_port_pump"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVW" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
-	},
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aVX" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 10
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = "skipjack_shuttle_dock_pump"
-	},
-/obj/machinery/airlock_sensor{
-	id_tag = "skipjack_shuttle_dock_sensor";
-	pixel_x = -28
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
 "aVY" = (
 /obj/machinery/computer/modular/preset/cardslot/command{
 	dir = 8
@@ -22292,95 +21330,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/checkpoint3)
-"aVZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9
-	},
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aWa" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 10
-	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "d1aft_starboard_airlock";
-	pixel_x = -26;
-	tag_airpump = "d1aft_starboard_pump";
-	tag_chamber_sensor = "d1aft_starboard_sensor";
-	tag_exterior_door = "d1aft_starboard_outer";
-	tag_interior_door = "d1aft_starboard_inner"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = "d1aft_port_pump"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aWb" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 6
-	},
-/obj/machinery/airlock_sensor{
-	id_tag = "d1aft_starboard_sensor";
-	pixel_x = 25
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = "d1aft_port_pump"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aWc" = (
-/obj/machinery/shield_diffuser,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/external/shuttle{
-	id_tag = "skipjack_shuttle_dock_outer";
-	locked = 1;
-	name = "Dock External Airlock"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aWd" = (
-/obj/machinery/shield_diffuser,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/external/shuttle{
-	id_tag = "skipjack_shuttle_dock_outer";
-	locked = 1;
-	name = "Dock External Airlock"
-	},
-/obj/machinery/button/access/shuttle/exterior{
-	id_tag = "skipjack_shuttle_dock_airlock";
-	name = "exterior access button";
-	pixel_x = 28
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aWe" = (
-/obj/machinery/shield_diffuser,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/external{
-	id_tag = "d1aft_starboard_outer";
-	locked = 1;
-	name = "Dock External Airlock"
-	},
-/obj/machinery/button/access/exterior{
-	id_tag = "d1aft_starboard_airlock";
-	name = "exterior access button";
-	pixel_x = -26
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/firstdeck/auxdockaft)
-"aWf" = (
-/obj/machinery/shield_diffuser,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/external{
-	id_tag = "d1aft_starboard_outer";
-	locked = 1;
-	name = "Dock External Airlock"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/primary/firstdeck/auxdockaft)
 "aZY" = (
 /turf/simulated/floor/tiled/dark,
 /area/research/hallway)
@@ -22447,11 +21396,11 @@
 /area/rnd/xenobiology/xenoflora)
 "bsk" = (
 /obj/machinery/button/alternate/door{
-	state = 1;
 	dir = 8;
 	id_tag = "expshuttle2_door_cargo";
 	name = "Rear Hatch Control";
-	pixel_x = 26
+	pixel_x = 26;
+	state = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -22478,25 +21427,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/checkpoint3)
-"bvb" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 6
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1331;
-	id_tag = "skipjack_shuttle_dock_airlock";
-	pixel_x = 28;
-	tag_airpump = "skipjack_shuttle_dock_pump";
-	tag_chamber_sensor = "skipjack_shuttle_dock_sensor";
-	tag_exterior_door = "skipjack_shuttle_dock_outer";
-	tag_interior_door = "skipjack_shuttle_dock_inner"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = "skipjack_shuttle_dock_pump"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockaft)
 "bws" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -22654,23 +21584,8 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "bEo" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/machinery/status_display{
-	pixel_y = 32
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1381;
-	id_tag = "escape_pod_3";
-	pixel_y = -25;
-	tag_door = "escape_pod_3_hatch"
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod3/station)
+/turf/simulated/floor/plating,
+/area/hallway/primary/firstdeck/south)
 "bFF" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/structure/disposalpipe/segment{
@@ -23076,14 +21991,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/research/hallway)
-"dgE" = (
-/obj/machinery/door/airlock/external/glass{
-	id_tag = "escape_pod_5_berth_hatch";
-	locked = 1;
-	name = "Escape Pod 5"
-	},
-/turf/simulated/floor,
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard)
 "djy" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/machinery/light,
@@ -23118,26 +22025,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/rnd/xenobiology/xenoflora)
-"dHc" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
-	pixel_y = -30
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod3/station)
-"dLk" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
-	pixel_y = 30
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod5/station)
 "dOZ" = (
 /obj/machinery/botany/extractor,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
@@ -23146,16 +22033,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/rnd/xenobiology/xenoflora)
-"dPJ" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
-	pixel_y = -30
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod4/station)
 "dVs" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -24690,15 +23567,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology)
 "dYP" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
-	pixel_y = 30
-	},
-/turf/simulated/floor/shuttle,
-/area/shuttle/escape_pod6/station)
+/turf/simulated/floor,
+/area/hallway/primary/firstdeck/south)
 "dYQ" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
@@ -54823,16 +53693,16 @@ aQZ
 byS
 azg
 aMf
-aRI
-aRI
-aRI
-aSR
-aRI
+aLO
+aLO
+aLO
+aLO
+aLO
 aRI
 aRI
 aUu
 aUF
-aVg
+aUF
 aUv
 lSa
 lSa
@@ -55079,17 +53949,17 @@ bpy
 bwT
 byQ
 azg
-aMf
+ayb
 aRJ
 aSg
-aRJ
-aRy
+bEo
+aRS
 aTm
 aTG
-aTm
-aUv
-aUG
-aVh
+aUh
+aRS
+aVC
+aVC
 aUC
 ndk
 lSa
@@ -55336,17 +54206,17 @@ aMQ
 aMQ
 aQB
 ayb
-aMf
-aRJ
+ayb
+aRH
 bEo
-aRJ
-aRy
-aTm
-aTH
-aTm
-aUv
-aUH
-aVi
+bEo
+aRS
+aSi
+aTb
+aUh
+aRS
+aVC
+aVB
 aUC
 ndk
 ndk
@@ -55593,17 +54463,17 @@ aPN
 aNM
 aQC
 aRa
-aLO
-aRJ
-aSi
-aRJ
-aRy
-aTm
-aTI
-aTm
-aUv
-aUF
-aVj
+aRS
+aRS
+aRS
+bEo
+aRS
+aTb
+aTb
+aUh
+aRS
+aVC
+aVC
 aUv
 qZF
 ndk
@@ -55850,17 +54720,17 @@ aPU
 aNM
 aQD
 aRb
-aLO
-aRJ
-dHc
-aRJ
-aRy
-aTm
-dPJ
-aTm
-aUv
-aUI
-aVk
+aRv
+aRN
+aTb
+aTb
+aTb
+aTb
+aTb
+aSl
+aRS
+aVd
+aVC
 aUC
 qZF
 qZF
@@ -56107,17 +54977,17 @@ aPP
 aQn
 aQD
 aRb
-aLO
+aRv
 aGA
-aSk
-aGA
-aRy
+aTb
+aRO
+aUh
 aHj
-aTK
-aHj
-aUv
+aTb
+aSm
+aRS
 aUJ
-aVl
+aVC
 aUC
 qZF
 qZF
@@ -56364,15 +55234,15 @@ aPQ
 aNM
 aQE
 aRc
-aRv
+aRS
+aTb
+aTb
 aRM
-aSl
-aRM
-aRy
-aRM
-aTL
-aRM
-aRy
+aSe
+aSk
+aTb
+aUh
+aRS
 aUK
 aVm
 aUC
@@ -56622,20 +55492,20 @@ aNM
 aQF
 aRd
 aRw
-aRN
-aSm
-aSF
-aSS
-aTo
-aTM
-aUg
-aUw
+aTb
+aTb
+aTb
+aTb
+aTb
+aTb
+aUh
+aUE
 aUL
 aVn
-aVF
-aVN
-aVW
-aUu
+aUv
+qZF
+qZF
+qZF
 ndk
 ndk
 ndk
@@ -56879,20 +55749,20 @@ aQo
 aQG
 aRe
 aRx
-aRO
-aSn
-aSG
-aST
+aTb
+aTb
+aTb
+aTb
 aTp
-aTN
 aUh
-aUw
+aUh
+aUE
 aUM
 aVo
-aVG
-aVO
-aVX
-aWc
+aVM
+qZF
+qZF
+qZF
 ndk
 ndk
 ndk
@@ -57135,21 +56005,21 @@ aPT
 aNM
 aQH
 aRf
-aRy
-aRM
-aRM
-aRy
-aRy
-aTq
-aRy
-aRy
-aRM
+aLO
+aRS
+aRS
+aRS
+aRS
+aTA
+aRS
+aRS
+aRS
 aUN
-aVp
-aVG
-aVP
-bvb
-aWd
+aVw
+aSn
+qZF
+qZF
+qZF
 ndk
 ndk
 ndk
@@ -57403,10 +56273,10 @@ dnC
 aUx
 aUO
 aVq
-aVF
-aVQ
-aVZ
 aUv
+qZF
+qZF
+qZF
 ndk
 ndk
 ndk
@@ -58696,7 +57566,7 @@ qZF
 qZF
 ndk
 ndk
-rrg
+lSa
 lSa
 lSa
 lSa
@@ -59212,7 +58082,7 @@ ndk
 ndk
 lSa
 lSa
-rrg
+lSa
 lSa
 lSa
 lSa
@@ -60487,10 +59357,10 @@ aUr
 aUC
 aUY
 aVv
-aVF
-aVN
-aVW
 aUv
+qZF
+qZF
+qZF
 ndk
 ndk
 ndk
@@ -60733,21 +59603,21 @@ aLS
 aQu
 aQS
 aRq
-aRE
-aRE
+aRS
+aRS
 aSw
-aRE
-aRE
+aRS
+aRS
 aTA
-aRE
-aRE
-aRE
+aRS
+aRS
+aRS
 aUZ
 aVw
 aVM
-aVU
-aWa
-aWe
+qZF
+qZF
+qZF
 ndk
 ndk
 ndk
@@ -60991,20 +59861,20 @@ aQu
 aQK
 aRr
 aRF
-aRY
-aSx
-aSP
-aTh
-aTB
-aTY
-aUs
-aUD
+dYP
+dYP
+dYP
+dYP
+dYP
+dYP
+dYP
+aUE
 aUM
 aVx
-aVM
-aVV
-aWb
-aWf
+aSn
+qZF
+qZF
+qZF
 ndk
 ndk
 ndk
@@ -61248,20 +60118,20 @@ aQu
 aQT
 aRs
 aRG
-aRZ
-aSy
-aSQ
-aTi
-aTC
-aTZ
-aUt
+dYP
+dYP
+dYP
+dYP
+dYP
+dYP
+dYP
 aUE
-aVa
+aUL
 aVy
-aVF
-aVQ
-aVZ
-aUu
+aUv
+qZF
+qZF
+qZF
 ndk
 ndk
 ndk
@@ -61504,15 +60374,15 @@ aQf
 aQu
 aQU
 aRt
-aRH
-aSa
-dgE
-aSa
-aRE
-aSa
-aUa
-aSa
-aRE
+aRS
+dYP
+dYP
+dYP
+dYP
+dYP
+dYP
+dYP
+aRS
 aVb
 aVm
 aUC
@@ -61761,17 +60631,17 @@ aQg
 aQw
 aQV
 aRj
-aLO
-aGC
-aSA
-aGC
-aRE
+aRS
 aHS
-aUb
+dYP
 aHS
-aUv
+dYP
+aHS
+dYP
+aHS
+aRS
 aVc
-aVl
+aVC
 aUC
 qZF
 qZF
@@ -62018,17 +60888,17 @@ aQh
 aQu
 aQV
 aRj
-aLO
-aSd
-dLk
-aSd
-aRE
-aTE
+aRS
 dYP
-aTE
-aUv
+dYP
+dYP
+dYP
+dYP
+dYP
+dYP
+aRS
 aVd
-aVz
+aVC
 aUC
 qZF
 qZF
@@ -62275,17 +61145,17 @@ aQi
 aQu
 aQW
 aRu
-aLO
-aSd
-aSC
-aSd
-aRE
-aTE
-aUd
-aTE
-aUv
-aUF
-aVA
+aRS
+dYP
+dYP
+dYP
+dYP
+dYP
+dYP
+dYP
+aRS
+aVC
+aVC
 aUv
 qZF
 qZF
@@ -62533,15 +61403,15 @@ aLR
 aQX
 ayx
 aPI
-aSd
-aSD
-aSd
-aRE
-aTE
-aUe
-aTE
-aUv
-aVe
+dYP
+dYP
+dYP
+dYP
+dYP
+dYP
+dYP
+aRS
+aVC
 aVB
 aUC
 qZF
@@ -62790,15 +61660,15 @@ byk
 bzn
 azB
 aPI
-aSd
-aSE
-aSd
-aRE
-aTE
-aUf
-aTE
-aUv
-aVf
+dYP
+dYP
+dYP
+dYP
+dYP
+dYP
+dYP
+aRS
+aVC
 aVC
 aUC
 qZF
@@ -63047,16 +61917,16 @@ byl
 bzX
 azB
 aPI
-aSe
-aSe
-aSe
-aTj
-aSe
-aSe
-aSe
+aLO
+aLO
+aLO
+aLO
+aLO
+aLO
+aLO
 aUu
 aUF
-aVD
+aUF
 aUv
 qZF
 qZF
