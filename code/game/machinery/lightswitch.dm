@@ -7,7 +7,7 @@
 	icon = 'icons/obj/power.dmi'
 	icon_state = "light0"
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
-	anchored = 1.0
+	anchored = TRUE
 	idle_power_usage = 20
 	power_channel = LIGHT
 	required_interaction_dexterity = DEXTERITY_SIMPLE_MACHINES
@@ -24,7 +24,7 @@
 		/obj/item/stock_parts/power/apc
 	)
 	base_type = /obj/machinery/light_switch
-	directional_offset = "{'NORTH':{'y':-20}, 'SOUTH':{'y':25}, 'EAST':{'x':-24}, 'WEST':{'x':24}}"
+	directional_offset = @'{"NORTH":{"y":-20}, "SOUTH":{"y":25}, "EAST":{"x":-24}, "WEST":{"x":24}}'
 
 /obj/machinery/light_switch/on
 	on = TRUE

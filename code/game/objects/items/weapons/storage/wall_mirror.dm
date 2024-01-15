@@ -10,7 +10,7 @@
 	var/shattered = FALSE
 	var/list/ui_users
 	var/obj/item/storage/internal/mirror_storage/mirror_storage
-	directional_offset = "{'NORTH':{'y':-29}, 'SOUTH':{'y':29}, 'EAST':{'x':29}, 'WEST':{'x':-29}}"
+	directional_offset = @'{"NORTH":{"y":-29}, "SOUTH":{"y":29}, "EAST":{"x":29}, "WEST":{"x":-29}}'
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
 
 /obj/structure/mirror/shuttle_rotate(angle)
@@ -23,9 +23,8 @@
 /obj/structure/mirror/get_contained_external_atoms()
 	. = ..()
 	if(mirror_storage)
-		if(.) // don't use lazyremove to avoid list churn
-			. -= mirror_storage // abstract object, don't yoink it out
-		LAZYADD(., mirror_storage.contents) // do add these though, we're pretending this is a storage object
+		LAZYADD(., mirror_storage.get_contained_external_atoms()) // add these, we're pretending this is a storage object
+		LAZYREMOVE(., mirror_storage) // abstract object, don't yoink it out. do this second to avoid list churn
 
 /obj/item/storage/internal/mirror_storage
 	use_sound = 'sound/effects/closet_open.ogg'
@@ -49,8 +48,8 @@
 	clear_ui_users(ui_users)
 	. = ..()
 
-/obj/structure/mirror/handle_mouse_drop(atom/over, mob/user)
-	if(!(. = mirror_storage?.handle_storage_internal_mouse_drop(user, over)))
+/obj/structure/mirror/handle_mouse_drop(atom/over, mob/user, params)
+	if(!(. = mirror_storage?.handle_storage_internal_mouse_drop(user, over, params)))
 		flick("mirror_open",src)
 		return
 	if((. = ..()))
@@ -107,7 +106,7 @@
 	desc = "A SalonPro Nano-Mirror(TM) brand mirror! Now a portable version."
 	icon = 'icons/obj/items/mirror.dmi'
 	icon_state = "mirror"
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	matter = list(
 		/decl/material/solid/glass = MATTER_AMOUNT_SECONDARY,
 		/decl/material/solid/metal/aluminium = MATTER_AMOUNT_SECONDARY

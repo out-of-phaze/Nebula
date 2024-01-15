@@ -14,7 +14,7 @@
 	build_icon_state = "simple"
 	build_icon = 'icons/obj/pipe-item.dmi'
 	pipe_class = PIPE_CLASS_BINARY
-	atom_flags = ATOM_FLAG_CAN_BE_PAINTED | ATOM_FLAG_NO_REACT
+	atom_flags = ATOM_FLAG_CAN_BE_PAINTED | ATOM_FLAG_NO_CHEM_CHANGE
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
 
 	frame_type = /obj/item/pipe
@@ -37,12 +37,12 @@
 
 /obj/machinery/atmospherics/pipe/Initialize()
 	if(istype(get_turf(src), /turf/simulated/wall) || istype(get_turf(src), /turf/simulated/shuttle/wall) || istype(get_turf(src), /turf/unsimulated/wall))
-		level = 1
+		level = LEVEL_BELOW_PLATING
 	alpha = 255 // for mapping hidden pipes
 	. = ..()
 
 /obj/machinery/atmospherics/pipe/hides_under_flooring()
-	return level != 2
+	return level == LEVEL_BELOW_PLATING
 
 // Only simple pipes need this override because they handle diagonals weird.
 // We rotate the vertical and horizontal components separately.
@@ -88,7 +88,7 @@
 	qdel(parent)
 	..()
 	var/turf/T = loc
-	if(level == 1 && isturf(T) && !T.is_plating())
+	if(level == LEVEL_BELOW_PLATING && isturf(T) && !T.is_plating())
 		hide(1)
 
 /obj/machinery/atmospherics/pipe/return_air()
@@ -144,7 +144,7 @@
 /obj/machinery/atmospherics/pipe/cannot_transition_to(state_path, mob/user)
 	if(state_path == /decl/machine_construction/default/deconstructed)
 		var/turf/T = get_turf(src)
-		if (level==1 && isturf(T) && !T.is_plating())
+		if (level == LEVEL_BELOW_PLATING && isturf(T) && !T.is_plating())
 			return SPAN_WARNING("You must remove the plating first.")
 	return ..()
 
@@ -228,7 +228,7 @@
 	dir = SOUTH
 	initialize_directions = SOUTH|NORTH
 
-	level = 1
+	level = LEVEL_BELOW_PLATING
 
 	rotate_class = PIPE_ROTATE_TWODIR
 	connect_dir_type = SOUTH | NORTH // Overridden if dir is not a cardinal for bent pipes. For straight pipes this is correct.
@@ -279,7 +279,7 @@
 	try_leak()
 
 /obj/machinery/atmospherics/pipe/simple/visible
-	level = 2
+	level = LEVEL_ABOVE_PLATING
 
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers
 	name = "scrubbers pipe"
@@ -326,7 +326,7 @@
 	connect_types = CONNECT_TYPE_FUEL
 
 /obj/machinery/atmospherics/pipe/simple/hidden
-	level = 1
+	level = LEVEL_BELOW_PLATING
 	alpha = 128		//set for the benefit of mapping - this is reset to opaque when the pipe is spawned in game
 
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers
@@ -384,7 +384,7 @@
 	initialize_directions = EAST|NORTH|WEST
 
 	build_icon_state = "manifold"
-	level = 1
+	level = LEVEL_BELOW_PLATING
 
 	pipe_class = PIPE_CLASS_TRINARY
 	connect_dir_type = NORTH | EAST | WEST
@@ -411,7 +411,7 @@
 
 /obj/machinery/atmospherics/pipe/manifold/visible
 	icon_state = "map"
-	level = 2
+	level = LEVEL_ABOVE_PLATING
 
 /obj/machinery/atmospherics/pipe/manifold/visible/scrubbers
 	name="Scrubbers pipe manifold"
@@ -457,7 +457,7 @@
 
 /obj/machinery/atmospherics/pipe/manifold/hidden
 	icon_state = "map"
-	level = 1
+	level = LEVEL_BELOW_PLATING
 	alpha = 128		//set for the benefit of mapping - this is reset to opaque when the pipe is spawned in game
 
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers
@@ -513,7 +513,7 @@
 	initialize_directions = NORTH|SOUTH|EAST|WEST
 
 	build_icon_state = "manifold4w"
-	level = 1
+	level = LEVEL_BELOW_PLATING
 
 	pipe_class = PIPE_CLASS_QUATERNARY
 	rotate_class = PIPE_ROTATE_ONEDIR
@@ -541,7 +541,7 @@
 
 /obj/machinery/atmospherics/pipe/manifold4w/visible
 	icon_state = "map_4way"
-	level = 2
+	level = LEVEL_ABOVE_PLATING
 
 /obj/machinery/atmospherics/pipe/manifold4w/visible/scrubbers
 	name="4-way scrubbers pipe manifold"
@@ -584,7 +584,7 @@
 
 /obj/machinery/atmospherics/pipe/manifold4w/hidden
 	icon_state = "map_4way"
-	level = 1
+	level = LEVEL_BELOW_PLATING
 	alpha = 128		//set for the benefit of mapping - this is reset to opaque when the pipe is spawned in game
 
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers
@@ -631,7 +631,7 @@
 	desc = "An endcap for pipes."
 	icon = 'icons/atmos/pipes.dmi'
 	icon_state = "cap"
-	level = 2
+	level = LEVEL_ABOVE_PLATING
 	volume = 35
 
 	pipe_class = PIPE_CLASS_UNARY
@@ -644,7 +644,7 @@
 	color = pipe_color
 
 /obj/machinery/atmospherics/pipe/cap/visible
-	level = 2
+	level = LEVEL_ABOVE_PLATING
 	icon_state = "cap"
 
 /obj/machinery/atmospherics/pipe/cap/visible/scrubbers
@@ -670,7 +670,7 @@
 	connect_types = CONNECT_TYPE_FUEL
 
 /obj/machinery/atmospherics/pipe/cap/hidden
-	level = 1
+	level = LEVEL_BELOW_PLATING
 	icon_state = "cap"
 	alpha = 128
 

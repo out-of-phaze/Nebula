@@ -6,7 +6,7 @@
 	restricted_software = list(MECH_SOFTWARE_MEDICAL)
 	equipment_delay = 30 //don't spam it on people pls
 	active_power_use = 0 //Usage doesn't really require power. We don't want people stuck inside
-	origin_tech = "{'programming':2,'biotech':3}"
+	origin_tech = @'{"programming":2,"biotech":3}'
 	passive_power_use = 1.5 KILOWATTS
 	var/obj/machinery/sleeper/mounted/sleeper = null
 
@@ -48,8 +48,8 @@
 
 /obj/machinery/sleeper/mounted
 	name = "\improper mounted sleeper"
-	density = 0
-	anchored = 0
+	density = FALSE
+	anchored = FALSE
 	idle_power_usage = 0
 	active_power_usage = 0 //It'd be hard to handle, so for now all power is consumed by mech sleeper object
 	stasis_power = 0

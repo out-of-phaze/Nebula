@@ -148,7 +148,7 @@
 /obj/structure/shuttle_rotate(angle)
 	. = ..()
 	if(.)
-		addtimer(CALLBACK(src, .proc/update_connections, TRUE), 1)
+		addtimer(CALLBACK(src, PROC_REF(update_connections), TRUE), 1)
 		queue_icon_update()
 
 /obj/machinery/network/requests_console/shuttle_rotate(angle)
@@ -160,7 +160,7 @@
 /obj/machinery/door/shuttle_rotate(angle)
 	. = ..()
 	if(.)
-		addtimer(CALLBACK(src, .proc/update_connections, TRUE), 1)
+		addtimer(CALLBACK(src, PROC_REF(update_connections), TRUE), 1)
 		queue_icon_update()
 
 //Transports a turf from a source turf to a target turf, moving all of the turf's contents and making the target a copy of the source.

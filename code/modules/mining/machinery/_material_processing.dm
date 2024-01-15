@@ -90,7 +90,7 @@
 /obj/machinery/material_processing/Destroy()
 	input_turf = null
 	output_turf = null
-	events_repository.unregister(/decl/observ/moved, src, src, .proc/on_moved)
+	events_repository.unregister(/decl/observ/moved, src, src, PROC_REF(on_moved))
 	. = ..()
 
 /obj/machinery/material_processing/Initialize()
@@ -99,8 +99,8 @@
 	SET_OUTPUT(output_turf)
 	. = ..()
 	queue_icon_update()
-	events_repository.register(/decl/observ/moved, src, src, .proc/on_moved)
-	events_repository.register(/decl/observ/dir_set, src, src, .proc/on_dir_set)
+	events_repository.register(/decl/observ/moved, src, src, PROC_REF(on_moved))
+	events_repository.register(/decl/observ/dir_set, src, src, PROC_REF(on_dir_set))
 
 /obj/machinery/material_processing/proc/on_moved(atom/moving, atom/old_loc, atom/new_loc)
 	var/turf/our_turf = get_turf(src)

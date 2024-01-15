@@ -66,12 +66,14 @@
 		<option value='?_src_=vars;removeaura=\ref[src]'>Remove Aura</option>
 		<option value='?_src_=vars;addstressor=\ref[src]'>Add Stressor</option>
 		<option value='?_src_=vars;removestressor=\ref[src]'>Remove Stressor</option>
+		<option value='?_src_=vars;setstatuscond=\ref[src]'>Set Status Condition</option>
 		"}
 
 /mob/living/carbon/human/get_view_variables_options()
 	return ..() + {"
 		<option value='?_src_=vars;refreshoverlays=\ref[src]'>Refresh Visible Overlays</option>
 		<option value='?_src_=vars;setspecies=\ref[src]'>Set Species</option>
+		<option value='?_src_=vars;setbodytype=\ref[src]'>Set Bodytype</option>
 		<option value='?_src_=vars;addailment=\ref[src]'>Add Ailment</option>
 		<option value='?_src_=vars;remailment=\ref[src]'>Remove Ailment</option>
 		<option value='?_src_=vars;dressup=\ref[src]'>Dressup</option>
@@ -140,9 +142,6 @@
 /datum/proc/VV_secluded()
 	return list()
 
-/datum/configuration/VV_secluded()
-	return vars
-
 // The following vars cannot be edited by anyone
 /datum/proc/VV_static()
 	return list("parent_type", "gc_destroyed", "is_processing")
@@ -189,7 +188,7 @@
 	if(!(var_to_edit in VV_get_variables()))
 		to_chat(user, "<span class='warning'>\The [src] does not have a var '[var_to_edit]'</span>")
 		return FALSE
-	if(var_to_edit in VV_static())
+	if((var_to_edit in VV_static()) || (var_to_edit in VV_hidden()))
 		return FALSE
 	if((var_to_edit in VV_secluded()) && !check_rights(R_ADMIN|R_DEBUG, FALSE, C = user))
 		return FALSE

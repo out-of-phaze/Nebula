@@ -1,11 +1,11 @@
 /mob
-	density = 1
+	density = TRUE
 	plane = DEFAULT_PLANE
 	layer = MOB_LAYER
 	abstract_type = /mob
 	is_spawnable_type = TRUE
 
-	appearance_flags = PIXEL_SCALE | LONG_GLIDE
+	appearance_flags = DEFAULT_APPEARANCE_FLAGS | LONG_GLIDE
 	animate_movement = 2
 	movable_flags = MOVABLE_FLAG_PROXMOVE
 
@@ -39,27 +39,26 @@
 
 	var/stat = CONSCIOUS //Whether a mob is alive or dead. TODO: Move this to living - Nodrak
 
-	var/obj/screen/cells = null
-
-	var/obj/screen/hands = null
-	var/obj/screen/internals = null
-	var/obj/screen/oxygen = null
-	var/obj/screen/toxin = null
-	var/obj/screen/fire = null
-	var/obj/screen/bodytemp = null
-	var/obj/screen/healths = null
-	var/obj/screen/throw_icon = null
-	var/obj/screen/nutrition_icon = null
-	var/obj/screen/hydration_icon = null
-	var/obj/screen/pressure = null
-	var/obj/screen/pain = null
-	var/obj/screen/up_hint = null
-	var/obj/screen/gun/item/item_use_icon = null
-	var/obj/screen/gun/radio/radio_use_icon = null
-	var/obj/screen/gun/move/gun_move_icon = null
-	var/obj/screen/gun/mode/gun_setting_icon = null
-
-	var/obj/screen/ability_master/ability_master = null
+	var/obj/screen/robot_module_select/hands
+	var/obj/screen/warning_cells/cells
+	var/obj/screen/internals/internals
+	var/obj/screen/oxygen/oxygen
+	var/obj/screen/toxins/toxin
+	var/obj/screen/fire_warning/fire
+	var/obj/screen/bodytemp/bodytemp
+	var/obj/screen/health_warning/healths
+	var/obj/screen/throw_toggle/throw_icon
+	var/obj/screen/maneuver/maneuver_icon
+	var/obj/screen/food/nutrition_icon
+	var/obj/screen/drink/hydration_icon
+	var/obj/screen/pressure/pressure
+	var/obj/screen/fullscreen/pain/pain
+	var/obj/screen/up_hint/up_hint
+	var/obj/screen/gun/item/item_use_icon
+	var/obj/screen/gun/radio/radio_use_icon
+	var/obj/screen/gun/move/gun_move_icon
+	var/obj/screen/gun/mode/gun_setting_icon
+	var/obj/screen/ability_master/ability_master
 
 	/*A bunch of this stuff really needs to go under their own defines instead of being globally attached to mob.
 	A variable should only be globally attached to turfs/objects/whatever, when it is in fact needed as such.
@@ -72,7 +71,6 @@
 	/// Cursor icon used when holding shift over things.
 	var/examine_cursor_icon = 'icons/effects/mouse_pointers/examine_pointer.dmi'
 
-	var/use_me = 1 //Allows all mobs to use the me verb by default, will have to manually specify they cannot
 	var/damageoverlaytemp = 0
 	var/obj/machinery/machine = null
 
@@ -87,7 +85,6 @@
 
 	var/radio_interrupt_cooldown = 0    // TODO move this to /human
 
-	var/unacidable = 0
 	var/list/pinned                     // Lazylist of things pinning this creature to walls (see living_defense.dm)
 	var/list/embedded                   // Embedded items, since simple mobs don't have organs.
 	var/list/languages = list()         // TODO: lazylist this var. For speaking/listening.
@@ -129,7 +126,6 @@
 	var/voice_name = "unidentifiable voice"
 
 	var/faction = MOB_FACTION_NEUTRAL //Used for checking whether hostile simple animals will attack you, possibly more stuff later
-	var/blinded = null
 
 	//The last mob/living/carbon to push/drag/grab this mob (mostly used by slimes friend recognition)
 	var/weakref/last_handled_by_mob

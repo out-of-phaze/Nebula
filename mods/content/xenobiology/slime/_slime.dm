@@ -1,3 +1,7 @@
+/decl/config/num/movement_slime
+	uid = "slime_delay"
+	desc = "Movement delay for slimes."
+
 #define FEED_RESULT_INVALID -1
 #define FEED_RESULT_DEAD     0
 #define FEED_RESULT_VALID    1
@@ -8,8 +12,7 @@
 	icon_state = ICON_STATE_WORLD
 	pass_flags = PASS_FLAG_TABLE
 	speak_emote = list("chirps")
-	maxHealth = 150
-	health = 150
+	mob_default_max_health = 150
 	gender = NEUTER
 	update_icon = 0
 	see_in_dark = 8
@@ -22,13 +25,13 @@
 	bone_amount = 0
 	ai = /datum/ai/slime
 	hud_type = /datum/hud/slime
+	nutrition = 800
 
 	var/is_adult = FALSE
 	var/mutation_chance = 30 // Chance of mutating, should be between 25 and 35
 	var/powerlevel = 0 // 0-10 controls how much electricity they are generating
 	var/amount_grown = 0 // controls how long the slime has been overfed, if 10, grows or reproduces
 	var/weakref/feeding_on
-	var/nutrition = 800
 	var/toxloss = 0
 	var/hurt_temperature = T0C-50 // slime keeps taking damage when its bodytemperature is below this
 	var/die_temperature = 50 // slime dies instantly when its bodytemperature is below this
@@ -50,8 +53,10 @@
 /mob/living/slime/get_digestion_product()
 	return /decl/material/liquid/slimejelly
 
-/mob/living/slime/adjustToxLoss(var/amount)
-	toxloss = clamp(toxloss + amount, 0, maxHealth)
+/mob/living/slime/adjustToxLoss(var/amount, var/do_update_health = TRUE)
+	toxloss = clamp(toxloss + amount, 0, get_max_health())
+	if(do_update_health)
+		update_health()
 
 /mob/living/slime/setToxLoss(var/amount)
 	adjustToxLoss(amount-getToxLoss())
@@ -87,7 +92,7 @@
 
 	var/tally = ..()
 
-	var/health_deficiency = (maxHealth - health)
+	var/health_deficiency = (get_max_health() - current_health)
 	if(health_deficiency >= 30) tally += (health_deficiency / 25)
 
 	if (bodytemperature < 183.222)
@@ -100,10 +105,10 @@
 		if(reagents.has_reagent(/decl/material/liquid/frostoil)) // Frostoil also makes them move VEEERRYYYYY slow
 			tally *= 5
 
-	if(health <= 0) // if damaged, the slime moves twice as slow
+	if(current_health <= 0) // if damaged, the slime moves twice as slow
 		tally *= 2
 
-	return tally + config.slime_delay
+	return tally + get_config_value(/decl/config/num/movement_slime)
 
 /mob/living/slime/Bump(atom/movable/AM, yes)
 	if ((!(yes) || now_pushing))
@@ -129,12 +134,12 @@
 		var/mob/tmob = AM
 
 		if(is_adult)
-			if(istype(tmob, /mob/living/carbon/human))
+			if(ishuman(tmob))
 				if(prob(90))
 					now_pushing = 0
 					return
 		else
-			if(istype(tmob, /mob/living/carbon/human))
+			if(ishuman(tmob))
 				now_pushing = 0
 				return
 
@@ -146,7 +151,7 @@
 	. = ..()
 
 	statpanel("Status")
-	stat(null, "Health: [round((health / maxHealth) * 100)]%")
+	stat(null, "Health: [get_health_percent()]%")
 	stat(null, "Intent: [a_intent]")
 
 	if (client.statpanel == "Status")
@@ -159,8 +164,8 @@
 
 		stat(null,"Power Level: [powerlevel]")
 
-/mob/living/slime/adjustFireLoss(amount)
-	..(-abs(amount)) // Heals them
+/mob/living/slime/adjustFireLoss(amount, do_update_health = TRUE)
+	..(-abs(amount), do_update_health) // Heals them
 
 /mob/living/slime/bullet_act(var/obj/item/projectile/Proj)
 	var/datum/ai/slime/slime_ai = ai
@@ -292,6 +297,12 @@
 /mob/living/slime/check_has_mouth()
 	return 0
 
+/mob/living/slime/set_nutrition(amt)
+	..()
+
+/mob/living/slime/get_hydration()
+	return get_nutrition()
+
 /mob/living/slime/proc/gain_nutrition(var/amount)
 	adjust_nutrition(amount)
 	if(prob(amount * 2)) // Gain around one level per 50 nutrition
@@ -299,12 +310,6 @@
 		if(powerlevel > 10)
 			powerlevel = 10
 			adjustToxLoss(-10)
-
-/mob/living/slime/get_nutrition()
-	return nutrition
-
-/mob/living/slime/adjust_nutrition(var/amt)
-	nutrition = clamp(nutrition + amt, 0, get_max_nutrition())
 
 /mob/living/slime/proc/get_hunger_state()
 	. = 0
@@ -344,7 +349,7 @@
 	else if (nutrition < get_hunger_nutrition())
 		. += "<span class='warning'>Warning:\tthe slime is hungry.</span>"
 	. += "Electric charge strength:\t[powerlevel]"
-	. += "Health:\t[round((health * 100) / maxHealth)]%"
+	. += "Health:\t[get_health_percent()]%"
 
 	var/list/mutations = slime_data.descendants?.Copy()
 	if(!mutations.len)

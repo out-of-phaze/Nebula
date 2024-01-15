@@ -23,6 +23,9 @@ var/global/list/airlock_overlays = list()
 	base_type = /obj/machinery/door/airlock
 	frame_type = /obj/structure/door_assembly
 
+	icon_state_open   = "open"
+	icon_state_closed = "closed"
+
 	var/aiControlDisabled = 0 //If 1, AI control is disabled until the AI hacks back in and disables the lock. If 2, the AI has bypassed the lock. If -1, the control is enabled but the AI had bypassed it earlier, so if it is disabled again the AI would have no trouble getting back in.
 	var/hackProof = 0 // if 1, this door can't be hacked by the AI
 	var/electrified_until = 0			//World time when the door is no longer electrified. -1 if it is permanently electrified until someone fixes it.
@@ -300,15 +303,15 @@ About the new airlock wires panel:
 	switch(state)
 		if(0)
 			if(density)
-				icon_state = "closed"
+				icon_state = icon_state_closed
 				state = AIRLOCK_CLOSED
 			else
-				icon_state = "open"
+				icon_state = icon_state_open
 				state = AIRLOCK_OPEN
 		if(AIRLOCK_OPEN)
-			icon_state = "open"
+			icon_state = icon_state_open
 		if(AIRLOCK_CLOSED)
-			icon_state = "closed"
+			icon_state = icon_state_closed
 		if(AIRLOCK_OPENING, AIRLOCK_CLOSING, AIRLOCK_EMAG, AIRLOCK_DENY)
 			icon_state = ""
 
@@ -397,7 +400,7 @@ About the new airlock wires panel:
 
 		if(stat & BROKEN)
 			damage_overlay = sparks_broken_file
-		else if(health < maxhealth * 3/4)
+		else if(health < max_health * 3/4)
 			damage_overlay = sparks_damaged_file
 
 	if(welded)
@@ -543,7 +546,7 @@ About the new airlock wires panel:
 	return ..()
 
 /obj/machinery/door/airlock/physical_attack_hand(mob/user)
-	if(!istype(usr, /mob/living/silicon))
+	if(!issilicon(usr))
 		if(src.isElectrified())
 			if(src.shock(user, 100))
 				return TRUE
@@ -724,7 +727,7 @@ About the new airlock wires panel:
 			update_icon()
 		return TRUE
 
-	if(!istype(user, /mob/living/silicon))
+	if(!issilicon(user))
 		if(src.isElectrified())
 			if(src.shock(user, 75))
 				return TRUE
@@ -764,7 +767,7 @@ About the new airlock wires panel:
 			return TRUE
 		else if(!repairing)
 			// Add some minor damage as evidence of forcing.
-			if(health >= maxhealth)
+			if(health >= max_health)
 				take_damage(1)
 			if(arePowerSystemsOn())
 				to_chat(user, SPAN_WARNING("The airlock's motors resist your efforts to force it."))
@@ -798,7 +801,7 @@ About the new airlock wires panel:
 		return TRUE
 
 
-	else if((stat & (BROKEN|NOPOWER)) && istype(user, /mob/living/simple_animal))
+	else if((stat & (BROKEN|NOPOWER)) && isanimal(user))
 		var/mob/living/simple_animal/A = user
 		var/obj/item/I = A.get_natural_weapon()
 		if(I?.force >= 10)
@@ -866,7 +869,7 @@ About the new airlock wires panel:
 	if(moved)
 		spark_at(da, amount=5, cardinal_only = TRUE)
 	else
-		da.anchored = 1
+		da.anchored = TRUE
 	da.state = 1
 	da.created_name = name
 	da.update_icon()
@@ -986,6 +989,7 @@ About the new airlock wires panel:
 
 /obj/machinery/door/airlock/Initialize(var/mapload, var/d, var/populate_parts = TRUE, obj/structure/door_assembly/assembly = null)
 	. = ..()
+
 	//wires
 	var/turf/T = get_turf(loc)
 	if(T && isAdminLevel(T.z))
@@ -1002,6 +1006,8 @@ About the new airlock wires panel:
 		brace.forceMove(src)
 		if(brace.electronics)
 			brace.req_access = get_req_access()
+		queue_icon_update()
+	else if(!begins_closed)
 		queue_icon_update()
 
 	if (glass)
@@ -1021,7 +1027,7 @@ About the new airlock wires panel:
 				glass = TRUE
 				set_opacity(0)
 				hitsound = 'sound/effects/Glasshit.ogg'
-				maxhealth = 300
+				max_health = 300
 				explosion_resistance = 5
 			else
 				door_color = mat.color

@@ -3,14 +3,6 @@
 //NOTE: Breathing happens once per FOUR TICKS, unless the last breath fails. In which case it happens once per ONE TICK! So oxyloss healing is done once per 4 ticks while oxyloss damage is applied once per tick!
 #define HUMAN_MAX_OXYLOSS 1 //Defines how much oxyloss humans can get per tick. A tile with no air at all (such as space) applies this value, otherwise it's a percentage of it.
 
-#define HUMAN_CRIT_TIME_CUSHION (10 MINUTES) //approximate time limit to stabilize someone in crit
-#define HUMAN_CRIT_HEALTH_CUSHION (config.health_threshold_crit - config.health_threshold_dead)
-
-//The amount of damage you'll get when in critical condition. We want this to be a HUMAN_CRIT_TIME_CUSHION long deal.
-//There are HUMAN_CRIT_HEALTH_CUSHION hp to get through, so (HUMAN_CRIT_HEALTH_CUSHION/HUMAN_CRIT_TIME_CUSHION) per tick.
-//Breaths however only happen once every MOB_BREATH_DELAY life ticks. The delay between life ticks is set by the mob process.
-#define HUMAN_CRIT_MAX_OXYLOSS ( MOB_BREATH_DELAY * process_schedule_interval("mob") * (HUMAN_CRIT_HEALTH_CUSHION/HUMAN_CRIT_TIME_CUSHION) )
-
 #define HEAT_DAMAGE_LEVEL_1 2 //Amount of damage applied when your body temperature just passes the 360.15k safety point
 #define HEAT_DAMAGE_LEVEL_2 4 //Amount of damage applied when your body temperature passes the 400K point
 #define HEAT_DAMAGE_LEVEL_3 8 //Amount of damage applied when your body temperature passes the 1000K point
@@ -28,8 +20,6 @@
 #define COLD_GAS_DAMAGE_LEVEL_2 1.5 //Amount of damage applied when the current breath's temperature passes the 200K point
 #define COLD_GAS_DAMAGE_LEVEL_3 3 //Amount of damage applied when the current breath's temperature passes the 120K point
 
-#define RADIATION_SPEED_COEFFICIENT 0.025
-
 /mob/living/carbon/human
 	var/oxygen_alert = 0
 	var/toxins_alert = 0
@@ -39,21 +29,13 @@
 	var/stamina = 100
 
 /mob/living/carbon/human/Life()
-	set invisibility = 0
+	set invisibility = FALSE
 	set background = BACKGROUND_ENABLED
 
 	if (HAS_TRANSFORMATION_MOVEMENT_HANDLER(src))
 		return
 
 	fire_alert = 0 //Reset this here, because both breathe() and handle_environment() have a chance to set it.
-
-	//TODO: seperate this out
-	// update the current life tick, can be used to e.g. only do something every 4 ticks
-	life_tick++
-
-	// This is not an ideal place for this but it will do for now.
-	if(wearing_rig && wearing_rig.offline)
-		wearing_rig = null
 
 	..()
 
@@ -63,20 +45,12 @@
 	voice = GetVoice()
 
 	//No need to update all of these procs if the guy is dead.
-	if(stat != DEAD && !InStasis())
-		//Updates the number of stored chemicals for powers
-		handle_changeling()
-
+	if(stat != DEAD && !is_in_stasis())
 		last_pain = null // Clear the last cached pain value so further getHalloss() calls won't use an old value.
-
 		//Organs and blood
 		handle_organs()
-		stabilize_body_temperature() //Body temperature adjusts itself (self-regulation)
-
 		handle_shock()
-
 		handle_pain()
-
 		handle_stamina()
 
 	if(!handle_some_updates())
@@ -104,7 +78,7 @@
 /mob/living/carbon/human/proc/handle_stamina()
 	if((world.time - last_quick_move_time) > 5 SECONDS)
 		var/mod = (lying + (nutrition / get_max_nutrition())) / 2
-		adjust_stamina(max(config.minimum_stamina_recovery, config.maximum_stamina_recovery * mod) * (1 + GET_CHEMICAL_EFFECT(src, CE_ENERGETIC)))
+		adjust_stamina(max(get_config_value(/decl/config/num/movement_max_stamina_recovery), get_config_value(/decl/config/num/movement_min_stamina_recovery) * mod) * (1 + GET_CHEMICAL_EFFECT(src, CE_ENERGETIC)))
 
 /mob/living/carbon/human/set_stat(var/new_stat)
 	var/old_stat = stat
@@ -114,21 +88,6 @@
 	if(client && client.is_afk())
 		if(old_stat == UNCONSCIOUS && stat == CONSCIOUS)
 			playsound_local(null, 'sound/effects/bells.ogg', 100, is_global=TRUE)
-
-/mob/living/carbon/human/proc/handle_some_updates()
-	if(life_tick > 5 && timeofdeath && (timeofdeath < 5 || world.time - timeofdeath > 6000))	//We are long dead, or we're junk mobs spawned like the clowns on the clown shuttle
-		return 0
-	return 1
-
-/mob/living/carbon/human/breathe()
-	var/species_organ = species.breathing_organ
-
-	if(species_organ)
-		var/active_breaths = 0
-		var/obj/item/organ/internal/lungs/L = get_organ(species_organ, /obj/item/organ/internal/lungs)
-		if(L)
-			active_breaths = L.active_breathing
-		..(active_breaths)
 
 // Calculate how vulnerable the human is to the current pressure.
 // Returns 0 (equals 0 %) if sealed in an undamaged suit that's rated for the pressure, 1 if unprotected (equals 100%).
@@ -180,22 +139,19 @@
 	..()
 	//Vision
 	var/obj/item/organ/vision
-	if(species.vision_organ)
-		vision = GET_INTERNAL_ORGAN(src, species.vision_organ)
+	var/decl/bodytype/root_bodytype = get_bodytype()
+	if(root_bodytype.vision_organ)
+		vision = GET_INTERNAL_ORGAN(src, root_bodytype.vision_organ)
 
-	if(!species.vision_organ) // Presumably if a species has no vision organs, they see via some other means.
+	if(!root_bodytype.vision_organ) // Presumably if a species has no vision organs, they see via some other means.
 		set_status(STAT_BLIND, 0)
-		blinded =    0
 		set_status(STAT_BLURRY, 0)
 	else if(!vision || (vision && !vision.is_usable()))   // Vision organs cut out or broken? Permablind.
-		set_status(STAT_BLIND, 1)
-		blinded =    1
-		set_status(STAT_BLURRY, 1)
-	else
-		//blindness
-		if(!(sdisabilities & BLINDED))
-			if(equipment_tint_total >= TINT_BLIND)	// Covered eyes, heal faster
-				ADJ_STATUS(src, STAT_BLURRY, -1)
+		SET_STATUS_MAX(src, STAT_BLIND, 2)
+		SET_STATUS_MAX(src, STAT_BLURRY, 1)
+	// Non-genetic blindness; covered eyes will heal faster.
+	else if(!(sdisabilities & BLINDED) && equipment_tint_total >= TINT_BLIND)
+		ADJ_STATUS(src, STAT_BLURRY, -1)
 
 /mob/living/carbon/human/handle_disabilities()
 	..()
@@ -210,111 +166,15 @@
 			heal_organ_damage(0,1)
 
 	// DNA2 - Gene processing.
-	for(var/datum/dna/gene/gene in dna_genes)
+	var/list/all_genes = decls_repository.get_decls_of_subtype(/decl/gene)
+	for(var/gene_type in all_genes)
+		var/decl/gene/gene = all_genes[gene_type]
 		if(!gene.block)
 			continue
 		if(gene.is_active(src))
 			gene.OnMobLife(src)
 
-	radiation = clamp(radiation,0,500)
-
-	if(!radiation)
-		if(species.appearance_flags & RADIATION_GLOWS)
-			set_light(0)
-	else
-		if(species.appearance_flags & RADIATION_GLOWS)
-			set_light(max(1,min(10,radiation/10)), max(1,min(20,radiation/20)), species.get_flesh_colour(src))
-		// END DOGSHIT SNOWFLAKE
-		var/damage = 0
-		radiation -= 1 * RADIATION_SPEED_COEFFICIENT
-		if(prob(25))
-			damage = 2
-
-		if (radiation > 50)
-			damage = 2
-			radiation -= 2 * RADIATION_SPEED_COEFFICIENT
-			if(!isSynthetic())
-				if(prob(5) && prob(100 * RADIATION_SPEED_COEFFICIENT))
-					radiation -= 5 * RADIATION_SPEED_COEFFICIENT
-					to_chat(src, "<span class='warning'>You feel weak.</span>")
-					SET_STATUS_MAX(src, STAT_WEAK, 3)
-					if(!lying)
-						emote("collapse")
-				if(prob(5) && prob(100 * RADIATION_SPEED_COEFFICIENT))
-					lose_hair()
-
-		if (radiation > 75)
-			damage = 3
-			radiation -= 3 * RADIATION_SPEED_COEFFICIENT
-			if(!isSynthetic())
-				if(prob(5))
-					take_overall_damage(0, 5 * RADIATION_SPEED_COEFFICIENT, used_weapon = "Radiation Burns")
-				if(prob(1))
-					to_chat(src, "<span class='warning'>You feel strange!</span>")
-					adjustCloneLoss(5 * RADIATION_SPEED_COEFFICIENT)
-					emote("gasp")
-		if(radiation > 150)
-			damage = 8
-			radiation -= 4 * RADIATION_SPEED_COEFFICIENT
-
-		damage = FLOOR(damage * species.get_radiation_mod(src))
-		if(damage)
-			adjustToxLoss(damage * RADIATION_SPEED_COEFFICIENT)
-			immunity = max(0, immunity - damage * 15 * RADIATION_SPEED_COEFFICIENT)
-			updatehealth()
-			var/list/limbs = get_external_organs()
-			if(!isSynthetic() && LAZYLEN(limbs))
-				var/obj/item/organ/external/O = pick(limbs)
-				if(istype(O))
-					O.add_autopsy_data("Radiation Poisoning", damage)
-
-	/** breathing **/
-
-/mob/living/carbon/human/handle_chemical_smoke(var/datum/gas_mixture/environment)
-	for(var/slot in global.standard_headgear_slots)
-		var/obj/item/gear = get_equipped_item(slot)
-		if(istype(gear) && (gear.item_flags & ITEM_FLAG_BLOCK_GAS_SMOKE_EFFECT))
-			return
 	..()
-
-/mob/living/carbon/human/get_breath_from_internal(volume_needed=STD_BREATH_VOLUME)
-	if(internal)
-
-		var/obj/item/tank/rig_supply
-		var/obj/item/rig/rig = get_equipped_item(slot_back_str)
-		if(istype(rig) && !rig.offline && (rig.air_supply && internal == rig.air_supply))
-			rig_supply = rig.air_supply
-
-		if(!rig_supply)
-			if(!contents.Find(internal))
-				set_internals(null)
-			else
-				var/found_mask = FALSE
-				for(var/slot in global.airtight_slots)
-					var/obj/item/gear = get_equipped_item(slot)
-					if(gear && (gear.item_flags & ITEM_FLAG_AIRTIGHT))
-						found_mask = TRUE
-						break
-				if(!found_mask)
-					set_internals(null)
-
-		if(internal)
-			return internal.remove_air_volume(volume_needed)
-	return null
-
-/mob/living/carbon/human/handle_breath(datum/gas_mixture/breath)
-	if(status_flags & GODMODE)
-		return
-	var/species_organ = species.breathing_organ
-	if(!species_organ)
-		return
-
-	var/obj/item/organ/internal/lungs/L = get_organ(species_organ, /obj/item/organ/internal/lungs)
-	if(!L || nervous_system_failure())
-		failed_last_breath = 1
-	else
-		failed_last_breath = L.handle_breath(breath) //if breath is null or vacuum, the lungs will handle it for us
-	return !failed_last_breath
 
 /mob/living/carbon/human/handle_environment(datum/gas_mixture/environment)
 
@@ -351,7 +211,7 @@
 	if(relative_density > 0.02) //don't bother if we are in vacuum or near-vacuum
 		var/loc_temp = environment.temperature
 
-		if(adjusted_pressure < species.warning_high_pressure && adjusted_pressure > species.warning_low_pressure && abs(loc_temp - bodytemperature) < 20 && bodytemperature < species.heat_level_1 && bodytemperature > species.cold_level_1 && species.body_temperature)
+		if(adjusted_pressure < species.warning_high_pressure && adjusted_pressure > species.warning_low_pressure && abs(loc_temp - bodytemperature) < 20 && bodytemperature < get_mob_temperature_threshold(HEAT_LEVEL_1) && bodytemperature > get_mob_temperature_threshold(COLD_LEVEL_1) && species.body_temperature)
 			pressure_alert = 0
 			return // Temperatures are within normal ranges, fuck all this processing. ~Ccomp
 
@@ -370,33 +230,33 @@
 		bodytemperature += clamp(BODYTEMP_COOLING_MAX, temp_adj*relative_density, BODYTEMP_HEATING_MAX)
 
 	// +/- 50 degrees from 310.15K is the 'safe' zone, where no damage is dealt.
-	if(bodytemperature >= getSpeciesOrSynthTemp(HEAT_LEVEL_1))
+	if(bodytemperature >= get_mob_temperature_threshold(HEAT_LEVEL_1))
 		//Body temperature is too hot.
 		fire_alert = max(fire_alert, 1)
 		if(status_flags & GODMODE)	return 1	//godmode
 		var/burn_dam = 0
-		if(bodytemperature < getSpeciesOrSynthTemp(HEAT_LEVEL_2))
+		if(bodytemperature < get_mob_temperature_threshold(HEAT_LEVEL_2))
 			burn_dam = HEAT_DAMAGE_LEVEL_1
-		else if(bodytemperature < getSpeciesOrSynthTemp(HEAT_LEVEL_3))
+		else if(bodytemperature < get_mob_temperature_threshold(HEAT_LEVEL_3))
 			burn_dam = HEAT_DAMAGE_LEVEL_2
 		else
 			burn_dam = HEAT_DAMAGE_LEVEL_3
 		take_overall_damage(burn=burn_dam, used_weapon = "High Body Temperature")
 		fire_alert = max(fire_alert, 2)
 
-	else if(bodytemperature <= getSpeciesOrSynthTemp(COLD_LEVEL_1))
+	else if(bodytemperature <= get_mob_temperature_threshold(COLD_LEVEL_1))
 		fire_alert = max(fire_alert, 1)
 		if(status_flags & GODMODE)	return 1	//godmode
 
 		var/burn_dam = 0
 
-		if(bodytemperature > getSpeciesOrSynthTemp(COLD_LEVEL_2))
+		if(bodytemperature > get_mob_temperature_threshold(COLD_LEVEL_2))
 			burn_dam = COLD_DAMAGE_LEVEL_1
-		else if(bodytemperature > getSpeciesOrSynthTemp(COLD_LEVEL_3))
+		else if(bodytemperature > get_mob_temperature_threshold(COLD_LEVEL_3))
 			burn_dam = COLD_DAMAGE_LEVEL_2
 		else
 			burn_dam = COLD_DAMAGE_LEVEL_3
-		SetStasis(getCryogenicFactor(bodytemperature), STASIS_COLD)
+		set_stasis(get_cryogenic_factor(bodytemperature), STASIS_COLD)
 		if(!has_chemical_effect(CE_CRYO, 1))
 			take_overall_damage(burn=burn_dam, used_weapon = "Low Body Temperature")
 			fire_alert = max(fire_alert, 1)
@@ -428,40 +288,18 @@
 
 	return
 
-/mob/living/carbon/human/proc/stabilize_body_temperature()
-	// We produce heat naturally.
-	if (species.passive_temp_gain)
-		bodytemperature += species.passive_temp_gain
+/mob/living/carbon/human/get_bodytemperature_difference()
+	if (on_fire)
+		return 0 //too busy for pesky metabolic regulation
+	return ..()
 
+/mob/living/carbon/human/stabilize_body_temperature()
 	// Robolimbs cause overheating too.
 	if(robolimb_count)
 		bodytemperature += round(robolimb_count/2)
+	return ..()
 
-	if (species.body_temperature == null || (!(species.species_flags & SPECIES_FLAG_SYNTHETIC) && isSynthetic())) // SIGNALIS EDIT
-		return //this species doesn't have metabolic thermoregulation
-
-	var/body_temperature_difference = species.body_temperature - bodytemperature
-
-	if (abs(body_temperature_difference) < 0.5)
-		return //fuck this precision
-
-	if (on_fire)
-		return //too busy for pesky metabolic regulation
-
-	if(bodytemperature < species.cold_level_1) //260.15 is 310.15 - 50, the temperature where you start to feel effects.
-		var/nut_remove = 10 * DEFAULT_HUNGER_FACTOR
-		if(nutrition >= nut_remove) //If we are very, very cold we'll use up quite a bit of nutriment to heat us up.
-			adjust_nutrition(-nut_remove)
-			bodytemperature += max((body_temperature_difference / BODYTEMP_AUTORECOVERY_DIVISOR), BODYTEMP_AUTORECOVERY_MINIMUM)
-	else if(species.cold_level_1 <= bodytemperature && bodytemperature <= species.heat_level_1)
-		bodytemperature += body_temperature_difference / BODYTEMP_AUTORECOVERY_DIVISOR
-	else if(bodytemperature > species.heat_level_1) //360.15 is 310.15 + 50, the temperature where you start to feel effects.
-		var/hyd_remove = 10 * DEFAULT_THIRST_FACTOR
-		if(hydration >= hyd_remove)
-			adjust_hydration(-hyd_remove)
-			bodytemperature += min((body_temperature_difference / BODYTEMP_AUTORECOVERY_DIVISOR), -BODYTEMP_AUTORECOVERY_MINIMUM)
-
-	//This proc returns a number made up of the flags for body parts which you are protected on. (such as HEAD, SLOT_UPPER_BODY, SLOT_LOWER_BODY, etc. See setup.dm for the full list)
+//This proc returns a number made up of the flags for body parts which you are protected on. (such as HEAD, SLOT_UPPER_BODY, SLOT_LOWER_BODY, etc. See setup.dm for the full list)
 /mob/living/carbon/human/proc/get_heat_protection_flags(temperature) //Temperature is the temperature you're being exposed to.
 	. = 0
 	//Handle normal clothing
@@ -541,12 +379,12 @@
 
 	if(status_flags & GODMODE)	return 0
 
+	update_health() // TODO: unify with parent call, Life() PR
 	//SSD check, if a logged player is awake put them back to sleep!
 	if(stat == DEAD)	//DEAD. BROWN BREAD. SWIMMING WITH THE SPESS CARP
-		blinded = 1
+		SET_STATUS_MAX(src, STAT_BLIND, 2)
 		set_status(STAT_SILENCE, 0)
 	else				//ALIVE. LIGHTS ARE ON
-		updatehealth()	//TODO
 
 		if(hallucination_power)
 			handle_hallucinations()
@@ -557,8 +395,8 @@
 				src.visible_message("<B>[src]</B> [species.halloss_message]")
 			SET_STATUS_MAX(src, STAT_PARA, 10)
 
-		if(HAS_STATUS(src, STAT_PARA) ||HAS_STATUS(src, STAT_ASLEEP))
-			blinded = 1
+		if(HAS_STATUS(src, STAT_PARA) || HAS_STATUS(src, STAT_ASLEEP))
+			SET_STATUS_MAX(src, STAT_BLIND, 2)
 			set_stat(UNCONSCIOUS)
 			animate_tail_reset()
 			adjustHalLoss(-3)
@@ -619,13 +457,6 @@
 
 	return 1
 
-/mob/living/carbon/human/handle_nutrition_and_hydration()
-	if(nutrition > 0)
-		adjust_nutrition(-species.hunger_factor)
-	if(hydration > 0)
-		adjust_hydration(-species.thirst_factor)
-	..()
-
 /mob/living/carbon/human/handle_regular_hud_updates()
 	if(hud_updateflag) // update our mob's hud overlays, AKA what others see flaoting above our head
 		handle_hud_list()
@@ -636,10 +467,11 @@
 		return
 
 	if(stat != DEAD)
-		if(stat == UNCONSCIOUS && health < maxHealth/2)
+		var/half_health = get_max_health()/2
+		if(stat == UNCONSCIOUS && current_health < half_health)
 			//Critical damage passage overlay
 			var/severity = 0
-			switch(health - maxHealth/2)
+			switch(current_health - half_health)
 				if(-20 to -10)			severity = 1
 				if(-30 to -20)			severity = 2
 				if(-40 to -30)			severity = 3
@@ -769,16 +601,18 @@
 					if(260 to 280)			bodytemp.icon_state = "temp-3"
 					else					bodytemp.icon_state = "temp-4"
 			else
+				var/heat_1 = get_mob_temperature_threshold(HEAT_LEVEL_1)
+				var/cold_1 = get_mob_temperature_threshold(COLD_LEVEL_1)
 				//TODO: precalculate all of this stuff when the species datum is created
 				var/base_temperature = species.body_temperature
 				if(base_temperature == null) //some species don't have a set metabolic temperature
-					base_temperature = (getSpeciesOrSynthTemp(HEAT_LEVEL_1) + getSpeciesOrSynthTemp(COLD_LEVEL_1))/2
+					base_temperature = (heat_1 + cold_1)/2
 
 				var/temp_step
 				if (bodytemperature >= base_temperature)
-					temp_step = (getSpeciesOrSynthTemp(HEAT_LEVEL_1) - base_temperature)/4
+					temp_step = (heat_1 - base_temperature)/4
 
-					if (bodytemperature >= getSpeciesOrSynthTemp(HEAT_LEVEL_1))
+					if (bodytemperature >= heat_1)
 						bodytemp.icon_state = "temp4"
 					else if (bodytemperature >= base_temperature + temp_step*3)
 						bodytemp.icon_state = "temp3"
@@ -790,9 +624,9 @@
 						bodytemp.icon_state = "temp0"
 
 				else if (bodytemperature < base_temperature)
-					temp_step = (base_temperature - getSpeciesOrSynthTemp(COLD_LEVEL_1))/4
+					temp_step = (base_temperature - cold_1)/4
 
-					if (bodytemperature <= getSpeciesOrSynthTemp(COLD_LEVEL_1))
+					if (bodytemperature <= cold_1)
 						bodytemp.icon_state = "temp-4"
 					else if (bodytemperature <= base_temperature - temp_step*3)
 						bodytemp.icon_state = "temp-3"
@@ -834,10 +668,6 @@
 	if(stat == UNCONSCIOUS && world.time - l_move_time < 5 && prob(10))
 		to_chat(src,"<span class='notice'>You feel like you're [pick("moving","flying","floating","falling","hovering")].</span>")
 
-/mob/living/carbon/human/proc/handle_changeling()
-	if(mind && mind.changeling)
-		mind.changeling.regenerate()
-
 #define BASE_SHOCK_RECOVERY 1
 /mob/living/carbon/human/proc/handle_shock()
 	if(!can_feel_pain() || (status_flags & GODMODE))
@@ -846,7 +676,7 @@
 
 	var/stress_modifier = get_stress_modifier()
 	if(stress_modifier)
-		stress_modifier *= config.stress_shock_recovery_constant
+		stress_modifier *= get_config_value(/decl/config/num/health_stress_shock_recovery_constant)
 
 	if(is_asystole())
 		shock_stage = max(shock_stage + (BASE_SHOCK_RECOVERY + stress_modifier), 61)
@@ -927,7 +757,7 @@
 		else if(is_asystole())
 			holder.icon_state = "flatline"
 		else
-			holder.icon_state = "[pulse()]"
+			holder.icon_state = "[get_pulse()]"
 		hud_list[HEALTH_HUD] = holder
 
 	if (BITTEST(hud_updateflag, LIFE_HUD) && hud_list[LIFE_HUD])
@@ -1044,12 +874,12 @@
 
 
 	if(species)
-		if(burn_temperature < species.heat_level_2)
+		if(burn_temperature < get_mob_temperature_threshold(HEAT_LEVEL_2))
 			species_heat_mod = 0.5
-		else if(burn_temperature < species.heat_level_3)
+		else if(burn_temperature < get_mob_temperature_threshold(HEAT_LEVEL_3))
 			species_heat_mod = 0.75
 
-	burn_temperature -= species.heat_level_1
+	burn_temperature -= get_mob_temperature_threshold(HEAT_LEVEL_1)
 
 	if(burn_temperature < 1)
 		return

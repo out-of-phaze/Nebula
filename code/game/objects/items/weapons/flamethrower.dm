@@ -13,7 +13,7 @@
 	throw_range = 5
 
 	w_class = ITEM_SIZE_LARGE
-	origin_tech = "{'combat':1}"
+	origin_tech = @'{"combat":1}'
 	material = /decl/material/solid/metal/steel
 
 	var/fire_sound
@@ -61,7 +61,7 @@
 		return null
 
 	var/turf/location = loc
-	if(istype(location, /mob))
+	if(ismob(location))
 		var/mob/M = location
 		if(M.get_active_hand() == src)
 			location = M.loc

@@ -47,7 +47,7 @@
 	name = BASE_ALARM_NAME
 	icon = 'icons/obj/monitors.dmi'
 	icon_state = "alarm0"
-	anchored = 1
+	anchored = TRUE
 	idle_power_usage = 80
 	active_power_usage = 1000 //For heating/cooling rooms. 1000 joules equates to about 1 degree every 2 seconds for a single tile of air.
 	power_channel = ENVIRON
@@ -62,7 +62,7 @@
 	uncreated_component_parts = list(/obj/item/stock_parts/power/apc = 1)
 	construct_state = /decl/machine_construction/wall_frame/panel_closed
 	wires = /datum/wires/alarm
-	directional_offset = "{'NORTH':{'y':-21}, 'SOUTH':{'y':21}, 'EAST':{'x':-21}, 'WEST':{'x':21}}"
+	directional_offset = @'{"NORTH":{"y":-21}, "SOUTH":{"y":21}, "EAST":{"x":-21}, "WEST":{"x":21}}'
 
 	var/alarm_id = null
 	var/breach_detection = 1 // Whether to use automatic breach detection or not
@@ -795,13 +795,13 @@
 	if(old_area && old_area == alarm_area)
 		alarm_area = null
 		area_uid = null
-		events_repository.unregister(/decl/observ/name_set, old_area, src, .proc/change_area_name)
+		events_repository.unregister(/decl/observ/name_set, old_area, src, PROC_REF(change_area_name))
 	if(new_area)
 		ASSERT(isnull(alarm_area))
 		alarm_area = new_area
 		area_uid = new_area.uid
 		change_area_name(alarm_area, null, alarm_area.name)
-		events_repository.register(/decl/observ/name_set, alarm_area, src, .proc/change_area_name)
+		events_repository.register(/decl/observ/name_set, alarm_area, src, PROC_REF(change_area_name))
 		for(var/device_tag in alarm_area.air_scrub_names + alarm_area.air_vent_names)
 			send_signal(device_tag, list()) // ask for updates; they initialized before us and we didn't get the data
 
@@ -824,7 +824,7 @@ FIRE ALARM
 	frame_type = /obj/item/frame/fire_alarm
 	uncreated_component_parts = list(/obj/item/stock_parts/power/apc = 1)
 	construct_state = /decl/machine_construction/wall_frame/panel_closed
-	directional_offset = "{'NORTH':{'y':-21}, 'SOUTH':{'y':21}, 'EAST':{'x':21}, 'WEST':{'x':-21}}"
+	directional_offset = @'{"NORTH":{"y":-21}, "SOUTH":{"y":21}, "EAST":{"x":21}, "WEST":{"x":-21}}'
 
 	var/detecting =    TRUE
 	var/working =      TRUE
@@ -894,10 +894,9 @@ FIRE ALARM
 			overlays += get_cached_overlay("fire0")
 
 /obj/machinery/firealarm/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
-	if(src.detecting)
-		if(exposed_temperature > T0C+200)
-			src.alarm()			// added check of detector status here
-	return
+	if(detecting && exposed_temperature > T0C+200)
+		alarm()
+	return ..()
 
 /obj/machinery/firealarm/bullet_act()
 	return src.alarm()
@@ -941,7 +940,7 @@ FIRE ALARM
 	var/d2
 
 	var/decl/security_state/security_state = GET_DECL(global.using_map.security_state)
-	if (istype(user, /mob/living/carbon/human) || istype(user, /mob/living/silicon) || istype(user, /mob/observer))
+	if (ishuman(user) || issilicon(user) || isobserver(user))
 		A = A.loc
 
 		if (A.fire)
@@ -1036,7 +1035,7 @@ FIRE ALARM
 	idle_power_usage = 2
 	active_power_usage = 6
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
-	directional_offset = "{'NORTH':{'y':-21}, 'SOUTH':{'y':21}, 'EAST':{'x':21}, 'WEST':{'x':-21}}"
+	directional_offset = @'{"NORTH":{"y":-21}, "SOUTH":{"y":21}, "EAST":{"x":21}, "WEST":{"x":-21}}'
 	var/time =         1 SECOND
 	var/timing =       FALSE
 	var/working =      TRUE
@@ -1051,7 +1050,7 @@ FIRE ALARM
 	ASSERT(isarea(A))
 	var/d1
 	var/d2
-	if (istype(user, /mob/living/carbon/human) || istype(user, /mob/living/silicon/ai))
+	if (ishuman(user) || isAI(user))
 
 		if (A.party)
 			d1 = text("<A href='?src=\ref[];reset=1'>No Party :(</A>", src)

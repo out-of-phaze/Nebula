@@ -20,7 +20,7 @@
 			else
 				create_duplicate(M)
 	for(var/mob/goast in global.ghost_mob_list)
-		goast.mouse_opacity = 0	//can't let you click that Dave
+		goast.mouse_opacity = MOUSE_OPACITY_UNCLICKABLE	//can't let you click that Dave
 		goast.set_invisibility(SEE_INVISIBLE_LIVING)
 		goast.alpha = 255
 	old_accessible_z_levels = SSmapping.accessible_z_levels.Copy()
@@ -73,7 +73,7 @@
 	name = "echo"
 	desc = "It's not going to punch you, is it?"
 	var/mob/living/carbon/human/daddy
-	anchored = 1
+	anchored = TRUE
 	var/reality = 0
 	simulated = 0
 
@@ -84,9 +84,9 @@
 	daddy = ndaddy
 	set_dir(daddy.dir)
 	appearance = daddy.appearance
-	events_repository.register(/decl/observ/moved, daddy, src, /obj/effect/bluegoast/proc/mirror)
-	events_repository.register(/decl/observ/dir_set, daddy, src, /obj/effect/bluegoast/proc/mirror_dir)
-	events_repository.register(/decl/observ/destroyed, daddy, src, /datum/proc/qdel_self)
+	events_repository.register(/decl/observ/moved, daddy, src, TYPE_PROC_REF(/obj/effect/bluegoast, mirror))
+	events_repository.register(/decl/observ/dir_set, daddy, src, TYPE_PROC_REF(/obj/effect/bluegoast, mirror_dir))
+	events_repository.register(/decl/observ/destroyed, daddy, src, TYPE_PROC_REF(/datum, qdel_self))
 
 /obj/effect/bluegoast/Destroy()
 	events_repository.unregister(/decl/observ/destroyed, daddy, src)
@@ -121,10 +121,7 @@
 /obj/effect/bluegoast/proc/blueswitch()
 	var/mob/living/carbon/human/H
 	if(ishuman(daddy))
-		H = new(get_turf(src), daddy.species.name)
-		H.dna = daddy.dna.Clone()
-		H.sync_organ_dna()
-		H.UpdateAppearance()
+		H = new(get_turf(src), daddy.species.name, daddy.dna.Clone(), daddy.get_bodytype())
 		for(var/obj/item/entry in daddy.get_equipped_items(TRUE))
 			daddy.remove_from_mob(entry) //steals instead of copies so we don't end up with duplicates
 			H.equip_to_appropriate_slot(entry)
@@ -136,12 +133,3 @@
 	H.flavor_text = daddy.flavor_text
 	daddy.dust()
 	qdel(src)
-
-/obj/screen/fullscreen/wormhole_overlay
-	icon = 'icons/effects/effects.dmi'
-	icon_state = "mfoam"
-	screen_loc = ui_entire_screen
-	color = "#ff9900"
-	alpha = 100
-	blend_mode = BLEND_SUBTRACT
-	layer = FULLSCREEN_LAYER

@@ -64,7 +64,7 @@
 			var/obj/item/paper/monitorkey/MK = new(loc)
 			// Will help make emagging the console not so easy to get away with.
 			MK.info += "<br><br><font color='red'>£%@%(*$%&(£&?*(%&£/{}</font>"
-			addtimer(CALLBACK(src, /obj/machinery/computer/message_monitor/proc/UnemagConsole), 100*length(linked_server.decryptkey))
+			addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/machinery/computer/message_monitor, UnemagConsole)), 100*length(linked_server.decryptkey))
 			message = rebootmsg
 			update_icon()
 			return 1
@@ -122,13 +122,13 @@
 					dat += "<dd><A href='?src=\ref[src];pass=1'>&#09;[++i]. Set Custom Key</a><br></dd>"
 			else
 				dat += "<br><hr><dd><span class='notice'>Please authenticate with the server in order to show additional options.</span>"
-			if((istype(user, /mob/living/silicon/ai) || istype(user, /mob/living/silicon/robot)) && (user.mind.assigned_special_role && user.mind.original == user))
+			if((isAI(user) || isrobot(user)) && (user.mind.assigned_special_role && user.mind.original == user))
 				//Malf/Traitor AIs can bruteforce into the system to gain the Key.
 				dat += "<dd><A href='?src=\ref[src];hack=1'><i><font color='Red'>*&@#. Bruteforce Key</font></i></font></a></dd>"
 
 		//Hacking screen.
 		if(2)
-			if(istype(user, /mob/living/silicon/ai) || istype(user, /mob/living/silicon/robot))
+			if(isAI(user) || isrobot(user))
 				dat += "Brute-forcing for server key.<br> It will take 20 seconds for every character that the password has."
 				dat += "In the meantime, this console can reveal your true intentions if you let someone access it. Make sure no humans enter the room during that time."
 			else
@@ -285,12 +285,12 @@
 
 	//Hack the Console to get the password
 	if (href_list["hack"])
-		if((istype(usr, /mob/living/silicon/ai) || istype(usr, /mob/living/silicon/robot)) && usr.mind.assigned_special_role && usr.mind.original == usr)
+		if((isAI(usr) || isrobot(usr)) && usr.mind.assigned_special_role && usr.mind.original == usr)
 			src.hacking = 1
 			src.screen = 2
 			update_icon()
 			//Time it takes to bruteforce is dependant on the password length.
-			addtimer(CALLBACK(src, /obj/machinery/computer/message_monitor/proc/BruteForceConsole, usr, linked_server), 100*length(linked_server.decryptkey))
+			addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/machinery/computer/message_monitor, BruteForceConsole), usr, linked_server), 100*length(linked_server.decryptkey))
 
 	//Delete the request console log.
 	if (href_list["deleter"])

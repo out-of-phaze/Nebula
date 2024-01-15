@@ -3,9 +3,9 @@
 	name = "web"
 	desc = "It's stringy and sticky."
 	icon = 'icons/effects/effects.dmi'
-	anchored = 1
-	density = 0
-	var/health = 15
+	anchored = TRUE
+	density = FALSE
+	max_health = 15
 
 //similar to weeds, but only barfed out by nurses manually
 /obj/effect/spider/explosion_act(severity)
@@ -69,6 +69,8 @@
 	if(exposed_temperature > 300 + T0C)
 		health -= 5
 		healthcheck()
+	if(!QDELETED(src))
+		return ..()
 
 /obj/effect/spider/stickyweb
 	icon_state = "stickyweb1"
@@ -82,7 +84,7 @@
 	if(air_group || (height==0)) return 1
 	if(istype(mover, /mob/living/simple_animal/hostile/giant_spider))
 		return 1
-	else if(istype(mover, /mob/living))
+	else if(isliving(mover))
 		if(prob(50))
 			to_chat(mover, "<span class='warning'>You get stuck in \the [src] for a moment.</span>")
 			return 0
@@ -141,9 +143,9 @@
 	name = "spiderling"
 	desc = "It never stays still for long."
 	icon_state = "lesser"
-	anchored = 0
+	anchored = FALSE
 	layer = BELOW_OBJ_LAYER
-	health = 3
+	max_health = 3
 	var/mob/living/simple_animal/hostile/giant_spider/greater_form
 	var/last_itch = 0
 	var/amount_grown = -1
@@ -170,7 +172,7 @@
 		dormant = FALSE
 
 	if(dormant)
-		events_repository.register(/decl/observ/moved, src, src, /obj/effect/spider/proc/disturbed)
+		events_repository.register(/decl/observ/moved, src, src, TYPE_PROC_REF(/obj/effect/spider, disturbed))
 	else
 		START_PROCESSING(SSobj, src)
 
@@ -185,7 +187,7 @@
 
 /obj/effect/spider/spiderling/Destroy()
 	if(dormant)
-		events_repository.unregister(/decl/observ/moved, src, src, /obj/effect/spider/proc/disturbed)
+		events_repository.unregister(/decl/observ/moved, src, src, TYPE_PROC_REF(/obj/effect/spider, disturbed))
 	STOP_PROCESSING(SSobj, src)
 	walk(src, 0) // Because we might have called walk_to, we must stop the walk loop or BYOND keeps an internal reference to us forever.
 	. = ..()
@@ -206,7 +208,7 @@
 	if(!dormant)
 		return
 	dormant = FALSE
-	events_repository.unregister(/decl/observ/moved, src, src, /obj/effect/spider/proc/disturbed)
+	events_repository.unregister(/decl/observ/moved, src, src, TYPE_PROC_REF(/obj/effect/spider, disturbed))
 	START_PROCESSING(SSobj, src)
 
 /obj/effect/spider/spiderling/Bump(atom/user)
@@ -231,7 +233,7 @@
 	if(prob(50))
 		src.visible_message("<span class='notice'>You hear something squeezing through the ventilation ducts.</span>",2)
 	forceMove(exit_vent)
-	addtimer(CALLBACK(src, .proc/end_vent_moving, exit_vent), travel_time)
+	addtimer(CALLBACK(src, PROC_REF(end_vent_moving), exit_vent), travel_time)
 
 /obj/effect/spider/spiderling/proc/end_vent_moving(obj/machinery/atmospherics/unary/vent_pump/exit_vent)
 	if(check_vent(exit_vent))
@@ -266,7 +268,7 @@
 
 				forceMove(entry_vent)
 				var/travel_time = round(get_dist(loc, exit_vent.loc) / 2)
-				addtimer(CALLBACK(src, .proc/start_vent_moving, exit_vent, travel_time), travel_time + rand(20,60))
+				addtimer(CALLBACK(src, PROC_REF(start_vent_moving), exit_vent, travel_time), travel_time + rand(20,60))
 				travelling_in_vent = TRUE
 				return
 			else
@@ -327,14 +329,14 @@
 	desc = "Green squishy mess."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "greenshatter"
-	anchored = 1
+	anchored = TRUE
 	layer = BLOOD_LAYER
 
 /obj/effect/spider/cocoon
 	name = "cocoon"
 	desc = "Something wrapped in silky spider web."
 	icon_state = "cocoon1"
-	health = 60
+	max_health = 60
 
 /obj/effect/spider/cocoon/Initialize()
 	. = ..()

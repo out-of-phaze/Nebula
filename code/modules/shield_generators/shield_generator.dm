@@ -3,7 +3,7 @@
 	desc = "A heavy-duty shield generator and capacitor, capable of generating energy shields at large distances."
 	icon = 'icons/obj/machines/shielding.dmi'
 	icon_state = "generator0"
-	density = 1
+	density = TRUE
 	base_type = /obj/machinery/shield_generator
 	construct_state = /decl/machine_construction/default/panel_closed
 	wires = /datum/wires/shield_generator
@@ -57,7 +57,7 @@
 	for(var/st in subtypesof(/datum/shield_mode/))
 		var/datum/shield_mode/SM = new st()
 		mode_list.Add(SM)
-	events_repository.register(/decl/observ/moved, src, src, .proc/update_overmap_shield_list)
+	events_repository.register(/decl/observ/moved, src, src, PROC_REF(update_overmap_shield_list))
 	. = INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/shield_generator/LateInitialize()

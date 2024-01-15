@@ -19,11 +19,15 @@
 	destruction_desc = "shatters"
 	hitsound = 'sound/effects/Glasshit.ogg'
 	is_psionic_nullifier = TRUE
+	exoplanet_rarity_plant = MAT_RARITY_EXOTIC
+	exoplanet_rarity_gas = MAT_RARITY_EXOTIC
 	uid = "solid_nullglass"
 
-/decl/material/nullglass/generate_recipes()
+
+/decl/material/nullglass/generate_recipes(stack_type, reinforce_material)
 	. = ..()
-	. += new /datum/stack_recipe/tile/nullglass(src)
+	if(!reinforce_material && islist(.) && !ispath(stack_type))
+		. += new /datum/stack_recipe/tile/nullglass(src)
 
 /obj/item/shard/nullglass
 	material = MAT_NULLGLASS

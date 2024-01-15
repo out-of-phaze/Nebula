@@ -6,12 +6,17 @@
 // Most of their superhuman qualities can be toggled off if you need a normal human for testing biological functions
 */
 
+#define isquantum(X) istype(X, /mob/living/carbon/human/quantum)
 /client/proc/spawn_quantum_mechanic()
 	set category = "Debug"
 	set name = "Spawn Quantum Mechanic"
 	set desc = "Spawns a Quantum Mechanic to debug stuff."
 
 	if(!check_rights(R_ADMIN|R_DEBUG))
+		return
+
+	if(GAME_STATE < RUNLEVEL_GAME)
+		to_chat(src, SPAN_WARNING("Please wait for the round to start..."))
 		return
 
 	var/T = get_turf(mob)
@@ -23,7 +28,7 @@
 	Q.ckey = ckey
 
 	var/decl/hierarchy/outfit/outfit = outfit_by_type(/decl/hierarchy/outfit/quantum)
-	outfit.equip(Q)
+	outfit.equip_outfit(Q)
 
 	//Sort out ID
 	var/obj/item/card/id/quantum/id = new (Q)
@@ -154,7 +159,7 @@
 	if(!user)
 		return TRUE
 
-	if(!istype(user, /mob/living/carbon/human/quantum))
+	if(!isquantum(user))
 		to_chat(user, SPAN_WARNING("Your hand seems to go right through \the [src]. It's like it doesn't exist."))
 		return TRUE
 
@@ -173,7 +178,7 @@
 	if(!user)
 		return TRUE
 
-	if(!istype(user, /mob/living/carbon/human/quantum))
+	if(!isquantum(user))
 		to_chat(user, SPAN_WARNING("Your hand seems to go right through \the [src]. It's like it doesn't exist."))
 		return TRUE
 
@@ -186,15 +191,13 @@
 	icon = 'icons/clothing/under/uniform_quantum.dmi'
 	cold_protection = SLOT_FULL_BODY
 	heat_protection = SLOT_FULL_BODY
-	sensor_mode = SUIT_SENSOR_OFF
-	has_sensor = FALSE
 	siemens_coefficient = 0
 
 /obj/item/clothing/under/color/quantum/attack_hand(mob/user)
 	if(!user)
 		return TRUE
 
-	if(!istype(user, /mob/living/carbon/human/quantum))
+	if(!isquantum(user))
 		to_chat(user, SPAN_WARNING("Your hand seems to go right through \the [src]. It's like it doesn't exist."))
 		return TRUE
 
@@ -211,7 +214,7 @@
 	if(!user)
 		return TRUE
 
-	if(!istype(user, /mob/living/carbon/human/quantum))
+	if(!isquantum(user))
 		to_chat(user, SPAN_WARNING("Your hand seems to go right through \the [src]. It's like it doesn't exist."))
 		return TRUE
 
@@ -248,7 +251,7 @@
 	if(!user)
 		return TRUE
 
-	if(!istype(user, /mob/living/carbon/human/quantum))
+	if(!isquantum(user))
 		to_chat(user, SPAN_WARNING("Your hand seems to go right through \the [src]. It's like it doesn't exist."))
 		return TRUE
 
@@ -264,7 +267,7 @@
 	if(!user)
 		return TRUE
 
-	if(!istype(user, /mob/living/carbon/human/quantum))
+	if(!isquantum(user))
 		to_chat(user, SPAN_WARNING("Your hand seems to go right through \the [src]. It's like it doesn't exist."))
 		return TRUE
 
@@ -282,7 +285,7 @@
 	if(!user)
 		return TRUE
 
-	if(!istype(user, /mob/living/carbon/human/quantum))
+	if(!isquantum(user))
 		to_chat(user, SPAN_WARNING("Your hand seems to go right through \the [src]. It's like it doesn't exist."))
 		return TRUE
 

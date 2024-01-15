@@ -3,7 +3,7 @@
 	desc = "Used to remotely activate devices."
 	icon_state = "signaller"
 	item_state = "signaler"
-	origin_tech = "{'magnets':1}"
+	origin_tech = @'{"magnets":1}'
 	material = /decl/material/solid/metal/steel
 	matter = list(
 		/decl/material/solid/fiberglass = MATTER_AMOUNT_REINFORCEMENT,
@@ -102,7 +102,7 @@
 	radio_connection.post_signal(src, signal)
 
 
-/obj/item/assembly/signaler/pulse(var/radio = 0)
+/obj/item/assembly/signaler/pulse_device(var/radio = 0)
 	if(src.connected && src.wires)
 		connected.Pulse(src)
 	else if(holder)
@@ -116,7 +116,7 @@
 	if(!signal)	return 0
 	if(signal.encryption != code)	return 0
 	if(!(src.wires & WIRE_RADIO_RECEIVE))	return 0
-	pulse(1)
+	pulse_device(1)
 	if(!holder)
 		audible_message(SPAN_NOTICE("[html_icon(src)] *beep* *beep*"), null, 3)
 

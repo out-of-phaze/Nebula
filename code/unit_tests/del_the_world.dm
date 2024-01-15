@@ -30,6 +30,8 @@
 		// Not valid when spawned manually.
 		/obj/effect/overmap,
 		/obj/effect/shuttle_landmark,
+		// Generally not expected to be spawned outside of a mob HUD context.
+		/obj/screen
 	) + list(
 		// Exclude only this type, since it's not meant to be spawned but its subtypes are.
 		// TODO: Consider whether this warrants abstract_type?
@@ -48,7 +50,7 @@
 			if(!QDELETED(AM)) // could have returned the qdel hint
 				qdel(AM, force = TRUE) // must qdel prior to anything it spawns, just in case
 		catch(var/exception/e)
-			failures += "Runtime during creation of [path]: [e.file]:[e.line], [e]\n[e.desc]"
+			failures += "Runtime during creation of [path]: [EXCEPTION_TEXT(e)]"
 		// If it spawned anything else, delete that.
 		var/list/del_candidates = spawn_loc.contents - cached_contents
 		if(length(del_candidates)) // explicit length check is faster here

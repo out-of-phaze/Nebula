@@ -3,8 +3,7 @@
 	real_name = "Shade"
 	desc = "A bound spirit"
 	icon = 'icons/mob/simple_animal/shade.dmi'
-	maxHealth = 50
-	health = 50
+	mob_default_max_health = 50
 	universal_speak = TRUE
 	speak_emote = list("hisses")
 	emote_hear = list("wails","screeches")
@@ -48,11 +47,8 @@
 	OnDeathInLife()
 
 /mob/living/simple_animal/shade/proc/OnDeathInLife()
-	if(stat == 2)
+	if(stat == DEAD)
 		new /obj/item/ectoplasm (src.loc)
-		for(var/mob/M in viewers(src, null))
-			if((M.client && !( M.blinded )))
-				M.show_message("<span class='warning'>[src] lets out a contented sigh as their form unwinds.</span>")
-				ghostize()
+		visible_message(SPAN_WARNING("\The [src] lets out a contented sigh as their form unwinds."))
+		ghostize()
 		qdel(src)
-		return

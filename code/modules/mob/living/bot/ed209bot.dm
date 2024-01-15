@@ -5,9 +5,8 @@
 	icon_state = "ed2090"
 	attack_state = "ed209-c"
 	layer = MOB_LAYER
-	density = 1
-	health = 100
-	maxHealth = 100
+	density = TRUE
+	mob_default_max_health = 100
 
 	preparing_arrest_sounds = new()
 
@@ -28,7 +27,8 @@
 	var/turf/Tsec = get_turf(src)
 
 	var/obj/item/gun/energy/taser/G = new /obj/item/gun/energy/taser(Tsec)
-	G.power_supply.charge = 0
+	var/obj/item/cell/power_supply = G.get_cell()
+	power_supply?.charge = 0
 	if(prob(50))
 		new /obj/item/robot_parts/l_leg(Tsec)
 	if(prob(50))

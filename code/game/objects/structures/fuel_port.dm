@@ -7,7 +7,7 @@
 	density = FALSE
 	anchored = TRUE
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
-	directional_offset = "{'NORTH':{'y':-32}, 'SOUTH':{'y':32}, 'EAST':{'x':-32}, 'WEST':{'x':32}}"
+	directional_offset = @'{"NORTH":{"y":-32}, "SOUTH":{"y":32}, "EAST":{"x":-32}, "WEST":{"x":32}}'
 
 	var/open = FALSE
 	var/parent_shuttle
@@ -27,7 +27,7 @@
 	return locate(/obj/item/tank) in contents
 
 /obj/structure/fuel_port/attack_hand(mob/user)
-	if(!user.check_dexterity(DEXTERITY_GRIP, TRUE))
+	if(!user.check_dexterity(DEXTERITY_HOLD_ITEM, TRUE))
 		return ..()
 	if(!open)
 		to_chat(user, SPAN_WARNING("The door is secured tightly. You'll need a crowbar to open it."))

@@ -50,7 +50,7 @@
 /// If it does exist on the species, we reset it to the species' trait level.
 /mob/living/proc/RemoveExtrinsicTrait(trait_type)
 	var/decl/species/our_species = get_species()
-	if(!LAZYISIN(our_species?.traits, trait_type))
+	if(!LAZYACCESS(our_species?.traits, trait_type))
 		RemoveTrait(trait_type)
 	else if(our_species?.traits[trait_type] != GetTraitLevel(trait_type))
 		SetTrait(trait_type, our_species?.traits[trait_type])
@@ -70,7 +70,7 @@
 	for(var/trait in matched_traits) // inside this loop we know our_species exists and has traits
 		if(traits[trait] != our_species.traits[trait])
 			return FALSE
-	traits = LAZYLEN(our_species.traits) ? our_species.traits.Copy() : null // if it has traits, use them, otherwise null
+	traits = null
 	return TRUE
 
 /decl/trait

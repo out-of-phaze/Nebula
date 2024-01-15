@@ -21,8 +21,8 @@
 	var/amount = 30
 
 	idle_power_usage = 100
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 	obj_flags = OBJ_FLAG_ANCHORABLE
 	core_skill = SKILL_CHEMISTRY
 	var/can_contaminate = TRUE
@@ -130,8 +130,8 @@
 		events_repository.unregister(/decl/observ/destroyed, container, src)
 	container = new_container
 	if(container)
-		events_repository.register(/decl/observ/moved, container, src, .proc/check_container_status)
-		events_repository.register(/decl/observ/destroyed, container, src, .proc/check_container_status)
+		events_repository.register(/decl/observ/moved, container, src, PROC_REF(check_container_status))
+		events_repository.register(/decl/observ/destroyed, container, src, PROC_REF(check_container_status))
 	update_icon()
 	SSnano.update_uis(src) // update all UIs attached to src
 

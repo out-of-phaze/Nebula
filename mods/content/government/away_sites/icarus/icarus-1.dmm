@@ -186,7 +186,7 @@
 /turf/simulated/floor/tiled,
 /area/icarus/vessel)
 "aR" = (
-/obj/structure/sign/icarus/solgov{
+/obj/structure/sign/solgov{
 	pixel_y = 30
 	},
 /turf/simulated/floor/tiled,
@@ -1973,7 +1973,6 @@
 "gu" = (
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "prototype_chamber_blast"
 	},
 /obj/machinery/door/firedoor,

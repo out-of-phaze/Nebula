@@ -87,7 +87,7 @@ var/global/list/time_prefs_fixed = list()
 	real_name = get_random_name()
 
 	var/decl/species/species = get_species_by_key(global.using_map.default_species)
-	b_type = pickweight(species.blood_types)
+	blood_type = pickweight(species.blood_types)
 
 	if(client)
 		if(IsGuestKey(client.key))
@@ -119,7 +119,7 @@ var/global/list/time_prefs_fixed = list()
 		else
 			SScharacter_setup.queue_load_character(src)
 	catch(var/exception/E)
-		load_failed = "{[stage]} [E]"
+		load_failed = "{[stage]} [EXCEPTION_TEXT(E)]"
 		throw E
 
 // separated out to avoid stalling SScharacter_setup's Initialize
@@ -127,7 +127,7 @@ var/global/list/time_prefs_fixed = list()
 	try
 		load_character()
 	catch(var/exception/E)
-		load_failed = "{lateload_character} [E]"
+		load_failed = "{lateload_character} [EXCEPTION_TEXT(E)]"
 		throw E
 
 /datum/preferences/proc/migrate_legacy_preferences()
@@ -279,13 +279,13 @@ var/global/list/time_prefs_fixed = list()
 	char_render_holders = null
 
 /datum/preferences/proc/process_link(mob/user, list/href_list)
-
-	if(!user)	return
-	if(isliving(user)) return
-
+	if(!user)
+		return
+	if(isliving(user))
+		return
 	if(href_list["preference"] == "open_whitelist_forum")
-		if(config.forumurl)
-			direct_output(user, link(config.forumurl))
+		if(get_config_value(/decl/config/text/forumurl))
+			direct_output(user, link(get_config_value(/decl/config/text/forumurl)))
 		else
 			to_chat(user, "<span class='danger'>The forum URL is not set in the server configuration.</span>")
 			return
@@ -343,19 +343,19 @@ var/global/list/time_prefs_fixed = list()
 
 	// Sanitizing rather than saving as someone might still be editing when copy_to occurs.
 	player_setup.sanitize_setup()
-	var/decl/species/our_species = get_species_by_key(species || global.using_map.default_species)
 	character.personal_aspects = list()
-	var/decl/bodytype/new_bodytype = our_species.get_bodytype_by_name(bodytype) || our_species.default_bodytype
+	var/decl/bodytype/new_bodytype = get_bodytype_decl()
 	if(species == character.get_species_name())
-		character.set_bodytype(new_bodytype, rebuild_body = TRUE)
+		character.set_bodytype(new_bodytype)
 	else
 		character.change_species(species, new_bodytype)
 
 	if(be_random_name)
 		var/decl/cultural_info/culture = GET_DECL(cultural_info[TAG_CULTURE])
-		if(culture) real_name = culture.get_random_name(gender)
+		if(culture)
+			real_name = culture.get_random_name(gender)
 
-	if(config.humans_need_surnames)
+	if(get_config_value(/decl/config/toggle/humans_need_surnames))
 		var/firstspace = findtext(real_name, " ")
 		var/name_length = length(real_name)
 		if(!firstspace)	//we need a surname
@@ -366,7 +366,7 @@ var/global/list/time_prefs_fixed = list()
 	character.fully_replace_character_name(real_name)
 
 	character.set_gender(gender)
-	character.b_type = b_type
+	character.blood_type = blood_type
 
 	character.eye_colour = eye_colour
 
@@ -413,6 +413,11 @@ var/global/list/time_prefs_fixed = list()
 
 	if(LAZYLEN(appearance_descriptors))
 		character.appearance_descriptors = appearance_descriptors.Copy()
+
+	if(character.dna)
+		character.dna.ready_dna(character)
+		if(client.prefs?.blood_type)
+			character.dna.b_type = client.prefs.blood_type
 
 	character.force_update_limbs()
 	character.update_mutations(0)
@@ -462,7 +467,8 @@ var/global/list/time_prefs_fixed = list()
 	dat += "<tt><center>"
 
 	dat += "<b>Select a character slot to load</b><hr>"
-	for(var/i=1, i<= config.character_slots, i++)
+	var/character_slots = get_config_value(/decl/config/num/character_slots)
+	for(var/i = 1 to character_slots)
 		var/name = (slot_names && slot_names[get_slot_key(i)]) || "Character[i]"
 		if(i==default_slot)
 			name = "<b>[name]</b>"

@@ -4,6 +4,27 @@
 	icon_base =         'icons/mob/human_races/species/humanoid/body.dmi'
 	bandages_icon =     'icons/mob/bandage.dmi'
 	limb_blend =        ICON_MULTIPLY
+	appearance_flags =  HAS_SKIN_COLOR
+	body_flags =        BODY_FLAG_NO_DNA | BODY_FLAG_NO_DEFIB | BODY_FLAG_NO_STASIS
+
+/decl/bodytype/alium/Initialize()
+	if(prob(10))
+		movement_slowdown += pick(-1,1)
+	if(prob(5))
+		body_flags |= BODY_FLAG_NO_PAIN
+	base_color  = RANDOM_RGB
+	MULT_BY_RANDOM_COEF(eye_flash_mod, 0.5, 1.5)
+	eye_darksight_range = rand(1,8)
+	var/temp_comfort_shift = rand(-50,50)
+	cold_level_1 += temp_comfort_shift
+	cold_level_2 += temp_comfort_shift
+	cold_level_3 += temp_comfort_shift
+	heat_level_1 += temp_comfort_shift
+	heat_level_2 += temp_comfort_shift
+	heat_level_3 += temp_comfort_shift
+	heat_discomfort_level += temp_comfort_shift
+	cold_discomfort_level += temp_comfort_shift
+	. = ..()
 
 /decl/species/alium
 	name = SPECIES_ALIEN
@@ -11,12 +32,9 @@
 	description = "Some alien humanoid species, unknown to humanity. How exciting."
 	rarity_value = 5
 
-	species_flags = SPECIES_FLAG_NO_SCAN
 	spawn_flags = SPECIES_IS_RESTRICTED
 
 	available_bodytypes = list(/decl/bodytype/alium)
-
-	appearance_flags = HAS_SKIN_COLOR
 
 	force_cultural_info = list(
 		TAG_CULTURE = /decl/cultural_info/culture/hidden/alium
@@ -38,7 +56,6 @@
 	//Coloring
 	blood_color = RANDOM_RGB
 	flesh_color = RANDOM_RGB
-	base_color  = RANDOM_RGB
 
 	//Combat stats
 	MULT_BY_RANDOM_COEF(total_health, 0.8, 1.2)
@@ -47,7 +64,6 @@
 	MULT_BY_RANDOM_COEF(oxy_mod, 0.5, 1.5)
 	MULT_BY_RANDOM_COEF(toxins_mod, 0, 2)
 	MULT_BY_RANDOM_COEF(radiation_mod, 0, 2)
-	MULT_BY_RANDOM_COEF(flash_mod, 0.5, 1.5)
 
 	if(brute_mod < 1 && prob(40))
 		species_flags |= SPECIES_FLAG_NO_MINOR_CUT
@@ -67,17 +83,6 @@
 
 	//Environment
 	var/temp_comfort_shift = rand(-50,50)
-	cold_level_1 += temp_comfort_shift
-	cold_level_2 += temp_comfort_shift
-	cold_level_3 += temp_comfort_shift
-
-	heat_level_1 += temp_comfort_shift
-	heat_level_2 += temp_comfort_shift
-	heat_level_3 += temp_comfort_shift
-
-	heat_discomfort_level += temp_comfort_shift
-	cold_discomfort_level += temp_comfort_shift
-
 	body_temperature += temp_comfort_shift
 
 	var/pressure_comfort_shift = rand(-50,50)
@@ -87,17 +92,12 @@
 	hazard_low_pressure += pressure_comfort_shift
 
 	//Misc traits
-	darksight_range = rand(1,8)
 	if(prob(40))
 		available_pronouns = list(/decl/pronouns)
-	if(prob(10))
-		slowdown += pick(-1,1)
 	if(prob(10))
 		species_flags |= SPECIES_FLAG_NO_SLIP
 	if(prob(10))
 		species_flags |= SPECIES_FLAG_NO_TANGLE
-	if(prob(5))
-		species_flags |= SPECIES_FLAG_NO_PAIN
 
 	. = ..()
 
@@ -106,50 +106,12 @@
 		return ..()
 	return blood_color
 
-/decl/species/alium/proc/adapt_to_atmosphere(var/datum/gas_mixture/atmosphere)
-	var/temp_comfort_shift = atmosphere.temperature - body_temperature
-
-	cold_level_1 += temp_comfort_shift
-	cold_level_2 += temp_comfort_shift
-	cold_level_3 += temp_comfort_shift
-
-	heat_level_1 += temp_comfort_shift
-	heat_level_2 += temp_comfort_shift
-	heat_level_3 += temp_comfort_shift
-
-	heat_discomfort_level += temp_comfort_shift
-	cold_discomfort_level += temp_comfort_shift
-
-	body_temperature += temp_comfort_shift
-
-	var/normal_pressure = atmosphere.return_pressure()
-	hazard_high_pressure = 5 * normal_pressure
-	warning_high_pressure = 0.7 * hazard_high_pressure
-
-	hazard_low_pressure = 0.2 * normal_pressure
-	warning_low_pressure = 2.5 * hazard_low_pressure
-
-	breath_type = pick(atmosphere.gas)
-	breath_pressure = 0.8*(atmosphere.gas[breath_type]/atmosphere.total_moles)*normal_pressure
-
-	var/list/newgases = decls_repository.get_decl_paths_of_subtype(/decl/material/gas)
-	newgases = newgases.Copy()
-	newgases ^= atmosphere.gas
-	for(var/gas in newgases)
-		var/decl/material/mat = GET_DECL(gas)
-		if(mat.gas_flags & (XGM_GAS_OXIDIZER|XGM_GAS_FUEL))
-			newgases -= gas
-	if(newgases.len)
-		poison_types = list(pick_n_take(newgases))
-	if(newgases.len)
-		exhale_type = pick_n_take(newgases)
-
 /obj/structure/aliumizer
 	name = "alien monolith"
 	desc = "Your true form is calling. Use this to become an alien humanoid."
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	icon_state = "ano51"
-	anchored = 1
+	anchored = TRUE
 
 /obj/structure/aliumizer/attack_hand(mob/user)
 	SHOULD_CALL_PARENT(FALSE)

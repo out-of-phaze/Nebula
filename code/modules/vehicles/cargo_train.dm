@@ -6,19 +6,20 @@
 	on = 0
 	powered = 1
 	locked = 0
-
 	load_item_visible = 1
 	load_offset_x = 0
 	buckle_pixel_shift = list("x" = 0, "y" = 0, "z" = 7)
-
-	var/car_limit = 3		//how many cars an engine can pull before performance degrades
 	charge_use = 1 KILOWATTS
 	active_engines = 1
+	var/car_limit = 3		//how many cars an engine can pull before performance degrades
 	var/obj/item/key/cargo_train/key
 
 /obj/item/key/cargo_train
-	name = "key"
-	desc = "A keyring with a small steel key, and a yellow fob reading \"Choo Choo!\"."
+	desc = "A small key on a yellow fob reading \"Choo Choo!\"."
+	material = /decl/material/solid/metal/steel
+	matter = list(
+		/decl/material/solid/organic/plastic = MATTER_AMOUNT_REINFORCEMENT
+	)
 	icon = 'icons/obj/vehicles.dmi'
 	icon_state = "train_keys"
 	w_class = ITEM_SIZE_TINY
@@ -27,7 +28,7 @@
 	name = "cargo train trolley"
 	icon = 'icons/obj/vehicles.dmi'
 	icon_state = "cargo_trailer"
-	anchored = 0
+	anchored = FALSE
 	passenger_allowed = 0
 	locked = 0
 	buckle_pixel_shift = list("x" = 0, "y" = 0, "z" = 8)
@@ -162,7 +163,7 @@
 
 /obj/vehicle/train/cargo/engine/crossed_mob(var/mob/living/victim)
 	..()
-	if(is_train_head() && istype(load, /mob/living/carbon/human))
+	if(is_train_head() && ishuman(load))
 		var/mob/living/carbon/human/D = load
 		to_chat(D, "<span class='danger'>You ran over \the [victim]!</span>")
 		visible_message("<span class='danger'>\The [src] ran over \the [victim]!</span>")
@@ -194,7 +195,7 @@
 	if(distance > 1)
 		return
 
-	if(!istype(usr, /mob/living/carbon/human))
+	if(!ishuman(usr))
 		return
 
 	to_chat(user, "The power light is [on ? "on" : "off"].\nThere are[key ? "" : " no"] keys in the ignition.")
@@ -205,7 +206,7 @@
 	set category = "Object"
 	set src in view(0)
 
-	if(!istype(usr, /mob/living/carbon/human))
+	if(!ishuman(usr))
 		return
 
 	if(on)
@@ -226,7 +227,7 @@
 	set category = "Object"
 	set src in view(0)
 
-	if(!istype(usr, /mob/living/carbon/human))
+	if(!ishuman(usr))
 		return
 
 	if(!on)
@@ -242,7 +243,7 @@
 	set category = "Object"
 	set src in view(0)
 
-	if(!istype(usr, /mob/living/carbon/human))
+	if(!ishuman(usr))
 		return
 
 	if(!key || (load && load != usr))
@@ -262,7 +263,7 @@
 /obj/vehicle/train/cargo/trolley/load(var/atom/movable/C)
 	if(ismob(C) && !passenger_allowed)
 		return 0
-	if(!istype(C,/obj/machinery) && !istype(C,/obj/structure/closet) && !istype(C,/obj/structure/largecrate) && !istype(C,/obj/structure/reagent_dispensers) && !istype(C,/obj/structure/ore_box) && !istype(C, /mob/living/carbon/human))
+	if(!istype(C,/obj/machinery) && !istype(C,/obj/structure/closet) && !istype(C,/obj/structure/largecrate) && !istype(C,/obj/structure/reagent_dispensers) && !istype(C,/obj/structure/ore_box) && !ishuman(C))
 		return 0
 
 	//if there are any items you don't want to be able to interact with, add them to this check
@@ -276,7 +277,7 @@
 		return 1
 
 /obj/vehicle/train/cargo/engine/load(var/atom/movable/C)
-	if(!istype(C, /mob/living/carbon/human))
+	if(!ishuman(C))
 		return 0
 
 	return ..()
@@ -360,16 +361,16 @@
 	if(!is_train_head() || !on)
 		move_delay = initial(move_delay)		//so that engines that have been turned off don't lag behind
 	else
-		move_delay = max(0, (-car_limit * active_engines) + train_length - active_engines)	//limits base overweight so you cant overspeed trains
-		move_delay *= (1 / max(1, active_engines)) * 2 										//overweight penalty (scaled by the number of engines)
-		move_delay += config.run_delay 														//base reference speed
-		move_delay *= 1.1																	//makes cargo trains 10% slower than running when not overweight
+		move_delay = max(0, (-car_limit * active_engines) + train_length - active_engines) // limits base overweight so you cant overspeed trains
+		move_delay *= (1 / max(1, active_engines)) * 2                                     // overweight penalty (scaled by the number of engines)
+		move_delay += get_config_value(/decl/config/num/movement_run)      // base reference speed
+		move_delay *= 1.1                                                                  // makes cargo trains 10% slower than running when not overweight
 
 /obj/vehicle/train/cargo/trolley/update_car(var/train_length, var/active_engines)
 	src.train_length = train_length
 	src.active_engines = active_engines
 
 	if(!lead && !tow)
-		anchored = 0
+		anchored = FALSE
 	else
-		anchored = 1
+		anchored = TRUE

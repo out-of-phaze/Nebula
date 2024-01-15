@@ -91,7 +91,7 @@ var/global/list/all_apcs = list()
 
 	icon_state = "apc0"
 	icon = 'icons/obj/apc.dmi'
-	anchored = 1
+	anchored = TRUE
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
 	use_power = POWER_USE_IDLE // Has custom handling here.
 	power_channel = LOCAL      // Do not manipulate this; you don't want to power the APC off itself.
@@ -100,7 +100,7 @@ var/global/list/all_apcs = list()
 	initial_access = list(access_engine_equip)
 	clicksound = "switch"
 	layer = ABOVE_WINDOW_LAYER
-	directional_offset = "{'NORTH':{'y':22}, 'SOUTH':{'y':-22}, 'EAST':{'x':22}, 'WEST':{'x':-22}}"
+	directional_offset = @'{"NORTH":{"y":22}, "SOUTH":{"y":-22}, "EAST":{"x":22}, "WEST":{"x":-22}}'
 
 	var/powered_down = FALSE
 	var/area/area
@@ -220,14 +220,14 @@ var/global/list/all_apcs = list()
 		old_area.power_environ = 0
 		power_alarm.clearAlarm(old_area, src)
 		old_area.power_change()
-		events_repository.unregister(/decl/observ/name_set, old_area, src, .proc/change_area_name)
+		events_repository.unregister(/decl/observ/name_set, old_area, src, PROC_REF(change_area_name))
 	if(new_area)
 		ASSERT(isnull(new_area.apc))
 		ASSERT(isnull(area))
 		new_area.apc = src
 		area = new_area
 		change_area_name(new_area, null, new_area.name)
-		events_repository.register(/decl/observ/name_set, new_area, src, .proc/change_area_name)
+		events_repository.register(/decl/observ/name_set, new_area, src, PROC_REF(change_area_name))
 
 /obj/machinery/power/apc/get_req_access()
 	if(!locked)
@@ -486,7 +486,7 @@ var/global/list/all_apcs = list()
 
 /obj/machinery/power/apc/physical_attack_hand(mob/user)
 	//Human mob special interaction goes here.
-	if(istype(user,/mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 
 		if(H.species.can_shred(H))
@@ -532,7 +532,7 @@ var/global/list/all_apcs = list()
 		"totalCharging" = round(lastused_charging),
 		"coverLocked" = coverlocked,
 		"failTime" = failure_timer * 2,
-		"siliconUser" = istype(user, /mob/living/silicon),
+		"siliconUser" = issilicon(user),
 		"remote_control" = remote_control,
 		"powerChannels" = list(
 			list(
@@ -623,7 +623,7 @@ var/global/list/all_apcs = list()
 	if(user.lying)
 		to_chat(user, "<span class='warning'>You must stand to use [src]!</span>")
 		return STATUS_CLOSE
-	if(istype(user, /mob/living/silicon))
+	if(issilicon(user))
 		var/permit = 0 // Malfunction variable. If AI hacks APC it can control it even without AI control wire.
 		var/mob/living/silicon/ai/AI = user
 		var/mob/living/silicon/robot/robot = user
@@ -699,7 +699,7 @@ var/global/list/all_apcs = list()
 		return TOPIC_REFRESH
 
 	if(href_list["overload"])
-		if(istype(user, /mob/living/silicon))
+		if(issilicon(user))
 			overload_lighting()
 		return TOPIC_REFRESH
 

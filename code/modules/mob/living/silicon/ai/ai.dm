@@ -52,11 +52,15 @@ var/global/list/ai_verbs_default = list(
 	icon = 'icons/mob/AI.dmi'
 	icon_state = "ai"
 	mob_sort_value = 2
-	anchored = 1 // -- TLE
-	density = 1
+	anchored = TRUE // -- TLE
+	density = TRUE
 	status_flags = CANSTUN|CANPARALYSE|CANPUSH
 	shouldnt_see = list(/obj/effect/rune)
-	maxHealth = 200
+	mob_default_max_health = 200
+
+	silicon_camera = /obj/item/camera/siliconcam/ai_camera
+	silicon_radio = /obj/item/radio/headset/heads/ai_integrated
+
 	var/obj/machinery/camera/camera = null
 	var/list/connected_robots = list()
 	var/aiRestorePowerRoutine = 0
@@ -65,9 +69,6 @@ var/global/list/ai_verbs_default = list(
 	var/icon/holo_icon_longrange //Yellow hologram.
 	var/holo_icon_malf = FALSE // for new hologram system
 	var/obj/item/multitool/aiMulti = null
-
-	silicon_camera = /obj/item/camera/siliconcam/ai_camera
-	silicon_radio = /obj/item/radio/headset/heads/ai_integrated
 	var/obj/item/radio/headset/heads/ai_integrated/ai_radio
 
 	var/camera_light_on = 0	//Defines if the AI toggled the light on the camera it's looking through.
@@ -120,7 +121,7 @@ var/global/list/ai_verbs_default = list(
 				pickedName = null
 
 	fully_replace_character_name(pickedName)
-	anchored = 1
+	anchored = TRUE
 	set_density(1)
 
 	holo_icon = getHologramIcon(icon('icons/mob/hologram.dmi',"Face"), custom_color_tone)
@@ -583,7 +584,7 @@ var/global/list/custom_ai_icons_by_ckey_and_name = list()
 				user.visible_message("<span class='notice'>\The [user] decides not to unbolt \the [src].</span>")
 				return
 			user.visible_message("<span class='notice'>\The [user] finishes unfastening \the [src]!</span>")
-			anchored = 0
+			anchored = FALSE
 			return
 		else
 			user.visible_message("<span class='notice'>\The [user] starts to bolt \the [src] to the plating...</span>")
@@ -591,7 +592,7 @@ var/global/list/custom_ai_icons_by_ckey_and_name = list()
 				user.visible_message("<span class='notice'>\The [user] decides not to bolt \the [src].</span>")
 				return
 			user.visible_message("<span class='notice'>\The [user] finishes fastening down \the [src]!</span>")
-			anchored = 1
+			anchored = TRUE
 			return
 	if(try_stock_parts_install(W, user))
 		return

@@ -27,7 +27,7 @@
 	item_state = "syringe_kit"
 	max_storage_space = DEFAULT_BOX_STORAGE
 	use_sound = 'sound/effects/storage/box.ogg'
-	material = /decl/material/solid/cardboard
+	material = /decl/material/solid/organic/cardboard
 	obj_flags = OBJ_FLAG_HOLLOW
 	var/foldable = /obj/item/stack/material/cardstock	// BubbleWrap - if set, can be folded (when empty) into a sheet of cardboard
 
@@ -416,7 +416,7 @@
 /obj/item/storage/box/snappops
 	name = "snap pop box"
 	desc = "Eight wrappers of fun! Ages 8 and up. Not suitable for children."
-	icon = 'icons/obj/toy.dmi'
+	icon = 'icons/obj/toy/toy.dmi'
 	icon_state = "spbox"
 	can_hold = list(/obj/item/toy/snappop)
 
@@ -522,6 +522,13 @@
 	icon_state = "box"
 /obj/item/storage/box/greenglowsticks/WillContain()
 	return list(/obj/item/flashlight/flare/glowstick = 6)
+
+/obj/item/storage/box/flares
+	name = "box of flares"
+	icon_state = "box"
+
+/obj/item/storage/box/flares/WillContain()
+	return list(/obj/item/flashlight/flare = 6)
 
 /obj/item/storage/box/freezer
 	name = "portable freezer"

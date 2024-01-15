@@ -2,7 +2,7 @@
 	name = "timer"
 	desc = "Used to time things. Works well with contraptions which have to count down. Tick tock."
 	icon_state = "timer"
-	origin_tech = "{'magnets':1}"
+	origin_tech = @'{"magnets":1}'
 	material = /decl/material/solid/metal/steel
 	matter = list(
 		/decl/material/solid/fiberglass = MATTER_AMOUNT_REINFORCEMENT,
@@ -41,7 +41,7 @@
 
 /obj/item/assembly/timer/timer_end()
 	if(!secured)	return 0
-	pulse(0)
+	pulse_device(0)
 	if(!holder)
 		visible_message("[html_icon(src)] *beep* *beep*", "*beep* *beep*")
 	cooldown = 2

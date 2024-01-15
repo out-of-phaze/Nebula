@@ -1,10 +1,9 @@
 /mob/living/bot
 	name = "Bot"
-	health = 20
-	maxHealth = 20
+	mob_default_max_health = 20
 	icon = 'icons/mob/bot/placeholder.dmi'
 	universal_speak = TRUE
-	density = 0
+	density = FALSE
 
 	meat_type = null
 	meat_amount = 0
@@ -55,8 +54,6 @@
 	access_scanner = new /obj(src)
 	access_scanner.req_access = req_access?.Copy()
 
-/mob/living/bot/Initialize()
-	. = ..()
 	if(on)
 		turn_on() // Update lights and other stuff
 	else
@@ -64,8 +61,7 @@
 
 /mob/living/bot/Life()
 	..()
-	if(health <= 0)
-		death()
+	if(stat == DEAD)
 		return
 	set_status(STAT_WEAK, 0)
 	set_status(STAT_STUN, 0)
@@ -74,14 +70,13 @@
 	if(on && !client && !busy)
 		handleAI()
 
-/mob/living/bot/updatehealth()
-	if(status_flags & GODMODE)
-		health = maxHealth
-		set_stat(CONSCIOUS)
-	else
-		health = maxHealth - getFireLoss() - getBruteLoss()
+/mob/living/bot/get_total_life_damage()
+	return getFireLoss() + getBruteLoss()
 
 /mob/living/bot/death()
+	if(stat == DEAD)
+		return
+	set_stat(DEAD)
 	explode()
 
 /mob/living/bot/attackby(var/obj/item/O, var/mob/user)
@@ -104,9 +99,9 @@
 			to_chat(user, "<span class='notice'>You need to unlock the controls first.</span>")
 		return
 	else if(IS_WELDER(O))
-		if(health < maxHealth)
+		if(current_health < get_max_health())
 			if(open)
-				health = min(maxHealth, health + 10)
+				heal_overall_damage(10)
 				user.visible_message("<span class='notice'>\The [user] repairs \the [src].</span>","<span class='notice'>You repair \the [src].</span>")
 			else
 				to_chat(user, "<span class='notice'>Unable to repair with the maintenance panel closed.</span>")
@@ -288,7 +283,7 @@
 /mob/living/bot/proc/startPatrol()
 	var/turf/T = getPatrolTurf()
 	if(T)
-		patrol_path = AStar(get_turf(loc), T, /turf/proc/CardinalTurfsWithAccess, /turf/proc/Distance, 0, max_patrol_dist, id = botcard, exclude = obstacle)
+		patrol_path = AStar(get_turf(loc), T, TYPE_PROC_REF(/turf, CardinalTurfsWithAccess), TYPE_PROC_REF(/turf, Distance), 0, max_patrol_dist, id = botcard, exclude = obstacle)
 		if(!patrol_path)
 			patrol_path = list()
 		obstacle = null
@@ -320,7 +315,7 @@
 	return
 
 /mob/living/bot/proc/calcTargetPath()
-	target_path = AStar(get_turf(loc), get_turf(target), /turf/proc/CardinalTurfsWithAccess, /turf/proc/Distance, 0, max_target_dist, id = botcard, exclude = obstacle)
+	target_path = AStar(get_turf(loc), get_turf(target), TYPE_PROC_REF(/turf, CardinalTurfsWithAccess), TYPE_PROC_REF(/turf, Distance), 0, max_target_dist, id = botcard, exclude = obstacle)
 	if(!target_path)
 		if(target && target.loc)
 			ignore_list |= target
@@ -429,3 +424,8 @@
 			//if((dir & EAST ) && (D.dir & (NORTH|SOUTH)))	return !D.check_access(ID)
 		else return !D.check_access(ID)	// it's a real, air blocking door
 	return 0
+
+/mob/living/bot/GetIdCards(list/exceptions)
+	. = ..()
+	if(istype(botcard) && !is_type_in_list(botcard, exceptions))
+		LAZYDISTINCTADD(., botcard)

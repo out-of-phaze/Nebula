@@ -2,8 +2,8 @@
 	name = "computer console"
 	icon = 'icons/obj/computer.dmi'
 	icon_state = "computer"
-	density = 1
-	anchored = 1.0
+	density = TRUE
+	anchored = TRUE
 	idle_power_usage = 300
 	active_power_usage = 300
 	construct_state = /decl/machine_construction/default/panel_closed/computer
@@ -16,7 +16,7 @@
 	var/light_range_on = 2
 	var/light_power_on = 1
 	var/overlay_layer
-	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CLIMBABLE
+	atom_flags = ATOM_FLAG_CLIMBABLE
 	clicksound = "keyboard"
 
 /obj/machinery/computer/Initialize()

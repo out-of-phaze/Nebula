@@ -34,7 +34,7 @@
 	desc = "An advanced propulsion device, using energy and minute amounts of gas to generate thrust."
 	icon = 'icons/obj/ship_engine.dmi'
 	icon_state = "nozzle2"
-	density = 1
+	density = TRUE
 	power_channel = ENVIRON
 	idle_power_usage = 100
 	anchored = TRUE
@@ -83,7 +83,7 @@
 	board_type = "machine"
 	icon = 'icons/obj/modules/module_controller.dmi'
 	build_path = /obj/machinery/ion_thruster
-	origin_tech = "{'powerstorage':1,'engineering':2}"
+	origin_tech = @'{"powerstorage":1,"engineering":2}'
 	req_components = list(
 							/obj/item/stack/cable_coil = 2,
 							/obj/item/stock_parts/matter_bin = 1,

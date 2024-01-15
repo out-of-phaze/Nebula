@@ -5,9 +5,9 @@
 	desc = "Small, portable, and far, far heavier than it looks, this gun-shaped device has a port into which one may insert compressed matter cartridges."
 	icon = 'icons/obj/items/device/rcd.dmi'
 	icon_state = "rcd"
-	opacity = 0
-	density = 0
-	anchored = 0.0
+	opacity = FALSE
+	density = FALSE
+	anchored = FALSE
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_LOWER_BODY|SLOT_HOLSTER
 	force = 10.0
@@ -15,7 +15,7 @@
 	throw_speed = 1
 	throw_range = 5
 	w_class = ITEM_SIZE_NORMAL
-	origin_tech = "{'engineering':4,'materials':2}"
+	origin_tech = @'{"engineering":4,"materials":2}'
 	material = /decl/material/solid/metal/steel
 	var/stored_matter = 0
 	var/max_stored_matter = 120
@@ -128,7 +128,7 @@
 	icon_state = "rcd"
 	item_state = "rcdammo"
 	w_class = ITEM_SIZE_SMALL
-	origin_tech = "{'materials':2}"
+	origin_tech = @'{"materials":2}'
 	material = /decl/material/solid/metal/steel
 	matter = list(/decl/material/solid/glass = MATTER_AMOUNT_REINFORCEMENT)
 	var/remaining = 30
@@ -145,7 +145,7 @@
 	material = /decl/material/solid/metal/steel
 	matter = list(/decl/material/solid/glass = MATTER_AMOUNT_REINFORCEMENT)
 	remaining = 120
-	origin_tech = "{'materials':4}"
+	origin_tech = @'{"materials":4}'
 
 /obj/item/rcd/borg
 	canRwall = 1

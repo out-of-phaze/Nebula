@@ -79,7 +79,7 @@
 	update_icon()
 
 /obj/structure/crematorium/attack_hand(mob/user)
-	if(!user.check_dexterity(DEXTERITY_GRIP, TRUE))
+	if(!user.check_dexterity(DEXTERITY_HOLD_ITEM, TRUE))
 		return ..()
 	if(locked)
 		to_chat(usr, SPAN_WARNING("It's currently locked."))
@@ -210,7 +210,7 @@
 /obj/structure/crematorium_tray/attack_robot(mob/user)
 	return attack_hand_with_interaction_checks(user)
 
-/obj/structure/crematorium_tray/receive_mouse_drop(atom/dropping, mob/user)
+/obj/structure/crematorium_tray/receive_mouse_drop(atom/dropping, mob/user, params)
 	. = ..()
 	if(!. && (ismob(dropping) || istype(dropping, /obj/structure/closet/body_bag)))
 		var/atom/movable/AM = dropping

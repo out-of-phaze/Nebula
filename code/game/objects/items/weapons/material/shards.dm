@@ -120,7 +120,6 @@
 			continue
 		to_chat(M, SPAN_DANGER("You step on \the [src]!"))
 		affecting.take_external_damage(5, 0)
-		M.updatehealth()
 		if(affecting.can_feel_pain())
 			SET_STATUS_MAX(M, STAT_WEAK, 3)
 		return
@@ -150,5 +149,5 @@
 	w_class = ITEM_SIZE_TINY	//it's real small
 
 /obj/item/shard/plastic
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	w_class = ITEM_SIZE_TINY

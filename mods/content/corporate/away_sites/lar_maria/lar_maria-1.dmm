@@ -292,7 +292,7 @@
 /area/lar_maria/cells)
 "aV" = (
 /obj/structure/bed/padded,
-/obj/item/contraband/poster,
+/obj/item/poster,
 /turf/simulated/floor/tiled,
 /area/lar_maria/cells)
 "aW" = (
@@ -318,7 +318,6 @@
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "Cells_ld_BD"
 	},
 /turf/simulated/floor/tiled,
@@ -347,7 +346,6 @@
 /obj/machinery/door/window/eastright,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "Cells_ld_BD"
 	},
 /turf/simulated/floor/plating,
@@ -363,7 +361,6 @@
 /obj/machinery/door/window/westleft,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "Cells_ld_BD"
 	},
 /turf/simulated/floor/plating,
@@ -489,7 +486,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "Cells_ld_BD"
 	},
 /turf/simulated/floor/tiled,
@@ -511,7 +507,6 @@
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "Cells_ld_BD"
 	},
 /turf/simulated/floor/plating,
@@ -676,7 +671,6 @@
 /obj/abstract/landmark/corpse/lar_maria/test_subject,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "Cells_ld_BD"
 	},
 /turf/simulated/floor/plating,
@@ -1042,7 +1036,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "Cells_ld_BD"
 	},
 /turf/simulated/floor/plating,
@@ -1084,7 +1077,6 @@
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "Cells_ld_BD"
 	},
 /turf/simulated/floor/plating,
@@ -1104,7 +1096,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "CellsBD"
 	},
 /turf/simulated/floor/plating,
@@ -1125,7 +1116,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "CellsBD"
 	},
 /turf/simulated/floor/plating,
@@ -1262,7 +1252,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "CellsBD"
 	},
 /turf/simulated/floor/plating,
@@ -1280,7 +1269,6 @@
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "CellsBD"
 	},
 /turf/simulated/floor/plating,
@@ -1397,7 +1385,6 @@
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "CellsBD"
 	},
 /turf/simulated/floor/plating,
@@ -2098,7 +2085,6 @@
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "Cells_ld_BD"
 	},
 /obj/structure/cable{
@@ -2277,7 +2263,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "CellsBD"
 	},
 /obj/structure/cable{
@@ -2313,7 +2298,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "CellsBD"
 	},
 /obj/structure/cable{
@@ -2479,7 +2463,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "VirAccessBD"
 	},
 /turf/simulated/floor/tiled,
@@ -2521,7 +2504,7 @@
 /area/lar_maria/cells)
 "gC" = (
 /obj/structure/closet/crate,
-/obj/item/contraband/poster,
+/obj/item/poster,
 /obj/item/inflatable_duck,
 /turf/simulated/floor/plating,
 /area/lar_maria/cells)
@@ -2620,7 +2603,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "VirAccessBD"
 	},
 /turf/simulated/floor/tiled,
@@ -2798,12 +2780,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "Cells_ld_BD"
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "Cells_dock_BD"
 	},
 /turf/simulated/floor/plating,
@@ -2855,7 +2835,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "Cells_dock_BD"
 	},
 /turf/simulated/floor/tiled,
@@ -2901,7 +2880,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "VirAccessBD"
 	},
 /turf/simulated/floor/tiled,
@@ -3023,7 +3001,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "VirAccessBD"
 	},
 /turf/simulated/floor/tiled,
@@ -3050,7 +3027,7 @@
 /area/lar_maria/cells)
 "hW" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/contraband/poster,
+/obj/item/poster,
 /turf/simulated/floor/plating,
 /area/lar_maria/cells)
 "hX" = (
@@ -3130,7 +3107,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "VirAccessBD"
 	},
 /obj/structure/cable{
@@ -3289,7 +3265,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "VirAccessBD"
 	},
 /turf/simulated/floor/tiled,
@@ -3423,7 +3398,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "Cells_dock_BD"
 	},
 /turf/simulated/floor/plating,

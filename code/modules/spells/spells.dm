@@ -20,7 +20,7 @@
 	if(H.mind && H.mind.learned_spells)
 		var/list/spells = list()
 		for(var/spell/spell_to_remove in H.mind.learned_spells) //remove all the spells from other people.
-			if(istype(spell_to_remove.holder,/mob))
+			if(ismob(spell_to_remove.holder))
 				var/mob/M = spell_to_remove.holder
 				spells += spell_to_remove
 				M.remove_spell(spell_to_remove)
@@ -31,7 +31,7 @@
 
 /mob/proc/add_spell(var/spell/spell_to_add, var/spell_base = "wiz_spell_ready")
 	if(!ability_master)
-		ability_master = new()
+		ability_master = new(null, src)
 	spell_to_add.holder = src
 	if(mind)
 		if(!mind.learned_spells)

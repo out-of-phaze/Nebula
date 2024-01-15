@@ -62,8 +62,8 @@ var/global/universe_has_ended = 0
 	if(length(global.endgame_exits))
 		spawned_exit = new /obj/effect/wormhole_exit(pick(global.endgame_exits))
 
-	addtimer(CALLBACK(src, /datum/universal_state/supermatter_cascade/proc/announce_end_of_universe, spawned_exit), rand(30, 60) SECONDS)
-	addtimer(CALLBACK(src, /datum/universal_state/supermatter_cascade/proc/finalize_end_of_universe), 5 MINUTES)
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/datum/universal_state/supermatter_cascade, announce_end_of_universe), spawned_exit), rand(30, 60) SECONDS)
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/datum/universal_state/supermatter_cascade, finalize_end_of_universe)), 5 MINUTES)
 
 /datum/universal_state/supermatter_cascade/proc/announce_end_of_universe(var/exit_exists)
 	var/end_message = "Attn. [global.using_map.station_name]: Severe gravitational anomalies of unheard of scope have been detected in the local volume. Size and intensity of anomalies are increasing exponentially. Within the hour, a newborn black hole will have consumed everything in this sector."
@@ -114,9 +114,9 @@ var/global/universe_has_ended = 0
 
 /datum/universal_state/supermatter_cascade/proc/PlayerSet()
 	for(var/datum/mind/M in global.player_list)
-		if(!istype(M.current,/mob/living))
+		if(!isliving(M.current))
 			continue
-		if(M.current.stat!=2)
+		if(M.current.stat != DEAD)
 			SET_STATUS_MAX(M.current, STAT_WEAK, 10)
 			M.current.flash_eyes()
 

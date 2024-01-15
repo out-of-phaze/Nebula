@@ -2,7 +2,7 @@
 	name = "compressed matter implant"
 	desc = "Based on compressed matter technology, can store a single item."
 	icon_state = "implant_evil"
-	origin_tech = "{'materials':4,'biotech':2,'esoteric':2}"
+	origin_tech = @'{"materials":4,"biotech":2,"esoteric":2}'
 	hidden = 1
 	var/activation_emote
 	var/obj/item/scanned
@@ -71,7 +71,7 @@
 			if (!istype(A,/obj/item/storage))
 				to_chat(user, "<span class='warning'>The matter compressor safeties prevent you from doing that.</span>")
 			return
-		if(istype(A.loc,/mob/living/carbon/human))
+		if(ishuman(A.loc))
 			var/mob/living/carbon/human/H = A.loc
 			if(!H.try_unequip(A))
 				return

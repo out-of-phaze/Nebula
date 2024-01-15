@@ -5,7 +5,7 @@
 	critical = 0
 	icon_state = "cardreader"
 	hardware_size = 1
-	origin_tech = "{'programming':2}"
+	origin_tech = @'{"programming":2}'
 	usage_flags = PROGRAM_ALL
 	external_slot = TRUE
 	material = /decl/material/solid/metal/steel
@@ -68,12 +68,15 @@
 		loc.verbs |= /obj/item/stock_parts/computer/drive_slot/proc/verb_eject_drive
 	return TRUE
 
+/obj/item/stock_parts/computer/drive_slot/proc/mount_filesystem(datum/extension/interactive/os/os)
+	return os?.mount_storage(/datum/file_storage/disk/removable, "media", FALSE)
+
 /obj/item/stock_parts/computer/drive_slot/do_after_install(atom/device, loud)
 	var/datum/extension/interactive/os/os = get_extension(device, /datum/extension/interactive/os)
-	if(!os)
+	if(!os?.on) // if it's off, it'll be handled on boot
 		return FALSE
 
-	var/datum/file_storage/new_storage = os.mount_storage(/datum/file_storage/disk/removable, "media", FALSE)
+	var/datum/file_storage/new_storage = mount_filesystem(os)
 	if(new_storage)
 		mount_name = new_storage.root_name
 		if(loud)

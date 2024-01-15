@@ -34,7 +34,7 @@
 
 /obj/item/clothing/mask/smokable/Initialize()
 	. = ..()
-	atom_flags |= ATOM_FLAG_NO_REACT // so it doesn't react until you light it
+	atom_flags |= ATOM_FLAG_NO_CHEM_CHANGE // so it doesn't react until you light it
 	create_reagents(chem_volume) // making the cigarrete a chemical holder with a maximum volume of 15
 
 /obj/item/clothing/mask/smokable/Destroy()
@@ -50,6 +50,7 @@
 
 /obj/item/clothing/mask/smokable/fire_act()
 	light(0)
+	return ..()
 
 /obj/item/clothing/mask/smokable/proc/smoke(amount, manual)
 	smoketime -= amount
@@ -106,10 +107,10 @@
 
 	if(ismob(loc))
 		var/mob/living/M = loc
-		M.update_inv_wear_mask(0)
-		M.update_inv_hands()
+		M.update_equipment_overlay(slot_wear_mask_str, FALSE)
+		M.update_inhand_overlays()
 
-/obj/item/clothing/mask/smokable/adjust_mob_overlay(var/mob/living/user_mob, var/bodytype,  var/image/overlay, var/slot, var/bodypart)
+/obj/item/clothing/mask/smokable/adjust_mob_overlay(mob/living/user_mob, bodytype, image/overlay, slot, bodypart, use_fallback_if_icon_missing = TRUE)
 	if(overlay && lit && check_state_in_icon("[overlay.icon_state]-on", overlay.icon))
 		var/image/on_overlay = emissive_overlay(overlay.icon, "[overlay.icon_state]-on")
 		on_overlay.appearance_flags |= RESET_COLOR
@@ -139,7 +140,7 @@
 			e.start()
 			qdel(src)
 			return
-		atom_flags &= ~ATOM_FLAG_NO_REACT // allowing reagents to react after being lit
+		atom_flags &= ~ATOM_FLAG_NO_CHEM_CHANGE // allowing reagents to react after being lit
 		HANDLE_REACTIONS(reagents)
 		update_icon()
 		if(flavor_text)
@@ -200,6 +201,9 @@
 	weldermes = "<span class='notice'>USER casually lights the NAME with FLAME.</span>"
 	ignitermes = "<span class='notice'>USER fiddles with FLAME, and manages to light their NAME.</span>"
 	brand = "\improper Trans-Stellar Duty-free"
+
+/obj/item/clothing/mask/smokable/cigarette/can_be_injected_by(var/atom/injector)
+	return TRUE
 
 /obj/item/clothing/mask/smokable/cigarette/Initialize()
 	. = ..()
@@ -351,17 +355,15 @@
 	name = "wooden tip"
 	icon = 'icons/clothing/mask/smokables/cigar_butt.dmi'
 	desc = "A wooden mouthpiece from a cigar. Smells rather bad."
-	material = /decl/material/solid/wood
+	material = /decl/material/solid/organic/wood
 
 /obj/item/clothing/mask/smokable/cigarette/attackby(var/obj/item/W, var/mob/user)
-	..()
-
 	if(istype(W, /obj/item/energy_blade/sword))
 		var/obj/item/energy_blade/sword/S = W
 		if(S.active)
 			light(SPAN_WARNING("[user] swings their [W], barely missing their nose. They light their [name] in the process."))
-
-	return
+			return TRUE
+	return ..()
 
 /obj/item/clothing/mask/smokable/cigarette/attack(mob/living/carbon/human/H, mob/user, def_zone)
 	if(lit && H == user && istype(H))
@@ -451,7 +453,7 @@
 	name = "cigarette butt"
 	desc = "A manky old cigarette butt."
 	icon = 'icons/clothing/mask/smokables/cigarette_butt.dmi'
-	icon_state = "butt"
+	icon_state = ICON_STATE_WORLD
 	randpixel = 10
 	w_class = ITEM_SIZE_TINY
 	slot_flags = SLOT_EARS
@@ -465,12 +467,12 @@
 /obj/item/trash/cigbutt/cigarbutt
 	name = "cigar butt"
 	desc = "A manky old cigar butt."
-	icon = 'icons/clothing/mask/smokables/cigar.dmi'
+	icon = 'icons/clothing/mask/smokables/cigar_butt.dmi'
 
 /obj/item/clothing/mask/smokable/cigarette/cigar/attackby(var/obj/item/W, var/mob/user)
 	..()
-	user.update_inv_wear_mask(0)
-	user.update_inv_hands()
+	user.update_equipment_overlay(slot_wear_mask_str, FALSE)
+	user.update_inhand_overlays()
 
 //Bizarre
 /obj/item/clothing/mask/smokable/cigarette/rolled/sausage
@@ -525,8 +527,8 @@
 		START_PROCESSING(SSobj, src)
 		if(ismob(loc))
 			var/mob/living/M = loc
-			M.update_inv_wear_mask(0)
-			M.update_inv_hands()
+			M.update_equipment_overlay(slot_wear_mask_str, FALSE)
+			M.update_inhand_overlays()
 		set_scent_by_reagents(src)
 		update_icon()
 
@@ -587,8 +589,8 @@
 	else if(istype(W, /obj/item/assembly/igniter))
 		light(SPAN_NOTICE("[user] fiddles with [W], and manages to light their [name] with the power of science."))
 
-	user.update_inv_wear_mask(0)
-	user.update_inv_hands()
+	user.update_equipment_overlay(slot_wear_mask_str, FALSE)
+	user.update_inhand_overlays()
 
 /obj/item/clothing/mask/smokable/pipe/cobpipe
 	name = "corn cob pipe"

@@ -22,7 +22,7 @@
 	hold = new/obj/item/storage/internal/pockets(src, slots, max_w_class)
 
 /obj/item/clothing/accessory/storage/attack_hand(mob/user)
-	if(!user.check_dexterity(DEXTERITY_GRIP, TRUE) || !hold)
+	if(!user.check_dexterity(DEXTERITY_HOLD_ITEM, TRUE) || !hold)
 		return ..()
 	if(istype(loc, /obj/item/clothing))
 		hold.open(user)
@@ -31,9 +31,11 @@
 		return ..(user)
 	return TRUE
 
-/obj/item/clothing/accessory/storage/handle_mouse_drop(atom/over, mob/user)
+/obj/item/clothing/accessory/storage/handle_mouse_drop(atom/over, mob/user, params)
+	if(istype(over, /obj/screen/inventory))
+		return ..()
 	if(!istype(loc, /obj/item/clothing) && hold?.handle_storage_internal_mouse_drop(user, over))
-		. = ..(over)
+		return ..()
 	return TRUE
 
 /obj/item/clothing/accessory/storage/attackby(obj/item/W, mob/user)
@@ -121,7 +123,7 @@
 	if(contents_count > 0 && check_state_in_icon("[icon_state]-[contents_count]", icon))
 		icon_state = "[icon_state]-[contents_count]"
 
-/obj/item/clothing/accessory/storage/knifeharness/adjust_mob_overlay(var/mob/living/user_mob, var/bodytype,  var/image/overlay, var/slot, var/bodypart)
+/obj/item/clothing/accessory/storage/knifeharness/adjust_mob_overlay(mob/living/user_mob, bodytype, image/overlay, slot, bodypart, use_fallback_if_icon_missing = TRUE)
 	if(overlay)
 		var/contents_count = min(length(contents), 2)
 		if(contents_count > 0 && check_state_in_icon("[overlay.icon_state]-[contents_count]", overlay.icon))

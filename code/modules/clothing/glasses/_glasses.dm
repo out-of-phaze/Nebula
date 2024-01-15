@@ -18,7 +18,7 @@
 	var/electric =         FALSE //if the glasses should be disrupted by EMP
 
 	var/hud_type
-	var/obj/screen/overlay
+	var/obj/screen/screen_overlay
 	var/obj/item/clothing/glasses/hud/hud // Hud glasses, if any
 	var/activation_sound =   'sound/items/goggles_charge.ogg'
 	var/deactivation_sound // set this if you want a sound on deactivation
@@ -32,7 +32,7 @@
 	if(ispath(hud))
 		hud = new hud(src)
 
-/obj/item/clothing/glasses/adjust_mob_overlay(var/mob/living/user_mob, var/bodytype,  var/image/overlay, var/slot, var/bodypart)
+/obj/item/clothing/glasses/adjust_mob_overlay(mob/living/user_mob, bodytype, image/overlay, slot, bodypart, use_fallback_if_icon_missing = TRUE)
 	if(overlay && active && check_state_in_icon("[overlay.icon_state]-active", overlay.icon))
 		overlay.icon_state = "[overlay.icon_state]-active"
 	. = ..()
@@ -43,11 +43,11 @@
 	. = ..()
 
 /obj/item/clothing/glasses/needs_vision_update()
-	return ..() || overlay || vision_flags || see_invisible || darkness_view
+	return ..() || screen_overlay || vision_flags || see_invisible || darkness_view
 
 /obj/item/clothing/glasses/emp_act(severity)
 	if(electric)
-		if(istype(src.loc, /mob/living/carbon/human))
+		if(ishuman(src.loc))
 			var/mob/living/carbon/human/M = src.loc
 			if(M.get_equipped_item(slot_glasses_str) != src)
 				to_chat(M, SPAN_DANGER("\The [src] malfunction[gender != PLURAL ? "s":""], releasing a small spark."))
@@ -102,9 +102,9 @@
 	tint = TINT_NONE
 
 /obj/item/clothing/glasses/update_clothing_icon()
-	if(ismob(src.loc))
-		var/mob/M = src.loc
-		M.update_inv_glasses()
+	. = ..()
+	if(.)
+		var/mob/M = loc
 		M.update_action_buttons()
 
 /obj/item/clothing/glasses/proc/toggle()

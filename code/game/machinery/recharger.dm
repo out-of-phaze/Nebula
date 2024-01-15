@@ -5,7 +5,7 @@
 	desc = "An all-purpose recharger for a variety of devices."
 	icon = 'icons/obj/machines/recharger.dmi'
 	icon_state = "recharger0"
-	anchored = 1
+	anchored = TRUE
 	idle_power_usage = 4
 	active_power_usage = 30 KILOWATTS
 	var/obj/item/charging = null
@@ -132,4 +132,4 @@
 
 	construct_state = /decl/machine_construction/wall_frame/panel_closed
 	frame_type = /obj/item/frame/button/wall_charger
-	directional_offset = "{'NORTH':{'y':-24}, 'SOUTH':{'y':32}, 'EAST':{'x':-28}, 'WEST':{'x':28}}"
+	directional_offset = @'{"NORTH":{"y":-24}, "SOUTH":{"y":32}, "EAST":{"x":-28}, "WEST":{"x":28}}'

@@ -129,8 +129,8 @@ var/global/list/meteors_cataclysm = list(\
 	desc = "You should probably run instead of gawking at this."
 	icon = 'icons/obj/meteor.dmi'
 	icon_state = "small"
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 	var/hits = 4
 	var/hitpwr = 2 //Level of ex_act to be called on hit.
 	var/dest
@@ -215,7 +215,7 @@ var/global/list/meteors_cataclysm = list(\
 /obj/effect/meteor/proc/make_debris()
 	if(meteordrop && dropamt)
 		for(var/throws = dropamt, throws > 0, throws--)
-			addtimer(CALLBACK(new meteordrop(get_turf(src)), /atom/movable/proc/throw_at, dest, 5, 10), 0)
+			addtimer(CALLBACK(new meteordrop(get_turf(src)), TYPE_PROC_REF(/atom/movable, throw_at), dest, 5, 10), 0)
 
 /obj/effect/meteor/proc/meteor_effect()
 	if(heavy)
@@ -239,7 +239,7 @@ var/global/list/meteors_cataclysm = list(\
 	hits = 1
 	hitpwr = 3
 	dropamt = 1
-	meteordrop = /obj/item/stack/material/ore/glass
+	meteordrop = /obj/item/stack/material/ore/sand
 
 //Medium-sized
 /obj/effect/meteor/medium

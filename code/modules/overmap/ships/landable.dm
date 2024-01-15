@@ -122,7 +122,7 @@
 		visitor_dir = turn(visitor_dir, 90)
 
 	// Configure shuttle datum
-	events_repository.register(/decl/observ/shuttle_moved, shuttle_datum, src, .proc/on_shuttle_jump)
+	events_repository.register(/decl/observ/shuttle_moved, shuttle_datum, src, PROC_REF(on_shuttle_jump))
 	on_landing(landmark, shuttle_datum.current_location) // We "land" at round start to properly place ourselves on the overmap.
 	if(landmark == shuttle_datum.current_location)
 		status = SHIP_STATUS_OVERMAP // we spawned on the overmap, so have to initialize our state properly.
@@ -165,7 +165,7 @@
 	core_landmark = master
 	SetName(_name)
 	landmark_tag = master.shuttle_name + _name
-	events_repository.register(/decl/observ/destroyed, master, src, /datum/proc/qdel_self)
+	events_repository.register(/decl/observ/destroyed, master, src, TYPE_PROC_REF(/datum, qdel_self))
 	. = ..()
 
 /obj/effect/shuttle_landmark/visiting_shuttle/Destroy()
@@ -273,7 +273,7 @@
 		qdel(src)
 		return
 	if(!core.shuttle_name || !SSshuttle.shuttles[core.shuttle_name])
-		events_repository.register_global(/decl/observ/shuttle_added, src, .proc/try_create_dock_for)
+		events_repository.register_global(/decl/observ/shuttle_added, src, PROC_REF(try_create_dock_for))
 	else
 		create_dock(core)
 
@@ -282,7 +282,7 @@
 	if(!new_core.shuttle_name || SSshuttle.shuttles[new_core.shuttle_name] != shuttle)
 		return // wait for the next shuttle to init
 	create_dock(new_core)
-	events_repository.unregister_global(/decl/observ/shuttle_added, src, .proc/try_create_dock_for)
+	events_repository.unregister_global(/decl/observ/shuttle_added, src, PROC_REF(try_create_dock_for))
 
 /obj/abstract/docking_port_spawner/proc/create_dock(obj/effect/shuttle_landmark/ship/core)
 	var/obj/effect/shuttle_landmark/visiting_shuttle/docking/docking_landmark = new (loc, core, port_name)

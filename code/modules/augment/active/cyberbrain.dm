@@ -4,7 +4,7 @@
 	icon_state = "cyberbrain"
 	allowed_organs = list(BP_AUGMENT_HEAD)
 	augment_flags = AUGMENTATION_MECHANIC
-	origin_tech = "{'materials':2,'magnets':3,'engineering':3,'biotech':2,'programming':4}"
+	origin_tech = @'{"materials":2,"magnets":3,"engineering":3,"biotech":2,"programming":4}'
 
 	var/list/default_hardware = list(
 		/obj/item/stock_parts/computer/processor_unit/small,
@@ -60,7 +60,7 @@
 		return
 	return ..()
 
-/obj/item/organ/internal/augment/active/cyberbrain/handle_mouse_drop(atom/over, mob/user)
+/obj/item/organ/internal/augment/active/cyberbrain/handle_mouse_drop(atom/over, mob/user, params)
 	if(!istype(over, /obj/screen))
 		attack_self(user)
 		return TRUE
@@ -77,6 +77,12 @@
 		var/datum/extension/interactive/os/os = get_extension(src, /datum/extension/interactive/os)
 		if(os)
 			os.Process()
+
+/obj/item/organ/internal/augment/active/cyberbrain/get_contained_matter()
+	. = ..()
+	var/datum/extension/assembly/assembly = get_extension(src, /datum/extension/assembly)
+	for(var/obj/part in assembly?.parts)
+		. = MERGE_ASSOCS_WITH_NUM_VALUES(., part.get_contained_matter())
 
 /*
  *

@@ -3,8 +3,8 @@
 	desc = "A flimsy lattice of rods, with screws to secure it to the floor."
 	icon = 'icons/obj/structures/grille.dmi'
 	icon_state = "grille"
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 	obj_flags = OBJ_FLAG_CONDUCTIBLE | OBJ_FLAG_MOVES_UNSUPPORTED
 	layer = BELOW_OBJ_LAYER
 	explosion_resistance = 1
@@ -16,7 +16,7 @@
 
 	handle_generic_blending = TRUE
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME
-	maxhealth = 20
+	max_health = 20
 
 	var/destroyed = 0
 	var/list/connections
@@ -101,7 +101,7 @@
 
 	var/damage_dealt = 1
 	var/attack_message = "kicks"
-	if(istype(user,/mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.species.can_shred(H))
 			attack_message = "mangles"
@@ -249,7 +249,7 @@
 /obj/structure/grille/broken
 	destroyed = 1
 	icon_state = "broken"
-	density = 0
+	density = FALSE
 
 /obj/structure/grille/broken/Initialize()
 	. = ..()

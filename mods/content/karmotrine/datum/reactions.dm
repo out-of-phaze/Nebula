@@ -8,7 +8,7 @@
 /decl/chemical_reaction/adelhyde
 	name = "Adelhyde"
 	result = /decl/material/liquid/blendable/adelhyde
-	required_reagents = list(/decl/material/solid/carbon = 1, /decl/material/solid/potassium = 1, /decl/material/solid/skin/lizard = 1)
+	required_reagents = list(/decl/material/solid/carbon = 1, /decl/material/solid/potassium = 1, /decl/material/solid/organic/skin/lizard = 1)
 	result_amount = 3
 
 /decl/chemical_reaction/powdered_delta
@@ -33,7 +33,7 @@
 /decl/chemical_reaction/instant_age
 	name = "Insta-Age"
 	result = /decl/material/solid/instant_age
-	required_reagents = list(/decl/material/solid/bone/cartilage = 1, /decl/material/liquid/acid/polyacid = 1, /decl/material/liquid/acetone)
+	required_reagents = list(/decl/material/solid/organic/bone/cartilage = 1, /decl/material/liquid/acid/polyacid = 1, /decl/material/liquid/acetone)
 	result_amount = 3
 
 // AGING

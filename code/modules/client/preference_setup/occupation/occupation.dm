@@ -81,7 +81,7 @@
 	if(!SSmapping || !SSjobs.job_lists_by_map_name)
 		return
 
-	var/decl/species/S = preference_species()
+	var/decl/species/S = pref.get_species_decl()
 	. = list()
 	. += "<style>.Points,a.Points{background: #cc5555;}</style>"
 	. += "<style>a.Points:hover{background: #55cc55;}</style>"
@@ -270,7 +270,7 @@
 		if(LAZYLEN(removing_ranks))
 			pref.ranks -= removing_ranks
 
-	var/decl/species/S = preference_species()
+	var/decl/species/S = pref.get_species_decl()
 	for(var/job_name in SSjobs.titles_to_datums)
 
 		var/datum/job/job = SSjobs.get_by_title(job_name)
@@ -339,7 +339,7 @@
 	else if(href_list["char_branch"])
 		var/datum/job/job = locate(href_list["checking_job"])
 		if(istype(job))
-			var/decl/species/S = preference_species()
+			var/decl/species/S = pref.get_species_decl()
 			var/list/options = job.allowed_branches ? job.get_branch_rank(S) : mil_branches.spawn_branches(S)
 			var/choice = input(user, "Choose your branch of service.", CHARACTER_PREFERENCE_INPUT_TITLE) as null|anything in options
 			if(choice && CanUseTopic(user) && mil_branches.is_spawn_branch(choice, S))
@@ -354,11 +354,11 @@
 		var/datum/job/job = locate(href_list["checking_job"])
 		if(istype(job))
 			var/datum/mil_branch/branch = mil_branches.get_branch(pref.branches[job.title])
-			var/decl/species/S = preference_species()
+			var/decl/species/S = pref.get_species_decl()
 			var/list/branch_rank = job.allowed_branches ? job.get_branch_rank(S) : mil_branches.spawn_branches(S)
 			var/list/options = branch_rank[branch.name] || mil_branches.spawn_ranks(branch.name, S)
 			var/choice = input(user, "Choose your rank.", CHARACTER_PREFERENCE_INPUT_TITLE) as null|anything in options
-			if(choice && CanUseTopic(user) && mil_branches.is_spawn_rank(branch.name, choice, preference_species()))
+			if(choice && CanUseTopic(user) && mil_branches.is_spawn_rank(branch.name, choice, pref.get_species_decl()))
 				pref.ranks[job.title] = choice
 				pref.skills_allocated = pref.sanitize_skills(pref.skills_allocated)		// Check our skillset is still valid
 				validate_branch_and_rank()
@@ -427,7 +427,7 @@
 				var/datum/mil_branch/B = mil_branches.get_branch_by_type(T)
 				dat += "<li>[B.name]: [job.get_ranks(B.name)]"
 		dat += "<hr style='clear:left;'>"
-		if(config.wikiurl)
+		if(get_config_value(/decl/config/text/wikiurl))
 			dat += "<a href='?src=\ref[src];job_wiki=[rank]'>Open wiki page in browser</a>"
 
 		var/description = job.get_description_blurb()
@@ -439,7 +439,7 @@
 
 	else if(href_list["job_wiki"])
 		var/rank = href_list["job_wiki"]
-		open_link(user,"[config.wikiurl][rank]")
+		open_link(user,"[get_config_value(/decl/config/text/wikiurl)][rank]")
 
 	return ..()
 

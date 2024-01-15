@@ -1,15 +1,20 @@
 //Load a random map template from the list. Maploader handles it to avoid order of init madness
 /obj/abstract/landmark/map_load_mark
 	name = "map loader landmark"
+	var/centered = TRUE
 	var/list/map_template_names	//list of template names to pick from
 
-/obj/abstract/landmark/map_load_mark/Initialize(var/mapload)
-	. = ..()
-	if(!mapload)
-		return INITIALIZE_HINT_LATELOAD
-
-/obj/abstract/landmark/map_load_mark/LateInitialize()
-	load_subtemplate()
+/obj/abstract/landmark/map_load_mark/New(loc)
+	..()
+	if(Master.map_loading) // If we're created while a map is being loaded
+		return // Let after_load() handle us
+	if(!SSmapping.initialized) // If we're being created prior to SSmapping
+		SSmapping.queued_markers += src // Then run after SSmapping
+	else
+		// How did we get here?
+		// These should only be loaded from compiled maps or map templates.
+		PRINT_STACK_TRACE("map_load_mark created outside of maploading")
+		load_subtemplate()
 
 /obj/abstract/landmark/map_load_mark/proc/get_subtemplate()
 	. = LAZYLEN(map_template_names) && pick(map_template_names)
@@ -29,7 +34,7 @@
 		if(istext(template))
 			template = SSmapping.get_template(template)
 		if(istype(template))
-			template.load(spawn_loc, TRUE)
+			template.load(spawn_loc, centered = centered)
 
 //Throw things in the area around randomly
 /obj/abstract/landmark/carnage_mark
@@ -93,11 +98,11 @@
 
 /obj/abstract/landmark/delete_on_shuttle/Initialize()
 	. = ..()
-	events_repository.register_global(/decl/observ/shuttle_added, src, .proc/check_shuttle)
+	events_repository.register_global(/decl/observ/shuttle_added, src, PROC_REF(check_shuttle))
 
 /obj/abstract/landmark/delete_on_shuttle/proc/check_shuttle(var/shuttle)
 	if(SSshuttle.shuttles[shuttle_name] == shuttle)
-		events_repository.register(/decl/observ/shuttle_moved, shuttle, src, .proc/delete_everything)
+		events_repository.register(/decl/observ/shuttle_moved, shuttle, src, PROC_REF(delete_everything))
 		shuttle_datum = shuttle
 
 /obj/abstract/landmark/delete_on_shuttle/proc/delete_everything()
@@ -107,9 +112,9 @@
 	qdel(src)
 
 /obj/abstract/landmark/delete_on_shuttle/Destroy()
-	events_repository.unregister_global(/decl/observ/shuttle_added, src, .proc/check_shuttle)
+	events_repository.unregister_global(/decl/observ/shuttle_added, src, PROC_REF(check_shuttle))
 	if(shuttle_datum)
-		events_repository.unregister(/decl/observ/shuttle_moved, shuttle_datum, src, .proc/delete_everything)
+		events_repository.unregister(/decl/observ/shuttle_moved, shuttle_datum, src, PROC_REF(delete_everything))
 	. = ..()
 
 // Has a percent chance on spawn to set the specified variable on the specified type to the specified value.

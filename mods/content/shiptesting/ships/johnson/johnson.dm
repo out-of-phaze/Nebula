@@ -185,7 +185,7 @@
 	uniform = /obj/item/clothing/under/miner
 	pda_type = /obj/item/modular_computer/pda/science
 	backpack_contents = list(/obj/item/crowbar = 1, /obj/item/storage/ore = 1)
-	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	outfit_flags = OUTFIT_HAS_BACKPACK | OUTFIT_HAS_VITALS_SENSOR | OUTFIT_EXTENDED_SURVIVAL
 	l_ear = null
 
 /decl/hierarchy/outfit/job/generic/johnson_mining/Initialize()

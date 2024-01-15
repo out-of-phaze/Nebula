@@ -28,6 +28,16 @@
 		return TRUE
 	. = (!throwing) ? ..() : FALSE
 
+// We only do this for the extension as other stuff that overrides get_cell() handles EMP in an override.
+/obj/item/emp_act(var/severity)
+	// we do not use get_cell() here as some devices may return a non-extension cell
+	var/datum/extension/loaded_cell/cell_loaded = get_extension(src, /datum/extension/loaded_cell)
+	var/obj/item/cell/cell = cell_loaded?.get_cell()
+	if(cell)
+		cell.emp_act(severity)
+		update_icon()
+	return ..()
+
 /obj/item/explosion_act(severity)
 	if(QDELETED(src))
 		return
@@ -96,18 +106,18 @@
 		var/obj/item/organ/internal/eyes = GET_INTERNAL_ORGAN(H, BP_EYES)
 		eyes.damage += rand(3,4)
 		if(eyes.damage >= eyes.min_bruised_damage)
-			if(M.stat != 2)
+			if(M.stat != DEAD)
 				if(!BP_IS_PROSTHETIC(eyes)) //robot eyes bleeding might be a bit silly
 					to_chat(M, SPAN_DANGER("Your eyes start to bleed profusely!"))
 			if(prob(50))
-				if(M.stat != 2)
+				if(M.stat != DEAD)
 					to_chat(M, SPAN_WARNING("You drop what you're holding and clutch at your eyes!"))
 					M.drop_held_items()
 				SET_STATUS_MAX(M, STAT_BLURRY, 10)
 				SET_STATUS_MAX(M, STAT_PARA, 1)
 				SET_STATUS_MAX(M, STAT_WEAK, 4)
 			if (eyes.damage >= eyes.min_broken_damage)
-				if(M.stat != 2)
+				if(M.stat != DEAD)
 					to_chat(M, SPAN_WARNING("You go blind!"))
 
 		var/obj/item/organ/external/affecting = GET_EXTERNAL_ORGAN(H, eyes.parent_organ)
@@ -116,25 +126,3 @@
 		M.take_organ_damage(7)
 	SET_STATUS_MAX(M, STAT_BLURRY, rand(3,4))
 	return
-
-/obj/item/get_examined_damage_string(health_ratio)
-	if(!can_take_damage())
-		return
-	. = ..()
-
-///Returns whether the item can take damages or if its invulnerable
-/obj/item/proc/can_take_damage()
-	return (health != ITEM_HEALTH_NO_DAMAGE) && (max_health != ITEM_HEALTH_NO_DAMAGE)
-
-///Returns whether the object is currently damaged.
-/obj/item/proc/is_damaged()
-	return can_take_damage() && (health < max_health)
-
-///Returns the percentage of health remaining for this object.
-/obj/item/proc/get_percent_health()
-	return can_take_damage()? round((health * 100)/max_health, 0.01) : 100
-
-///Returns the percentage of damage done to this object.
-/obj/item/proc/get_percent_damage()
-	//Clamp from 0 to 100 so health values larger than max_health don't return unhelpful numbers
-	return clamp(100 - get_percent_health(), 0, 100)

@@ -151,14 +151,6 @@ var/global/ascii_reset = "[ascii_esc]\[0m"
 /datum/unit_test/proc/subsystems_to_await()
 	return list()
 
-/proc/load_unit_test_changes()
-/*
-	//This takes about 60 seconds to run during unit testing and is only used for the ZAS vacume check on The Asteroid.
-	if(config.roundstart_level_generation != 1)
-		log_unit_test("Overiding Configuration option for Asteroid Generation to ENABLED")
-		config.roundstart_level_generation = 1	// The default map requires it, the example config doesn't have this enabled.
- */
-
 /proc/get_test_datums()
 	. = list()
 	for(var/test in subtypesof(/datum/unit_test))
@@ -184,6 +176,8 @@ var/global/ascii_reset = "[ascii_esc]\[0m"
 
 //For async tests. Returns 1 if done.
 /proc/check_unit_test(datum/unit_test/test, end_time)
+	if(test.reported)
+		return 1 //The test reported failure/success/skip already
 	if(world.time > end_time)
 		test.fail("Unit Tests Ran out of Time")// If we're going to run out of time, most likely it's here.  If you can't speed up your unit tests then add time to the timeout at the top.
 		return 1

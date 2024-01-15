@@ -111,13 +111,13 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "energynet"
 
-	density = 1
-	opacity = 0
-	mouse_opacity = 1
-	anchored = 1
+	density = TRUE
+	opacity = FALSE
+	mouse_opacity = MOUSE_OPACITY_NORMAL
+	anchored = TRUE
 	can_buckle = 0 //no manual buckling or unbuckling
 
-	var/health = 25
+	max_health = 25
 	var/countdown = 15
 	var/temporary = 1
 	var/mob/living/carbon/captured = null
@@ -128,8 +128,8 @@
 	name = "animal net"
 	desc = "An energized net meant to subdue animals."
 
-	anchored = 0
-	health = 5
+	anchored = FALSE
+	max_health = 5
 	temporary = 0
 	min_free_time = 5
 	max_free_time = 10

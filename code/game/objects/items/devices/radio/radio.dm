@@ -38,7 +38,6 @@
 	material = /decl/material/solid/metal/aluminium
 	matter = list(/decl/material/solid/fiberglass = MATTER_AMOUNT_REINFORCEMENT)
 
-	var/obj/item/cell/cell = /obj/item/cell/device
 	var/power_usage = 2800
 	var/last_radio_sound = -INFINITY
 	var/initial_network_id
@@ -65,13 +64,16 @@
 	var/analog_secured = list() // list of accesses used for encrypted analog, mainly for mercs/raiders
 	var/datum/radio_frequency/analog_radio_connection
 
+/obj/item/radio/setup_power_supply(loaded_cell_type, accepted_cell_type, power_supply_extension_type, charge_value)
+	return ..(/obj/item/cell/device, /obj/item/cell/device, /datum/extension/loaded_cell, charge_value)
+
 /obj/item/radio/get_radio(var/message_mode)
 	return src
 
 /obj/item/radio/proc/can_decrypt(var/list/secured)
 	if(decrypt_all_messages)
 		return TRUE
-	if(!length(secured))
+	if(!secured || !length(secured))
 		return TRUE
 	if(!islist(secured))
 		secured = list(secured)
@@ -93,8 +95,7 @@
 /obj/item/radio/Initialize()
 	. = ..()
 	wires = new(src)
-	if(ispath(cell))
-		cell = new(src)
+	setup_power_supply()
 
 	global.listening_objects += src
 	set_frequency(sanitize_frequency(frequency, RADIO_LOW_FREQ, RADIO_HIGH_FREQ))
@@ -212,9 +213,6 @@
 /obj/item/radio/proc/has_channel_access(var/mob/user, var/freq)
 	return TRUE // TODO: add antag/valid bounds checking
 
-/obj/item/radio/get_cell()
-	return cell
-
 /obj/item/radio/proc/toggle_broadcast()
 	broadcasting = !broadcasting && !(wires.IsIndexCut(WIRE_TRANSMIT) || wires.IsIndexCut(WIRE_SIGNAL))
 
@@ -282,14 +280,6 @@
 		. = TOPIC_REFRESH
 	if(href_list["nowindow"]) // here for pAIs, maybe others will want it, idk
 		return TOPIC_HANDLED
-
-	if(href_list["remove_cell"])
-		if(cell)
-			var/mob/user = usr
-			user.put_in_hands(cell)
-			to_chat(user, SPAN_NOTICE("You remove [cell] from \the [src]."))
-			cell = null
-		. = TOPIC_REFRESH
 	if(href_list["network_settings"])
 		var/datum/extension/network_device/D = get_extension(src, /datum/extension/network_device)
 		D.ui_interact(usr)
@@ -346,7 +336,7 @@
 		if(istype(M))
 			M.trigger_aiming(TARGET_CAN_RADIO)
 
-	addtimer(CALLBACK(src, .proc/transmit, M, message, message_mode, verb, speaking), 0)
+	addtimer(CALLBACK(src, PROC_REF(transmit), M, message, message_mode, verb, speaking), 0)
 
 /obj/item/radio/proc/can_transmit_binary()
 	for(var/obj/item/encryptionkey/key in encryption_keys)
@@ -415,42 +405,24 @@
 					use_frequency = channel.frequency
 					break
 
-	var/datum/radio_channel/channel
-	var/list/send_message_to
-	var/last_frequency = frequency
-	if(last_frequency != use_frequency)
-		set_frequency(use_frequency)
 	if(analog && istype(analog_radio_connection))
+		var/last_frequency = frequency
+		if(last_frequency != use_frequency)
+			set_frequency(use_frequency)
+
 		broadcast_analog_radio_message(analog_radio_connection, speaker, src, message, intercom, message_compression, current_sector, verb, speaking, analog_secured)
-		// does not populate send_message_to, so after this we just reset frequency and end the proc
+		if(frequency != last_frequency)
+			set_frequency(last_frequency)
 	else
+		// List passed around to make sure a hub only checks for transmission once.
+		var/list/checked_hubs = list()
 		var/datum/extension/network_device/network_device = get_extension(src, /datum/extension/network_device)
 		var/datum/computer_network/network = network_device?.get_network()
 		for(var/weakref/H as anything in network?.connected_hubs)
 			var/obj/machinery/network/telecomms_hub/hub = H.resolve()
 			if(istype(hub) && !QDELETED(hub) && hub.can_receive_message(network))
-				send_message_to = hub.get_recipients(current_sector, network, use_frequency)
-				channel = hub.get_channel_from_freq_or_key(use_frequency)
-	if(frequency != last_frequency)
-		set_frequency(last_frequency)
-
-	if(!length(send_message_to))
-		return
-
-	var/formatted_msg = "<span style='color:[channel?.color || default_color]'><small><b>\[[channel?.name || format_frequency(frequency)]\]</b></small> <span class='name'>"
-	var/send_name = istype(speaker) ? speaker.real_name : ("[speaker]" || "unknown")
-
-	var/turf/T = get_turf(src)
-	var/obj/effect/overmap/visitable/send_overmap_object = istype(T) && global.overmap_sectors["[T.z]"]
-
-	for(var/mob/listener in send_message_to)
-		var/per_listener_send_name = send_name
-		var/per_listener_loc_name
-		// if we're sending from an overmap object AND our overmap object transmits its identity AND it's different than the listener's
-		if(send_overmap_object && send_overmap_object.ident_transmitter && send_overmap_object != send_message_to[listener])
-			// then append the overmap object name to it, so they know where we're from
-			per_listener_loc_name = send_overmap_object.name
-		listener.hear_radio(message, verb, speaking, formatted_msg, "</span> <span class='message'>", "</span></span>", speaker, message_compression, per_listener_send_name, per_listener_loc_name)
+				hub.transmit_message(speaker, message, verb, speaking, use_frequency, message_compression, checked_hubs)
+				break // Only one hub per message, since it transmits over the whole network.
 
 /obj/item/radio/proc/can_receive_message(var/check_network_membership)
 	. = on
@@ -508,11 +480,6 @@
 			return TRUE
 		return toggle_panel(user)
 
-	if(!cell && power_usage && istype(W, /obj/item/cell/device) && user.try_unequip(W, target = src))
-		to_chat(user, SPAN_NOTICE("You slot \the [W] into \the [src]."))
-		cell = W
-		return TRUE
-
 	. = ..()
 
 /obj/item/radio/proc/toggle_panel(var/mob/user)
@@ -527,13 +494,11 @@
 	var/list/current_channels = get_available_channels()
 	for(var/channel in current_channels)
 		LAZYSET(channels, channel, FALSE)
-	if(cell)
-		cell.emp_act(severity)
-	..()
+	return ..()
 
 /obj/item/radio/CouldUseTopic(var/mob/user)
 	..()
-	if(istype(user, /mob/living/carbon))
+	if(iscarbon(user))
 		playsound(src, "button", 10)
 
 /obj/item/radio/off

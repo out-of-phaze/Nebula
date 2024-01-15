@@ -6,6 +6,7 @@
 	)
 	open_turf_type = /turf/simulated/open
 	zone_membership_candidate = TRUE
+	abstract_type = /turf/simulated
 
 	var/wet = 0
 	var/image/wet_overlay = null
@@ -29,12 +30,12 @@
 		wet_overlay = image('icons/effects/water.dmi',src,"wet_floor")
 		overlays += wet_overlay
 
-	timer_id = addtimer(CALLBACK(src,/turf/simulated/proc/unwet_floor), 8 SECONDS, (TIMER_STOPPABLE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT|TIMER_OVERRIDE))
+	timer_id = addtimer(CALLBACK(src, TYPE_PROC_REF(/turf/simulated, unwet_floor)), 8 SECONDS, (TIMER_STOPPABLE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT|TIMER_OVERRIDE))
 
 /turf/simulated/proc/unwet_floor(var/check_very_wet = TRUE)
 	if(check_very_wet && wet >= 2)
 		wet--
-		timer_id = addtimer(CALLBACK(src,/turf/simulated/proc/unwet_floor), 8 SECONDS, (TIMER_STOPPABLE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT|TIMER_OVERRIDE))
+		timer_id = addtimer(CALLBACK(src, TYPE_PROC_REF(/turf/simulated, unwet_floor)), 8 SECONDS, (TIMER_STOPPABLE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT|TIMER_OVERRIDE))
 		return
 	wet = 0
 	if(wet_overlay)
@@ -132,7 +133,7 @@
 		bloodDNA = list()
 	bloodcolor = source.coating.get_color()
 	source.remove_coating(1)
-	update_inv_shoes(1)
+	update_equipment_overlay(slot_shoes_str)
 
 	if(species.get_move_trail(src))
 		T.AddTracks(species.get_move_trail(src),bloodDNA, dir, 0, bloodcolor) // Coming
@@ -147,11 +148,13 @@
 
 	if(istype(M))
 		for(var/obj/effect/decal/cleanable/blood/B in contents)
-			if(M.dna?.unique_enzymes && !LAZYACCESS(B.blood_DNA, M.dna.unique_enzymes))
-				LAZYSET(B.blood_DNA, M.dna.unique_enzymes, M.dna.b_type)
-				LAZYSET(B.blood_data, M.dna.unique_enzymes, REAGENT_DATA(M.vessel, M.species.blood_reagent))
+			var/unique_enzymes = M.get_unique_enzymes()
+			var/blood_type     = M.get_blood_type()
+			if(unique_enzymes && blood_type && !LAZYACCESS(B.blood_DNA, unique_enzymes))
+				LAZYSET(B.blood_DNA, unique_enzymes, blood_type)
+				LAZYSET(B.blood_data, unique_enzymes, REAGENT_DATA(M.vessel, M.species.blood_reagent))
 				var/datum/extension/forensic_evidence/forensics = get_or_create_extension(B, /datum/extension/forensic_evidence)
-				forensics.add_data(/datum/forensics/blood_dna, M.dna.unique_enzymes)
+				forensics.add_data(/datum/forensics/blood_dna, unique_enzymes)
 			return 1 //we bloodied the floor
 		blood_splatter(src, M, 1)
 		return 1 //we bloodied the floor
@@ -159,10 +162,10 @@
 
 // Only adds blood on the floor -- Skie
 /turf/simulated/proc/add_blood_floor(mob/living/carbon/M)
-	if( istype(M, /mob/living/carbon/alien ))
+	if(isalien(M))
 		var/obj/effect/decal/cleanable/blood/xeno/this = new /obj/effect/decal/cleanable/blood/xeno(src)
 		this.blood_DNA["UNKNOWN BLOOD"] = "X*"
-	else if( istype(M, /mob/living/silicon/robot ))
+	else if(isrobot(M))
 		new /obj/effect/decal/cleanable/blood/oil(src)
 
 /turf/simulated/attackby(var/obj/item/thing, var/mob/user)

@@ -4,6 +4,12 @@
 	if(assembly)
 		LAZYREMOVE(., assembly.parts)
 
+/obj/item/modular_computer/get_contained_matter()
+	. = ..()
+	var/datum/extension/assembly/assembly = get_extension(src, /datum/extension/assembly)
+	for(var/obj/part in assembly?.parts)
+		. = MERGE_ASSOCS_WITH_NUM_VALUES(., part.get_contained_matter())
+
 /obj/item/modular_computer/Process()
 	var/datum/extension/assembly/assembly = get_extension(src, /datum/extension/assembly)
 	if(assembly)
@@ -128,11 +134,11 @@
 		if(user)
 			ui_interact(user)
 
-/obj/item/modular_computer/GetIdCards()
+/obj/item/modular_computer/GetIdCards(list/exceptions)
 	. = ..()
 	var/datum/extension/assembly/assembly = get_extension(src, /datum/extension/assembly)
 	var/obj/item/stock_parts/computer/card_slot/card_slot = assembly.get_component(PART_CARD)
-	if(card_slot && card_slot.can_broadcast && istype(card_slot.stored_card) && card_slot.check_functionality())
+	if(card_slot && card_slot.can_broadcast && istype(card_slot.stored_card) && card_slot.check_functionality() && !is_type_in_list(card_slot.stored_card, exceptions))
 		LAZYDISTINCTADD(., card_slot.stored_card)
 
 /obj/item/modular_computer/GetChargeStick()

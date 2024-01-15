@@ -1,7 +1,7 @@
 /decl/special_role/proc/can_become_antag(var/datum/mind/player, var/ignore_role)
 
 	if(player.current)
-		if(isliving(player.current) && player.current.stat)
+		if(isliving(player.current) && player.current.stat == DEAD)
 			return FALSE
 		if(jobban_isbanned(player.current, name))
 			return FALSE
@@ -12,7 +12,7 @@
 		if(player.current && player.current.client)
 			var/client/C = player.current.client
 			// Limits antag status to clients above player age, if the age system is being used.
-			if(C && config.use_age_restriction_for_jobs && isnum(C.player_age) && isnum(min_player_age) && (C.player_age < min_player_age))
+			if(C && get_config_value(/decl/config/num/use_age_restriction_for_jobs) && isnum(C.player_age) && isnum(min_player_age) && (C.player_age < min_player_age))
 				return FALSE
 		if(player.assigned_job)
 			if(is_type_in_list(player.assigned_job, blacklisted_jobs) || is_type_in_list(player.assigned_job, restricted_jobs))
@@ -28,7 +28,7 @@
 	for(var/datum/mind/antag in current_antagonists)
 		if(mob_path && !istype(antag.current,mob_path))
 			continue
-		if(antag.current.stat==2)
+		if(antag.current.stat == DEAD)
 			continue
 		return 0
 	return 1

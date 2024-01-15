@@ -4,7 +4,7 @@
 	icon = 'icons/obj/modular_computers/modular_telescreen.dmi'
 	icon_state = "telescreen"
 	anchored = TRUE
-	density = 0
+	density = FALSE
 	idle_power_usage = 75
 	active_power_usage = 300
 	construct_state = /decl/machine_construction/default/panel_closed
@@ -12,7 +12,7 @@
 	stat_immune = 0
 	w_class = ITEM_SIZE_HUGE
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
-	directional_offset = "{'NORTH':{'y':-32}, 'SOUTH':{'y':32}, 'EAST':{'x':32}, 'WEST':{'x':-32}}"
+	directional_offset = @'{"NORTH":{"y":-32}, "SOUTH":{"y":32}, "EAST":{"x":32}, "WEST":{"x":-32}}'
 	var/list/bodyscans = list()
 	var/selected = 0
 

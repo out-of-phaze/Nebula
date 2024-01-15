@@ -15,10 +15,13 @@
 	icon_state = null
 	randpixel = 6
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
+	item_flags = null
+	material = /decl/material/liquid/nutriment
 	possible_transfer_amounts = null
 	volume = 50
-	center_of_mass = @"{'x':16,'y':16}"
+	center_of_mass = @'{"x":16,"y":16}'
 	w_class = ITEM_SIZE_SMALL
+	abstract_type = /obj/item/chems/food
 
 	var/cooked_food = FALSE // Indicates the food should give a positive stress effect on eating. This is set to true if the food is created by a recipe.
 	var/bitesize = 1
@@ -35,6 +38,9 @@
 	var/trash = null
 	var/list/attack_products //Items you can craft together. Like bomb making, but with food and less screwdrivers.
 	// Uses format list(ingredient = result_type). The ingredient can be a typepath or a kitchen_tag string (used for mobs or plants)
+
+/obj/item/chems/food/can_be_injected_by(var/atom/injector)
+	return TRUE
 
 /obj/item/chems/food/standard_pour_into(mob/user, atom/target)
 	return FALSE
@@ -102,7 +108,7 @@
 		to_chat(user, "<span class='danger'>None of [src] left!</span>")
 		qdel(src)
 		return 0
-	if(istype(M, /mob/living/carbon))
+	if(iscarbon(M))
 		//TODO: replace with standard_feed_mob() call.
 		var/mob/living/carbon/C = M
 		var/fullness = C.get_fullness()

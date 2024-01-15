@@ -3,11 +3,11 @@
 /obj/item/chems/food/monkeycube
 	name = "monkey cube"
 	desc = "Just add water!"
-	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_OPEN_CONTAINER
+	atom_flags = ATOM_FLAG_OPEN_CONTAINER
 	icon_state = "monkeycube"
 	bitesize = 12
 	filling_color = "#adac7f"
-	center_of_mass = @"{'x':16,'y':14}"
+	center_of_mass = @'{"x":16,"y":14}'
 
 	var/growing = FALSE
 	var/monkey_type = /mob/living/carbon/human/monkey
@@ -51,7 +51,8 @@
 	Expand()
 
 /obj/item/chems/food/monkeycube/on_reagent_change()
-	if(reagents.has_reagent(/decl/material/liquid/water))
+	..()
+	if(!QDELETED(src) && reagents?.has_reagent(/decl/material/liquid/water))
 		Expand()
 
 /obj/item/chems/food/monkeycube/wrapped

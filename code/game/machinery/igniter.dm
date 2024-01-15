@@ -4,7 +4,7 @@
 	icon = 'icons/obj/machines/igniter.dmi'
 	icon_state = "igniter1"
 	var/on = 0
-	anchored = 1
+	anchored = TRUE
 	idle_power_usage = 20
 	active_power_usage = 1000
 
@@ -90,7 +90,7 @@
 	var/last_spark = 0
 	var/base_state = "migniter"
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
-	anchored = 1
+	anchored = TRUE
 	idle_power_usage = 20
 	active_power_usage = 1000
 
@@ -106,7 +106,7 @@
 	construct_state = /decl/machine_construction/wall_frame/panel_closed/simple
 	frame_type = /obj/item/frame/button/sparker
 	base_type = /obj/machinery/sparker/buildable
-	directional_offset = "{'NORTH':{'y':-32}, 'SOUTH':{'y':32}, 'EAST':{'x':32}, 'WEST':{'x':-32}}"
+	directional_offset = @'{"NORTH":{"y":-32}, "SOUTH":{"y":32}, "EAST":{"x":32}, "WEST":{"x":-32}}'
 
 /obj/machinery/sparker/buildable
 	uncreated_component_parts = null

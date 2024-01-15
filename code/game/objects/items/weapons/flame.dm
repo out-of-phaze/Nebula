@@ -3,12 +3,7 @@
 	var/lit_heat = 1000
 	var/waterproof = FALSE
 	var/lit = FALSE
-	material = /decl/material/solid/wood
-
-/obj/item/flame/afterattack(var/obj/O, var/mob/user, proximity)
-	..()
-	if(proximity && lit && istype(O))
-		O.HandleObjectHeating(src, user, 700)
+	material = /decl/material/solid/organic/wood
 
 /obj/item/flame/proc/extinguish(var/mob/user, var/no_message)
 	lit = FALSE
@@ -50,7 +45,7 @@
 	var/smoketime = 5
 	obj_flags = OBJ_FLAG_HOLLOW // so that it's not super overpriced compared to lighters
 	w_class = ITEM_SIZE_TINY
-	origin_tech = "{'materials':1}"
+	origin_tech = @'{"materials":1}'
 	slot_flags = SLOT_EARS
 	attack_verb = list("burnt", "singed")
 	randpixel = 10

@@ -5,8 +5,8 @@
 	desc = "Small things moving very fast."
 	icon = 'icons/obj/machines/particle_accelerator2.dmi'
 	icon_state = "particle"//Need a new icon for this
-	anchored = 1
-	density = 1
+	anchored = TRUE
+	density = TRUE
 	var/movement_range = 10
 	var/energy = 10		//energy in eV
 	var/mega_energy = 0	//energy in MeV
@@ -63,7 +63,6 @@
 /obj/effect/accelerated_particle/proc/toxmob(var/mob/living/M)
 	var/radiation = (energy*2)
 	M.apply_damage((radiation*3),IRRADIATE, damage_flags = DAM_DISPERSED)
-	M.updatehealth()
 
 /obj/effect/accelerated_particle/proc/move(var/lag)
 	set waitfor = FALSE

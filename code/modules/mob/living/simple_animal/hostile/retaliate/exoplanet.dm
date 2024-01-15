@@ -1,45 +1,51 @@
 
 /mob/living/simple_animal/hostile/retaliate/beast
-	var/hunger = 0
-	var/list/prey = list()
+	ai = /datum/ai/beast
+	nutrition = 300
+	var/list/prey
+
+/mob/living/simple_animal/hostile/retaliate/beast/get_max_nutrition()
+	return 300
 
 /mob/living/simple_animal/hostile/retaliate/beast/ListTargets(var/dist = 7)
 	. = ..()
 	if(!length(.))
-		if(length(prey))
+		if(LAZYLEN(prey))
 			. = list()
 			for(var/weakref/W in prey)
 				var/mob/M = W.resolve()
 				if(M)
 					. |= M
-		else if(hunger > 500) //time to look for some food
+		else if(get_nutrition() < get_max_nutrition() * 0.75) //time to look for some food
 			for(var/mob/living/L in view(src, dist))
 				if(!attack_same && L.faction != faction)
-					prey |= weakref(L)
+					LAZYDISTINCTADD(prey, weakref(L))
 
-/mob/living/simple_animal/hostile/retaliate/beast/Life()
-	. = ..()
-	if(!.)
-		return FALSE
-	hunger++
-	if(hunger < 100) //stop hunting when satiated
-		prey.Cut()
-	else if(stat == CONSCIOUS)
-		for(var/mob/living/simple_animal/S in range(src,1))
-			if(S == src)
-				continue
-			if(S.stat != DEAD)
-				continue
-			visible_message(SPAN_DANGER("\The [src] consumes the body of \the [S]!"))
-			var/turf/T = get_turf(S)
-			var/obj/item/remains/xeno/X = new(T)
-			X.desc += "These look like they belong to \a [S.name]."
-			hunger = max(0, hunger - 5*S.maxHealth)
-			if(prob(5))
-				S.gib()
-			else
-				qdel(S)
-			return
+/datum/ai/beast
+	expected_type = /mob/living/simple_animal/hostile/retaliate/beast
+
+/datum/ai/beast/do_process(time_elapsed)
+	var/mob/living/simple_animal/hostile/retaliate/beast/beast = body
+	var/nut = beast.get_nutrition()
+	var/max_nut = beast.get_max_nutrition()
+	if(nut > max_nut * 0.75 || beast.incapacitated())
+		LAZYCLEARLIST(beast.prey)
+		return
+	for(var/mob/living/simple_animal/S in range(beast,1))
+		if(S == beast)
+			continue
+		if(S.stat != DEAD)
+			continue
+		beast.visible_message(SPAN_DANGER("\The [beast] consumes the body of \the [S]!"))
+		var/turf/T = get_turf(S)
+		var/obj/item/remains/xeno/X = new(T)
+		X.desc += "These look like they belong to \a [S.name]."
+		beast.adjust_nutrition(5 * S.get_max_health())
+		if(prob(5))
+			S.gib()
+		else
+			qdel(S)
+		break
 
 /mob/living/simple_animal/proc/name_species()
 	set name = "Name Alien Species"
@@ -68,8 +74,7 @@
 	faction = "samak"
 	icon = 'icons/mob/simple_animal/samak.dmi'
 	move_to_delay = 2
-	maxHealth = 125
-	health = 125
+	mob_default_max_health = 125
 	speed = 2
 	natural_weapon = /obj/item/natural_weapon/claws
 	cold_damage_per_tick = 0
@@ -90,9 +95,8 @@
 	desc = "A small pack animal. Although omnivorous, it will hunt meat on occasion."
 	faction = "diyaab"
 	icon = 'icons/mob/simple_animal/diyaab.dmi'
-	move_to_delay = 1
-	maxHealth = 25
-	health = 25
+	move_to_delay = 3
+	mob_default_max_health = 25
 	speed = 1
 	natural_weapon = /obj/item/natural_weapon/claws/weak
 	cold_damage_per_tick = 0
@@ -107,9 +111,8 @@
 	desc = "A piglike creature with a bright iridiscent mane that sparkles as though lit by an inner light. Don't be fooled by its beauty though."
 	faction = "shantak"
 	icon = 'icons/mob/simple_animal/shantak.dmi'
-	move_to_delay = 1
-	maxHealth = 75
-	health = 75
+	move_to_delay = 3
+	mob_default_max_health = 75
 	speed = 1
 	natural_weapon = /obj/item/natural_weapon/claws
 	cold_damage_per_tick = 0
@@ -148,8 +151,7 @@
 	faction = "crab"
 	icon = 'icons/mob/simple_animal/royalcrab.dmi'
 	move_to_delay = 3
-	maxHealth = 150
-	health = 150
+	mob_default_max_health = 150
 	speed = 1
 	natural_weapon = /obj/item/natural_weapon/pincers
 	speak_chance = 1
@@ -163,8 +165,7 @@
 	desc = "A huge grubby creature."
 	icon = 'icons/mob/simple_animal/char.dmi'
 	mob_size = MOB_SIZE_LARGE
-	health = 45
-	maxHealth = 45
+	mob_default_max_health = 45
 	natural_weapon = /obj/item/natural_weapon/charbaby
 	speed = 2
 	return_damage_min = 2

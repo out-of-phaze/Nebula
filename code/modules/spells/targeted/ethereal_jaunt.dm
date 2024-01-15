@@ -28,9 +28,9 @@
 			var/atom/movable/overlay/animation = new /atom/movable/overlay(holder)
 			animation.SetName("water")
 			animation.set_density(0)
-			animation.anchored = 1
+			animation.anchored = TRUE
 			animation.icon = 'icons/mob/mob.dmi'
-			animation.layer = FLY_LAYER 
+			animation.layer = FLY_LAYER
 			target.ExtinguishMob()
 			if(target.buckled)
 				target.buckled = null
@@ -82,8 +82,8 @@
 	icon_state = "nothing"
 	var/canmove = 1
 	var/reappearing = 0
-	density = 0
-	anchored = 1
+	density = FALSE
+	anchored = TRUE
 	var/turf/last_valid_turf
 
 /obj/effect/dummy/spell_jaunt/Initialize()
@@ -107,7 +107,7 @@
 	else
 		to_chat(user, "<span class='warning'>Some strange aura is blocking the way!</span>")
 	canmove = 0
-	addtimer(CALLBACK(src, .proc/allow_move), 2)
+	addtimer(CALLBACK(src, PROC_REF(allow_move)), 2)
 
 /obj/effect/dummy/spell_jaunt/proc/allow_move()
 	canmove = TRUE

@@ -34,6 +34,7 @@ var/global/list/possible_say_verbs = list(
 	holder_type = /obj/item/holder
 	idcard = /obj/item/card/id
 	silicon_radio = null // pAIs get their radio from the card they belong to.
+	mob_default_max_health = 100
 
 	os_type =	/datum/extension/interactive/os/silicon/small
 	starting_stock_parts = list(
@@ -83,22 +84,32 @@ var/global/list/possible_say_verbs = list(
 
 	set_extension(src, /datum/extension/base_icon_state, icon_state)
 	status_flags |= NO_ANTAG
-	card = loc
+	if(!card)
+		if(istype(loc, /obj/item/paicard))
+			card = loc
+		else
+			card.radio = new /obj/item/radio(card)
+	if(istype(card))
+		if(!card.radio)
+			card.radio = new /obj/item/radio(card)
+		silicon_radio = card.radio
+		card.setPersonality(src)
+	else
+		return INITIALIZE_HINT_QDEL
 
 	//As a human made device, we'll understand sol common without the need of the translator
 	add_language(/decl/language/human/common, 1)
-
 	verbs -= /mob/living/verb/ghost
 
 	. = ..()
 
-	if(card)
-		if(!card.radio)
-			card.radio = new /obj/item/radio(card)
-		silicon_radio = card.radio
+	software = default_pai_software.Copy()
 
 /mob/living/silicon/pai/Destroy()
-	card = null
+	if(card)
+		if(card.pai == src)
+			card.removePersonality()
+		card = null
 	silicon_radio = null // Because this radio actually belongs to another instance we simply null
 	. = ..()
 
@@ -177,7 +188,7 @@ var/global/list/possible_say_verbs = list(
 	if(istype(card.loc,/obj/item/rig_module) || istype(card.loc,/obj/item/integrated_circuit/manipulation/ai/))
 		to_chat(src, "There is no room to unfold inside \the [card.loc]. You're good and stuck.")
 		return 0
-	else if(istype(card.loc,/mob))
+	else if(ismob(card.loc))
 		var/mob/holder = card.loc
 		if(ishuman(holder))
 			var/mob/living/carbon/human/H = holder
@@ -243,7 +254,7 @@ var/global/list/possible_say_verbs = list(
 	if(istype(src.loc,/obj/item/paicard))
 		resting = 0
 		var/obj/item/rig/rig = src.get_rig()
-		if(istype(rig))
+		if(rig)
 			rig.force_rest(src)
 	else
 		resting = !resting
@@ -266,12 +277,11 @@ var/global/list/possible_say_verbs = list(
 	if(W.force)
 		visible_message(SPAN_DANGER("[user] attacks [src] with [W]!"))
 		adjustBruteLoss(W.force)
-		updatehealth()
 	else
 		visible_message(SPAN_WARNING("[user] bonks [src] harmlessly with [W]."))
 
 	spawn(1)
-		if(stat != 2) fold()
+		if(stat != DEAD) fold()
 	return
 
 /mob/living/silicon/pai/default_interaction(mob/user)

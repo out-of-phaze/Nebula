@@ -13,10 +13,9 @@
 	icon = 'icons/mob/bot/mulebot.dmi'
 	icon_state = "mulebot0"
 	layer = MOB_LAYER
-	anchored = 1
-	density = 1
-	health = 150
-	maxHealth = 150
+	anchored = TRUE
+	density = TRUE
+	mob_default_max_health = 150
 	mob_bump_flag = HEAVY
 
 	min_target_dist = 0
@@ -52,7 +51,7 @@
 	suffix = num2text(++amount)
 	name = "Mulebot #[suffix]"
 
-/mob/living/bot/mulebot/receive_mouse_drop(var/atom/dropping, var/mob/user)
+/mob/living/bot/mulebot/receive_mouse_drop(atom/dropping, mob/user, params)
 	. = ..()
 	if(!.)
 		load(dropping)
@@ -321,6 +320,6 @@
 	busy = 0
 
 /mob/living/bot/mulebot/get_mob()
-	if(load && istype(load, /mob/living))
+	if(load && isliving(load))
 		return list(src, load)
 	return src

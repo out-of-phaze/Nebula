@@ -2,7 +2,7 @@
 	name = "gun"
 	desc = "A gun that fires bullets."
 	icon = 'icons/obj/guns/pistol.dmi'
-	origin_tech = "{'combat':2,'materials':2}"
+	origin_tech = @'{"combat":2,"materials":2}'
 	w_class = ITEM_SIZE_NORMAL
 	material = /decl/material/solid/metal/steel
 	screen_shake = 1
@@ -225,7 +225,7 @@
 		to_chat(user, SPAN_WARNING("You can't unload \the [src] manually. Maybe try a crowbar?"))
 
 /obj/item/gun/projectile/attack_hand(mob/user)
-	if(!user.is_holding_offhand(src) || !manual_unload || !user.check_dexterity(DEXTERITY_GRIP, TRUE))
+	if(!user.is_holding_offhand(src) || !manual_unload || !user.check_dexterity(DEXTERITY_HOLD_ITEM, TRUE))
 		return ..()
 	unload_ammo(user, allow_dump=0)
 	return TRUE

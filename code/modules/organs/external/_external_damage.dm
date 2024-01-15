@@ -10,7 +10,7 @@
 	take_external_damage(amount)
 
 /obj/item/organ/external/proc/take_external_damage(brute, burn, damage_flags, used_weapon, override_droplimb)
-	
+
 	if(!owner)
 		return
 
@@ -48,10 +48,10 @@
 				burn = max(burn - spillover, 0)
 	//If limb took enough damage, try to cut or tear it off
 	if(owner && loc == owner)
-		owner.updatehealth() //droplimb will call updatehealth() again if it does end up being called
-		if((limb_flags & ORGAN_FLAG_CAN_AMPUTATE) && config.limbs_can_break)
+		owner.update_health() //droplimb will call update_health() again if it does end up being called
+		if((limb_flags & ORGAN_FLAG_CAN_AMPUTATE) && get_config_value(/decl/config/toggle/on/health_limbs_can_break))
 			var/total_damage = brute_dam + burn_dam + brute + burn + spillover
-			var/threshold = max_damage * config.organ_health_multiplier
+			var/threshold = max_damage * get_config_value(/decl/config/num/health_organ_health_multiplier)
 			if(total_damage > threshold)
 				if(attempt_dismemberment(pure_brute, burn, sharp, edge, used_weapon, spillover, total_damage > threshold*6, override_droplimb = override_droplimb))
 					return
@@ -109,16 +109,16 @@
 
 	//If there are still hurties to dispense
 	if (spillover)
-		owner.shock_stage += spillover * config.organ_damage_spillover_multiplier
+		owner.shock_stage += spillover * get_config_value(/decl/config/num/health_organ_damage_spillover_multiplier)
 
 	// sync the organ's damage with its wounds
 	update_damages()
-	owner.updatehealth()
+	owner.update_health()
 	if(status & ORGAN_BLEEDING)
 		owner.update_bandages()
 
 	if(owner && update_damstate())
-		owner.UpdateDamageIcon()
+		owner.update_damage_icon()
 
 	if(created_wound && isobj(used_weapon))
 		var/obj/O = used_weapon
@@ -192,8 +192,8 @@
 		status &= ~ORGAN_BROKEN
 
 	//Sync the organ's damage with its wounds
-	src.update_damages()
-	owner.updatehealth()
+	update_damages()
+	owner.update_health()
 
 	return update_damstate()
 
@@ -206,14 +206,14 @@
 
 // Geneloss/cloneloss.
 /obj/item/organ/external/proc/get_genetic_damage()
-	if(species?.species_flags & SPECIES_FLAG_NO_SCAN)
+	if(bodytype.body_flags & BODY_FLAG_NO_DNA)
 		return 0
 	if(BP_IS_PROSTHETIC(src))
 		return 0
 	return genetic_degradation
 
 /obj/item/organ/external/proc/remove_genetic_damage(var/amount)
-	if((species.species_flags & SPECIES_FLAG_NO_SCAN) || BP_IS_PROSTHETIC(src))
+	if(bodytype.body_flags & BODY_FLAG_NO_DNA)
 		genetic_degradation = 0
 		status &= ~ORGAN_MUTATED
 		return
@@ -226,7 +226,7 @@
 	return -(genetic_degradation - last_gene_dam)
 
 /obj/item/organ/external/proc/add_genetic_damage(var/amount)
-	if((species.species_flags & SPECIES_FLAG_NO_SCAN) || BP_IS_PROSTHETIC(src))
+	if(bodytype.body_flags & BODY_FLAG_NO_DNA)
 		genetic_degradation = 0
 		status &= ~ORGAN_MUTATED
 		return
@@ -289,7 +289,7 @@
 	if(agony_amount && owner && can_feel_pain())
 		agony_amount -= (GET_CHEMICAL_EFFECT(owner, CE_PAINKILLER)/2)//painkillers does wonders!
 		agony_amount += get_pain()
-		if(agony_amount < 5) 
+		if(agony_amount < 5)
 			return
 
 		if(check_pain_disarm())
@@ -312,9 +312,9 @@
 	return has_genitals() ? 2 : 1
 
 /obj/item/organ/external/proc/sever_artery()
-	if(species && species.has_organ[BP_HEART])
-		var/obj/item/organ/internal/heart/O = species.has_organ[BP_HEART]
-		if(!BP_IS_PROSTHETIC(src) && !(status & ORGAN_ARTERY_CUT) && !initial(O.open))
+	var/obj/item/organ/internal/heart/heart_path = bodytype?.has_organ[BP_HEART]
+	if(heart_path)
+		if(!BP_IS_PROSTHETIC(src) && !(status & ORGAN_ARTERY_CUT) && !initial(heart_path.open))
 			status |= ORGAN_ARTERY_CUT
 			return TRUE
 	return FALSE

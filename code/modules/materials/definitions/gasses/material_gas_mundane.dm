@@ -82,8 +82,8 @@
 			H.co2_alert = 0
 	else if(istype(H))
 		H.co2_alert = 0
-	if(istype(H) && dosage > 1 && H.losebreath < 15)
-		H.losebreath++
+	if(istype(H) && dosage > 1 && H.ticks_since_last_successful_breath < 15)
+		H.ticks_since_last_successful_breath++
 	if(warning_message && prob(warning_prob))
 		to_chat(M, SPAN_WARNING("You feel [warning_message]."))
 
@@ -325,11 +325,12 @@
 	lore_text = "A radioactive isotope of hydrogen. Useful as a fusion reactor fuel material."
 	mechanics_text = "Tritium is useable as a fuel in some forms of portable generator. It can also be converted into a fuel rod suitable for a R-UST fusion plant injector by using a fuel compressor. It fuses hotter than deuterium but is correspondingly more unstable."
 	color = "#777777"
-	stack_origin_tech = "{'materials':5}"
+	stack_origin_tech = @'{"materials":5}'
 	value = 0.45
 	gas_symbol_html = "T"
 	gas_symbol = "T"
-	exoplanet_rarity = MAT_RARITY_UNCOMMON
+	exoplanet_rarity_plant = MAT_RARITY_UNCOMMON
+	exoplanet_rarity_gas = MAT_RARITY_UNCOMMON
 
 /decl/material/gas/hydrogen/deuterium
 	name = "deuterium"
@@ -339,11 +340,12 @@
 	mechanics_text = "Deuterium can be converted into a fuel rod suitable for a R-UST fusion plant injector by using a fuel compressor. It is the most 'basic' fusion fuel."
 	flags = MAT_FLAG_FUSION_FUEL | MAT_FLAG_FISSIBLE
 	color = "#999999"
-	stack_origin_tech = "{'materials':3}"
+	stack_origin_tech = @'{"materials":3}'
 	gas_symbol_html = "D"
 	gas_symbol = "D"
 	value = 0.5
-	exoplanet_rarity = MAT_RARITY_UNCOMMON
+	exoplanet_rarity_plant = MAT_RARITY_UNCOMMON
+	exoplanet_rarity_gas = MAT_RARITY_UNCOMMON
 
 	neutron_interactions = list(
 		INTERACTION_ABSORPTION = 1250

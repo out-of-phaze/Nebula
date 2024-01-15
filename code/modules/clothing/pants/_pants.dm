@@ -9,6 +9,7 @@
 	w_class = ITEM_SIZE_NORMAL
 	force = 0
 	valid_accessory_slots = list(
+		ACCESSORY_SLOT_SENSORS,
 		ACCESSORY_SLOT_UTILITY,
 		ACCESSORY_SLOT_HOLSTER,
 		ACCESSORY_SLOT_ARMBAND,
@@ -28,8 +29,7 @@
 		ACCESSORY_SLOT_OVER
 	)
 
-/obj/item/clothing/pants/update_clothing_icon()
-	if(ismob(src.loc))
-		var/mob/M = src.loc
-		M.update_inv_w_uniform(0)
-		M.update_inv_wear_id()
+/obj/item/clothing/pants/get_associated_equipment_slots()
+	. = ..()
+	var/static/list/pants_slots = list(slot_w_uniform_str, slot_wear_id_str)
+	LAZYDISTINCTADD(., pants_slots)

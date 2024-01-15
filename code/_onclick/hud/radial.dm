@@ -3,57 +3,6 @@
 
 var/global/list/radial_menus = list()
 
-/obj/screen/radial/Destroy()
-	parent = null
-	return ..()
-
-/obj/screen/radial
-	icon = 'icons/screen/radial.dmi'
-	layer = HUD_ABOVE_ITEM_LAYER
-	plane = HUD_PLANE
-	var/datum/radial_menu/parent
-
-/obj/screen/radial/slice
-	icon_state = "radial_slice"
-	var/choice
-	var/next_page = FALSE
-	var/tooltips = FALSE
-
-/obj/screen/radial/slice/MouseEntered(location, control, params)
-	. = ..()
-	icon_state = "radial_slice_focus"
-	if(tooltips)
-		openToolTip(usr, src, params, title = name)
-
-/obj/screen/radial/slice/MouseExited(location, control, params)
-	. = ..()
-	icon_state = "radial_slice"
-	if(tooltips)
-		closeToolTip(usr)
-
-/obj/screen/radial/slice/Click(location, control, params)
-	if(parent && usr.client == parent.current_user)
-		if(next_page)
-			parent.next_page()
-		else
-			parent.element_chosen(choice,usr)
-
-/obj/screen/radial/center
-	name = "Close Menu"
-	icon_state = "radial_center"
-
-/obj/screen/radial/center/MouseEntered(location, control, params)
-	. = ..()
-	icon_state = "radial_center_focus"
-
-/obj/screen/radial/center/MouseExited(location, control, params)
-	. = ..()
-	icon_state = "radial_center"
-
-/obj/screen/radial/center/Click(location, control, params)
-	if(usr.client == parent.current_user)
-		parent.finished = TRUE
-
 /datum/radial_menu
 	var/list/choices = list() //List of choice id's
 	var/list/choices_icons = list() //choice_id -> icon
@@ -169,7 +118,7 @@ var/global/list/radial_menus = list()
 	E.alpha = 0
 	E.name = "None"
 	E.maptext = null
-	E.mouse_opacity = 0
+	E.mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
 	E.choice = null
 	E.next_page = FALSE
 
@@ -190,7 +139,7 @@ var/global/list/radial_menus = list()
 
 	//Visuals
 	E.alpha = 255
-	E.mouse_opacity = 1
+	E.mouse_opacity = MOUSE_OPACITY_NORMAL
 	E.overlays.Cut()
 	if(choice_id == NEXT_PAGE_ID)
 		E.name = "Next Page"
@@ -355,4 +304,4 @@ var/global/list/radial_menus = list()
 /proc/make_item_radial_menu_choices(var/list/items, var/name_prefix = "", var/name_suffix = "")
 	for(var/atom/movable/AM in items)
 		LAZYSET(., AM, make_item_radial_menu_button(AM, name_prefix, name_suffix))
-	
+

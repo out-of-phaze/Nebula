@@ -104,7 +104,7 @@
 			continue
 		else
 			var/mob/M = I.loc
-			if (M.stat == 2)
+			if (M.stat == DEAD)
 				if (M.timeofdeath + 6000 < world.time)
 					continue
 			var/turf/T = get_turf(M)
@@ -134,7 +134,7 @@
 	set src in oview(1)
 	set desc = "ID Tag:"
 
-	if(stat & (NOPOWER|BROKEN) || !istype(usr,/mob/living))
+	if(stat & (NOPOWER|BROKEN) || !isliving(usr))
 		return
 	if (t)
 		src.id = t
@@ -146,14 +146,14 @@
 
 /obj/machinery/computer/teleporter/proc/clear_target()
 	if(src.locked)
-		events_repository.unregister(/decl/observ/destroyed, locked, src, .proc/target_lost)
+		events_repository.unregister(/decl/observ/destroyed, locked, src, PROC_REF(target_lost))
 	src.locked = null
 	if(station && station.engaged)
 		station.disengage()
 
 /obj/machinery/computer/teleporter/proc/set_target(var/obj/O)
 	src.locked = O
-	events_repository.register(/decl/observ/destroyed, locked, src, .proc/target_lost)
+	events_repository.register(/decl/observ/destroyed, locked, src, PROC_REF(target_lost))
 
 /obj/machinery/computer/teleporter/Destroy()
 	clear_target()

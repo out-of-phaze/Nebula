@@ -20,6 +20,7 @@
 	exterior_atmos_temp = null
 	level_generators    = list(
 		/datum/random_map/noise/exoplanet/meat,
+		/datum/random_map/noise/ore/poor,
 	)
 
 ////////////////////////////////////////////////////////////////////////////
@@ -93,9 +94,6 @@
 	template_parent_type       = /datum/map_template/planetoid/random/exoplanet
 	level_data_type            = /datum/level_data/planetoid/exoplanet/meat
 	prefered_level_data_per_z  = null
-	map_generators = list(
-		/datum/random_map/noise/ore/poor
-	)
 
 /datum/map_template/planetoid/random/exoplanet/meat/get_spawn_weight()
 	return 10
@@ -136,6 +134,9 @@
 	desc          = "It's disgustingly soft to the touch. And warm. Too warm."
 	dirt_color    = "#c40031"
 	footstep_type = /decl/footsteps/mud
+
+/turf/exterior/meat/get_diggable_resources()
+	return dug ? null : list(/obj/item/stack/material/ore/meat = list(3, 2))
 
 /turf/exterior/water/stomach
 	name         = "juices"

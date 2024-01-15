@@ -3,8 +3,8 @@
 	desc = "A highly advanced microscope capable of analyzing any type of forensic evidence."
 	icon = 'icons/obj/forensics.dmi'
 	icon_state = "microscope"
-	anchored = 1
-	density = 1
+	anchored = TRUE
+	density = TRUE
 	base_type = /obj/machinery/forensic
 	construct_state = /decl/machine_construction/default/panel_closed
 	uncreated_component_parts = null
@@ -27,7 +27,7 @@
 /obj/machinery/forensic/proc/set_sample(var/obj/O)
 	if(O != sample && O)
 		clear_sample()
-		events_repository.register(/decl/observ/destroyed, O, src, /obj/machinery/forensic/proc/clear_sample)
+		events_repository.register(/decl/observ/destroyed, O, src, TYPE_PROC_REF(/obj/machinery/forensic, clear_sample))
 		sample = O
 		update_icon()
 
@@ -107,7 +107,7 @@
 	remover.put_in_hands(sample)
 	clear_sample()
 
-/obj/machinery/forensic/handle_mouse_drop(var/atom/over, var/mob/user)
+/obj/machinery/forensic/handle_mouse_drop(atom/over, mob/user, params)
 	if(user == over)
 		remove_sample(usr)
 		return TRUE

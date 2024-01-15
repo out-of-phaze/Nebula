@@ -1,14 +1,14 @@
 /obj/machinery/space_heater
 	use_power = POWER_USE_OFF
-	anchored = 0
-	density = 1
+	anchored = FALSE
+	density = TRUE
 	icon = 'icons/obj/atmos.dmi'
 	icon_state = "sheater-off"
 	name = "space heater"
 	desc = "This heater is guaranteed not to set anything, or anyone, on fire."
 	required_interaction_dexterity = DEXTERITY_SIMPLE_MACHINES
 
-	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CLIMBABLE
+	atom_flags = ATOM_FLAG_CLIMBABLE
 	movable_flags = MOVABLE_FLAG_WHEELED
 	clicksound = "switch"
 

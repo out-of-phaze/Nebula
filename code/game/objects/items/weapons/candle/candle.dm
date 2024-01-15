@@ -6,6 +6,7 @@
 	item_state = "candle1"
 	w_class = ITEM_SIZE_TINY
 	light_color = "#e09d37"
+	material = /decl/material/solid/organic/wax
 
 	var/available_colours = list(COLOR_WHITE, COLOR_DARK_GRAY, COLOR_RED, COLOR_ORANGE, COLOR_YELLOW, COLOR_GREEN, COLOR_BLUE, COLOR_INDIGO, COLOR_VIOLET)
 	var/wax
@@ -88,7 +89,7 @@
 	max_w_class = ITEM_SIZE_TINY
 	max_storage_space = 7
 	slot_flags = SLOT_LOWER_BODY
-	material = /decl/material/solid/cardboard
+	material = /decl/material/solid/organic/cardboard
 
 /obj/item/storage/candle_box/WillContain()
 	return list(/obj/item/flame/candle = 7)

@@ -5,8 +5,7 @@
 	real_name = "robot"
 	icon = 'icons/mob/robots/robot.dmi'
 	icon_state = ICON_STATE_WORLD
-	maxHealth = 300
-	health = 300
+	mob_default_max_health = 300
 	mob_sort_value = 4
 
 	z_flags = ZMM_MANGLE_PLANES
@@ -35,13 +34,13 @@
 
 //Hud stuff
 
-	var/obj/screen/inv1 = null
-	var/obj/screen/inv2 = null
-	var/obj/screen/inv3 = null
+	var/obj/screen/robot_module_one/inv1
+	var/obj/screen/robot_module_two/inv2
+	var/obj/screen/robot_module_three/inv3
 	var/obj/screen/robot_drop_grab/ui_drop_grab
 
 	var/shown_robot_modules = 0 //Used to determine whether they have the module menu shown or not
-	var/obj/screen/robot_modules_background
+	var/obj/screen/robot_modules_background/robot_modules_background
 
 //3 Modules can be activated at any one time.
 	var/obj/item/robot_module/module = null
@@ -103,8 +102,7 @@
 
 	wires = new(src)
 
-	robot_modules_background = new()
-	robot_modules_background.icon_state = "block"
+	robot_modules_background = new(null, src)
 	ident = random_id(/mob/living/silicon/robot, 1, 999)
 
 	updatename(modtype)
@@ -497,14 +495,13 @@
 		if (WT.weld(0))
 			user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 			adjustBruteLoss(-30)
-			updatehealth()
 			add_fingerprint(user)
 			user.visible_message(SPAN_NOTICE("\The [user] has fixed some of the dents on \the [src]!"))
 		else
 			to_chat(user, "Need more welding fuel!")
 			return
 
-	else if(istype(W, /obj/item/stack/cable_coil) && (wiresexposed || istype(src,/mob/living/silicon/robot/drone)))
+	else if(istype(W, /obj/item/stack/cable_coil) && (wiresexposed || isdrone(src)))
 		if (!getFireLoss())
 			to_chat(user, "Nothing to fix here!")
 			return
@@ -512,7 +509,6 @@
 		if (coil.use(1))
 			user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 			adjustFireLoss(-30)
-			updatehealth()
 			user.visible_message(SPAN_NOTICE("\The [user] has fixed some of the burnt wires on \the [src]!"))
 
 	else if(IS_CROWBAR(W) && user.a_intent != I_HURT)	// crowbar means open or close the cover - we all know what a crowbar is by now
@@ -671,7 +667,7 @@
 	. = ..()
 
 /mob/living/silicon/robot/default_interaction(mob/user)
-	if(user.a_intent != I_GRAB && opened && !wiresexposed && (!istype(user, /mob/living/silicon)))
+	if(user.a_intent != I_GRAB && opened && !wiresexposed && (!issilicon(user)))
 		var/datum/robot_component/cell_component = components["power cell"]
 		if(cell)
 			cell.update_icon()
@@ -722,11 +718,6 @@
 
 	if(module_active && istype(module_active, /obj/item/borg/combat/shield))
 		add_overlay("[icon_state]-shield")
-
-	var/datum/extension/hattable/hattable = get_extension(src, /datum/extension/hattable)
-	var/image/hat = hattable?.get_hat_overlay(src)
-	if(hat)
-		add_overlay(hat)
 
 /mob/living/silicon/robot/proc/installed_modules()
 	if(weapon_lock)
@@ -859,7 +850,7 @@
 					else if(istype(A, /obj/item))
 						var/obj/item/cleaned_item = A
 						cleaned_item.clean_blood()
-					else if(istype(A, /mob/living/carbon/human))
+					else if(ishuman(A))
 						var/mob/living/carbon/human/cleaned_human = A
 						if(cleaned_human.lying)
 							var/obj/item/head = cleaned_human.get_equipped_item(slot_head_str)
@@ -1128,3 +1119,13 @@
 	if(!CO || !cell_use_power(CO.active_usage))
 		return FALSE
 	return TRUE
+
+/mob/living/silicon/robot/need_breathe()
+	return FALSE
+
+/mob/living/silicon/robot/should_breathe()
+	return FALSE
+
+/mob/living/silicon/robot/try_breathe()
+	return FALSE
+

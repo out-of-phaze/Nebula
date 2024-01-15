@@ -2,7 +2,7 @@ var/global/list/event_last_fired = list()
 
 //Always triggers an event when called, dynamically chooses events based on job population
 /proc/spawn_dynamic_event()
-	if(!config.allow_random_events)
+	if(!get_config_value(/decl/config/toggle/allow_random_events))
 		return
 
 	var/minutes_passed = world.time/600
@@ -96,7 +96,7 @@ var/global/list/event_last_fired = list()
 
 		.["Any"]++
 
-		if(istype(M, /mob/living/silicon/robot))
+		if(isrobot(M))
 			var/mob/living/silicon/robot/R = M
 			if(R.module?.associated_department)
 				var/decl/department/dept = GET_DECL(R.module.associated_department)

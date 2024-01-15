@@ -3,7 +3,7 @@
 	desc = "A blocky, plastic novelty launcher that claims to be able to shoot money at considerable velocities."
 	icon = 'icons/obj/guns/launcher/money.dmi'
 	icon_state = ICON_STATE_WORLD
-	origin_tech = "{'combat':1,'materials':1}"
+	origin_tech = @'{"combat":1,"materials":1}'
 	slot_flags = SLOT_LOWER_BODY
 	w_class = ITEM_SIZE_SMALL
 	release_force = 80
@@ -106,7 +106,7 @@
 	to_chat(user, "<span class='notice'>You set [src] to dispense [dispensing] [cur.name_singular] at a time.</span>")
 
 /obj/item/gun/launcher/money/attack_hand(mob/user)
-	if(!user.is_holding_offhand(src) || !user.check_dexterity(DEXTERITY_GRIP, TRUE))
+	if(!user.is_holding_offhand(src) || !user.check_dexterity(DEXTERITY_HOLD_ITEM, TRUE))
 		return ..()
 	unload_receptacle(user)
 	return TRUE

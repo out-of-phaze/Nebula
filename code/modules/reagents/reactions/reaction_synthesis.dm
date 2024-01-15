@@ -4,6 +4,7 @@
 	result_amount = 1
 	mix_message = "The solution hardens and begins to crystallize."
 	abstract_type = /decl/chemical_reaction/synthesis
+	reaction_category = REACTION_TYPE_SYNTHESIS
 
 /decl/chemical_reaction/synthesis/fiberglass
 	name = "Fiberglass"
@@ -14,7 +15,7 @@
 /decl/chemical_reaction/synthesis/fiberglass/Initialize()
 	required_reagents = list(
 		/decl/material/solid/glass =   CEILING(REAGENT_UNITS_PER_MATERIAL_SHEET/2),
-		/decl/material/solid/plastic = CEILING(REAGENT_UNITS_PER_MATERIAL_SHEET/2)
+		/decl/material/solid/organic/plastic = CEILING(REAGENT_UNITS_PER_MATERIAL_SHEET/2)
 	)
 	. = ..()
 
@@ -103,7 +104,7 @@
 	..()
 	var/location = get_turf(holder.get_reaction_loc(chemical_reaction_flags))
 	if(location)
-		SSmaterials.create_object(/decl/material/solid/plastic, location, created_volume)
+		SSmaterials.create_object(/decl/material/solid/organic/plastic, location, created_volume)
 
 /decl/chemical_reaction/synthesis/resin_pack
 	name = "Resin Globule"

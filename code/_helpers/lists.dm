@@ -76,18 +76,22 @@
 	return counting_english_list(input, output_icons, determiners, nothing_text, and_text, comma_text, final_comma_text)
 
 //Checks for specific types in a list
-/proc/is_type_in_list(var/atom/A, var/list/L)
-	for(var/type in L)
-		if(istype(A, type))
-			return 1
-	return 0
+/proc/is_type_in_list(datum/thing, list/type_list)
+	if(!length(type_list) || !istype(thing))
+		return FALSE
+	for(var/check_type in type_list)
+		if(istype(thing, check_type))
+			return TRUE
+	return FALSE
 
 //Checks for specific paths in a list
-/proc/is_path_in_list(var/path, var/list/L)
-	for(var/type in L)
-		if(ispath(path, type))
-			return 1
-	return 0
+/proc/is_path_in_list(var/check_path, list/type_list)
+	if(!length(type_list) || !ispath(check_path))
+		return FALSE
+	for(var/check_type in type_list)
+		if(ispath(check_path, check_type))
+			return TRUE
+	return FALSE
 
 //returns a new list with only atoms that are in typecache L
 /proc/typecache_filter_list(list/atoms, list/typecache)
@@ -797,8 +801,72 @@ var/global/list/json_cache = list()
 			else if(decoded)
 				return decoded
 		catch(var/exception/e)
-			log_error("Exception during JSON decoding ([json_to_decode]): [e]")
+			log_error("Exception during JSON decoding ([json_to_decode]): [EXCEPTION_TEXT(e)]")
 	return list()
+
+/proc/load_text_from_directory(var/directory, var/expected_extension = ".txt", var/recursive = TRUE)
+
+	if(!directory)
+		return list(
+			"files"      = list(),
+			"item_count" = 0,
+			"dir_count"  = 0
+		)
+
+	if(copytext(directory, -1) != "/")
+		directory += "/"
+
+	var/list/walked_directories = list()
+	var/list/loaded_files = list()
+	var/dir_count  = 0
+	var/item_count = 0
+
+	// Use a while loop so we can recurse over subdirectories.
+	var/list/directories_to_check = list(directory)
+	// Cache the extension length so we can save some time when checking for matches.
+	expected_extension = trim(lowertext(expected_extension))
+	var/expected_extension_length = -(length(expected_extension))
+	while(length(directories_to_check))
+
+		// Check each directory only once to avoid wasted effort.
+		var/checkdir = directories_to_check[1]
+		directories_to_check -= checkdir
+		walked_directories += checkdir
+
+		// Skip an examples directory if provided.
+		if(checkdir == "[directory]examples/")
+			continue
+
+		// Iterate the file list.
+		for(var/checkfile in flist(checkdir))
+			checkfile = "[checkdir][checkfile]"
+			// This is a directory, if we're recursing we want to go down this rabbit hole (unless we've already seen this dir via symlink).
+			if(copytext(checkfile, -1) == "/")
+				if(recursive && !(checkfile in walked_directories))
+					directories_to_check += checkfile
+					dir_count++
+				continue
+			// Not a file we want, continue on.
+			if(expected_extension && lowertext(copytext(checkfile, expected_extension_length)) != expected_extension)
+				continue
+			// Fail on duplicates.
+			// TODO: maybe aggregate them? checkfile is a fully qualified path so I can't see any real world case for overlap other than symlink stuff.
+			if(checkfile in loaded_files)
+				PRINT_STACK_TRACE("Duplicate file load for [checkfile].")
+				continue
+			try
+				// Actually load the file now.
+				loaded_files[checkfile] = safe_file2text(checkfile)
+				item_count++
+			catch(var/exception/e)
+				PRINT_STACK_TRACE("Exception loading [checkfile]: [EXCEPTION_TEXT(e)]")
+
+	// Return a manifest for further processing.
+	return list(
+		"files"      = loaded_files,
+		"item_count" = item_count,
+		"dir_count"  = dir_count
+	)
 
 /// Is this a dense (all keys have non-null values) associative list with at least one entry?
 /proc/is_dense_assoc(var/list/L)

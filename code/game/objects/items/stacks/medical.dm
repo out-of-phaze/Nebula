@@ -28,12 +28,12 @@
 		to_chat(user, SPAN_WARNING("\The [src] cannot be applied to [M]!"))
 		return 1
 
-	if ( ! (istype(user, /mob/living/carbon/human) || \
-			istype(user, /mob/living/silicon)) )
+	if ( ! (ishuman(user) || \
+			issilicon(user)) )
 		to_chat(user, SPAN_WARNING("You don't have the dexterity to do this!"))
 		return 1
 
-	if (istype(M, /mob/living/carbon/human))
+	if (ishuman(M))
 		var/mob/living/carbon/human/H = M
 		var/obj/item/organ/external/affecting = GET_EXTERNAL_ORGAN(H, user.get_target_zone())
 
@@ -54,9 +54,7 @@
 			if(istype(suit))
 				to_chat(user, SPAN_WARNING("You can't apply [src] through [suit]!"))
 				return 1
-
-		H.UpdateDamageIcon()
-
+		H.update_health() // TODO: readd the actual healing logic that goes here, or check that it's applied in afterattack or something
 	else
 
 		M.heal_organ_damage((src.heal_brute/2), (src.heal_burn/2))
@@ -66,13 +64,12 @@
 		)
 		use(1)
 
-	M.updatehealth()
 /obj/item/stack/medical/bruise_pack
 	name = "roll of gauze"
 	singular_name = "gauze length"
 	desc = "Some sterile gauze to wrap around bloody stumps."
 	icon_state = "brutepack"
-	origin_tech = "{'biotech':1}"
+	origin_tech = @'{"biotech":1}'
 	animal_heal = 5
 	apply_sounds = list('sound/effects/rip1.ogg','sound/effects/rip2.ogg')
 	amount = 10
@@ -81,7 +78,7 @@
 	if(..())
 		return 1
 
-	if (istype(M, /mob/living/carbon/human))
+	if (ishuman(M))
 		var/mob/living/carbon/human/H = M
 		var/obj/item/organ/external/affecting = GET_EXTERNAL_ORGAN(H, user.get_target_zone()) //nullchecked by ..()
 
@@ -130,7 +127,7 @@
 	singular_name = "ointment"
 	icon_state = "ointment"
 	heal_burn = 1
-	origin_tech = "{'biotech':1}"
+	origin_tech = @'{"biotech":1}'
 	animal_heal = 4
 	apply_sounds = list('sound/effects/ointment.ogg')
 
@@ -138,7 +135,7 @@
 	if(..())
 		return 1
 
-	if (istype(M, /mob/living/carbon/human))
+	if (ishuman(M))
 		var/mob/living/carbon/human/H = M
 		var/obj/item/organ/external/affecting = GET_EXTERNAL_ORGAN(H, user.get_target_zone()) //nullchecked by ..()
 
@@ -164,7 +161,7 @@
 	desc = "An advanced trauma kit for severe injuries."
 	icon_state = "traumakit"
 	heal_brute = 0
-	origin_tech = "{'biotech':1}"
+	origin_tech = @'{"biotech":1}'
 	animal_heal = 12
 	apply_sounds = list('sound/effects/rip1.ogg','sound/effects/rip2.ogg','sound/effects/tape.ogg')
 	amount = 10
@@ -173,7 +170,7 @@
 	if(..())
 		return 1
 
-	if (istype(M, /mob/living/carbon/human))
+	if (ishuman(M))
 		var/mob/living/carbon/human/H = M
 		var/obj/item/organ/external/affecting = GET_EXTERNAL_ORGAN(H, user.get_target_zone()) //nullchecked by ..()
 		if(affecting.is_bandaged() && affecting.is_disinfected())
@@ -220,7 +217,7 @@
 	desc = "An advanced treatment kit for severe burns."
 	icon_state = "burnkit"
 	heal_burn = 5
-	origin_tech = "{'biotech':1}"
+	origin_tech = @'{"biotech":1}'
 	animal_heal = 7
 	apply_sounds = list('sound/effects/ointment.ogg')
 
@@ -229,7 +226,7 @@
 	if(..())
 		return 1
 
-	if (istype(M, /mob/living/carbon/human))
+	if (ishuman(M))
 		var/mob/living/carbon/human/H = M
 		var/obj/item/organ/external/affecting = GET_EXTERNAL_ORGAN(H, user.get_target_zone()) //nullchecked by ..()
 
@@ -270,7 +267,7 @@
 	if(..())
 		return 1
 
-	if (istype(M, /mob/living/carbon/human))
+	if (ishuman(M))
 		var/mob/living/carbon/human/H = M
 		var/obj/item/organ/external/affecting = GET_EXTERNAL_ORGAN(H, user.get_target_zone()) //nullchecked by ..()
 		var/limb = affecting.name

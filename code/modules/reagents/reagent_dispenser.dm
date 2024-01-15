@@ -6,9 +6,9 @@
 	icon_state                        = "watertank"
 	density                           = TRUE
 	anchored                          = FALSE
-	material                          = /decl/material/solid/plastic
+	material                          = /decl/material/solid/organic/plastic
 	matter                            = list(/decl/material/solid/metal/steel = MATTER_AMOUNT_SECONDARY)
-	maxhealth                         = 100
+	max_health                         = 100
 	tool_interaction_flags            = TOOL_INTERACTION_DECONSTRUCT
 	var/unwrenched                    = FALSE
 	var/tmp/volume                    = 1000
@@ -22,7 +22,8 @@
 		verbs -= /obj/structure/reagent_dispensers/verb/set_amount_dispensed
 
 /obj/structure/reagent_dispensers/on_reagent_change()
-	if(reagents.total_volume > 0)
+	..()
+	if(reagents?.total_volume > 0)
 		tool_interaction_flags = 0
 	else
 		tool_interaction_flags = TOOL_INTERACTION_DECONSTRUCT
@@ -128,7 +129,7 @@
 	amount_dispensed          = 10
 	possible_transfer_amounts = @"[10,25,50,100]"
 	volume                    = 7500
-	atom_flags                = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CLIMBABLE
+	atom_flags                = ATOM_FLAG_CLIMBABLE
 	movable_flags             = MOVABLE_FLAG_WHEELED
 
 /obj/structure/reagent_dispensers/watertank/populate_reagents()
@@ -165,7 +166,7 @@
 		to_chat(user, SPAN_WARNING("There is some kind of device rigged to the tank."))
 
 /obj/structure/reagent_dispensers/fueltank/attack_hand(var/mob/user)
-	if (!rig || !user.check_dexterity(DEXTERITY_GRIP, TRUE))
+	if (!rig || !user.check_dexterity(DEXTERITY_HOLD_ITEM, TRUE))
 		return ..()
 	visible_message(SPAN_NOTICE("\The [user] begins to detach \the [rig] from \the [src]."))
 	if(!user.do_skilled(2 SECONDS, SKILL_ELECTRICAL, src))
@@ -257,7 +258,7 @@
 	reagents.add_reagent(/decl/material/liquid/water, reagents.maximum_volume)
 
 /obj/structure/reagent_dispensers/water_cooler/attack_hand(var/mob/user)
-	if(user.check_dexterity(DEXTERITY_GRIP, TRUE))
+	if(user.check_dexterity(DEXTERITY_HOLD_ITEM, TRUE))
 		return dispense_cup(user)
 	return ..()
 

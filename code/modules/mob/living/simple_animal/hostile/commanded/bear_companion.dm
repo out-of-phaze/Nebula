@@ -2,9 +2,8 @@
 	name = "bear"
 	desc = "A large brown bear."
 	icon = 'icons/mob/simple_animal/bear_brown.dmi'
-	health = 75
-	maxHealth = 75
-	density = 1
+	mob_default_max_health = 75
+	density = TRUE
 	natural_weapon = /obj/item/natural_weapon/claws
 	can_escape = TRUE
 	max_gas = list(

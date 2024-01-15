@@ -41,7 +41,7 @@
 	throw_speed = 4
 	throw_range = 5
 	force = 5
-	origin_tech = "{'combat':1}"
+	origin_tech = @'{"combat":1}'
 	attack_verb = list("struck", "hit", "bashed")
 	zoomdevicename = "scope"
 
@@ -123,7 +123,7 @@
 		autofiring_at = fire_at
 		autofiring_by = fire_by
 		if(!autofiring_timer)
-			autofiring_timer = addtimer(CALLBACK(src, .proc/handle_autofire, autoturn), burst_delay, (TIMER_STOPPABLE | TIMER_LOOP | TIMER_UNIQUE | TIMER_OVERRIDE))
+			autofiring_timer = addtimer(CALLBACK(src, PROC_REF(handle_autofire), autoturn), burst_delay, (TIMER_STOPPABLE | TIMER_LOOP | TIMER_UNIQUE | TIMER_OVERRIDE))
 	else
 		clear_autofire()
 
@@ -161,7 +161,7 @@
 		if(has_safety && M.skill_check(SKILL_WEAPONS,SKILL_BASIC))
 			add_overlay(image('icons/obj/guns/gui.dmi',"safety[safety()]"))
 		if(src in M.get_held_items())
-			M.update_inv_hands()
+			M.update_inhand_overlays()
 	if(safety_icon)
 		add_overlay(get_safety_indicator())
 
@@ -170,17 +170,23 @@
 /obj/item/gun/proc/get_safety_indicator()
 	return mutable_appearance(icon, "[get_world_inventory_state()][safety_icon][safety()]")
 
-/obj/item/gun/adjust_mob_overlay(var/mob/living/user_mob, var/bodytype,  var/image/overlay, var/slot, var/bodypart)
-	if(overlay && user_mob.can_wield_item(src) && is_held_twohanded(user_mob) && check_state_in_icon("[overlay.icon_state]-wielded", overlay.icon))
-		overlay.icon_state = "[overlay.icon_state]-wielded"
+/obj/item/gun/adjust_mob_overlay(mob/living/user_mob, bodytype, image/overlay, slot, bodypart, use_fallback_if_icon_missing = TRUE)
+	if(overlay && user_mob.can_wield_item(src) && is_held_twohanded(user_mob))
+		var/wielded_state = "[overlay.icon_state]-wielded"
+		if(check_state_in_icon(wielded_state, overlay.icon))
+			overlay.icon_state = wielded_state
+	apply_gun_mob_overlays(user_mob, bodytype, overlay, slot, bodypart)
 	. = ..()
+
+/obj/item/gun/proc/apply_gun_mob_overlays(var/mob/living/user_mob, var/bodytype,  var/image/overlay, var/slot, var/bodypart)
+	return
 
 //Checks whether a given mob can use the gun
 //Any checks that shouldn't result in handle_click_empty() being called if they fail should go here.
 //Otherwise, if you want handle_click_empty() to be called, check in consume_next_projectile() and return null there.
 /obj/item/gun/proc/special_check(var/mob/user)
 
-	if(!istype(user, /mob/living))
+	if(!isliving(user))
 		return 0
 	if(!user.check_dexterity(DEXTERITY_WEAPONS))
 		return 0
@@ -382,9 +388,9 @@
 
 		if(ishuman(user) && user.is_cloaked()) //shooting will disable a rig cloaking device
 			var/mob/living/carbon/human/H = user
-			var/obj/item/rig/R = H.get_equipped_item(slot_back_str)
-			if(istype(R))
-				for(var/obj/item/rig_module/stealth_field/S in R.installed_modules)
+			var/obj/item/rig/rig = H.get_rig()
+			if(rig)
+				for(var/obj/item/rig_module/stealth_field/S in rig.installed_modules)
 					S.deactivate()
 
 		if(space_recoil)
@@ -491,7 +497,7 @@
 
 	//shooting while in shock
 	var/shock_dispersion = 0
-	if(istype(firer, /mob/living/carbon/human))
+	if(ishuman(firer))
 		var/mob/living/carbon/human/mob = firer
 		if(mob.shock_stage > 120)
 			shock_dispersion = rand(-4,4)
@@ -654,12 +660,6 @@
 	if(usr == loc)
 		toggle_safety(usr)
 
-/obj/item/gun/CtrlClick(var/mob/user)
-	if(loc == user)
-		toggle_safety(user)
-		return TRUE
-	. = ..()
-
 /obj/item/gun/proc/safety()
 	return has_safety && safety_state
 
@@ -719,3 +719,15 @@
 	if(get_active_hand() != autofiring || incapacitated())
 		return FALSE
 	return TRUE
+
+/obj/item/gun/get_alt_interactions(mob/user)
+	. = ..()
+	LAZYADD(., /decl/interaction_handler/toggle_safety)
+
+/decl/interaction_handler/toggle_safety
+	name = "Toggle Gun Safety"
+	expected_target_type = /obj/item/gun
+
+/decl/interaction_handler/toggle_safety/invoked(atom/target, mob/user, obj/item/prop)
+	var/obj/item/gun/gun = target
+	gun.toggle_safety(user)

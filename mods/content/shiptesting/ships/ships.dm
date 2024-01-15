@@ -39,15 +39,15 @@ var/global/list/ship_names_by_class = list()
 // We stay synced with our overmap object at all times.
 /datum/submap/spawnable_ship/sync_cell(obj/effect/overmap/visitable/cell)
 	..()
-	events_repository.register(/decl/observ/name_set, cell, src, .proc/update_name)
-	events_repository.register(/decl/observ/destroyed, cell, src, .proc/unregister_name)
+	events_repository.register(/decl/observ/name_set, cell, src, PROC_REF(update_name))
+	events_repository.register(/decl/observ/destroyed, cell, src, PROC_REF(unregister_name))
 
 /datum/submap/spawnable_ship/proc/update_name(atom/namee, old_name, new_name)
 	name = new_name
 
 /datum/submap/spawnable_ship/proc/unregister_name(datum/destroyed_instance)
-	events_repository.register(/decl/observ/name_set, destroyed_instance, src, .proc/update_name)
-	events_repository.register(/decl/observ/destroyed, destroyed_instance, src, .proc/unregister_name)
+	events_repository.unregister(/decl/observ/name_set, destroyed_instance, src, PROC_REF(update_name))
+	events_repository.unregister(/decl/observ/destroyed, destroyed_instance, src, PROC_REF(unregister_name))
 
 /obj/abstract/submap_landmark/joinable_submap/spawnable_ship
 	abstract_type = /obj/abstract/submap_landmark/joinable_submap/spawnable_ship

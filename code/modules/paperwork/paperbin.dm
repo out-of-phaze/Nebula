@@ -12,7 +12,7 @@
 	w_class             = ITEM_SIZE_NORMAL
 	throw_speed         = 3
 	throw_range         = 7
-	material            = /decl/material/solid/plastic
+	material            = /decl/material/solid/organic/plastic
 	var/amount          = 30  //How much paper is in the bin.
 	var/tmp/max_amount  = 30  //How much paper fits in the bin
 	var/list/papers	  //List of papers put in the bin for reference.
@@ -21,7 +21,7 @@
 	LAZYCLEARLIST(papers) //Gets rid of any refs
 	return ..()
 
-/obj/item/paper_bin/handle_mouse_drop(atom/over, mob/user)
+/obj/item/paper_bin/handle_mouse_drop(atom/over, mob/user, params)
 	if((loc == user || in_range(src, user)) && user.get_empty_hand_slot())
 		user.put_in_hands(src)
 		return TRUE
@@ -33,7 +33,7 @@
 	if(!CanPhysicallyInteract(user))
 		return FALSE
 
-	if(user.a_intent == I_HURT || !user.check_dexterity(DEXTERITY_GRIP, TRUE))
+	if(user.a_intent == I_HURT || !user.check_dexterity(DEXTERITY_HOLD_ITEM, TRUE))
 		return ..()
 
 	if(LAZYLEN(papers) < 1 && amount < 1)

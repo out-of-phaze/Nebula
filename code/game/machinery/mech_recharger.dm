@@ -3,9 +3,9 @@
 	desc = "A exosuit recharger, built into the floor."
 	icon = 'icons/mecha/mech_bay.dmi'
 	icon_state = "recharge_floor"
-	density = 0
+	density = FALSE
 	layer = ABOVE_TILE_LAYER
-	anchored = 1
+	anchored = TRUE
 	idle_power_usage = 200	// Some electronics, passive drain.
 	active_power_usage = 60 KILOWATTS // When charging
 	base_type = /obj/machinery/mech_recharger
@@ -68,14 +68,17 @@
 	var/remaining_energy = active_power_usage
 
 	if(repair && !fully_repaired())
+		var/repaired = FALSE
 		for(var/obj/item/mech_component/MC in charging)
 			if(MC)
 				MC.repair_brute_damage(repair)
 				MC.repair_burn_damage(repair)
 				remaining_energy -= repair * repair_power_usage
+				repaired = TRUE
 			if(remaining_energy <= 0)
 				break
-		charging.updatehealth()
+		if(repaired)
+			charging.update_health() // TODO: do this during component repair.
 		if(fully_repaired())
 			charging.show_message(SPAN_NOTICE("Exosuit integrity has been fully restored."))
 
@@ -90,7 +93,7 @@
 
 // An ugly proc, but apparently mechs don't have maxhealth var of any kind.
 /obj/machinery/mech_recharger/proc/fully_repaired()
-	return charging && (charging.health == charging.maxHealth)
+	return charging && (charging.current_health >= charging.get_max_health())
 
 /obj/machinery/mech_recharger/proc/start_charging(var/mob/living/exosuit/M)
 	if(stat & (NOPOWER | BROKEN))

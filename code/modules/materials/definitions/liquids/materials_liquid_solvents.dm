@@ -9,8 +9,8 @@
 	value = 1.2
 	solvent_power = MAT_SOLVENT_STRONG + 2
 	solvent_melt_dose = 10
-	boiling_point = 290 CELSIUS
-	melting_point = 10 CELSIUS
+	melting_point = 284
+	boiling_point = 611
 	latent_heat = 612
 	molar_mass = 0.098
 
@@ -24,8 +24,8 @@
 	solvent_melt_dose = 8
 	solvent_max_damage = 30
 	value = 1.5
-	boiling_point = 48 CELSIUS
-	melting_point = -30 CELSIUS
+	boiling_point = 382
+	melting_point = 160
 	molar_mass = 0.036
 
 /decl/material/liquid/acid/polyacid
@@ -38,7 +38,8 @@
 	solvent_melt_dose = 4
 	solvent_max_damage = 60
 	value = 1.8
-	exoplanet_rarity = MAT_RARITY_UNCOMMON
+	exoplanet_rarity_plant = MAT_RARITY_UNCOMMON
+	exoplanet_rarity_gas = MAT_RARITY_UNCOMMON
 
 /decl/material/liquid/acid/stomach
 	name = "stomach acid"
@@ -48,7 +49,8 @@
 	color = "#d8ff00"
 	hidden_from_codex = TRUE
 	value = 0
-	exoplanet_rarity = MAT_RARITY_UNCOMMON
+	exoplanet_rarity_plant = MAT_RARITY_UNCOMMON
+	exoplanet_rarity_gas = MAT_RARITY_EXOTIC
 
 /decl/material/liquid/acetone
 	name = "acetone"
@@ -60,7 +62,7 @@
 	value = 0.1
 	solvent_power = MAT_SOLVENT_MODERATE
 	toxicity = 3
-	boiling_point = 56 CELSIUS
-	melting_point = -95 CELSIUS
+	boiling_point = 330
+	melting_point = 179
 	latent_heat = 525
 	molar_mass = 0.058

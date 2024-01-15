@@ -23,7 +23,7 @@
 	var/base_state = "tube"		// base description and icon_state
 	icon_state = "tube_map"
 	desc = "A lighting fixture."
-	anchored = 1
+	anchored = TRUE
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
 	layer = ABOVE_HUMAN_LAYER  					// They were appearing under mobs which is a little weird - Ostaf
 	use_power = POWER_USE_ACTIVE
@@ -37,7 +37,7 @@
 	construct_state = /decl/machine_construction/wall_frame/panel_closed/simple
 	base_type = /obj/machinery/light
 	frame_type = /obj/item/frame/light
-	directional_offset = "{'NORTH':{'y':21}, 'EAST':{'x':10}, 'WEST':{'x':-10}}"
+	directional_offset = @'{"NORTH":{"y":21}, "EAST":{"x":10}, "WEST":{"x":-10}}'
 
 	var/on = 0					// 1 if on, 0 if off
 	var/flickering = 0
@@ -95,7 +95,7 @@
 		if (WEST)
 			light_offset_x = WORLD_ICON_SIZE * -0.5
 
-	if(populate_parts)
+	if(populate_parts && ispath(light_type))
 		lightbulb = new light_type(src)
 		if(prob(lightbulb.broken_chance))
 			broken(1)
@@ -148,6 +148,7 @@
 		add_overlay(I)
 
 	if(on)
+		compile_overlays() // force a compile so that we update prior to the light being set
 
 		update_use_power(POWER_USE_ACTIVE)
 
@@ -320,7 +321,7 @@
 		to_chat(user, "There is no [get_fitting_name()] in this light.")
 		return TRUE
 
-	if(istype(user,/mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.species.can_shred(H))
 			visible_message("<span class='warning'>[user.name] smashed the light!</span>", 3, "You hear a tinkle of breaking glass.")
@@ -415,6 +416,7 @@
 /obj/machinery/light/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	if(prob(max(0, exposed_temperature - 673)))   //0% at <400C, 100% at >500C
 		broken()
+	return ..()
 
 /obj/machinery/light/small/readylight
 	light_type = /obj/item/light/bulb/red/readylight
@@ -475,7 +477,7 @@
 	throwforce = 5
 	w_class = ITEM_SIZE_TINY
 	material = /decl/material/solid/metal/steel
-	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CAN_BE_PAINTED
+	atom_flags = ATOM_FLAG_CAN_BE_PAINTED
 	obj_flags = OBJ_FLAG_HOLLOW
 
 	var/status = 0		// LIGHT_OK, LIGHT_BURNED or LIGHT_BROKEN
@@ -582,7 +584,7 @@
 	I.color = null
 	add_overlay(I)
 
-/obj/item/light/Initialize(mapload, obj/machinery/light/fixture = null)
+/obj/item/light/Initialize(mapload)
 	. = ..()
 	update_icon()
 
@@ -595,7 +597,7 @@
 		to_chat(user, "You inject the solution into \the [src].")
 		for(var/rtype in S.reagents?.reagent_volumes)
 			var/decl/material/R = GET_DECL(rtype)
-			if(R.fuel_value)
+			if(R.accelerant_value > FUEL_VALUE_ACCELERANT)
 				rigged = TRUE
 				log_and_message_admins("injected a light with flammable reagents, rigging it to explode.", user)
 				break

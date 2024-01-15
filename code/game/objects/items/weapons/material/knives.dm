@@ -7,7 +7,7 @@
 	material_force_multiplier = 0.3
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	material = /decl/material/solid/metal/steel
-	origin_tech = "{'materials':1}"
+	origin_tech = @'{"materials":1}'
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	sharp = TRUE
 	edge = TRUE
@@ -65,13 +65,13 @@
 	material_alteration = MAT_FLAG_ALTERATION_COLOR
 
 /obj/item/knife/table/plastic
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 
 /obj/item/knife/table/primitive
 	name = "dueling knife"
 	desc = "A length of leather-bound wood studded with razor-sharp teeth. How crude."
 	icon = 'icons/obj/items/weapon/knives/savage.dmi'
-	material = /decl/material/solid/wood
+	material = /decl/material/solid/organic/wood
 	material_alteration = MAT_FLAG_ALTERATION_NAME
 	w_class = ITEM_SIZE_NORMAL
 

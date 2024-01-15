@@ -46,9 +46,6 @@
 	#define SEC_HUD 1 //Security HUD mode
 	#define MED_HUD 2 //Medical HUD mode
 
-/mob/living/silicon/has_dexterity(var/dex_level)
-	return dexterity >= dex_level
-
 /mob/living/silicon/Initialize()
 	global.silicon_mob_list += src
 	. = ..()
@@ -77,6 +74,15 @@
 		AH.unregister_alarm(src)
 	QDEL_NULL_LIST(stock_parts)
 	return ..()
+
+/mob/living/silicon/experiences_hunger_and_thirst()
+	return FALSE // Doesn't really apply to robots. Maybe unify this with cells in the future.
+
+/mob/living/silicon/get_nutrition()
+	return get_max_nutrition()
+
+/mob/living/silicon/get_hydration()
+	return get_max_hydration()
 
 /mob/living/silicon/fully_replace_character_name(new_name)
 	..()
@@ -134,16 +140,13 @@
 	return
 
 /mob/living/silicon/bullet_act(var/obj/item/projectile/Proj)
-
 	if(!Proj.nodamage)
 		switch(Proj.damage_type)
 			if(BRUTE)
 				adjustBruteLoss(Proj.damage)
 			if(BURN)
 				adjustFireLoss(Proj.damage)
-
 	Proj.on_hit(src,100) //wow this is a terrible hack
-	updatehealth()
 	return 100
 
 /mob/living/silicon/apply_effect(var/effect = 0,var/effecttype = STUN, var/blocked = 0)
@@ -160,7 +163,7 @@
 // this function shows the health of the AI in the Status panel
 /mob/living/silicon/proc/show_system_integrity()
 	if(!src.stat)
-		stat(null, text("System integrity: [round((health/maxHealth)*100)]%"))
+		stat(null, text("System integrity: [get_health_percent()]%"))
 	else
 		stat(null, text("Systems nonfunctional"))
 
@@ -187,9 +190,8 @@
 
 //can't inject synths
 /mob/living/silicon/can_inject(var/mob/user, var/target_zone)
-	to_chat(user, "<span class='warning'>The armoured plating is too tough.</span>")
-	return 0
-
+	to_chat(user, SPAN_WARNING("The armoured plating is too tough."))
+	return FALSE
 
 //Silicon mob language procs
 
@@ -445,8 +447,20 @@
 		os.Process()
 
 /mob/living/silicon/handle_flashed(var/obj/item/flash/flash, var/flash_strength)
+	SET_STATUS_MAX(src, STAT_PARA, flash_strength)
 	SET_STATUS_MAX(src, STAT_WEAK, flash_strength)
 	return TRUE
 
 /mob/living/silicon/get_speech_bubble_state_modifier()
 	return "synth"
+
+/mob/living/silicon/GetIdCards(list/exceptions)
+	. = ..()
+	// Unconscious, dead or once possessed but now client-less silicons are not considered to have id access.
+	// This seems to be specifically to stop ghosted maintenance drones being used as free all-access cards.
+	if(istype(idcard) && !stat && !(ckey && !client) && !is_type_in_list(idcard, exceptions))
+		LAZYDISTINCTADD(., idcard)
+
+/mob/living/silicon/get_total_life_damage()
+	return (getBruteLoss() + getFireLoss())
+

@@ -5,8 +5,8 @@
 	desc = "A machine used for the compression of fuel rods for nuclear power production."
 	icon = 'icons/obj/machines/power/fusion.dmi'
 	icon_state = "fuel_compressor1"
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 	layer = 4
 	construct_state = /decl/machine_construction/default/panel_closed
 	var/list/stored_material = list()
@@ -111,7 +111,7 @@
 	rod_makeup[mat_type] = amt
 	return TOPIC_REFRESH
 
-/obj/machinery/fuel_compressor/receive_mouse_drop(var/atom/movable/dropping, var/mob/user)
+/obj/machinery/fuel_compressor/receive_mouse_drop(atom/dropping, mob/user, params)
 	if(user.incapacitated() || !user.Adjacent(src))
 		return
 	return !add_material(dropping, user)

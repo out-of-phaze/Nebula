@@ -4,7 +4,8 @@
 	taste_description = "synthetic alcohol"
 	color = "#c5e5e4"
 	strength = 8
-	exoplanet_rarity = MAT_RARITY_NOWHERE
+	exoplanet_rarity_gas = MAT_RARITY_NOWHERE
+	exoplanet_rarity_plant = MAT_RARITY_NOWHERE
 	uid = "chem_ethanol_karmotrine"
 
 	glass_name = "karmotrine"
@@ -19,7 +20,8 @@
 	color = "#e32642"
 	taste_mult = 0.4
 	taste_description = "sweetness"
-	exoplanet_rarity = MAT_RARITY_NOWHERE
+	exoplanet_rarity_gas = MAT_RARITY_NOWHERE
+	exoplanet_rarity_plant = MAT_RARITY_NOWHERE
 	uid = "chem_adelhyde"
 
 	glass_name = "adelhyde"
@@ -43,7 +45,8 @@
 	color = "#88a6e4"
 	taste_mult = 0.4
 	taste_description = "tangy sourness"
-	exoplanet_rarity = MAT_RARITY_NOWHERE
+	exoplanet_rarity_gas = MAT_RARITY_NOWHERE
+	exoplanet_rarity_plant = MAT_RARITY_NOWHERE
 	uid = "chem_powdered_delta"
 
 	glass_name = "powdered delta"
@@ -58,9 +61,10 @@
 	color = "#ffc73e"
 	taste_mult = 0.4
 	taste_description = "bitter earthiness"
-	exoplanet_rarity = MAT_RARITY_NOWHERE
+	exoplanet_rarity_gas = MAT_RARITY_NOWHERE
+	exoplanet_rarity_plant = MAT_RARITY_UNCOMMON
 	uid = "chem_bronson_extract"
-	fuel_value = 1 // as strong as welding fuel, be careful
+	accelerant_value = FUEL_VALUE_ACCELERANT // as strong as welding fuel, be careful
 
 	glass_name = "bronson extract"
 	glass_desc = "A glass of bronson extract. It tastes like you're drinking a plant taken straight out of the dirt... which you basically are."
@@ -72,7 +76,7 @@
 	The aging process also makes it much less flammable due to partial oxidisation of its volatile compounds."
 	color = "#a38529"
 	taste_description = "nutty earthiness"
-	fuel_value = 0.4 // much less dangerous since it's partially oxidised
+	accelerant_value = 0.4 // much less dangerous since it's partially oxidised
 	uid = "chem_bronson_extract_aged"
 
 	glass_name = "aged bronson extract"
@@ -86,7 +90,8 @@
 	color = "#a3c770"
 	taste_mult = 0.4
 	taste_description = "oily spiciness"
-	exoplanet_rarity = MAT_RARITY_NOWHERE
+	exoplanet_rarity_gas = MAT_RARITY_NOWHERE
+	exoplanet_rarity_plant = MAT_RARITY_NOWHERE
 	heating_point = T100C
 	heating_message = "darkens and thickens as it separates from its water content"
 	heating_products = list(
@@ -105,7 +110,8 @@
 	crying, and shortness of breath. Some brave souls still try to substitute it for diluted flanergide in their cocktails anyway, and pay the price."
 	color = "#7a9a47"
 	taste_description = "pure, concentrated pain"
-	exoplanet_rarity = MAT_RARITY_NOWHERE
+	exoplanet_rarity_gas = MAT_RARITY_NOWHERE
+	exoplanet_rarity_plant = MAT_RARITY_NOWHERE
 	heating_point = null
 	heating_products = null
 	uid = "chem_flanergide_concentrated"
@@ -117,6 +123,7 @@
 	Used to artificially age ingredients in cocktails."
 	color = "#4d0000"
 	taste_description = "rust"
-	exoplanet_rarity = MAT_RARITY_NOWHERE
+	exoplanet_rarity_gas = MAT_RARITY_NOWHERE
+	exoplanet_rarity_plant = MAT_RARITY_NOWHERE
 	taste_mult = 1.1 // don't leave any in your drinks, mix carefully
 	uid = "chem_instant_age"

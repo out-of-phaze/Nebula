@@ -2,7 +2,7 @@
 	name = "proximity sensor"
 	desc = "Used for scanning and alerting when someone enters a certain proximity."
 	icon_state = "prox"
-	origin_tech = "{'magnets':1}"
+	origin_tech = @'{"magnets":1}'
 	material = /decl/material/solid/metal/steel
 	matter = list(
 		/decl/material/solid/fiberglass = MATTER_AMOUNT_REINFORCEMENT,
@@ -51,7 +51,7 @@
 //		if(scanning && cooldown <= 0)
 //			mainloc.visible_message("[html_icon(src)] *boop* *boop*", "*boop* *boop*")
 	if((!holder && !secured)||(!scanning)||(cooldown > 0))	return 0
-	pulse(0)
+	pulse_device(0)
 	if(!holder)
 		mainloc.visible_message("[html_icon(src)] *beep* *beep*", "*beep* *beep*")
 	cooldown = 2
@@ -78,7 +78,7 @@
 
 /obj/item/assembly/prox_sensor/dropped()
 	. = ..()
-	addtimer(CALLBACK(src, .proc/sense), 0)
+	addtimer(CALLBACK(src, PROC_REF(sense)), 0)
 
 /obj/item/assembly/prox_sensor/toggle_scan()
 	if(!secured)	return 0
