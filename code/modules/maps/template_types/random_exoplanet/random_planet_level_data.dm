@@ -123,7 +123,8 @@
 		log_world("Ruin loader was given no ruins to pick from.")
 		return list()
 	//#TODO: Fill in allowed area from a proc or something
-	var/list/areas_whitelist  = list(base_area)
+	var/area/base_area_instance = get_base_area_instance()
+	var/list/areas_whitelist  = list(base_area_instance.type) // TEMPORARY STOPGAP FOR MULTIPLE PLANETS OF ONE TYPE BEING ABSOLUTELY FFFFFFFFUCKED
 	var/list/candidates_ruins = potentialRuins.Copy()
 	var/list/spawned_ruins    = list()
 
