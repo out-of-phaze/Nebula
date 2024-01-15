@@ -52,13 +52,28 @@
 	if(!reagents?.total_volume) // keep whatever we had last
 		return
 	if(reagents.primary_reagent == /decl/material/solid/plastifoam/quick)
-		name = "repair spray+"
-		desc = "A single-use spray gun used to fill damaged areas with fast-curing polyurethane-based expanding foam."
 		icon = 'mods/species/replika/icons/repair_spray+.dmi'
 	else if (reagents.primary_reagent == /decl/material/solid/plastifoam)
-		name = "repair spray"
-		desc = "A single-use spray gun to fill damaged areas with polyurethane-based expanding foam."
 		icon = 'mods/species/replika/icons/repair_spray.dmi'
+
+// i like this even less, maybe just make it always repair spray or have compiled-in repair spray+ objects use a label
+// so that we can go with the de-arcadification of requiring a paint sprayer and labeler for them
+/obj/item/chems/repair_spray/update_container_name()
+	if(!reagents?.total_volume) // keep whatever we had last
+		return
+	if(reagents.primary_reagent == /decl/material/solid/plastifoam/quick)
+		name = "repair spray+"
+	else if (reagents.primary_reagent == /decl/material/solid/plastifoam)
+		name = "repair spray"
+
+// i have no idea how to de-arcade this. maybe just make it show the lore text of the chem inside? extra labeler functionality? idk
+/obj/item/chems/repair_spray/update_container_desc()
+	if(!reagents?.total_volume) // keep whatever we had last
+		return
+	if(reagents.primary_reagent == /decl/material/solid/plastifoam/quick)
+		desc = "A single-use spray gun used to fill damaged areas with fast-curing polyurethane-based expanding foam."
+	else if (reagents.primary_reagent == /decl/material/solid/plastifoam)
+		desc = "A single-use spray gun to fill damaged areas with polyurethane-based expanding foam."
 
 /obj/item/chems/hypospray/autoinjector/klstim
 	name = "autoinjector"
