@@ -52,13 +52,28 @@
 	if(!reagents?.total_volume) // keep whatever we had last
 		return
 	if(reagents.primary_reagent == /decl/material/solid/plastifoam/quick)
-		name = "repair spray+"
-		desc = "A single-use spray gun used to fill damaged areas with fast-curing polyurethane-based expanding foam."
 		icon = 'mods/species/replika/icons/repair_spray+.dmi'
 	else if (reagents.primary_reagent == /decl/material/solid/plastifoam)
-		name = "repair spray"
-		desc = "A single-use spray gun to fill damaged areas with polyurethane-based expanding foam."
 		icon = 'mods/species/replika/icons/repair_spray.dmi'
+
+// i like this even less, maybe just make it always repair spray or have compiled-in repair spray+ objects use a label
+// so that we can go with the de-arcadification of requiring a paint sprayer and labeler for them
+/obj/item/chems/repair_spray/update_container_name()
+	if(!reagents?.total_volume) // keep whatever we had last
+		return
+	if(reagents.primary_reagent == /decl/material/solid/plastifoam/quick)
+		name = "repair spray+"
+	else if (reagents.primary_reagent == /decl/material/solid/plastifoam)
+		name = "repair spray"
+
+// i have no idea how to de-arcade this. maybe just make it show the lore text of the chem inside? extra labeler functionality? idk
+/obj/item/chems/repair_spray/update_container_desc()
+	if(!reagents?.total_volume) // keep whatever we had last
+		return
+	if(reagents.primary_reagent == /decl/material/solid/plastifoam/quick)
+		desc = "A single-use spray gun used to fill damaged areas with fast-curing polyurethane-based expanding foam."
+	else if (reagents.primary_reagent == /decl/material/solid/plastifoam)
+		desc = "A single-use spray gun to fill damaged areas with polyurethane-based expanding foam."
 
 /obj/item/chems/hypospray/autoinjector/klstim
 	name = "autoinjector"
@@ -79,7 +94,7 @@
 	possible_transfer_amounts = null
 	w_class = ITEM_SIZE_TINY
 	volume = 5
-	material = /decl/material/solid/paper
+	material = /decl/material/solid/organic/paper
 	atom_flags = 0 // not open, temperature can change
 	var/start_sealed = TRUE // if sealed, it must be torn before it can be used
 
@@ -129,7 +144,7 @@
 		if(!do_mob(user, victim, time_taken))
 			user.visible_message("<b>\The [user]</b> stops treating \the [victim].", SPAN_NOTICE("You stop treating \the [victim]."))
 			return TRUE
-		user.visible_message("<b>\The [user] finds a wound on \the [targeted_organ].")
+		user.visible_message("<b>\The [user]</b> finds a wound on \the [targeted_organ].")
 
 	user.visible_message("<b>\The [user]</b> starts applying \the [src] to \the [victim]'s [targeted_organ.name]...", SPAN_NOTICE("You start applying \the [src] to \the [victim]'s [targeted_organ.name]."))
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)

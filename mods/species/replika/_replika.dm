@@ -23,15 +23,17 @@
 		"a KNCR model", "a Kranich model"
 	)
 
+/decl/modpack/replika/pre_initialize()
+	. = ..()
+	SSmodpacks.default_submap_whitelisted_species |= SPECIES_REPLIKA
+
 /mob/living/carbon/human/replika
 	teleop = TRUE
 	var/decl/bodytype/replika/starting_bodytype
 
 /mob/living/carbon/human/replika/Initialize(mapload)
-	. = ..(mapload, SPECIES_REPLIKA)
-	set_bodytype(starting_bodytype, rebuild_body = TRUE)
-	species.set_default_hair(src, override_existing = TRUE, defer_update_hair = FALSE)
-	var/decl/bodytype/replika/model = bodytype
+	. = ..(mapload, SPECIES_REPLIKA, null, starting_bodytype)
+	var/decl/bodytype/replika/model = get_bodytype()
 	set_real_name(model.get_default_name())
 
 /decl/bodytype/replika/proc/get_default_name()

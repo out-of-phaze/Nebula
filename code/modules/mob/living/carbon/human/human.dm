@@ -509,6 +509,8 @@
 	// No check to see if it's the same as our current one, because we don't have a 'mob bodytype' anymore
 	// just the torso. It's assumed if we call this we want a full regen.
 	if(istype(new_bodytype))
+		var/decl/bodytype/old_bodytype = get_bodytype()
+		old_bodytype?.on_lose(src)
 		mob_size = new_bodytype.mob_size
 		new_bodytype.create_missing_organs(src, TRUE) // actually rebuild the body
 		apply_bodytype_appearance()
@@ -524,6 +526,7 @@
 		// TODO: check markings.
 
 		update_eyes()
+		new_bodytype.on_gain(src)
 		return TRUE
 	return FALSE
 

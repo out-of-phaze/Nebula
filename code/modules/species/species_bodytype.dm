@@ -168,6 +168,11 @@ var/global/list/bodytypes_by_category = list()
 	/// Stun from blindness modifier.
 	var/eye_flash_mod = 1
 
+	/// Verbs to add to the mob on bodytype gain
+	var/list/inherent_verbs
+	/// Traits to add to the mob on bodytype gain (associative list of TRAIT_NAME = TRAIT_LEVEL)
+	var/list/traits
+
 	// Bodytype temperature damage thresholds.
 	var/cold_level_1 = 243  // Cold damage level 1 below this point. -30 Celsium degrees
 	var/cold_level_2 = 200  // Cold damage level 2 below this point.
@@ -231,6 +236,28 @@ var/global/list/bodytypes_by_category = list()
 
 /decl/bodytype/proc/get_hug_zone_messages(var/zone)
 	return LAZYACCESS(hug_messages, zone)
+
+/decl/bodytype/proc/add_inherent_verbs(mob/living/carbon/human/organism)
+	if(!LAZYLEN(inherent_verbs))
+		return
+	for(var/verb_path in inherent_verbs)
+		organism.verbs |= verb_path
+
+/decl/bodytype/proc/remove_inherent_verbs(mob/living/carbon/human/organism)
+	if(!LAZYLEN(inherent_verbs))
+		return
+	for(var/verb_path in inherent_verbs)
+		organism.verbs -= verb_path
+
+/decl/bodytype/proc/on_gain(mob/living/carbon/human/organism)
+	add_inherent_verbs(organism)
+	for(var/trait in traits)
+		organism.SetTrait(trait, traits[trait])
+
+/decl/bodytype/proc/on_lose(mob/living/carbon/human/organism)
+	remove_inherent_verbs(organism)
+	for(var/trait in traits)
+		organism.RemoveExtrinsicTrait(trait)
 
 /decl/bodytype/validate()
 	. = ..()
