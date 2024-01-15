@@ -28,6 +28,6 @@ var/global/datum/holiday/current_holiday
 	if(istype(holiday_data))
 		global.current_holiday = holiday_data
 	if(refresh_station_name)
-		global.using_map.station_name = null
+		global.using_map.station_name = initial(global.using_map.station_name)
 		station_name()
 		world.update_status()
