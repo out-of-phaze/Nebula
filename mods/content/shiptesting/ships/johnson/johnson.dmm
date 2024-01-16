@@ -1778,7 +1778,8 @@
 	tag_interior_door = "johnson_mining_inner";
 	tag_interior_sensor = "johnson_mining_interior_sensor";
 	tag_pump_out_external = "johnson_mining_pump_out_external";
-	tag_pump_out_internal = "johnson_mining_pump_out_internal"
+	tag_pump_out_internal = "johnson_mining_pump_out_internal";
+	tag_secure = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/airlock{
 	id_tag = "johnson_mining_pump"
