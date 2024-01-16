@@ -125,6 +125,9 @@ if(Datum.is_processing) {\
 	NEW_SS_GLOBAL(SS##X);\
 	PreInit();\
 }\
+/datum/controller/subsystem/##X{\
+	_internal_name = "SS" + #X;\
+}\
 /datum/controller/subsystem/##X
 
 #define PROCESSING_SUBSYSTEM_DEF(X) var/global/datum/controller/subsystem/processing/##X/SS##X;\
@@ -136,5 +139,8 @@ if(Datum.is_processing) {\
 	if(istype(SS##X.processing)) {\
 		processing = SS##X.processing; \
 	}\
+}\
+/datum/controller/subsystem/processing/##X{\
+	_internal_name = "SS" + #X;\
 }\
 /datum/controller/subsystem/processing/##X
