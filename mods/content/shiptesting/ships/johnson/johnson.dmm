@@ -599,7 +599,7 @@
 	pixel_x = -22
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/unary/vent_pump/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 1;
 	id_tag = "johnson_mining_pump_out_internal"
 	},
@@ -1200,7 +1200,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	id_tag = "johnson_mining_pump_out_external"
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/airless{
+	is_outside = 1
+	},
 /area/johnson/mining)
 "BP" = (
 /obj/effect/floor_decal/corner/brown/half,
@@ -1457,7 +1459,9 @@
 /turf/simulated/floor/plating,
 /area/johnson)
 "GF" = (
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced/airless{
+	is_outside = 1
+	},
 /area/johnson/mining)
 "GG" = (
 /turf/simulated/wall,
