@@ -1200,9 +1200,8 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	id_tag = "johnson_mining_pump_out_external"
 	},
-/turf/simulated/floor/reinforced/airless{
-	is_outside = 1
-	},
+/obj/abstract/exterior_marker/outside,
+/turf/simulated/floor/reinforced/airless,
 /area/johnson/mining)
 "BP" = (
 /obj/effect/floor_decal/corner/brown/half,
@@ -1459,9 +1458,8 @@
 /turf/simulated/floor/plating,
 /area/johnson)
 "GF" = (
-/turf/simulated/floor/reinforced/airless{
-	is_outside = 1
-	},
+/obj/abstract/exterior_marker/outside,
+/turf/simulated/floor/reinforced/airless,
 /area/johnson/mining)
 "GG" = (
 /turf/simulated/wall,
