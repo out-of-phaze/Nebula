@@ -8,14 +8,16 @@
 
 /decl/sprite_accessory/hair/replika/eulr
 	name = "EULR hair"
-	icon_state = "hair_volaju"
+	icon = 'mods/species/replika/icons/eulr/hair.dmi'
+	icon_state = "hair_eulr_apmk"
 	accessory_flags = HAIR_LOSS_VULNERABLE | HAIR_TIEABLE
 	bodytypes_allowed = list(/decl/bodytype/replika/eulr)
 	uid = "hair_eulr"
 
 /decl/sprite_accessory/hair/replika/arar
 	name = "ARAR hair"
-	icon_state = "hair_longfringe"
+	icon = 'mods/species/replika/icons/arar/hair.dmi'
+	icon_state = "hair_arar_apmk"
 	accessory_flags = HAIR_LOSS_VULNERABLE | HAIR_TIEABLE
 	bodytypes_allowed = list(/decl/bodytype/replika/arar)
 	uid = "hair_arar"
@@ -30,13 +32,13 @@
 /decl/sprite_accessory/hair/replika/star
 	name = "STAR hair"
 	icon = 'mods/species/replika/icons/star/hair.dmi'
-	icon_state = "hair_star"
+	icon_state = "hair_star_apmk"
 	bodytypes_allowed = list(/decl/bodytype/replika/star)
 	uid = "hair_star"
 
 /decl/sprite_accessory/hair/replika/klbr
 	name = "KLBR hair"
 	icon = 'mods/species/replika/icons/klbr/hair.dmi'
-	icon_state = "hair_klbr"
+	icon_state = "hair_klbr_apmk"
 	bodytypes_allowed = list(/decl/bodytype/replika/klbr)
 	uid = "hair_klbr"
