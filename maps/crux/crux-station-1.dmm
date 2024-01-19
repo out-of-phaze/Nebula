@@ -55358,12 +55358,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/south)
 "dhs" = (
@@ -63607,6 +63601,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/mixing)
+"qNg" = (
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/hallway/primary/seconddeck/south)
 "qYB" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
@@ -99843,8 +99843,8 @@ ngj
 ngj
 ngj
 ngj
-ngj
-ngj
+qNg
+qNg
 dfi
 nlT
 dPp
