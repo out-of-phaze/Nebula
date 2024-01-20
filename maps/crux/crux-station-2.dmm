@@ -39,7 +39,7 @@
 "aHQ" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/tiled,
-/area/surface/level_two)
+/area/rooflounge)
 "aKm" = (
 /obj/structure/lattice,
 /obj/structure/grille/broken,
@@ -49,7 +49,7 @@
 "aXD" = (
 /obj/machinery/smartfridge/drying_rack,
 /turf/simulated/floor/tiled/freezer,
-/area/surface/level_two)
+/area/hydroponics)
 "aXG" = (
 /obj/random/junk,
 /turf/exterior/open,
@@ -73,13 +73,22 @@
 "bWW" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/freezer,
-/area/surface/level_two)
+/area/hydroponics)
+"ccS" = (
+/turf/simulated/wall,
+/area/hydroponics)
+"cnk" = (
+/obj/machinery/door/airlock/double/glass{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/rooflounge)
 "cSM" = (
 /obj/structure/railing/mapped{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/surface/level_two)
+/area/rooflounge)
 "deo" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -131,7 +140,7 @@
 /area/maintenance/substation/command)
 "dgq" = (
 /turf/simulated/floor/tiled/freezer,
-/area/surface/level_two)
+/area/hydroponics)
 "djC" = (
 /turf/exterior/open,
 /area/surface/level_two)
@@ -9776,32 +9785,39 @@
 /area/surface/level_two)
 "eTO" = (
 /turf/simulated/floor/grass,
-/area/surface/level_two)
+/area/roofgarden)
 "eZE" = (
 /obj/structure/reagent_dispensers/watertank/firefighter{
 	name = "gardening water tank"
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/surface/level_two)
+/area/hydroponics)
+"flv" = (
+/turf/simulated/wall/r_wall,
+/area/hydroponics)
 "fqT" = (
 /obj/structure/hygiene/sink/kitchen{
 	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/surface/level_two)
+/area/hydroponics)
 "gql" = (
 /turf/simulated/floor/wood/walnut,
-/area/surface/level_two)
+/area/chapel/main)
 "gVm" = (
 /obj/structure/bed/sofa/pew/left/mahogany{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/red,
-/area/surface/level_two)
+/area/chapel/main)
+"hsn" = (
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/hydroponics)
 "hOJ" = (
 /obj/machinery/biogenerator,
 /turf/simulated/floor/tiled/freezer,
-/area/surface/level_two)
+/area/hydroponics)
 "ioU" = (
 /obj/structure/railing{
 	dir = 4
@@ -9813,36 +9829,36 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood/walnut,
-/area/surface/level_two)
+/area/chapel/main)
 "iTo" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/wall/r_wall,
-/area/surface/level_two)
+/area/rooflounge)
 "iZU" = (
 /turf/simulated/wall,
-/area/surface/level_two)
+/area/rooflounge)
 "kpz" = (
 /obj/structure/bed/chair{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/surface/level_two)
+/area/rooflounge)
 "krA" = (
 /obj/machinery/vending/hydronutrients{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/surface/level_two)
+/area/hydroponics)
 "mhm" = (
 /obj/structure/table/woodentable/mahogany,
 /turf/simulated/floor/wood/walnut,
-/area/surface/level_two)
+/area/chapel/main)
 "moH" = (
 /obj/structure/bed/chair{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/surface/level_two)
+/area/rooflounge)
 "mIN" = (
 /obj/abstract/level_data_spawner/crux_level_two,
 /turf/exterior/open,
@@ -9851,35 +9867,44 @@
 /obj/structure/table/woodentable/mahogany,
 /obj/item/storage/candle_box,
 /turf/simulated/floor/wood/walnut,
-/area/surface/level_two)
+/area/chapel/main)
 "nnf" = (
 /obj/structure/closet/secure_closet/hydroponics,
 /turf/simulated/floor/tiled/freezer,
-/area/surface/level_two)
+/area/hydroponics)
 "ntd" = (
 /obj/machinery/seed_storage/garden{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/surface/level_two)
+/area/hydroponics)
 "oBY" = (
 /obj/structure/table,
 /obj/item/hatchet,
 /obj/item/minihoe,
 /obj/item/chems/glass/bucket,
 /turf/simulated/floor/tiled/freezer,
-/area/surface/level_two)
+/area/hydroponics)
+"oOs" = (
+/turf/simulated/wall/r_wall,
+/area/chapel/main)
+"pOn" = (
+/turf/simulated/floor/tiled/monotile,
+/area/roofgarden)
 "pUT" = (
 /obj/structure/bed/sofa/pew/right/mahogany{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/red,
-/area/surface/level_two)
+/area/chapel/main)
 "qTZ" = (
 /obj/machinery/honey_extractor,
 /obj/structure/table,
 /turf/simulated/floor/tiled/freezer,
-/area/surface/level_two)
+/area/hydroponics)
+"rkR" = (
+/turf/exterior/open,
+/area/rooflounge)
 "sbY" = (
 /obj/structure/table/marble,
 /obj/machinery/door/firedoor,
@@ -9894,7 +9919,10 @@
 	health = 1e+006
 	},
 /turf/simulated/floor/tiled/dark,
-/area/surface/level_two)
+/area/hydroponics)
+"srl" = (
+/turf/simulated/wall/r_wall,
+/area/rooflounge)
 "trs" = (
 /obj/structure/bookcase,
 /obj/item/storage/bible/aqdas,
@@ -9903,36 +9931,43 @@
 /obj/item/storage/bible/quran,
 /obj/item/storage/bible/tanakh,
 /turf/simulated/floor/wood/walnut,
-/area/surface/level_two)
+/area/chapel/main)
 "udl" = (
 /turf/simulated/floor/carpet/red,
-/area/surface/level_two)
+/area/chapel/main)
+"ugg" = (
+/turf/simulated/wall,
+/area/chapel/main)
 "uWQ" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /turf/simulated/floor/grass,
-/area/surface/level_two)
+/area/roofgarden)
 "vfA" = (
 /obj/structure/table/woodentable/mahogany,
 /obj/item/storage/candle_box/incense,
 /turf/simulated/floor/wood/walnut,
-/area/surface/level_two)
+/area/chapel/main)
 "vMb" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/surface/level_two)
+/area/rooflounge)
+"vSP" = (
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/chapel/main)
 "vTy" = (
 /obj/machinery/seed_extractor,
 /turf/simulated/floor/tiled/freezer,
-/area/surface/level_two)
+/area/hydroponics)
 "wUI" = (
 /obj/structure/bed/sofa/pew/right/mahogany{
 	dir = 4
 	},
 /turf/simulated/floor/wood/walnut,
-/area/surface/level_two)
+/area/chapel/main)
 "xII" = (
 /turf/simulated/floor/tiled,
-/area/surface/level_two)
+/area/rooflounge)
 
 (1,1,1) = {"
 djC
@@ -39135,8 +39170,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -39392,8 +39427,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -39649,8 +39684,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -39906,8 +39941,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -40163,8 +40198,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -40420,8 +40455,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -40677,8 +40712,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -40934,8 +40969,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -41191,8 +41226,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -41448,8 +41483,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -41705,8 +41740,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -41962,8 +41997,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -42219,8 +42254,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -42476,8 +42511,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -42722,10 +42757,10 @@ dTL
 dUr
 dAV
 eRy
-xII
-xII
-xII
-xII
+pOn
+pOn
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -42733,8 +42768,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -42979,10 +43014,10 @@ dTM
 dUr
 dAV
 eRy
-xII
-xII
-xII
-xII
+pOn
+pOn
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -42990,8 +43025,8 @@ eTO
 eTO
 eTO
 eTO
-xII
-xII
+pOn
+pOn
 eTO
 eTO
 eTO
@@ -43236,22 +43271,22 @@ dSM
 dUr
 dAV
 dAV
-dBa
+flv
 dgq
 dgq
-dBa
-vMb
-vMb
-vMb
-vMb
-iZU
+flv
+hsn
+hsn
+hsn
+hsn
+ccS
 vMb
 vMb
 xII
-xII
+cnk
 vMb
 vMb
-dBa
+srl
 dAV
 dAV
 dAV
@@ -43493,7 +43528,7 @@ dPA
 dUs
 dAV
 dAV
-vMb
+hsn
 dgq
 dgq
 bWW
@@ -43501,7 +43536,7 @@ bWW
 bWW
 dgq
 qTZ
-vMb
+hsn
 kpz
 kpz
 xII
@@ -43750,7 +43785,7 @@ dPA
 dUt
 dAV
 dAV
-vMb
+hsn
 dgq
 dgq
 dgq
@@ -43758,7 +43793,7 @@ dgq
 dgq
 dgq
 aXD
-vMb
+hsn
 aHQ
 aHQ
 xII
@@ -44007,7 +44042,7 @@ djC
 dAV
 dAV
 dAV
-vMb
+hsn
 dgq
 dgq
 bWW
@@ -44015,7 +44050,7 @@ bWW
 bWW
 dgq
 nnf
-vMb
+hsn
 moH
 moH
 xII
@@ -44264,7 +44299,7 @@ djC
 dAV
 dAV
 dAV
-dBa
+flv
 fqT
 dgq
 bWW
@@ -44272,14 +44307,14 @@ bWW
 bWW
 dgq
 nnf
-iZU
+ccS
 xII
 xII
 xII
 xII
 xII
 xII
-dBa
+srl
 dAV
 dAV
 dAV
@@ -44521,7 +44556,7 @@ djC
 dAV
 dAV
 dAV
-vMb
+hsn
 dgq
 dgq
 dgq
@@ -44778,7 +44813,7 @@ djC
 dAV
 dAV
 dAV
-vMb
+hsn
 dgq
 dgq
 dgq
@@ -45035,7 +45070,7 @@ dTN
 dUq
 dAV
 dAV
-vMb
+hsn
 oBY
 eZE
 eZE
@@ -45043,7 +45078,7 @@ hOJ
 vTy
 krA
 ntd
-iZU
+ccS
 xII
 xII
 xII
@@ -45292,22 +45327,22 @@ dTO
 dUr
 dAV
 dAV
-dBa
-vMb
-vMb
-dBa
-iZU
-iZU
-iZU
-iZU
-iZU
-iZU
+flv
+hsn
+hsn
+oOs
+ugg
+ugg
+ugg
+ugg
+ugg
+ugg
 iZU
 xII
 xII
 iZU
 iZU
-dBa
+srl
 dAV
 dAV
 dAV
@@ -45552,13 +45587,13 @@ dAV
 dAV
 dAV
 dAV
-dBa
+oOs
 trs
 mZu
 vfA
 gql
 gql
-iZU
+ugg
 xII
 xII
 xII
@@ -45809,7 +45844,7 @@ dAV
 dAV
 dAV
 dAV
-vMb
+vSP
 gql
 udl
 udl
@@ -46066,19 +46101,19 @@ dAV
 dAV
 dAV
 dAV
-vMb
+vSP
 wUI
 gVm
 udl
 pUT
 irn
-iZU
+ugg
 cSM
 cSM
 xII
 xII
 xII
-dBa
+srl
 dAV
 dAV
 dAV
@@ -46323,15 +46358,15 @@ dAV
 dAV
 dAV
 dAV
-vMb
+vSP
 gql
 udl
 udl
 udl
 gql
-iZU
-djC
-djC
+ugg
+rkR
+rkR
 xII
 xII
 xII
@@ -46580,15 +46615,15 @@ dMY
 dAV
 dAV
 dAV
-dBa
+oOs
 gql
 mhm
 mhm
 mhm
 gql
-iZU
-djC
-djC
+ugg
+rkR
+rkR
 xII
 xII
 xII
@@ -46837,19 +46872,19 @@ dMY
 dAV
 dAV
 dAV
-dBa
+oOs
+vSP
+vSP
+oOs
+vSP
+vSP
+oOs
 vMb
 vMb
-dBa
+srl
 vMb
 vMb
-dBa
-vMb
-vMb
-dBa
-vMb
-vMb
-dBa
+srl
 dAV
 dAV
 dAV
