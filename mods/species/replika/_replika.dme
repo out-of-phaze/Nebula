@@ -6,6 +6,7 @@
 #include "accessory.dm"
 #include "aspects.dm"
 #include "chems.dm"
+#include "clothing.dm"
 #include "objects.dm"
 #include "organs.dm"
 #include "reactions.dm"
