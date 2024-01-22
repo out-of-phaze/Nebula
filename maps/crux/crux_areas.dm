@@ -1204,3 +1204,9 @@
 
 /area/roofgarden
 	name = "\improper Rooftop Garden"
+
+/area/balcony
+	name = "balcony area master"
+
+/area/balcony/south
+	name ="\improper South Balcony"
