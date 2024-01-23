@@ -1,6 +1,8 @@
 /area/crux/science
 	name = "\improper Research"
 	icon_state = "research"
+	req_access = list(access_research)
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/crux/science/xenobiology/xenoflora
 	name = "\improper Xenoflora Lab"

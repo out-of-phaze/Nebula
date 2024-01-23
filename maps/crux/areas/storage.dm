@@ -3,6 +3,7 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	name = "Emergency Storage"
 	icon_state = "emergencystorage"
+	holomap_color = HOLOMAP_AREACOLOR_CREW
 
 /area/crux/storage/emergency
 	name = "Ground Floor South Emergency Storage"

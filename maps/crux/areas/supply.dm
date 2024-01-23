@@ -1,6 +1,8 @@
-/area/crux/supply/hallway
+/area/crux/supply
 	name = "\improper Cargo Bay Hallway"
 	icon_state = "quart"
+	req_access = list(access_cargo)
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/crux/supply/mininglockerroom
 	name = "\improper Mining Locker Room"

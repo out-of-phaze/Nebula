@@ -1,5 +1,6 @@
 /area/crux/hotel
 	name = "\improper Hotel Hallway"
+	holomap_color = HOLOMAP_AREACOLOR_CREW
 
 /area/crux/hotel/standard_room_a
 	name = "\improper Standard Room A"

@@ -12890,7 +12890,7 @@
 /area/crux/supply/storage)
 "aCv" = (
 /turf/simulated/wall/r_wall,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aCw" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
@@ -12898,19 +12898,19 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aCx" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aCy" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
 	name = "Cargo Hallway"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aCz" = (
 /obj/structure/closet/secure_closet/miner,
 /obj/machinery/light{
@@ -13564,7 +13564,7 @@
 "aDF" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aDG" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -13574,10 +13574,10 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aDH" = (
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aDI" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
@@ -13586,7 +13586,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aDJ" = (
 /obj/machinery/status_display,
 /turf/simulated/wall,
@@ -14235,7 +14235,7 @@
 /area/crux/supply/storage)
 "aES" = (
 /turf/simulated/wall,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aET" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -14255,19 +14255,19 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aEU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aEV" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aEW" = (
 /turf/simulated/wall,
 /area/crux/supply/mininglockerroom)
@@ -14636,7 +14636,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aFW" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -14652,21 +14652,21 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aFX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aFY" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aFZ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
@@ -14957,19 +14957,19 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aGJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aGK" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/brown/bordercorner,
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aGL" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
@@ -15361,12 +15361,12 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aHA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aHB" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -15386,7 +15386,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aHC" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/mining{
@@ -15595,7 +15595,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aId" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -15607,7 +15607,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aIe" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -15621,11 +15621,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aIf" = (
 /obj/structure/stairs/long/west,
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aIg" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -15639,7 +15639,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aIh" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -15979,7 +15979,7 @@
 	name = "Cargo Bay"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aIN" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -15998,7 +15998,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aIO" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -16006,7 +16006,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aIP" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -16021,7 +16021,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aIQ" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -16033,7 +16033,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aIR" = (
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -16048,7 +16048,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aIS" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -16064,14 +16064,14 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aIT" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
 	name = "Cargo Maintenance"
 	},
 /turf/simulated/floor/plating,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aIU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -16441,7 +16441,7 @@
 "aJE" = (
 /obj/machinery/status_display/supply_display,
 /turf/simulated/wall,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aJF" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30
@@ -16453,7 +16453,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aJG" = (
 /obj/machinery/camera/network/cargo{
 	c_tag = "CRG - Cargo Hallway";
@@ -16463,7 +16463,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aJH" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -16475,7 +16475,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aJI" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -16486,7 +16486,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aJJ" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -16497,7 +16497,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aJK" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -16508,12 +16508,12 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aJL" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled,
-/area/crux/supply/hallway)
+/area/crux/supply)
 "aJM" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8

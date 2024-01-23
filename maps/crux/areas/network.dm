@@ -1,6 +1,7 @@
 /area/crux/network
 	name = "AI Core"
 	icon_state = "ai_upload"
+	req_access = list(access_tcomsat)
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /area/crux/network/server

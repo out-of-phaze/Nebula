@@ -1,6 +1,7 @@
 /area/crux/habitation
 	name = "\improper Cafeteria"
 	sound_env = MEDIUM_SOFTFLOOR
+	holomap_color = HOLOMAP_AREACOLOR_CREW
 
 /area/crux/habitation/hop
 	name = "\improper Command - HoP's Office"

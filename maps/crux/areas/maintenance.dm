@@ -84,6 +84,8 @@
 
 /area/crux/maintenance/research
 	name = "\improper Research Maintenance"
+	req_access = list(access_maintenance)
+	holomap_color = HOLOMAP_AREACOLOR_MAINTENANCE
 
 /area/crux/maintenance/research
 	name = "\improper Research Maintenance"
