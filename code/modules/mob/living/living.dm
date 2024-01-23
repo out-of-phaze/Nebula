@@ -202,10 +202,12 @@ default behaviour is:
 	return (getOxyLoss()+getToxLoss()+getFireLoss()+getBruteLoss()+getCloneLoss()+getHalLoss())
 
 /mob/living/proc/update_health()
+	SHOULD_CALL_PARENT(TRUE)
 	if(status_flags & GODMODE)
 		current_health = get_max_health()
 		set_stat(CONSCIOUS)
 		return
+
 	var/max_health = get_max_health()
 	current_health = clamp(max_health-get_total_life_damage(), -(max_health), max_health)
 	if(stat != DEAD && should_be_dead())
@@ -743,6 +745,9 @@ default behaviour is:
 	return 1
 
 /mob/living/Destroy()
+	QDEL_NULL(aiming)
+	QDEL_NULL_LIST(_hallucinations)
+	QDEL_NULL_LIST(aimed_at_by)
 	if(stressors) // Do not QDEL_NULL, keys are managed instances.
 		stressors = null
 	if(auras)
@@ -853,8 +858,11 @@ default behaviour is:
 /mob/living/proc/eyecheck()
 	return FLASH_PROTECTION_NONE
 
-/mob/living/proc/get_max_nutrition()
+/mob/living/proc/get_satiated_nutrition()
 	return 500
+
+/mob/living/proc/get_max_nutrition()
+	return 550
 
 /mob/living/proc/set_nutrition(var/amt)
 	nutrition = clamp(amt, 0, get_max_nutrition())
@@ -943,7 +951,11 @@ default behaviour is:
 /mob/living/proc/can_do_special_ranged_attack(var/check_flag = TRUE)
 	return TRUE
 
+/mob/living/proc/get_food_satiation()
+	. = get_nutrition() + (get_ingested_reagents()?.total_volume * 10)
+
 /mob/living/proc/get_ingested_reagents()
+	RETURN_TYPE(/datum/reagents)
 	return reagents
 
 /mob/living/proc/should_have_organ(organ_to_check)
@@ -957,12 +969,15 @@ default behaviour is:
 	return root_bodytype?.has_limbs[limb_to_check]
 
 /mob/living/proc/get_contact_reagents()
+	RETURN_TYPE(/datum/reagents)
 	return reagents
 
 /mob/living/proc/get_injected_reagents()
+	RETURN_TYPE(/datum/reagents)
 	return reagents
 
 /mob/living/proc/get_inhaled_reagents()
+	RETURN_TYPE(/datum/reagents)
 	return reagents
 
 /mob/living/proc/get_adjusted_metabolism(metabolism)

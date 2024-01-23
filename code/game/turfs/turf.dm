@@ -36,7 +36,7 @@
 	var/fluid_blocked_dirs = 0
 	var/flooded // Whether or not this turf is absolutely flooded ie. a water source.
 	var/footstep_type
-	var/open_turf_type // Which turf to use when this turf is destroyed or replaced in a multiz context. Overridden by area.
+	var/open_turf_type // Which open turf type to use by default above this turf in a multiz context. Overridden by area.
 
 	var/tmp/changing_turf
 	var/tmp/prev_type // Previous type of the turf, prior to turf translation.
@@ -355,7 +355,7 @@
 			M.turf_collision(src, TT.speed)
 			if(LAZYLEN(M.pinned))
 				return
-		addtimer(CALLBACK(src, /turf/proc/bounce_off, AM, TT.init_dir), 2)
+		addtimer(CALLBACK(src, TYPE_PROC_REF(/turf, bounce_off), AM, TT.init_dir), 2)
 	else if(isobj(AM))
 		var/obj/structure/ladder/L = locate() in contents
 		if(L)
@@ -442,6 +442,29 @@
 		if(below)
 			below.update_weather(new_weather)
 
+// Updates turf participation in ZAS according to outside status. Must be called whenever the outside status of a turf may change.
+/turf/proc/update_external_atmos_participation(overwrite_air = TRUE)
+	if(is_outside())
+		if(zone && external_atmosphere_participation)
+			if(can_safely_remove_from_zone())
+				#ifdef MULTIZAS
+				var/dirs = global.cardinalz
+				#else
+				var/dirs = global.cardinal
+				#endif
+				zone.remove(src)
+				// Update neighbors to create edges between zones and exterior
+				for(var/dir in dirs)
+					var/turf/neighbor = get_step(src, dir)
+					SSair.mark_for_update(neighbor)
+			else
+				zone.rebuild()
+	else if(zone_membership_candidate)
+		// Set the turf's air to the external atmosphere to add to its new zone.
+		if(overwrite_air)
+			air = get_external_air(FALSE)
+		SSair.mark_for_update(src)
+
 /turf/proc/is_outside()
 
 	// Can't rain inside or through solid walls.
@@ -463,7 +486,7 @@
 
 	// If we are in a multiz volume and not already inside, we return
 	// the outside value of the highest unenclosed turf in the stack.
-	if((. != OUTSIDE_NO) && HasAbove(z))
+	if(HasAbove(z))
 		. =  OUTSIDE_YES // assume for the moment we're unroofed until we learn otherwise.
 		var/turf/top_of_stack = src
 		while(HasAbove(top_of_stack.z))
@@ -485,14 +508,7 @@
 	SSambience.queued += src
 
 	last_outside_check = OUTSIDE_UNCERTAIN
-	if(is_outside())
-		if(zone && external_atmosphere_participation)
-			if(can_safely_remove_from_zone())
-				zone.remove(src)
-			else
-				zone.rebuild()
-	else if(zone_membership_candidate)
-		SSair.mark_for_update(src)
+	update_external_atmos_participation()
 
 	if(!HasBelow(z))
 		return TRUE
@@ -596,3 +612,26 @@
 
 /turf/proc/dig_pit()
 	return can_dig_pit() && new /obj/structure/pit(src)
+
+// Largely copied from stairs.
+/turf/proc/can_move_up_ramp(atom/movable/AM, turf/above_wall, turf/under_atom, turf/above_atom)
+	if(!istype(AM) || !istype(above_wall) || !istype(under_atom) || !istype(above_atom))
+		return FALSE
+	return under_atom.CanZPass(AM, UP) && above_atom.CanZPass(AM, DOWN) && above_wall.Enter(AM)
+
+/turf/Bumped(var/atom/movable/AM)
+	if(!istype(AM) || !HasAbove(z))
+		return ..()
+	var/turf/exterior/wall/slope = AM.loc
+	if(!istype(slope) || !slope.ramp_slope_direction || get_dir(src, slope) != slope.ramp_slope_direction)
+		return ..()
+	var/turf/above_wall = GetAbove(src)
+	if(can_move_up_ramp(AM, above_wall, get_turf(AM), GetAbove(AM)))
+		AM.forceMove(above_wall)
+		if(isliving(AM))
+			var/mob/living/L = AM
+			for(var/obj/item/grab/G in L.get_active_grabs())
+				G.affecting.forceMove(above_wall)
+	else
+		to_chat(AM, SPAN_WARNING("Something blocks the path."))
+	return TRUE

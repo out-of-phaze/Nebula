@@ -52,8 +52,8 @@
 /datum/level_data/crux
 	name = "Port Eleostura - Ground Floor"
 	use_global_exterior_ambience = FALSE
-	ambient_light_level = 0.7
-	ambient_light_color = "#8497ec"
+	ambient_light_level = 1
+	ambient_light_color = "#ecdc84"
 	base_turf = /turf/exterior/dirt
 	exterior_atmosphere = list(
 		/decl/material/gas/oxygen =   MOLES_O2STANDARD,
@@ -85,4 +85,6 @@
 	name = "Port Eleostura - Level Two"
 	level_data_type = /datum/level_data/crux/level_two
 
-/obj/abstract/landmark/map_load_mark/engine_loader // todo
+/obj/abstract/landmark/map_load_mark/engine_loader
+	name = "Engine Loader"
+	map_template_names = list("Eleostura Supermatter Engine")

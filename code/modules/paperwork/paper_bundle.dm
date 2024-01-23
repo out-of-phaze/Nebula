@@ -182,7 +182,7 @@
 	user.visible_message( \
 		"<span class='[span_class]'>\The [user] holds \the [P] up to \the [src]. It looks like [G.he] [G.is] trying to burn it!</span>", \
 		"<span class='[span_class]'>You hold \the [P] up to \the [src], burning it slowly.</span>")
-	addtimer(CALLBACK(src, .proc/burn_callback, P, user, span_class), 2 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(burn_callback), P, user, span_class), 2 SECONDS)
 
 /obj/item/paper_bundle/examine(mob/user, distance)
 	. = ..()
@@ -301,8 +301,8 @@
 	var/obj/item/paper/P = pages[1]
 	icon       = P.icon
 	icon_state = P.icon_state
-	copy_overlays(P.overlays)
 
+	copy_overlays(P)
 
 	var/paper_count = 0
 	var/photo_count = 0
