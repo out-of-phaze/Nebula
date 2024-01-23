@@ -17549,11 +17549,6 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals5,
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
@@ -18510,7 +18505,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/red{
+/obj/machinery/atmospherics/pipe/manifold/visible/red{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -18554,14 +18549,14 @@
 /area/engineering/auxiliary_engineering)
 "aPA" = (
 /obj/machinery/door/airlock,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/giftshop/storage)
@@ -18582,7 +18577,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -24394,6 +24389,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/checkpoint3)
+"eiT" = (
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/hallway/primary/firstdeck/south)
 "eDF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -24409,6 +24414,10 @@
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/auxiliary_engineering)
+"flz" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/plating,
+/area/hallway/primary/firstdeck/south)
 "fzC" = (
 /obj/structure/lattice,
 /obj/structure/grille,
@@ -24483,6 +24492,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/storage/primary)
+"hBF" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/primary/firstdeck/south)
 "hDK" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
@@ -24517,15 +24532,14 @@
 /turf/exterior/wildgrass,
 /area/surface)
 "ioA" = (
-/obj/structure/cable{
-	dir = 1;
-	icon_state = "2-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
 /area/giftshop)
@@ -24815,14 +24829,14 @@
 /turf/simulated/wall/r_wall,
 /area/engineering/auxiliary_engineering)
 "xGC" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled,
 /area/giftshop/storage)
@@ -55577,8 +55591,8 @@ aPW
 aPW
 aPW
 aPW
-aPW
-aPW
+flz
+eiT
 aQo
 aQG
 aRe
@@ -55835,7 +55849,7 @@ aPW
 aPW
 aPW
 aPW
-aPW
+hBF
 aRS
 aQH
 aRf

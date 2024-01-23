@@ -5,7 +5,6 @@
 		/area/exoplanet                                              = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/engineering/engine_room                                = NO_SCRUBBER|NO_VENT|NO_APC, // TODO port engine
 		/area/engineering/engine_waste                               = NO_SCRUBBER|NO_VENT|NO_APC, // TODO port engine
-		/area/holodeck                                               = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/surface                                                = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/surface/level_one                                      = NO_VENT|NO_APC,
 		/area/space                                                  = NO_SCRUBBER|NO_VENT|NO_APC,
@@ -17,8 +16,12 @@
 		/area/construction/firstdeck                                 = NO_SCRUBBER|NO_VENT,
 		/area/construction/seconddeck/construction1                  = NO_SCRUBBER|NO_VENT,
 		/area/storage/emergency_storage                              = NO_SCRUBBER|NO_VENT,
-		/area/security/riot_control                                  = NO_SCRUBBER|NO_VENT,
 		/area/rnd/test_area                                          = NO_SCRUBBER|NO_VENT,
+		/area/balcony/south											 = NO_SCRUBBER|NO_VENT,
+		/area/crew_quarters/bar										 = NO_SCRUBBER|NO_VENT,
+		/area/roofgarden											 = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/library									 = NO_SCRUBBER|NO_VENT,
+		/area/maintenance/medbay									 = NO_SCRUBBER|NO_VENT,
 		/area/maintenance/firstdeck                                  = NO_SCRUBBER|NO_VENT,
 		/area/maintenance/firstdeck/foreport                         = NO_SCRUBBER,
 		/area/maintenance/firstdeck/forestarboard                    = NO_SCRUBBER,
@@ -28,9 +31,7 @@
 		/area/maintenance/medbay_fore                                = NO_SCRUBBER|NO_VENT,
 		/area/maintenance/research_medical                           = NO_SCRUBBER|NO_VENT,
 		/area/maintenance/engineering                                = NO_SCRUBBER|NO_VENT,
-		/area/maintenance/chapel                                     = NO_SCRUBBER|NO_VENT,
 		/area/maintenance/bar                                        = NO_SCRUBBER|NO_VENT,
-		/area/maintenance/locker                                     = NO_SCRUBBER|NO_VENT,
 		/area/maintenance/disposal                                   = NO_SCRUBBER|NO_VENT,
 		/area/maintenance/apmaint                                    = NO_SCRUBBER|NO_VENT,
 		/area/maintenance/central                                    = NO_SCRUBBER|NO_VENT,
@@ -38,7 +39,6 @@
 		/area/maintenance/security_starboard                         = NO_SCRUBBER|NO_VENT,
 		/area/maintenance/solars/aftportsolar                        = NO_SCRUBBER,
 		/area/maintenance/solars/aftstarboardsolar                   = NO_SCRUBBER,
-		/area/maintenance/security_port                              = NO_SCRUBBER,
 		/area/maintenance/medbay                                     = NO_SCRUBBER,
 		/area/maintenance/cargo                                      = NO_SCRUBBER,
 		/area/maintenance/research                                   = NO_SCRUBBER,
@@ -238,10 +238,6 @@
 	name = "\improper Ground Floor East Hallway"
 	icon_state = "hallS"
 
-/area/hallway/primary/firstdeck/auxdockaft
-	name = "\improper Ground Floor South Auxiliary Dock"
-	icon_state = "docking_hallway"
-
 /area/hallway/primary/firstdeck/auxdockfore
 	name = "\improper Ground Floor North Auxiliary Dock"
 	icon_state = "docking_hallway"
@@ -256,14 +252,6 @@
 
 /area/hallway/secondary/escape/firstdeck/ep_starboard2
 	name = "\improper Large Escape Pod 2 East"
-	icon_state = "escape_pod"
-
-/area/hallway/secondary/escape/firstdeck/ep_aftport
-	name = "\improper Escape Pods Southwest"
-	icon_state = "escape_pod"
-
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard
-	name = "\improper Escape Pods Southeast"
 	icon_state = "escape_pod"
 
 /area/hangar
@@ -387,9 +375,6 @@
 /area/construction/seconddeck/construction1
 	name = "\improper First Floor Engineering Construction Area 1"
 
-/area/construction/seconddeck/construction2
-	name = "\improper Abandoned Locker Room"
-
 /area/crew_quarters/heads/sc
 	name = "\improper Command - Head Office"
 	icon_state = "head_quarters"
@@ -413,8 +398,8 @@
 	icon_state = "head_quarters"
 //	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
-/area/crew_quarters/heads/sc/hos
-	name = "\improper Security - HoS' Office"
+/area/crew_quarters/heads/eleostura/servicemanager
+	name = "\improper Service Manager's Office"
 	icon_state = "head_quarters"
 //	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
@@ -477,10 +462,6 @@
 	name = "\improper First Floor East Hallway"
 	icon_state = "hallS"
 
-/area/hallway/primary/seconddeck/dockhallway
-	name = "\improper Shuttle Dock Hallway"
-	icon_state = "docking_hallway"
-
 /area/hallway/secondary/seconddeck/research_medical
 	name = "Research Medical Hallway"
 	icon_state = "hallS"
@@ -499,9 +480,6 @@
 /area/medical/first_aid_station/seconddeck/north
 	name = "\improper North First-Aid Station"
 
-/area/medical/first_aid_station/seconddeck/south
-	name = "\improper South First-Aid Station"
-
 /area/medical/medical_lockerroom
 	name = "\improper Medbay Locker Room"
 	icon_state = "locker"
@@ -512,16 +490,16 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
-/area/security/aid_station
-	name = "\improper Security - Aid Station"
+/area/hotel/free_suite_a
+	name = "\improper Free Suite A"
 	icon_state = "security_aid_station"
 
-/area/security/security_ses
-	name = "\improper Security - Secondary Equipment Storage"
+/area/hotel/free_suite_b
+	name = "\improper Free Suite B"
 	icon_state = "security_equip_storage"
 
-/area/security/security_restroom
-	name = "\improper Security - Restroom"
+/area/hotel/hotel_restroom
+	name = "\improper Hotel Restroom"
 	icon_state = "security_bathroom"
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
@@ -622,7 +600,7 @@
 	name = "\improper Engineering - CE's Quarters"
 	icon_state = "engine"
 
-/area/crew_quarters/heads/sc/hos/quarters
+/area/crew_quarters/heads/eleostura/servicemanager/quarters
 	name = "\improper Security - HoS' Quarters"
 	icon_state = "security"
 
@@ -744,38 +722,6 @@
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/airless
 
-/area/shuttle/escape_pod3
-	name = "\improper Escape Pod Three"
-//	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod3/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod4
-	name = "\improper Escape Pod Four"
-//	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod4/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod5
-	name = "\improper Escape Pod Five"
-//	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod5/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod6
-	name = "\improper Escape Pod Six"
-//	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod6/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
 /area/shuttle/escape_pod7
 	name = "\improper Escape Pod Seven"
 //	music = "music/escape.ogg"
@@ -810,11 +756,6 @@
 	icon_state = "shuttle2"
 	base_turf = /turf/simulated/floor/airless
 
-/area/shuttle/cryo_station
-	name = "\improper Cryogenic Storage"
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
 
 // Misc
 /area/security/nuke_storage
@@ -826,11 +767,20 @@
 /area/quartermaster/storage
 	name = "\improper Quartermaster Storage"
 
-/area/security/brig
-	name = "\improper Brig"
+/area/hotel/hallway
+	name = "\improper Hotel Hallway"
 
-/area/security/security_equiptment_storage
-	name = "\improper Security Equipment Storage"
+/area/hotel/standard_room_a
+	name = "\improper Standard Room A"
+
+/area/hotel/standard_room_b
+	name = "\improper Standard Room B"
+
+/area/hotel/standard_room_c
+	name = "\improper Standard Room C"
+
+/area/hotel/standard_room_d
+	name = "\improper Standard Room D"
 
 /area/rnd/research_foyer
 	name = "\improper Research Foyer"
@@ -844,17 +794,8 @@
 /area/rnd/test_area
 	name = "\improper Research Test Area"
 
-/area/security/prison
-	name = "\improper Prison"
-
-/area/security/security_lockerroom
-	name = "\improper Security Locker Room"
-
-/area/security/range
-	name = "\improper Firing Range"
-
-/area/storage/tech
-	name = "\improper Technical Storage"
+/area/hotel/lounge
+	name = "\improper Hotel Lounge"
 
 /area/medical/genetics_cloning
 	name = "\improper Cloning Lab"
@@ -865,47 +806,49 @@
 /area/medical/morgue
 	name = "\improper Morgue"
 
-/area/crew_quarters/locker/locker_toilet
-	name = "\improper Toilets"
-
 /area/crew_quarters/bar
 	name = "\improper Bar"
 
-/area/security/main
-	name = "\improper Security"
-
-/area/security/warden
-	name = "\improper Warden Office"
+/area/hotel/kitchenette
+	name = "\improper Kitchenette"
 
 /area/engineering/atmos
 	name = "\improper Atmospherics"
 
-/area/security/evidence_storage
-	name = "\improper Evidence Storage"
+/area/hotel/executive_suite_a
+	name = "\improper Executive Suite A"
 
-/area/security/security_cell_hallway
-	name = "\improper Brig Hallway"
+/area/hotel/executive_suite_b
+	name = "\improper Executive Suite B"
 
-/area/security/security_processing
-	name = "\improper Processing"
+/area/hotel/executive_suite_c
+	name = "\improper Executive Suite C"
+
+/area/hotel/executive_suite_d
+	name = "\improper Executive Suite D"
 
 /area/maintenance/security_starboard
 	name = "\improper East Security"
 
-/area/maintenance/security_port
-	name = "\improper West Security"
+/area/hotel/pool_locker_room
+	name = "\improper Pool Lockers"
 
-/area/lawoffice
-	name = "\improper Legal Office"
+/area/hotel/pool_restroom
+	name = "\improper Pool Restroom"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	sound_env = SMALL_ENCLOSED
 
-/area/security/lobby
-	name = "\improper Security Lobby"
+/area/hotel/staff_lounge
+	name = "\improper Staff Lounge"
 
-/area/security/riot_control
-	name = "\improper Riot Control"
+/area/hotel/lobby
+	name = "\improper Hotel Lobby"
 
-/area/security/detectives_office
-	name = "\improper Detective Office"
+/area/hotel/pool
+	name = "\improper Pool"
+
+/area/hotel/conference_room
+	name = "\improper Conference Room"
 
 /area/hallway/secondary/eva_hallway
 	name = "\improper EVA Hallway"
@@ -925,9 +868,6 @@
 
 /area/engineering/atmos/monitoring
 	name = "\improper Atmospherics Monitoring"
-
-/area/crew_quarters/locker
-	name = "\improper Locker Room"
 
 /area/maintenance/research
 	name = "\improper Research Maintenance"
@@ -1073,12 +1013,6 @@
 /area/medical/genetics
 	name = "\improper Genetics"
 
-/area/crew_quarters/vistor_room_1
-	name = "\improper Visitor Room 1"
-
-/area/crew_quarters/vistor_room_2
-	name = "\improper Visitor Room 2"
-
 /area/crew_quarters/kitchen
 	name = "\improper Kitchen"
 
@@ -1109,17 +1043,8 @@
 /area/medical/surgeryobs
 	name = "\improper Surgery Observation"
 
-/area/maintenance/locker
-	name = "\improper Locker Room Maintenance"
-
-/area/maintenance/chapel
-	name = "\improper Chapel"
-
 /area/hydroponics
 	name = "\improper Hydroponics"
-
-/area/holodeck/alphadeck
-	name = "\improper Holodeck"
 
 /area/chapel/main
 	name = "\improper Prayer Room"
@@ -1130,38 +1055,14 @@
 /area/library/office
 	name = "\improper Library - Curator's Office"
 
-/area/chapel/office
-	name = "\improper Chapel Office"
-
-/area/hallway/secondary/docking_hallway2
-	name = "\improper Secondary Docking Hallway"
-
 /area/storage/primary
 	name = "\improper Primary Tool Storage"
-
-/area/security/checkpoint2
-	name = "\improper Secondary Security Checkpoint"
-
-/area/hallway/secondary/entry/docking_lounge
-	name = "\improper Docking Lounge"
 
 /area/bridge
 	name = "\improper Bridge"
 
 /area/bridge/meeting_room
 	name = "\improper Meeting Room"
-
-/area/hallway/secondary/entry/dock_one
-	name = "\improper Dock One"
-
-/area/hallway/secondary/entry/dock_two
-	name = "\improper Dock Two"
-
-/area/hallway/secondary/entry/dock_three
-	name = "\improper Dock Three"
-
-/area/maintenance/substation/civilian
-	name = "\improper Civilian Substation"
 
 /area/maintenance/substation/command
 	name = "\improper Command Substation"
