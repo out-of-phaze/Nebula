@@ -4701,14 +4701,14 @@
 "dKS" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall/r_wall,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dKT" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "hosquarters"
 	},
 /turf/simulated/floor/plating,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dKU" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
@@ -4720,13 +4720,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/steel_grid,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dKV" = (
 /turf/simulated/wall,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dKW" = (
 /turf/simulated/wall/r_wall,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dKX" = (
 /turf/simulated/wall,
 /area/crew_quarters/heads/sc/bs)
@@ -5024,7 +5024,7 @@
 	pixel_x = -22
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dLE" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -5034,7 +5034,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dLF" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/hos,
@@ -5043,7 +5043,7 @@
 	pixel_x = 24
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dLG" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -5359,7 +5359,7 @@
 	pixel_y = 6
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dMn" = (
 /obj/structure/bed/chair/office/dark,
 /obj/structure/cable/green{
@@ -5367,7 +5367,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dMo" = (
 /obj/structure/table,
 /obj/machinery/light{
@@ -5384,7 +5384,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dMp" = (
 /obj/machinery/light{
 	dir = 8
@@ -5646,14 +5646,14 @@
 "dMS" = (
 /obj/structure/closet/secure_closet/hos,
 /turf/simulated/floor/carpet,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dMT" = (
 /obj/structure/table,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dMU" = (
 /obj/structure/table,
 /obj/item/flashlight/lamp/green,
@@ -5663,7 +5663,7 @@
 	pixel_x = 21
 	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/heads/sc/hos/quarters)
+/area/crew_quarters/heads/eleostura/servicemanager/quarters)
 "dMV" = (
 /obj/item/radio/intercom{
 	dir = 8;
