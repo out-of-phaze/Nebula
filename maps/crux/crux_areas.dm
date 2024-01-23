@@ -39,7 +39,6 @@
 		/area/maintenance/security_starboard                         = NO_SCRUBBER|NO_VENT,
 		/area/maintenance/solars/aftportsolar                        = NO_SCRUBBER,
 		/area/maintenance/solars/aftstarboardsolar                   = NO_SCRUBBER,
-		/area/maintenance/medbay                                     = NO_SCRUBBER,
 		/area/maintenance/cargo                                      = NO_SCRUBBER,
 		/area/maintenance/research                                   = NO_SCRUBBER,
 		/area/maintenance/solars/foreportsolar                       = NO_SCRUBBER,
