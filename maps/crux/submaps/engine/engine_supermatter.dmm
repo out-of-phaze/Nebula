@@ -80,6 +80,12 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor,
 /area/crux/engineering/engine_waste)
+"cT" = (
+/obj/structure/sign/warning/radioactive{
+	pixel_y = 32
+	},
+/turf/template_noop,
+/area/template_noop)
 "da" = (
 /obj/machinery/atmospherics/pipe/cap/visible,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -1018,6 +1024,13 @@
 	},
 /turf/simulated/floor,
 /area/crux/engineering/engine_room)
+"Hm" = (
+/obj/structure/sign/warning/radioactive{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/template_noop,
+/area/template_noop)
 "Hn" = (
 /obj/machinery/atmospherics/pipe/cap/visible{
 	dir = 1
@@ -2236,8 +2249,8 @@ yL
 kw
 kw
 yL
-Rj
-Rs
+Hm
+dh
 Aw
 GG
 WM
@@ -2257,8 +2270,8 @@ Ul
 Zs
 Ia
 dh
-Rs
-Rj
+dh
+cT
 "}
 (18,1,1) = {"
 Rj

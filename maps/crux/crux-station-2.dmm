@@ -6298,7 +6298,7 @@
 /area/crux/bridge/meeting_room)
 "dOy" = (
 /obj/structure/table/woodentable_reinforced,
-/obj/item/book/manual/nt_regs,
+/obj/item/book/fluff/nt_regs,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -8189,7 +8189,7 @@
 /area/crux/habitation/sd)
 "dSo" = (
 /obj/structure/table/woodentable,
-/obj/item/book/manual/nt_regs,
+/obj/item/book/fluff/nt_regs,
 /obj/item/magnetic_tape/random,
 /obj/item/taperecorder,
 /turf/simulated/floor/carpet,

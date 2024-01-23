@@ -38270,7 +38270,7 @@
 /area/crux/medical/medbay)
 "cEI" = (
 /obj/structure/bookcase/manuals/medical,
-/obj/item/book/manual/stasis,
+/obj/item/book/fluff/stasis,
 /obj/item/book/manual/medical_diagnostics_manual{
 	pixel_y = 7
 	},
