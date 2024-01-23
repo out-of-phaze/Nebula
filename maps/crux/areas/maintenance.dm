@@ -4,7 +4,7 @@
 	turf_initializer = /decl/turf_initializer/maintenance
 	forced_ambience = list('sound/ambience/maintambience.ogg')
 	req_access = list(access_maint_tunnels)
-	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	holomap_color = HOLOMAP_AREACOLOR_MAINTENANCE
 
 /area/crux/maintenance/firstdeck
 	name = "Ground Floor Maintenance"
@@ -33,9 +33,6 @@
 /area/crux/maintenance/firstdeck/centralport
 	name = "Ground Floor West Maintenance"
 	icon_state = "pmaint"
-
-/area/crux/maintenance
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/crux/maintenance/thirddeck/aftstarboard
 	name = "Second Floor Southeast Maintenance"
@@ -81,11 +78,6 @@
 
 /area/crux/maintenance/engineering
 	name = "\improper Engineering Maintenance"
-
-/area/crux/maintenance/research
-	name = "\improper Research Maintenance"
-	req_access = list(access_maintenance)
-	holomap_color = HOLOMAP_AREACOLOR_MAINTENANCE
 
 /area/crux/maintenance/research
 	name = "\improper Research Maintenance"

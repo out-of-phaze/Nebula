@@ -9,16 +9,15 @@
 		/area/crux/engineering/engine_waste                               = NO_SCRUBBER|NO_VENT|NO_APC, // TODO port engine
 		/area/crux/outside                                                = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/crux/outside/level_one                                      = NO_VENT|NO_APC,
+		/area/crux/outside/roof                                           = 0,
+		/area/crux/outside/roof/balcony_south                             = NO_SCRUBBER|NO_VENT,
+		/area/crux/outside/roof/garden                                    = NO_SCRUBBER|NO_VENT,
 		/area/crux/shuttle                                                = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/crux/shuttle/shuttle_start_2                                = NO_SCRUBBER|NO_APC,
 		/area/crux/shuttle/shuttle_start                                  = NO_SCRUBBER|NO_APC,
-		/area/crux/engineering                                            = NO_SCRUBBER|NO_VENT,
-		/area/crux/engineering/construction/sd_construction               = NO_SCRUBBER|NO_VENT,
 		/area/crux/storage/emergency                                      = NO_SCRUBBER|NO_VENT,
 		/area/crux/science/test_area                                      = NO_SCRUBBER|NO_VENT,
-		/area/crux/outside/roof/balcony_south                             = NO_SCRUBBER|NO_VENT,
 		/area/crux/habitation/bar                                         = NO_SCRUBBER|NO_VENT,
-		/area/crux/outside/roof/garden                                    = NO_SCRUBBER|NO_VENT,
 		/area/crux/maintenance/library                                    = NO_SCRUBBER|NO_VENT,
 		/area/crux/maintenance/medbay                                     = NO_SCRUBBER|NO_VENT,
 		/area/crux/maintenance/firstdeck                                  = NO_SCRUBBER|NO_VENT,
@@ -43,7 +42,7 @@
 		/area/crux/maintenance/solars/foreportsolar                       = NO_SCRUBBER,
 		/area/crux/maintenance/solars/forestarboardsolar                  = NO_SCRUBBER,
 		/area/crux/network/comms/chamber                                  = NO_SCRUBBER,
-		/area/crux/network/server                                                      = NO_SCRUBBER,
+		/area/crux/network/server                                         = NO_SCRUBBER,
 		/area/crux/medical/genetics                                       = NO_APC
 	)
 	area_coherency_test_exempt_areas = list(

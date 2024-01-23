@@ -6,25 +6,30 @@
 
 /area/crux/engineering/engine_smes
 	name = "\improper SMES Chamber"
+	req_access = list(access_engine_equip)
 
 /area/crux/engineering/engine_waste
 	name = "\improper Engine Waste Handling"
+	req_access = list(access_engine_equip)
 
 /area/crux/engineering/drone_fabrication
 	name = "\improper Drone Fabrication"
 
 /area/crux/engineering/atmos/monitoring
 	name = "\improper Atmospherics Monitoring"
+	req_access = list(access_atmospherics)
 
 /area/crux/engineering/storage
 	name = "\improper Engineering Storage"
 
 /area/crux/engineering/atmos
 	name = "\improper Atmospherics"
+	req_access = list(access_atmospherics)
 
 /area/crux/engineering/engineer_eva
 	name = "\improper Engineering EVA"
 	icon_state = "engine_eva"
+	req_access = list(access_engine, access_eva)
 
 /area/crux/engineering/engi_restroom
 	name = "\improper Engineering Restroom"
@@ -34,6 +39,7 @@
 
 /area/crux/engineering/hallway/atmos_hallway
 	name = "\improper Atmospherics Hallway"
+	req_access = list(access_atmospherics)
 
 /area/crux/engineering/hallway/engineer_hallway
 	name = "\improper Engineering Hallway"
@@ -50,6 +56,7 @@
 
 /area/crux/engineering/engine_room
 	name = "\improper Engine Room"
+	req_access = list(access_engine_equip)
 
 /area/crux/engineering/foyer
 	name = "\improper Engineering Foyer"
@@ -58,7 +65,7 @@
 	name = "\improper Engine Airlock"
 
 /area/crux/engineering/engine_monitoring
-	name = "\improper Engine MOnitoring"
+	name = "\improper Engine Monitoring"
 
 /area/crux/engineering/auxiliary_engineering
 	name = "\improper Auxiliary Engineering Station"
@@ -89,6 +96,8 @@
 
 /area/crux/engineering/robotics
 	name = "\improper Robotics"
+	req_access = list(access_robotics)
 
 /area/crux/engineering/chargebay
 	name = "\improper Recharging Bay"
+	req_access = list(access_robotics)

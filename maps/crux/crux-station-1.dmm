@@ -8731,11 +8731,6 @@
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/tiled,
 /area/crux/engineering/atmos)
-"bus" = (
-/obj/structure/table/marble,
-/obj/structure/table/marble,
-/turf/simulated/floor/lino,
-/area/crux/habitation/bar)
 "but" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/binary/pump{
@@ -20581,7 +20576,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/abstract/landmark/latejoin/cyborg,
+/obj/abstract/landmark/latejoin/observer,
 /turf/simulated/floor/tiled/dark,
 /area/crux/hallway/primary/seconddeck/fscenter)
 "bSF" = (
@@ -29131,7 +29126,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/abstract/landmark/latejoin/cyborg,
+/obj/abstract/landmark/latejoin/observer,
 /turf/simulated/floor/tiled/dark,
 /area/crux/hallway/primary/seconddeck/fpcenter)
 "clo" = (
@@ -29257,7 +29252,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/abstract/landmark/latejoin/cyborg,
+/obj/abstract/landmark/latejoin/observer,
 /turf/simulated/floor/tiled/dark,
 /area/crux/hallway/primary/seconddeck/ascenter)
 "clA" = (
@@ -38156,7 +38151,7 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/abstract/landmark/latejoin/cyborg,
+/obj/abstract/landmark/latejoin/observer,
 /turf/simulated/floor/tiled/dark,
 /area/crux/hallway/primary/seconddeck/apcenter)
 "cEu" = (
@@ -46541,6 +46536,9 @@
 "cUs" = (
 /turf/simulated/floor/tiled/freezer,
 /area/crux/habitation/toilet/seconddeck_south)
+"cUA" = (
+/turf/simulated/wall/r_wall,
+/area/crux/habitation/kitchen)
 "cUJ" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -46589,7 +46587,7 @@
 /obj/structure/table/marble,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "cVd" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -46858,7 +46856,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "cVK" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass{
@@ -49655,7 +49653,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "dgN" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -49722,7 +49720,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "dhc" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass{
@@ -49821,7 +49819,7 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "dhR" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
@@ -49877,7 +49875,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "dio" = (
 /turf/simulated/wall/r_wall,
 /area/crux/hallway/primary/seconddeck/south)
@@ -49916,7 +49914,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "dit" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -49956,7 +49954,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "dkx" = (
 /obj/structure/catwalk,
 /obj/machinery/power/apc{
@@ -50379,7 +50377,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "dUP" = (
 /obj/item/radio/intercom{
 	dir = 8;
@@ -51622,7 +51620,7 @@
 	pixel_x = -26
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "fuL" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -51639,7 +51637,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "fAs" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -51672,7 +51670,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "gfM" = (
 /obj/structure/hygiene/shower{
 	dir = 4
@@ -51708,7 +51706,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "gCo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -51729,7 +51727,7 @@
 /area/crux/habitation/toilet/seconddeck_south)
 "hjJ" = (
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "hmi" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -51748,7 +51746,7 @@
 /area/crux/hallway/primary/seconddeck/south)
 "hrS" = (
 /turf/simulated/wall,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "hyP" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wingrille_spawn/reinforced,
@@ -51866,7 +51864,7 @@
 /area/crux/hotel/executive_suite_c)
 "kfd" = (
 /turf/simulated/wall/r_wall,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "kgc" = (
 /obj/structure/table/woodentable,
 /obj/item/camera/tvcamera,
@@ -51992,11 +51990,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "mhU" = (
 /obj/machinery/gibber,
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "mmf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -52008,7 +52006,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "mna" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -52067,7 +52065,7 @@
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "mYw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -52110,6 +52108,11 @@
 /obj/structure/bookcase/cart,
 /turf/simulated/floor/wood,
 /area/crux/habitation/library)
+"nvM" = (
+/obj/machinery/door/firedoor,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/crux/habitation/kitchen)
 "nwx" = (
 /obj/structure/door/plastic{
 	dir = 4
@@ -52173,7 +52176,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "oej" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -52196,7 +52199,7 @@
 	},
 /obj/machinery/cooker/grill,
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "ovd" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -52210,7 +52213,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "owT" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -52223,7 +52226,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "oyg" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -52252,7 +52255,7 @@
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "oRi" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped{
@@ -52268,7 +52271,7 @@
 "pjp" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "pjP" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -52289,7 +52292,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "pya" = (
 /obj/structure/hygiene/shower{
 	dir = 8
@@ -52316,7 +52319,7 @@
 /obj/item/clothing/gloves/latex,
 /obj/item/clothing/gloves/latex,
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "pGl" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -52329,7 +52332,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "pNk" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -52365,7 +52368,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "qaw" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -52433,14 +52436,14 @@
 	},
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "rjV" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
 /obj/machinery/cooker/fryer,
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "rrv" = (
 /obj/structure/cable,
 /obj/machinery/power/apc{
@@ -52516,14 +52519,14 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "sGf" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "sMJ" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
@@ -52555,7 +52558,7 @@
 "tio" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "tnr" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -52612,7 +52615,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_grid,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "tVq" = (
 /obj/structure/hygiene/sink{
 	pixel_y = 16
@@ -52649,7 +52652,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "ufG" = (
 /obj/machinery/light,
 /turf/simulated/floor/wood,
@@ -52716,6 +52719,9 @@
 	},
 /turf/simulated/floor/wood,
 /area/crux/habitation/library)
+"vwd" = (
+/turf/simulated/wall,
+/area/crux/habitation/kitchen)
 "vwz" = (
 /obj/machinery/light,
 /obj/machinery/light_switch{
@@ -52748,7 +52754,7 @@
 "vTH" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "vTW" = (
 /obj/structure/railing{
 	dir = 4
@@ -52771,7 +52777,7 @@
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "waC" = (
 /obj/machinery/light{
 	dir = 1
@@ -52791,7 +52797,7 @@
 	},
 /obj/machinery/cooker/oven,
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "wop" = (
 /obj/structure/railing/mapped{
 	dir = 8
@@ -52801,7 +52807,7 @@
 "woR" = (
 /obj/structure/kitchenspike,
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "wqh" = (
 /turf/simulated/wall,
 /area/crux/maintenance/library)
@@ -52825,7 +52831,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "wMU" = (
 /obj/structure/railing/mapped,
 /obj/structure/bed/chair{
@@ -52843,7 +52849,7 @@
 	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/white,
-/area/crux/habitation)
+/area/crux/habitation/kitchen)
 "wPE" = (
 /obj/machinery/atmospherics/valve/open,
 /turf/simulated/floor/tiled,
@@ -52851,7 +52857,7 @@
 "wUe" = (
 /obj/machinery/icecream_vat,
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "xjf" = (
 /obj/machinery/smartfridge/sheets,
 /turf/simulated/floor/plating,
@@ -52861,7 +52867,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/crux/habitation/coldroom)
+/area/crux/habitation/kitchen/coldroom)
 "xEe" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -86219,12 +86225,12 @@ vDV
 vDV
 dup
 dip
-vDV
-vDV
-itG
-itG
-vDV
-imK
+vwd
+vwd
+nvM
+nvM
+vwd
+cUA
 bbU
 eBt
 mIL
@@ -86476,7 +86482,7 @@ cRj
 cRj
 nQQ
 lmo
-vDV
+vwd
 wOC
 ooh
 wjY
@@ -86990,12 +86996,12 @@ cRj
 cRj
 cRj
 cRj
-vDV
+vwd
 vXU
 ppN
 ovd
 mRX
-imK
+cUA
 sqZ
 eBt
 fDg
@@ -88523,7 +88529,7 @@ coV
 dhI
 nAG
 cRj
-bus
+gpk
 gpk
 gpk
 gpk
