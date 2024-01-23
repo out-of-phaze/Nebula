@@ -172,8 +172,7 @@
 /obj/machinery/door/airlock/hatch{
 	icon_state = "door_locked";
 	id_tag = "engine_access_hatch";
-	locked = 1;
-	req_access = list("ACCESS_ENGINE_EQUIP")
+	locked = 1
 	},
 /turf/simulated/floor,
 /area/crux/engineering/engine_room)
@@ -419,8 +418,7 @@
 	dir = 1
 	},
 /obj/machinery/door/window/northleft{
-	name = "Engine Waste";
-	req_access = list("ACCESS_ENGINE_EQUIP")
+	name = "Engine Waste"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -440,8 +438,7 @@
 /area/crux/engineering/engine_room)
 "qk" = (
 /obj/machinery/door/window/northright{
-	name = "Engine Waste";
-	req_access = list("ACCESS_ENGINE_EQUIP")
+	name = "Engine Waste"
 	},
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
@@ -936,8 +933,7 @@
 /obj/machinery/door/airlock/hatch{
 	icon_state = "door_locked";
 	id_tag = "engine_access_hatch";
-	locked = 1;
-	req_access = list("ACCESS_ENGINE_EQUIP")
+	locked = 1
 	},
 /turf/simulated/floor,
 /area/crux/engineering/engine_room)
@@ -1696,12 +1692,6 @@
 	},
 /turf/simulated/floor,
 /area/crux/engineering/engine_room)
-"ZE" = (
-/turf/template_noop,
-/area/crux/engineering/engine_airlock)
-"ZJ" = (
-/turf/simulated/wall/r_wall,
-/area/crux/engineering/engine_airlock)
 "ZO" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/button/toggle/engine{
@@ -2510,10 +2500,10 @@ GN
 HU
 JV
 jW
-ZJ
-ZJ
-ZE
-ZJ
+Xy
+Xy
+Rj
+Xy
 Rj
 Rj
 Rj
@@ -2542,10 +2532,10 @@ dh
 lu
 Jx
 Ts
-ZJ
+Xy
 Rj
 Rj
-ZJ
+Xy
 Jk
 Rj
 Rj
@@ -2574,10 +2564,10 @@ Xy
 Xy
 Xy
 Xy
-ZJ
+Xy
 Rj
 Rj
-ZJ
+Xy
 zl
 Rj
 Uc

@@ -25661,12 +25661,6 @@
 "cdM" = (
 /turf/simulated/floor/tiled/white,
 /area/crux/medical/virology)
-"cdN" = (
-/obj/structure/cable/cyan{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating,
-/area/crux/engineering/engine_room)
 "cdO" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -30733,18 +30727,6 @@
 /obj/effect/floor_decal/corner/lime/bordercorner,
 /turf/simulated/floor/tiled/white,
 /area/crux/medical/virology)
-"cot" = (
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/obj/machinery/atmospherics/pipe/cap/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/cap/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/crux/engineering/engine_waste)
 "coy" = (
 /obj/machinery/computer/modular/preset/engineering/rcon{
 	dir = 4
@@ -48912,18 +48894,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crux/medical/patient_b)
-"dcv" = (
-/obj/structure/cable/cyan{
-	icon_state = "0-4"
-	},
-/obj/machinery/atmospherics/pipe/cap/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/cap/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/crux/engineering/engine_room)
 "dcy" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -49956,12 +49926,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/crux/maintenance/research)
-"dua" = (
-/obj/structure/cable/yellow{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating,
-/area/crux/engineering/engine_room)
 "dup" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -68423,15 +68387,15 @@ cAz
 cAz
 cAz
 cAz
-cdN
 cAz
 cAz
 cAz
-dcv
 cAz
 cAz
 cAz
-dua
+cAz
+cAz
+cAz
 cAz
 cAz
 cAz
@@ -68670,7 +68634,7 @@ aaa
 bHW
 bRP
 bRP
-cot
+bRP
 bRP
 bRP
 bRP
