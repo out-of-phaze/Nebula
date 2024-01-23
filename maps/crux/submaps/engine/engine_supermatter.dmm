@@ -14,7 +14,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "at" = (
 /obj/structure/sign/warning/vent_port{
 	pixel_x = 32
@@ -26,7 +26,7 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "bq" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -37,20 +37,20 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "bz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "bJ" = (
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "bM" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/effect/floor_decal/industrial/warning{
@@ -73,13 +73,13 @@
 	req_access = list("ACCESS_ENGINE_EQUIP")
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "bU" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "cT" = (
 /obj/structure/sign/warning/radioactive{
 	pixel_y = 32
@@ -90,7 +90,7 @@
 /obj/machinery/atmospherics/pipe/cap/visible,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "de" = (
 /obj/machinery/atmospherics/unary/heat_exchanger{
 	dir = 8
@@ -99,10 +99,10 @@
 	dir = 9
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "dh" = (
 /turf/simulated/wall/r_wall,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "di" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 9
@@ -111,12 +111,12 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "do" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/plating,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "dE" = (
 /obj/machinery/atmospherics/valve/digital{
 	dir = 4;
@@ -126,13 +126,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "eA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 9
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "eS" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/status_display{
@@ -140,19 +140,19 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "eY" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/effect/engine_setup/coolant_canister,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "fh" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "gD" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -164,7 +164,7 @@
 	c_tag = "ENG - Engine Core 3"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "gO" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
@@ -175,7 +175,7 @@
 	locked = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "gS" = (
 /obj/machinery/atmospherics/binary/circulator{
 	anchored = 1;
@@ -183,7 +183,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "hB" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -194,7 +194,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "hJ" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -204,7 +204,7 @@
 	pixel_x = 22
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "ih" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/structure/cable/green{
@@ -220,7 +220,7 @@
 	pixel_x = 36
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "ip" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -235,24 +235,24 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "iV" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "iW" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan,
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "jE" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 5
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "jL" = (
 /obj/structure/lattice,
 /obj/structure/grille/broken,
@@ -268,7 +268,7 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/effect/engine_setup/pump_max,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "jV" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 5
@@ -280,7 +280,7 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan,
 /obj/machinery/meter,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "kw" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 4
@@ -293,11 +293,11 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "ld" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "lu" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 10
@@ -313,7 +313,7 @@
 	req_access = list("ACCESS_ENGINE_EQUIP")
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "lL" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -321,7 +321,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "mj" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -330,7 +330,7 @@
 	dir = 10
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "mw" = (
 /obj/machinery/atmospherics/valve/digital{
 	dir = 4;
@@ -342,7 +342,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "no" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 5
@@ -356,7 +356,7 @@
 	pixel_x = -21
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "nF" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -371,7 +371,7 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "oh" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/black,
 /obj/machinery/meter,
@@ -379,7 +379,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "oj" = (
 /obj/machinery/mass_driver{
 	dir = 8;
@@ -388,22 +388,22 @@
 /obj/machinery/power/supermatter,
 /obj/effect/engine_setup/core,
 /turf/simulated/floor/greengrid/nitrogen,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "ol" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "ox" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/black,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "oz" = (
 /turf/simulated/floor/greengrid/nitrogen,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "oB" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 9
@@ -412,7 +412,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "pT" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
@@ -426,7 +426,7 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/effect/engine_setup/pump_max,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "pX" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -435,7 +435,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "qk" = (
 /obj/machinery/door/window/northright{
 	name = "Engine Waste"
@@ -455,7 +455,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "qw" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
@@ -470,7 +470,7 @@
 	},
 /obj/effect/engine_setup/pump_max,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "rq" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 10
@@ -479,7 +479,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "rN" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 4
@@ -488,7 +488,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "rQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 9
@@ -497,21 +497,21 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "sj" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "sl" = (
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "sn" = (
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
@@ -520,7 +520,7 @@
 	name = "Powernet Sensor - Engine Power"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "sv" = (
 /obj/machinery/generator{
 	anchored = 1
@@ -533,23 +533,23 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "sA" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "tD" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "uq" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "uv" = (
 /obj/machinery/meter,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -559,7 +559,7 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "uz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -569,7 +569,7 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "vX" = (
 /obj/machinery/door/firedoor/border,
 /obj/effect/wingrille_spawn/reinforced,
@@ -584,12 +584,12 @@
 	dir = 10
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "wu" = (
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/simulated/floor/plating,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "wY" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
 /obj/structure/lattice,
@@ -612,7 +612,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/nitrogen/engine,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "xX" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 4
@@ -622,7 +622,7 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "yq" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 9
@@ -637,7 +637,7 @@
 	dir = 10
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "yE" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
 	dir = 8
@@ -664,7 +664,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "zi" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 6
@@ -679,7 +679,7 @@
 /obj/machinery/door/firedoor/border,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "zl" = (
 /obj/item/book/manual/supermatter_engine,
 /turf/template_noop,
@@ -691,7 +691,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "zC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/item/radio/intercom{
@@ -701,20 +701,20 @@
 	},
 /obj/machinery/meter,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "zX" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ac" = (
 /obj/machinery/atmospherics/binary/pump,
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/engine_setup/pump_max,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ah" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/ai_status_display{
@@ -725,19 +725,19 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "Aw" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Az" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/nitrogen/engine,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "AA" = (
 /obj/machinery/door/firedoor/border,
 /obj/effect/wingrille_spawn/reinforced,
@@ -750,7 +750,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible/green,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "AR" = (
 /obj/machinery/button/toggle/engine{
 	desc = "A remote control-switch for the engine radiator viewport shutters.";
@@ -763,7 +763,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "AX" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -781,17 +781,17 @@
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/nitrogen/engine,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Bn" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 1
 	},
 /obj/machinery/meter,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ca" = (
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ce" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/camera/network/engine{
@@ -801,7 +801,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "Cj" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -809,13 +809,13 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/effect/engine_setup/coolant_canister,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "CO" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Dn" = (
 /obj/machinery/generator{
 	anchored = 1
@@ -825,7 +825,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Dv" = (
 /obj/effect/wingrille_spawn/reinforced_borosilicate,
 /obj/machinery/door/blast/regular{
@@ -833,7 +833,7 @@
 	name = "Reactor Blast Door"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "DV" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/structure/sign/warning/nosmoking_2{
@@ -841,14 +841,14 @@
 	},
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/plating,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "DY" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ep" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 8
@@ -858,7 +858,7 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Er" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 10
@@ -871,7 +871,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ev" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 4
@@ -881,7 +881,7 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "EA" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/black,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -891,10 +891,10 @@
 	dir = 6
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "EG" = (
 /turf/template_noop,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "EU" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/black,
 /obj/structure/lattice,
@@ -909,7 +909,7 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Fn" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
@@ -925,7 +925,7 @@
 	dir = 5
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "FL" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -936,11 +936,11 @@
 	locked = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "FR" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Gs" = (
 /obj/machinery/emitter{
 	anchored = 1;
@@ -959,7 +959,7 @@
 	},
 /obj/machinery/power/terminal,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "GC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/effect/floor_decal/industrial/warning{
@@ -975,7 +975,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "GF" = (
 /obj/machinery/door/firedoor/border,
 /obj/effect/wingrille_spawn/reinforced,
@@ -990,7 +990,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "GG" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -998,11 +998,11 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "GJ" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "GN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/door/blast/regular{
@@ -1010,7 +1010,7 @@
 	name = "Engine Waste Handling Access"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Hb" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 10
@@ -1019,7 +1019,7 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Hm" = (
 /obj/structure/sign/warning/radioactive{
 	dir = 1;
@@ -1035,7 +1035,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "HE" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/yellow,
 /obj/effect/floor_decal/industrial/warning{
@@ -1045,7 +1045,7 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "HU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -1055,7 +1055,7 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ia" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -1069,13 +1069,13 @@
 	req_access = list("ACCESS_ENGINE_EQUIP")
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "IJ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "IP" = (
 /obj/machinery/atmospherics/pipe/cap/visible{
 	dir = 1
@@ -1083,7 +1083,7 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "IV" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 6
@@ -1092,7 +1092,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Jk" = (
 /obj/machinery/computer/air_control/supermatter_core{
 	dir = 4;
@@ -1112,7 +1112,7 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/effect/engine_setup/filter,
 /turf/simulated/floor/plating,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Jx" = (
 /obj/machinery/atmospherics/omni/filter{
 	tag_north = 2;
@@ -1126,11 +1126,11 @@
 	},
 /obj/effect/engine_setup/filter,
 /turf/simulated/floor/plating,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "JV" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "JX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 9
@@ -1142,7 +1142,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "Kc" = (
 /obj/machinery/atmospherics/unary/vent_pump/engine{
 	dir = 4;
@@ -1161,7 +1161,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/nitrogen/engine,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Le" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/machinery/door/blast/regular{
@@ -1169,7 +1169,7 @@
 	name = "Engine Waste Handling Access"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ln" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -1178,7 +1178,7 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Lo" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -1194,7 +1194,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "LV" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 8
@@ -1215,7 +1215,7 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/green,
 /obj/machinery/meter,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Mq" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -1223,7 +1223,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/engine_setup/coolant_canister,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "MF" = (
 /obj/effect/wingrille_spawn/reinforced_borosilicate,
 /obj/machinery/door/blast/regular{
@@ -1232,17 +1232,17 @@
 	name = "Reactor Blast Door"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "MH" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 10
 	},
 /obj/machinery/meter,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "MI" = (
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "MN" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 8
@@ -1251,7 +1251,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Nz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 6
@@ -1260,7 +1260,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "NA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 9
@@ -1272,7 +1272,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "NI" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
@@ -1280,14 +1280,14 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/effect/engine_setup/pump_max,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "NP" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ok" = (
 /obj/machinery/door/firedoor/border,
 /obj/effect/wingrille_spawn/reinforced,
@@ -1302,7 +1302,7 @@
 	dir = 9
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ot" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 10
@@ -1311,14 +1311,14 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "OI" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/nitrogen/engine,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "OR" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
@@ -1331,14 +1331,14 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Pa" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "PA" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -1347,7 +1347,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "PM" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/effect/floor_decal/industrial/warning{
@@ -1355,7 +1355,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Rf" = (
 /obj/machinery/atmospherics/unary/heat_exchanger{
 	dir = 4
@@ -1364,21 +1364,21 @@
 	dir = 6
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "Ri" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/cap/visible,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Rj" = (
 /turf/template_noop,
 /area/template_noop)
 "Rs" = (
 /obj/structure/sign/warning/radioactive,
 /turf/simulated/wall/r_wall,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "RJ" = (
 /obj/structure/lattice,
 /turf/template_noop,
@@ -1386,7 +1386,7 @@
 "RQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Sn" = (
 /obj/structure/lattice,
 /obj/structure/grille,
@@ -1396,7 +1396,7 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/portable_atmospherics/canister/hydrogen,
 /turf/simulated/floor/plating,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ti" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 8
@@ -1406,22 +1406,22 @@
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/nitrogen/engine,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ts" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 9
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "TG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/meter,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "TP" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "Uc" = (
 /obj/machinery/button/toggle/engine{
 	desc = "A remote control-switch for the engine control room blast doors.";
@@ -1458,12 +1458,12 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ux" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Uz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 5
@@ -1472,7 +1472,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "UC" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
@@ -1496,10 +1496,10 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "UU" = (
 /turf/simulated/wall/r_wall,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "Va" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 10
@@ -1518,11 +1518,11 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "Vq" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "VU" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/black{
@@ -1542,7 +1542,7 @@
 	pixel_x = -21
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Wh" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -1551,19 +1551,19 @@
 	dir = 9
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Wl" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Wm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Wq" = (
 /obj/machinery/door/blast/regular{
 	id_tag = "EngineVent";
@@ -1571,7 +1571,7 @@
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/reinforced/airless,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Wr" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -1586,20 +1586,20 @@
 /obj/structure/closet/radiation,
 /obj/item/clothing/glasses/meson,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "WM" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "WO" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/cap/visible,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Xy" = (
 /turf/simulated/wall/r_wall,
 /area/template_noop)
@@ -1618,7 +1618,7 @@
 	dir = 5
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Yi" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -1627,7 +1627,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Yj" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -1637,17 +1637,17 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Ym" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Yp" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan,
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Yr" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 1
@@ -1656,21 +1656,21 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "YN" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30
 	},
 /obj/machinery/light/small,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 "YX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Zs" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -1679,7 +1679,7 @@
 	dir = 6
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "Zt" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 4
@@ -1691,7 +1691,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "ZO" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/button/toggle/engine{
@@ -1701,7 +1701,7 @@
 	req_access = list("ACCESS_ENGINE_EQUIP")
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "ZS" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/camera/network/engine{
@@ -1712,12 +1712,12 @@
 	dir = 5
 	},
 /turf/simulated/floor,
-/area/crux/engineering/engine_room)
+/area/template_noop)
 "ZX" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
-/area/crux/engineering/engine_waste)
+/area/template_noop)
 
 (1,1,1) = {"
 Rj
