@@ -162,8 +162,14 @@
 /area/construction/firstdeck/construction5
 	name = "\improper Ground Floor Engineering Construction Area 5"
 
+/area/crew_quarters/toilet
+	name = "\improper Toilets"
+
 /area/crew_quarters/toilet/firstdeck
 	name = "\improper Ground Floor Restroom"
+
+/area/crew_quarters/toilet/seconddeck/south
+	name = "\improper First Floor South Restroom"
 
 /area/maintenance/firstdeck
 	name = "Ground Floor Maintenance"
@@ -220,6 +226,9 @@
 /area/hallway/primary/firstdeck/south
 	name = "\improper Ground Floor South Hallway"
 	icon_state = "hallA"
+
+/area/hallway/primary/firstdeck/south/entrance
+	name = "\improper Ground Floor South Entrance Hallway"
 
 /area/hallway/primary/firstdeck/west
 	name = "\improper Ground Floor West Hallway"
@@ -998,6 +1007,9 @@
 /area/maintenance/bar
 	name = "\improper Bar Maintenance"
 
+/area/maintenance/library
+	name = "\improper Library Maintenance"
+
 /area/engineering/engine_waste
 	name = "\improper Engine Waste Handling"
 
@@ -1070,6 +1082,9 @@
 /area/crew_quarters/kitchen
 	name = "\improper Kitchen"
 
+/area/crew_quarters/kitchen/coldroom
+	name = "\improper Kitchen Cold Room"
+
 /area/medical/patient_wing
 	name = "\improper Patient Wing"
 
@@ -1107,10 +1122,13 @@
 	name = "\improper Holodeck"
 
 /area/chapel/main
-	name = "\improper Chapel"
+	name = "\improper Prayer Room"
 
 /area/library
 	name = "\improper Library"
+
+/area/library/office
+	name = "\improper Library - Curator's Office"
 
 /area/chapel/office
 	name = "\improper Chapel Office"
@@ -1174,3 +1192,21 @@
 
 /area/maintenance/substation/security
 	name = "\improper Security Substation"
+
+/area/giftshop
+	name = "\improper Gift Shop"
+
+/area/giftshop/storage
+	name = "\improper Gift Shop Storage"
+
+/area/rooflounge
+	name = "\improper Rooftop Lounge"
+
+/area/roofgarden
+	name = "\improper Rooftop Garden"
+
+/area/balcony
+	name = "balcony area master"
+
+/area/balcony/south
+	name ="\improper South Balcony"
