@@ -76,6 +76,12 @@ SUBSYSTEM_DEF(mapping)
 		for(var/overmap_id in global.using_map.overmap_ids)
 			var/overmap_type = global.using_map.overmap_ids[overmap_id] || /datum/overmap
 			new overmap_type(overmap_id)
+
+	// Load any queued map template markers.
+	for(var/obj/abstract/landmark/map_load_mark/queued_mark in queued_markers)
+		queued_mark.load_subtemplate()
+	queued_markers.Cut()
+
 	// This needs to be non-null even if the overmap isn't created for this map.
 	overmap_event_handler = GET_DECL(/decl/overmap_event_handler)
 

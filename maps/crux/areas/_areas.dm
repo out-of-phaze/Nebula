@@ -5,8 +5,12 @@
 		/area/exoplanet                                                   = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/space                                                       = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/turbolift                                                   = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/crux/engineering/engine_room                                = NO_SCRUBBER|NO_VENT|NO_APC, // TODO port engine
-		/area/crux/engineering/engine_waste                               = NO_SCRUBBER|NO_VENT|NO_APC, // TODO port engine
+		/area/crux/engineering/construction1                              = NO_SCRUBBER|NO_VENT,
+		/area/crux/engineering/construction2                              = NO_SCRUBBER|NO_VENT,
+		/area/crux/engineering/construction3                              = NO_SCRUBBER|NO_VENT,
+		/area/crux/engineering/construction4                              = NO_SCRUBBER|NO_VENT,
+		/area/crux/engineering/construction5                              = NO_SCRUBBER|NO_VENT,
+		/area/crux/engineering/construction/sd_construction               = NO_SCRUBBER|NO_VENT,
 		/area/crux/outside                                                = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/crux/outside/level_one                                      = NO_VENT|NO_APC,
 		/area/crux/outside/roof                                           = 0,

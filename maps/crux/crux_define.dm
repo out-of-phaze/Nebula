@@ -85,4 +85,6 @@
 	name = "Port Eleostura - Level Two"
 	level_data_type = /datum/level_data/crux/level_two
 
-/obj/abstract/landmark/map_load_mark/engine_loader // todo
+/obj/abstract/landmark/map_load_mark/engine_loader
+	name = "Engine Loader"
+	map_template_names = list("Eleostura Supermatter Engine")

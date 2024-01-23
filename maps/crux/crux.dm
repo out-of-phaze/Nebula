@@ -55,6 +55,9 @@
 	#include "jobs/jobs.dm"
 	#include "jobs/departments.dm"
 
+	#include "submaps/_submaps.dm"
+	#include "submaps/engine/engine_supermatter.dm"
+
 	#include "crux_cryo.dm"
 	#include "crux_overmap.dm"
 	#include "crux_testing.dm"

@@ -4811,7 +4811,6 @@
 	pixel_y = 32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1381;
 	id_tag = "escape_pod_7";
 	pixel_y = -25;
 	tag_door = "escape_pod_7_hatch"
@@ -4853,7 +4852,6 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1381;
 	id_tag = "escape_pod_7_berth";
 	pixel_x = -25;
 	pixel_y = 30;
@@ -5087,7 +5085,6 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1381;
 	id_tag = "escape_pod_8_berth";
 	pixel_x = 25;
 	pixel_y = 30;
@@ -5135,7 +5132,6 @@
 	pixel_y = -32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1381;
 	id_tag = "escape_pod_8";
 	pixel_y = 25;
 	tag_door = "escape_pod_8_hatch"

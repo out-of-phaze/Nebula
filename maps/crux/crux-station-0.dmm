@@ -347,7 +347,6 @@
 	pixel_x = 32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1381;
 	id_tag = "escape_pod_1";
 	pixel_x = -25;
 	tag_door = "escape_pod_1_hatch"
@@ -365,7 +364,6 @@
 	pixel_x = 32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1381;
 	id_tag = "escape_pod_2";
 	pixel_x = -25;
 	tag_door = "escape_pod_2_hatch"
@@ -1143,7 +1141,6 @@
 /area/crux/hallway/primary/firstdeck/north)
 "adb" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1381;
 	id_tag = "escape_pod_1_berth";
 	pixel_x = -25;
 	pixel_y = 30;
@@ -1162,7 +1159,6 @@
 /area/crux/hallway/primary/firstdeck/north)
 "add" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1381;
 	id_tag = "escape_pod_2_berth";
 	pixel_x = -25;
 	pixel_y = 30;
@@ -4112,7 +4108,6 @@
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1381;
 	id_tag = "shuttle1_shuttle";
 	pixel_y = 26;
 	tag_airpump = "shuttle1_pump";
@@ -5359,7 +5354,6 @@
 	id_tag = "server_access_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
-	frequency = 1381;
 	id_tag = "server_access_airlock";
 	name = "Server Access Airlock";
 	pixel_y = 25;
@@ -5458,7 +5452,6 @@
 /area/crux/shuttle/large_escape_pod2/station)
 "amU" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1381;
 	id_tag = "large_escape_pod_2";
 	pixel_x = 26;
 	pixel_y = -26;
@@ -5898,7 +5891,6 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/light,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
 	id_tag = "hangar_1";
 	name = "shuttle bay controller";
 	pixel_y = -26;
@@ -6624,7 +6616,6 @@
 /area/crux/hallway/secondary/escape/firstdeck/ep_port)
 "app" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1381;
 	id_tag = "large_escape_pod_2_berth";
 	pixel_y = 26;
 	tag_door = "large_escape_pod_2_berth_hatch"
@@ -12835,7 +12826,6 @@
 "aCm" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1381;
 	id_tag = "large_escape_pod_1_berth";
 	pixel_y = -26;
 	tag_door = "large_escape_pod_1_berth_hatch"
@@ -14016,7 +14006,6 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
 	id_tag = "hangar_2";
 	name = "shuttle bay controller";
 	pixel_y = 26;
@@ -14547,7 +14536,6 @@
 /area/crux/shuttle/large_escape_pod1/station)
 "aFI" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1381;
 	id_tag = "large_escape_pod_1";
 	pixel_x = -26;
 	pixel_y = 26;
@@ -16674,7 +16662,6 @@
 	dir = 6
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1381;
 	id_tag = "shuttle2_shuttle";
 	pixel_y = -26;
 	tag_airpump = "shuttle2_pump";
@@ -16903,7 +16890,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
 	id_tag = "cargo_bay";
 	name = "cargo bay hatch controller";
 	pixel_x = 30;
