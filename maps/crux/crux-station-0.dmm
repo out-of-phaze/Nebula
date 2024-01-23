@@ -24821,6 +24821,10 @@
 "wQS" = (
 /turf/simulated/floor/tiled,
 /area/crux/giftshop)
+"xaJ" = (
+/obj/abstract/landmark/latejoin,
+/turf/exterior/wildgrass,
+/area/crux/outside)
 "xgd" = (
 /turf/simulated/wall/r_wall,
 /area/crux/giftshop)
@@ -55866,7 +55870,7 @@ aUN
 aVw
 aSn
 qZF
-qZF
+xaJ
 qZF
 ndk
 ndk
@@ -56123,7 +56127,7 @@ aUO
 aVq
 aUv
 qZF
-qZF
+xaJ
 qZF
 ndk
 ndk
@@ -59464,7 +59468,7 @@ aUZ
 aVw
 aVM
 qZF
-qZF
+xaJ
 qZF
 ndk
 ndk
@@ -59721,7 +59725,7 @@ aUM
 aVx
 aSn
 qZF
-qZF
+xaJ
 qZF
 ndk
 ndk

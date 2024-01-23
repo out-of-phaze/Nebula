@@ -922,6 +922,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/abstract/landmark/latejoin/cryo,
 /turf/simulated/floor/carpet/green,
 /area/crux/hotel/standard_room_d)
 "aYi" = (
@@ -3370,6 +3371,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
+/obj/abstract/landmark/latejoin/cryo,
 /turf/simulated/floor/carpet/purple,
 /area/crux/hotel/free_suite_b)
 "bgs" = (
@@ -5139,6 +5141,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
+/obj/abstract/landmark/latejoin/cryo,
 /turf/simulated/floor/carpet/purple,
 /area/crux/hotel/free_suite_a)
 "bkQ" = (
@@ -20578,6 +20581,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+/obj/abstract/landmark/latejoin/cyborg,
 /turf/simulated/floor/tiled/dark,
 /area/crux/hallway/primary/seconddeck/fscenter)
 "bSF" = (
@@ -29127,6 +29131,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+/obj/abstract/landmark/latejoin/cyborg,
 /turf/simulated/floor/tiled/dark,
 /area/crux/hallway/primary/seconddeck/fpcenter)
 "clo" = (
@@ -29252,6 +29257,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/abstract/landmark/latejoin/cyborg,
 /turf/simulated/floor/tiled/dark,
 /area/crux/hallway/primary/seconddeck/ascenter)
 "clA" = (
@@ -38150,6 +38156,7 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/abstract/landmark/latejoin/cyborg,
 /turf/simulated/floor/tiled/dark,
 /area/crux/hallway/primary/seconddeck/apcenter)
 "cEu" = (
@@ -44979,16 +44986,22 @@
 /turf/simulated/floor/tiled,
 /area/crux/hallway/primary/seconddeck/apcenter)
 "cRi" = (
-/turf/simulated/wall,
-/area/crux/habitation)
+/obj/abstract/landmark/latejoin/cryo,
+/turf/simulated/floor/carpet/blue2,
+/area/crux/hotel/executive_suite_a)
 "cRj" = (
 /turf/simulated/floor/wood,
 /area/crux/habitation)
 "cRk" = (
-/obj/machinery/door/firedoor,
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/crux/habitation)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/abstract/landmark/latejoin/cryo,
+/turf/simulated/floor/carpet/green,
+/area/crux/hotel/standard_room_c)
 "cRl" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -51433,6 +51446,7 @@
 "edv" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/crux/maintenance/bar)
 "edN" = (
@@ -51553,8 +51567,9 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crux/habitation/toilet/seconddeck_south)
 "eqh" = (
-/turf/simulated/wall/r_wall,
-/area/crux/habitation)
+/obj/abstract/landmark/latejoin/cryo,
+/turf/simulated/floor/carpet/blue2,
+/area/crux/hotel/executive_suite_d)
 "eAB" = (
 /obj/structure/railing,
 /turf/simulated/floor/tiled,
@@ -51845,6 +51860,10 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crux/habitation/toilet/seconddeck_south)
+"kcp" = (
+/obj/abstract/landmark/latejoin/cryo,
+/turf/simulated/floor/carpet/blue2,
+/area/crux/hotel/executive_suite_c)
 "kfd" = (
 /turf/simulated/wall/r_wall,
 /area/crux/habitation/coldroom)
@@ -52077,6 +52096,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/crux/habitation)
+"noR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/abstract/landmark/latejoin/cryo,
+/turf/simulated/floor/carpet/green,
+/area/crux/hotel/standard_room_a)
 "nuF" = (
 /obj/structure/bookcase/cart,
 /turf/simulated/floor/wood,
@@ -52562,6 +52591,10 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/crux/science/mixing)
+"ttk" = (
+/obj/abstract/landmark/latejoin/cryo,
+/turf/simulated/floor/carpet/blue2,
+/area/crux/hotel/executive_suite_b)
 "tKu" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/wood,
@@ -84304,7 +84337,7 @@ aYu
 aZa
 aZB
 bah
-baT
+noR
 bbI
 bcr
 bda
@@ -86174,16 +86207,16 @@ cOK
 cQf
 coV
 coV
-cRi
-cRk
-cRk
-cRk
-cRi
-cRk
-cRk
-cRk
-cRi
-cRi
+vDV
+itG
+itG
+itG
+vDV
+itG
+itG
+itG
+vDV
+vDV
 dup
 dip
 vDV
@@ -86191,7 +86224,7 @@ vDV
 itG
 itG
 vDV
-eqh
+imK
 bbU
 eBt
 mIL
@@ -86875,11 +86908,11 @@ aZi
 aWo
 bar
 bbe
-bas
+ttk
 bcA
 bao
 bdR
-bgd
+cRi
 bfj
 bgd
 bdg
@@ -86962,7 +86995,7 @@ vXU
 ppN
 ovd
 mRX
-eqh
+imK
 sqZ
 eBt
 fDg
@@ -88417,11 +88450,11 @@ aYa
 aXA
 bfV
 bbj
-bcD
+eqh
 bcD
 bdr
 bdU
-bgj
+kcp
 bfo
 bgj
 beI
@@ -90029,9 +90062,9 @@ cOO
 cQn
 cRp
 cpk
-cRi
-cRi
-cRi
+vDV
+vDV
+vDV
 imK
 cVf
 cVf
@@ -90985,7 +91018,7 @@ aYh
 bvf
 bbp
 aZM
-baA
+cRk
 bbr
 bcb
 bcK
