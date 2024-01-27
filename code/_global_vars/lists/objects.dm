@@ -18,5 +18,7 @@ var/global/list/alphabet = list("a","b","c","d","e","f","g","h","i","j","k","l",
 var/global/list/alphabet_capital = list("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
 /// Numbers 0-9.
 var/global/list/numbers = list("0","1","2","3","4","5","6","7","8","9")
+/// Alphabet a-z minus vowels.
+var/global/list/alphabet_no_vowels = list("b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","z")
 
 var/global/list/meteor_list = list()

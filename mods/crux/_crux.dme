@@ -1,7 +1,13 @@
 #ifndef MODPACK_CRUX
 #define MODPACK_CRUX
+#include "_crux.dm"
 #include "datum/cultures.dm"
 #include "datum/languages.dm"
 #include "datum/species.dm"
-#include "_crux.dm"
+#include "species/tza/bodytype.dm"
+#include "species/tza/culture.dm"
+#include "species/tza/markings.dm"
+#include "species/tza/organs.dm"
+#include "species/tza/pheremones.dm"
+#include "species/tza/species.dm"
 #endif
