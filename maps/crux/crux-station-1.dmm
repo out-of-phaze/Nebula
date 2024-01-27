@@ -20861,9 +20861,9 @@
 /area/crux/engineering/robotics)
 "bTf" = (
 /obj/structure/table,
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/mmi,
+/obj/item/organ/internal/brain_interface,
+/obj/item/organ/internal/brain_interface,
+/obj/item/organ/internal/brain_interface,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -22533,7 +22533,7 @@
 /obj/structure/table/steel_reinforced,
 /obj/item/robotanalyzer,
 /obj/item/robotanalyzer,
-/obj/item/mmi/digital/robot,
+/obj/item/organ/internal/brain/robotic,
 /turf/simulated/floor/tiled,
 /area/crux/engineering/robotics)
 "bWS" = (
