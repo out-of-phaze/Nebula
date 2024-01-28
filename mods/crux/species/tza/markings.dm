@@ -7,6 +7,7 @@
 /decl/sprite_accessory/marking/tza/highlights
 	name = "Tza Highlights"
 	icon_state = "mantid_highlights"
+	uid = "acc_tza_highlights"
 	body_parts = list(
 		BP_L_FOOT,
 		BP_R_FOOT,

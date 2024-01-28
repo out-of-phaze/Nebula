@@ -10,4 +10,5 @@
 #include "species/tza/organs.dm"
 #include "species/tza/pheremones.dm"
 #include "species/tza/species.dm"
+#include "turfs/shuttle.dm"
 #endif
