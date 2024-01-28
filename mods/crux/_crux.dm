@@ -1,15 +1,17 @@
-#define SPECIES_TZA   "Tza"
-#define BODYTYPE_TZA  "mantid worker body"
-#define BODY_FLAG_TZA BITFLAG(9)
-
+#define SPECIES_TZA     "Tza"
 #define SPECIES_NAKHAYL "Nakhayl"
+#define SPECIES_YULOMNN "Yulomnn"
+
+#define BODYTYPE_TZA    "mantid worker body"
 #define BODYTYPE_GNOLL  "gnoll body"
+
+#define BODY_FLAG_TZA   BITFLAG(9)
 #define BODY_FLAG_GNOLL BITFLAG(10)
 
-#define BP_M_ARM  "m_arm"
-#define BP_M_HAND "midlimb"
-#define BP_M_LEG  "m_leg"
-#define BP_M_FOOT "m_foot"
+#define BP_M_ARM        "m_arm"
+#define BP_M_HAND       "midlimb"
+#define BP_M_LEG        "m_leg"
+#define BP_M_FOOT       "m_foot"
 
 /decl/modpack/crux_content
 	name = "Crux Content"
