@@ -1,7 +1,20 @@
 #ifndef MODPACK_CRUX
 #define MODPACK_CRUX
+#include "_crux.dm"
 #include "datum/cultures.dm"
 #include "datum/languages.dm"
 #include "datum/species.dm"
-#include "_crux.dm"
+#include "overrides/clothing.dm"
+#include "species/nakhayl/bodytype.dm"
+#include "species/nakhayl/culture.dm"
+#include "species/nakhayl/markings.dm"
+#include "species/nakhayl/organs.dm"
+#include "species/nakhayl/species.dm"
+#include "species/tza/bodytype.dm"
+#include "species/tza/culture.dm"
+#include "species/tza/markings.dm"
+#include "species/tza/organs.dm"
+#include "species/tza/pheremones.dm"
+#include "species/tza/species.dm"
+#include "turfs/shuttle.dm"
 #endif
