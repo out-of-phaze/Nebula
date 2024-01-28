@@ -2,6 +2,10 @@
 #define BODYTYPE_TZA  "mantid worker body"
 #define BODY_FLAG_TZA BITFLAG(9)
 
+#define SPECIES_NAKHAYL "Nakhayl"
+#define BODYTYPE_GNOLL  "gnoll body"
+#define BODY_FLAG_GNOLL BITFLAG(10)
+
 #define BP_M_ARM  "m_arm"
 #define BP_M_HAND "midlimb"
 #define BP_M_LEG  "m_leg"
