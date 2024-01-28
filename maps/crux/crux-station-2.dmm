@@ -6500,7 +6500,8 @@
 	announcementConsole = 1;
 	department = "Head of Security's Desk";
 	name = "Head of Security RC";
-	pixel_x = 30
+	pixel_x = 30;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/item/paper_bin{
 	pixel_x = -3;
@@ -6748,6 +6749,9 @@
 	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
+	},
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crux/hotel/lobby)
@@ -9398,7 +9402,8 @@
 /obj/item/grenade/chem_grenade/cleaner,
 /obj/machinery/network/requests_console{
 	department = "Janitorial";
-	pixel_y = 28
+	pixel_y = 28;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/item/chems/spray/cleaner,
 /obj/structure/table/steel,
@@ -12167,7 +12172,8 @@
 /obj/machinery/network/requests_console{
 	department = "Atmospherics";
 	name = "Atmos RC";
-	pixel_y = -32
+	pixel_y = -32;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/item/t_scanner,
 /obj/item/radio/headset/headset_eng,
@@ -12589,7 +12595,8 @@
 	department = "Research Director's Desk";
 	name = "Research Director RC";
 	pixel_x = 30;
-	pixel_y = -2
+	pixel_y = -2;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/machinery/ai_status_display{
 	pixel_y = 32
@@ -13567,7 +13574,8 @@
 /obj/machinery/network/requests_console{
 	department = "Engineering";
 	name = "Engineering RC";
-	pixel_y = 30
+	pixel_y = 30;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -15848,7 +15856,8 @@
 /obj/machinery/network/requests_console{
 	department = "Science";
 	name = "Science Requests Console";
-	pixel_x = -30
+	pixel_x = -30;
+	initial_network_id = "eleostura_intranet"
 	},
 /turf/simulated/floor/tiled/white,
 /area/crux/science/mixing)
@@ -16246,6 +16255,9 @@
 /obj/structure/cable{
 	icon_state = "16-0"
 	},
+/obj/machinery/network/relay/wall_mounted/east{
+	initial_network_id = "eleostura_intranet"
+	},
 /turf/simulated/floor/plating,
 /area/crux/storage/emergency/sd_fport)
 "bKj" = (
@@ -16284,6 +16296,9 @@
 	pixel_y = -24
 	},
 /obj/structure/catwalk,
+/obj/machinery/network/relay/wall_mounted/west{
+	initial_network_id = "eleostura_intranet"
+	},
 /turf/simulated/floor/plating,
 /area/crux/storage/emergency/sd_fstar)
 "bKo" = (
@@ -19845,7 +19860,8 @@
 /obj/machinery/network/requests_console{
 	department = "Robotics";
 	name = "Robotics RC";
-	pixel_y = 30
+	pixel_y = 30;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/item/chems/glass/beaker/sulphuric,
 /obj/item/hand_labeler,
@@ -20279,7 +20295,8 @@
 	announcementConsole = 1;
 	department = "Chief Engineer's Desk";
 	name = "Chief Engineer RC";
-	pixel_x = -32
+	pixel_x = -32;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -23162,7 +23179,8 @@
 /obj/machinery/network/requests_console{
 	department = "Science";
 	name = "Science Requests Console";
-	pixel_x = -30
+	pixel_x = -30;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 8
@@ -23779,7 +23797,8 @@
 "bZP" = (
 /obj/machinery/network/requests_console{
 	department = "EVA";
-	pixel_y = 26
+	pixel_y = 26;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/item/clothing/shoes/swimmingfins,
 /obj/structure/closet,
@@ -26278,6 +26297,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/crux/maintenance/research_medical)
 "cfk" = (
@@ -26989,6 +27009,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
+	},
 /turf/simulated/floor/plating,
 /area/crux/maintenance/robotics)
 "cgK" = (
@@ -31202,7 +31225,8 @@
 /obj/machinery/network/requests_console{
 	department = "Virology";
 	name = "Virology Requests Console";
-	pixel_x = 32
+	pixel_x = 32;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -31543,7 +31567,8 @@
 	announcementConsole = 1;
 	department = "Head of Personnel's Desk";
 	name = "Head of Personnel RC";
-	pixel_x = 30
+	pixel_x = 30;
+	initial_network_id = "eleostura_intranet"
 	},
 /turf/simulated/floor/carpet,
 /area/crux/habitation/hop)
@@ -33516,7 +33541,8 @@
 /obj/structure/table,
 /obj/machinery/network/requests_console{
 	department = "Cargo Bay";
-	pixel_y = 28
+	pixel_y = 28;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/machinery/newscaster{
 	pixel_x = 30
@@ -36042,6 +36068,9 @@
 /turf/simulated/floor/plating,
 /area/crux/engineering/engine_room)
 "cAA" = (
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
+	},
 /turf/simulated/floor/plating,
 /area/crux/storage/emergency/sd_port)
 "cAB" = (
@@ -37900,7 +37929,8 @@
 /obj/machinery/network/requests_console{
 	department = "Cargo Bay";
 	pixel_x = 30;
-	pixel_y = -1
+	pixel_y = -1;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
@@ -42156,6 +42186,9 @@
 "cMb" = (
 /obj/structure/ladder,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
+	},
 /turf/simulated/floor/plating,
 /area/crux/storage/emergency/sd_aport)
 "cMc" = (
@@ -42213,6 +42246,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "16-0"
+	},
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
 	},
 /turf/simulated/floor/plating,
 /area/crux/storage/emergency/sd_astar)
@@ -45041,7 +45077,8 @@
 	announcementConsole = 1;
 	department = "Chief Medical Officer's Desk";
 	name = "Chief Medical Officer RC";
-	pixel_y = -30
+	pixel_y = -30;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/blue/border,
@@ -46424,7 +46461,8 @@
 	announcementConsole = 1;
 	department = "Chief Medical Officer's Desk";
 	name = "Chief Medical Officer RC";
-	pixel_y = -30
+	pixel_y = -30;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/paleblue/border,
@@ -50028,7 +50066,8 @@
 /obj/machinery/network/requests_console{
 	department = "Engineering";
 	name = "Engineering RC";
-	pixel_y = -32
+	pixel_y = -32;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/machinery/ai_status_display{
 	pixel_x = -32
@@ -51774,6 +51813,18 @@
 	},
 /turf/simulated/floor/wood,
 /area/crux/habitation)
+"jSO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/crux/maintenance/apmaint)
 "jVA" = (
 /obj/structure/railing/mapped,
 /obj/structure/bed/chair{
@@ -52426,6 +52477,12 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/crux/outside/roof/balcony_south)
+"sBW" = (
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/plating,
+/area/crux/maintenance/research_medical)
 "sFR" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -52515,6 +52572,12 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/crux/science/mixing)
+"tqn" = (
+/obj/machinery/network/relay/wall_mounted/south{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/plating,
+/area/crux/storage/emergency/sd_central)
 "ttk" = (
 /obj/abstract/landmark/latejoin/cryo,
 /turf/simulated/floor/carpet/blue2,
@@ -52562,6 +52625,12 @@
 /obj/abstract/landmark/map_load_mark/engine_loader,
 /turf/simulated/wall/r_wall,
 /area/crux/engineering/engine_room)
+"ucE" = (
+/obj/machinery/network/relay/wall_mounted/east{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/plating,
+/area/crux/maintenance/engineering)
 "udn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -52661,6 +52730,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/crux/hallway/primary/seconddeck/south)
+"vCm" = (
+/obj/machinery/door/airlock/maintenance,
+/turf/simulated/floor/plating,
+/area/crux/maintenance/research_medical)
 "vDV" = (
 /turf/simulated/wall,
 /area/crux/habitation)
@@ -71975,7 +72048,7 @@ cfR
 cfR
 cfR
 cfR
-crR
+jSO
 ctD
 ctD
 ctD
@@ -79918,7 +79991,7 @@ bux
 bzt
 bym
 bym
-bym
+ucE
 bvF
 bAQ
 bux
@@ -83533,7 +83606,7 @@ bZD
 ebP
 bWw
 ceB
-cgl
+tqn
 cgk
 cgk
 bYh
@@ -98694,7 +98767,7 @@ bXc
 bTo
 car
 bPF
-cdv
+sBW
 cfl
 cdt
 cio
@@ -99468,7 +99541,7 @@ bPF
 cdy
 cfm
 cfm
-cdv
+cdt
 ckh
 clW
 cob
@@ -99725,7 +99798,7 @@ bPI
 cdA
 cdv
 cdv
-cdv
+vCm
 cdv
 cdv
 coc

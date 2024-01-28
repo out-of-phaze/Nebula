@@ -708,6 +708,9 @@
 /obj/item/t_scanner,
 /obj/item/storage/box/lights/mixed,
 /obj/item/storage/box/lights/mixed,
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
+	},
 /turf/simulated/floor/plating,
 /area/crux/storage/emergency/fore)
 "abW" = (
@@ -3294,6 +3297,9 @@
 /turf/simulated/floor/plating,
 /area/crux/storage/emergency/fport)
 "ahJ" = (
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
+	},
 /turf/simulated/floor/plating,
 /area/crux/storage/emergency/fport)
 "ahK" = (
@@ -13525,7 +13531,8 @@
 /obj/item/clothing/accessory/armband/cargo,
 /obj/machinery/network/requests_console{
 	department = "Cargo Bay";
-	pixel_y = 28
+	pixel_y = 28;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -14071,7 +14078,9 @@
 /turf/simulated/floor/tiled,
 /area/crux/hangar/two)
 "aEy" = (
-/obj/machinery/network/relay,
+/obj/machinery/network/relay{
+	initial_network_id = "eleostura_intranet"
+	},
 /turf/simulated/floor/tiled/dark{
 	temperature = 80
 	},
@@ -15049,7 +15058,8 @@
 /obj/item/pen,
 /obj/machinery/network/requests_console{
 	department = "Cargo Bay";
-	pixel_y = -32
+	pixel_y = -32;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/machinery/light{
 	dir = 4
@@ -17098,6 +17108,9 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
+	},
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
 	},
 /turf/simulated/floor/plating,
 /area/crux/storage/emergency/aport)
@@ -19501,9 +19514,11 @@
 /turf/simulated/floor/plating,
 /area/crux/storage/emergency)
 "aRR" = (
-/obj/machinery/portable_atmospherics/powered/pump/filled,
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
 	},
 /turf/simulated/floor/plating,
 /area/crux/storage/emergency)
@@ -19634,7 +19649,7 @@
 /turf/simulated/floor/plating,
 /area/crux/storage/emergency)
 "aSr" = (
-/obj/random/obstruction,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/crux/storage/emergency)
 "aSs" = (
@@ -21140,12 +21155,20 @@
 	department = "Science";
 	name = "Science Requests Console";
 	pixel_x = 30
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/white,
 /area/crux/science/xenobiology/xenoflora)
+"bNf" = (
+/obj/structure/catwalk,
+/obj/machinery/network/relay/wall_mounted/east{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/plating,
+/area/crux/storage/emergency/astar)
 "bSU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
 	dir = 4
@@ -21198,6 +21221,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/crux/science/hallway)
+"ceS" = (
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/plating,
+/area/crux/maintenance/firstdeck/centralport)
 "cfn" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research{
@@ -21211,6 +21240,10 @@
 "cfp" = (
 /turf/simulated/floor/tiled/freezer,
 /area/crux/science/xenobiology/xenoflora)
+"cha" = (
+/obj/machinery/door/airlock/maintenance,
+/turf/simulated/floor/plating,
+/area/crux/maintenance/firstdeck/centralport)
 "cjE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
@@ -24110,7 +24143,8 @@
 /obj/machinery/network/requests_console{
 	department = "Science";
 	name = "Science Requests Console";
-	pixel_y = -30
+	pixel_y = -30;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/structure/reagent_dispensers/watertank/firefighter,
 /turf/simulated/floor/tiled,
@@ -24461,6 +24495,22 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled,
 /area/crux/engineering/auxiliary_engineering)
+"gTL" = (
+/obj/machinery/network/message_server{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 80
+	},
+/area/crux/network/comms/chamber)
+"hcY" = (
+/obj/machinery/network/mainframe/logs{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 80
+	},
+/area/crux/network/comms/chamber)
 "hdq" = (
 /obj/structure/lattice,
 /turf/exterior/wildgrass,
@@ -24538,6 +24588,26 @@
 /obj/structure/lattice,
 /turf/exterior/dry,
 /area/crux/outside)
+"jhN" = (
+/obj/machinery/network/mainframe/software{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 80
+	},
+/area/crux/network/comms/chamber)
+"jMh" = (
+/obj/machinery/network/acl{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 80
+	},
+/area/crux/network/comms/chamber)
+"jNs" = (
+/obj/machinery/door/airlock/maintenance,
+/turf/simulated/floor/plating,
+/area/crux/maintenance/firstdeck/centralstarboard)
 "jYp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -24559,6 +24629,14 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/steel_grid,
 /area/crux/engineering/auxiliary_engineering)
+"kHy" = (
+/obj/machinery/network/mainframe/account{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 80
+	},
+/area/crux/network/comms/chamber)
 "kOz" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -24569,6 +24647,28 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/steel_grid,
 /area/crux/engineering/auxiliary_engineering)
+"kUi" = (
+/obj/machinery/network/mainframe/records{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 80
+	},
+/area/crux/network/comms/chamber)
+"loX" = (
+/obj/machinery/network/mainframe/files{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 80
+	},
+/area/crux/network/comms/chamber)
+"lvN" = (
+/obj/machinery/network/relay/wall_mounted/south{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/plating,
+/area/crux/maintenance/firstdeck/centralstarboard)
 "lDt" = (
 /obj/structure/lattice,
 /obj/structure/grille/broken,
@@ -24620,6 +24720,14 @@
 /obj/item/stack/material/rods,
 /turf/exterior/wildgrass,
 /area/crux/outside)
+"nVR" = (
+/obj/machinery/network/telecomms_hub{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 80
+	},
+/area/crux/network/comms/chamber)
 "oIE" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -24627,6 +24735,14 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
 /area/crux/giftshop)
+"oVv" = (
+/obj/machinery/network/router{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 80
+	},
+/area/crux/network/comms/chamber)
 "pFN" = (
 /obj/machinery/space_heater,
 /obj/machinery/light{
@@ -24805,6 +24921,12 @@
 "wQS" = (
 /turf/simulated/floor/tiled,
 /area/crux/giftshop)
+"wRp" = (
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/plating,
+/area/crux/storage/emergency/fstar)
 "xaJ" = (
 /obj/abstract/landmark/latejoin,
 /turf/exterior/wildgrass,
@@ -24838,6 +24960,14 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crux/engineering/auxiliary_engineering)
+"xPT" = (
+/obj/machinery/network/modem{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/tiled/dark{
+	temperature = 80
+	},
+/area/crux/network/comms/chamber)
 "xYB" = (
 /obj/abstract/landmark{
 	name = "carpspawn"
@@ -43474,11 +43604,11 @@ qZF
 qZF
 akL
 akL
+akL
 arS
 asP
 atU
 dZM
-apk
 apk
 ayO
 akL
@@ -43730,8 +43860,8 @@ qZF
 qZF
 akL
 akL
-aqD
-apk
+ceS
+cha
 apk
 apk
 avq
@@ -56318,12 +56448,12 @@ akt
 akZ
 alH
 alH
-amC
+gTL
 anj
 anV
 anj
 anj
-amC
+loX
 alH
 aur
 auG
@@ -56575,12 +56705,12 @@ aku
 ala
 alH
 alH
-amC
+nVR
 anj
 amC
 amC
 anj
-amC
+aEy
 alH
 aur
 avM
@@ -56832,12 +56962,12 @@ akv
 alb
 alH
 alH
-amC
+oVv
 anj
 amC
 amC
 anj
-amC
+xPT
 alH
 aur
 aur
@@ -57346,7 +57476,7 @@ akx
 ald
 alH
 alH
-amC
+jMh
 anj
 amC
 amC
@@ -57862,7 +57992,7 @@ alH
 alH
 amE
 anl
-aEy
+amC
 amC
 apQ
 amC
@@ -58374,12 +58504,12 @@ akB
 alh
 alH
 alH
-amC
+kHy
 anm
 amC
 amC
 apQ
-amC
+kUi
 alH
 atp
 atp
@@ -58631,12 +58761,12 @@ akC
 ali
 alH
 alH
-amC
+jhN
 ann
 aod
 aoR
 apR
-amC
+hcY
 alH
 atq
 auI
@@ -61705,7 +61835,7 @@ afR
 agB
 anU
 aht
-aib
+wRp
 aib
 aiQ
 ahs
@@ -62257,7 +62387,7 @@ aKy
 aKW
 aLu
 aLU
-aLu
+bNf
 aKz
 aOg
 aOZ
@@ -70467,7 +70597,7 @@ atS
 atS
 alr
 aBd
-alO
+lvN
 alr
 aEz
 aFM
@@ -71493,7 +71623,7 @@ avo
 awx
 axP
 ayN
-arR
+jNs
 arR
 alr
 alr
@@ -71750,7 +71880,7 @@ alO
 alO
 alO
 alO
-alO
+alr
 alr
 alr
 qZF

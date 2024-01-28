@@ -408,9 +408,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/crux/network)
 "dBx" = (
-/obj/machinery/ai_slipper{
-	icon_state = "motion0"
-	},
+/obj/machinery/ai_slipper,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -441,9 +439,7 @@
 /turf/simulated/floor/plating,
 /area/crux/network)
 "dBA" = (
-/obj/machinery/ai_slipper{
-	icon_state = "motion0"
-	},
+/obj/machinery/ai_slipper,
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
@@ -618,9 +614,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/crux/network)
 "dBV" = (
-/obj/machinery/ai_slipper{
-	icon_state = "motion0"
-	},
+/obj/machinery/ai_slipper,
 /obj/machinery/turretid/stun{
 	check_synth = 1;
 	name = "AI Chamber turret control";
@@ -728,7 +722,8 @@
 /obj/machinery/network/requests_console{
 	department = "AI";
 	pixel_x = 30;
-	pixel_y = -32
+	pixel_y = -32;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/machinery/newscaster{
 	pixel_x = -32;
@@ -819,9 +814,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/crux/network)
 "dCs" = (
-/obj/machinery/ai_slipper{
-	icon_state = "motion0"
-	},
+/obj/machinery/ai_slipper,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/greengrid,
 /area/crux/network)
@@ -1912,9 +1905,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/ai_slipper{
-	icon_state = "motion0"
-	},
+/obj/machinery/ai_slipper,
 /turf/simulated/floor/tiled/techfloor,
 /area/crux/network/ai_upload)
 "dEQ" = (
@@ -2227,7 +2218,9 @@
 /turf/simulated/floor/plating,
 /area/crux/maintenance/thirddeck/foreport)
 "dFz" = (
-/obj/machinery/network/message_server,
+/obj/machinery/network/message_server{
+	initial_network_id = "eleostura_intranet"
+	},
 /obj/machinery/camera/network/command{
 	c_tag = "AI - Messaging Server";
 	dir = 4
@@ -2241,6 +2234,9 @@
 /turf/simulated/floor/bluegrid,
 /area/crux/network/ai_server_room)
 "dFB" = (
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
+	},
 /turf/simulated/floor/bluegrid,
 /area/crux/network/ai_server_room)
 "dFC" = (
@@ -7234,7 +7230,8 @@
 	announcementConsole = 1;
 	department = "Station Director's Desk";
 	name = "Station Administrator RC";
-	pixel_x = 30
+	pixel_x = 30;
+	initial_network_id = "eleostura_intranet"
 	},
 /turf/simulated/floor/wood,
 /area/crux/habitation/sd)
@@ -7723,7 +7720,8 @@
 	announcementConsole = 1;
 	department = "Bridge";
 	name = "Bridge RC";
-	pixel_y = 30
+	pixel_y = 30;
+	initial_network_id = "eleostura_intranet"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
@@ -8311,6 +8309,9 @@
 /area/crux/maintenance/thirddeck/aftport)
 "dSD" = (
 /obj/item/stack/cable_coil/yellow,
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
+	},
 /turf/simulated/floor/plating,
 /area/crux/maintenance/thirddeck/aftport)
 "dSE" = (
@@ -9121,6 +9122,9 @@
 "dTS" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
+	},
+/obj/machinery/network/relay/wall_mounted/west{
+	initial_network_id = "eleostura_intranet"
 	},
 /turf/simulated/floor/plating,
 /area/crux/maintenance/thirddeck/aftstarboard)
@@ -10200,6 +10204,12 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crux/habitation/hydroponics)
+"kCU" = (
+/obj/machinery/network/relay/wall_mounted/north{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/plating,
+/area/crux/maintenance/thirddeck/foreport)
 "kEH" = (
 /obj/structure/closet/secure_closet/hydroponics,
 /obj/machinery/light,
@@ -10360,6 +10370,13 @@
 "oOs" = (
 /turf/simulated/wall/r_wall,
 /area/crux/habitation/chapel)
+"oSK" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/network/relay/wall_mounted/west{
+	initial_network_id = "eleostura_intranet"
+	},
+/turf/simulated/floor/plating,
+/area/crux/maintenance/thirddeck/forestarboard)
 "poB" = (
 /obj/structure/railing/mapped,
 /obj/structure/bed/chair{
@@ -39018,7 +39035,7 @@ dAV
 dAV
 dAV
 dCc
-dCl
+kCU
 dCl
 dDs
 dEb
@@ -47500,7 +47517,7 @@ dAV
 dAV
 dCf
 dCv
-dCS
+oSK
 dDB
 dCf
 dCf
