@@ -69,7 +69,7 @@
 		landing_images[landing_image] = list(x_off * adj + y_off * opp, y_off * adj - x_off * opp)
 	x_offset = x_offset * adj + y_offset * opp
 	y_offset = y_offset * adj - x_offset * opp
-	shuttle_dir = turn(shuttle_dir, angle)
+	shuttle_dir = turn(shuttle_dir, -angle) // why is inverting this necessary? unsure, but probably the get_angle_offset code.
 	check_landing()
 
 /mob/observer/eye/landing/proc/turn_shuttle_ccw(mob/user)
