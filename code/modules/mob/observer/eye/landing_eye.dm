@@ -72,6 +72,13 @@
 	shuttle_dir = turn(shuttle_dir, angle)
 	check_landing()
 
+/mob/observer/eye/landing/proc/turn_shuttle_ccw(mob/user)
+	return turn_shuttle(-90)
+
+/mob/observer/eye/landing/proc/turn_shuttle_cw(mob/user)
+	return turn_shuttle(90)
+
+
 /mob/observer/eye/landing/Destroy()
 	. = ..()
 	shuttle = null

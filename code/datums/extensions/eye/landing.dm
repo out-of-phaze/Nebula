@@ -12,6 +12,7 @@
 
 /datum/action/eye/landing
 	eye_type = /mob/observer/eye/landing
+	button_icon = 'icons/obj/action_buttons/landing_buttons.dmi'
 
 /datum/action/eye/landing/finish_landing
 	name = "Set landing location"
@@ -23,4 +24,16 @@
 	name = "Offset landing location"
 	procname = "toggle_offsetting"
 	button_icon_state = "shuttle_offset"
+	target_type = EYE_TARGET
+
+/datum/action/eye/landing/rotate_ccw
+	name = "Rotate landing counter-clockwise"
+	procname = "turn_shuttle_ccw"
+	button_icon_state = "rotate_ccw"
+	target_type = EYE_TARGET
+
+/datum/action/eye/landing/rotate_cw
+	name = "Rotate landing clockwise"
+	procname = "turn_shuttle_cw"
+	button_icon_state = "rotate_cw"
 	target_type = EYE_TARGET
