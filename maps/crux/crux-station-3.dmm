@@ -256,6 +256,9 @@
 	c_tag = "AI - North";
 	dir = 1
 	},
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/reinforced,
 /area/crux/outside/level_two)
 "dBc" = (
@@ -271,6 +274,9 @@
 /obj/structure/flora/pottedplant/unusual{
 	name = "Steve";
 	pixel_y = 15
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/greengrid,
 /area/crux/network)
@@ -294,6 +300,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crux/network)
 "dBi" = (
@@ -330,6 +339,9 @@
 	},
 /obj/machinery/hologram/holopad{
 	holopad_id = "AI Core North"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crux/network)
@@ -10000,6 +10012,12 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crux/habitation/hydroponics)
+"fkQ" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/r_wall,
+/area/crux/network)
 "flv" = (
 /turf/simulated/wall/r_wall,
 /area/crux/habitation/hydroponics)
@@ -10028,6 +10046,13 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/crux/outside/roof/garden)
+"fEN" = (
+/obj/machinery/commsrelay,
+/obj/structure/cable/cyan{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/reinforced,
+/area/crux/outside/level_two)
 "fEX" = (
 /obj/structure/flora/bush/brflowers,
 /turf/simulated/floor/grass,
@@ -10215,6 +10240,12 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/freezer,
 /area/crux/habitation/hydroponics)
+"kRH" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/reinforced,
+/area/crux/outside/level_two)
 "lxG" = (
 /obj/structure/railing/mapped,
 /obj/structure/bed/chair{
@@ -43392,11 +43423,11 @@ dAV
 dAZ
 dBa
 dAV
-dAV
-dAV
+fEN
+kRH
 dBb
-dBc
-dBc
+fkQ
+fkQ
 dBd
 dBh
 dBn
