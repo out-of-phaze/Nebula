@@ -53,7 +53,7 @@
 	name = "Port Eleostura - Ground Floor"
 	use_global_exterior_ambience = FALSE
 	ambient_light_level = 1
-	ambient_light_color = "#ecdc84"
+	ambient_light_color = "#f3e6ca"
 	base_turf = /turf/exterior/dirt
 	exterior_atmosphere = list(
 		/decl/material/gas/oxygen =   MOLES_O2STANDARD,

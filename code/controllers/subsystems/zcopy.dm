@@ -241,6 +241,12 @@ SUBSYSTEM_DEF(zcopy)
 		else if (T.mimic_underlay)
 			QDEL_NULL(T.mimic_underlay)
 
+		if(T.below?.flooded)
+			T.icon = 'icons/turf/exterior/water.dmi'
+			T.icon_state = "0"
+			T.color = COLOR_SILVER
+			continue
+
 		// Handle space parallax & starlight.
 		if (T.below.z_eventually_space)
 			T.z_eventually_space = TRUE

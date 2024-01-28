@@ -23,3 +23,10 @@
 
 /turf/exterior/water/can_be_dug()
 	return FALSE
+
+/turf/exterior/water/ocean_shallows
+	name = "shallow ocean"
+	icon_edge_layer = EXT_EDGE_WATER
+
+/turf/exterior/water/ocean_shallows/special_blend_check(var/turf/exterior/turf_to_check)
+	return turf_to_check.is_open()

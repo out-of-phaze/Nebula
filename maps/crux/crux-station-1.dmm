@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aaa" = (
-/turf/exterior/water,
+/turf/exterior/water/ocean_shallows,
 /area/crux/outside)
 "aab" = (
 /obj/abstract/landmark{
@@ -11,7 +11,7 @@
 "aad" = (
 /obj/structure/lattice,
 /obj/structure/grille,
-/turf/exterior/water,
+/turf/exterior/water/ocean_shallows,
 /area/crux/outside)
 "aae" = (
 /obj/item/stack/material/rods,
