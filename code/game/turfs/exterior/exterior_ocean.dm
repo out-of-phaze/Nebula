@@ -4,3 +4,10 @@
 	icon_state = "0"
 	flooded = TRUE
 	icon_edge_layer = EXT_EDGE_OCEAN
+
+/turf/exterior/ocean_shallows
+	name = "shallow ocean"
+	icon = 'icons/turf/exterior/ocean_deep.dmi'
+	icon_state = "0"
+	flooded = TRUE
+	icon_edge_layer = EXT_EDGE_OCEAN

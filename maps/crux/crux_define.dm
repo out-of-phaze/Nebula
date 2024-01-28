@@ -72,6 +72,15 @@
 	name = "Port Eleostura - Ground Floor"
 	level_data_type = /datum/level_data/crux
 
+/datum/level_data/crux/below
+	name = "Port Eleostura - Below Ground Level"
+	ambient_light_level = 0.4
+	ambient_light_color = "#59f7dc"
+
+/obj/abstract/level_data_spawner/crux_below
+	name = "Port Eleostura - Below Ground Level"
+	level_data_type = /datum/level_data/crux/below
+
 /datum/level_data/crux/level_one
 	name = "Port Eleostura - Level One"
 

@@ -54,6 +54,7 @@
 	#include "crux-station-0.dmm"
 	#include "crux-station-1.dmm"
 	#include "crux-station-2.dmm"
+	#include "crux-station-3.dmm"
 
 	#define USING_MAP_DATUM /datum/map/crux
 
