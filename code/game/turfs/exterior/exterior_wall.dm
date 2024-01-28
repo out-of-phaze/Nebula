@@ -60,6 +60,10 @@ var/global/list/natural_walls = list()
 	var/floor_type = /turf/exterior/barren
 	var/static/list/exterior_wall_shine_cache = list()
 
+/turf/exterior/wall/flooded
+	flooded = TRUE
+	color = COLOR_LIQUID_WATER
+
 /turf/exterior/wall/examine(mob/user, distance, infix, suffix)
 	. = ..()
 	if(paint_color)

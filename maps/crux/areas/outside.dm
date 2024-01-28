@@ -4,6 +4,14 @@
 	always_unpowered = TRUE
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	is_outside = OUTSIDE_YES
+	interior_ambient_light_level = 0.5
+	interior_ambient_light_color = "#f3e6ca"
+
+/area/crux/outside/ocean
+	name = "\improper Deep Ocean"
+
+/area/crux/outside/underground
+	name = "\improper Beneath Eleostura"
 
 /area/crux/outside/level_one
 	name = "\improper Port Eleostura Exterior"

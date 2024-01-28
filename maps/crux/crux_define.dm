@@ -53,7 +53,7 @@
 	name = "Port Eleostura - Ground Floor"
 	use_global_exterior_ambience = FALSE
 	ambient_light_level = 1
-	ambient_light_color = "#ecdc84"
+	ambient_light_color = "#f3e6ca"
 	base_turf = /turf/exterior/dirt
 	exterior_atmosphere = list(
 		/decl/material/gas/oxygen =   MOLES_O2STANDARD,
@@ -71,6 +71,15 @@
 /obj/abstract/level_data_spawner/crux_ground_floor
 	name = "Port Eleostura - Ground Floor"
 	level_data_type = /datum/level_data/crux
+
+/datum/level_data/crux/below
+	name = "Port Eleostura - Below Ground Level"
+	ambient_light_level = 0.4
+	ambient_light_color = "#59f7dc"
+
+/obj/abstract/level_data_spawner/crux_below
+	name = "Port Eleostura - Below Ground Level"
+	level_data_type = /datum/level_data/crux/below
 
 /datum/level_data/crux/level_one
 	name = "Port Eleostura - Level One"

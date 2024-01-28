@@ -92,6 +92,9 @@
 	if(!istype(src, get_base_turf_by_area(src)) && (severity == 1 || (severity == 2 && prob(40))))
 		ChangeTurf(get_base_turf_by_area(src))
 
+/turf/exterior/proc/special_blend_check(var/turf/exterior/turf_to_check)
+	return FALSE
+
 /turf/exterior/on_update_icon()
 	. = ..() // Recalc AO and flooding overlay.
 	cut_overlays()
@@ -106,7 +109,7 @@
 		var/turf/exterior/turf_to_check = get_step_resolving_mimic(src, direction)
 		if(!istype(turf_to_check) || turf_to_check.density)
 			continue
-		if(istype(turf_to_check, type))
+		if(istype(turf_to_check, type) || special_blend_check(turf_to_check))
 			neighbors |= direction
 			continue
 		if(!istype(turf_to_check) || icon_edge_layer > turf_to_check.icon_edge_layer)
@@ -126,7 +129,7 @@
 	if(icon_has_corners)
 		for(var/direction in global.cornerdirs)
 			var/turf/exterior/turf_to_check = get_step_resolving_mimic(src, direction)
-			if(!istype(turf_to_check) || turf_to_check.density || istype(turf_to_check, type))
+			if(!istype(turf_to_check) || turf_to_check.density || istype(turf_to_check, type) || special_blend_check(turf_to_check))
 				continue
 
 			if(icon_edge_layer > turf_to_check.icon_edge_layer)
