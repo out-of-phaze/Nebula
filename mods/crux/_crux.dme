@@ -16,5 +16,10 @@
 #include "species/tza/organs.dm"
 #include "species/tza/pheremones.dm"
 #include "species/tza/species.dm"
+#include "species/yulomnn/bodytype.dm"
+#include "species/yulomnn/culture.dm"
+#include "species/yulomnn/markings.dm"
+#include "species/yulomnn/organs.dm"
+#include "species/yulomnn/species.dm"
 #include "turfs/shuttle.dm"
 #endif
