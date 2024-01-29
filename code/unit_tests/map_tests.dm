@@ -874,14 +874,16 @@
 
 	var/list/obj_access_pairs = list()
 	for(var/obj/O in world)
-		if(O.req_access)
-			for(var/req in O.req_access)
-				if(islist(req))
-					for(var/req_one in req)
-						if(is_invalid(req_one))
-							obj_access_pairs += list(list(O, req_one))
-				else if(is_invalid(req))
-					obj_access_pairs += list(list(O, req))
+		if(INSTANCE_IS_ABSTRACT(O) || !O.simulated || !O.req_access)
+			continue
+		for(var/req in O.req_access)
+			if(islist(req))
+				for(var/req_one in req)
+					if(is_invalid(req_one))
+						obj_access_pairs += list(list(O, req_one))
+			else if(is_invalid(req))
+				obj_access_pairs += list(list(O, req))
+		CHECK_TICK
 
 	if(obj_access_pairs.len)
 		for(var/entry in obj_access_pairs)

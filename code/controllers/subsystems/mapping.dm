@@ -90,6 +90,11 @@ SUBSYSTEM_DEF(mapping)
 	// This needs to be non-null even if the overmap isn't created for this map.
 	overmap_event_handler = GET_DECL(/decl/overmap_event_handler)
 
+	// Initialize z-level objects.
+#ifdef UNIT_TEST
+	set_config_value(/decl/config/toggle/roundstart_level_generation, FALSE)
+#endif
+
 	var/old_maxz
 	for(var/z = 1 to world.maxz)
 		var/datum/level_data/level = levels_by_z[z]
@@ -125,11 +130,6 @@ SUBSYSTEM_DEF(mapping)
 		world.maxx = new_maxx
 	if (new_maxy > world.maxy)
 		world.maxy = new_maxy
-
-	// Initialize z-level objects.
-#ifdef UNIT_TEST
-	set_config_value(/decl/config/toggle/roundstart_level_generation, FALSE) //#FIXME: Shouldn't this be set before running level_data/setup_level_data()?
-#endif
 
 	. = ..()
 

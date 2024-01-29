@@ -49,12 +49,20 @@
 
 	#include "crux_cryo.dm"
 	#include "crux_overmap.dm"
+	#include "crux_generators.dm"
+	#include "crux_levels.dm"
 	#include "crux_testing.dm"
 
 	#include "crux-station-0.dmm"
 	#include "crux-station-1.dmm"
 	#include "crux-station-2.dmm"
 	#include "crux-station-3.dmm"
+
+	#include "crux-ocean-0.dmm"
+	#include "crux-ocean-1.dmm"
+	#include "crux-ocean-2.dmm"
+
+	#include "crux-wilderness-1.dmm"
 
 	#define USING_MAP_DATUM /datum/map/crux
 
