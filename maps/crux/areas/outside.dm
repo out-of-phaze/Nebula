@@ -7,8 +7,22 @@
 	interior_ambient_light_level = 0.5
 	interior_ambient_light_color = "#f3e6ca"
 
+/area/crux/outside/wilderness
+	name = "\improper Wilderness"
+
+/area/crux/outside/ocean_over
+	name = "\improper Out At Sea"
+
 /area/crux/outside/ocean
+	name = "\improper Shallow Ocean"
+
+/area/crux/outside/ocean/deep
 	name = "\improper Deep Ocean"
+	interior_ambient_light_level = null
+	interior_ambient_light_color = null
+
+/area/crux/outside/ocean/abyssal
+	name = "\improper Abyssal Ocean"
 
 /area/crux/outside/underground
 	name = "\improper Beneath Eleostura"
