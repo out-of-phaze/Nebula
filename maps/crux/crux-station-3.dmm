@@ -6799,7 +6799,7 @@
 /area/crux/bridge/meeting_room)
 "dPx" = (
 /obj/structure/table/woodentable_reinforced,
-/obj/item/storage/box/donut,
+/obj/item/storage/box/fancy/donut,
 /turf/simulated/floor/wood,
 /area/crux/bridge/meeting_room)
 "dPy" = (
@@ -8535,7 +8535,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 6
 	},
-/obj/item/storage/box/donut,
+/obj/item/storage/box/fancy/donut,
 /turf/simulated/floor/tiled,
 /area/crux/bridge)
 "dSU" = (
@@ -8607,7 +8607,7 @@
 /area/crux/habitation/sd)
 "dSZ" = (
 /obj/structure/table/woodentable,
-/obj/item/storage/box/donut,
+/obj/item/storage/box/fancy/donut,
 /turf/simulated/floor/carpet,
 /area/crux/habitation/sd)
 "dTa" = (
