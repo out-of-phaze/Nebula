@@ -10593,8 +10593,8 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 4
 	},
-/obj/item/storage/fancy/crayons,
-/obj/item/storage/fancy/crayons,
+/obj/item/storage/box/fancy/crayons,
+/obj/item/storage/box/fancy/crayons,
 /turf/simulated/floor/tiled,
 /area/crux/storage/auxillary)
 "byG" = (
@@ -15998,7 +15998,7 @@
 	pixel_y = 25
 	},
 /obj/structure/table/steel,
-/obj/item/storage/fancy/cigarettes,
+/obj/item/storage/box/fancy/cigarettes,
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/clean,
@@ -22136,7 +22136,7 @@
 	pixel_y = 4
 	},
 /obj/item/clothing/glasses/welding/superior,
-/obj/item/storage/fancy/cigarettes,
+/obj/item/storage/box/fancy/cigarettes,
 /obj/item/flame/lighter/zippo,
 /turf/simulated/floor/tiled,
 /area/crux/habitation/chief)
@@ -29781,7 +29781,7 @@
 /area/crux/medical/virology)
 "cmq" = (
 /obj/structure/table/glass,
-/obj/item/storage/fancy/vials,
+/obj/item/storage/box/fancy/vials,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -42376,11 +42376,11 @@
 /area/crux/habitation/cmo)
 "cMs" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/fancy/vials{
+/obj/item/storage/box/fancy/vials{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/storage/fancy/vials,
+/obj/item/storage/box/fancy/vials,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
