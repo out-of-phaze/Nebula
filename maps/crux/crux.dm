@@ -53,6 +53,7 @@
 	#include "crux_levels.dm"
 	#include "crux_testing.dm"
 
+
 	#include "crux-station-0.dmm"
 	#include "crux-station-1.dmm"
 	#include "crux-station-2.dmm"
@@ -63,6 +64,7 @@
 	#include "crux-ocean-2.dmm"
 
 	#include "crux-wilderness-1.dmm"
+	#include "submaps/pois/poi.dm"
 
 	#define USING_MAP_DATUM /datum/map/crux
 

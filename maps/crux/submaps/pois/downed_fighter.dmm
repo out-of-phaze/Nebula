@@ -1,0 +1,271 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/exterior/seafloor/flooded,
+/area/space)
+"b" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/wall/r_titanium,
+/area/space)
+"f" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/r_titanium,
+/area/space)
+"h" = (
+/obj/structure/grille/broken,
+/obj/machinery/door/blast/regular,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/exterior/seafloor/flooded,
+/area/space)
+"l" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/wall/r_titanium,
+/area/space)
+"o" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/r_titanium,
+/area/space)
+"p" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/external/bolted,
+/obj/item/frame/button/airlock_controller_config{
+	pixel_y = 23
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/blackgrid,
+/area/space)
+"q" = (
+/obj/machinery/emitter/anchored{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor,
+/area/space)
+"s" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/blackgrid,
+/area/space)
+"t" = (
+/obj/machinery/computer/ship/navigation{
+	dir = 4
+	},
+/turf/simulated/floor/blackgrid,
+/area/space)
+"v" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/blackgrid,
+/area/space)
+"x" = (
+/obj/structure/cable{
+	icon_state = "2-9"
+	},
+/turf/simulated/wall/r_titanium,
+/area/space)
+"A" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 8
+	},
+/turf/exterior/seafloor/flooded,
+/area/space)
+"C" = (
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -22
+	},
+/obj/structure/cable,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/crowbar/red,
+/turf/simulated/floor/blackgrid,
+/area/space)
+"G" = (
+/obj/item/remains/human,
+/obj/structure/bed/chair/shuttle/black{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/random/energy,
+/obj/machinery/button/ignition{
+	id_tag = "Emitters";
+	pixel_x = -6;
+	pixel_y = 26;
+	name = "FIRE WEAPONS"
+	},
+/turf/simulated/floor/blackgrid,
+/area/space)
+"H" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/r_titanium,
+/area/space)
+"J" = (
+/obj/machinery/computer/ship/helm{
+	dir = 4
+	},
+/obj/item/chems/drinks/flask,
+/turf/simulated/floor/blackgrid,
+/area/space)
+"L" = (
+/obj/structure/grille/broken,
+/obj/machinery/door/blast/regular,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/exterior/seafloor/flooded,
+/area/space)
+"P" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/wall/r_titanium,
+/area/space)
+"R" = (
+/obj/structure/cable{
+	icon_state = "6-8"
+	},
+/obj/structure/cable{
+	icon_state = "5-8"
+	},
+/turf/simulated/wall/r_titanium,
+/area/space)
+"V" = (
+/obj/item/photo{
+	name = "photo of a happy couple";
+	desc = "Photo of a happy couple.  Scrawled roughly on the back are the words, 'Don't wait up.  Thanks for sticking with me until the end."
+	},
+/turf/simulated/floor/blackgrid,
+/area/space)
+"W" = (
+/turf/simulated/wall/r_titanium,
+/area/space)
+"X" = (
+/obj/machinery/computer/ship/engines{
+	dir = 4
+	},
+/turf/simulated/floor/blackgrid,
+/area/space)
+"Z" = (
+/obj/structure/cable{
+	icon_state = "1-10"
+	},
+/turf/simulated/wall/r_titanium,
+/area/space)
+
+(1,1,1) = {"
+a
+a
+a
+q
+a
+q
+a
+q
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+o
+h
+L
+h
+P
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+H
+t
+J
+X
+W
+a
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+W
+b
+f
+G
+V
+W
+W
+a
+a
+"}
+(5,1,1) = {"
+a
+q
+W
+R
+s
+v
+C
+W
+W
+q
+a
+"}
+(6,1,1) = {"
+W
+l
+Z
+W
+x
+p
+f
+f
+f
+P
+W
+"}
+(7,1,1) = {"
+A
+a
+a
+A
+a
+a
+a
+A
+a
+a
+A
+"}

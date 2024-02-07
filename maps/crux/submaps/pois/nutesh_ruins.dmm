@@ -1,0 +1,145 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/wall/wood,
+/area/space)
+"c" = (
+/obj/item/stack/tile/wood,
+/turf/exterior/sand,
+/area/space)
+"e" = (
+/mob/living/simple_animal/yithian,
+/turf/exterior/sand,
+/area/space)
+"f" = (
+/turf/exterior/mud,
+/area/space)
+"h" = (
+/obj/item/towel/random,
+/turf/simulated/floor/wood/usedup,
+/area/space)
+"k" = (
+/obj/item/storage/toolbox/mechanical,
+/turf/exterior/sand,
+/area/space)
+"l" = (
+/obj/item/chems/drinks/juicebox/random,
+/turf/exterior/sand,
+/area/space)
+"v" = (
+/obj/random/useful,
+/obj/random/useful,
+/turf/simulated/floor/wood/usedup,
+/area/space)
+"z" = (
+/obj/effect/overlay/palmtree_r,
+/turf/exterior/sand,
+/area/space)
+"A" = (
+/obj/abstract/fluid_mapped,
+/turf/simulated/floor/pool,
+/area/space)
+"C" = (
+/turf/exterior/grass,
+/area/space)
+"U" = (
+/turf/exterior/sand,
+/area/space)
+"V" = (
+/obj/item/chems/drinks/juicebox/sensible_random,
+/obj/item/towel/random,
+/turf/exterior/sand,
+/area/space)
+"Y" = (
+/turf/simulated/floor/wood/usedup,
+/area/space)
+
+(1,1,1) = {"
+U
+U
+U
+U
+U
+C
+U
+U
+"}
+(2,1,1) = {"
+U
+U
+U
+U
+C
+C
+z
+U
+"}
+(3,1,1) = {"
+U
+a
+a
+a
+a
+a
+c
+U
+"}
+(4,1,1) = {"
+U
+a
+Y
+h
+c
+U
+U
+k
+"}
+(5,1,1) = {"
+U
+a
+v
+A
+A
+V
+e
+U
+"}
+(6,1,1) = {"
+U
+U
+U
+f
+A
+U
+U
+U
+"}
+(7,1,1) = {"
+U
+U
+U
+l
+U
+C
+a
+U
+"}
+(8,1,1) = {"
+U
+U
+U
+a
+a
+C
+U
+U
+"}
+(9,1,1) = {"
+U
+z
+U
+U
+C
+U
+U
+U
+"}

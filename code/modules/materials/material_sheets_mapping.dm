@@ -101,5 +101,6 @@ STACK_SUBTYPES(steel,          "steel",                         solid/metal/stee
 STACK_SUBTYPES(plastic,        "plastic",                       solid/organic/plastic,       strut,      null)
 STACK_SUBTYPES(aluminium,      "aluminium",                     solid/metal/aluminium,       strut,      null)
 STACK_SUBTYPES(titanium,       "titanium",                      solid/metal/titanium,        strut,      null)
+STACK_SUBTYPES(bone,           "bone",                          solid/organic/bone,          bone,       null)
 
 #undef STACK_SUBTYPES
