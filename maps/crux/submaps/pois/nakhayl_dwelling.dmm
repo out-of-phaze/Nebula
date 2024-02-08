@@ -1,0 +1,929 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ae" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"bs" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/green,
+/area/space)
+"bV" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/wood,
+/area/space)
+"cv" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/machinery/door/window/westright,
+/turf/simulated/floor/wood,
+/area/space)
+"cJ" = (
+/obj/item/robot_harvester,
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"dk" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/machinery/door/window/westleft,
+/turf/simulated/floor/wood,
+/area/space)
+"dl" = (
+/obj/structure/railing,
+/obj/machinery/door/window/southleft,
+/turf/simulated/floor/wood,
+/area/space)
+"dJ" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"ez" = (
+/obj/structure/flora/bush/fernybush,
+/obj/structure/flora/bush/fernybush,
+/turf/exterior/wildgrass,
+/area/space)
+"fg" = (
+/turf/simulated/floor/carpet/blue,
+/area/space)
+"fN" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"hy" = (
+/turf/simulated/floor/carpet/blue3,
+/area/space)
+"jx" = (
+/obj/structure/table/steel,
+/obj/item/robot_parts/chest,
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"jS" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"kw" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/blue,
+/turf/simulated/floor/wood,
+/area/space)
+"tL" = (
+/obj/structure/table/woodentable,
+/obj/item/modular_computer/tablet,
+/turf/simulated/floor/carpet/blue,
+/area/space)
+"ub" = (
+/obj/structure/table/woodentable,
+/obj/machinery/microwave,
+/turf/simulated/floor/carpet/green,
+/area/space)
+"uC" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/floor/wood,
+/area/space)
+"vg" = (
+/turf/exterior/wildgrass,
+/area/space)
+"vA" = (
+/turf/simulated/floor/carpet/green,
+/area/space)
+"AG" = (
+/obj/structure/railing,
+/obj/machinery/door/window/southright,
+/turf/simulated/floor/wood,
+/area/space)
+"BQ" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/machinery/door/window/eastleft,
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"Cn" = (
+/obj/structure/flora/bush/fernybush,
+/turf/exterior/wildgrass,
+/area/space)
+"DE" = (
+/turf/simulated/floor/wood,
+/area/space)
+"DG" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"Gg" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/door/window/northright,
+/turf/simulated/floor/wood,
+/area/space)
+"Hv" = (
+/turf/simulated/wall/wood,
+/area/space)
+"HA" = (
+/obj/structure/door/wood,
+/turf/simulated/floor/wood,
+/area/space)
+"Im" = (
+/obj/machinery/light/small,
+/obj/structure/table/steel,
+/obj/item/robot_parts/head,
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"Kr" = (
+/obj/machinery/cooker/oven,
+/turf/simulated/floor/carpet/green,
+/area/space)
+"Mh" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/carpet/green,
+/area/space)
+"Mq" = (
+/obj/structure/table/bench,
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"MX" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/machinery/door/window/eastright,
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"Og" = (
+/obj/item/stack/material/puck/mapped/uranium/forty,
+/turf/exterior/wildgrass,
+/area/space)
+"Oq" = (
+/obj/structure/door/wood,
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"Qr" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"Qv" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/green,
+/area/space)
+"QX" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/door/window/northleft,
+/turf/simulated/floor/wood,
+/area/space)
+"Rv" = (
+/obj/structure/table/woodentable,
+/obj/item/flame/lighter/random{
+	pixel_x = -7;
+	pixel_y = 11
+	},
+/obj/item/chems/food/can/beef,
+/turf/simulated/floor/carpet/blue,
+/area/space)
+"RE" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/clothing/shoes/color/red,
+/turf/simulated/floor/wood,
+/area/space)
+"RG" = (
+/mob/living/silicon/robot/drone,
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"Uk" = (
+/obj/random/pottedplant,
+/turf/simulated/floor/wood,
+/area/space)
+"Uq" = (
+/obj/structure/railing,
+/obj/structure/window/basic,
+/turf/simulated/floor/wood,
+/area/space)
+"UO" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/blue,
+/area/space)
+"Xj" = (
+/obj/item/towel/brown,
+/turf/simulated/floor/carpet/green,
+/area/space)
+"YU" = (
+/obj/item/remains/robot,
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"YX" = (
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+"ZQ" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"ZU" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/obj/item/clothing/under/color/blue,
+/turf/simulated/floor/wood,
+/area/space)
+"ZZ" = (
+/obj/item/robot_parts/l_leg,
+/obj/item/robot_parts/r_arm,
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
+
+(1,1,1) = {"
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+"}
+(2,1,1) = {"
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+Hv
+Hv
+cv
+HA
+dk
+Hv
+Hv
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+"}
+(3,1,1) = {"
+vg
+vg
+vg
+vg
+ez
+Cn
+Hv
+cv
+dk
+Hv
+DE
+DE
+DE
+DE
+DE
+Hv
+cv
+dk
+Hv
+Cn
+Cn
+vg
+vg
+vg
+vg
+"}
+(4,1,1) = {"
+vg
+vg
+Og
+vg
+Hv
+Hv
+Hv
+DE
+DE
+DE
+DE
+fg
+fg
+fg
+DE
+DE
+DE
+DE
+Hv
+Hv
+Hv
+vg
+vg
+vg
+vg
+"}
+(5,1,1) = {"
+vg
+vg
+Cn
+Hv
+Hv
+DE
+Hv
+DE
+DE
+DE
+DE
+fg
+tL
+fg
+DE
+DE
+DE
+DE
+Hv
+DE
+Hv
+Hv
+Cn
+vg
+vg
+"}
+(6,1,1) = {"
+vg
+vg
+Cn
+Hv
+DE
+DE
+Hv
+Hv
+ae
+DE
+DE
+fg
+Rv
+fg
+DE
+DE
+bV
+Hv
+Hv
+DE
+DE
+Hv
+Cn
+vg
+vg
+"}
+(7,1,1) = {"
+vg
+vg
+Hv
+Hv
+DE
+DE
+DE
+Hv
+Uk
+DE
+DE
+fg
+UO
+fg
+DE
+DE
+Uk
+Hv
+DE
+DE
+DE
+Hv
+Hv
+vg
+vg
+"}
+(8,1,1) = {"
+vg
+vg
+QX
+DE
+DE
+DE
+bV
+Hv
+Hv
+DE
+DE
+fg
+fg
+fg
+DE
+DE
+Hv
+Hv
+ae
+DE
+DE
+DE
+dl
+vg
+vg
+"}
+(9,1,1) = {"
+vg
+vg
+Gg
+DE
+DE
+DE
+DE
+kw
+Hv
+DE
+DE
+DG
+DE
+DG
+uC
+uC
+Hv
+kw
+DE
+DE
+DE
+DE
+AG
+vg
+vg
+"}
+(10,1,1) = {"
+vg
+Hv
+Hv
+ae
+DE
+DE
+DE
+DE
+Hv
+Hv
+Hv
+Hv
+HA
+Hv
+Hv
+Hv
+Hv
+DE
+DE
+DE
+DE
+bV
+Hv
+Hv
+vg
+"}
+(11,1,1) = {"
+vg
+Hv
+DE
+DE
+DE
+DE
+DE
+DE
+ZQ
+Hv
+vA
+vA
+Xj
+vA
+vA
+Hv
+ZU
+DE
+DE
+DE
+DE
+DE
+DE
+Hv
+vg
+"}
+(12,1,1) = {"
+vg
+QX
+DE
+hy
+hy
+hy
+hy
+hy
+bV
+Hv
+Qv
+Xj
+bs
+Xj
+Mh
+Hv
+RE
+hy
+hy
+hy
+hy
+hy
+DE
+dl
+vg
+"}
+(13,1,1) = {"
+vg
+jS
+DE
+hy
+hy
+hy
+hy
+hy
+DE
+HA
+Xj
+bs
+Kr
+bs
+Xj
+HA
+DE
+hy
+hy
+hy
+hy
+hy
+DE
+Uq
+vg
+"}
+(14,1,1) = {"
+vg
+Gg
+DE
+hy
+hy
+hy
+hy
+hy
+bV
+Hv
+Qv
+Xj
+ub
+Xj
+Mh
+Hv
+ae
+hy
+hy
+hy
+hy
+hy
+DE
+AG
+vg
+"}
+(15,1,1) = {"
+vg
+Hv
+DE
+DE
+DE
+DE
+DE
+DE
+Qr
+Hv
+vA
+vA
+Xj
+vA
+vA
+Hv
+Qr
+DE
+DE
+DE
+DE
+DE
+DE
+Hv
+vg
+"}
+(16,1,1) = {"
+vg
+Hv
+Hv
+ae
+DE
+DE
+DE
+DE
+Hv
+Hv
+Hv
+Hv
+HA
+Hv
+Hv
+Hv
+Hv
+DE
+DE
+DE
+DE
+bV
+Hv
+Hv
+vg
+"}
+(17,1,1) = {"
+vg
+vg
+QX
+DE
+DE
+DE
+DE
+kw
+Hv
+YX
+YX
+dJ
+YX
+dJ
+YX
+YX
+Hv
+kw
+DE
+DE
+DE
+DE
+dl
+vg
+vg
+"}
+(18,1,1) = {"
+vg
+vg
+Gg
+DE
+DE
+DE
+bV
+Hv
+Hv
+cJ
+YU
+fg
+fg
+fg
+YX
+ZZ
+Hv
+Hv
+ae
+DE
+DE
+DE
+AG
+vg
+vg
+"}
+(19,1,1) = {"
+vg
+vg
+Hv
+Hv
+DE
+DE
+DE
+Hv
+YX
+YU
+YX
+fg
+fg
+fg
+YX
+Mq
+jx
+Hv
+DE
+DE
+DE
+Hv
+Hv
+vg
+vg
+"}
+(20,1,1) = {"
+vg
+vg
+Cn
+Hv
+DE
+DE
+Hv
+Hv
+fN
+YX
+YX
+fg
+fg
+fg
+YX
+YX
+Im
+Hv
+Hv
+DE
+DE
+Hv
+Cn
+vg
+vg
+"}
+(21,1,1) = {"
+vg
+vg
+Cn
+Hv
+Hv
+DE
+Hv
+YX
+YX
+YX
+RG
+fg
+fg
+fg
+YX
+YX
+YX
+YX
+Hv
+DE
+Hv
+Hv
+Cn
+vg
+vg
+"}
+(22,1,1) = {"
+vg
+vg
+vg
+vg
+Hv
+Hv
+Hv
+YX
+YX
+YX
+YX
+fg
+fg
+fg
+YX
+YX
+YX
+YX
+Hv
+Hv
+Hv
+vg
+vg
+vg
+vg
+"}
+(23,1,1) = {"
+vg
+vg
+vg
+vg
+Cn
+Cn
+Hv
+BQ
+MX
+Hv
+YX
+YX
+YX
+YX
+YX
+Hv
+BQ
+MX
+Hv
+Cn
+Cn
+vg
+vg
+vg
+vg
+"}
+(24,1,1) = {"
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+Hv
+Hv
+BQ
+Oq
+MX
+Hv
+Hv
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+"}
+(25,1,1) = {"
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+vg
+"}

@@ -1,0 +1,172 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/item/clothing/accessory/toggleable/hawaii/random,
+/obj/random/accessory,
+/obj/item/remains,
+/obj/random/medical/pillbottle,
+/obj/item/pickaxe/diamonddrill,
+/turf/exterior/barren,
+/area/space)
+"b" = (
+/mob/living/simple_animal/hostile/giant_spider,
+/turf/exterior/barren,
+/area/space)
+"l" = (
+/turf/exterior/wall/random,
+/area/space)
+"m" = (
+/obj/item/toy/plushie/spider,
+/turf/exterior/barren,
+/area/space)
+"w" = (
+/obj/effect/decal/cleanable/spiderling_remains,
+/turf/exterior/barren,
+/area/space)
+"D" = (
+/obj/effect/spider/eggcluster,
+/turf/exterior/barren,
+/area/space)
+"E" = (
+/obj/effect/spider/stickyweb,
+/turf/exterior/barren,
+/area/space)
+"R" = (
+/mob/living/simple_animal/hostile/giant_spider/nurse,
+/turf/exterior/barren,
+/area/space)
+"S" = (
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/stickyweb,
+/turf/exterior/barren,
+/area/space)
+"W" = (
+/obj/item/remains,
+/obj/random/energy,
+/obj/item/clothing/suit/armor/vest/ert,
+/obj/item/clothing/accessory/armor/helmcover/green,
+/turf/exterior/barren,
+/area/space)
+"Z" = (
+/turf/exterior/barren,
+/area/space)
+
+(1,1,1) = {"
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+"}
+(2,1,1) = {"
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+"}
+(3,1,1) = {"
+l
+l
+E
+Z
+W
+l
+l
+l
+l
+l
+"}
+(4,1,1) = {"
+l
+E
+E
+Z
+Z
+w
+Z
+l
+l
+l
+"}
+(5,1,1) = {"
+l
+Z
+Z
+b
+D
+Z
+Z
+m
+l
+l
+"}
+(6,1,1) = {"
+l
+a
+Z
+Z
+R
+Z
+Z
+Z
+l
+l
+"}
+(7,1,1) = {"
+l
+l
+Z
+Z
+Z
+Z
+S
+E
+l
+l
+"}
+(8,1,1) = {"
+l
+l
+l
+w
+Z
+b
+S
+l
+l
+l
+"}
+(9,1,1) = {"
+l
+l
+l
+l
+Z
+Z
+E
+l
+l
+l
+"}
+(10,1,1) = {"
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+"}

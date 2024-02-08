@@ -1,0 +1,149 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/exterior/seafloor/flooded,
+/area/space)
+"c" = (
+/obj/item/chems/food/fish,
+/obj/item/bone/skull,
+/obj/item/chems/food/fish,
+/obj/item/chems/food/fish,
+/turf/exterior/seafloor/flooded,
+/area/space)
+"g" = (
+/mob/living/simple_animal/hostile/leech,
+/turf/exterior/seafloor/flooded,
+/area/space)
+"r" = (
+/obj/item/remains,
+/obj/item/tank/oxygen,
+/obj/item/hatchet,
+/turf/exterior/seafloor/flooded,
+/area/space)
+"H" = (
+/turf/exterior/wall/flooded,
+/area/space)
+"W" = (
+/obj/structure/flora/bush/stalkybush,
+/turf/exterior/seafloor/flooded,
+/area/space)
+
+(1,1,1) = {"
+a
+a
+a
+g
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+W
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+W
+H
+H
+H
+H
+H
+H
+a
+a
+"}
+(4,1,1) = {"
+a
+H
+H
+c
+a
+a
+a
+a
+a
+a
+"}
+(5,1,1) = {"
+a
+H
+r
+a
+a
+a
+H
+H
+a
+a
+"}
+(6,1,1) = {"
+a
+H
+H
+H
+H
+c
+H
+W
+a
+a
+"}
+(7,1,1) = {"
+a
+a
+H
+a
+c
+a
+H
+a
+a
+a
+"}
+(8,1,1) = {"
+a
+g
+H
+H
+H
+H
+H
+a
+W
+a
+"}
+(9,1,1) = {"
+a
+a
+a
+W
+a
+g
+a
+a
+a
+a
+"}
+(10,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

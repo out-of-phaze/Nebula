@@ -1,0 +1,324 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/wall/ocp_wall,
+/area/space)
+"b" = (
+/obj/machinery/camera{
+	dir = 1
+	},
+/turf/exterior/seafloor/flooded,
+/area/space)
+"f" = (
+/obj/structure/bed/chair/comfy/purple{
+	dir = 8
+	},
+/turf/simulated/floor/nakhayl,
+/area/space)
+"k" = (
+/obj/structure/bed/chair/comfy/purple{
+	dir = 8
+	},
+/obj/item/remains/human,
+/obj/item/shard/borosilicate,
+/obj/item/gun/projectile/pistol/random,
+/turf/simulated/floor/nakhayl,
+/area/space)
+"l" = (
+/obj/machinery/port_gen/pacman/super,
+/turf/simulated/floor/nakhayl,
+/area/space)
+"o" = (
+/obj/item/shard/borosilicate{
+	pixel_x = -9;
+	pixel_y = -7
+	},
+/obj/item/shard/borosilicate{
+	pixel_x = 13;
+	pixel_y = -4
+	},
+/obj/item/shard/borosilicate{
+	pixel_x = -9;
+	pixel_y = -7
+	},
+/obj/item/shard/borosilicate{
+	pixel_x = 7
+	},
+/turf/simulated/floor/nakhayl,
+/area/space)
+"p" = (
+/obj/machinery/camera{
+	dir = 4
+	},
+/turf/exterior/seafloor/flooded,
+/area/space)
+"t" = (
+/obj/item/remains/human,
+/obj/item/shard/borosilicate{
+	pixel_x = 7
+	},
+/obj/item/shard/borosilicate{
+	pixel_y = -14;
+	pixel_x = -6
+	},
+/obj/item/shard/borosilicate{
+	pixel_x = -10
+	},
+/obj/item/crowbar,
+/obj/item/screwdriver,
+/obj/item/wrench,
+/turf/simulated/floor/nakhayl,
+/area/space)
+"u" = (
+/obj/structure/bed/chair/comfy/purple{
+	dir = 8
+	},
+/obj/item/remains/human,
+/obj/item/gun/projectile/pistol/random,
+/turf/simulated/floor/nakhayl,
+/area/space)
+"x" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/modular_computer/laptop/preset/custom_loadout/advanced,
+/turf/simulated/floor/nakhayl,
+/area/space)
+"y" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/space)
+"z" = (
+/obj/machinery/atmospherics/unary/engine,
+/turf/exterior/seafloor/flooded,
+/area/space)
+"B" = (
+/obj/structure/bed/chair/comfy/purple{
+	dir = 8
+	},
+/obj/random/projectile,
+/turf/simulated/floor/nakhayl,
+/area/space)
+"D" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 8
+	},
+/turf/exterior/seafloor/flooded,
+/area/space)
+"E" = (
+/obj/machinery/door/blast/regular/open,
+/turf/simulated/floor/shuttle_ceiling/merc{
+	base_desc = "Nakhayl breacher flooring.";
+	name = "reinforced shuttle flooring"
+	},
+/area/space)
+"F" = (
+/obj/machinery/camera{
+	pixel_x = 23
+	},
+/turf/exterior/seafloor/flooded,
+/area/space)
+"J" = (
+/turf/exterior/seafloor/flooded,
+/area/space)
+"L" = (
+/obj/machinery/computer/modular/preset/security{
+	dir = 1
+	},
+/turf/simulated/floor/nakhayl,
+/area/space)
+"O" = (
+/turf/simulated/floor/nakhayl,
+/area/space)
+"Q" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/computer/central_atmos/laptop,
+/obj/item/shard/borosilicate,
+/turf/simulated/floor/nakhayl,
+/area/space)
+"R" = (
+/obj/structure/bed/chair/comfy/purple{
+	dir = 8
+	},
+/obj/item/stack/medical/splint,
+/obj/item/storage/pill_bottle/foil_pack/painkillers,
+/turf/simulated/floor/nakhayl,
+/area/space)
+"U" = (
+/obj/structure/bed/chair/comfy/purple{
+	dir = 8
+	},
+/obj/item/remains/human,
+/obj/random/projectile,
+/turf/simulated/floor/nakhayl,
+/area/space)
+"V" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 1
+	},
+/turf/exterior/seafloor/flooded,
+/area/space)
+"W" = (
+/obj/machinery/door/blast/regular,
+/turf/simulated/floor/shuttle_ceiling/merc{
+	base_desc = "Nakhayl breacher flooring.";
+	name = "reinforced shuttle flooring"
+	},
+/area/space)
+"X" = (
+/obj/machinery/camera{
+	dir = 8
+	},
+/turf/exterior/seafloor/flooded,
+/area/space)
+
+(1,1,1) = {"
+J
+J
+J
+X
+y
+X
+J
+J
+J
+"}
+(2,1,1) = {"
+J
+J
+J
+y
+y
+y
+J
+J
+J
+"}
+(3,1,1) = {"
+J
+X
+y
+y
+y
+y
+y
+X
+J
+"}
+(4,1,1) = {"
+J
+y
+y
+y
+a
+y
+y
+y
+J
+"}
+(5,1,1) = {"
+b
+y
+y
+a
+a
+a
+y
+y
+F
+"}
+(6,1,1) = {"
+J
+z
+a
+a
+x
+a
+a
+V
+J
+"}
+(7,1,1) = {"
+J
+a
+a
+x
+u
+L
+a
+a
+J
+"}
+(8,1,1) = {"
+J
+a
+Q
+k
+O
+O
+W
+a
+J
+"}
+(9,1,1) = {"
+J
+a
+t
+O
+O
+O
+E
+E
+J
+"}
+(10,1,1) = {"
+J
+y
+o
+y
+O
+O
+W
+a
+J
+"}
+(11,1,1) = {"
+b
+y
+l
+y
+U
+R
+f
+a
+F
+"}
+(12,1,1) = {"
+J
+J
+l
+y
+B
+f
+f
+a
+J
+"}
+(13,1,1) = {"
+J
+y
+y
+y
+a
+a
+a
+a
+J
+"}
+(14,1,1) = {"
+J
+D
+D
+D
+p
+D
+D
+D
+J
+"}
