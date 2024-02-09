@@ -57,3 +57,4 @@
 	)
 
 /area/crux
+	has_gravity = TRUE

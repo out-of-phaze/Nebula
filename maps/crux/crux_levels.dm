@@ -1,5 +1,4 @@
 /datum/level_data/crux
-	name = "Port Eleostura - Ground Floor"
 	use_global_exterior_ambience = FALSE
 	ambient_light_level = 1
 	ambient_light_color = "#f3e6ca"
@@ -24,6 +23,8 @@
 	ambient_light_level = 0.4
 	ambient_light_color = "#59f7dc"
 	connected_levels = list("eleostura_shallows" = WEST)
+	base_area = /area/crux/outside/underground
+	transition_turf_type = /turf/unsimulated/mimic_edge/transition/flooded
 	level_id = "eleostura_belowground"
 	level_generators = list(
 		/datum/random_map/noise/crux/seafloor,
@@ -36,11 +37,13 @@
 
 // z2, main station entrance etc.
 /datum/level_data/crux/ground_floor
+	name = "Port Eleostura - Ground Floor"
 	level_id = "eleostura_ground"
 	connected_levels = list(
 		"eleostura_wilderness" = EAST,
 		"eleostura_over_sea"   = WEST
 	)
+	base_area = /area/crux/outside
 	level_generators = list(
 		/datum/random_map/noise/crux/grassland
 	)
@@ -52,6 +55,7 @@
 /datum/level_data/crux/level_one
 	name = "Port Eleostura - Level One"
 	level_id = "eleostura_level_1"
+	base_area = /area/crux/outside/level_one
 /obj/abstract/level_data_spawner/crux_level_one
 	name = "Port Eleostura - Level One"
 	level_data_type = /datum/level_data/crux/level_one
@@ -60,6 +64,7 @@
 /datum/level_data/crux/level_two
 	name = "Port Eleostura - Level Two"
 	level_id = "eleostura_level_2"
+	base_area = /area/crux/outside/level_two
 /obj/abstract/level_data_spawner/crux_level_two
 	name = "Port Eleostura - Level Two"
 	level_data_type = /datum/level_data/crux/level_two
@@ -71,6 +76,7 @@
 	exterior_atmosphere = null
 	ambient_light_level = 0.2
 	ambient_light_color = "#003cff"
+	base_area = /area/crux/outside/ocean/abyssal
 	level_generators = list(
 		/datum/random_map/noise/crux/abyss,
 		/datum/random_map/automata/cave_system/crux/flooded,
@@ -85,8 +91,10 @@
 	name = "Port Eleostura - Ocean Shallows"
 	level_id = "eleostura_shallows"
 	connected_levels = list("eleostura_belowground" = EAST)
+	transition_turf_type = /turf/unsimulated/mimic_edge/transition/flooded
 	ambient_light_level = 0.4
 	ambient_light_color = "#59f7dc"
+	base_area = /area/crux/outside/ocean/deep
 	level_generators = list(
 		/datum/random_map/noise/crux/seafloor
 	)
@@ -98,6 +106,7 @@
 /datum/level_data/crux/ocean
 	name = "Port Eleostura - Out At Sea"
 	level_id = "eleostura_over_sea"
+	base_area = /area/crux/outside/ocean_over
 	connected_levels = list("eleostura_ground" = EAST)
 /obj/abstract/level_data_spawner/crux_ocean
 	name = "Port Eleostura - Out At Sea"
@@ -111,6 +120,7 @@
 	level_generators = list(
 		/datum/random_map/noise/crux/grassland/forest
 	)
+	base_area = /area/crux/outside/wilderness
 /obj/abstract/level_data_spawner/crux_wilderness
 	name = "Port Eleostura - Wilderness"
 	level_data_type = /datum/level_data/crux/wilderness

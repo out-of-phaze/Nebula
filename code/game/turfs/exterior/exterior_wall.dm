@@ -61,7 +61,7 @@ var/global/list/natural_walls = list()
 	var/static/list/exterior_wall_shine_cache = list()
 
 /turf/exterior/wall/flooded
-	flooded = TRUE
+	flooded = /decl/material/liquid/water
 	color = COLOR_LIQUID_WATER
 
 /turf/exterior/wall/examine(mob/user, distance, infix, suffix)
