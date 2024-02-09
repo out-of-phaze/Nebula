@@ -2,9 +2,6 @@
 "a" = (
 /turf/exterior/dry,
 /area/crux/outside/wilderness)
-"b" = (
-/turf/exterior/wildgrass,
-/area/crux/outside)
 "d" = (
 /turf/exterior/sand,
 /area/crux/outside/wilderness)
@@ -24,9 +21,6 @@
 "A" = (
 /turf/unsimulated/mask,
 /area/crux/outside/wilderness)
-"N" = (
-/turf/exterior/dry,
-/area/crux/outside)
 "X" = (
 /turf/unsimulated/dark_filler,
 /area/crux/outside/wilderness)
@@ -2068,24 +2062,24 @@ f
 f
 f
 f
-b
-b
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
+f
+f
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
 "}
 (9,1,1) = {"
 e
