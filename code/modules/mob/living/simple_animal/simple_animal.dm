@@ -424,7 +424,6 @@ var/global/list/simplemob_icon_bitflag_cache = list()
 
 /mob/living/simple_animal/death(gibbed, deathmessage = "dies!", show_dead_message)
 	density = FALSE
-	adjustBruteLoss(get_max_health()) //Make sure dey dead.
 	walk_to(src,0)
 	. = ..(gibbed, deathmessage, show_dead_message)
 
