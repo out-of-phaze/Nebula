@@ -65,15 +65,15 @@
 	if(distance > 1)
 		return
 	if(!reagents || reagents.total_volume == 0)
-		to_chat(user, "<span class='notice'>\The [src] is empty!</span>")
+		to_chat(user, SPAN_NOTICE("\The [src] is empty!"))
 	else if (reagents.total_volume <= volume * 0.25)
-		to_chat(user, "<span class='notice'>\The [src] is almost empty!</span>")
+		to_chat(user, SPAN_NOTICE("\The [src] is almost empty!"))
 	else if (reagents.total_volume <= volume * 0.66)
-		to_chat(user, "<span class='notice'>\The [src] is half full!</span>")
+		to_chat(user, SPAN_NOTICE("\The [src] is half full!"))
 	else if (reagents.total_volume <= volume * 0.90)
-		to_chat(user, "<span class='notice'>\The [src] is almost full!</span>")
+		to_chat(user, SPAN_NOTICE("\The [src] is almost full!"))
 	else
-		to_chat(user, "<span class='notice'>\The [src] is full!</span>")
+		to_chat(user, SPAN_NOTICE("\The [src] is full!"))
 
 /obj/item/chems/drinks/proc/get_filling_state()
 	var/percent = round((reagents.total_volume / volume) * 100)
@@ -86,9 +86,8 @@
 
 /obj/item/chems/drinks/on_update_icon()
 	. = ..()
-	if(LAZYLEN(reagents.reagent_volumes))
-		if(filling_states)
-			add_overlay(overlay_image(icon, "[base_icon][get_filling_state()]", reagents.get_color()))
+	if(LAZYLEN(reagents?.reagent_volumes) && filling_states)
+		add_overlay(overlay_image(icon, "[base_icon][get_filling_state()]", reagents.get_color()))
 
 
 ////////////////////////////////////////////////////////////////////////////////
