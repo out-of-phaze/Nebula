@@ -8,10 +8,10 @@
 #define FLUID_PUSH_THRESHOLD 20      // Amount of flow needed to push items.
 
 // Expects /turf for TURF.
-#define ADD_ACTIVE_FLUID_SOURCE(TURF)    if(!TURF.changing_turf) { SSfluids.water_sources[TURF] = TRUE; }
-#define REMOVE_ACTIVE_FLUID_SOURCE(TURF) SSfluids.water_sources -= TURF
-#define ADD_ACTIVE_FLUID(TURF)           if(!QDELETED(TURF)) { SSfluids.active_fluids[TURF] = TRUE; }
-#define REMOVE_ACTIVE_FLUID(TURF)        SSfluids.active_fluids -= TURF
+#define ADD_ACTIVE_FLUID_SOURCE(TURF)    if(!TURF.changing_turf && !TURF.is_water_source) { SSfluids.water_sources += TURF; TURF.is_water_source = TRUE; }
+#define REMOVE_ACTIVE_FLUID_SOURCE(TURF) SSfluids.water_sources -= TURF; TURF.is_water_source = FALSE
+#define ADD_ACTIVE_FLUID(TURF)           if(!QDELETED(TURF) && !TURF.is_fluid_active) { SSfluids.active_fluids += TURF; TURF.is_fluid_active = TRUE; }
+#define REMOVE_ACTIVE_FLUID(TURF)        SSfluids.active_fluids -= TURF; TURF.is_fluid_active = FALSE
 #define UPDATE_FLUID_BLOCKED_DIRS(TURF)                     \
 	if(isnull(TURF.fluid_blocked_dirs)) {                   \
 		TURF.fluid_blocked_dirs = 0;                        \
