@@ -70,7 +70,7 @@ SUBSYSTEM_DEF(overlays)
 		update_above()
 
 /proc/iconstate2appearance(icon, iconstate)
-	var/static/image/stringbro = new()
+	var/static/mutable_appearance/stringbro = new()
 	var/list/icon_states_cache = SSoverlays.overlay_icon_state_caches
 	var/list/cached_icon = icon_states_cache[icon]
 	if (cached_icon)
@@ -87,7 +87,7 @@ SUBSYSTEM_DEF(overlays)
 	return cached_appearance
 
 /proc/icon2appearance(icon)
-	var/static/image/iconbro = new()
+	var/static/mutable_appearance/iconbro = new()
 	var/list/icon_cache = SSoverlays.overlay_icon_cache
 	. = icon_cache[icon]
 	if (!.)
@@ -111,7 +111,7 @@ SUBSYSTEM_DEF(overlays)
 	}
 
 /atom/proc/build_appearance_list(atom/new_overlays)
-	var/static/image/appearance_bro = new
+	var/static/mutable_appearance/appearance_bro = new
 	if(islist(new_overlays))
 		if(null in new_overlays)
 			new_overlays -= new /list(length(new_overlays)) // Clears nulls from the list prior to appearancifying.
