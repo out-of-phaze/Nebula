@@ -117,7 +117,6 @@
 
 /datum/random_map/noise/cleanup()
 	for(var/i = 1 to smoothing_iterations)
-		var/list/next_map[limit_x*limit_y]
 		// simple box blur from http://amritamaz.net/blog/understanding-box-blur
 		// basically: we do two very fast one-dimensional blurs
 		var/total
@@ -127,32 +126,30 @@
 			var/cellone = map[TRANSLATE_COORD(1, y)]
 			var/celltwo = map[TRANSLATE_COORD(2, y)]
 			total = cellone + celltwo
-			next_map[TRANSLATE_COORD(1, y)] = round(total / 2)
+			map[TRANSLATE_COORD(1, y)] = round(total / 2)
 			// hardcoding x=2 also, to lower checks in the loop
 			// larger radius would need to also cover all x < 1 + blur_radius
 			total += map[TRANSLATE_COORD(3, y)]
-			next_map[TRANSLATE_COORD(2, y)] = round(total / 3)
+			map[TRANSLATE_COORD(2, y)] = round(total / 3)
 			for(var/x = 3 to limit_x-1) // should technically be 2 + blur_radius to limit_x - blur_radius
 				total -= map[TRANSLATE_COORD(x-2, y)] // x - blur_radius - 1
 				total += map[TRANSLATE_COORD(x+1, y)] // x + blur_radius
-				next_map[TRANSLATE_COORD(x, y)] = round(total / 3) // should technically be 2*blur_radius+1
+				map[TRANSLATE_COORD(x, y)] = round(total / 3) // should technically be 2*blur_radius+1
 		// now do the same in the x axis
-		map = next_map.Copy()
 		for(var/x = 1 to limit_x)
 			// see comments above
 			var/cellone = map[TRANSLATE_COORD(x, 1)]
 			var/celltwo = map[TRANSLATE_COORD(x, 2)]
 			total = cellone + celltwo
-			next_map[TRANSLATE_COORD(x, 1)] = round(total / 2)
+			map[TRANSLATE_COORD(x, 1)] = round(total / 2)
 			// hardcoding x=2 also, to lower checks in the loop
 			// larger radius would need to also cover all x < 1 + blur_radius
 			total += map[TRANSLATE_COORD(x, 3)]
-			next_map[TRANSLATE_COORD(x, 2)] = round(total / 3)
+			map[TRANSLATE_COORD(x, 2)] = round(total / 3)
 			for(var/y = 3 to limit_y-1)
 				total -= map[TRANSLATE_COORD(x, y-2)]
 				total += map[TRANSLATE_COORD(x, y+1)]
-				next_map[TRANSLATE_COORD(x, y)] = round(total / 3)
-		map = next_map
+				map[TRANSLATE_COORD(x, y)] = round(total / 3)
 
 	if(smooth_single_tiles)
 		for(var/x in 1 to limit_x - 1)
