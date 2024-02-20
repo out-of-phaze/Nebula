@@ -10,6 +10,8 @@
 	/// Will participate in external atmosphere simulation if the turf is outside and no zone is set.
 	var/external_atmosphere_participation = TRUE
 
+	var/queued_for_vis_contents_update = FALSE
+
 	var/turf_flags
 
 	var/holy = 0
@@ -78,6 +80,8 @@
 	var/last_flow_strength = 0
 	var/last_flow_dir = 0
 	var/atom/movable/fluid_overlay/fluid_overlay
+	var/is_water_source = FALSE
+	var/is_fluid_active = FALSE
 
 /turf/Initialize(mapload, ...)
 	. = null && ..()	// This weird construct is to shut up the 'parent proc not called' warning without disabling the lint for child types. We explicitly return an init hint so this won't change behavior.
