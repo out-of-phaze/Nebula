@@ -12,7 +12,7 @@
 	var/brute_regen = GET_CHEMICAL_EFFECT(src, CE_REGEN_BRUTE_REPLIKA)
 	if(burn_regen || brute_regen)
 		heal_organ_damage(brute_regen, burn_regen, affect_robo = TRUE)
-		UpdateDamageIcon(TRUE)
+		update_damage_overlays(TRUE)
 		return TRUE
 
 /decl/material/solid/plastifoam

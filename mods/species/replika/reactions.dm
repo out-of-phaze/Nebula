@@ -9,18 +9,18 @@
 /decl/chemical_reaction/plastifoam
 	name = "Polyurethane Repair Foam"
 	result = /decl/material/solid/plastifoam
-	required_reagents = list(/decl/material/solid/plastic = 3, /decl/material/liquid/foaming_agent = 1, /decl/material/liquid/acid/polyacid = 1)
+	required_reagents = list(/decl/material/solid/organic/plastic = 3, /decl/material/liquid/foaming_agent = 1, /decl/material/liquid/acid/polyacid = 1)
 	result_amount = 5
 
 /decl/chemical_reaction/koagulant_k
 	name = "Coagulant K"
 	result = /decl/material/solid/koagulant_k
 	// Quartz here is a stand-in for silica. If we ever add that, replace it.
-	required_reagents = list(/decl/material/solid/plastic = 1, /decl/material/liquid/brute_meds = 1, /decl/material/solid/quartz = 1)
+	required_reagents = list(/decl/material/solid/organic/plastic = 1, /decl/material/liquid/brute_meds = 1, /decl/material/solid/quartz = 1)
 	result_amount = 3
 
 /decl/chemical_reaction/klstim_n
 	name = "Circulatory Stimulant N"
 	result = /decl/material/liquid/klstim_n
-	required_reagents = list(/decl/material/solid/plastic = 1, /decl/material/liquid/adrenaline = 1, /decl/material/liquid/acid = 1)
+	required_reagents = list(/decl/material/solid/organic/plastic = 1, /decl/material/liquid/adrenaline = 1, /decl/material/liquid/acid = 1)
 	result_amount = 3
