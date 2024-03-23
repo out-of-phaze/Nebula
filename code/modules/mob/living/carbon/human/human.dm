@@ -472,7 +472,10 @@
 	var/decl/bodytype/old_bodytype = get_bodytype()
 	if(ispath(new_bodytype))
 		new_bodytype = GET_DECL(new_bodytype)
-	if(istype(new_bodytype) && (rebuild_body || old_bodytype != new_bodytype))
+	// No check to see if it's the same as our current one, because we don't have a 'mob bodytype' anymore
+	// just the torso. It's assumed if we call this we want a full regen.
+	if(istype(new_bodytype))
+		var/decl/bodytype/old_bodytype = get_bodytype()
 		old_bodytype?.on_lose(src)
 		mob_size = new_bodytype.mob_size
 		new_bodytype.create_missing_organs(src, fully_replace = rebuild_body)

@@ -8,13 +8,13 @@
 /decl/sprite_accessory/hair/replika/eulr
 	name = "EULR hair"
 	icon_state = "hair_volaju"
-	flags = HAIR_TIEABLE
+	accessory_flags = HAIR_LOSS_VULNERABLE | HAIR_TIEABLE
 	uid = "hair_eulr"
 
 /decl/sprite_accessory/hair/replika/arar
 	name = "ARAR hair"
 	icon_state = "hair_longfringe"
-	flags = HAIR_TIEABLE
+	accessory_flags = HAIR_LOSS_VULNERABLE | HAIR_TIEABLE
 	uid = "hair_arar"
 
 /decl/sprite_accessory/hair/replika/lstr
