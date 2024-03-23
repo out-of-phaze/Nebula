@@ -23,6 +23,10 @@
 		"a KNCR model", "a Kranich model"
 	)
 
+/decl/modpack/replika/pre_initialize()
+	. = ..()
+	SSmodpacks.default_submap_whitelisted_species |= SPECIES_REPLIKA
+
 /mob/living/carbon/human/replika
 	teleop = TRUE
 	var/decl/bodytype/replika/starting_bodytype

@@ -1,4 +1,4 @@
-/obj/item/organ/internal/posibrain/replika
+/obj/item/organ/internal/brain/robotic/replika
 	name = "neural matrix"
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "brain-prosthetic"
@@ -38,8 +38,8 @@
 /obj/item/organ/external/head/replika/do_install(mob/living/carbon/human/target, obj/item/organ/external/affected, in_place)
 	if(!(. = ..()))
 		return
-	events_repository.register(/decl/observ/death, owner, src, .proc/on_owner_death)
-	events_repository.register(/decl/observ/life, owner, src, .proc/on_owner_revive)
+	events_repository.register(/decl/observ/death, owner, src, PROC_REF(on_owner_death))
+	events_repository.register(/decl/observ/life, owner, src, PROC_REF(on_owner_revive))
 
 /obj/item/organ/external/head/replika/proc/on_owner_death()
 	glowing_eyes = FALSE
@@ -49,6 +49,6 @@
 
 /obj/item/organ/external/head/replika/do_uninstall(in_place, detach, ignore_children)
 	. = ..()
-	events_repository.unregister(/decl/observ/death, owner, src, .proc/on_owner_death)
-	events_repository.unregister(/decl/observ/life, owner, src, .proc/on_owner_revive)
+	events_repository.unregister(/decl/observ/death, owner, src, PROC_REF(on_owner_death))
+	events_repository.unregister(/decl/observ/life, owner, src, PROC_REF(on_owner_revive))
 	glowing_eyes = FALSE

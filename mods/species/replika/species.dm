@@ -27,7 +27,7 @@
 	name_plural =           "Replikas"
 	description =           "Artificial humanoids made of bioengineered flesh and created using Gestalt neural patterns."
 	cyborg_noun = null
-	base_prosthetics_model = null
+	base_external_prosthetics_model = null
 
 	blood_types = list(/decl/blood_type/oxidant)
 
@@ -49,9 +49,6 @@
 
 	preview_outfit = null
 
-	heat_discomfort_strings = list(
-		"You are dangerously close to overheating!"
-	)
 	unarmed_attacks = list(
 		/decl/natural_attack/stomp,
 		/decl/natural_attack/kick,
@@ -76,9 +73,11 @@
 		/decl/emote/exertion/synthetic/creak
 	)
 
-	hud_type = /datum/hud_data/replika
+	species_hud = /datum/hud_data/replika
 
-	traits = list(/decl/trait/biosynthetic_healing = TRAIT_LEVEL_EXISTS)
+	available_accessory_categories = list(
+		SAC_MARKINGS
+	)
 
 /decl/cultural_info/culture/synthetic/replika
 	name = "Replika"

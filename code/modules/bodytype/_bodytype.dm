@@ -242,6 +242,11 @@ var/global/list/bodytypes_by_category = list()
 	//how much damage to take from being flashed (if any)
 	var/eye_flash_burn              = 0
 
+	/// Verbs to add to the mob on bodytype gain
+	var/list/inherent_verbs
+	/// Traits to add to the mob on bodytype gain (associative list of TRAIT_NAME = TRAIT_LEVEL)
+	var/list/traits
+
 	// Bodytype temperature damage thresholds.
 	/// Cold damage level 1 below this point. -30 Celsium degrees
 	var/cold_level_1 = 243
