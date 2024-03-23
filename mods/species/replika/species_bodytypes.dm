@@ -8,21 +8,23 @@
 	modifier_string =     "biosynthetic"
 	material =            /decl/material/solid/fiberglass // todo: polyethylene
 	base_eye_color =      COLOR_COMMAND_BLUE
-	matter = list(
-		/decl/material/solid/meat = MATTER_AMOUNT_SECONDARY // todo: make bioengineered meat toxic to non-replika?
+	heat_discomfort_strings = list(
+		"You are dangerously close to overheating!"
 	)
-	appearance_flags = HAS_LIPS // eye, hair, and skin color are all fixed
+	matter = list(
+		/decl/material/solid/organic/meat = MATTER_AMOUNT_SECONDARY // todo: make bioengineered meat toxic to non-replika?
+	)
 	override_limb_types = list(BP_HEAD = /obj/item/organ/external/head/replika)
 	has_organ = list(
-		BP_POSIBRAIN = /obj/item/organ/internal/posibrain/replika,
-		BP_EYES =      /obj/item/organ/internal/eyes/robot/replika,
-		BP_CELL =      /obj/item/organ/internal/cell,
-		BP_HEART =     /obj/item/organ/internal/heart/replika,
-		BP_LUNGS =     /obj/item/organ/internal/lungs/replika,
-		BP_STOMACH =   /obj/item/organ/internal/stomach/replika,
+		BP_BRAIN =   /obj/item/organ/internal/brain/robotic/replika,
+		BP_EYES =    /obj/item/organ/internal/eyes/robot/replika,
+		BP_CELL =    /obj/item/organ/internal/cell,
+		BP_HEART =   /obj/item/organ/internal/heart/replika,
+		BP_LUNGS =   /obj/item/organ/internal/lungs/replika,
+		BP_STOMACH = /obj/item/organ/internal/stomach/replika,
 	)
 	vital_organs = list(
-		BP_POSIBRAIN,
+		BP_BRAIN,
 		BP_CELL
 	)
 	var/nickname
@@ -51,7 +53,11 @@
 	nickname =        "Eule"
 	modifier_string = "\improper EULR model"
 	icon_base =       'mods/species/replika/icons/eulr/body.dmi'
-	default_h_style = /decl/sprite_accessory/hair/replika/eulr
+	default_sprite_accessories = list(
+		SAC_HAIR = list(
+			/decl/sprite_accessory/hair/replika/eulr = "#000000"
+		)
+	)
 
 /decl/bodytype/replika/arar
 	name =            "ARAR"
@@ -59,7 +65,11 @@
 	nickname =        "Ara"
 	modifier_string = "\improper ARAR model"
 	icon_base =       'mods/species/replika/icons/arar/body.dmi'
-	default_h_style = /decl/sprite_accessory/hair/replika/arar
+	default_sprite_accessories = list(
+		SAC_HAIR = list(
+			/decl/sprite_accessory/hair/replika/arar = "#000000"
+		)
+	)
 	inherent_verbs =  list(/mob/living/proc/ventcrawl)
 	traits =          list(/decl/trait/biosynthetic_healing = REPLIKA_EARLY_GEN)
 
@@ -69,7 +79,11 @@
 	nickname =        "Elster"
 	modifier_string = "\improper LSTR model"
 	icon_base =       'mods/species/replika/icons/lstr/body.dmi'
-	default_h_style = /decl/sprite_accessory/hair/replika/lstr
+	default_sprite_accessories = list(
+		SAC_HAIR = list(
+			/decl/sprite_accessory/hair/replika/lstr = "#000000"
+		)
+	)
 
 /decl/bodytype/replika/star
 	name =            "STAR"
@@ -77,7 +91,11 @@
 	nickname =        "Starling"
 	modifier_string = "\improper STAR model"
 	icon_base =       'mods/species/replika/icons/star/body.dmi'
-	default_h_style = /decl/sprite_accessory/hair/replika/star
+	default_sprite_accessories = list(
+		SAC_HAIR = list(
+			/decl/sprite_accessory/hair/replika/star = "#000000"
+		)
+	)
 	eye_offset =      2
 
 /decl/bodytype/replika/star/Initialize()
@@ -100,16 +118,22 @@
 	nickname =        "Kolibri"
 	modifier_string = "\improper KLBR model"
 	icon_base =       'mods/species/replika/icons/klbr/body.dmi'
-	default_h_style = /decl/sprite_accessory/hair/replika/klbr
+	default_sprite_accessories = list(
+		SAC_HAIR = list(
+			/decl/sprite_accessory/hair/replika/klbr = "#000000"
+		)
+	)
 	eye_offset =     -1
 
+// TODO: Give Kolibris (and Falkes) an organ for their bioresonance
 /decl/bodytype/replika/klbr/on_gain(mob/living/carbon/human/organism)
 	. = ..()
 	organism.set_psi_rank(PSI_COERCION, 2)
 
 /decl/bodytype/replika/klbr/on_lose(mob/living/carbon/human/organism)
 	. = ..()
-	QDEL_NULL(organism.psi)
+	var/datum/ability_handler/psionics/psi = organism.get_ability_handler(/datum/ability_handler/psionics)
+	qdel(psi)
 
 /decl/bodytype/replika/klbr/Initialize()
 	. = ..()
