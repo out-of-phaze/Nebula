@@ -82,6 +82,7 @@
 	detail_state = null
 
 /obj/item/chems/hypospray/autoinjector/klstim/populate_reagents()
+	. = ..()
 	reagents.add_reagent(/decl/material/liquid/klstim_n, reagents.maximum_volume)
 
 /obj/item/chems/patch
@@ -94,7 +95,7 @@
 	possible_transfer_amounts = null
 	w_class = ITEM_SIZE_TINY
 	volume = 5
-	material = /decl/material/solid/paper
+	material = /decl/material/solid/organic/paper
 	atom_flags = 0 // not open, temperature can change
 	var/start_sealed = TRUE // if sealed, it must be torn before it can be used
 
@@ -110,12 +111,12 @@
 	else
 		icon_state = get_world_inventory_state()
 
-/obj/item/chems/patch/attack(mob/living/carbon/victim, mob/user, def_zone)
+/obj/item/chems/patch/attack(mob/living/victim, mob/user, def_zone)
 	if(!ATOM_IS_OPEN_CONTAINER(src))
 		to_chat(user, SPAN_NOTICE("You need to open \the [src] first!"))
 		return TRUE
 	var/obj/item/organ/external/targeted_organ = GET_EXTERNAL_ORGAN(victim, def_zone)
-	if(!iscarbon(victim))
+	if(!isliving(victim))
 		return TRUE
 	if(!reagents?.total_volume)
 		to_chat(user, SPAN_NOTICE("\The [src] has no medicine in it!"))

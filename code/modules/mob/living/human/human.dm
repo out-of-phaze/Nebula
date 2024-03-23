@@ -469,7 +469,7 @@
 	var/decl/bodytype/old_bodytype = get_bodytype()
 	if(ispath(new_bodytype))
 		new_bodytype = GET_DECL(new_bodytype)
-	if(!istype(new_bodytype) || (!rebuild_body && old_bodytype == new_bodytype))
+	if(!istype(new_bodytype))
 		return FALSE
 
 	old_bodytype?.on_lose(src)
