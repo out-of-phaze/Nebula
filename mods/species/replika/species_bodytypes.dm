@@ -41,6 +41,7 @@
 	. = ..()
 	for(var/trait in traits)
 		organism.SetTrait(trait, traits[trait])
+	organism.reset_hair()
 
 /decl/bodytype/replika/on_lose(mob/living/carbon/human/organism)
 	. = ..()
@@ -101,15 +102,15 @@
 /decl/bodytype/replika/star/Initialize()
 	. = ..()
 	equip_adjust = list(
-		BP_L_HAND =           list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
-		BP_R_HAND =           list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
-		slot_head_str =       list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
-		slot_wear_mask_str =  list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
-		slot_w_uniform_str =  list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
-		slot_wear_suit_str =  list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
-		slot_back_str =       list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
-		slot_belt_str =       list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
-		slot_underpants_str = list("[NORTH]" = list("x" = 0, "y" = 2), "[EAST]" = list("x" = 0, "y" = 2), "[SOUTH]" = list("x" = 0, "y" = 2), "[WEST]" = list("x" = 0, "y" = 2)),
+		BP_L_HAND =           list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list(0, 2), "[WEST]" = list(0, 2)),
+		BP_R_HAND =           list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list(0, 2), "[WEST]" = list(0, 2)),
+		slot_head_str =       list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list(0, 2), "[WEST]" = list(0, 2)),
+		slot_wear_mask_str =  list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list(0, 2), "[WEST]" = list(0, 2)),
+		slot_w_uniform_str =  list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list(0, 2), "[WEST]" = list(0, 2)),
+		slot_wear_suit_str =  list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list(0, 2), "[WEST]" = list(0, 2)),
+		slot_back_str =       list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list(0, 2), "[WEST]" = list(0, 2)),
+		slot_belt_str =       list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list(0, 2), "[WEST]" = list(0, 2)),
+		slot_underpants_str = list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list(0, 2), "[WEST]" = list(0, 2)),
 	)
 
 /decl/bodytype/replika/klbr
@@ -138,13 +139,13 @@
 /decl/bodytype/replika/klbr/Initialize()
 	. = ..()
 	equip_adjust = list(
-		BP_L_HAND =           list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
-		BP_R_HAND =           list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
-		slot_head_str =       list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
-		slot_wear_mask_str =  list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
-		slot_w_uniform_str =  list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
-		slot_wear_suit_str =  list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
-		slot_back_str =       list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
-		slot_belt_str =       list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
-		slot_underpants_str = list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -1), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -1)),
+		BP_L_HAND =           list("[NORTH]" = list(0, -1), "[EAST]" = list(0, -1), "[SOUTH]" = list(0, -1), "[WEST]" = list(0, -1)),
+		BP_R_HAND =           list("[NORTH]" = list(0, -1), "[EAST]" = list(0, -1), "[SOUTH]" = list(0, -1), "[WEST]" = list(0, -1)),
+		slot_head_str =       list("[NORTH]" = list(0, -1), "[EAST]" = list(0, -1), "[SOUTH]" = list(0, -1), "[WEST]" = list(0, -1)),
+		slot_wear_mask_str =  list("[NORTH]" = list(0, -1), "[EAST]" = list(0, -1), "[SOUTH]" = list(0, -1), "[WEST]" = list(0, -1)),
+		slot_w_uniform_str =  list("[NORTH]" = list(0, -1), "[EAST]" = list(0, -1), "[SOUTH]" = list(0, -1), "[WEST]" = list(0, -1)),
+		slot_wear_suit_str =  list("[NORTH]" = list(0, -1), "[EAST]" = list(0, -1), "[SOUTH]" = list(0, -1), "[WEST]" = list(0, -1)),
+		slot_back_str =       list("[NORTH]" = list(0, -1), "[EAST]" = list(0, -1), "[SOUTH]" = list(0, -1), "[WEST]" = list(0, -1)),
+		slot_belt_str =       list("[NORTH]" = list(0, -1), "[EAST]" = list(0, -1), "[SOUTH]" = list(0, -1), "[WEST]" = list(0, -1)),
+		slot_underpants_str = list("[NORTH]" = list(0, -1), "[EAST]" = list(0, -1), "[SOUTH]" = list(0, -1), "[WEST]" = list(0, -1)),
 	)
