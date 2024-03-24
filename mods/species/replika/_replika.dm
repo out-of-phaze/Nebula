@@ -72,3 +72,6 @@
 
 /mob/living/carbon/human/replika/star
 	starting_bodytype = /decl/bodytype/replika/star
+
+/mob/living/carbon/human/replika/klbr
+	starting_bodytype = /decl/bodytype/replika/klbr
