@@ -181,7 +181,7 @@
 		return TRUE
 
 /obj/item/chems/patch/on_reagent_change()
-	if(reagents.total_volume == 0)
+	if(reagents?.total_volume == 0)
 		addtimer(CALLBACK(src, /atom/proc/physically_destroyed), 0) // I hate this, but we need it to happen after other procs finish running.
 	else
 		..()
@@ -192,7 +192,7 @@
 	for(var/key in matter)
 		mat = GET_DECL(key)
 		mat.place_cuttings(our_turf, matter[key] % SHEET_MATERIAL_AMOUNT)
-	if(reagents.total_volume > 0) // destroyed by something other than being used
+	if(reagents?.total_volume > 0) // destroyed by something other than being used
 		reagents.splash_turf(our_turf, reagents.total_volume)
 	return ..()
 
