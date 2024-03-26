@@ -27,43 +27,18 @@
 	available_bodytypes = list(/decl/bodytype/octopus)
 	meat_type = /obj/item/chems/food/fish/octopus
 	age_descriptor = /datum/appearance_descriptor/age/octopus
-	slowdown = 2
 	unarmed_attacks = list(
-		/decl/natural_attack/punch/tentacle, 
+		/decl/natural_attack/punch/tentacle,
 		/decl/natural_attack/bite
 	)
 
 	blood_types = list(/decl/blood_type/octopus)
 	flesh_color = "#dd7b68"
 
-	species_flags = SPECIES_FLAG_NO_SCAN | SPECIES_FLAG_NO_SLIP
+	species_flags = SPECIES_FLAG_NO_SLIP
 	spawn_flags = SPECIES_CAN_JOIN
-	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR
 
-	has_organ = list(
-		BP_HEART =    /obj/item/organ/internal/heart/octopus,
-		BP_LUNGS =    /obj/item/organ/internal/lungs/octopus,
-		BP_LIVER =    /obj/item/organ/internal/liver,
-		BP_KIDNEYS =  /obj/item/organ/internal/kidneys,
-		BP_BRAIN =    /obj/item/organ/internal/brain,
-		BP_EYES =     /obj/item/organ/internal/eyes/octopus,
-		)
-
-	has_limbs = list(
-		BP_CHEST =  list("path" = /obj/item/organ/external/chest/unbreakable/octopus),
-		BP_GROIN =  list("path" = /obj/item/organ/external/groin/unbreakable),
-		BP_HEAD =   list("path" = /obj/item/organ/external/head/unbreakable/octopus),
-		BP_L_ARM =  list("path" = /obj/item/organ/external/arm/unbreakable/octopus),
-		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right/unbreakable/octopus),
-		BP_L_LEG =  list("path" = /obj/item/organ/external/leg/unbreakable/octopus),
-		BP_R_LEG =  list("path" = /obj/item/organ/external/leg/right/unbreakable/octopus),
-		BP_L_HAND = list("path" = /obj/item/organ/external/hand/unbreakable/octopus),
-		BP_R_HAND = list("path" = /obj/item/organ/external/hand/right/unbreakable/octopus),
-		BP_L_FOOT = list("path" = /obj/item/organ/external/foot/unbreakable/octopus),
-		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right/unbreakable/octopus)
-		)
-
-	hud_type = /datum/hud_data/octopus
+	species_hud = /datum/hud_data/octopus
 
 	var/list/camo_last_move_by_mob = list()
 	var/list/camo_last_alpha_by_mob = list()
@@ -92,8 +67,8 @@
 	camo_last_alpha_by_mob[H] = 255
 	camo_last_move_by_mob[H] = world.time
 
-/decl/species/octopus/get_slowdown(var/mob/living/carbon/human/H)
-	return (H && H.loc && H.loc.is_flooded() ? -1 : slowdown)
+/decl/species/octopus/handle_movement_delay_special(var/mob/living/carbon/human/H)
+	return (H && H.loc && H.loc.is_flooded() ? -3 : 0)
 
 /decl/species/octopus/handle_post_move(var/mob/living/carbon/human/H)
 	..()
@@ -143,9 +118,6 @@
 
 /obj/item/organ/internal/lungs/aquatic/can_drown()
 	return FALSE
-
-/obj/item/organ/internal/eyes/octopus
-	eye_icon = 'mods/signal/icons/species/octopus/eyes.dmi'
 
 /obj/item/organ/external/head/unbreakable/octopus
 	joint = "spine"
@@ -203,3 +175,29 @@
 	icon_deformed =     'mods/signal/icons/species/octopus/body.dmi'
 	icon_template =     'mods/signal/icons/species/octopus/template.dmi'
 	damage_overlays =   'mods/signal/icons/masks/dam_octopus.dmi'
+	movement_slowdown = 2
+	body_flags =        BODY_FLAG_NO_DNA
+	appearance_flags =  HAS_SKIN_COLOR | HAS_EYE_COLOR
+	eye_icon =          'mods/signal/icons/species/octopus/eyes.dmi'
+	has_organ = list(
+		BP_HEART =    /obj/item/organ/internal/heart/octopus,
+		BP_LUNGS =    /obj/item/organ/internal/lungs/octopus,
+		BP_LIVER =    /obj/item/organ/internal/liver,
+		BP_KIDNEYS =  /obj/item/organ/internal/kidneys,
+		BP_BRAIN =    /obj/item/organ/internal/brain,
+		BP_EYES =     /obj/item/organ/internal/eyes,
+	)
+
+	has_limbs = list(
+		BP_CHEST =  list("path" = /obj/item/organ/external/chest/unbreakable/octopus),
+		BP_GROIN =  list("path" = /obj/item/organ/external/groin/unbreakable),
+		BP_HEAD =   list("path" = /obj/item/organ/external/head/unbreakable/octopus),
+		BP_L_ARM =  list("path" = /obj/item/organ/external/arm/unbreakable/octopus),
+		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right/unbreakable/octopus),
+		BP_L_LEG =  list("path" = /obj/item/organ/external/leg/unbreakable/octopus),
+		BP_R_LEG =  list("path" = /obj/item/organ/external/leg/right/unbreakable/octopus),
+		BP_L_HAND = list("path" = /obj/item/organ/external/hand/unbreakable/octopus),
+		BP_R_HAND = list("path" = /obj/item/organ/external/hand/right/unbreakable/octopus),
+		BP_L_FOOT = list("path" = /obj/item/organ/external/foot/unbreakable/octopus),
+		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right/unbreakable/octopus)
+	)

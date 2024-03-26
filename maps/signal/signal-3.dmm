@@ -3,18 +3,18 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations)
 "az" = (
 /obj/structure/ladder,
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations/east_maint)
 "aE" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/north)
 "aL" = (
 /obj/structure/catwalk,
@@ -24,13 +24,13 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations)
 "aP" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west)
 "bn" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northwest_central)
 "bB" = (
 /obj/structure/ladder,
@@ -40,39 +40,39 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations/west_maint)
 "bM" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east)
 "bN" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/north)
 "bV" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/east)
 "cG" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/west_maint)
 "cQ" = (
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northwest_central)
 "cR" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/south_maint)
 "dE" = (
 /obj/structure/cable{
@@ -87,24 +87,24 @@
 /obj/structure/railing/mapped{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/east_maint)
 "ep" = (
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south_maint)
 "eq" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east)
 "ex" = (
 /obj/structure/ladder,
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations/south_maint)
 "fa" = (
 /obj/machinery/light/small,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east)
 "fk" = (
 /obj/structure/cable{
@@ -116,14 +116,14 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/east_maint)
 "fr" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/west)
 "fv" = (
 /obj/structure/cable{
@@ -132,14 +132,14 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southwest_central)
 "fy" = (
 /obj/machinery/light,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southwest_central)
 "fJ" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/west_maint)
 "gE" = (
 /obj/structure/cable{
@@ -148,7 +148,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southwest_central)
 "gY" = (
 /obj/machinery/power/apc{
@@ -159,19 +159,19 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southeast_central)
 "hf" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa_exterior/upper)
 "hm" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east)
 "hz" = (
 /obj/structure/cable{
@@ -180,7 +180,7 @@
 /obj/structure/railing/mapped{
 	dir = 1
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/north_maint)
 "hA" = (
 /obj/structure/cable{
@@ -189,16 +189,16 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west)
 "hH" = (
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/west_maint)
 "ih" = (
-/turf/simulated/floor,
+/turf/floor,
 /area/europa_exterior/upper)
 "iH" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east_central)
 "jl" = (
 /obj/structure/cable{
@@ -207,28 +207,28 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east_central)
 "jN" = (
 /obj/structure/lattice,
 /obj/structure/cable{
 	icon_state = "32-1"
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations/south_maint)
 "kh" = (
 /obj/machinery/door/airlock/glass/civilian,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southeast_central)
 "kF" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south)
 "kK" = (
 /obj/structure/ladder,
@@ -236,7 +236,7 @@
 	icon_state = "16-0"
 	},
 /obj/structure/cable,
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations/north_maint)
 "kX" = (
 /obj/structure/cable{
@@ -245,16 +245,16 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west_central)
 "ma" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations)
 "mc" = (
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations/south_maint)
 "mo" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa_exterior/upper)
 "ne" = (
 /obj/machinery/power/apc{
@@ -265,24 +265,24 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/east_maint)
 "nj" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/northwest_central)
 "nv" = (
 /obj/effect/wallframe_spawn/no_grille,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations)
 "nJ" = (
 /obj/machinery/door/airlock/glass/civilian,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northwest_central)
 "nM" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/south)
 "nZ" = (
 /obj/structure/cable{
@@ -296,58 +296,58 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south_maint)
 "oA" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/west_central)
 "oC" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southwest_central)
 "oV" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west)
 "pC" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northeast_central)
 "pJ" = (
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south_maint)
 "pK" = (
 /obj/abstract/level_data_spawner/signal/icecaves,
-/turf/exterior/wall/ice,
+/turf/wall/natural/ice,
 /area/europa_exterior/upper)
 "rr" = (
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/north_maint)
 "ru" = (
 /obj/machinery/door/airlock/glass/civilian,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northwest_central)
 "rS" = (
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southeast_central)
 "tI" = (
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/north_maint)
 "tS" = (
 /obj/structure/cable{
@@ -356,17 +356,17 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations)
 "ua" = (
 /obj/structure/lattice,
 /obj/structure/cable{
 	icon_state = "32-2"
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations/north_maint)
 "uo" = (
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south_maint)
 "uz" = (
 /obj/structure/cable{
@@ -375,13 +375,13 @@
 /obj/structure/railing/mapped{
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/west_maint)
 "uS" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/south)
 "uX" = (
 /obj/structure/catwalk,
@@ -391,7 +391,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations)
 "vi" = (
 /obj/machinery/power/apc{
@@ -402,13 +402,13 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west_central)
 "vp" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east_central)
 "vF" = (
 /obj/structure/catwalk,
@@ -416,10 +416,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations)
 "wh" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northeast_central)
 "ww" = (
 /obj/structure/cable{
@@ -428,30 +428,30 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west_central)
 "wD" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southeast_central)
 "wU" = (
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
 /obj/structure/railing/mapped,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south_maint)
 "xp" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/south)
 "xq" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/south)
 "xH" = (
 /obj/machinery/light,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northeast_central)
 "xK" = (
 /obj/structure/cable{
@@ -460,65 +460,65 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northwest_central)
 "xM" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/south)
 "xV" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations)
 "ym" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southwest_central)
 "yF" = (
 /obj/machinery/door/airlock/glass/civilian,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations)
 "yY" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa_exterior/upper)
 "ze" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west_central)
 "zf" = (
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northeast_central)
 "zp" = (
 /obj/abstract/landmark/test/space_turf,
 /turf/unsimulated/mask/flooded,
 /area/europa_exterior/upper)
 "zv" = (
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations/north_maint)
 "zy" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/east_central)
 "zz" = (
 /obj/machinery/door/airlock/glass/civilian,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/north)
 "zB" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south_maint)
 "zL" = (
 /obj/structure/cable{
@@ -527,30 +527,30 @@
 /obj/structure/railing/mapped{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/east_maint)
 "zV" = (
 /obj/machinery/door/airlock/glass/civilian,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/south)
 "Ac" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped,
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations)
 "AA" = (
 /obj/machinery/door/airlock/glass/civilian,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west_central)
 "AF" = (
 /obj/machinery/door/airlock/glass/civilian,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east)
 "AN" = (
 /obj/structure/cable{
@@ -559,15 +559,15 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northwest_central)
 "AQ" = (
 /obj/machinery/door/airlock/glass/civilian,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/south)
 "AU" = (
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/north_maint)
 "Bc" = (
 /obj/structure/cable{
@@ -576,13 +576,13 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northeast_central)
 "BH" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/north)
 "BI" = (
 /obj/structure/cable{
@@ -595,28 +595,28 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south)
 "BS" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/north_maint)
 "Cd" = (
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southwest_central)
 "Ck" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/southwest_central)
 "Cm" = (
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations)
 "CA" = (
 /obj/machinery/power/apc{
@@ -627,13 +627,13 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southwest_central)
 "CI" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southeast_central)
 "Dq" = (
 /obj/machinery/power/apc{
@@ -644,48 +644,48 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east_central)
 "Ds" = (
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/north_maint)
 "Dy" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northwest_central)
 "Ea" = (
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa_exterior/upper)
 "Eb" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southwest_central)
 "Ec" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south_maint)
 "Fl" = (
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/west_maint)
 "Fy" = (
 /obj/machinery/light/small,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west)
 "FO" = (
 /obj/structure/catwalk,
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations)
 "Gm" = (
 /obj/structure/cable{
@@ -698,23 +698,23 @@
 	icon_state = "4-8"
 	},
 /obj/structure/railing/mapped,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south_maint)
 "Gw" = (
 /obj/machinery/door/airlock/glass/civilian,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northeast_central)
 "GA" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/east_maint)
 "GP" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south_maint)
 "GX" = (
 /obj/structure/cable{
@@ -723,69 +723,69 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southeast_central)
 "Ht" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southeast_central)
 "Hx" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/north_maint)
 "HL" = (
-/turf/exterior/wall/ice,
+/turf/wall/natural/ice,
 /area/europa_exterior/upper)
 "Ij" = (
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south_maint)
 "IB" = (
 /obj/machinery/light,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southeast_central)
 "IH" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southeast_central)
 "Ji" = (
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south_maint)
 "Jo" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northeast_central)
 "Jq" = (
 /obj/machinery/door/airlock/glass/civilian,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east_central)
 "JP" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west)
 "JQ" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/east)
 "Kq" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/west_maint)
 "Kx" = (
 /obj/structure/cable{
@@ -794,67 +794,67 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northeast_central)
 "KI" = (
 /obj/structure/lattice,
 /obj/structure/cable{
 	icon_state = "32-4"
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations/west_maint)
 "KO" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/west)
 "KW" = (
 /obj/machinery/door/airlock/glass/civilian,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations)
 "Le" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northwest_central)
 "Lj" = (
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/west_maint)
 "Ll" = (
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
 /obj/structure/railing/mapped,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/south_maint)
 "Lr" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/north)
 "LD" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northeast_central)
 "Mp" = (
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa_exterior/upper)
 "Mu" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west_central)
 "Mw" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northwest_central)
 "ML" = (
 /turf/unsimulated/mask/flooded,
@@ -863,7 +863,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/south)
 "NB" = (
 /obj/structure/catwalk,
@@ -871,37 +871,37 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations)
 "NN" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/north_maint)
 "NQ" = (
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations/west_maint)
 "OG" = (
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west_maint)
 "Pa" = (
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southwest_central)
 "Pb" = (
 /obj/machinery/door/airlock/glass/civilian,
 /obj/machinery/door/airlock/glass/civilian,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/north)
 "Pj" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west_central)
 "PN" = (
 /obj/structure/cable{
@@ -916,7 +916,7 @@
 /obj/structure/railing/mapped{
 	dir = 1
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/north_maint)
 "PZ" = (
 /obj/machinery/power/apc{
@@ -924,7 +924,7 @@
 	pixel_y = -24
 	},
 /obj/structure/cable,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northwest_central)
 "Qc" = (
 /obj/machinery/power/apc{
@@ -932,13 +932,13 @@
 	pixel_y = -24
 	},
 /obj/structure/cable,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northeast_central)
 "Qg" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west)
 "Qq" = (
 /obj/structure/cable{
@@ -947,20 +947,20 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east)
 "QQ" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/north)
 "Rg" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations)
 "RB" = (
 /obj/machinery/power/apc{
@@ -971,17 +971,17 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/west_maint)
 "RM" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east_central)
 "Sm" = (
 /obj/machinery/light/small,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/north)
 "Sv" = (
 /obj/structure/cable{
@@ -992,13 +992,13 @@
 	pixel_y = -24
 	},
 /obj/structure/cable,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/north_maint)
 "Sx" = (
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east_central)
 "SA" = (
 /obj/machinery/power/apc{
@@ -1009,33 +1009,33 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations)
 "SZ" = (
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations)
 "Tg" = (
 /obj/structure/lattice,
 /obj/structure/cable{
 	icon_state = "32-8"
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations/east_maint)
 "Ty" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations)
 "TN" = (
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations)
 "Vr" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/southeast_central)
 "VA" = (
 /obj/structure/cable{
@@ -1050,7 +1050,7 @@
 /obj/structure/railing/mapped{
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/west_maint)
 "VC" = (
 /obj/structure/cable{
@@ -1059,29 +1059,29 @@
 /obj/structure/railing/mapped{
 	dir = 1
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/north_maint)
 "VI" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/east_maint)
 "VO" = (
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations/east_maint)
 "VX" = (
 /obj/machinery/door/airlock/glass/civilian,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east)
 "Wh" = (
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northwest_central)
 "Wl" = (
 /obj/structure/cable{
@@ -1093,7 +1093,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/west_maint)
 "Wq" = (
 /obj/structure/cable{
@@ -1102,56 +1102,56 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/south)
 "Wu" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/west_central)
 "Xe" = (
 /obj/machinery/light,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/east_central)
 "Xo" = (
 /obj/machinery/light,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/northwest_central)
 "XB" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/operations/northeast_central)
 "XL" = (
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/north_maint)
 "XQ" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/operations/southwest_central)
 "Yj" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/operations)
 "YM" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/east_maint)
 "ZL" = (
 /obj/structure/railing/mapped{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/north_maint)
 "ZZ" = (
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/operations/east_maint)
 
 (1,1,1) = {"

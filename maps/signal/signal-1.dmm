@@ -4,11 +4,11 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/terminal,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "bb" = (
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "by" = (
 /obj/structure/ladder,
@@ -18,14 +18,14 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "bC" = (
 /obj/machinery/door/airlock/external/bolted,
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "bO" = (
 /obj/structure/cable/yellow{
@@ -54,16 +54,16 @@
 /area/europa_exterior)
 "dy" = (
 /obj/structure/closet/emergency_europa,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "dE" = (
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "eH" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "fv" = (
 /obj/abstract/level_data_spawner/signal/seafloor,
@@ -74,7 +74,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "fN" = (
 /obj/structure/cable/yellow{
@@ -90,13 +90,13 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "fU" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "gY" = (
 /obj/structure/cable/yellow{
@@ -111,7 +111,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "ik" = (
 /obj/structure/cable/yellow{
@@ -121,7 +121,7 @@
 /area/europa_exterior)
 "iF" = (
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "je" = (
 /obj/structure/ladder,
@@ -129,7 +129,7 @@
 /obj/structure/cable{
 	icon_state = "16-0"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "jT" = (
 /obj/machinery/power/apc{
@@ -143,7 +143,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "kf" = (
 /obj/machinery/light/small{
@@ -152,22 +152,22 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "km" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "kK" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "la" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/pillar)
 "lv" = (
 /obj/structure/cable/yellow{
@@ -180,7 +180,7 @@
 /area/europa_exterior)
 "lx" = (
 /obj/structure/closet/emergency_europa,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "lz" = (
 /obj/effect/geyser,
@@ -194,7 +194,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/hygiene/drain,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "lS" = (
 /obj/structure/cable/yellow{
@@ -207,11 +207,11 @@
 /area/europa_exterior)
 "lU" = (
 /obj/structure/closet/emergency_europa,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "mu" = (
 /obj/machinery/light/small/red,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "mx" = (
 /obj/effect/geyser,
@@ -224,13 +224,13 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "nF" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "nK" = (
 /obj/structure/cable/yellow{
@@ -245,7 +245,7 @@
 /turf/exterior/concrete/flooded,
 /area/europa_exterior)
 "nO" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/pillar/south)
 "oB" = (
 /obj/machinery/alarm{
@@ -254,27 +254,27 @@
 	pixel_y = -24
 	},
 /obj/structure/hygiene/drain,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "oK" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "oO" = (
 /obj/machinery/door/airlock/external/bolted,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "rk" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "rv" = (
 /obj/machinery/light/small/red,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "rB" = (
 /obj/machinery/geothermal,
@@ -286,13 +286,13 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "rS" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "rZ" = (
 /obj/structure/cable/yellow{
@@ -307,17 +307,17 @@
 	pixel_x = -24
 	},
 /obj/structure/hygiene/drain,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "tq" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /obj/structure/hygiene/drain,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "tR" = (
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "tW" = (
 /obj/effect/geyser,
@@ -328,7 +328,7 @@
 /turf/exterior/seafloor/flooded,
 /area/europa_exterior)
 "uq" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/pillar/west)
 "uu" = (
 /obj/machinery/power/apc{
@@ -341,7 +341,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "uG" = (
 /turf/exterior/seafloor/flooded,
@@ -350,13 +350,13 @@
 /obj/machinery/light/small/red{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "wj" = (
 /obj/machinery/light/small/red{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "wo" = (
 /obj/machinery/power/apc{
@@ -370,13 +370,13 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "wU" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "xb" = (
 /obj/structure/ladder,
@@ -386,7 +386,7 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "ya" = (
 /obj/structure/cable/yellow{
@@ -401,7 +401,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "Ad" = (
 /obj/structure/cable/yellow{
@@ -410,7 +410,7 @@
 /obj/machinery/power/terminal{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "Au" = (
 /obj/structure/cable/yellow{
@@ -431,14 +431,14 @@
 /obj/machinery/power/terminal{
 	dir = 1
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "Bl" = (
 /obj/machinery/door/airlock/external/bolted,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "Bz" = (
 /obj/machinery/alarm{
@@ -447,25 +447,25 @@
 	pixel_x = 24
 	},
 /obj/structure/hygiene/drain,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "BH" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/structure/hygiene/drain,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "Ca" = (
 /obj/machinery/door/airlock/external/bolted,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "Ck" = (
 /obj/machinery/power/smes/buildable/max_cap_in_out,
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "Cs" = (
 /turf/exterior/concrete/flooded,
@@ -474,7 +474,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "DE" = (
 /obj/machinery/geothermal,
@@ -485,7 +485,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "DU" = (
 /obj/structure/cable/yellow{
@@ -502,10 +502,10 @@
 "Ec" = (
 /obj/machinery/power/smes/buildable/max_cap_in_out,
 /obj/structure/cable,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "Ep" = (
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "EA" = (
 /obj/structure/cable/yellow{
@@ -524,7 +524,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "EO" = (
 /obj/machinery/light/small{
@@ -533,13 +533,13 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "Ff" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "Fp" = (
 /obj/structure/cable/yellow{
@@ -569,7 +569,7 @@
 /turf/exterior/concrete/flooded,
 /area/europa_exterior)
 "Gn" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/pillar/east)
 "Hg" = (
 /obj/machinery/geothermal,
@@ -583,7 +583,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/hygiene/drain,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "Jc" = (
 /obj/structure/cable/yellow{
@@ -605,11 +605,11 @@
 /area/europa_exterior)
 "JE" = (
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "Kd" = (
 /obj/machinery/door/airlock/external/bolted,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "Lw" = (
 /obj/structure/cable/yellow{
@@ -625,11 +625,11 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "LM" = (
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "Mi" = (
 /obj/structure/cable/yellow{
@@ -648,19 +648,19 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "MH" = (
 /obj/machinery/light/small/red{
 	dir = 1
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "Ne" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "Ng" = (
 /obj/structure/cable/yellow{
@@ -679,7 +679,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "Nk" = (
 /obj/machinery/alarm{
@@ -687,23 +687,23 @@
 	pixel_y = 24
 	},
 /obj/structure/hygiene/drain,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "Ns" = (
 /obj/structure/closet/emergency_europa,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "NM" = (
 /obj/machinery/light/small/red{
 	dir = 1
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "Om" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "Pk" = (
 /obj/structure/cable/yellow{
@@ -724,13 +724,13 @@
 /turf/exterior/concrete/flooded,
 /area/europa_exterior)
 "PH" = (
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "PO" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "Qb" = (
 /obj/machinery/power/apc{
@@ -742,7 +742,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "QI" = (
 /obj/structure/cable/yellow{
@@ -757,13 +757,13 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "RV" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "Sv" = (
 /obj/structure/cable/yellow{
@@ -785,7 +785,7 @@
 /area/europa_exterior)
 "Tf" = (
 /obj/machinery/door/airlock/external/bolted,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "TW" = (
 /obj/machinery/light/small{
@@ -794,7 +794,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 "UY" = (
 /obj/structure/cable/yellow{
@@ -830,7 +830,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "Xz" = (
 /obj/structure/cable/yellow{
@@ -848,19 +848,19 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/west)
 "XN" = (
 /obj/machinery/light/small/red{
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "Ya" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/east)
 "Yg" = (
 /obj/machinery/geothermal,
@@ -874,7 +874,7 @@
 /obj/machinery/power/terminal{
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar/south)
 "Zm" = (
 /obj/effect/geyser,
@@ -888,7 +888,7 @@
 /obj/machinery/light/small/red{
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/pillar)
 
 (1,1,1) = {"

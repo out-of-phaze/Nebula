@@ -1,11 +1,11 @@
 /turf/unsimulated/mask/flooded
-	flooded = TRUE
+	flooded = /decl/material/liquid/water
 	color = COLOR_LIQUID_WATER
 
-/turf/exterior/open/flooded
-	flooded = TRUE
+/turf/open/flooded
+	flooded = /decl/material/liquid/water
 	color = COLOR_LIQUID_WATER
 
-/turf/simulated/floor/flooded
-	flooded = TRUE
+/turf/floor/flooded
+	flooded = /decl/material/liquid/water
 	color = COLOR_LIQUID_WATER

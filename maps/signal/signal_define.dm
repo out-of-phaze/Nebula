@@ -23,8 +23,6 @@
 	company_name  = "Sol Colonial Administration"
 	company_short = "CSA-CA"
 
-	allowed_spawns = list(/decl/spawnpoint/arrivals)
-
 	shuttle_docked_message =           "The crew transfer vessel has docked at the Escape arm. Traffic control reports that departure will occur in approximately %ETD%."
 	shuttle_leaving_dock =             "The crew transfer vessel has left the Escape arm. Estimate %ETA% until arrival at %dock_name%."
 	shuttle_called_message =           "A crew transfer has been scheduled for this shift and a vessel has been dispatched from %dock_name%. Estimated arrival time is %ETA%."
@@ -127,7 +125,7 @@
 /datum/level_data/main_level/signal
 	// exterior_atmosphere = list(/decl/material/liquid/water/sea = 10000) // taken from old Europa's Yonaguni map
 	// exterior_atmos_temp = T0C - 35 // a bit chilly
-	base_turf = /turf/exterior/open/flooded
+	base_turf = /turf/open/flooded
 
 // z1 - seafloor
 /datum/level_data/main_level/signal/seafloor

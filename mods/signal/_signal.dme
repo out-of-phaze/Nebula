@@ -1,7 +1,6 @@
 #ifndef CONTENT_PACK_SIGNALVERSE
 #define CONTENT_PACK_SIGNALVERSE
 #include "signal.dm"
-#include "signal_overrides.dm"
 #include "clothing/rig.dm"
 #include "clothing/suits.dm"
 #include "datum/lore/culture.dm"

@@ -11,7 +11,7 @@
 	area_flags = AREA_FLAG_EXTERNAL | AREA_FLAG_IS_NOT_PERSISTENT | AREA_FLAG_IS_BACKGROUND | AREA_FLAG_RAD_SHIELDED
 	base_turf = /turf/exterior/seafloor
 	turf_initializer = /decl/turf_initializer/ocean
-	//open_turf = /turf/exterior/open
+	//open_turf = /turf/open
 	color = COLOR_LIQUID_WATER
 	is_outside = OUTSIDE_NO
 
@@ -41,7 +41,7 @@
 	name = "\improper Construction Site"
 	icon = 'maps/signal/icons/areas.dmi'
 	icon_state = "built"
-	base_turf = /turf/simulated/floor
+	base_turf = /turf/floor
 	color = COLOR_GRAY
 	turf_initializer = /decl/turf_initializer/ocean
 

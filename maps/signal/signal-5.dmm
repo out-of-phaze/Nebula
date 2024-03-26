@@ -3,13 +3,13 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 "aw" = (
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/exterior)
 "aX" = (
 /obj/structure/cable{
@@ -18,14 +18,14 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 "bk" = (
 /obj/machinery/light/small,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "bU" = (
-/turf/exterior/open,
+/turf/open,
 /area/europa_exterior/heights)
 "eG" = (
 /obj/structure/cable{
@@ -36,16 +36,16 @@
 	name = "east bump";
 	pixel_x = 24
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 "eR" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/heights)
 "fS" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/access)
 "gL" = (
 /obj/structure/cable,
@@ -54,20 +54,20 @@
 	name = "east bump";
 	pixel_x = 24
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/exterior)
 "hQ" = (
 /obj/machinery/door/airlock/external,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "ik" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/landing)
 "in" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/heights/exterior)
 "iX" = (
 /obj/structure/railing/mapped{
@@ -76,7 +76,7 @@
 /obj/structure/railing/mapped{
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "jr" = (
 /obj/structure/cable{
@@ -85,28 +85,28 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/landing)
 "ju" = (
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/landing)
 "kZ" = (
 /obj/structure/railing/mapped{
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "mv" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 "oS" = (
-/turf/simulated/open,
+/turf/open,
 /area/europa/heights)
 "oT" = (
 /obj/structure/cable{
@@ -115,7 +115,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 "pE" = (
 /obj/structure/cable,
@@ -124,13 +124,13 @@
 	name = "west bump";
 	pixel_x = -24
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/access)
 "pK" = (
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/exterior)
 "pR" = (
 /obj/machinery/light{
@@ -139,27 +139,27 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/exterior)
 "se" = (
 /obj/structure/railing/mapped{
 	dir = 8
 	},
 /obj/structure/railing/mapped,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "tk" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "tu" = (
 /obj/structure/ladder,
 /obj/structure/cable{
 	icon_state = "32-2"
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/heights/access)
 "tx" = (
 /obj/structure/railing/mapped{
@@ -168,69 +168,69 @@
 /obj/structure/railing/mapped{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "uh" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa_exterior/heights)
 "uk" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/exterior)
 "uv" = (
 /obj/machinery/light/small,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/access)
 "uT" = (
 /obj/abstract/level_data_spawner/signal,
-/turf/exterior/open,
+/turf/open,
 /area/europa_exterior/heights)
 "vH" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/exterior)
 "xr" = (
 /obj/structure/railing/mapped,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "xw" = (
 /obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/access)
 "xK" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/landing)
 "ya" = (
 /obj/machinery/light/small/red{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "yj" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/europa/heights/access)
 "zx" = (
 /obj/machinery/light,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/landing)
 "zC" = (
 /obj/abstract/map_data{
 	height = 5
 	},
-/turf/exterior/open,
+/turf/open,
 /area/europa_exterior/heights)
 "Af" = (
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "Aj" = (
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/landing)
 "AZ" = (
 /obj/structure/cable,
@@ -239,69 +239,69 @@
 	name = "east bump";
 	pixel_x = 24
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/landing)
 "Ck" = (
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 "Df" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/access)
 "EN" = (
 /obj/machinery/door/airlock/glass/civilian,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 "EW" = (
 /obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "Fi" = (
 /obj/structure/catwalk,
-/turf/simulated/open,
+/turf/open,
 /area/europa/heights)
 "Im" = (
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/access)
 "IE" = (
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 "Jh" = (
 /obj/machinery/door/airlock/glass/civilian,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 "Jn" = (
 /obj/machinery/light/small/red{
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "Js" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 "JY" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/landing)
 "Kh" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "Kn" = (
 /obj/machinery/light{
@@ -310,13 +310,13 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 "KX" = (
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 "Lz" = (
 /obj/machinery/light{
@@ -325,13 +325,13 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 "LR" = (
 /obj/structure/railing/mapped{
 	dir = 4
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "LW" = (
 /obj/structure/cable{
@@ -340,99 +340,99 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/access)
 "MZ" = (
 /obj/structure/ladder,
-/turf/exterior/open,
+/turf/open,
 /area/europa/heights/exterior)
 "Oo" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/access)
 "Oq" = (
-/turf/simulated/floor,
+/turf/floor,
 /area/europa_exterior/heights)
 "OT" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/access)
 "OV" = (
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/access)
 "Rw" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/heights)
 "RI" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/heights)
 "SH" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "SJ" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/landing)
 "SM" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open,
 /area/europa/heights)
 "UG" = (
 /obj/effect/wallframe_spawn/no_grille,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights)
 "UT" = (
 /obj/structure/railing/mapped{
 	dir = 1
 	},
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "WU" = (
 /obj/structure/railing/mapped{
 	dir = 4
 	},
 /obj/structure/railing/mapped,
-/turf/simulated/floor,
+/turf/floor,
 /area/europa/heights/exterior)
 "Yn" = (
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights/exterior)
 "Ys" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped,
-/turf/simulated/open,
+/turf/open,
 /area/europa/heights)
 "YS" = (
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/europa/heights)
 
 (1,1,1) = {"

@@ -8,7 +8,7 @@
 	wall_type =     null
 	firedoor_type = null
 	light_type =    null
-	floor_type =  /turf/simulated/floor/tiled/steel_grid
+	floor_type =  /turf/floor/tiled/steel_grid
 	button_type = /obj/structure/lift/button/standalone
 	panel_type =  /obj/structure/lift/panel/standalone
 	areas_to_use = list(
@@ -22,17 +22,17 @@
 
 /area/turbolift/signal_first
 	name = "Hangar Sublevel"
-	base_turf = /turf/simulated/floor
-	open_turf = /turf/simulated/floor // to stop it from opening to the ocean and flooding the station
+	base_turf = /turf/floor
+	open_turf = /turf/floor // to stop it from opening to the ocean and flooding the station
 
 /area/turbolift/signal_second
 	name = "Operations Sublevel"
-	base_turf = /turf/simulated/open
+	base_turf = /turf/open
 
 /area/turbolift/signal_third
 	name = "Ground Floor"
-	base_turf = /turf/simulated/open
+	base_turf = /turf/open
 
 /area/turbolift/signal_fourth
 	name = "Roof Access"
-	base_turf = /turf/simulated/open
+	base_turf = /turf/open

@@ -41,7 +41,7 @@
 	backpack_contents = list(
 		/obj/item/crowbar = 1
 	)
-	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	outfit_flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
 
 /decl/hierarchy/outfit/job/signal_service/aquanaut/Initialize()
 	. = ..()
@@ -89,7 +89,7 @@
 		/obj/item/crowbar = 1,
 		/obj/item/storage/ore = 1
 	)
-	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	outfit_flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
 
 /decl/hierarchy/outfit/job/signal_service/mining/Initialize()
 	. = ..()
@@ -99,7 +99,7 @@
 	name = "Job - Submarine pilot"
 	uniform = /obj/item/clothing/under/pilot
 	pda_type = /obj/item/modular_computer/pda/cargo
-	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	outfit_flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
 
 /////////////
 // Medical //
@@ -169,7 +169,7 @@
 	shoes = /obj/item/clothing/shoes/workboots
 	pda_type = /obj/item/modular_computer/pda/engineering
 	pda_slot = slot_l_store_str
-	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	outfit_flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
 
 /decl/hierarchy/outfit/job/signal_engineering/Initialize()
 	. = ..()
@@ -189,7 +189,7 @@
 	name = "Job - Roboticist"
 	uniform = /obj/item/clothing/under/roboticist
 	r_pocket = null
-	flags = OUTFIT_HAS_BACKPACK // shouldn't be doing breach repairs
+	outfit_flags = OUTFIT_HAS_BACKPACK // shouldn't be doing breach repairs
 
 ////////////
 // Police //
@@ -220,7 +220,6 @@
 
 /decl/hierarchy/outfit/job/signal_police/trainee
 	name = "Job - Police Trainee"
-	backpack_contents = list(/obj/item/book/manual/nt_regs = 1)
 
 /decl/hierarchy/outfit/job/signal_police/qm
 	name = "Job - Police Quartermaster"
