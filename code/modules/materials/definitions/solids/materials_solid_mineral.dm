@@ -19,6 +19,7 @@
 	)
 	ore_type_value = ORE_NUCLEAR
 	ore_data_value = 3
+	hardness = MAT_VALUE_HARD // cannot be mined with bronze, only iron and harder
 
 /decl/material/solid/graphite
 	name = "graphite"
@@ -73,6 +74,7 @@
 	dissolves_into = list(
 		/decl/material/solid/silicon = 1
 	)
+	hardness = MAT_VALUE_HARD // cannot be mined with bronze, only iron and harder
 
 /decl/material/solid/pyrite
 	name = "fool's gold"
@@ -107,6 +109,7 @@
 	dissolves_into = list(
 		/decl/material/solid/lithium = 1
 	)
+	hardness = MAT_VALUE_HARD + 5 // must be mined with steel or harder alloys
 
 /decl/material/solid/cinnabar
 	name = "cinnabar"
@@ -425,6 +428,7 @@
 		/decl/material/liquid/acetone = 0.4,
 		/decl/material/solid/gemstone/diamond = 0.1
 	)
+	hardness = MAT_VALUE_HARD // cannot be mined with bronze, only iron and harder
 
 /decl/material/solid/cassiterite
 	name = "cassiterite"
@@ -481,6 +485,7 @@
 		/decl/material/solid/metal/tungsten = 0.6,
 		/decl/material/solid/metal/iron = 0.3
 	)
+	hardness = MAT_VALUE_HARD // slightly harder than sandstone
 
 /decl/material/solid/sperrylite
 	name = "sperrylite"
@@ -511,6 +516,7 @@
 		/decl/material/solid/glass = 0.1,
 		/decl/material/solid/metal/titanium = 0.1
 	)
+	hardness = MAT_VALUE_HARD + 5 // as hard as steel, cannot be mined by iron
 
 /decl/material/solid/sphalerite
 	name = "sphalerite"
