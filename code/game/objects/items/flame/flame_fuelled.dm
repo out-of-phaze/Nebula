@@ -2,7 +2,7 @@
 
 	abstract_type         = /obj/item/flame/fuelled
 	_fuel_spend_amt       = 0.05
-	can_manually_light    = TRUE
+	can_self_light        = DEXTERITY_COMPLEX_TOOLS
 	extinguish_on_dropped = FALSE
 
 	var/tmp/max_fuel      = 5

@@ -1,18 +1,19 @@
 /obj/item/flame/fuelled/lighter
-	name             = "lighter"
-	desc             = "A cheap-as-free lighter."
-	icon             = 'icons/obj/items/flame/lighter.dmi'
-	slot_flags       = SLOT_LOWER_BODY
-	attack_verb      = list("burnt", "singed")
-	material         = /decl/material/solid/organic/plastic
-	start_fuelled    = TRUE
-	obj_flags        = OBJ_FLAG_CONDUCTIBLE
-	lit_heat         = 1500
-	lit_light_range  = 2
-	lit_light_color  = COLOR_PALE_ORANGE
-	matter           = list(
+	name                   = "lighter"
+	desc                   = "A cheap-as-free lighter."
+	icon                   = 'icons/obj/items/flame/lighter.dmi'
+	slot_flags             = SLOT_LOWER_BODY
+	attack_verb            = list("burnt", "singed")
+	material               = /decl/material/solid/organic/plastic
+	start_fuelled          = TRUE
+	obj_flags              = OBJ_FLAG_CONDUCTIBLE
+	lit_heat               = 1500
+	lit_light_range        = 2
+	lit_light_color        = COLOR_PALE_ORANGE
+	matter                 = list(
 		/decl/material/solid/metal/steel = MATTER_AMOUNT_REINFORCEMENT
 	)
+	manual_light_dexterity = DEXTERITY_COMPLEX_TOOLS
 
 /obj/item/flame/fuelled/lighter/light(mob/user, no_message)
 	if(submerged())

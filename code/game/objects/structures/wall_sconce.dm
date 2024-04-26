@@ -89,7 +89,7 @@
 	if(istype(W, /obj/item/flame))
 		var/obj/item/flame/flame = W
 
-		if(flame.lit && light_source && light_source.can_manually_light)
+		if(flame.lit && light_source && !light_source.can_self_light)
 			light_source.attackby(flame, user)
 			update_icon()
 			return TRUE

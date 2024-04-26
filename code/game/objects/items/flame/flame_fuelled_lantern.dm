@@ -12,7 +12,6 @@
 	max_fuel            = 120
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME | MAT_FLAG_ALTERATION_DESC
 	material            = /decl/material/solid/metal/copper
-	can_manually_light  = FALSE
 	sconce_can_hold     = TRUE
 
 /obj/item/flame/fuelled/lantern/get_sconce_overlay()

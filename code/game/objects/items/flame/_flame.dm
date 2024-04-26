@@ -28,9 +28,11 @@
 	/// How much fuel does this spend in a tick?
 	var/_fuel_spend_amt         = 1
 	/// Can you put this item out with your hand?
-	var/can_manually_extinguish = TRUE
+	/// If FALSE, cannot be extinguished by hand; otherwise, it's the dexterity level needed to extinguish this item manually.
+	var/can_manually_extinguish = DEXTERITY_HOLD_ITEM
 	/// Can you light this item with your hand?
-	var/can_manually_light      = FALSE
+	/// If FALSE, cannot be lit by hand; otherwise, it's the dexterity level needed to light this item manually.
+	var/can_self_light          = FALSE
 	/// Can this item be put into a sconce?
 	var/sconce_can_hold         = FALSE
 
@@ -134,14 +136,14 @@
 
 /obj/item/flame/attack_self(mob/user)
 
-	if(!lit && can_manually_light)
+	if(!lit && user.check_dexterity(can_self_light))
 		if(has_fuel(_fuel_spend_amt))
 			light(user)
 		else
 			to_chat(user, SPAN_WARNING("\The [src] won't ignite. It must be out of fuel."))
 		return TRUE
 
-	if(lit && can_manually_extinguish)
+	if(lit && (!user || user.check_dexterity(can_manually_extinguish))
 		extinguish(user)
 		return TRUE
 
@@ -157,7 +159,7 @@
 
 /obj/item/flame/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	. = ..()
-	if(!QDELETED(src) && !can_manually_light)
+	if(!QDELETED(src) && !can_self_light)
 		light(null, TRUE)
 
 /obj/item/flame/get_heat()
@@ -180,12 +182,12 @@
 	. = ..()
 	if(istype(A, /obj/item/flame) && lit)
 		var/obj/item/flame/other = A
-		if(!other.can_manually_light)
+		if(!other.can_self_light)
 			other.light(user)
 
 /obj/item/flame/attackby(obj/item/W, mob/user)
 
-	if(user.a_intent != I_HURT && !can_manually_light && (W.isflamesource() || W.get_heat() > T100C))
+	if(user.a_intent != I_HURT && !can_self_light && (W.isflamesource() || W.get_heat() > T100C))
 		light(user)
 		return TRUE
 
@@ -221,5 +223,5 @@
 	return ..()
 
 /obj/item/flame/spark_act(obj/effect/sparks/sparks)
-	if(!can_manually_light)
+	if(!can_self_light)
 		light(null, no_message = TRUE)
