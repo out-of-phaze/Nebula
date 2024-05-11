@@ -3,7 +3,7 @@
 /datum/skillset
 	var/skill_list = list()
 	var/mob/owner
-	var/default_value = SKILL_DEFAULT
+	var/default_value = SKILL_NONE
 	var/skills_transferable = TRUE
 	var/list/skill_buffs                                            // A list of /datum/skill_buff being applied to the skillset.
 	var/list/skill_verbs                                            // A list of skill-related verb datums.
