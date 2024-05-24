@@ -32,6 +32,7 @@
 	#include "../../mods/species/neoavians/_neoavians.dme"
 	#include "../../mods/species/utility_frames/_utility_frames.dme"
 	#include "../../mods/species/vox/_vox.dme"
+	#include "../../mods/species/replika/_replika.dme"
 
 	// UTILITY
 
