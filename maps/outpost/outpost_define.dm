@@ -6,7 +6,7 @@
 	system_name = "the Frontier"
 	welcome_sound = 'maps/outpost/sound/achtung.ogg'
 	path = "outpost"
-	allowed_spawns = list()
+	allowed_latejoin_spawns = list()
 	default_spawn = null
 	overmap_ids = list(OVERMAP_ID_SPACE)
 	//num_exoplanets = 3

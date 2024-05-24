@@ -42,7 +42,6 @@
 
 /decl/submap_archetype/spawnable_ship/skiff
 	descriptor = "Gravedigger-class mining skiff"
-	map = "Gravedigger-class mining skiff"
 	crew_jobs = list(
 		/datum/job/submap/shiptesting/skiff_operator
 	)

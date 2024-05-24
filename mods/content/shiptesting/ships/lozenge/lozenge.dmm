@@ -73,8 +73,8 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/obj/item/storage/med_pouch/oxyloss,
-/obj/item/storage/med_pouch/radiation,
+/obj/item/med_pouch/oxyloss,
+/obj/item/med_pouch/radiation,
 /obj/random/plushie{
 	spawn_nothing_percentage = 95
 	},
@@ -311,7 +311,7 @@
 /obj/structure/table,
 /obj/item/wrench,
 /obj/item/screwdriver,
-/obj/item/storage/toolbox/emergency,
+/obj/item/toolbox/emergency,
 /obj/random/plushie{
 	spawn_nothing_percentage = 95
 	},
