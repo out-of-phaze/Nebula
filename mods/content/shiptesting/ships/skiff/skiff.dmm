@@ -139,8 +139,8 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/item/pickaxe,
-/obj/item/shovel,
+/obj/item/tool/pickaxe,
+/obj/item/tool/shovel,
 /obj/structure/railing/mapped{
 	dir = 1;
 	material = /decl/material/solid/plastic
@@ -152,7 +152,7 @@
 	},
 /obj/item/hoist_kit,
 /obj/item/mobile_ladder,
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/skiff)
 "G" = (
 /obj/structure/railing/mapped{
@@ -178,7 +178,7 @@
 	material = /decl/material/solid/plastic;
 	material_alteration = 16777215
 	},
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/skiff)
 "J" = (
 /obj/structure/catwalk{
@@ -202,7 +202,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/wall/plastic,
+/turf/wall/plastic,
 /area/skiff)
 "P" = (
 /obj/structure/catwalk{

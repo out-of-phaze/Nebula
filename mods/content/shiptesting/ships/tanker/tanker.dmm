@@ -5,25 +5,25 @@
 	id_tag = "tanker_output";
 	pump_direction = 0
 	},
-/turf/simulated/floor/reinforced/oxygen,
+/turf/floor/reinforced/oxygen,
 /area/tanker)
 "bb" = (
 /obj/machinery/door/airlock/external/bolted_open{
 	id_tag = "tanker_dock_interior_door"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "bd" = (
 /obj/structure/cable/blue{
 	icon_state = "1-10"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "bC" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 8
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/floor/reinforced/airless,
 /area/tanker)
 "cT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -31,7 +31,7 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "cV" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
@@ -46,14 +46,14 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "dg" = (
 /obj/effect/overmap/visitable/ship/landable/spawnable/tanker,
-/turf/simulated/floor/reinforced/oxygen,
+/turf/floor/reinforced/oxygen,
 /area/tanker)
 "dJ" = (
-/turf/simulated/floor/reinforced/airless,
+/turf/floor/reinforced/airless,
 /area/tanker)
 "eb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -65,31 +65,31 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "et" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced/oxygen,
+/turf/floor/reinforced/oxygen,
 /area/tanker)
 "eP" = (
 /obj/machinery/computer/ship/helm{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "eQ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 8
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/floor/reinforced/airless,
 /area/tanker)
 "fi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced/oxygen,
+/turf/floor/reinforced/oxygen,
 /area/tanker)
 "fp" = (
 /obj/machinery/computer/air_control{
@@ -99,24 +99,24 @@
 	sensor_name = "Main Tank";
 	sensor_tag = "tanker_sensor"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "fv" = (
 /obj/machinery/light,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "fy" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/tank{
 	dir = 4;
 	id_tag = "tanker_fuel"
 	},
-/turf/simulated/floor/reinforced/oxygen,
+/turf/floor/reinforced/oxygen,
 /area/tanker)
 "hQ" = (
 /obj/machinery/air_sensor{
 	id_tag = "tanker_sensor"
 	},
-/turf/simulated/floor/reinforced/oxygen,
+/turf/floor/reinforced/oxygen,
 /area/tanker)
 "ia" = (
 /obj/machinery/door/airlock/engineering,
@@ -125,14 +125,14 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "ig" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "ix" = (
 /obj/structure/cable/green{
@@ -142,7 +142,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "jh" = (
 /turf/space,
@@ -155,13 +155,13 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "jN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 10
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "kN" = (
 /obj/machinery/door/airlock/engineering,
@@ -170,15 +170,15 @@
 /obj/structure/cable/blue{
 	icon_state = "2-5"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "la" = (
 /obj/machinery/suit_cycler/generic/prepared,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "lr" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/green,
-/turf/simulated/floor/reinforced/oxygen,
+/turf/floor/reinforced/oxygen,
 /area/tanker)
 "lu" = (
 /obj/machinery/atmospherics/portables_connector,
@@ -186,17 +186,17 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "lU" = (
-/turf/simulated/wall/r_wall/hull,
+/turf/wall/r_wall/hull,
 /area/tanker)
 "pr" = (
 /obj/structure/bed/roller,
 /obj/structure/sign/poster{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "qS" = (
 /obj/machinery/atmospherics/portables_connector,
@@ -204,7 +204,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "rS" = (
 /obj/machinery/computer/shuttle_control/explore{
@@ -212,16 +212,16 @@
 	name = "shuttle control console";
 	shuttle_tag = "Tanker"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "sl" = (
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "sp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 5
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/floor/reinforced/airless,
 /area/tanker)
 "sN" = (
 /obj/machinery/shipsensors,
@@ -231,14 +231,14 @@
 /obj/structure/cable/blue{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "ul" = (
 /obj/machinery/atmospherics/unary/vent_pump/tank{
 	id_tag = "tanker_output";
 	pump_direction = 0
 	},
-/turf/simulated/floor/reinforced/oxygen,
+/turf/floor/reinforced/oxygen,
 /area/tanker)
 "vC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -251,16 +251,16 @@
 /obj/structure/cable/blue{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "vT" = (
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "wS" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "xA" = (
 /obj/abstract/docking_port_spawner/tanker{
@@ -276,28 +276,28 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "yv" = (
 /obj/machinery/atmospherics/valve{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "yG" = (
 /obj/structure/bed/chair/office,
 /obj/abstract/submap_landmark/spawnpoint/tanker_technician_spawn,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "An" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "AH" = (
 /obj/structure/bed,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "AM" = (
 /obj/machinery/door/airlock/external/bolted{
@@ -307,7 +307,7 @@
 /obj/machinery/atmospherics/valve/shutoff{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "BD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -322,7 +322,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "BI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -331,14 +331,14 @@
 /obj/machinery/fabricator/pipe{
 	anchored = 1
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "Co" = (
 /obj/machinery/door/airlock/external/bolted_open{
 	id_tag = "tanker_dock_interior_door"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "CD" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -348,7 +348,7 @@
 	dir = 8
 	},
 /obj/abstract/submap_landmark/spawnpoint/tanker_pilot_spawn,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "Dh" = (
 /obj/machinery/computer/modular/preset/civilian{
@@ -358,7 +358,7 @@
 /obj/structure/cable/blue{
 	icon_state = "5-10"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "DV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -370,13 +370,13 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "FX" = (
 /obj/machinery/computer/ship/engines{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "Gu" = (
 /obj/structure/cable/blue{
@@ -391,14 +391,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "GF" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/tanker)
 "Hj" = (
 /obj/machinery/hologram/holopad/longrange/remoteship,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "HO" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
@@ -416,14 +416,14 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "Iv" = (
 /obj/machinery/door/airlock/external/bolted{
 	dir = 8;
 	id_tag = "tanker_dock_exterior_door"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "Jx" = (
 /obj/machinery/door/airlock/external/bolted{
@@ -436,7 +436,7 @@
 /obj/effect/shuttle_landmark/ship/tanker{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "Km" = (
 /obj/structure/rack,
@@ -445,64 +445,64 @@
 /obj/item/twohanded/pipewrench,
 /obj/item/radio/off,
 /obj/item/radio/off,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "Na" = (
 /obj/machinery/door/airlock/maintenance,
-/turf/simulated/floor/reinforced/airless,
+/turf/floor/reinforced/airless,
 /area/tanker)
 "Ni" = (
 /obj/machinery/airlock_sensor{
 	id_tag = "tanker_dock_sensor";
 	pixel_y = 24
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "Ob" = (
 /obj/structure/cable/blue{
 	icon_state = "5-8"
 	},
-/turf/simulated/wall/r_wall/hull,
+/turf/wall/r_wall/hull,
 /area/tanker)
 "Qj" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "Ro" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "Rq" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/wall,
+/turf/wall,
 /area/tanker)
 "RC" = (
 /obj/structure/table,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "Sf" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "So" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 8;
 	id_tag = "tanker_input"
 	},
-/turf/simulated/floor/reinforced/oxygen,
+/turf/floor/reinforced/oxygen,
 /area/tanker)
 "Td" = (
-/turf/simulated/floor/reinforced/oxygen,
+/turf/floor/reinforced/oxygen,
 /area/tanker)
 "Tr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -515,13 +515,13 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "Uf" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "Uu" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -530,7 +530,7 @@
 /obj/structure/bed/chair/shuttle{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "UX" = (
 /obj/abstract/submap_landmark/joinable_submap/spawnable_ship/tanker,
@@ -540,32 +540,32 @@
 /obj/machinery/computer/ship/sensors{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "VD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/floor/reinforced/airless,
 /area/tanker)
 "WC" = (
 /obj/machinery/atmospherics/valve/open{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/floor/reinforced/airless,
 /area/tanker)
 "WG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "WZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/wall,
+/turf/wall,
 /area/tanker)
 "YI" = (
 /obj/machinery/power/terminal,
@@ -573,25 +573,25 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "YS" = (
 /obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "ZI" = (
 /obj/structure/closet/emcloset,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 "ZX" = (
 /obj/machinery/door/airlock/external/bolted,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/tanker)
 "ZY" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/tanker)
 
 (1,1,1) = {"
