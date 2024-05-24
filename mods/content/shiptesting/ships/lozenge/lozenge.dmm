@@ -11,7 +11,7 @@
 	},
 /obj/abstract/submap_landmark/spawnpoint/lozenge_survivor,
 /obj/machinery/hologram/holopad/longrange/remoteship,
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/lozenge)
 "d" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
@@ -24,7 +24,7 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "f" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
@@ -34,19 +34,19 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "h" = (
 /obj/machinery/computer/ship/helm{
 	dir = 8
 	},
 /obj/effect/overmap/visitable/ship/landable/spawnable/lozenge,
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/lozenge)
 "i" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "l" = (
 /obj/structure/bed/chair{
@@ -84,7 +84,7 @@
 /obj/machinery/light/small/red{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/lozenge)
 "m" = (
 /obj/structure/cable/green{
@@ -97,7 +97,7 @@
 	_output_maxed = 1;
 	_output_on = 1
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "n" = (
 /obj/abstract/submap_landmark/joinable_submap/spawnable_ship/lozenge,
@@ -112,11 +112,11 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/lozenge)
 "p" = (
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "q" = (
 /obj/machinery/shipsensors/weak,
@@ -124,7 +124,7 @@
 /obj/machinery/power/terminal{
 	icon_state = "term-omni"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "r" = (
 /obj/structure/cable/green{
@@ -140,7 +140,7 @@
 /obj/machinery/light/small/red{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/lozenge)
 "u" = (
 /obj/machinery/computer/ship/sensors{
@@ -152,7 +152,7 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/lozenge)
 "v" = (
 /obj/structure/cable/green{
@@ -162,7 +162,7 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "w" = (
 /obj/machinery/computer/ship/engines{
@@ -171,7 +171,7 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/lozenge)
 "y" = (
 /obj/structure/catwalk,
@@ -197,7 +197,7 @@
 /obj/abstract/landmark/variable_setter/closet_opener{
 	probability = 20
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "z" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
@@ -205,11 +205,11 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "A" = (
 /obj/effect/paint_stripe/mauve,
-/turf/simulated/wall/titanium,
+/turf/wall/titanium,
 /area/lozenge)
 "B" = (
 /obj/machinery/computer/shuttle_control/explore{
@@ -220,7 +220,7 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/lozenge)
 "C" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
@@ -228,13 +228,13 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "F" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/machinery/door/firedoor,
 /obj/effect/paint_stripe/mauve,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "G" = (
 /obj/machinery/power/apc/critical{
@@ -249,14 +249,14 @@
 	icon_state = "0-4"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "H" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "I" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
@@ -273,7 +273,7 @@
 	dir = 4
 	},
 /obj/effect/shuttle_landmark/ship/lozenge,
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/lozenge)
 "L" = (
 /obj/structure/cable/green{
@@ -283,7 +283,7 @@
 	id_tag = "lozenge_tincan_pump_out_internal"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "M" = (
 /obj/structure/cable/green{
@@ -292,7 +292,7 @@
 /obj/machinery/ion_thruster{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "N" = (
 /obj/structure/cable/green{
@@ -316,7 +316,7 @@
 	spawn_nothing_percentage = 95
 	},
 /obj/machinery/light/small/red,
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/lozenge)
 "P" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
@@ -332,7 +332,7 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "Q" = (
 /obj/machinery/firealarm{
@@ -340,7 +340,7 @@
 	pixel_y = -24
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "S" = (
 /obj/machinery/power/terminal{
@@ -349,7 +349,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/lozenge)
 "U" = (
 /obj/structure/cable/green{
@@ -357,7 +357,7 @@
 	},
 /obj/structure/catwalk,
 /obj/abstract/landmark/carnage_mark,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "V" = (
 /obj/structure/cable/green{
@@ -376,7 +376,7 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/lozenge)
 "W" = (
 /obj/structure/bed/chair{
@@ -394,11 +394,11 @@
 	},
 /obj/machinery/light/small/red,
 /obj/item/mobile_ladder,
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/lozenge)
 "X" = (
 /obj/effect/paint/red,
-/turf/simulated/wall/titanium,
+/turf/wall/titanium,
 /area/lozenge)
 "Y" = (
 /obj/abstract/docking_port_spawner/lozenge{
