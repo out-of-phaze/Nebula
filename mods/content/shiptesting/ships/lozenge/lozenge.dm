@@ -45,7 +45,6 @@
 
 /decl/submap_archetype/spawnable_ship/lozenge
 	descriptor = "Lozenge-class escape pod"
-	map = "Lozenge-class emergency pod"
 	crew_jobs = list(
 		/datum/job/submap/shiptesting/lozenge_survivor
 	)
