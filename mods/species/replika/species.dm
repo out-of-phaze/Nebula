@@ -31,8 +31,6 @@
 
 	blood_types = list(/decl/blood_type/oxidant)
 
-	appearance_descriptors = null
-
 	available_bodytypes = list(
 		/decl/bodytype/replika/eulr,
 		/decl/bodytype/replika/arar,
@@ -40,7 +38,6 @@
 		/decl/bodytype/replika/star,
 		/decl/bodytype/replika/klbr
 	)
-	age_descriptor =        /datum/appearance_descriptor/age/replika
 	hidden_from_codex =     FALSE
 	spawn_flags =           SPECIES_CAN_JOIN
 	warning_low_pressure =  50
@@ -92,9 +89,9 @@
 
 /decl/species/replika/equip_survival_gear(mob/living/carbon/human/victim)
 	. = ..()
-	var/obj/item/storage/backpack/backpack = victim.get_equipped_item(slot_back_str)
+	var/obj/item/backpack/backpack = victim.get_equipped_item(slot_back_str)
 	if(istype(backpack))
-		victim.equip_to_slot_or_store_or_drop(new /obj/item/storage/box/survival/replika(backpack), slot_in_backpack_str)
+		victim.equip_to_slot_or_store_or_drop(new /obj/item/box/survival/replika(backpack), slot_in_backpack_str)
 
 /datum/hud_data/replika
 	inventory_slots = list(
