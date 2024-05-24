@@ -1,13 +1,16 @@
 /decl/bodytype/replika
-	abstract_type =       /decl/bodytype/replika
-	name =                "replika"
-	bodytype_category =   BODYTYPE_HUMANOID
-	limb_blend =          ICON_MULTIPLY
-	modular_limb_tier =   MODULAR_BODYPART_CYBERNETIC
-	body_flags =          0
-	modifier_string =     "biosynthetic"
-	material =            /decl/material/solid/fiberglass // todo: polyethylene
-	base_eye_color =      COLOR_COMMAND_BLUE
+	abstract_type =          /decl/bodytype/replika
+	name =                   "replika"
+	bodytype_category =      BODYTYPE_HUMANOID
+	limb_blend =             ICON_MULTIPLY
+	modular_limb_tier =      MODULAR_BODYPART_CYBERNETIC
+	body_flags =             0
+	modifier_string =        "biosynthetic"
+	material =               /decl/material/solid/fiberglass // todo: polyethylene
+	base_eye_color =         COLOR_COMMAND_BLUE
+	appearance_descriptors = null
+	age_descriptor =         /datum/appearance_descriptor/age/replika
+
 	heat_discomfort_strings = list(
 		"You are dangerously close to overheating!"
 	)
@@ -27,10 +30,10 @@
 		BP_BRAIN,
 		BP_CELL
 	)
-	var/nickname
 	traits = list(
 		/decl/trait/biosynthetic_healing = REPLIKA_LATE_GEN
 	)
+	var/nickname
 
 /decl/bodytype/replika/apply_bodytype_organ_modifications(obj/item/organ/org)
 	if(istype(org, /obj/item/organ/external))

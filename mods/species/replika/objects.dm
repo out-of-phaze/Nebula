@@ -111,7 +111,7 @@
 	else
 		icon_state = get_world_inventory_state()
 
-/obj/item/chems/patch/attack(mob/living/victim, mob/user, def_zone)
+/obj/item/chems/patch/use_on_mob(mob/living/victim, mob/user, def_zone)
 	if(!ATOM_IS_OPEN_CONTAINER(src))
 		to_chat(user, SPAN_NOTICE("You need to open \the [src] first!"))
 		return TRUE
@@ -216,12 +216,12 @@
 /obj/item/chems/patch/repair/populate_reagents()
 	reagents.add_reagent(/decl/material/solid/koagulant_k, reagents.maximum_volume)
 
-/obj/item/storage/box/survival/replika
+/obj/item/box/survival/replika
 	name = "\improper Replika repair kit"
 	desc = "A box decorated in warning colors that contains a limited supply of Replika repair supplies. The back says 'Im Besitz des Arbeits- und Erziehungsorgan der Nation,' whatever that means."
 	icon_state = "survival"
 
-/obj/item/storage/box/survival/replika/WillContain()
+/obj/item/box/survival/replika/WillContain()
 	return list(
 		/obj/item/chems/patch/repair = 3,
 		/obj/item/chems/repair_spray = 2,
@@ -241,11 +241,11 @@
 	caliber = CALIBER_SIGNALIS_REVOLVER
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
-/obj/item/storage/box/ammo/eimyria
+/obj/item/box/ammo/eimyria
 	name = "box of Imperial revolver rounds"
 	desc = "Old Imperially-produced 12x40mm hollow-point bullets that deform and fracture on impact for immense impact power. "
 
-/obj/item/storage/box/ammo/eimyria/WillContain()
+/obj/item/box/ammo/eimyria/WillContain()
 	return list(/obj/item/ammo_casing/pistol/magnum/einhorn = 18)
 
 /obj/item/ammo_magazine/speedloader/eimyria
