@@ -34,7 +34,6 @@
 
 /decl/submap_archetype/spawnable_ship/tanker
 	descriptor = "Astor-class gas tanker"
-	map = "Astor-class tanker shuttle"
 	crew_jobs = list(
 		/datum/job/submap/shiptesting/tanker_pilot,
 		/datum/job/submap/shiptesting/tanker_technician
@@ -96,5 +95,5 @@
 /decl/hierarchy/outfit/job/generic/engineer/tanker_technician
 	name = "Job - Tanker technician"
 	uniform = /obj/item/clothing/under/atmospheric_technician
-	belt = /obj/item/storage/belt/utility/atmostech
+	belt = /obj/item/belt/utility/atmostech
 	pda_type = /obj/item/modular_computer/pda/engineering
