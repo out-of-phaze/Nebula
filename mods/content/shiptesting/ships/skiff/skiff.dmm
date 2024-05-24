@@ -114,7 +114,7 @@
 	material = /decl/material/solid/plastic
 	},
 /obj/structure/closet/emcloset,
-/obj/item/storage/toolbox/repairs,
+/obj/item/toolbox/repairs,
 /obj/item/weldingtool/electric,
 /obj/structure/cable{
 	icon_state = "0-2"
