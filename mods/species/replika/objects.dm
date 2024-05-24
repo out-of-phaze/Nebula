@@ -3,11 +3,19 @@
 	desc = "A single-use spray gun to fill damaged areas with polyurethane-based expanding foam."
 	icon = 'mods/species/replika/icons/repair_spray.dmi'
 	item_flags = ITEM_FLAG_NO_BLUDGEON
-	atom_flags = ATOM_FLAG_OPEN_CONTAINER
 	w_class = ITEM_SIZE_SMALL
 	volume = 20 // needs room to dump a repair patch into it
 	possible_transfer_amounts = @"[5,10,15]"
 	var/tmp/sound_spray = 'sound/effects/spray.ogg' ///Sound played when spraying
+
+/obj/item/chems/repair_spray/examine(mob/user, distance, infix, suffix)
+	. = ..()
+	if(distance <= 2)
+		to_chat(user, SPAN_NOTICE("\The [src]'s refill cap is [ATOM_IS_OPEN_CONTAINER(src) ? "open" : "closed"]."))
+
+/obj/item/chems/repair_spray/attack_self(mob/user)
+	to_chat(user, SPAN_WARNING("You [ATOM_IS_OPEN_CONTAINER(src) ? "close" : "open"] \the [src]'s refill cap!"))
+	atom_flags ^= ATOM_FLAG_OPEN_CONTAINER
 
 /obj/item/chems/repair_spray/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	if(!ATOM_IS_OPEN_CONTAINER(src) || !proximity_flag)
@@ -111,11 +119,11 @@
 	else
 		icon_state = get_world_inventory_state()
 
-/obj/item/chems/patch/use_on_mob(mob/living/victim, mob/user, def_zone)
+/obj/item/chems/patch/use_on_mob(mob/living/victim, mob/user)
 	if(!ATOM_IS_OPEN_CONTAINER(src))
 		to_chat(user, SPAN_NOTICE("You need to open \the [src] first!"))
 		return TRUE
-	var/obj/item/organ/external/targeted_organ = GET_EXTERNAL_ORGAN(victim, def_zone)
+	var/obj/item/organ/external/targeted_organ = GET_EXTERNAL_ORGAN(victim, user.zone_sel.selecting || BP_CHEST)
 	if(!isliving(victim))
 		return TRUE
 	if(!reagents?.total_volume)
