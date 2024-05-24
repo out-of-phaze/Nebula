@@ -17,7 +17,7 @@
 /obj/item/chems/food/liquidfood,
 /obj/item/chems/food/liquidfood,
 /obj/item/chems/food/can/beans,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "ag" = (
 /obj/structure/cable{
@@ -30,7 +30,7 @@
 	dir = 8;
 	pixel_x = 22
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "ay" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
@@ -46,7 +46,7 @@
 /obj/structure/table,
 /obj/machinery/recharger,
 /obj/item/cell/device/standard,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "aP" = (
 /obj/structure/table/reinforced,
@@ -60,7 +60,7 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson/bridge)
 "bd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
@@ -75,14 +75,14 @@
 	pixel_x = -22
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "bD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/johnson/mining)
 "bG" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -97,9 +97,9 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/material/panel/mapped/plastic/fifty,
 /obj/item/stack/material/panel/mapped/plastic/fifty,
-/obj/item/stack/material/shiny/mapped/aluminium/fifty,
-/obj/item/stack/material/shiny/mapped/aluminium/fifty,
-/turf/simulated/floor/tiled,
+/obj/item/stack/material/sheet/shiny/mapped/aluminium/fifty,
+/obj/item/stack/material/sheet/shiny/mapped/aluminium/fifty,
+/turf/floor/tiled,
 /area/johnson/mining)
 "bM" = (
 /obj/structure/catwalk,
@@ -118,7 +118,7 @@
 /obj/random/firstaid,
 /obj/random/firstaid,
 /obj/item/pill_bottle/assorted,
-/turf/simulated/floor/tiled/monotile,
+/turf/floor/tiled/monotile,
 /area/johnson/medical)
 "cb" = (
 /obj/structure/cable{
@@ -129,14 +129,14 @@
 	start_pressure = 30.3975;
 	volume = 15000
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "ce" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/valve/open{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "cg" = (
 /obj/machinery/light{
@@ -144,25 +144,25 @@
 	},
 /obj/machinery/hologram/holopad/longrange/remoteship,
 /obj/abstract/submap_landmark/spawnpoint/johnson_pilot_spawn,
-/turf/simulated/floor/tiled/dark/monotile,
+/turf/floor/tiled/dark/monotile,
 /area/johnson/bridge)
 "cs" = (
 /obj/machinery/computer/ship/sensors{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson/bridge)
 "cF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "cK" = (
 /obj/structure/handrail{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "dg" = (
 /obj/machinery/airlock_sensor{
@@ -181,7 +181,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "dx" = (
 /obj/structure/cable/yellow{
@@ -191,7 +191,7 @@
 	dir = 1;
 	pixel_y = -30
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "dJ" = (
 /obj/effect/floor_decal/corner/brown/bordercorner,
@@ -199,7 +199,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/light,
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "dV" = (
 /obj/structure/cable,
@@ -216,7 +216,7 @@
 /obj/item/toolbox/electrical,
 /obj/item/clothing/gloves/insulated,
 /obj/item/multitool,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "eh" = (
 /obj/effect/floor_decal/corner/brown/half,
@@ -226,7 +226,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "ej" = (
 /obj/structure/cable/yellow{
@@ -236,21 +236,21 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/floor/lino,
+/turf/floor/lino,
 /area/johnson)
 "em" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "et" = (
 /obj/machinery/power/solar,
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson/medical)
 "eO" = (
 /obj/effect/floor_decal/techfloor{
@@ -262,24 +262,24 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "eR" = (
-/turf/simulated/wall/r_wall/prepainted,
+/turf/wall/r_wall/prepainted,
 /area/johnson)
 "fn" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar,
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson)
 "fx" = (
 /obj/machinery/vending/wallmed1{
 	pixel_y = 32
 	},
 /obj/structure/handrail,
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "fK" = (
 /obj/machinery/door/blast/regular/open{
@@ -287,7 +287,7 @@
 	icon_state = "pdoor0";
 	id_tag = "johnson_cargo_hold"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "fV" = (
 /obj/effect/floor_decal/corner/brown/border{
@@ -309,7 +309,7 @@
 	dir = 1;
 	pixel_y = 22
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "gC" = (
 /obj/effect/floor_decal/techfloor{
@@ -328,7 +328,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "gI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
@@ -342,7 +342,7 @@
 	pixel_y = -21
 	},
 /obj/structure/closet/emcloset,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "hs" = (
 /obj/effect/floor_decal/corner/brown/border{
@@ -355,7 +355,7 @@
 	dir = 1;
 	pixel_y = -21
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "ht" = (
 /obj/machinery/power/solar,
@@ -366,7 +366,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson)
 "hw" = (
 /obj/structure/cable/yellow{
@@ -378,8 +378,8 @@
 	pixel_y = 10
 	},
 /obj/item/toolbox/mechanical,
-/obj/item/clothing/accessory/stethoscope,
-/turf/simulated/floor/tiled/monotile,
+/obj/item/clothing/neck/stethoscope,
+/turf/floor/tiled/monotile,
 /area/johnson/medical)
 "hy" = (
 /obj/structure/cable{
@@ -392,7 +392,7 @@
 	dir = 9
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "hL" = (
 /obj/machinery/shipsensors,
@@ -400,7 +400,7 @@
 /obj/machinery/power/terminal{
 	icon_state = "term-omni"
 	},
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson)
 "iq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -410,7 +410,7 @@
 /obj/effect/floor_decal/industrial/firstaid/corner{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "iu" = (
 /obj/machinery/light/small{
@@ -422,7 +422,7 @@
 	},
 /obj/structure/table/woodentable/mahogany,
 /obj/item/box/mixedglasses,
-/turf/simulated/floor/wood/walnut,
+/turf/floor/wood/walnut,
 /area/johnson)
 "iw" = (
 /obj/structure/cable/yellow{
@@ -430,7 +430,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "iH" = (
 /obj/machinery/power/solar,
@@ -440,7 +440,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson)
 "iL" = (
 /obj/effect/catwalk_plated/dark,
@@ -452,7 +452,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "iN" = (
 /obj/structure/cable{
@@ -464,7 +464,7 @@
 /obj/effect/floor_decal/corner/paleblue/half{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "iP" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
@@ -482,7 +482,7 @@
 	dir = 1;
 	id_tag = "johnson_dock_pump"
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "iT" = (
 /obj/structure/sign/warning/compressed_gas{
@@ -490,15 +490,15 @@
 	pixel_x = 34
 	},
 /obj/machinery/atmospherics/valve,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "jt" = (
 /obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "jz" = (
 /obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "jI" = (
 /obj/machinery/light/small,
@@ -506,14 +506,14 @@
 /obj/machinery/light_switch{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/monotile,
+/turf/floor/tiled/monotile,
 /area/johnson/medical)
 "jJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "jP" = (
 /obj/structure/cable/yellow{
@@ -523,7 +523,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "kc" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -532,7 +532,7 @@
 /obj/structure/closet/medical_wall/filled{
 	pixel_y = 32
 	},
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/johnson)
 "kn" = (
 /obj/structure/window/reinforced{
@@ -548,7 +548,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/floor/reinforced,
 /area/johnson/maintenance)
 "ko" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -561,13 +561,13 @@
 /obj/structure/sign/warning/nosmoking_1{
 	pixel_y = 32
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "kw" = (
 /obj/machinery/light_switch{
 	pixel_y = 25
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "kH" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -575,10 +575,10 @@
 	dir = 1
 	},
 /obj/structure/closet/crate/plastic,
-/obj/item/stack/material/reinforced/mapped/plasteel/thirty,
-/obj/item/stack/material/reinforced/mapped/fiberglass/fifty,
+/obj/item/stack/material/sheet/reinforced/mapped/plasteel/thirty,
+/obj/item/stack/material/sheet/reinforced/mapped/fiberglass/fifty,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/johnson/mining)
 "kI" = (
 /obj/machinery/power/solar,
@@ -586,7 +586,7 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/yellow,
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson)
 "kM" = (
 /turf/space,
@@ -602,7 +602,7 @@
 	dir = 1;
 	id_tag = "johnson_mining_pump_out_internal"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "lF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -611,11 +611,11 @@
 /obj/effect/floor_decal/industrial/firstaid{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "ma" = (
 /obj/structure/tank_rack/oxygen,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "mi" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -625,7 +625,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/johnson)
 "mt" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -637,7 +637,7 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "mI" = (
 /obj/machinery/computer/ship/engines{
@@ -650,16 +650,16 @@
 /obj/effect/decal/cleanable/cobweb{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "mO" = (
-/turf/simulated/wall/prepainted,
+/turf/wall/prepainted,
 /area/johnson/maintenance)
 "mW" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/johnson)
 "mX" = (
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -676,27 +676,27 @@
 /obj/structure/handrail{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "na" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "nb" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
 /obj/structure/handrail,
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/johnson)
 "nq" = (
-/turf/simulated/wall/prepainted,
+/turf/wall/prepainted,
 /area/johnson)
 "nB" = (
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "ov" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -704,7 +704,7 @@
 /obj/item/chems/chem_disp_cartridge/sacid{
 	volume = 120
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "oY" = (
 /obj/abstract/submap_landmark/joinable_submap/spawnable_ship/johnson,
@@ -712,7 +712,7 @@
 /area/space)
 "ph" = (
 /obj/machinery/material_processing/compressor,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "pA" = (
 /obj/machinery/door/airlock/external/bolted{
@@ -720,14 +720,14 @@
 	id_tag = "johnson_mining_outer"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "pK" = (
 /obj/machinery/power/solar,
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson/medical)
 "qk" = (
 /obj/machinery/power/solar,
@@ -737,7 +737,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson/medical)
 "qA" = (
 /obj/machinery/button/access/exterior{
@@ -753,7 +753,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/medical)
 "qS" = (
 /obj/effect/floor_decal/corner/brown/half{
@@ -766,7 +766,7 @@
 /obj/abstract/landmark/proc_caller/floor_burner{
 	probability = 25
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/johnson/mining)
 "qZ" = (
 /obj/structure/curtain/open/bed,
@@ -779,7 +779,7 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/turf/simulated/floor/wood/walnut,
+/turf/floor/wood/walnut,
 /area/johnson)
 "rc" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -788,14 +788,14 @@
 /obj/machinery/conveyor_switch{
 	id_tag = "johnson_cargo_belt"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "rr" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1
 	},
 /obj/structure/handrail,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "rB" = (
 /obj/structure/table/reinforced,
@@ -816,7 +816,7 @@
 /obj/machinery/light_switch{
 	pixel_y = 25
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson/bridge)
 "rS" = (
 /obj/machinery/ion_thruster{
@@ -825,7 +825,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/floor/reinforced/airless,
 /area/johnson/maintenance)
 "rZ" = (
 /obj/effect/floor_decal/techfloor{
@@ -843,7 +843,7 @@
 	id_tag = "johnson_dock";
 	pixel_x = -20
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "sd" = (
 /obj/structure/cable/yellow{
@@ -856,7 +856,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/abstract/submap_landmark/spawnpoint/johnson_technician_spawn,
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "sy" = (
 /obj/machinery/door/airlock/glass/command{
@@ -871,17 +871,17 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson/bridge)
 "sz" = (
 /obj/structure/curtain/open/shower/engineering,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "tB" = (
 /obj/effect/floor_decal/corner/brown/half,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "tG" = (
 /obj/machinery/power/tracker,
@@ -892,14 +892,14 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow,
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson/medical)
 "tV" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "ux" = (
 /obj/effect/floor_decal/corner/brown/bordercorner{
@@ -913,11 +913,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "uT" = (
 /obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/bridge)
 "vb" = (
 /obj/structure/window/reinforced{
@@ -930,19 +930,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/floor/reinforced,
 /area/johnson/maintenance)
 "vt" = (
-/turf/simulated/wall/r_wall/prepainted,
+/turf/wall/r_wall/prepainted,
 /area/johnson/bridge)
 "vJ" = (
 /obj/machinery/computer/operating{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "vR" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/johnson/medical)
 "wd" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -951,7 +951,7 @@
 /obj/machinery/network/router/wall_mounted{
 	pixel_y = 21
 	},
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/johnson)
 "wj" = (
 /obj/machinery/computer/shuttle_control/explore{
@@ -962,7 +962,7 @@
 /obj/structure/cable{
 	icon_state = "2-9"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson/bridge)
 "wD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
@@ -982,11 +982,11 @@
 	pixel_x = 7;
 	pixel_y = 8
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "wG" = (
 /obj/machinery/atmospherics/unary/outlet_injector,
-/turf/simulated/floor/reinforced/airless,
+/turf/floor/reinforced/airless,
 /area/johnson/maintenance)
 "wY" = (
 /obj/machinery/airlock_sensor{
@@ -997,7 +997,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/airlock{
 	id_tag = "johnson_dock_pump"
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "xc" = (
 /obj/machinery/door/airlock/glass/command{
@@ -1009,24 +1009,24 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson/bridge)
 "xf" = (
 /obj/machinery/door/airlock/external,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "xi" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/bed/chair/shuttle/blue{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark/monotile,
+/turf/floor/tiled/dark/monotile,
 /area/johnson/bridge)
 "xU" = (
 /obj/machinery/ion_thruster{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/floor/reinforced/airless,
 /area/johnson/maintenance)
 "yB" = (
 /obj/effect/floor_decal/corner/brown/half{
@@ -1038,7 +1038,7 @@
 	id_tag = "johnson_cargo";
 	pixel_x = 20
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "yS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1047,7 +1047,7 @@
 	},
 /obj/machinery/door/airlock/double/glass/medical,
 /obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "zf" = (
 /obj/machinery/power/solar,
@@ -1058,7 +1058,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson/medical)
 "zB" = (
 /obj/structure/catwalk,
@@ -1076,7 +1076,7 @@
 	dir = 1
 	},
 /obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "zM" = (
 /obj/structure/cable/yellow{
@@ -1089,7 +1089,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/solar,
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson)
 "zS" = (
 /obj/structure/cable{
@@ -1101,7 +1101,7 @@
 /obj/effect/floor_decal/industrial/firstaid{
 	dir = 9
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "zT" = (
 /obj/structure/closet/hydrant{
@@ -1118,7 +1118,7 @@
 /obj/structure/handrail{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "zU" = (
 /obj/structure/window/reinforced{
@@ -1131,14 +1131,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/floor/reinforced,
 /area/johnson/maintenance)
 "zW" = (
 /obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "Ac" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/johnson)
 "Aq" = (
 /obj/machinery/door/airlock/external/bolted_open{
@@ -1151,7 +1151,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "AR" = (
 /obj/structure/cable/yellow{
@@ -1160,7 +1160,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 1
 	},
-/turf/simulated/floor/lino,
+/turf/floor/lino,
 /area/johnson)
 "AU" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
@@ -1169,10 +1169,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "Bc" = (
-/turf/simulated/wall/r_wall,
+/turf/wall/r_wall,
 /area/johnson/medical)
 "Bj" = (
 /obj/structure/bed/roller,
@@ -1183,7 +1183,7 @@
 /obj/item/radio/intercom{
 	pixel_y = 20
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "Bp" = (
 /obj/structure/cable{
@@ -1193,14 +1193,14 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/johnson/mining)
 "Bu" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
 	id_tag = "johnson_mining_pump_out_external"
 	},
 /obj/abstract/exterior_marker/outside,
-/turf/simulated/floor/reinforced/airless,
+/turf/floor/reinforced/airless,
 /area/johnson/mining)
 "BP" = (
 /obj/effect/floor_decal/corner/brown/half,
@@ -1209,7 +1209,7 @@
 	dir = 8
 	},
 /obj/machinery/recharge_station,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "BR" = (
 /obj/effect/catwalk_plated/dark,
@@ -1222,7 +1222,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "Cc" = (
 /obj/effect/floor_decal/techfloor{
@@ -1240,13 +1240,13 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "Cq" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "CA" = (
 /obj/structure/catwalk,
@@ -1265,24 +1265,24 @@
 	initial_access = null;
 	suit = /obj/item/clothing/suit/space/void/mining
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "CC" = (
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/johnson/mining)
 "CD" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /obj/machinery/optable,
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "CE" = (
 /obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/medical)
 "CS" = (
-/turf/simulated/wall/r_wall,
+/turf/wall/r_wall,
 /area/johnson/maintenance)
 "CX" = (
 /obj/structure/cable/yellow{
@@ -1291,7 +1291,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "Dc" = (
 /obj/machinery/light,
@@ -1301,7 +1301,7 @@
 /obj/effect/floor_decal/corner/paleblue/half{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "De" = (
 /obj/structure/cable/yellow{
@@ -1314,7 +1314,7 @@
 	tag_south = 2
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "Di" = (
 /obj/structure/window/reinforced{
@@ -1327,7 +1327,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/reinforced,
+/turf/floor/reinforced,
 /area/johnson/maintenance)
 "Do" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -1337,15 +1337,15 @@
 /obj/machinery/conveyor_switch{
 	id_tag = "johnson_cargo_belt"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "DW" = (
 /obj/structure/table,
 /obj/item/firstaid/surgery,
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "Et" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/johnson/bridge)
 "Eu" = (
 /obj/machinery/door/airlock/external/bolted_open{
@@ -1353,7 +1353,7 @@
 	id_tag = "johnson_mining_inner"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "ED" = (
 /obj/effect/floor_decal/corner/brown/half{
@@ -1364,15 +1364,15 @@
 	pixel_x = -21
 	},
 /obj/structure/reagent_dispensers/fueltank,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "EP" = (
 /obj/abstract/submap_landmark/spawnpoint/johnson_crewman_spawn,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "Fm" = (
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "Fr" = (
 /obj/structure/catwalk,
@@ -1382,14 +1382,14 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "Fs" = (
 /obj/machinery/fabricator/replicator,
-/turf/simulated/floor/tiled/dark/monotile,
+/turf/floor/tiled/dark/monotile,
 /area/johnson)
 "FV" = (
-/turf/simulated/wall/r_wall,
+/turf/wall/r_wall,
 /area/johnson/bridge)
 "FW" = (
 /obj/machinery/atmospherics/unary/tank/air{
@@ -1398,16 +1398,16 @@
 /obj/effect/decal/cleanable/cobweb2{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "FX" = (
-/turf/simulated/wall/r_wall/prepainted,
+/turf/wall/r_wall/prepainted,
 /area/johnson/mining)
 "FY" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/turf/simulated/floor/lino,
+/turf/floor/lino,
 /area/johnson)
 "Gg" = (
 /obj/structure/table/woodentable/mahogany,
@@ -1417,13 +1417,13 @@
 	dir = 1;
 	pixel_y = -30
 	},
-/turf/simulated/floor/wood/walnut,
+/turf/floor/wood/walnut,
 /area/johnson)
 "Gj" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/dark/monotile,
+/turf/floor/tiled/dark/monotile,
 /area/johnson/bridge)
 "Gk" = (
 /obj/machinery/door/airlock/glass/mining,
@@ -1433,14 +1433,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "Gy" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "GD" = (
 /obj/effect/catwalk_plated/dark,
@@ -1454,14 +1454,14 @@
 	dir = 4
 	},
 /obj/effect/overmap/visitable/ship/landable/spawnable/johnson,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "GF" = (
 /obj/abstract/exterior_marker/outside,
-/turf/simulated/floor/reinforced/airless,
+/turf/floor/reinforced/airless,
 /area/johnson/mining)
 "GG" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/johnson/maintenance)
 "GH" = (
 /obj/effect/floor_decal/corner/brown,
@@ -1471,7 +1471,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "Hc" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -1480,7 +1480,7 @@
 	id_tag = "johnson_cargo_hold";
 	pixel_y = -32
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "Hm" = (
 /obj/structure/cable/yellow{
@@ -1488,7 +1488,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "Hy" = (
 /obj/machinery/cryopod{
@@ -1498,7 +1498,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
-/turf/simulated/floor/wood/walnut,
+/turf/floor/wood/walnut,
 /area/johnson)
 "HG" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -1507,7 +1507,7 @@
 /obj/machinery/conveyor{
 	id_tag = "johnson_cargo_belt"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "HN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
@@ -1517,20 +1517,20 @@
 /obj/structure/table,
 /obj/item/belt/utility/full,
 /obj/item/box/lights/mixed,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "HP" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "HY" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/bridge)
 "Id" = (
 /obj/machinery/door/airlock/engineering,
@@ -1546,7 +1546,7 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson/maintenance)
 "If" = (
 /obj/structure/table/woodentable/mahogany,
@@ -1554,13 +1554,13 @@
 	throwpass = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/lino,
+/turf/floor/lino,
 /area/johnson)
 "Il" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/floor/reinforced/airless,
 /area/johnson/maintenance)
 "It" = (
 /obj/machinery/power/terminal{
@@ -1574,7 +1574,7 @@
 	tag_south = 2
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "II" = (
 /obj/structure/table/reinforced,
@@ -1598,14 +1598,14 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson/bridge)
 "IS" = (
-/obj/structure/plasticflaps/airtight,
+/obj/structure/flaps/airtight,
 /obj/machinery/conveyor{
 	id_tag = "johnson_cargo_belt"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "IT" = (
 /obj/effect/floor_decal/corner/brown/border,
@@ -1615,10 +1615,10 @@
 /obj/structure/handrail{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "IW" = (
-/turf/simulated/wall/r_wall/prepainted,
+/turf/wall/r_wall/prepainted,
 /area/johnson/maintenance)
 "IZ" = (
 /obj/structure/curtain/open/bed,
@@ -1628,7 +1628,7 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/turf/simulated/floor/wood/walnut,
+/turf/floor/wood/walnut,
 /area/johnson)
 "Ju" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -1638,7 +1638,7 @@
 	pixel_y = 21
 	},
 /obj/structure/handrail,
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "JP" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -1647,30 +1647,30 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "Kh" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson/medical)
 "Kr" = (
-/turf/simulated/wall/r_wall,
+/turf/wall/r_wall,
 /area/johnson/mining)
 "Kw" = (
-/obj/structure/plasticflaps/airtight,
+/obj/structure/flaps/airtight,
 /obj/machinery/door/blast/regular{
 	id_tag = "johnson_mining_bay"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "KC" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/machinery/light,
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "KX" = (
 /obj/effect/catwalk_plated/dark,
@@ -1683,7 +1683,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "Lw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1693,14 +1693,14 @@
 	id_tag = "johnson_mining_interior_sensor";
 	pixel_y = 24
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/johnson/mining)
 "Ly" = (
 /obj/machinery/door/airlock/external/bolted_open{
 	dir = 1;
 	id_tag = "johnson_mining_inner"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "LB" = (
 /obj/effect/floor_decal/techfloor,
@@ -1714,7 +1714,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "LD" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -1727,13 +1727,13 @@
 	initial_access = null;
 	suit = /obj/item/clothing/suit/space/void/mining
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "Mg" = (
 /obj/structure/bed/chair/armchair/brown{
 	dir = 1
 	},
-/turf/simulated/floor/lino,
+/turf/floor/lino,
 /area/johnson)
 "Mk" = (
 /obj/effect/floor_decal/techfloor{
@@ -1751,7 +1751,7 @@
 	pixel_x = -34
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "Mo" = (
 /obj/structure/catwalk,
@@ -1762,7 +1762,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "MO" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1785,14 +1785,14 @@
 /obj/machinery/atmospherics/unary/vent_pump/airlock{
 	id_tag = "johnson_mining_pump"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "MU" = (
 /obj/machinery/power/solar,
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson)
 "Nu" = (
 /obj/structure/curtain/open/shower/engineering,
@@ -1806,7 +1806,7 @@
 /obj/structure/hygiene/toilet{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "Nz" = (
 /obj/effect/floor_decal/corner/brown/three_quarters{
@@ -1822,20 +1822,20 @@
 /obj/item/sign{
 	sign_type = /obj/structure/sign/warning/nosmoking_burned
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "ND" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "NI" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 4
 	},
 /obj/abstract/submap_landmark/spawnpoint/johnson_medic_spawn,
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "NK" = (
 /obj/machinery/door/airlock/engineering,
@@ -1845,7 +1845,7 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson/maintenance)
 "NX" = (
 /obj/machinery/power/solar,
@@ -1853,11 +1853,11 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson/medical)
 "Oj" = (
 /obj/random/vendor,
-/turf/simulated/floor/tiled/dark/monotile,
+/turf/floor/tiled/dark/monotile,
 /area/johnson)
 "Oo" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -1868,14 +1868,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "Ow" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "Ps" = (
 /obj/effect/floor_decal/corner/brown/half,
@@ -1888,7 +1888,7 @@
 /obj/machinery/power/apc{
 	pixel_y = -22
 	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "Pv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1898,7 +1898,7 @@
 	pixel_y = 25
 	},
 /obj/structure/handrail,
-/turf/simulated/floor/lino,
+/turf/floor/lino,
 /area/johnson)
 "PW" = (
 /obj/structure/cable{
@@ -1911,7 +1911,7 @@
 /obj/item/plunger,
 /obj/item/box/detergent,
 /obj/item/soap,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "Qa" = (
 /obj/structure/cable{
@@ -1928,37 +1928,37 @@
 	_output_maxed = 1;
 	_output_on = 1
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "QQ" = (
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "Rz" = (
 /obj/machinery/door/airlock/external/bolted{
 	dir = 1;
 	id_tag = "johnson_mining_outer"
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "RY" = (
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "Sm" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/johnson/mining)
 "Sv" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "Sz" = (
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/turf/simulated/floor/lino,
+/turf/floor/lino,
 /area/johnson)
 "SJ" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -1970,9 +1970,9 @@
 /obj/structure/closet/walllocker{
 	pixel_y = 32
 	},
-/obj/item/pickaxe/drill,
-/obj/item/pickaxe/drill,
-/obj/item/pickaxe/drill,
+/obj/item/tool/drill,
+/obj/item/tool/drill,
+/obj/item/tool/drill,
 /obj/item/flashlight/lantern,
 /obj/item/flashlight/lantern,
 /obj/item/box/glowsticks,
@@ -1996,10 +1996,10 @@
 /obj/item/suit_cooling_unit,
 /obj/item/mobile_ladder,
 /obj/item/hoist_kit,
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "SQ" = (
-/turf/simulated/wall/r_wall/prepainted,
+/turf/wall/r_wall/prepainted,
 /area/johnson/medical)
 "Td" = (
 /obj/random/single{
@@ -2009,7 +2009,7 @@
 /obj/abstract/landmark/proc_caller/floor_burner{
 	probability = 25
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/johnson/mining)
 "Tu" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2019,17 +2019,17 @@
 	name = "mining bay shutters button";
 	pixel_x = 24
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "Tv" = (
 /obj/machinery/material_processing/smeltery,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "TX" = (
 /obj/structure/handrail{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "Uh" = (
 /obj/effect/floor_decal/corner/brown/border,
@@ -2039,22 +2039,22 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "Ur" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/ore_box,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/johnson/mining)
 "Uu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/johnson/mining)
 "UA" = (
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "UE" = (
 /obj/structure/cable{
@@ -2069,14 +2069,14 @@
 /obj/effect/floor_decal/corner/paleblue/half{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "UT" = (
 /obj/machinery/power/solar,
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson)
 "UV" = (
 /obj/effect/floor_decal/techfloor{
@@ -2094,7 +2094,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "Vj" = (
 /obj/structure/cable{
@@ -2108,7 +2108,7 @@
 	icon_state = "1-8"
 	},
 /obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "Vm" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -2118,7 +2118,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/floor/tiled/white,
 /area/johnson)
 "Vo" = (
 /obj/machinery/atmospherics/unary/tank/air{
@@ -2130,7 +2130,7 @@
 	dir = 8;
 	pixel_x = 34
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "Vx" = (
 /obj/machinery/door/airlock/glass/civilian,
@@ -2140,13 +2140,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "VW" = (
 /obj/effect/floor_decal/corner/brown/half,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/fabricator,
-/turf/simulated/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_grid,
 /area/johnson/mining)
 "Wb" = (
 /obj/abstract/docking_port_spawner/johnson{
@@ -2165,7 +2165,7 @@
 /obj/effect/shuttle_landmark/ship/johnson{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "Ws" = (
 /obj/effect/floor_decal/corner/brown/border{
@@ -2180,11 +2180,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "WD" = (
 /obj/machinery/atmospherics/unary/vent_scrubber,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "WQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
@@ -2196,13 +2196,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "Xb" = (
 /obj/machinery/atmospherics/unary/tank/carbon_dioxide{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/maintenance)
 "Xw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
@@ -2210,7 +2210,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/fabricator/pipe,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "XF" = (
 /obj/structure/cable/yellow{
@@ -2227,14 +2227,14 @@
 	pixel_y = 4;
 	throwpass = 1
 	},
-/turf/simulated/floor/wood/walnut,
+/turf/floor/wood/walnut,
 /area/johnson)
 "XL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson/mining)
 "XN" = (
 /obj/structure/cable{
@@ -2246,17 +2246,17 @@
 /obj/structure/cable{
 	icon_state = "6-8"
 	},
-/turf/simulated/floor/tiled/dark/monotile,
+/turf/floor/tiled/dark/monotile,
 /area/johnson/bridge)
 "XY" = (
-/turf/simulated/wall,
+/turf/wall,
 /area/johnson/mining)
 "Yj" = (
 /obj/structure/tank_rack/oxygen,
 /obj/machinery/atmospherics/unary/vent_pump/airlock{
 	id_tag = "johnson_dock_pump"
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 "Yn" = (
 /obj/structure/mirror{
@@ -2266,13 +2266,13 @@
 	dir = 1;
 	pixel_y = 22
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/turf/floor/tiled/white/monotile,
 /area/johnson/medical)
 "YG" = (
 /obj/machinery/computer/ship/helm{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson/bridge)
 "Za" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -2282,17 +2282,17 @@
 /obj/structure/cable{
 	icon_state = "6-9"
 	},
-/turf/simulated/floor/tiled/dark/monotile,
+/turf/floor/tiled/dark/monotile,
 /area/johnson/bridge)
 "Zi" = (
 /obj/structure/handrail,
-/turf/simulated/floor/plating,
+/turf/floor/plating,
 /area/johnson)
 "Zn" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/airless,
+/turf/floor/airless,
 /area/johnson)
 "Zp" = (
 /obj/structure/table/reinforced,
@@ -2302,7 +2302,7 @@
 	pixel_y = 10
 	},
 /obj/item/toolbox/emergency,
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson/bridge)
 "Zu" = (
 /obj/structure/cable/yellow,
@@ -2310,21 +2310,21 @@
 /obj/machinery/power/solar_control{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "ZH" = (
 /obj/effect/floor_decal/corner/brown/border,
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/floor/tiled/dark,
 /area/johnson)
 "ZL" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled,
+/turf/floor/tiled,
 /area/johnson/mining)
 "ZM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2334,7 +2334,7 @@
 	dir = 1
 	},
 /obj/abstract/submap_landmark/spawnpoint/johnson_crewman_spawn,
-/turf/simulated/floor/lino,
+/turf/floor/lino,
 /area/johnson)
 "ZT" = (
 /obj/effect/floor_decal/techfloor{
@@ -2349,7 +2349,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/floor/tiled/techmaint,
 /area/johnson/maintenance)
 
 (1,1,1) = {"
