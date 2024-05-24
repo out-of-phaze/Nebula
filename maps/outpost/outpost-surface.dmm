@@ -710,7 +710,7 @@
 /area/planetary_outpost)
 "rF" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/surgery,
+/obj/item/firstaid/surgery,
 /turf/simulated/floor/tiled/white,
 /area/planetary_outpost/medical)
 "rT" = (

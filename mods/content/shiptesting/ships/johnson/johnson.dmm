@@ -1,10 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/structure/closet/crate/freezer/rations,
-/obj/item/storage/bag/trash,
-/obj/item/storage/bag/trash,
-/obj/item/storage/box/donkpockets,
-/obj/item/storage/box/donkpockets,
+/obj/item/bag/trash,
+/obj/item/bag/trash,
+/obj/item/box/donkpockets,
+/obj/item/box/donkpockets,
 /obj/item/chems/condiment/enzyme,
 /obj/item/trash/liquidfood,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -111,13 +111,13 @@
 /area/johnson/maintenance)
 "bV" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/stab,
+/obj/item/firstaid/stab,
 /obj/random/firstaid,
 /obj/random/firstaid,
 /obj/random/firstaid,
 /obj/random/firstaid,
 /obj/random/firstaid,
-/obj/item/storage/pill_bottle/assorted,
+/obj/item/pill_bottle/assorted,
 /turf/simulated/floor/tiled/monotile,
 /area/johnson/medical)
 "cb" = (
@@ -211,9 +211,9 @@
 	pixel_x = 22
 	},
 /obj/structure/rack,
-/obj/item/storage/toolbox/repairs,
-/obj/item/storage/toolbox/mechanical,
-/obj/item/storage/toolbox/electrical,
+/obj/item/toolbox/repairs,
+/obj/item/toolbox/mechanical,
+/obj/item/toolbox/electrical,
 /obj/item/clothing/gloves/insulated,
 /obj/item/multitool,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -373,11 +373,11 @@
 	icon_state = "4-8"
 	},
 /obj/structure/table,
-/obj/item/storage/belt/medical/emt,
-/obj/item/storage/box/gloves{
+/obj/item/belt/medical/emt,
+/obj/item/box/gloves{
 	pixel_y = 10
 	},
-/obj/item/storage/toolbox/mechanical,
+/obj/item/toolbox/mechanical,
 /obj/item/clothing/accessory/stethoscope,
 /turf/simulated/floor/tiled/monotile,
 /area/johnson/medical)
@@ -421,7 +421,7 @@
 	throwpass = 1
 	},
 /obj/structure/table/woodentable/mahogany,
-/obj/item/storage/box/mixedglasses,
+/obj/item/box/mixedglasses,
 /turf/simulated/floor/wood/walnut,
 /area/johnson)
 "iw" = (
@@ -1342,7 +1342,7 @@
 /area/johnson)
 "DW" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/surgery,
+/obj/item/firstaid/surgery,
 /turf/simulated/floor/tiled/white/monotile,
 /area/johnson/medical)
 "Et" = (
@@ -1516,8 +1516,8 @@
 	dir = 8
 	},
 /obj/structure/table,
-/obj/item/storage/belt/utility/full,
-/obj/item/storage/box/lights/mixed,
+/obj/item/belt/utility/full,
+/obj/item/box/lights/mixed,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
 "HP" = (
@@ -1916,9 +1916,9 @@
 /obj/item/mop,
 /obj/structure/reagent_dispensers/watertank,
 /obj/item/chems/glass/bucket,
-/obj/item/storage/bag/trash,
+/obj/item/bag/trash,
 /obj/item/plunger,
-/obj/item/storage/box/detergent,
+/obj/item/box/detergent,
 /obj/item/soap,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/johnson/maintenance)
@@ -1973,9 +1973,9 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/obj/item/storage/ore,
-/obj/item/storage/ore,
-/obj/item/storage/ore,
+/obj/item/ore,
+/obj/item/ore,
+/obj/item/ore,
 /obj/structure/closet/walllocker{
 	pixel_y = 32
 	},
@@ -1984,9 +1984,9 @@
 /obj/item/pickaxe/drill,
 /obj/item/flashlight/lantern,
 /obj/item/flashlight/lantern,
-/obj/item/storage/box/glowsticks,
-/obj/item/storage/box/glowsticks,
-/obj/item/storage/box/glowsticks,
+/obj/item/box/glowsticks,
+/obj/item/box/glowsticks,
+/obj/item/box/glowsticks,
 /obj/item/radio{
 	pixel_x = 7;
 	pixel_y = 8
@@ -2309,7 +2309,7 @@
 	pixel_x = 8;
 	pixel_y = 10
 	},
-/obj/item/storage/toolbox/emergency,
+/obj/item/toolbox/emergency,
 /turf/simulated/floor/tiled/dark,
 /area/johnson/bridge)
 "Zu" = (

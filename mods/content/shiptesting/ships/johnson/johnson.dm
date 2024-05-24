@@ -48,7 +48,6 @@
 
 /decl/submap_archetype/spawnable_ship/johnson
 	descriptor = "Johnson-class mining vessel"
-	map = "Johnson-class deep space mining vessel"
 	crew_jobs = list(
 		/datum/job/submap/shiptesting/johnson_pilot,
 		/datum/job/submap/shiptesting/johnson_medic,
@@ -172,15 +171,15 @@
 /decl/hierarchy/outfit/job/generic/engineer/johnson_technician
 	name = "Job - Mining vessel technician"
 	uniform = /obj/item/clothing/under/engineer
-	belt = /obj/item/storage/belt/utility/full
+	belt = /obj/item/belt/utility/full
 	l_ear = null
 
 /decl/hierarchy/outfit/job/generic/johnson_mining
 	name = "Job - Mining vessel shaft miner"
 	uniform = /obj/item/clothing/under/miner
 	pda_type = /obj/item/modular_computer/pda/science
-	backpack_contents = list(/obj/item/crowbar = 1, /obj/item/storage/ore = 1)
-	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	backpack_contents = list(/obj/item/crowbar = 1, /obj/item/ore = 1)
+	outfit_flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
 	l_ear = null
 
 /decl/hierarchy/outfit/job/generic/johnson_mining/Initialize()
