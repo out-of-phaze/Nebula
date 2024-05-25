@@ -452,6 +452,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/shuttle_landmark/ship/johnson{
+	dir = 4
+	},
 /turf/floor/plating,
 /area/johnson)
 "iN" = (
@@ -2161,9 +2164,6 @@
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
-	},
-/obj/effect/shuttle_landmark/ship/johnson{
-	dir = 8
 	},
 /turf/floor/plating,
 /area/johnson/maintenance)
