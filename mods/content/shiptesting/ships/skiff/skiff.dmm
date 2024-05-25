@@ -4,7 +4,7 @@
 /area/space)
 "d" = (
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /obj/machinery/shipsensors/weak{
@@ -18,21 +18,21 @@
 	dir = 8
 	},
 /obj/structure/railing/mapped{
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	},
 /obj/structure/railing/mapped{
 	dir = 4;
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	},
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /turf/space,
 /area/skiff)
 "h" = (
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /obj/effect/shuttle_landmark/ship/skiff{
@@ -53,11 +53,11 @@
 	},
 /obj/structure/railing/mapped{
 	dir = 4;
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	},
 /obj/effect/overmap/visitable/ship/landable/spawnable/skiff,
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /turf/space,
@@ -70,14 +70,14 @@
 	},
 /obj/structure/railing/mapped{
 	dir = 1;
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	},
 /obj/structure/railing/mapped{
 	dir = 4;
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	},
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /turf/space,
@@ -88,7 +88,7 @@
 	},
 /obj/abstract/submap_landmark/spawnpoint/skiff_operator,
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /turf/space,
@@ -96,21 +96,21 @@
 "q" = (
 /obj/structure/railing/mapped{
 	dir = 1;
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	},
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /turf/space,
 /area/skiff)
 "t" = (
 /obj/structure/railing/mapped{
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	},
 /obj/structure/closet/crate/freezer/rations,
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /turf/space,
@@ -131,7 +131,7 @@
 	},
 /obj/structure/railing/mapped{
 	dir = 8;
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	},
 /obj/structure/closet/emcloset,
 /obj/item/toolbox/repairs,
@@ -143,11 +143,11 @@
 /obj/item/tool/shovel,
 /obj/structure/railing/mapped{
 	dir = 1;
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	},
 /obj/item/blueprints/shuttle,
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /obj/item/hoist_kit,
@@ -156,10 +156,10 @@
 /area/skiff)
 "G" = (
 /obj/structure/railing/mapped{
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	},
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /turf/space,
@@ -168,33 +168,33 @@
 /obj/machinery/port_gen/pacman,
 /obj/structure/railing/mapped{
 	dir = 8;
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	},
 /obj/structure/cable,
 /obj/structure/railing/mapped{
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	},
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /turf/floor/airless,
 /area/skiff)
 "J" = (
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /turf/space,
 /area/skiff)
 "K" = (
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /obj/structure/railing/mapped{
 	dir = 1;
-	material = /decl/material/solid/plastic
+	material = /decl/material/solid/organic/plastic
 	},
 /turf/space,
 /area/skiff)
@@ -206,7 +206,7 @@
 /area/skiff)
 "P" = (
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /obj/machinery/computer/ship/sensors{
@@ -224,7 +224,7 @@
 	dir = 8
 	},
 /obj/structure/catwalk{
-	material = /decl/material/solid/plastic;
+	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
 /turf/space,
