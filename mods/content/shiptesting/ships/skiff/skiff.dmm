@@ -30,16 +30,6 @@
 	},
 /turf/space,
 /area/skiff)
-"h" = (
-/obj/structure/catwalk{
-	material = /decl/material/solid/organic/plastic;
-	material_alteration = 16777215
-	},
-/obj/effect/shuttle_landmark/ship/skiff{
-	dir = 1
-	},
-/turf/space,
-/area/skiff)
 "i" = (
 /obj/structure/catwalk,
 /obj/machinery/ion_thruster{
@@ -212,6 +202,9 @@
 /obj/machinery/computer/ship/sensors{
 	dir = 4
 	},
+/obj/effect/shuttle_landmark/ship/skiff{
+	dir = 4
+	},
 /turf/space,
 /area/skiff)
 "Y" = (
@@ -373,7 +366,7 @@ a
 a
 a
 z
-h
+J
 P
 J
 u
