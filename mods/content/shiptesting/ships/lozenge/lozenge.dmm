@@ -162,6 +162,9 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
+/obj/effect/shuttle_landmark/ship/lozenge{
+	dir = 4
+	},
 /turf/floor/plating,
 /area/lozenge)
 "w" = (
@@ -272,7 +275,6 @@
 /obj/structure/handrail{
 	dir = 4
 	},
-/obj/effect/shuttle_landmark/ship/lozenge,
 /turf/floor/airless,
 /area/lozenge)
 "L" = (
