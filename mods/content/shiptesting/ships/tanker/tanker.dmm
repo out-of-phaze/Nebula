@@ -360,6 +360,12 @@
 	},
 /turf/floor/tiled/steel_grid,
 /area/tanker)
+"Di" = (
+/obj/effect/shuttle_landmark/ship/tanker{
+	dir = 8
+	},
+/turf/floor/reinforced/oxygen,
+/area/tanker)
 "DV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -432,9 +438,6 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
-	},
-/obj/effect/shuttle_landmark/ship/tanker{
-	dir = 8
 	},
 /turf/floor/plating,
 /area/tanker)
@@ -2483,7 +2486,7 @@ Td
 Td
 Td
 Td
-Td
+Di
 Td
 Td
 Td
