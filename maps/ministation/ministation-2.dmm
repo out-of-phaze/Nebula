@@ -355,7 +355,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/item/gun/launcher/crossbow,
+/obj/item/gun/launcher/bow/crossbow/powered,
 /obj/item/arrow,
 /obj/item/arrow,
 /obj/item/cell/crap,
