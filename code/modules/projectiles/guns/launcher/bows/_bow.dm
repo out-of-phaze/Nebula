@@ -61,25 +61,27 @@
 		update_icon()
 	return ..()
 
+/obj/item/gun/launcher/bow/proc/add_base_bow_overlays()
+	return
+
 /obj/item/gun/launcher/bow/on_update_icon()
 
 	. = ..()
 
 	icon_state = get_world_inventory_state()
 
+	add_base_bow_overlays()
+
 	if(loaded)
 		var/bolt_state = "[icon_state]-loaded"
-		if(tension > 1)
+		if(tension)
 			bolt_state = "[bolt_state]-drawn"
 		if(check_state_in_icon(bolt_state, icon))
 			add_overlay(overlay_image(icon, bolt_state, loaded.color, RESET_COLOR))
 
 	if(string)
 		var/string_state = "[icon_state]-string"
-		if(tension > 1)
-			string_state = "[icon_state]-string-drawn"
-		else if(loaded)
-			string_state = "[icon_state]-string-nocked"
-
+		if(tension)
+			string_state = "[string_state]-drawn"
 		if(check_state_in_icon(string_state, icon))
 			add_overlay(overlay_image(icon, string_state, string.color, RESET_COLOR))

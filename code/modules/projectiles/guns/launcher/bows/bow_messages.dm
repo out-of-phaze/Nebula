@@ -46,3 +46,7 @@
 /obj/item/gun/launcher/bow/proc/show_string_remove_message(mob/user)
 	if(user)
 		user.visible_message("\The [user] unstrings \the [src].")
+
+/obj/item/gun/launcher/bow/proc/show_string_message(mob/user)
+	if(user)
+		user.visible_message("\The [user] strings \the [src] with \the [string].")

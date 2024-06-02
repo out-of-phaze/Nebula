@@ -1,10 +1,12 @@
 /obj/item/gun/launcher/bow/crossbow/powered
 	name   = "powered crossbow"
-	desc   = "A modern twist on an old classic. Pick up that can."
-	icon   = 'icons/obj/guns/launcher/crossbow_powered.dmi'
+	desc   = "A modern twist on an old classic."
 	string = /obj/item/bowstring/steel
 	/// Used for firing superheated rods.
 	var/obj/item/cell/cell
+
+/obj/item/gun/launcher/bow/crossbow/add_base_bow_overlays()
+	add_overlay(overlay_image(icon, "[icon_state]-cell_mount", COLOR_WHITE, RESET_COLOR))
 
 /obj/item/gun/launcher/bow/crossbow/powered/physically_destroyed()
 	if(cell)
@@ -57,11 +59,11 @@
 		return
 	if(loaded.throwforce >= 15)
 		return
-	if(!istype(loaded, /obj/item/arrow/rod))
+	if(!istype(loaded, /obj/item/bow_ammo))
 		return
 	to_chat(user, SPAN_NOTICE("\The [loaded] plinks and crackles as it begins to glow red-hot."))
-	loaded.throwforce = 15
-	loaded.icon_state = "metal-rod-superheated"
+	var/obj/item/bow_ammo/loaded_arrow = loaded
+	loaded_arrow.make_superheated()
 	cell.use(500)
 
 /obj/item/gun/launcher/bow/crossbow/powered/can_load_arrow(obj/item/ammo)
@@ -72,7 +74,7 @@
 		var/obj/item/stack/material/rods/rods = ammo
 		if(!rods.use(1))
 			return FALSE
-		ammo = new /obj/item/arrow/rod(src)
+		ammo = new /obj/item/bow_ammo/rod(src)
 		ammo.fingerprintslast = fingerprintslast
 	. = ..()
 	if(.)
@@ -82,7 +84,7 @@
 //	Rapid Crossbow Device	//
 */////////////////////////////
 
-/obj/item/arrow/rapidcrossbowdevice
+/obj/item/bow_ammo/bolt/rcd
 	name = "flashforged bolt"
 	desc = "The ultimate ghetto deconstruction implement."
 	throwforce = 4
@@ -100,7 +102,7 @@
 
 /obj/item/gun/launcher/bow/crossbow/powered/rapidcrossbowdevice/proc/generate_bolt(var/mob/user)
 	if(stored_matter >= boltcost && !loaded)
-		loaded = new/obj/item/arrow/rapidcrossbowdevice(src)
+		loaded = new/obj/item/bow_ammo/bolt/rcd(src)
 		stored_matter -= boltcost
 		to_chat(user, SPAN_NOTICE("The RCD flashforges a new bolt!"))
 		queue_icon_update()
@@ -125,8 +127,8 @@
 		to_chat(user, SPAN_NOTICE("The RCD now holds [stored_matter]/[max_stored_matter] matter-units."))
 		update_icon()
 
-	if(istype(W, /obj/item/arrow/rapidcrossbowdevice))
-		var/obj/item/arrow/rapidcrossbowdevice/A = W
+	if(istype(W, /obj/item/bow_ammo/bolt/rcd))
+		var/obj/item/bow_ammo/bolt/rcd/A = W
 		if((stored_matter + 10) > max_stored_matter)
 			to_chat(user, SPAN_NOTICE("Unable to reclaim flashforged bolt. The RCD can't hold that many additional matter-units."))
 			return

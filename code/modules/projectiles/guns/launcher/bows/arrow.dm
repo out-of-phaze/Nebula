@@ -1,42 +1,68 @@
-
-/obj/item/arrow
-	name = "bolt"
-	desc = "It's got a tip for you - get the point?"
-	icon = 'icons/obj/items/weapon/crossbow_bolt.dmi'
-	icon_state = "bolt"
-	item_state = "bolt"
+/obj/item/bow_ammo
+	abstract_type = /obj/item/bow_ammo
+	icon_state = ICON_STATE_WORLD
 	throwforce = 8
 	w_class = ITEM_SIZE_NORMAL
 	sharp = 1
 	edge = 0
 	lock_picking_level = 3
 	material = /decl/material/solid/organic/wood
+	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME | MAT_FLAG_ALTERATION_DESC
+	var/superheated = FALSE
+
+/obj/item/bow_ammo/on_update_icon()
+	. = ..()
+	if(superheated)
+		add_overlay(overlay_image(icon, "[icon_state]-superheated", COLOR_WHITE, RESET_COLOR))
+
+/obj/item/bow_ammo/proc/make_superheated()
+	if(!superheated)
+		throwforce *= 2
+		superheated = TRUE
+		update_icon()
 
 /// Helper for metal rods falling apart.
-/obj/item/arrow/proc/removed_from_bow(mob/user)
-	return
+/obj/item/bow_ammo/proc/removed_from_bow(mob/user)
+	if(!superheated)
+		return
+	// The rod has been superheated - we don't want it to be useable when removed from the bow.
+	to_chat(user, SPAN_DANGER("\The [src] shatters into a scattering of overstressed metal shards as it leaves the crossbow."))
+	var/obj/item/shard/shrapnel/S = new()
+	S.dropInto(loc)
+	qdel(src)
 
-/obj/item/spike
+/obj/item/bow_ammo/arrow
+	name = "arrow"
+	icon = 'icons/obj/items/weapon/arrow.dmi'
+	desc = "A long, sharp stick, fletched at one end."
+	var/decl/material/fletching_material
+
+/obj/item/bow_ammo/arrow/Initialize()
+	if(ispath(fletching_material))
+		fletching_material = GET_DECL(fletching_material)
+	. = ..()
+	update_icon()
+
+/obj/item/bow_ammo/arrow/fletched
+	fletching_material = /decl/material/solid/organic/skin/feathers
+
+/obj/item/bow_ammo/arrow/on_update_icon()
+	. = ..()
+	if(fletching_material)
+		add_overlay(overlay_image(icon, "[icon_state]-fletching", fletching_material.color, RESET_COLOR))
+
+/obj/item/bow_ammo/bolt
+	name = "bolt"
+	icon = 'icons/obj/items/weapon/arrow_bolt.dmi'
+	desc = "It's got a tip for you - get the point?"
+
+/obj/item/bow_ammo/spike
 	name = "alloy spike"
 	desc = "It's about a foot of weird silver metal with a wicked point."
-	sharp = 1
-	edge = 0
-	throwforce = 5
-	w_class = ITEM_SIZE_SMALL
-	icon = 'icons/obj/items/weapon/crossbow_bolt.dmi'
-	icon_state = "metal-rod"
-	item_state = "bolt"
 	material = /decl/material/solid/metal/alienalloy
 
-/obj/item/arrow/rod
+/obj/item/bow_ammo/rod
 	name = "metal rod"
 	desc = "Don't cry for me, Orithena."
-	icon_state = "metal-rod"
+	icon = 'icons/obj/items/weapon/arrow_rod.dmi'
 	material = /decl/material/solid/metal/steel
-
-/obj/item/arrow/rod/removed_from_bow(mob/user)
-	if(throwforce == 15) // The rod has been superheated - we don't want it to be useable when removed from the bow.
-		to_chat(user, SPAN_DANGER("\The [src] shatters into a scattering of overstressed metal shards as it leaves the crossbow."))
-		var/obj/item/shard/shrapnel/S = new()
-		S.dropInto(loc)
-		qdel(src)

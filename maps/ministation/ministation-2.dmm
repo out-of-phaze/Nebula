@@ -356,8 +356,8 @@
 	dir = 9
 	},
 /obj/item/gun/launcher/bow/crossbow/powered,
-/obj/item/arrow,
-/obj/item/arrow,
+/obj/item/bow_ammo/bolt,
+/obj/item/bow_ammo/bolt,
 /obj/item/cell/crap,
 /obj/item/mollusc/clam,
 /turf/floor/wood/walnut,

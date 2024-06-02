@@ -1,5 +1,8 @@
+/obj/item/gun/launcher/bow
+	var/bow_ammo_type = /obj/item/bow_ammo/arrow
+
 /obj/item/gun/launcher/bow/proc/can_load_arrow(obj/item/ammo)
-	return istype(ammo, /obj/item/arrow)
+	return istype(ammo, bow_ammo_type)
 
 /obj/item/gun/launcher/bow/proc/load_arrow(mob/user, obj/item/ammo)
 	if(user && !user.try_unequip(ammo, src))

@@ -28,19 +28,23 @@
 		show_string_remove_message(user)
 		user.put_in_hands(string)
 	string = null
+	update_icon()
 
 /obj/item/gun/launcher/bow/proc/remove_arrow(mob/user)
 	if(user)
 		show_unload_message(user)
-	if(istype(loaded, /obj/item/arrow))
-		var/obj/item/arrow/arrow = loaded
+
+	if(istype(loaded, /obj/item/bow_ammo))
+		var/obj/item/bow_ammo/arrow = loaded
 		arrow.removed_from_bow(user)
+
 	if(loaded)
 		if(!QDELETED(loaded))
 			loaded.dropInto(loc)
 			if(user)
 				user.put_in_hands(loaded)
 		loaded = null
+
 	update_icon()
 
 /obj/item/gun/launcher/bow/proc/relax_tension(mob/user)
@@ -55,6 +59,9 @@
 		return TRUE
 	if(user.try_unequip(new_string, src))
 		string = new_string
+		if(user)
+			show_string_message(user)
+		update_icon()
 		return TRUE
 	return FALSE
 
