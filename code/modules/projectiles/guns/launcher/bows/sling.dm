@@ -6,6 +6,8 @@
 	icon = 'icons/obj/guns/launcher/sling.dmi'
 	material = /decl/material/solid/organic/leather
 	string = null
+	max_tension = 1
+	bow_ammo_type = null
 
 /obj/item/gun/launcher/bow/sling/try_string(mob/user, obj/item/bowstring/new_string)
 	return FALSE
@@ -14,17 +16,8 @@
 	return istype(ammo, /obj/item/rock) || istype(ammo, /obj/item/stack/material/ore) || istype(ammo, /obj/item/stack/material/lump)
 
 /obj/item/gun/launcher/bow/sling/adjust_mob_overlay(mob/living/user_mob, bodytype, image/overlay, slot, bodypart, use_fallback_if_icon_missing = TRUE)
-	if(overlay)
-		if(tension)
-			overlay.icon_state = "[overlay.icon_state]-swing"
-		if(loaded)
-			overlay.overlays += overlay_image(overlay.icon, "[overlay.icon_state]-rock", loaded.color, RESET_COLOR)
-	return ..()
-
-/obj/item/gun/launcher/bow/sling/load_arrow(mob/user, obj/item/ammo)
-	if(istype(ammo, /obj/item/stack/material))
-		var/obj/item/stack/material/rocks = ammo
-		ammo = rocks.split(1)
+	if(overlay && tension)
+		overlay.icon_state = "[overlay.icon_state]-swing"
 	return ..()
 
 /obj/item/gun/launcher/bow/sling/show_load_message(mob/user)

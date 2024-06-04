@@ -7,8 +7,8 @@
 	fire_delay = 25
 	require_loaded_to_draw = FALSE
 	keep_tension_when_dropped = TRUE
-	max_tension = 3
-	bow_ammo_type = /obj/item/bow_ammo/bolt
+	bow_ammo_type = /obj/item/stack/material/bow_ammo/bolt
+	draw_time = 2 SECONDS
 
 /obj/item/gun/launcher/bow/crossbow/show_load_message(mob/user)
 	if(user)

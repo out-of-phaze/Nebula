@@ -34,8 +34,8 @@
 	if(user)
 		show_unload_message(user)
 
-	if(istype(loaded, /obj/item/bow_ammo))
-		var/obj/item/bow_ammo/arrow = loaded
+	if(istype(loaded, /obj/item/stack/material/bow_ammo))
+		var/obj/item/stack/material/bow_ammo/arrow = loaded
 		arrow.removed_from_bow(user)
 
 	if(loaded)

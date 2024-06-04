@@ -1,11 +1,13 @@
 /obj/item/gun/launcher/bow/crossbow/powered
-	name   = "powered crossbow"
-	desc   = "A modern twist on an old classic."
-	string = /obj/item/bowstring/steel
+	name          = "powered crossbow"
+	desc          = "A modern twist on an old classic."
+	string        = /obj/item/bowstring/copper // made from wire when crafted
+	bow_ammo_type = /obj/item/stack/material/bow_ammo/rod
+
 	/// Used for firing superheated rods.
 	var/obj/item/cell/cell
 
-/obj/item/gun/launcher/bow/crossbow/add_base_bow_overlays()
+/obj/item/gun/launcher/bow/crossbow/powered/add_base_bow_overlays()
 	add_overlay(overlay_image(icon, "[icon_state]-cell_mount", COLOR_WHITE, RESET_COLOR))
 
 /obj/item/gun/launcher/bow/crossbow/powered/physically_destroyed()
@@ -59,23 +61,18 @@
 		return
 	if(loaded.throwforce >= 15)
 		return
-	if(!istype(loaded, /obj/item/bow_ammo))
+	if(!istype(loaded, /obj/item/stack/material/bow_ammo))
 		return
 	to_chat(user, SPAN_NOTICE("\The [loaded] plinks and crackles as it begins to glow red-hot."))
-	var/obj/item/bow_ammo/loaded_arrow = loaded
+	var/obj/item/stack/material/bow_ammo/loaded_arrow = loaded
 	loaded_arrow.make_superheated()
 	cell.use(500)
-
-/obj/item/gun/launcher/bow/crossbow/powered/can_load_arrow(obj/item/ammo)
-	return istype(ammo, /obj/item/stack/material/rods) || ..()
 
 /obj/item/gun/launcher/bow/crossbow/powered/load_arrow(mob/user, obj/item/ammo)
 	if(istype(ammo, /obj/item/stack/material/rods))
 		var/obj/item/stack/material/rods/rods = ammo
-		if(!rods.use(1))
-			return FALSE
-		ammo = new /obj/item/bow_ammo/rod(src)
-		ammo.fingerprintslast = fingerprintslast
+		if(rods.use(1))
+			ammo = new /obj/item/stack/material/bow_ammo/rod(src, 1, rods.material?.type)
 	. = ..()
 	if(.)
 		superheat_rod(user)
@@ -83,8 +80,7 @@
 /*////////////////////////////
 //	Rapid Crossbow Device	//
 */////////////////////////////
-
-/obj/item/bow_ammo/bolt/rcd
+/obj/item/stack/material/bow_ammo/bolt/rcd
 	name = "flashforged bolt"
 	desc = "The ultimate ghetto deconstruction implement."
 	throwforce = 4
@@ -96,13 +92,14 @@
 	icon = 'icons/obj/guns/launcher/rcd_bow.dmi'
 	slot_flags = null
 	draw_time = 10
+	bow_ammo_type = /obj/item/stack/material/bow_ammo/bolt/rcd
 	var/stored_matter = 0
 	var/max_stored_matter = 120
 	var/boltcost = 30
 
 /obj/item/gun/launcher/bow/crossbow/powered/rapidcrossbowdevice/proc/generate_bolt(var/mob/user)
 	if(stored_matter >= boltcost && !loaded)
-		loaded = new/obj/item/bow_ammo/bolt/rcd(src)
+		loaded = new/obj/item/stack/material/bow_ammo/bolt/rcd(src)
 		stored_matter -= boltcost
 		to_chat(user, SPAN_NOTICE("The RCD flashforges a new bolt!"))
 		queue_icon_update()
@@ -127,8 +124,8 @@
 		to_chat(user, SPAN_NOTICE("The RCD now holds [stored_matter]/[max_stored_matter] matter-units."))
 		update_icon()
 
-	if(istype(W, /obj/item/bow_ammo/bolt/rcd))
-		var/obj/item/bow_ammo/bolt/rcd/A = W
+	if(istype(W, /obj/item/stack/material/bow_ammo/bolt/rcd))
+		var/obj/item/stack/material/bow_ammo/bolt/rcd/A = W
 		if((stored_matter + 10) > max_stored_matter)
 			to_chat(user, SPAN_NOTICE("Unable to reclaim flashforged bolt. The RCD can't hold that many additional matter-units."))
 			return

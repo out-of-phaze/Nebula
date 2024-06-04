@@ -1,11 +1,13 @@
-/obj/item/gun/launcher/bow
-	var/bow_ammo_type = /obj/item/bow_ammo/arrow
-
 /obj/item/gun/launcher/bow/proc/can_load_arrow(obj/item/ammo)
 	return istype(ammo, bow_ammo_type)
 
 /obj/item/gun/launcher/bow/proc/load_arrow(mob/user, obj/item/ammo)
-	if(user && !user.try_unequip(ammo, src))
+	if(istype(ammo, /obj/item/stack))
+		var/obj/item/stack/stack = ammo
+		ammo = stack.split(1)
+		if(QDELETED(ammo))
+			return FALSE
+	else if(user && !user.try_unequip(ammo, src))
 		return FALSE
 	loaded = ammo
 	if(user)

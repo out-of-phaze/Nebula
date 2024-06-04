@@ -16,11 +16,18 @@
 	if(user.restrained() || tension > 0)
 		return
 
+	show_draw_message(user)
+	if(!user.do_skilled(get_draw_time(), work_skill, src))
+		show_cancel_draw_message(user)
+		tension = 0
+		return
+
 	tension = 1
 	update_icon()
-	show_draw_message(user)
 	if(tension < max_tension)
 		continue_drawing(user)
+	else
+		show_max_draw_message(user)
 
 /obj/item/gun/launcher/bow/proc/continue_drawing(mob/user)
 	set waitfor = FALSE

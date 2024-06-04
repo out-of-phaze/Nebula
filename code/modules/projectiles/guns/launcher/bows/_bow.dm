@@ -18,20 +18,34 @@
 	/// Current draw on the bow.
 	var/tension = 0
 	/// Highest possible tension.
-	var/max_tension = 1
+	var/max_tension = 3
 	/// Speed per unit of tension.
 	var/release_speed = 10
 	/// Time needed to draw the bow back by one "tension"
-	var/draw_time = 2 SECONDS
+	var/draw_time = 1 SECOND
 	/// Does this bow need an arrow nocked to draw?
 	var/require_loaded_to_draw = TRUE
 	/// What skill is used to load and fire this bow?
 	var/work_skill = SKILL_WEAPONS
 	/// Does this bow keep tension when dropped?
 	var/keep_tension_when_dropped = FALSE
+	/// What kind of ammunition does this bow expect?
+	var/bow_ammo_type = /obj/item/stack/material/bow_ammo/arrow
+
+/obj/item/gun/launcher/bow/handle_click_empty(atom/movable/firer)
+	if(check_fire_message_spam("click"))
+		to_chat(firer, SPAN_WARNING("\The [src] has nothing nocked."))
+
+/obj/item/gun/launcher/bow/fancy
+	desc = "A projectile weapon of ancient design that turns elastic tension into long-range death. This one has decorative engraving and flourishes."
+	icon = 'icons/obj/guns/launcher/bow_fancy.dmi'
 
 /obj/item/gun/launcher/bow/crafted
 	string = null
+
+/obj/item/gun/launcher/bow/fancy/crafted
+	string = null
+
 
 /obj/item/gun/launcher/bow/Initialize()
 	if(ispath(string))
@@ -85,3 +99,15 @@
 			string_state = "[string_state]-drawn"
 		if(check_state_in_icon(string_state, icon))
 			add_overlay(overlay_image(icon, string_state, string.color, RESET_COLOR))
+
+/obj/item/gun/launcher/bow/adjust_mob_overlay(mob/living/user_mob, bodytype, image/overlay, slot, bodypart, use_fallback_if_icon_missing = TRUE)
+	if(overlay)
+		if(string)
+			var/string_state = "[overlay.icon_state]-string"
+			if(check_state_in_icon(string_state, overlay.icon))
+				overlay.overlays += overlay_image(overlay.icon, string_state, string.color, RESET_COLOR)
+		if(loaded)
+			var/loaded_state = "[overlay.icon_state]-loaded"
+			if(check_state_in_icon(loaded_state, overlay.icon))
+				overlay.overlays += overlay_image(overlay.icon, loaded_state, loaded.color, RESET_COLOR)
+	return ..()

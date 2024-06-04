@@ -28,3 +28,6 @@
 
 /obj/item/bowstring/steel
 	material = /decl/material/solid/metal/steel
+
+/obj/item/bowstring/copper
+	material = /decl/material/solid/metal/copper
