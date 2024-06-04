@@ -2,7 +2,7 @@
 	if(tension)
 		relax_tension(user)
 		return TRUE
-	if(loaded)
+	if(get_loaded_arrow(user))
 		start_drawing(user)
 		return TRUE
 	return ..()
@@ -11,7 +11,7 @@
 	if(user.is_holding_offhand(src))
 		if(tension)
 			relax_tension(user)
-		if(loaded)
+		if(_loaded)
 			remove_arrow(user)
 		else if(string)
 			remove_string(user)
@@ -34,16 +34,17 @@
 	if(user)
 		show_unload_message(user)
 
-	if(istype(loaded, /obj/item/stack/material/bow_ammo))
-		var/obj/item/stack/material/bow_ammo/arrow = loaded
-		arrow.removed_from_bow(user)
+	if(_loaded)
 
-	if(loaded)
-		if(!QDELETED(loaded))
-			loaded.dropInto(loc)
+		if(istype(_loaded, /obj/item/stack/material/bow_ammo))
+			var/obj/item/stack/material/bow_ammo/arrow = _loaded
+			arrow.removed_from_bow(user)
+
+		if(!QDELETED(_loaded))
+			_loaded.dropInto(loc)
 			if(user)
-				user.put_in_hands(loaded)
-		loaded = null
+				user.put_in_hands(_loaded)
+		_loaded = null
 
 	update_icon()
 
@@ -67,8 +68,8 @@
 
 /obj/item/gun/launcher/bow/attackby(obj/item/W, mob/user)
 	if(can_load_arrow(W))
-		if(loaded)
-			to_chat(user, SPAN_WARNING("\The [src] already has \the [loaded] nocked."))
+		if(_loaded)
+			to_chat(user, SPAN_WARNING("\The [src] already has \the [_loaded] nocked."))
 		else
 			load_arrow(user, W)
 		return TRUE

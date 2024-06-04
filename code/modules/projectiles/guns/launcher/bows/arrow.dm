@@ -11,6 +11,8 @@
 	lock_picking_level = 3
 	material = /decl/material/solid/organic/wood
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME | MAT_FLAG_ALTERATION_DESC
+	matter_multiplier = 0.2
+	is_spawnable_type = TRUE
 	var/superheated = FALSE
 
 /obj/item/stack/material/bow_ammo/on_update_icon()

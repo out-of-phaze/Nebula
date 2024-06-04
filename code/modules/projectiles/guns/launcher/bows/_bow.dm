@@ -10,11 +10,12 @@
 	has_safety = FALSE
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME | MAT_FLAG_ALTERATION_DESC
 	material = /decl/material/solid/organic/wood/yew
+	fire_verb = "loose"
 
 	/// What are we strung with?
 	var/obj/item/bowstring/string = /obj/item/bowstring
 	/// Currently loaded ammo.
-	var/obj/item/loaded
+	var/obj/item/_loaded
 	/// Current draw on the bow.
 	var/tension = 0
 	/// Highest possible tension.
@@ -31,6 +32,8 @@
 	var/keep_tension_when_dropped = FALSE
 	/// What kind of ammunition does this bow expect?
 	var/bow_ammo_type = /obj/item/stack/material/bow_ammo/arrow
+	/// Flag for tracking if a bow is currently being drawn, to avoid double draw.
+	var/drawing_bow = FALSE
 
 /obj/item/gun/launcher/bow/handle_click_empty(atom/movable/firer)
 	if(check_fire_message_spam("click"))
@@ -53,14 +56,14 @@
 	return ..()
 
 /obj/item/gun/launcher/bow/Destroy()
-	QDEL_NULL(loaded)
+	QDEL_NULL(_loaded)
 	QDEL_NULL(string)
 	return ..()
 
 /obj/item/gun/launcher/bow/physically_destroyed()
-	if(loaded)
-		loaded.dropInto(loc)
-		loaded = null
+	if(_loaded)
+		_loaded.dropInto(loc)
+		_loaded = null
 	if(string)
 		string.dropInto(loc)
 		string = null
@@ -70,10 +73,15 @@
 	if(!keep_tension_when_dropped)
 		if(tension)
 			tension = 0
-		if(loaded)
+		if(_loaded)
 			remove_arrow()
 		update_icon()
 	return ..()
+
+/obj/item/gun/launcher/bow/get_firing_name(obj/projectile)
+	if(!projectile)
+		return ..()
+	return "\the [projectile] from \the [src]"
 
 /obj/item/gun/launcher/bow/proc/add_base_bow_overlays()
 	return
@@ -86,12 +94,12 @@
 
 	add_base_bow_overlays()
 
-	if(loaded)
+	if(_loaded)
 		var/bolt_state = "[icon_state]-loaded"
 		if(tension)
 			bolt_state = "[bolt_state]-drawn"
 		if(check_state_in_icon(bolt_state, icon))
-			add_overlay(overlay_image(icon, bolt_state, loaded.color, RESET_COLOR))
+			add_overlay(overlay_image(icon, bolt_state, _loaded.color, RESET_COLOR))
 
 	if(string)
 		var/string_state = "[icon_state]-string"
@@ -106,8 +114,8 @@
 			var/string_state = "[overlay.icon_state]-string"
 			if(check_state_in_icon(string_state, overlay.icon))
 				overlay.overlays += overlay_image(overlay.icon, string_state, string.color, RESET_COLOR)
-		if(loaded)
+		if(_loaded)
 			var/loaded_state = "[overlay.icon_state]-loaded"
 			if(check_state_in_icon(loaded_state, overlay.icon))
-				overlay.overlays += overlay_image(overlay.icon, loaded_state, loaded.color, RESET_COLOR)
+				overlay.overlays += overlay_image(overlay.icon, loaded_state, _loaded.color, RESET_COLOR)
 	return ..()

@@ -8,8 +8,8 @@
 /obj/item/gun/launcher/bow/proc/show_unload_message(mob/user)
 	if(user)
 		user.visible_message(
-			"\The [user] removes \the [loaded] from \the [src].",
-			"You remove \the [loaded] from \the [src]."
+			"\The [user] removes \the [_loaded] from \the [src].",
+			"You remove \the [_loaded] from \the [src]."
 		)
 
 /obj/item/gun/launcher/bow/proc/show_draw_message(mob/user)
@@ -39,8 +39,8 @@
 /obj/item/gun/launcher/bow/proc/show_load_message(mob/user)
 	if(user)
 		user.visible_message(
-			SPAN_NOTICE("\The [user] nocks \the [loaded] on \the [src]."),
-			SPAN_NOTICE("You nocks \the [loaded] on \the [src].")
+			SPAN_NOTICE("\The [user] nocks \the [_loaded] on \the [src]."),
+			SPAN_NOTICE("You nocks \the [_loaded] on \the [src].")
 		)
 
 /obj/item/gun/launcher/bow/proc/show_string_remove_message(mob/user)

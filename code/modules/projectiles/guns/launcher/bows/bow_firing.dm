@@ -9,7 +9,7 @@
 			return FALSE
 	else if(user && !user.try_unequip(ammo, src))
 		return FALSE
-	loaded = ammo
+	_loaded = ammo
 	if(user)
 		show_load_message(user)
 	update_icon()
@@ -22,10 +22,10 @@
 	if(tension <= 0 && isliving(firer))
 		to_chat(firer, SPAN_WARNING("\The [src] is not drawn back!"))
 		return null
-	return loaded
+	return get_loaded_arrow(firer)
 
 /obj/item/gun/launcher/bow/handle_post_fire(atom/movable/firer, atom/target)
-	loaded = null
+	_loaded = null
 	tension = 0
 	. = ..()
 	update_icon()

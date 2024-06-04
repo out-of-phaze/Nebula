@@ -23,8 +23,8 @@
 /obj/item/gun/launcher/bow/sling/show_load_message(mob/user)
 	if(user)
 		user.visible_message(
-			SPAN_NOTICE("\The [user] drops \the [loaded] into \the cup of \the [src]."),
-			SPAN_NOTICE("You drop \the [loaded] into \the cup of \the [src].")
+			SPAN_NOTICE("\The [user] drops \the [_loaded] into \the cup of \the [src]."),
+			SPAN_NOTICE("You drop \the [_loaded] into \the cup of \the [src].")
 		)
 
 /obj/item/gun/launcher/bow/sling/show_string_relax_message(mob/user)

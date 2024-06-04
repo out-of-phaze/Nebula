@@ -1,11 +1,15 @@
 /obj/item/gun/launcher/bow/crossbow/powered
-	name          = "powered crossbow"
-	desc          = "A modern twist on an old classic."
-	string        = /obj/item/bowstring/copper // made from wire when crafted
-	bow_ammo_type = /obj/item/stack/material/bow_ammo/rod
+	name                = "powered crossbow"
+	desc                = "A modern twist on an old classic."
+	string              = /obj/item/bowstring/copper // made from wire when crafted
+	bow_ammo_type       = /obj/item/stack/material/bow_ammo/rod
+	material_alteration = MAT_FLAG_ALTERATION_NONE
 
 	/// Used for firing superheated rods.
 	var/obj/item/cell/cell
+
+/obj/item/gun/launcher/bow/crossbow/powered/can_load_arrow(obj/item/ammo)
+	return istype(ammo, /obj/item/stack/material/rods) || ..()
 
 /obj/item/gun/launcher/bow/crossbow/powered/add_base_bow_overlays()
 	add_overlay(overlay_image(icon, "[icon_state]-cell_mount", COLOR_WHITE, RESET_COLOR))
@@ -55,16 +59,16 @@
 	return ..()
 
 /obj/item/gun/launcher/bow/crossbow/powered/proc/superheat_rod(var/mob/user)
-	if(!user || !cell || !loaded)
+	if(!user || !cell || !get_loaded_arrow(user))
 		return
 	if(cell.charge < 500)
 		return
-	if(loaded.throwforce >= 15)
+	if(_loaded.throwforce >= 15)
 		return
-	if(!istype(loaded, /obj/item/stack/material/bow_ammo))
+	if(!istype(_loaded, /obj/item/stack/material/bow_ammo))
 		return
-	to_chat(user, SPAN_NOTICE("\The [loaded] plinks and crackles as it begins to glow red-hot."))
-	var/obj/item/stack/material/bow_ammo/loaded_arrow = loaded
+	to_chat(user, SPAN_NOTICE("\The [_loaded] plinks and crackles as it begins to glow red-hot."))
+	var/obj/item/stack/material/bow_ammo/loaded_arrow = _loaded
 	loaded_arrow.make_superheated()
 	cell.use(500)
 
@@ -93,13 +97,14 @@
 	slot_flags = null
 	draw_time = 10
 	bow_ammo_type = /obj/item/stack/material/bow_ammo/bolt/rcd
+	require_loaded_to_draw = TRUE
 	var/stored_matter = 0
 	var/max_stored_matter = 120
 	var/boltcost = 30
 
 /obj/item/gun/launcher/bow/crossbow/powered/rapidcrossbowdevice/proc/generate_bolt(var/mob/user)
-	if(stored_matter >= boltcost && !loaded)
-		loaded = new/obj/item/stack/material/bow_ammo/bolt/rcd(src)
+	if(stored_matter >= boltcost && !_loaded)
+		_loaded = new/obj/item/stack/material/bow_ammo/bolt/rcd(src)
 		stored_matter -= boltcost
 		to_chat(user, SPAN_NOTICE("The RCD flashforges a new bolt!"))
 		queue_icon_update()
@@ -107,8 +112,8 @@
 		to_chat(user, SPAN_WARNING("The \'Low Ammo\' light on the device blinks yellow."))
 		flick("[icon_state]-empty", src)
 
-/obj/item/gun/launcher/bow/crossbow/powered/rapidcrossbowdevice/start_drawing(mob/user)
-	if(!loaded)
+/obj/item/gun/launcher/bow/crossbow/powered/rapidcrossbowdevice/get_loaded_arrow(mob/user)
+	if(!_loaded)
 		generate_bolt(user)
 	return ..()
 
