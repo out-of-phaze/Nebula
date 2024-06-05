@@ -5,6 +5,9 @@
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME
 	presentation_flags = PRESENTATION_FLAG_NAME
 
+/obj/item/chems/glass/pottery/get_mould_difficulty()
+	return SKILL_NONE
+
 /obj/item/chems/glass/pottery/teapot
 	name = "teapot"
 	desc = "A handmade, slightly lumpy teapot."
