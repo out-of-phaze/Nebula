@@ -30,7 +30,6 @@
 	name =     "Special Role - Deathsquad Commando"
 	l_ear =    /obj/item/radio/headset/ert
 	uniform =  /obj/item/clothing/jumpsuit/green
-	r_ear =    /obj/item/radio/headset/hacked
 	l_pocket = /obj/item/plastique
 	shoes =    /obj/item/clothing/shoes/jackboots/swat
 	glasses =  /obj/item/clothing/glasses/thermal
