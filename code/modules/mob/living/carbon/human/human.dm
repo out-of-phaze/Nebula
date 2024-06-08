@@ -1180,3 +1180,7 @@
 
 /mob/living/carbon/human/try_awaken(mob/user)
 	return !is_asystole() && ..()
+
+/mob/living/carbon/human/remove_implant(obj/item/implant, surgical_removal = FALSE, obj/item/organ/external/affected)
+	if((. = ..()) && !surgical_removal)
+		shock_stage += 20
