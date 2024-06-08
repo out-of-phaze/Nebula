@@ -37,7 +37,7 @@
 	qdel(src)
 
 /obj/item/stack/material/bow_ammo/arrow
-	name = "arrows"
+	name = "arrow"
 	singular_name = "arrow"
 	plural_name = "arrows"
 	icon = 'icons/obj/items/weapon/arrow.dmi'

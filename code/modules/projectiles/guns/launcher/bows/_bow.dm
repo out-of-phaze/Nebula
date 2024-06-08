@@ -119,3 +119,16 @@
 			if(check_state_in_icon(loaded_state, overlay.icon))
 				overlay.overlays += overlay_image(overlay.icon, loaded_state, _loaded.color, RESET_COLOR)
 	return ..()
+
+/obj/item/gun/launcher/bow/examine(mob/user)
+	. = ..()
+	var/list/strings = list()
+	if(material_alteration & MAT_FLAG_ALTERATION_DESC)
+		strings += "is made of [material.solid_name]"
+	if(string)
+		strings += "is strung with \a [string]"
+	if(_loaded)
+		strings += "has \a [_loaded] nocked"
+	if(!length(strings))
+		return
+	to_chat(user, "It [english_list(strings)].")
