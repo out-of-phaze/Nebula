@@ -884,9 +884,14 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		. += " <a href='?src=\ref[ID];look_at_id=1'>\[Look at ID\]</a>"
 
 /obj/item/proc/on_active_hand()
-
-/obj/item/proc/has_embedded()
 	return
+
+/obj/item/proc/has_embedded(mob/living/victim)
+	if(istype(victim))
+		LAZYDISTINCTADD(victim.embedded, src)
+		victim.verbs |= /mob/proc/yank_out_object
+		return TRUE
+	return FALSE
 
 /obj/item/proc/get_pressure_weakness(pressure,zone)
 	. = 1
@@ -1125,3 +1130,6 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 /obj/item/proc/get_equipment_tint()
 	return TINT_NONE
+
+/obj/item/can_embed()
+	return !anchored && !is_robot_module(src)

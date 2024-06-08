@@ -1536,3 +1536,6 @@ default behaviour is:
 		for(var/obj/item/organ/organ in stat_organs)
 			var/list/organ_info = organ.get_stat_info()
 			stat(organ_info[1], organ_info[2])
+
+/mob/living/throw_at(atom/target, range, speed, mob/thrower, spin = TRUE, datum/callback/callback) //If this returns FALSE then callback will not be called.
+	return !length(pinned) && ..()
