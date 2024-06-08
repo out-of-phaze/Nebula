@@ -172,6 +172,12 @@
 
 /obj/item/Destroy()
 
+	if(LAZYLEN(_item_effects))
+		_item_effects = null
+		SSitem_effects.queued_items -= src
+
+	global.listening_objects -= src
+
 	STOP_PROCESSING(SSobj, src)
 	QDEL_NULL(hidden_uplink)
 	QDEL_NULL(coating)
@@ -352,7 +358,8 @@
 	if(user.client && istype(inv) && inv.slot_id && (over in user.client.screen))
 		// Remove the item from our bag if necessary.
 		if(istype(loc?.storage))
-			loc.storage.remove_from_storage(user, src)
+			if(!loc.storage.remove_from_storage(user, src))
+				return ..()
 			dropInto(get_turf(loc))
 		// Otherwise remove it from our inventory if necessary.
 		else if(ismob(loc))
@@ -459,9 +466,8 @@
 				else
 					dropInto(get_turf(user))
 				return TRUE
-			if(loc?.storage)
+			if(loc?.storage?.remove_from_storage(user, src))
 				visible_message(SPAN_NOTICE("\The [user] fumbles \the [src] out of \the [loc]."))
-				loc.storage.remove_from_storage(user, src)
 				dropInto(get_turf(loc))
 				return TRUE
 		to_chat(user, SPAN_WARNING("You are not dexterous enough to pick up \the [src]."))
@@ -702,11 +708,11 @@
 		if(default_parry_check(user, attacker, damage_source) && prob(parry_chance))
 			user.visible_message(SPAN_DANGER("\The [user] parries [attack_text] with \the [src]!"))
 			playsound(user.loc, 'sound/weapons/punchmiss.ogg', 50, 1)
-			on_parry(damage_source)
+			on_parry(user, damage_source, attacker)
 			return 1
 	return 0
 
-/obj/item/proc/on_parry(damage_source)
+/obj/item/proc/on_parry(mob/user, damage_source, mob/attacker)
 	return
 
 /obj/item/proc/get_parry_chance(mob/user)
