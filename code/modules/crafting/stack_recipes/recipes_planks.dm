@@ -52,7 +52,7 @@
 	difficulty             = MAT_VALUE_VERY_HARD_DIY
 
 /decl/stack_recipe/planks/bow/fancy
-	name                   = "engraved bow"
+	name                   = "decorated bow"
 	result_type            = /obj/item/gun/launcher/bow/fancy/crafted
 
 /decl/stack_recipe/planks/noticeboard

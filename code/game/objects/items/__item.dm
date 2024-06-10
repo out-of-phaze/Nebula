@@ -97,6 +97,9 @@
 	var/paint_color
 	var/paint_verb = "painted"
 
+	/// What dexterity is required to attack with this item?
+	var/needs_attack_dexterity = DEXTERITY_WIELD_ITEM
+
 /obj/item/get_color()
 	if(paint_color)
 		return paint_color
@@ -1064,6 +1067,9 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	if(!QDELETED(src) && !QDELETED(user) && user.get_equipped_slot_for_item(src) == slot)
 		try_burn_wearer(user, slot, 1)
 
+/obj/item/can_embed()
+	return !anchored && !is_robot_module(src)
+
 /obj/item/clear_matter()
 	..()
 	material = null
@@ -1130,6 +1136,3 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 /obj/item/proc/get_equipment_tint()
 	return TINT_NONE
-
-/obj/item/can_embed()
-	return !anchored && !is_robot_module(src)

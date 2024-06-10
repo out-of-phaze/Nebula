@@ -1,9 +1,7 @@
 /obj/item/bowstring
 	name = "bowstring"
-	// TEMP, TODO PROPER ICON
-	icon = 'icons/obj/fishing_line.dmi'
+	icon = 'icons/obj/fishing_line.dmi' // works well enough for the time being
 	icon_state = ICON_STATE_WORLD
-	// END TEMP
 	desc = "A flexible length of material used to string bows."
 	material = /decl/material/solid/organic/meat/gut
 	material_alteration = MAT_FLAG_ALTERATION_NAME | MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_DESC

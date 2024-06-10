@@ -120,13 +120,6 @@
 	if(I.atom_damage_type == BRUTE && prob(33))
 		blood_splatter(get_turf(loc), src)
 
-//returns 0 if the effects failed to apply for some reason, 1 otherwise.
-/mob/living/standard_weapon_hit_effects(obj/item/I, mob/living/user, var/effective_force, var/hit_zone)
-	if(effective_force)
-		try_embed_in_mob(I, hit_zone, effective_force, direction = get_dir(user, src))
-		return TRUE
-	return FALSE
-
 /mob/living/hitby(var/atom/movable/AM, var/datum/thrownthing/TT)
 
 	. = ..()
