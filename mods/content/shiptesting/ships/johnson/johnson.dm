@@ -168,20 +168,20 @@
 
 /decl/hierarchy/outfit/job/generic/johnson_pilot
 	name = "Job - Mining vessel pilot"
-	uniform = /obj/item/clothing/under/pilot
+	uniform = /obj/item/clothing/jumpsuit/pilot
 	id_type = /obj/item/card/id/civilian/head
 	pda_type = /obj/item/modular_computer/pda/heads/captain
 	l_ear = null
 
 /decl/hierarchy/outfit/job/generic/engineer/johnson_technician
 	name = "Job - Mining vessel technician"
-	uniform = /obj/item/clothing/under/engineer
+	uniform = /obj/item/clothing/jumpsuit/engineer
 	belt = /obj/item/belt/utility/full
 	l_ear = null
 
 /decl/hierarchy/outfit/job/generic/johnson_mining
 	name = "Job - Mining vessel shaft miner"
-	uniform = /obj/item/clothing/under/miner
+	uniform = /obj/item/clothing/jumpsuit/miner
 	pda_type = /obj/item/modular_computer/pda/science
 	backpack_contents = list(/obj/item/crowbar = 1, /obj/item/ore = 1)
 	outfit_flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
