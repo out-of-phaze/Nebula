@@ -284,7 +284,6 @@
 "fK" = (
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "johnson_cargo_hold"
 	},
 /turf/floor/plating,
@@ -454,6 +453,13 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/effect/shuttle_landmark/ship/johnson{
 	dir = 4
+	},
+/obj/abstract/local_dock/automatic{
+	dir = 4;
+	reorient = 0;
+	port_tag = "center";
+	name = "center";
+	shuttle_tag = "Mining Vessel"
 	},
 /turf/floor/plating,
 /area/johnson)
@@ -1203,6 +1209,12 @@
 	id_tag = "johnson_mining_pump_out_external"
 	},
 /obj/abstract/exterior_marker/outside,
+/obj/abstract/local_dock/automatic{
+	dir = 1;
+	port_tag = "mining airlock";
+	shuttle_tag = "Mining Vessel";
+	name = "mining airlock"
+	},
 /turf/floor/reinforced/airless,
 /area/johnson/mining)
 "BP" = (
@@ -2164,6 +2176,11 @@
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
+	},
+/obj/abstract/local_dock/automatic{
+	dir = 8;
+	port_tag = "docking port";
+	shuttle_tag = "Mining Vessel"
 	},
 /turf/floor/plating,
 /area/johnson/maintenance)
