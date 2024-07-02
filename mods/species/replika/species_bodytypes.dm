@@ -43,7 +43,7 @@
 /decl/bodytype/replika/on_gain(mob/living/human/organism)
 	. = ..()
 	for(var/trait in traits)
-		organism.SetTrait(trait, traits[trait])
+		organism.set_trait(trait, traits[trait])
 	organism.reset_hair()
 
 /decl/bodytype/replika/on_lose(mob/living/human/organism)
