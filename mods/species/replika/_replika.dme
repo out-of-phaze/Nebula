@@ -4,7 +4,6 @@
 #include "../../../mods/content/psionics/_psionics.dme"
 #include "_replika.dm"
 #include "accessory.dm"
-#include "aspects.dm"
 #include "chems.dm"
 #include "clothing.dm"
 #include "objects.dm"
@@ -12,6 +11,7 @@
 #include "reactions.dm"
 #include "species.dm"
 #include "species_bodytypes.dm"
+#include "traits.dm"
 #include "overrides\replika_chem_disabling.dm"
 // END_INCLUDE
 #endif
