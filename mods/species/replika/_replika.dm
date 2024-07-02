@@ -27,11 +27,11 @@
 	. = ..()
 	SSmodpacks.default_submap_whitelisted_species |= SPECIES_REPLIKA
 
-/mob/living/carbon/human/replika
+/mob/living/human/replika
 	teleop = TRUE
 	var/decl/bodytype/replika/starting_bodytype
 
-/mob/living/carbon/human/replika/Initialize(mapload)
+/mob/living/human/replika/Initialize(mapload)
 	. = ..(mapload, SPECIES_REPLIKA, null, starting_bodytype)
 	var/decl/bodytype/replika/model = get_bodytype()
 	set_real_name(model.get_default_name())
@@ -39,10 +39,10 @@
 /decl/bodytype/replika/proc/get_default_name()
 	return "[name]-[add_zero(num2text(random_id(name, 0, 99)), 2)]"
 
-/mob/living/carbon/human/replika/eulr
+/mob/living/human/replika/eulr
 	starting_bodytype = /decl/bodytype/replika/eulr
 
-/mob/living/carbon/human/replika/eulr/dancing
+/mob/living/human/replika/eulr/dancing
 	ai = /datum/ai/eule_dance
 
 /datum/ai/eule_dance
@@ -64,14 +64,14 @@
 				break
 		dancing = FALSE
 
-/mob/living/carbon/human/replika/arar
+/mob/living/human/replika/arar
 	starting_bodytype = /decl/bodytype/replika/arar
 
-/mob/living/carbon/human/replika/lstr
+/mob/living/human/replika/lstr
 	starting_bodytype = /decl/bodytype/replika/lstr
 
-/mob/living/carbon/human/replika/star
+/mob/living/human/replika/star
 	starting_bodytype = /decl/bodytype/replika/star
 
-/mob/living/carbon/human/replika/klbr
+/mob/living/human/replika/klbr
 	starting_bodytype = /decl/bodytype/replika/klbr

@@ -40,13 +40,13 @@
 		var/obj/item/organ/external/external_organ = org
 		external_organ.owner?.refresh_modular_limb_verbs()
 
-/decl/bodytype/replika/on_gain(mob/living/carbon/human/organism)
+/decl/bodytype/replika/on_gain(mob/living/human/organism)
 	. = ..()
 	for(var/trait in traits)
 		organism.SetTrait(trait, traits[trait])
 	organism.reset_hair()
 
-/decl/bodytype/replika/on_lose(mob/living/carbon/human/organism)
+/decl/bodytype/replika/on_lose(mob/living/human/organism)
 	. = ..()
 	for(var/trait in traits)
 		organism.RemoveExtrinsicTrait(trait)
@@ -130,11 +130,11 @@
 	eye_offset =     -1
 
 // TODO: Give Kolibris (and Falkes) an organ for their bioresonance
-/decl/bodytype/replika/klbr/on_gain(mob/living/carbon/human/organism)
+/decl/bodytype/replika/klbr/on_gain(mob/living/human/organism)
 	. = ..()
 	organism.set_psi_rank(PSI_COERCION, 2)
 
-/decl/bodytype/replika/klbr/on_lose(mob/living/carbon/human/organism)
+/decl/bodytype/replika/klbr/on_lose(mob/living/human/organism)
 	. = ..()
 	var/datum/ability_handler/psionics/psi = organism.get_ability_handler(/datum/ability_handler/psionics)
 	qdel(psi)

@@ -87,7 +87,7 @@
 	var/decl/bodytype/replika/our_bodytype = our_species.get_bodytype_by_name(M.client.prefs.bodytype)
 	return our_bodytype.get_default_name()
 
-/decl/species/replika/equip_survival_gear(mob/living/carbon/human/victim)
+/decl/species/replika/equip_survival_gear(mob/living/human/victim)
 	. = ..()
 	var/obj/item/backpack/backpack = victim.get_equipped_item(slot_back_str)
 	if(istype(backpack))
