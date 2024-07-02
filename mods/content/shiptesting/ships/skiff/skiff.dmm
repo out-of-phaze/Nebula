@@ -175,6 +175,12 @@
 	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
+/obj/abstract/local_dock/automatic{
+	port_tag = "port docking port";
+	name = "port docking port";
+	dir = 1;
+	shuttle_tag = "Mining Skiff"
+	},
 /turf/space,
 /area/skiff)
 "K" = (
@@ -204,6 +210,25 @@
 	},
 /obj/effect/shuttle_landmark/ship/skiff{
 	dir = 4
+	},
+/obj/abstract/local_dock/automatic{
+	port_tag = "center";
+	name = "center";
+	shuttle_tag = "Mining Skiff";
+	dir = 4;
+	reorient = 0
+	},
+/turf/space,
+/area/skiff)
+"U" = (
+/obj/structure/catwalk{
+	material = /decl/material/solid/organic/plastic;
+	material_alteration = 16777215
+	},
+/obj/abstract/local_dock/automatic{
+	port_tag = "starboard docking port";
+	name = "starboard docking port";
+	shuttle_tag = "Mining Skiff"
 	},
 /turf/space,
 /area/skiff)
@@ -368,7 +393,7 @@ a
 z
 J
 P
-J
+U
 u
 a
 a
