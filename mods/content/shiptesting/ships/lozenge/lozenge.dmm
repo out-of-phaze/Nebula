@@ -165,6 +165,13 @@
 /obj/effect/shuttle_landmark/ship/lozenge{
 	dir = 4
 	},
+/obj/abstract/local_dock/automatic{
+	dir = 4;
+	reorient = 0;
+	port_tag = "center";
+	name = "center";
+	shuttle_tag = "Emergency Pod"
+	},
 /turf/floor/plating,
 /area/lozenge)
 "w" = (
@@ -274,6 +281,10 @@
 	},
 /obj/structure/handrail{
 	dir = 4
+	},
+/obj/abstract/local_dock/automatic{
+	port_tag = "docking port";
+	shuttle_tag = "Emergency Pod"
 	},
 /turf/floor/airless,
 /area/lozenge)
