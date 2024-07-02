@@ -43,15 +43,15 @@
 	starting_bodytype = /decl/bodytype/replika/eulr
 
 /mob/living/human/replika/eulr/dancing
-	ai = /datum/ai/eule_dance
+	ai = /datum/mob_controller/eule_dance
 
-/datum/ai/eule_dance
+/datum/mob_controller/eule_dance
 	var/dancing = FALSE
 
-/datum/ai/eule_dance/do_process(time_elapsed)
+/datum/mob_controller/eule_dance/do_process(time_elapsed)
 	UNLINT(try_dance())
 
-/datum/ai/eule_dance/proc/try_dance()
+/datum/mob_controller/eule_dance/proc/try_dance()
 	set waitfor = FALSE
 	if(!dancing)
 		dancing = TRUE
