@@ -117,7 +117,7 @@
 	<tr class='head'><th>Name</th><th>Position</th></tr>
 	"})
 	var/list/submaps = list()
-	for(var/mob/living/carbon/human/character in human_mob_list)
+	for(var/mob/living/human/character in human_mob_list)
 		var/datum/job/submap/submap_job = character.mind?.assigned_job
 		if(!istype(submap_job))
 			continue
