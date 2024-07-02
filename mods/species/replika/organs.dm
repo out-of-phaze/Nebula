@@ -35,7 +35,7 @@
 	. = ..()
 	glowing_eyes = FALSE
 
-/obj/item/organ/external/head/replika/do_install(mob/living/carbon/human/target, obj/item/organ/external/affected, in_place)
+/obj/item/organ/external/head/replika/do_install(mob/living/human/target, obj/item/organ/external/affected, in_place)
 	if(!(. = ..()))
 		return
 	events_repository.register(/decl/observ/death, owner, src, PROC_REF(on_owner_death))

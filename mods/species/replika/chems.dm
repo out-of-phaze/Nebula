@@ -3,7 +3,7 @@
 	description = "This creature requires specific methods of chemical healing."
 	levels = list(REPLIKA_EARLY_GEN, REPLIKA_LATE_GEN)
 
-/mob/living/carbon/human/apply_chemical_effects()
+/mob/living/human/apply_chemical_effects()
 	. = ..()
 	// These effects only apply to Replikas.
 	if(!HasTrait(/decl/trait/biosynthetic_healing))
@@ -30,7 +30,7 @@
 	strength = 2
 
 // TODO: have this use limb coating and apply only to wounds/damage on that limb?
-/decl/material/solid/plastifoam/affect_touch(mob/living/carbon/human/victim, removed, datum/reagents/holder)
+/decl/material/solid/plastifoam/affect_touch(mob/living/human/victim, removed, datum/reagents/holder)
 	. = ..()
 	if(!istype(victim) || !victim.HasTrait(/decl/trait/biosynthetic_healing))
 		return
@@ -45,7 +45,7 @@
 		return
 	victim.add_chemical_effect_max(CE_BLOCKAGE, 0.4) // lower max blood volume to 60%, very dangerous
 
-/decl/material/solid/plastifoam/affect_inhale(mob/living/carbon/human/victim, removed, datum/reagents/holder)
+/decl/material/solid/plastifoam/affect_inhale(mob/living/human/victim, removed, datum/reagents/holder)
 	. = ..()
 	if(!istype(victim))
 		return
@@ -111,7 +111,7 @@
 	if(volume >= 5 && victim.is_asystole())
 		holder.remove_reagent(type, 5)
 		if(ishuman(victim))
-			var/mob/living/carbon/human/human_victim = victim
+			var/mob/living/human/human_victim = victim
 			if(human_victim.resuscitate())
 				var/obj/item/organ/internal/heart = GET_INTERNAL_ORGAN(human_victim, BP_HEART)
 				heart.take_internal_damage(heart.max_damage * 0.15)
