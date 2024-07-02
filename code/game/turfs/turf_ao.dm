@@ -97,10 +97,16 @@
 	var/list/cache = SSao.cache
 	CUT_AO(shadower, ao_overlays_mimic)
 	CUT_AO(src, ao_overlays)
+	// BEGIN AO GHOSTING STOPGAP FIX
+	cut_overlays(priority = TRUE)
+	update_icon()
+	// END AO GHOSTING STOPGAP FIX
 	if (z_flags & ZM_MIMIC_BELOW)
 		REGEN_AO(shadower, ao_overlays_mimic, ao_neighbors_mimic)
+		shadower.compile_overlays()
 	if (AO_TURF_CHECK(src) && !(z_flags & ZM_MIMIC_NO_AO))
 		REGEN_AO(src, ao_overlays, ao_neighbors)
+		compile_overlays()
 
 	update_above()
 
