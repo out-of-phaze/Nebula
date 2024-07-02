@@ -97,5 +97,5 @@
 
 /decl/hierarchy/outfit/job/generic/skiff_operator/convict
 	name = "Job - Mining skiff convict"
-	uniform = /obj/item/clothing/under/color/orange
+	uniform = /obj/item/clothing/jumpsuit/orange
 	back = /obj/item/tank/oxygen/yellow
