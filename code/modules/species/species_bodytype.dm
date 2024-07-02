@@ -407,24 +407,24 @@ var/global/list/bodytypes_by_category = list()
 /decl/bodytype/proc/get_hug_zone_messages(var/zone)
 	return LAZYACCESS(hug_messages, zone)
 
-/decl/bodytype/proc/add_inherent_verbs(mob/living/carbon/human/organism)
+/decl/bodytype/proc/add_inherent_verbs(mob/living/human/organism)
 	if(!LAZYLEN(inherent_verbs))
 		return
 	for(var/verb_path in inherent_verbs)
 		organism.verbs |= verb_path
 
-/decl/bodytype/proc/remove_inherent_verbs(mob/living/carbon/human/organism)
+/decl/bodytype/proc/remove_inherent_verbs(mob/living/human/organism)
 	if(!LAZYLEN(inherent_verbs))
 		return
 	for(var/verb_path in inherent_verbs)
 		organism.verbs -= verb_path
 
-/decl/bodytype/proc/on_gain(mob/living/carbon/human/organism)
+/decl/bodytype/proc/on_gain(mob/living/human/organism)
 	add_inherent_verbs(organism)
 	for(var/trait in traits)
 		organism.SetTrait(trait, traits[trait])
 
-/decl/bodytype/proc/on_lose(mob/living/carbon/human/organism)
+/decl/bodytype/proc/on_lose(mob/living/human/organism)
 	remove_inherent_verbs(organism)
 	for(var/trait in traits)
 		organism.RemoveExtrinsicTrait(trait)
