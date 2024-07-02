@@ -81,7 +81,7 @@
 	blacklisted_species = null
 	no_warn_unsafe = TRUE // will always be 0kPa
 
-/decl/hierarchy/outfit/job/generic/skiff_operator/post_equip(mob/living/carbon/human/H)
+/decl/hierarchy/outfit/job/generic/skiff_operator/post_equip(mob/living/human/H)
 	. = ..()
 	H.set_internals_to_best_available_tank()
 
