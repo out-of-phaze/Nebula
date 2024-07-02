@@ -6,7 +6,7 @@
 /mob/living/human/apply_chemical_effects()
 	. = ..()
 	// These effects only apply to Replikas.
-	if(!HasTrait(/decl/trait/biosynthetic_healing))
+	if(!has_trait(/decl/trait/biosynthetic_healing))
 		return
 	var/burn_regen = GET_CHEMICAL_EFFECT(src, CE_REGEN_BURN_REPLIKA)
 	var/brute_regen = GET_CHEMICAL_EFFECT(src, CE_REGEN_BRUTE_REPLIKA)
@@ -32,7 +32,7 @@
 // TODO: have this use limb coating and apply only to wounds/damage on that limb?
 /decl/material/solid/plastifoam/affect_touch(mob/living/human/victim, removed, datum/reagents/holder)
 	. = ..()
-	if(!istype(victim) || !victim.HasTrait(/decl/trait/biosynthetic_healing))
+	if(!istype(victim) || !victim.has_trait(/decl/trait/biosynthetic_healing))
 		return
 	victim.add_chemical_effect_max(CE_REGEN_BRUTE_REPLIKA, strength*removed)
 	victim.add_chemical_effect_max(CE_REGEN_BURN_REPLIKA, strength*removed)
@@ -41,7 +41,7 @@
 	. = ..()
 	if(!istype(victim))
 		return
-	if(victim.HasTrait(/decl/trait/biosynthetic_healing))
+	if(victim.has_trait(/decl/trait/biosynthetic_healing))
 		return
 	victim.add_chemical_effect_max(CE_BLOCKAGE, 0.4) // lower max blood volume to 60%, very dangerous
 
@@ -59,14 +59,14 @@
 	lore_text = "Coagulant K is a flocculating agent that stops fluid leaks quickly and reliably \
 	by thickening Replika oxidant fluid into a gelatinous mass."
 
-/decl/material/solid/koagulant_k/affect_touch(mob/living/carbon/patient, removed, datum/reagents/holder)
-	if(patient.HasTrait(/decl/trait/biosynthetic_healing))
+/decl/material/solid/koagulant_k/affect_touch(mob/living/patient, removed, datum/reagents/holder)
+	if(patient.has_trait(/decl/trait/biosynthetic_healing))
 		. = affect_blood(patient, removed, holder)
 	return ..() || .
 
-/decl/material/solid/koagulant_k/affect_blood(mob/living/carbon/patient, removed, datum/reagents/holder)
+/decl/material/solid/koagulant_k/affect_blood(mob/living/patient, removed, datum/reagents/holder)
 	// Toxic to non-Replikas.
-	if(!istype(patient) || !patient.HasTrait(/decl/trait/biosynthetic_healing)) //istype(patient) || !patient.species || (patient.species.get_root_species_name() != SPECIES_REPLIKA)
+	if(!istype(patient) || !patient.has_trait(/decl/trait/biosynthetic_healing)) //istype(patient) || !patient.species || (patient.species.get_root_species_name() != SPECIES_REPLIKA)
 		SET_STATUS_MAX(patient, STAT_BLURRY, 30)
 		patient.add_chemical_effect(CE_BLOCKAGE, (45 + REAGENT_VOLUME(holder, type))/100)
 		patient.adjustToxLoss(2 * removed)
@@ -95,7 +95,7 @@
 	lore_text = "Circulatory Stimulant N is an emergency stimulant for stabilizing or resuscitating critically injured Replikas of Generation 3 and up."
 
 /decl/material/liquid/klstim_n/affect_blood(mob/living/victim, removed, datum/reagents/holder)
-	if(!istype(victim) || !victim.HasTrait(/decl/trait/biosynthetic_healing))
+	if(!istype(victim) || !victim.has_trait(/decl/trait/biosynthetic_healing))
 		return
 	var/replika_gen = victim.GetTraitLevel(/decl/trait/biosynthetic_healing)
 	var/volume = REAGENT_VOLUME(holder, type)
