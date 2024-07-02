@@ -94,10 +94,10 @@
 
 /decl/hierarchy/outfit/job/generic/tanker_pilot
 	name = "Job - Tanker pilot"
-	uniform = /obj/item/clothing/under/pilot
+	uniform = /obj/item/clothing/jumpsuit/pilot
 
 /decl/hierarchy/outfit/job/generic/engineer/tanker_technician
 	name = "Job - Tanker technician"
-	uniform = /obj/item/clothing/under/atmospheric_technician
+	uniform = /obj/item/clothing/jumpsuit/atmospheric_technician
 	belt = /obj/item/belt/utility/atmostech
 	pda_type = /obj/item/modular_computer/pda/engineering
