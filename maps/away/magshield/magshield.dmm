@@ -1038,7 +1038,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/abstract/landmark/allowed_leak,
 /turf/floor/airless,
 /area/magshield/smes_storage)
 "cV" = (
@@ -1142,6 +1141,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/floor/airless,
 /area/magshield/north)
 "dg" = (
@@ -1153,6 +1153,7 @@
 	icon_state = "1-2"
 	},
 /obj/random/obstruction,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/floor/airless,
 /area/magshield/north)
 "di" = (
@@ -1211,6 +1212,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/floor/airless,
 /area/magshield/north)
 "dv" = (
@@ -1477,7 +1479,6 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/abstract/landmark/allowed_leak,
 /turf/floor/airless,
 /area/magshield/north)
 "eo" = (
