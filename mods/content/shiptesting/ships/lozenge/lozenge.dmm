@@ -282,10 +282,6 @@
 /obj/structure/handrail{
 	dir = 4
 	},
-/obj/abstract/local_dock/automatic{
-	port_tag = "docking port";
-	shuttle_tag = "Emergency Pod"
-	},
 /turf/floor/airless,
 /area/lozenge)
 "L" = (
