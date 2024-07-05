@@ -2177,11 +2177,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/abstract/local_dock/automatic{
-	dir = 8;
-	port_tag = "docking port";
-	shuttle_tag = "Mining Vessel"
-	},
 /turf/floor/plating,
 /area/johnson/maintenance)
 "Ws" = (
