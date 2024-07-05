@@ -4,6 +4,7 @@
 	station_name = "the Frontier"
 	station_short = "the Frontier"
 	system_name = "the Frontier"
+	lobby_screens = list('maps/empty/icons/lobby.png')
 	welcome_sound = 'maps/empty/sound/achtung.ogg'
 	path = "empty"
 	allowed_latejoin_spawns = list()
