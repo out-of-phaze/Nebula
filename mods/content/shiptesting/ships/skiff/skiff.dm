@@ -48,6 +48,7 @@
 /area/skiff
 	name = "\improper Mining Skiff"
 	icon_state = "yellow"
+	is_outside = TRUE // you don't have WALLS
 
 /decl/submap_archetype/spawnable_ship/skiff
 	descriptor = "Gravedigger-class mining skiff"
