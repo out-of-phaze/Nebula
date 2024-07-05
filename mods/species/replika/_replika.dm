@@ -49,7 +49,12 @@
 	var/dancing = FALSE
 
 /datum/mob_controller/eule_dance/do_process(time_elapsed)
-	UNLINT(try_dance())
+	. = ..()
+	if(QDELETED(body) || body.stat)
+		return
+	if(!body.can_act())
+		return
+	try_dance()
 
 /datum/mob_controller/eule_dance/proc/try_dance()
 	set waitfor = FALSE
