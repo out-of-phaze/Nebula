@@ -9,7 +9,8 @@
 		"nav_magshield_2",
 		"nav_magshield_3",
 		"nav_magshield_4",
-		"nav_magshield_antag"
+		"nav_magshield_antag",
+		"nav_magshield_dock_1"
 	)
 
 /datum/map_template/ruin/away_site/magshield
