@@ -2196,6 +2196,7 @@
 /area/johnson)
 "WD" = (
 /obj/machinery/atmospherics/unary/vent_scrubber,
+/obj/machinery/recycler,
 /turf/floor/plating,
 /area/johnson/mining)
 "WQ" = (
