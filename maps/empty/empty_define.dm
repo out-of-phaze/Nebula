@@ -4,7 +4,13 @@
 	station_name = "the Frontier"
 	station_short = "the Frontier"
 	system_name = "the Frontier"
-	welcome_sound = 'maps/empty/sound/achtung.ogg'
+	welcome_sound = list(
+		'maps/empty/sound/achtung.ogg',
+		'maps/empty/sound/home-1-main-title-alec-lambert.ogg',
+		'maps/empty/sound/home-2-pluto-alec-lambert.ogg',
+		'maps/empty/sound/home-3-saturn-alec-lambert.ogg',
+		'maps/empty/sound/home-4-lt-alec-lambert.ogg'
+	)
 	path = "empty"
 	allowed_latejoin_spawns = list()
 	default_spawn = null
