@@ -6,6 +6,7 @@
 #include "ships/ships.dm"
 #include "ships/johnson/johnson.dm"
 #include "ships/lozenge/lozenge.dm"
+#include "ships/luciferase/luciferase.dm"
 #include "ships/tanker/tanker.dm"
 #include "ships/skiff/skiff.dm"
 #include "props/coffee_maker.dm"
