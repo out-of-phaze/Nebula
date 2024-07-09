@@ -12,7 +12,7 @@
 	max_speed = 1/(3 SECONDS)
 	sector_flags = OVERMAP_SECTOR_IN_SPACE
 	use_mapped_z_levels = TRUE
-	ship_name_classes = list("GENERAL", "SPACE", "NATURAL", "ENGINEERING")
+	ship_name_classes = list("GENERAL", "SPACE", "NATURAL")
 
 /datum/shuttle/autodock/overmap/johnson
 	name = "Mining Vessel"
