@@ -27,7 +27,6 @@
 		/area/luciferase/atmos,
 		/area/luciferase/engine,
 		/area/luciferase/maint,
-		/area/luciferase/sm_chamber,
 		/area/luciferase/electrical,
 		/area/luciferase/cryo,
 		/area/luciferase/mess,
@@ -71,9 +70,6 @@
 
 /area/luciferase/maint
 	name = "Engineering Vessel Maintenance"
-
-/area/luciferase/sm_chamber
-	name = "Engineering Vessel Supermatter Chamber"
 
 /area/luciferase/electrical
 	name = "Engineering Vessel Electrical"
@@ -128,6 +124,16 @@
 	title = "Engineering Vessel Chief Engineer"
 	info = "You are the chief engineer of a Luciferase-class prototype engineering vessel, captaining the ship and commanding its crew."
 	total_positions = 1
+	access = list(
+		access_heads,
+		access_medical,
+		access_medical_equip,
+		access_ce,
+		access_change_ids,
+		access_engine,
+		access_engine_equip,
+		access_atmospherics
+	)
 	outfit_type = /decl/hierarchy/outfit/job/generic/engineer/luciferase/chief
 	skill_points = 25
 	min_skill = list(
@@ -162,6 +168,11 @@
 		"Electrician",
 		"Atmospheric Technician" = /decl/hierarchy/outfit/job/generic/engineer/luciferase/atmos,
 	)
+	access = list(
+		access_engine,
+		access_engine_equip,
+		access_atmospherics
+	)
 	outfit_type = /decl/hierarchy/outfit/job/generic/engineer/luciferase
 	min_skill = list(
 		SKILL_LITERACY     = SKILL_BASIC,
@@ -188,6 +199,9 @@
 	title = "Engineering Vessel Deckhand"
 	info = "You are a crew member on a Luciferase-class prototype engineering vessel, handing miscellaneous duties as-needed."
 	total_positions = 3
+	access = list(
+		access_engine
+	)
 	outfit_type = /decl/hierarchy/outfit/job/generic/luciferase_deckhand
 	skill_points = 25
 	min_skill = list(
@@ -206,8 +220,13 @@
 	title = "Engineering Vessel Medic"
 	info = "You are the medic of a Luciferase-class prototype engineering vessel, providing medical care to the crew."
 	total_positions = 1
+	access = list(
+		access_engine,
+		access_medical,
+		access_medical_equip
+	)
 	outfit_type = /decl/hierarchy/outfit/job/generic/doctor/luciferase
-	skill_points = 25
+	skill_points = 32
 	min_skill = list(
 		SKILL_LITERACY = SKILL_ADEPT,
 		SKILL_EVA      = SKILL_BASIC,
@@ -244,13 +263,11 @@
 /decl/hierarchy/outfit/job/generic/luciferase_pilot
 	name = "Job - Engineering vessel pilot"
 	uniform = /obj/item/clothing/jumpsuit/pilot
-	l_ear = null
 
 /decl/hierarchy/outfit/job/generic/engineer/luciferase
 	name = "Job - Engineering vessel engineer"
 	uniform = /obj/item/clothing/jumpsuit/engineer
 	belt = /obj/item/belt/utility/full
-	l_ear = null
 
 /decl/hierarchy/outfit/job/generic/engineer/luciferase/atmos
 	name = "Job - Engineering vessel atmospheric technician"
@@ -266,8 +283,23 @@
 
 /decl/hierarchy/outfit/job/generic/doctor/luciferase
 	name = "Job - Engineering vessel medic"
-	l_ear = null
 
 /decl/hierarchy/outfit/job/generic/luciferase_deckhand
 	name = "Job - Engineering vessel deckhand"
-	l_ear = null
+
+// Comms
+/obj/machinery/network/telecomms_hub/luciferase
+	req_access = list(access_ce)
+	initial_network_id = "lucynet"
+	// I wanted to make them just have the engineering channel, but that stops them from talking to other vessels that don't have it.
+	channels = list(
+		COMMON_FREQUENCY_DATA,
+		list(
+			"name" = "Engineering",
+			"key" = "e",
+			"frequency" = 1357,
+			"color" = COMMS_COLOR_ENGINEER,
+			"span_class" = "engradio",
+			"secured" = access_engine
+		),
+	)
