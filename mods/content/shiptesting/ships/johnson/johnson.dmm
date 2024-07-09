@@ -958,7 +958,8 @@
 	dir = 5
 	},
 /obj/machinery/network/router/wall_mounted{
-	pixel_y = 21
+	pixel_y = 21;
+	initial_network_id = "johnsonnet"
 	},
 /turf/floor/tiled/white,
 /area/johnson)
