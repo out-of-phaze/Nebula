@@ -271,6 +271,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/floor/tiled/techmaint,
 /area/luciferase/infirmary)
+"db" = (
+/obj/effect/paint/amber,
+/turf/wall/r_wall,
+/area/luciferase/engine)
 "ds" = (
 /obj/machinery/power/smes/buildable/preset,
 /obj/structure/cable/cyan{
@@ -285,6 +289,16 @@
 "dt" = (
 /turf/wall/r_wall/prepainted,
 /area/luciferase/engine)
+"dB" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/abstract/exterior_marker/outside,
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/floor/airless,
+/area/luciferase/cargo)
 "dL" = (
 /obj/machinery/power/smes/buildable/preset,
 /obj/structure/cable/green{
@@ -307,6 +321,16 @@
 	},
 /turf/floor/tiled,
 /area/luciferase/cargo)
+"dS" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 9
+	},
+/obj/structure/lattice,
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/space,
+/area/luciferase/engine)
 "dV" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 9
@@ -325,7 +349,9 @@
 /turf/floor/tiled/monotile,
 /area/luciferase/mess)
 "em" = (
-/obj/machinery/pointdefense_control,
+/obj/machinery/pointdefense_control{
+	initial_id_tag = "kugel_pointdefense"
+	},
 /obj/machinery/light/small/red{
 	dir = 1
 	},
@@ -464,6 +490,14 @@
 /obj/abstract/submap_landmark/spawnpoint/luciferase_deckhand_spawn,
 /turf/floor/tiled/techmaint,
 /area/luciferase/cryo)
+"gl" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/abstract/exterior_marker/outside,
+/obj/structure/handrail,
+/turf/floor/airless,
+/area/luciferase/cargo)
 "gw" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/shutters{
@@ -794,6 +828,16 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/space,
+/area/luciferase/engine)
+"kh" = (
+/obj/structure/lattice,
+/obj/structure/handrail{
+	dir = 8
+	},
 /turf/space,
 /area/luciferase/engine)
 "kp" = (
@@ -941,6 +985,13 @@
 	},
 /turf/floor/tiled/techmaint,
 /area/luciferase/cryo)
+"mo" = (
+/obj/abstract/exterior_marker/outside,
+/obj/machinery/shipcomms/broadcaster{
+	dir = 8
+	},
+/turf/floor/airless,
+/area/luciferase/atmos)
 "mp" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -994,8 +1045,16 @@
 /turf/floor/tiled,
 /area/luciferase/cargo)
 "nP" = (
-/obj/machinery/pointdefense,
+/obj/machinery/pointdefense{
+	initial_id_tag = "kugel_pointdefense"
+	},
 /obj/abstract/exterior_marker/outside,
+/obj/machinery/power/terminal{
+	icon_state = "term-omni"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
 /turf/floor/airless,
 /area/luciferase/cargo)
 "nQ" = (
@@ -1369,6 +1428,11 @@
 	},
 /turf/wall/r_wall/prepainted,
 /area/luciferase/atmos)
+"rT" = (
+/obj/abstract/exterior_marker/outside,
+/obj/machinery/shipcomms/receiver,
+/turf/floor/airless,
+/area/luciferase/maint)
 "rV" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -1449,6 +1513,10 @@
 	},
 /turf/floor/tiled/monotile,
 /area/luciferase/cargo)
+"sO" = (
+/obj/machinery/network/telecomms_hub/luciferase,
+/turf/floor/plating,
+/area/luciferase/maint)
 "sV" = (
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -2209,6 +2277,10 @@
 /obj/machinery/light/small/red{
 	dir = 1
 	},
+/obj/machinery/network/router/wall_mounted{
+	pixel_y = 21;
+	initial_network_id = "lucynet"
+	},
 /turf/floor/plating,
 /area/luciferase/maint)
 "BY" = (
@@ -2440,6 +2512,16 @@
 	},
 /turf/space,
 /area/space)
+"DB" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/abstract/exterior_marker/outside,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/floor/airless,
+/area/luciferase/cargo)
 "DK" = (
 /obj/machinery/door/airlock/maintenance,
 /turf/floor/tiled/dark,
@@ -2487,6 +2569,12 @@
 	dir = 9
 	},
 /obj/structure/lattice,
+/turf/space,
+/area/luciferase/engine)
+"EF" = (
+/obj/structure/handrail{
+	dir = 8
+	},
 /turf/space,
 /area/luciferase/engine)
 "EG" = (
@@ -2766,6 +2854,9 @@
 	dir = 4
 	},
 /obj/structure/lattice,
+/obj/structure/handrail{
+	dir = 8
+	},
 /turf/space,
 /area/luciferase/engine)
 "Hv" = (
@@ -2827,6 +2918,14 @@
 	},
 /turf/floor/tiled/monotile,
 /area/luciferase/maint)
+"Ib" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/obj/structure/handrail,
+/turf/space,
+/area/luciferase/engine)
 "Ii" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -3018,7 +3117,7 @@
 	},
 /obj/structure/catwalk,
 /turf/space,
-/area/luciferase/maint)
+/area/luciferase/cryo)
 "KI" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -3113,7 +3212,7 @@
 	},
 /obj/abstract/exterior_marker/outside,
 /turf/floor/reinforced/airless,
-/area/luciferase/maint)
+/area/luciferase/cryo)
 "My" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/valve/digital{
@@ -3295,6 +3394,9 @@
 "OS" = (
 /obj/abstract/landmark/proc_caller/floor_breaker{
 	probability = 20
+	},
+/obj/machinery/computer/ship/comms{
+	dir = 8
 	},
 /turf/floor/tiled/steel_grid,
 /area/luciferase/cargo)
@@ -3517,6 +3619,13 @@
 	},
 /turf/floor/reinforced,
 /area/luciferase/engine)
+"Sp" = (
+/obj/abstract/exterior_marker/outside,
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/floor/airless,
+/area/luciferase/maint)
 "St" = (
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
@@ -3618,7 +3727,7 @@
 	pixel_y = -22
 	},
 /turf/space,
-/area/luciferase/maint)
+/area/luciferase/cryo)
 "Ur" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -3670,6 +3779,13 @@
 	},
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
+"Vu" = (
+/obj/abstract/exterior_marker/outside,
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/floor/airless,
+/area/luciferase/atmos)
 "VG" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -4466,11 +4582,11 @@ Gs
 MP
 vI
 cl
-CR
+dS
 MP
 CR
 gN
-XV
+kh
 Lu
 Lu
 Lu
@@ -4528,11 +4644,11 @@ Xo
 XV
 XV
 ff
-dt
-dt
+db
+db
 eJ
-dt
-dt
+db
+db
 AL
 AL
 AL
@@ -4588,7 +4704,7 @@ XM
 XM
 Xo
 XV
-gN
+EF
 ff
 Je
 fg
@@ -4784,7 +4900,7 @@ xn
 av
 dt
 RZ
-kf
+Ib
 XM
 XM
 XM
@@ -5017,7 +5133,7 @@ XM
 XM
 XM
 XM
-yW
+rT
 XM
 eS
 XM
@@ -5035,7 +5151,7 @@ RZ
 XM
 XM
 XM
-bA
+mo
 XM
 XM
 XM
@@ -5141,7 +5257,7 @@ XM
 XM
 XM
 XM
-yW
+Sp
 vu
 vu
 vu
@@ -5159,7 +5275,7 @@ rJ
 xg
 xg
 xg
-bA
+Vu
 XM
 XM
 XM
@@ -6148,7 +6264,7 @@ aR
 sx
 pi
 AY
-OE
+sO
 Dj
 XM
 XM
@@ -6572,7 +6688,7 @@ oL
 XM
 XM
 XM
-XD
+dB
 nQ
 Vq
 RO
@@ -6580,7 +6696,7 @@ CJ
 RO
 OS
 nQ
-XD
+gl
 XM
 XM
 XM
@@ -6633,7 +6749,7 @@ zm
 vS
 ma
 ma
-ma
+DB
 bd
 nQ
 nQ
@@ -6643,7 +6759,7 @@ RO
 nQ
 nQ
 vS
-ma
+DB
 ma
 ma
 bd
