@@ -150,7 +150,7 @@
 	info = "You are the medic of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
 	total_positions = 1
 	outfit_type = /decl/hierarchy/outfit/job/generic/doctor/johnson_medic
-	skill_points = 25
+	skill_points = 32
 	min_skill = list(
 		SKILL_LITERACY = SKILL_ADEPT,
 		SKILL_EVA      = SKILL_BASIC,
