@@ -44,6 +44,9 @@
 /obj/effect/paint/sun
 	color = COLOR_SUN
 
+/obj/effect/paint/amber
+	color = COLOR_AMBER
+
 /obj/effect/paint/red
 	color = COLOR_RED
 
