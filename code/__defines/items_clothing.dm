@@ -17,6 +17,7 @@
 #define ACCESSORY_SLOT_ARMOR_S  "Armor storage"
 #define ACCESSORY_SLOT_ARMOR_M  "Misc armor"
 #define ACCESSORY_SLOT_HELM_C	"Helmet cover"
+#define ACCESSORY_SLOT_OVER_HELMET	"Hat"
 #define ACCESSORY_SLOT_OVER     "Over"
 #define ACCESSORY_SLOT_SENSORS  "Suit Sensors"
 
