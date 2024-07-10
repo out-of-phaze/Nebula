@@ -210,6 +210,7 @@
 	return airtank
 
 /obj/machinery/cryopod/lifepod/proc/launch()
+	set waitfor = FALSE
 	launched = TRUE
 	for(var/d in global.cardinal)
 		var/turf/T = get_step(src,d)
