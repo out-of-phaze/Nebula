@@ -51,6 +51,7 @@
 	abstract_type = /area/luciferase
 	name = "Engineering Vessel"
 	icon_state = "yellow"
+	turf_initializer = /decl/turf_initializer/maintenance // to add dirt and webs and clutter and such
 
 /area/luciferase/bridge
 	abstract_type = /area/luciferase/bridge
@@ -70,6 +71,7 @@
 
 /area/luciferase/maint
 	name = "Engineering Vessel Maintenance"
+	turf_initializer = /decl/turf_initializer/maintenance/heavy // has a chance to add live vermin!
 
 /area/luciferase/electrical
 	name = "Engineering Vessel Electrical"
