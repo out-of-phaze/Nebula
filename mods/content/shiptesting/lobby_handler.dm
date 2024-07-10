@@ -67,11 +67,9 @@
 		to_chat(user, SPAN_WARNING("Something went wrong while preparing your ship, please contact an admin for assistance!"))
 		user.show_lobby_menu()
 		return
-	// in order to avoid seeing the tail end of setup, wait four seconds for init to finish
-	// two seconds for apc process
-	// two seconds for queued apc icon + light updates
-	// if you find a way to eliminate waiting for either of those, lower the time or remove the delay entirely
-	addtimer(CALLBACK(our_submap, /datum/submap/proc/join_as, user, our_submap.jobs[our_submap.jobs[1]]), 4 SECONDS) // we assume the first job is the captain role, TODO: specify explicitly
+	// in memoriam: there used to be a four second delay here because init was super slow and messed up,
+	// but then i optimized it enough that it's no longer necessary. blazing fast speed!
+	our_submap.join_as(user, our_submap.jobs[our_submap.jobs[1]]) // we assume the first job is the captain role, TODO: specify explicitly
 
 /decl/submap_archetype/proc/is_manifest_visible()
 	return FALSE
