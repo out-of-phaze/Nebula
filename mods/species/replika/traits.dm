@@ -2,6 +2,9 @@
 	. = ..()
 	LAZYDISTINCTADD(blocked_species, SPECIES_REPLIKA)
 
+/decl/trait/replika
+	abstract_type = /decl/trait/replika
+
 /decl/trait/replika/build_references()
 	. = ..()
 	blocked_species = null
