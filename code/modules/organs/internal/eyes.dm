@@ -16,6 +16,12 @@
 	var/tmp/last_cached_eye_colour
 	var/tmp/last_eye_cache_key
 
+/obj/item/organ/internal/eyes/Initialize(mapload, material_key, datum/mob_snapshot/supplied_appearance, decl/bodytype/new_bodytype)
+	. = ..()
+	if(BP_IS_ROBOTIC(src))
+		verbs |= /obj/item/organ/internal/eyes/proc/change_eye_color_verb
+		verbs |= /obj/item/organ/internal/eyes/proc/toggle_eye_glow
+
 /obj/item/organ/internal/eyes/proc/get_innate_flash_protection()
 	return bodytype.eye_innate_flash_protection
 
@@ -33,11 +39,6 @@
 	bodytype = /decl/bodytype/prosthetic/basic_human
 	organ_properties = ORGAN_PROP_PROSTHETIC
 	icon = 'icons/obj/robot_component.dmi'
-
-/obj/item/organ/internal/eyes/robot/Initialize(mapload, material_key, datum/mob_snapshot/supplied_appearance, decl/bodytype/new_bodytype)
-	. = ..()
-	verbs |= /obj/item/organ/internal/eyes/proc/change_eye_color_verb
-	verbs |= /obj/item/organ/internal/eyes/proc/toggle_eye_glow
 
 /obj/item/organ/external/eyes/set_organ_appearance_bodytype(decl/bodytype/new_bodytype, update_sprite_accessories = TRUE, skip_owner_update = FALSE)
 	. = ..()
@@ -104,7 +105,7 @@
 	if(istype(target) && eye_colour)
 		target.set_eye_colour(eye_colour, skip_update = TRUE)
 		target.update_eyes(update_icons = update_icon)
-	if(owner && BP_IS_PROSTHETIC(src))
+	if(owner && BP_IS_ROBOTIC(src))
 		verbs |= /obj/item/organ/internal/eyes/proc/change_eye_color_verb
 		verbs |= /obj/item/organ/internal/eyes/proc/toggle_eye_glow
 	. = ..()
@@ -118,7 +119,8 @@
 // MAYBE JUST REMOVE IT ENTIRELY?
 /obj/item/organ/internal/eyes/reset_status()
 	. = ..()
-	if(BP_IS_PROSTHETIC(src))
+	// TODO: MAKE THIS A SEPARATE VAR ON BODYTYPE
+	if(BP_IS_ROBOTIC(src))
 		name = "optical sensor"
 		icon = 'icons/obj/robot_component.dmi'
 		verbs |= /obj/item/organ/internal/eyes/proc/change_eye_color_verb
@@ -136,7 +138,7 @@
 	set category = "IC"
 	set src in usr
 
-	if(!owner || !BP_IS_PROSTHETIC(src))
+	if(!owner || !BP_IS_ROBOTIC(src))
 		verbs -= /obj/item/organ/internal/eyes/proc/change_eye_color_verb
 		return
 
@@ -157,7 +159,7 @@
 	set category = "IC"
 	set src in usr
 
-	if(!owner || !BP_IS_PROSTHETIC(src))
+	if(!owner || !BP_IS_ROBOTIC(src))
 		verbs -= /obj/item/organ/internal/eyes/proc/toggle_eye_glow
 		return
 
