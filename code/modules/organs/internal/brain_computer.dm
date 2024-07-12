@@ -36,7 +36,7 @@
 
 /obj/item/organ/internal/brain/robotic/on_update_icon()
 	var/mob/living/brainmob = get_brainmob()
-	icon_state = get_world_inventory_state()
+	icon_state = get_world_inventory_state() || initial(icon_state)
 	if(!searching)
 		if(!brainmob?.key || brainmob.stat == DEAD)
 			icon_state = "[icon_state]-dead"
