@@ -43,7 +43,7 @@ Session.vim
 *~
 
 # auto-generated tag files
-tags
+/tags
 
 # ignore built libs
 lib/*.dll
