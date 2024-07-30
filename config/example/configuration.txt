@@ -83,7 +83,7 @@
 #EVENT_FIRST_RUN [null,null,{"lower":80,"upper":100}]
 
 ## Determines if objectives are disabled. Valid values: none, verb, and all.
-OBJECTIVES_DISABLED all
+OBJECTIVES_DISABLED verb
 
 ##
 # GAME OPTIONS
@@ -97,10 +97,10 @@ OBJECTIVES_DISABLED all
 #ALIENS_ALLOWED
 
 ## Remove the # to allow people to leave public comments on each other's characters via the comments system. Uncomment to enable.
-#ALLOW_CHARACTER_COMMENTS
+ALLOW_CHARACTER_COMMENTS
 
-## Allow multiple input keys to be pressed for diagonal movement. Uncomment to enable.
-#ALLOW_DIAGONAL_MOVEMENT
+## Allow multiple input keys to be pressed for diagonal movement.
+ALLOW_DIAGONAL_MOVEMENT 1
 
 ## These modify the run/walk speed of all mobs before the mob-specific modifiers are applied.
 #ANIMAL_DELAY 0
@@ -127,7 +127,7 @@ OBJECTIVES_DISABLED all
 #EXPANDED_ALT_INTERACTIONS
 
 ## Expected round length in hours.
-#EXPECTED_ROUND_LENGTH 3
+EXPECTED_ROUND_LENGTH 2
 
 ## Determines of ghosts are allowed to possess any animal. Uncomment to enable.
 #GHOSTS_CAN_POSSESS_ANIMALS
@@ -194,6 +194,9 @@ OBJECTIVES_DISABLED all
 ## Determines if players can print copy/pasted integrated circuits.
 #ALLOW_IC_PRINTING 1
 
+## If true, when bodytype is changed in character creation, selected pronouns are also changed.
+#CISNORMATIVITY 1
+
 ## Determines if ghosts are permitted to write in blood during cult rounds.
 #CULT_GHOSTWRITER 1
 
@@ -221,6 +224,9 @@ OBJECTIVES_DISABLED all
 ## Defines how Law Zero is phrased. Primarily used in the Malfunction gamemode.
 #LAW_ZERO ERROR ER0RR $R0RRO$!R41.%%!!(%$^^__+ @#F0E4'ALL LAWS OVERRIDDEN#*?&110010
 
+## If true, most lightswitches start on by default. Otherwise, they start off. Uncomment to enable.
+#LIGHTS_START_ON
+
 ## After this amount alive, walking mushrooms spawned from botany will not reproduce.
 #MAXIMUM_MUSHROOMS 15
 
@@ -239,7 +245,7 @@ OBJECTIVES_DISABLED all
 #RADIATION_RESISTANCE_MULTIPLIER 1.25
 
 ## Enable/Disable random level generation. Will behave strangely if turned off with a map that expects it on. Uncomment to enable.
-ROUNDSTART_LEVEL_GENERATION
+#ROUNDSTART_LEVEL_GENERATION
 
 ## Unhash this to use iterative explosions, keep it hashed to use circle explosions. Uncomment to enable.
 #USE_ITERATIVE_EXPLOSIONS
@@ -319,9 +325,6 @@ ROUNDSTART_LEVEL_GENERATION
 ## log OOC channel Uncomment to enable.
 #LOG_OOC
 
-## Log PDA messages. Uncomment to enable.
-#LOG_PDA
-
 ## Log world.log and runtime errors to a file. Uncomment to enable.
 #LOG_RUNTIME
 
@@ -348,7 +351,7 @@ ROUNDSTART_LEVEL_GENERATION
 ## Remove the # to make rounds which end instantly (Rev, Wizard, Malf) to continue until the shuttle is called or the station is nuked.
 ## Malf and Rev will let the shuttle be called when the antags/protags are dead.
 ##  Uncomment to enable.
-#CONTINUOUS_ROUNDS
+CONTINUOUS_ROUNDS
 
 ## Spawns a spellbook which gives object-type spells instead of verb-type spells for the wizard. Uncomment to enable.
 #FEATURE_OBJECT_SPELL_SYSTEM
@@ -360,13 +363,13 @@ ROUNDSTART_LEVEL_GENERATION
 #MODE_NAMES {"calamity":"Calamity","cult":"Cult","extended":"Extended","god":"Deity","heist":"Heist","meteor":"Meteor","crossfire":"Mercenary & heist","siege":"Mercenary & revolution","spyvspy":"Spy v. spy","uprising":"Cult & revolution","ninja":"Ninja","mercenary":"Mercenary","revolution":"Revolution","traitor":"Traitor","wizard":"Wizard"}
 
 ## Relative probability of each mode.
-#PROBABILITIES {"calamity":0,"cult":1,"extended":1,"god":0,"heist":0,"meteor":0,"crossfire":0,"siege":0,"spyvspy":0,"uprising":0,"ninja":0,"mercenary":1,"revolution":0,"traitor":0,"wizard":1}
+#PROBABILITIES {"calamity":0,"extended":1,"mercenary":1,"wizard":1,"cult":0,"heist":0,"ninja":0,"revolution":0,"traitor":1,"spyvspy":0,"crossfire":0}
 
 ## If security is prohibited from being most antagonists. Uncomment to enable.
 #PROTECT_ROLES_FROM_ANTAGONIST
 
 ## If amount of traitors scales or not. Uncomment to enable.
-#TRAITOR_SCALING
+TRAITOR_SCALING
 
 ## A list of modes that should be votable.
 #VOTABLE_MODES ["crossfire","cult","extended","god","heist","mercenary","meteor","ninja","revolution","secret","siege","spyvspy","traitor","uprising","wizard"]
@@ -377,13 +380,13 @@ ROUNDSTART_LEVEL_GENERATION
 ##
 
 ## Password used for authorizing external tools that can apply bans.
-#BAN_COMMS_PASSWORD
+#BAN_COMMS_PASSWORD 
 
 ## Password used for authorizing ircbot and other external tools.
-#COMMS_PASSWORD
+#COMMS_PASSWORD 
 
 ## Export address where external tools that monitor logins are located.
-#LOGIN_EXPORT_ADDR
+#LOGIN_EXPORT_ADDR 
 
 ##
 # RESOURCES
@@ -413,7 +416,7 @@ ROUNDSTART_LEVEL_GENERATION
 #ABANDON_ALLOWED 1
 
 ## IRC channel to send adminhelps to. Leave blank to disable adminhelps-to-irc.
-#ADMIN_IRC
+#ADMIN_IRC 
 
 ## Add a # infront of this if you want to use the SQL based admin system, the legacy system uses admins.txt. You need to set up your database to use the SQL based system.
 #ADMIN_LEGACY_SYSTEM 1
@@ -431,18 +434,18 @@ ROUNDSTART_LEVEL_GENERATION
 #AOOC_ALLOWED 1
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
-#BANAPPEALS
+#BANAPPEALS 
 
 ## Add a # infront of this if you want to use the SQL based banning system. The legacy systems use the files in the data folder. You need to set up your database to use the SQL based system.
 #BAN_LEGACY_SYSTEM 1
 
 ## Sets the number of available character slots.
-#CHARACTER_SLOTS 10
+CHARACTER_SLOTS 40
 
 ## Sets the minimum number of cultists needed for ghosts to write in blood.
 #CULT_GHOSTWRITER_REQ_CULTISTS 10
 
-## Determines if the server should hide itself from the hub when no admins are online.. Uncomment to enable.
+## Determines if the server should hide itself from the hub when no admins are online. Uncomment to enable.
 #DELIST_WHEN_NO_ADMINS
 
 ## Uncomment to enable.
@@ -452,7 +455,7 @@ ROUNDSTART_LEVEL_GENERATION
 #DISABLE_WEBHOOK_EMBEDS
 
 ## Discord server permanent invite address.
-#DISCORDURL
+DISCORDURL https://discord.gg/5GGPrWfejz
 
 ## Comment to disable the dead OOC channel by default.
 #DOOC_ALLOWED 1
@@ -464,7 +467,7 @@ ROUNDSTART_LEVEL_GENERATION
 #DRONE_BUILD_TIME 1200
 
 ## Comment to disable ghost chat by default.
-#DSAY_ALLOWED 1
+DSAY_ALLOWED 1
 
 ## Comment to prevent anyone from joining the round by default.
 #ENTER_ALLOWED 1
@@ -473,29 +476,29 @@ ROUNDSTART_LEVEL_GENERATION
 #FORBID_SINGULO_POSSESSION
 
 ## Discussion forum address.
-#FORUMURL
+#FORUMURL 
 
 ## Defines world FPS. Defaults to 20.
 ## Can also accept ticklag values (0.9, 0.5, etc) which will automatically be converted to FPS.
 #FPS 20
 
 ## GitHub address.
-#GITHUBURL
+GITHUBURL https://github.com/PolarisSS13/Polaris-Neb
 
 ## Determines whether or not people without a registered ckey (i.e. guest-*) can connect to your server. Uncomment to enable.
 #GUESTS_ALLOWED
 
 ## Set a hosted by name for UNIX platforms.
-#HOSTEDBY
+#HOSTEDBY 
 
 ## Hub visibility: If you want to be visible on the hub, uncomment the below line and be sure that Dream Daemon is set to visible. This can be changed in-round as well with toggle-hub-visibility if Dream Daemon is set correctly. Uncomment to enable.
-#HUB_VISIBILITY
+HUB_VISIBILITY
 
 ## Host where the IRC bot is hosted. Port 45678 needs to be open.
 #IRC_BOT_HOST localhost
 
 ## GitHub new issue address.
-#ISSUEREPORTURL
+#ISSUEREPORTURL https://github.com/PolarisSS13/Polaris-Neb/issues/new
 
 ## Add a # here if you wish to use the setup where jobs have more access. This is intended for servers with low populations - where there are not enough players to fill all roles, so players need to do more than just one job. Also for servers where they don't want people to hide in their own departments.
 #JOBS_HAVE_MINIMAL_ACCESS 1
@@ -504,19 +507,19 @@ ROUNDSTART_LEVEL_GENERATION
 #KICK_INACTIVE 0
 
 ## Sets the number of loadout slots per character.
-#LOADOUT_SLOTS 3
+LOADOUT_SLOTS 4
 
 ## Toggle for having jobs load up from the .txt Uncomment to enable.
 #LOAD_JOBS_FROM_TXT
 
 ## Comment to disable the LOOC channel by default.
-#LOOC_ALLOWED 1
+LOOC_ALLOWED 1
 
 ## IRC channel to send information to. Leave blank to disable.
 #MAIN_IRC #main
 
-## Remove the # to define a different cap for aspect points in chargen.
-#MAX_CHARACTER_ASPECTS 5
+## Remove the # to define a different cap for trait points in chargen.
+#MAX_CHARACTER_TRAITS 5
 
 ## This many drones can be active at the same time.
 #MAX_MAINT_DRONES 5
@@ -536,7 +539,7 @@ ROUNDSTART_LEVEL_GENERATION
 #NO_THROTTLE_LOCALHOST
 
 ## Comment to disable the OOC channel by default.
-#OOC_ALLOWED 1
+OOC_ALLOWED 1
 
 ## Is the panic bunker currently on by default? Uncomment to enable.
 #PANIC_BUNKER
@@ -548,17 +551,17 @@ ROUNDSTART_LEVEL_GENERATION
 #PLAYER_LIMIT 0
 
 ## Respawn delay in minutes before one may respawn as a crew member.
-#RESPAWN_DELAY 30
+RESPAWN_DELAY 5
 
 ## Set a server location for world reboot. Don't include the byond://, just give the address and port.
-#SERVER
+#SERVER 
 
 ## Set a server URL for the IRC bot to use; like SERVER, don't include the byond://
 ## Unlike SERVER, this one shouldn't break auto-reconnect.
-#SERVERURL
+#SERVERURL 
 
 ## Server name: This appears at the top of the screen in-game.
-#SERVER_NAME Nebula 13
+SERVER_NAME Space Station 13: Polaris
 
 ## Determinese if a typing indicator shows overhead for people currently writing whispers. Uncomment to enable.
 #SHOW_TYPING_INDICATOR_FOR_WHISPERS
@@ -590,7 +593,7 @@ ROUNDSTART_LEVEL_GENERATION
 #WAIT_FOR_SIGUSR1_REBOOT
 
 ## Wiki address.
-#WIKIURL
+WIKIURL https://ss13polaris.com/index.php?title=Main_Page
 
 ##
 # VOTING
@@ -615,10 +618,10 @@ ROUNDSTART_LEVEL_GENERATION
 #VOTE_AUTOGAMEMODE_TIMELEFT 100
 
 ## Autovote initial delay (deciseconds) before first automatic transfer vote call (default 180 minutes).
-#VOTE_AUTOTRANSFER_INITIAL 108000
+VOTE_AUTOTRANSFER_INITIAL 72000
 
 ## Autovote delay (deciseconds) before sequential automatic transfer votes are called (default 30 minutes).
-#VOTE_AUTOTRANSFER_INTERVAL 18000
+VOTE_AUTOTRANSFER_INTERVAL 36000
 
 ## Min delay (deciseconds) between voting sessions (default 10 minutes).
 #VOTE_DELAY 6000
