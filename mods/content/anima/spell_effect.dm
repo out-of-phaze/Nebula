@@ -84,17 +84,17 @@
 	var/turf/source_turf = get_turf(user)
 	// level 1 flare is hot enough to boil water. level 3 flare is hot enough to light a campfire and ignite wood
 	// divided by 0.9 and plus one to ensure inefficiency doesn't stop us from lighting campfires
-	var/fire_temperature = Interpolate(T100C, initial(/decl/material/solid/organic/wood::ignition_point) / 0.9 + 1, (evoke_strength - 1) / 3)
+	var/fire_temperature = Interpolate(T100C, /decl/material/solid/organic/wood::ignition_point / 0.9 + 1, (evoke_strength - 1) / 3)
 	if(evoke_effect == ANIMA_SPELL_AOE)
 		user.visible_message("\The [user] is wreathed in a blast of fire ([evoke_strength])!")
 		for(var/turf/T in RANGE_TURFS(source_turf, evoke_strength))
 			T = T.resolve_to_actual_turf()
-			var/obj/effect/fake_fire/variable/owned/flare = new(T, fire_temperature, evoke_strength SECONDS, deliberate ? user : null)
+			new /obj/effect/fake_fire/variable/owned(T, fire_temperature, evoke_strength SECONDS, deliberate ? user : null)
 	else
 		user.visible_message("\The [user] hurls a blast of fire over \the [target] ([evoke_strength])!")
 		var/obj/item/projectile/fireball/projectile = new(source_turf)
 		projectile.fire_lifetime = evoke_strength SECONDS
 		// level 1 flare is hot enough to boil water. level 3 flare is hot enough to light a campfire and ignite wood
-		projectile.fire_temperature = Interpolate(T100C, initial(projectile::fire_temperature), (evoke_strength - 1) / 3)
+		projectile.fire_temperature = Interpolate(T100C, projectile::fire_temperature, (evoke_strength - 1) / 3)
 		projectile.launch_from_gun(target, user.get_target_zone(), user)
 	return TRUE
