@@ -24,16 +24,7 @@
 		else
 			socks_color = null
 
-		if(!fur_color || fur_color == COLOR_BLACK)
-			fur_color = initial(fur_color)
-		if(!socks_color || socks_color == COLOR_BLACK)
-			socks_color = initial(socks_color)
-		if(!markings_color || markings_color == COLOR_BLACK)
-			markings_color = initial(markings_color)
-
 		eyes_color  = wyrdling.get_eye_colour()
-		if(!eyes_color ||eyes_color == COLOR_BLACK)
-			eyes_color = initial(eyes_color)
 
 		copy_wyrd_fur_color(fur_color)
 		copy_wyrd_marking_color(markings_color)
@@ -59,21 +50,38 @@
 /*
 /mob/living/simple_animal/passive/fox/copy_wyrd_fur_color(new_color)
 	fur_color = new_color
+	if(!fur_color || fur_color == COLOR_BLACK)
+		fur_color = initial(fur_color)
 /mob/living/simple_animal/passive/fox/copy_wyrd_marking_color(new_color)
 	markings_color = new_color
+	if(!markings_color || markings_color == COLOR_BLACK)
+		markings_color = initial(markings_color)
 /mob/living/simple_animal/passive/fox/copy_wyrd_socks_color(new_color)
 	socks_color    = new_color
+	if(!socks_color || socks_color == COLOR_BLACK)
+		socks_color = initial(socks_color)
 /mob/living/simple_animal/passive/fox/copy_wyrd_eyes_color(new_color)
 	eyes_color     = new_color
+	if(!eyes_color ||eyes_color == COLOR_BLACK)
+		eyes_color = initial(eyes_color)
 
 /mob/living/simple_animal/passive/deer/copy_wyrd_fur_color(new_color)
 	fur_color = new_color
+	if(!fur_color || fur_color == COLOR_BLACK)
+		fur_color = initial(fur_color)
 /mob/living/simple_animal/passive/deer/copy_wyrd_marking_color(new_color)
 	markings_color = new_color
+	if(!markings_color || markings_color == COLOR_BLACK)
+		markings_color = initial(markings_color)
 /mob/living/simple_animal/passive/deer/copy_wyrd_socks_color(new_color)
 	socks_color    = new_color
+	if(!socks_color || socks_color == COLOR_BLACK)
+		socks_color = initial(socks_color)
 /mob/living/simple_animal/passive/deer/copy_wyrd_eyes_color(new_color)
 	eyes_color     = new_color
+	if(!eyes_color ||eyes_color == COLOR_BLACK)
+		eyes_color = initial(eyes_color)
+
 */
 
 /decl/loadout_option/fantasy/mask/ghost_caul
