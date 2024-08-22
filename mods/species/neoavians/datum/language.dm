@@ -18,15 +18,3 @@
 
 /decl/language/neoavian/get_random_name(gender)
 	return ..(gender, 2, 4, 1.5)
-
-/decl/cultural_info/citizenship/teshari
-	name = "Pack Teshari"
-	description = "Most Teshari follow the unique cultural traditions of their specific pack, which vary as widely as any other species' \
-	idea of nations. Pack Teshari tend to be highly social, curious, and open people, with little concept of privacy and a high tendency \
-	towards sharing and mutual aid. Many packs remain mostly on Sirisai, with those venturing into human space doing so via Skrellian \
-	sponsorship programmes, though others exist wholly outside of the homeworld."
-	language = /decl/language/neoavian
-	secondary_langs = list(
-		/decl/language/neoavian,
-		/decl/language/sign
-	)

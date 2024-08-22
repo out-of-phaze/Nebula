@@ -55,11 +55,15 @@
 		/decl/natural_attack/stomp/weak
 	)
 
-	available_cultural_info = list(
-		TAG_CITIZENSHIP = list(
-			/decl/cultural_info/citizenship/teshari,
-			/decl/cultural_info/citizenship/stateless
-		)
+	blood_types = list(
+		/decl/blood_type/avian/taplus,
+		/decl/blood_type/avian/taminus,
+		/decl/blood_type/avian/tbplus,
+		/decl/blood_type/avian/tbminus,
+		/decl/blood_type/avian/tatbplus,
+		/decl/blood_type/avian/tatbminus,
+		/decl/blood_type/avian/oplus,
+		/decl/blood_type/avian/ominus,
 	)
 
 /decl/species/neoavian/equip_default_fallback_uniform(var/mob/living/human/H)
@@ -74,3 +78,13 @@
 	name = "Job - Teshari Assistant"
 	uniform = /obj/item/clothing/dress/avian_smock/worker
 	shoes = /obj/item/clothing/shoes/avian/footwraps
+
+/decl/species/neoavian/Initialize()
+	. = ..()
+	LAZYINITLIST(available_cultural_info)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/teshari)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/teshari/kamerr)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/teshari/autonomist)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/teshari/sif)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/teshari/spacer)
+	LAZYSET(default_cultural_info, TAG_HOMECULTURE, /decl/cultural_info/homeculture/teshari)

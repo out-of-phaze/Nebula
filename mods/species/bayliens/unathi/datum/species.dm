@@ -1,14 +1,14 @@
 /datum/appearance_descriptor/age/lizard
 	standalone_value_descriptors = list(
-		"an infant" =       1,
-		"a toddler" =       3,
-		"a child" =         7,
-		"an adolescent" =  13,
+		"a hatchling" =       1,
+		"a toddler" =       5,
+		"a child" =         9,
+		"an adolescent" =  15,
 		"a young adult" =  32,
-		"an adult" =       50,
-		"middle-aged" =    70,
+		"an adult" =       40,
+		"mature" =    	80,
 		"aging" =         150,
-		"elderly" =       260
+		"elderly" =       200
 	)
 
 /decl/butchery_data/humanoid/unathi
@@ -107,8 +107,14 @@
 /decl/species/unathi/Initialize()
 	. = ..()
 	LAZYINITLIST(available_cultural_info)
-	LAZYDISTINCTADD(available_cultural_info[TAG_CITIZENSHIP], /decl/cultural_info/citizenship/lizard)
-	LAZYSET(default_cultural_info, TAG_CITIZENSHIP, /decl/cultural_info/citizenship/lizard)
+	LAZYDISTINCTADD(available_cultural_info[TAG_CITIZENSHIP], /decl/cultural_info/citizenship/moghes)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/unathi)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/unathi/heretic)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/unathi/unbound)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/unathi/redeemer)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/unathi/yeosa)
+	LAZYSET(default_cultural_info, TAG_CITIZENSHIP, /decl/cultural_info/citizenship/moghes)
+	LAZYSET(default_cultural_info, TAG_HOMECULTURE, /decl/cultural_info/homeculture/unathi)
 
 /decl/species/unathi/equip_survival_gear(var/mob/living/human/H)
 	..()
