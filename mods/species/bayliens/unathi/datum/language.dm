@@ -1,6 +1,6 @@
 /decl/language/lizard
 	name = LANGUAGE_LIZARD
-	desc = "The common language of Lizards, composed of sibilant hisses and rattles. Hiss!"
+	desc = "The common language of the Moghes Hegemony, composed of sibilant hisses and rattles."
 	speech_verb = "hisses"
 	ask_verb = "hisses"
 	exclaim_verb = "roars"

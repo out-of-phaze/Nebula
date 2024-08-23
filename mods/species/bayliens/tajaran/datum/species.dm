@@ -56,13 +56,6 @@
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
-	available_cultural_info = list(
-		TAG_CITIZENSHIP = list(
-			/decl/cultural_info/citizenship/tajaran,
-			/decl/cultural_info/citizenship/stateless
-		)
-	)
-
 	default_emotes = list(
 		/decl/emote/visible/tail/swish,
 		/decl/emote/visible/tail/wag,
@@ -85,3 +78,12 @@
 
 /decl/species/tajaran/handle_additional_hair_loss(var/mob/living/human/H, var/defer_body_update = TRUE)
 	. = H?.set_skin_colour(rgb(189, 171, 143))
+
+/decl/species/tajaran/Initialize()
+	. = ..()
+	LAZYINITLIST(available_cultural_info)
+	LAZYDISTINCTADD(available_cultural_info[TAG_CITIZENSHIP], /decl/cultural_info/citizenship/pearlshield)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/tajaran)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/tajaran/njarir)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/tajaran/rhemazar)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/tajaran/spacer)

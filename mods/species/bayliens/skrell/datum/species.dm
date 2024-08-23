@@ -62,35 +62,6 @@
 		/decl/blood_type/skrell/nominus
 	)
 
-	available_cultural_info = list(
-		TAG_CITIZENSHIP = list(
-			/decl/cultural_info/citizenship/skrell,
-			/decl/cultural_info/citizenship/skrell/caste_malish,
-			/decl/cultural_info/citizenship/skrell/caste_kanin,
-			/decl/cultural_info/citizenship/skrell/caste_talum,
-			/decl/cultural_info/citizenship/skrell/caste_raskinta,
-			/decl/cultural_info/citizenship/skrell/caste_ue
-		),
-		TAG_HOMECULTURE = list(
-			/decl/cultural_info/homeculture/free,
-			/decl/cultural_info/homeculture/skrellspace,
-			/decl/cultural_info/homeculture/other
-		),
-		TAG_FACTION = list(
-			/decl/cultural_info/faction/skrell,
-			/decl/cultural_info/faction/skrell/qalaoa,
-			/decl/cultural_info/faction/skrell/yiitalana,
-			/decl/cultural_info/faction/skrell/krrigli,
-			/decl/cultural_info/faction/skrell/qonprri,
-			/decl/cultural_info/faction/skrell/kalimak,
-			/decl/cultural_info/faction/other
-		),
-		TAG_RELIGION = list(
-			/decl/cultural_info/religion/skrell,
-			/decl/cultural_info/religion/skrell/starspiritual,
-			/decl/cultural_info/religion/other
-		)
-	)
 
 	exertion_effect_chance = 10
 	exertion_hydration_scale = 1
@@ -140,3 +111,21 @@
 	name = "amphibian eyes"
 	desc = "Large black orbs, belonging to some sort of giant frog by looks of it."
 	icon = 'mods/species/bayliens/skrell/icons/body/organs.dmi'
+
+
+/decl/species/skrell/Initialize()
+	. = ..()
+	LAZYINITLIST(available_cultural_info)
+	LAZYDISTINCTADD(available_cultural_info[TAG_CITIZENSHIP], /decl/cultural_info/citizenship/skrell)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/skrell/caste_malish)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/skrell/caste_kanin)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/skrell/caste_talum)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/skrell/caste_raskinta)
+	LAZYDISTINCTADD(available_cultural_info[TAG_HOMECULTURE], /decl/cultural_info/homeculture/skrell/caste_ue)
+	LAZYDISTINCTADD(available_cultural_info[TAG_FACTION], /decl/cultural_info/faction/skrell)
+	LAZYDISTINCTADD(available_cultural_info[TAG_FACTION], /decl/cultural_info/faction/skrell_pirate)
+	LAZYDISTINCTADD(available_cultural_info[TAG_FACTION], /decl/cultural_info/faction/skrell_qerrgila)
+	LAZYDISTINCTADD(available_cultural_info[TAG_RELIGION], /decl/cultural_info/religion/skrell)
+	LAZYSET(default_cultural_info, TAG_CITIZENSHIP, /decl/cultural_info/citizenship/skrell)
+	LAZYSET(default_cultural_info, TAG_HOMECULTURE, /decl/cultural_info/homeculture/skrell/caste_malish)
+	LAZYSET(default_cultural_info, TAG_RELIGION, /decl/cultural_info/religion/skrell)

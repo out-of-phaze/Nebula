@@ -1,6 +1,7 @@
 /decl/modpack/bayliens
 	name = "Baystation 12 Aliens"
 
+/* Requires Adherents
 /mob/living/human/Process_Spacemove(allow_movement)
 	. = ..()
 	if(.)
@@ -13,4 +14,4 @@
 			// because the spacedrift subsystem checks the return value of this proc
 			// and unsets inertia_dir if it returns nonzero.
 			return 1
-
+*/

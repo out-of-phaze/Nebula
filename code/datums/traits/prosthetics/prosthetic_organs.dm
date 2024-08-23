@@ -79,10 +79,19 @@
 
 /decl/trait/prosthetic_organ/brain
 	name = "Synthetic Brain"
-	description = "You are an artificial lifeform, with a mind made of steel and light."
+	description = "You are a drone intelligence, designed and programmed with purpose."
 	apply_to_organ = BP_BRAIN
 	synthetic_bodytype_restricted = TRUE
+	incompatible_with = list(/decl/trait/prosthetic_organ/posibrain)
 	var/new_brain_type = /obj/item/organ/internal/brain/robotic
+
+/decl/trait/prosthetic_organ/posibrain
+	name = "Positronic Brain"
+	description = "You are an artificial person, whose inner workings are not fully understood."
+	apply_to_organ = BP_BRAIN
+	synthetic_bodytype_restricted = TRUE
+	incompatible_with = list(/decl/trait/prosthetic_organ/brain)
+	var/new_brain_type = /obj/item/organ/internal/brain/robotic/positronic
 
 /decl/trait/prosthetic_organ/brain/apply_trait(mob/living/holder)
 	. = ..()
