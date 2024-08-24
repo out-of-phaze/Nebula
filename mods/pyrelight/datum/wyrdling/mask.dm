@@ -2,6 +2,7 @@
 	if(wyrdling)
 
 		set_gender(wyrdling.get_gender())
+		wyrdling.copy_languages_to(src)
 
 		var/fur_color
 		var/markings_color
