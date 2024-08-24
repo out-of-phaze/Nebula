@@ -47,7 +47,6 @@
 /mob/living/proc/copy_wyrd_eyes_color(new_color)
 	return
 
-/*
 /mob/living/simple_animal/passive/fox/copy_wyrd_fur_color(new_color)
 	fur_color = new_color
 	if(!fur_color || fur_color == COLOR_BLACK)
@@ -81,8 +80,6 @@
 	eyes_color     = new_color
 	if(!eyes_color ||eyes_color == COLOR_BLACK)
 		eyes_color = initial(eyes_color)
-
-*/
 
 /decl/loadout_option/fantasy/mask/ghost_caul
 	name = "customised wyrdling mask"
