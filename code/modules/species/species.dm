@@ -14,7 +14,7 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	var/roleplay_summary
 	var/ooc_codex_information
 	var/cyborg_noun = "Cyborg"
-	var/hidden_from_codex = TRUE
+	var/hidden_from_codex = FALSE
 	var/secret_codex_info
 
 	var/holder_icon
@@ -30,6 +30,8 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	var/list/available_accessory_categories = list(
 		SAC_HAIR,
 		SAC_FACIAL_HAIR,
+		SAC_EARS,
+		SAC_TAIL,
 		SAC_COSMETICS,
 		SAC_MARKINGS
 	)
@@ -55,6 +57,8 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	var/flesh_color = "#ffc896"             // Pink.
 	var/blood_oxy = 1
 
+	// Preview in prefs positioning. If null, uses defaults set on a static list in preferences.dm.
+	var/list/character_preview_screen_locs
 
 	var/organs_icon		//species specific internal organs icons
 
@@ -218,7 +222,7 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	var/preview_icon_width = 64
 	var/preview_icon_height = 64
 	var/preview_icon_path
-	var/preview_outfit = /decl/hierarchy/outfit/job/generic/assistant
+	var/preview_outfit = /decl/outfit/job/generic/assistant
 
 	/// List of emote types that this species can use by default.
 	var/list/default_emotes
@@ -674,7 +678,7 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 		var/list/all_accessories = decls_repository.get_decls_of_subtype(accessory_category_decl.base_accessory_type)
 		for(var/accessory_style in all_accessories)
 			var/decl/sprite_accessory/check_accessory = all_accessories[accessory_style]
-			if(!check_accessory || !check_accessory.accessory_is_available(null, src, bodytype))
+			if(!check_accessory || !check_accessory.accessory_is_available(null, src, bodytype, FALSE))
 				continue
 			ADD_SORTED(available_accessories, accessory_style, /proc/cmp_text_asc)
 			available_accessories[accessory_style] = check_accessory
@@ -769,3 +773,6 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	H.mob_swap_flags = swap_flags
 	H.mob_push_flags = push_flags
 	H.pass_flags = pass_flags
+
+/decl/species/proc/modify_preview_appearance(mob/living/human/dummy/mannequin)
+	return mannequin

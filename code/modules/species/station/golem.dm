@@ -7,10 +7,12 @@
 	has_organ = list(
 		BP_BRAIN = /obj/item/organ/internal/brain/golem
 	)
+	uid = "bodytype_crystalline_golem"
 
 /decl/species/golem
 	name = SPECIES_GOLEM
 	name_plural = "Golems"
+	hidden_from_codex = TRUE
 
 	available_bodytypes = list(/decl/bodytype/crystalline/golem)
 

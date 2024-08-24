@@ -1,4 +1,3 @@
-#define SPECIES_TAJARA  "Tajara"
 #define LANGUAGE_TAJARA "Siik"
 #define LANGUAGE_AKHANI "Akhani"
 #define BODYTYPE_FELINE "feline body"

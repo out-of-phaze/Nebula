@@ -5,6 +5,7 @@
 	They commonly dig shallow dens in dirt, snow or foliage, sometimes using them for concealment prior to an ambush. \
 	Biological cousins to the elusive kururak, they have heavy, low-slung bodies and powerful jaws suited to hunting land prey rather than fishing. \
 	Colonization and subsequent expansion have displaced many populations from their tundral territories into colder areas; as a result, their diet of Sivian prey animals has pivoted to a diet of giant spider meat."
+	hidden_from_codex = FALSE
 	available_bodytypes = list(
 		/decl/bodytype/quadruped/grafadreka,
 		/decl/bodytype/quadruped/grafadreka/hatchling
@@ -46,6 +47,12 @@
 	// Drakes must be whitelisted for jobs to be able to join as them, see maps.dm.
 	job_blacklist_by_default = TRUE
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	character_preview_screen_locs = list(
+		"1" = "character_preview_map:1,4:36",
+		"2" = "character_preview_map:1,3:31",
+		"4" = "character_preview_map:1,2:26",
+		"8" = "character_preview_map:1,1:21"
+	)
 
 	var/list/adult_pain_emotes_with_pain_level = list(
 		list(/decl/emote/audible/drake_huff, /decl/emote/audible/drake_rattle) = 20

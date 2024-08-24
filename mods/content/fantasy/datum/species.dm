@@ -8,8 +8,8 @@
 		/decl/bodytype/human,
 		/decl/bodytype/human/masculine
 	)
-	preview_outfit = /decl/hierarchy/outfit/job/generic/fantasy
-	base_external_prosthetics_model = null
+	preview_outfit = /decl/outfit/job/generic/fantasy
+	base_external_prosthetics_model = /decl/bodytype/prosthetic/wooden
 
 	available_cultural_info = list(
 		TAG_HOMECULTURE = list(
@@ -33,6 +33,10 @@
 			/decl/cultural_info/culture/other
 		),
 		TAG_RELIGION =  list(
+			/decl/cultural_info/religion/ancestors,
+			/decl/cultural_info/religion/folk_deity,
+			/decl/cultural_info/religion/anima_materialism,
+			/decl/cultural_info/religion/virtuist,
 			/decl/cultural_info/religion/other
 		)
 	)

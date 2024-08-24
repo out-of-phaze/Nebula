@@ -36,7 +36,8 @@
 		SAC_HORNS,
 		SAC_FRILLS,
 		SAC_COSMETICS,
-		SAC_MARKINGS
+		SAC_MARKINGS,
+		SAC_TAIL
 	)
 
 	primitive_form = "Stok"
@@ -62,7 +63,7 @@
 	flesh_color = "#34af10"
 	organs_icon = 'mods/species/bayliens/unathi/icons/organs.dmi'
 
-	preview_outfit = /decl/hierarchy/outfit/job/generic/doctor
+	preview_outfit = /decl/outfit/job/generic/doctor
 
 	blood_types = list(
 		/decl/blood_type/reptile/splus,
