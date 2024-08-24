@@ -354,7 +354,7 @@
 			return
 
 		if(victim.change_species(new_species))
-			to_chat(usr, SPAN_NOTICE("Set species of [victim] to [victim.species]."))
+			to_chat(usr, SPAN_NOTICE("Set species of \the [victim] to [victim.species]."))
 		else
 			to_chat(usr, SPAN_WARNING("Failed! Something went wrong."))
 
@@ -427,7 +427,7 @@
 			to_chat(usr, "Mob doesn't exist anymore")
 			return
 
-		if(victim.remove_language(rem_language.name))
+		if(victim.remove_language(rem_language.type))
 			to_chat(usr, "Removed [rem_language] from [victim].")
 		else
 			to_chat(usr, "Mob doesn't know that language.")
