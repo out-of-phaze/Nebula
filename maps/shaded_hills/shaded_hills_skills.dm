@@ -1,11 +1,11 @@
 // ANIMA OVERRIDES
-/decl/stack_recipe/anima
+/decl/stack_recipe/potentia
 	recipe_skill = /decl/skill/crafting/artifice
 
 /obj/item/runestone
 	work_skill = /decl/skill/crafting/artifice
 
-/decl/material/solid/anima
+/decl/material/solid/potentia
 	arcana_skill = SKILL_SCIENCE
 
 /decl/runestone_spell_archetype

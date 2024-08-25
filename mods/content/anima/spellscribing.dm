@@ -21,7 +21,7 @@
 /obj/item/runestone/proc/can_scribe(mob/user, obj/item/implement)
 	if(!istype(user) || QDELETED(user) || (loc != user && !user.Adjacent(src)) || user.incapacitated())
 		return FALSE
-	if(!istype(material, /decl/material/solid/anima) || QDELETED(src) || cracked)
+	if(!istype(material, /decl/material/solid/potentia) || QDELETED(src) || cracked)
 		return FALSE
 	if(work_tool && !IS_TOOL(implement, work_tool))
 		return FALSE
@@ -42,7 +42,7 @@
 		return FALSE
 
 	. = TRUE // We mostly don't care after this point. Return type is only used for attackby() return.
-	var/decl/material/solid/anima/anima_mat = material
+	var/decl/material/solid/potentia/anima_mat = material
 
 	// Stage one: choose range.
 	if(!stored_spell)

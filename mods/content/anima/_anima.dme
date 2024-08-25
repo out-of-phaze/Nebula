@@ -2,8 +2,8 @@
 #define MODPACK_ANIMA
 // BEGIN_INCLUDE
 #include "_anima.dm"
-#include "anima_materials.dm"
-#include "anima_stack.dm"
+#include "potentia_definition.dm"
+#include "potentia_stack.dm"
 #include "runestones.dm"
 #include "spell_archetypes.dm"
 #include "spell_datum.dm"

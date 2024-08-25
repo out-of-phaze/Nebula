@@ -3,7 +3,7 @@
 	desc = "An etched, faceted round of crystalline anima, scribed with a complex rune. Shatter the runestone to evoke the spell scribed upon it."
 	icon = 'mods/content/anima/icons/runestone_basic.dmi'
 	icon_state = ICON_STATE_WORLD
-	material = /decl/material/solid/anima
+	material = /decl/material/solid/potentia
 	w_class = ITEM_SIZE_SMALL
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_DESC
 
@@ -29,7 +29,7 @@
 	if(cracked)
 		new_name += "cracked"
 	new_name += anima_density_labels[icon]
-	var/decl/material/solid/anima/anima = material
+	var/decl/material/solid/potentia/anima = material
 	new_name += istype(anima) ? anima.anima_type : "unaspected"
 	new_name += initial(name)
 	if(stored_spell)
@@ -53,7 +53,7 @@
 	if(try_scribe_spell(user, W))
 		return TRUE
 
-	if(istype(W, /obj/item/stack/material/anima) && W.material)
+	if(istype(W, /obj/item/stack/material/potentia) && W.material)
 
 		if(W.material.type != material.type)
 			to_chat(user, SPAN_WARNING("\The [src] is made of [material], not [W.material]."))
@@ -63,7 +63,7 @@
 			to_chat(user, SPAN_WARNING("\The [src] is as pure and dense as it can be without shattering."))
 			return TRUE
 
-		var/obj/item/stack/material/anima/anima = W
+		var/obj/item/stack/material/potentia/anima = W
 		if(anima.get_amount() < anima_density)
 			to_chat(user, SPAN_WARNING("You need at least [anima_density] blank\s to refine \the [src] further."))
 			return TRUE
@@ -107,7 +107,7 @@
 
 	// Incomplete runestones or AOE spells are activated immediately.
 	if(!stored_spell?.spell_master)
-		var/decl/material/solid/anima/anima = material
+		var/decl/material/solid/potentia/anima = material
 		if(istype(anima) && anima.undirected_spell?.base_effect)
 			anima.undirected_spell.base_effect.evoke_spell(user, get_turf(user), null, deliberate = deliberate)
 		else
@@ -137,22 +137,13 @@
 	return ..()
 
 /obj/item/runestone/fire
-	material = /decl/material/solid/anima/fire
-
-/obj/item/runestone/water
-	material = /decl/material/solid/anima/water
-
-/obj/item/runestone/air
-	material = /decl/material/solid/anima/air
-
-/obj/item/runestone/stone
-	material = /decl/material/solid/anima/stone
+	material = /decl/material/solid/potentia/fire
 
 /obj/item/runestone/adjust_mob_overlay(mob/living/user_mob, bodytype, image/overlay, slot, bodypart, use_fallback_if_icon_missing = TRUE)
-	if(overlay && cracked && istype(material, /decl/material/solid/anima))
+	if(overlay && cracked && istype(material, /decl/material/solid/potentia))
 		var/check_state = "[overlay.icon_state]-glow"
 		if(check_state_in_icon(check_state, overlay.icon))
-			var/decl/material/solid/anima/anima_mat = material
+			var/decl/material/solid/potentia/anima_mat = material
 			var/image/I = image(overlay.icon, check_state)
 			I.alpha = 255 * anima_mat.runestone_glow_intensity
 			I.appearance_flags |= RESET_ALPHA
@@ -169,8 +160,8 @@
 	icon_state = get_world_inventory_state()
 	if(cracked)
 		icon_state = "[icon_state]-cracked"
-		if(istype(material, /decl/material/solid/anima))
-			var/decl/material/solid/anima/anima_mat = material
+		if(istype(material, /decl/material/solid/potentia))
+			var/decl/material/solid/potentia/anima_mat = material
 			var/image/I = image(icon, "[icon_state]-glow")
 			I.alpha = 255 * anima_mat.runestone_glow_intensity
 			I.appearance_flags |= RESET_ALPHA
