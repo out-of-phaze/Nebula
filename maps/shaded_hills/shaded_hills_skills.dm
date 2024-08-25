@@ -1,9 +1,9 @@
 // ANIMA OVERRIDES
 /decl/stack_recipe/anima
-	recipe_skill = /decl/hierarchy/skill/crafting/artifice
+	recipe_skill = /decl/skill/crafting/artifice
 
 /obj/item/runestone
-	work_skill = /decl/hierarchy/skill/crafting/artifice
+	work_skill = /decl/skill/crafting/artifice
 
 /decl/material/solid/anima
 	arcana_skill = SKILL_SCIENCE
@@ -15,7 +15,7 @@
 /datum/map/shaded_hills/get_available_skill_types()
 	. = ..()
 	. -= list(
-		SKILL_EVA,
+		SKILL_EVA,\
 		SKILL_MECH,
 		SKILL_PILOT,
 		SKILL_COMPUTER,
