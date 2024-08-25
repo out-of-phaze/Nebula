@@ -13,7 +13,7 @@
 
 /decl/butchery_data/humanoid/avian
 	meat_name = "chicken"
-	meat_type = /obj/item/chems/food/butchery/meat/chicken
+	meat_type = /obj/item/food/butchery/meat/chicken
 
 /decl/species/neoavian
 	name = SPECIES_AVIAN
@@ -30,7 +30,7 @@
 
 	butchery_data = /decl/butchery_data/humanoid/avian
 
-	preview_outfit = /decl/hierarchy/outfit/job/generic/assistant/avian
+	preview_outfit = /decl/outfit/job/generic/assistant/avian
 
 	available_bodytypes = list(
 		/decl/bodytype/avian/raptor,
@@ -74,7 +74,7 @@
 /decl/species/neoavian/get_holder_color(var/mob/living/human/H)
 	return H.get_skin_colour()
 
-/decl/hierarchy/outfit/job/generic/assistant/avian
+/decl/outfit/job/generic/assistant/avian
 	name = "Job - Teshari Assistant"
 	uniform = /obj/item/clothing/dress/avian_smock/worker
 	shoes = /obj/item/clothing/shoes/avian/footwraps

@@ -11,7 +11,7 @@
 	available_bodytypes = list(
 		/decl/bodytype/kobaloi
 	)
-	preview_outfit      = /decl/hierarchy/outfit/job/generic/fantasy
+	preview_outfit      = /decl/outfit/job/generic/fantasy
 	base_external_prosthetics_model = null
 
 	available_cultural_info = list(
@@ -37,6 +37,10 @@
 			/decl/cultural_info/culture/other
 		),
 		TAG_RELIGION =  list(
+			/decl/cultural_info/religion/ancestors,
+			/decl/cultural_info/religion/folk_deity,
+			/decl/cultural_info/religion/anima_materialism,
+			/decl/cultural_info/religion/virtuist,
 			/decl/cultural_info/religion/other
 		)
 	)

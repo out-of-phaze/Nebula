@@ -1,4 +1,5 @@
 /decl/bodytype/avian
+	abstract_type        = /decl/bodytype/avian
 	name                 = "avian"
 	bodytype_category    = BODYTYPE_AVIAN
 	icon_base            = 'mods/species/neoavians/icons/body.dmi'
@@ -21,20 +22,21 @@
 		BP_BRAIN   = /obj/item/organ/internal/brain,
 		BP_EYES    = /obj/item/organ/internal/eyes
 	)
-	override_limb_types  = list(BP_TAIL = /obj/item/organ/external/tail/avian)
+	override_limb_types        = list(BP_TAIL = /obj/item/organ/external/tail/avian)
 	default_sprite_accessories = list(
-		SAC_HAIR     = list(/decl/sprite_accessory/hair/avian    = "#252525"),
-		SAC_MARKINGS = list(/decl/sprite_accessory/marking/avian = "#454545")
+		SAC_HAIR     = list(/decl/sprite_accessory/hair/avian    = list(SAM_COLOR = "#252525")),
+		SAC_MARKINGS = list(/decl/sprite_accessory/marking/avian = list(SAM_COLOR = "#454545"))
 	)
-	age_descriptor = /datum/appearance_descriptor/age/neoavian
+	age_descriptor          = /datum/appearance_descriptor/age/neoavian
 	heat_discomfort_strings = list(
 		"Your feathers prickle in the heat.",
 		"You feel uncomfortably warm.",
 	)
+	uid            = "bodytype_avian"
 
-	var/tail =              "tail_avian"
-	var/tail_icon =         'mods/species/neoavians/icons/tail.dmi'
-	var/tail_blend =        ICON_MULTIPLY
+	var/tail       = "tail_avian"
+	var/tail_icon  = 'mods/species/neoavians/icons/tail.dmi'
+	var/tail_blend = ICON_MULTIPLY
 	var/tail_hair
 	var/tail_hair_blend
 	var/tail_animation_states
@@ -46,14 +48,17 @@
 	tail                 = "tail_raptor"
 	tail_hair            = "over"
 	tail_hair_blend      = ICON_MULTIPLY
+	uid                  = "bodytype_avian_raptor"
 
 /decl/bodytype/avian/additive
+	abstract_type        = /decl/bodytype/avian/additive
 	name                 = "avian, additive"
 	icon_base            = 'mods/species/neoavians/icons/body_add.dmi'
 	health_hud_intensity = 3
 	limb_blend           = ICON_ADD
 	tail_blend           = ICON_ADD
 	tail                 = "tail_avian_add"
+	uid                  = "bodytype_avian_additive"
 
 /decl/bodytype/avian/additive/raptor
 	name                 = "raptor, additive"
@@ -61,6 +66,7 @@
 	tail                 = "tail_raptor_add"
 	tail_hair            = "over"
 	tail_hair_blend      = ICON_ADD
+	uid                  = "bodytype_avian_additive_raptor"
 
 /decl/bodytype/avian/Initialize()
 	equip_adjust = list(

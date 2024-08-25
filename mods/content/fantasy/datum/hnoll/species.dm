@@ -21,7 +21,7 @@
 	devotion to community, and loyalty to the family over individual glory or strength of arms."
 	hidden_from_codex   = FALSE
 	available_bodytypes = list(/decl/bodytype/hnoll)
-	preview_outfit      = /decl/hierarchy/outfit/job/generic/fantasy
+	preview_outfit      = /decl/outfit/job/generic/fantasy
 	spawn_flags         = SPECIES_CAN_JOIN
 	flesh_color         = "#ae7d32"
 	hunger_factor       = DEFAULT_HUNGER_FACTOR * 1.2
@@ -61,6 +61,10 @@
 			/decl/cultural_info/culture/other
 		),
 		TAG_RELIGION =  list(
+			/decl/cultural_info/religion/ancestors,
+			/decl/cultural_info/religion/folk_deity,
+			/decl/cultural_info/religion/anima_materialism,
+			/decl/cultural_info/religion/virtuist,
 			/decl/cultural_info/religion/other
 		)
 	)

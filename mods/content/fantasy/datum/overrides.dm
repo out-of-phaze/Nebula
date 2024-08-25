@@ -17,6 +17,10 @@
 			/decl/cultural_info/culture/other
 		),
 		TAG_RELIGION =  list(
+			/decl/cultural_info/religion/ancestors,
+			/decl/cultural_info/religion/folk_deity,
+			/decl/cultural_info/religion/anima_materialism,
+			/decl/cultural_info/religion/virtuist,
 			/decl/cultural_info/religion/other
 		)
 	)
@@ -48,3 +52,7 @@
 /obj/aura/sifsap_salve
 	name = "Drakespittle Salve"
 	descriptor = "glowing spittle"
+
+// Rename wooden prostheses
+/decl/bodytype/prosthetic/wooden
+	name = "carved wooden" // weird to call it 'crude' when it's cutting-edge for the setting
