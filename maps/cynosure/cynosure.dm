@@ -12,7 +12,7 @@
 
 	#include "../../mods/content/dungeon_loot/_dungeon_loot.dme"
 	#include "../../mods/content/mundane.dm"
-	#include "../../mods/content/bigpharma/_bigpharma.dme"
+	#include "../../mods/content/baychems/_baychems.dme"
 	#include "../../mods/content/corporate/_corporate.dme"
 	#include "../../mods/content/government/_government.dme"
 	#include "../../mods/content/matchmaking/_matchmaking.dme"
@@ -32,6 +32,7 @@
 	#include "../../mods/species/serpentid/_serpentid.dme"
 	#include "../../mods/species/utility_frames/_utility_frames.dme"
 	#include "../../mods/species/bayliens/_bayliens.dme"
+	#include "../../mods/species/vox/_vox.dme"
 
 	#include "../random_ruins/exoplanet_ruins/playablecolony/playablecolony.dm"
 
@@ -73,9 +74,11 @@
 
 	//#include "items/encryptionkey_cyno.dm"
 	//#include "items/headset_cyno.dm"
+	//#include "items/clothing/cyno_accessory.dm"
+	#include "items/clothing/cyno_exploration.dm"
 	//#include "items/clothing/cyno_suit.dm"
 	//#include "items/clothing/cyno_under.dm"
-	//#include "items/clothing/cyno_accessory.dm"
+	#include "items/clothing/cyno_winterboots.dm"
 	//#include "job/outfits.dm"
 	//#include "structures/closets/misc.dm"
 	//#include "structures/closets/security.dm"

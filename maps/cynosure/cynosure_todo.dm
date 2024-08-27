@@ -14,11 +14,6 @@
 
 /obj/structure/filing_cabinet/records/security
 
-/obj/structure/fence
-/obj/structure/fence/corner
-/obj/structure/fence/door
-/obj/structure/fence/door/locked
-
 /obj/structure/cliff
 /obj/structure/cliff/automatic
 /obj/structure/cliff/automatic/corner
@@ -28,11 +23,12 @@
 
 /obj/structure/animal_den
 
+/obj/structure/table
+/obj/structure/table/sifwoodentable
 /obj/structure/table/bench
 /obj/structure/table/bench/sifwooden
 /obj/structure/table/bench/sifwooden/padded
 
-/obj/item/clothing/head/cone
 /obj/item/wirecutters/clippers/trimmers
 
 /obj/vehicle/train/cargo/engine/quadbike
@@ -42,28 +38,27 @@
 /obj/vehicle/train/cargo/trolley/trailer
 /obj/vehicle/train/cargo/trolley/trailer/random
 
-
-/obj/structure/cable/heavyduty
-/obj/structure/flaps/mining
-
-/obj/machinery/atmospherics/tvalve/digital/mirrored
-
-/obj/machinery/door/airlock/glass/external
-
 /obj/machinery/camera/network/ground_floor
 /obj/machinery/camera/network/civilian
 /obj/machinery/camera/network/command
 /obj/machinery/camera/network/basement
 /obj/machinery/camera/network/research/toxins
-	// network = list("Research","Toxins Test Area")
+	preset_channels = list("Research","Toxins Test Area")
 /obj/machinery/camera/network/research/misc
-	// network = list("Research","Miscellaneous Research")
+	preset_channels = list("Research","Miscellaneous Research")
 /obj/machinery/camera/network/research_outpost
+/obj/machinery/camera/network/engine
+/obj/machinery/camera/network/cargo
+/obj/machinery/camera/network/thunder
+/obj/machinery/camera/network/telecom
+/obj/machinery/camera/network/second_floor
+/obj/machinery/camera/network/prison
+/obj/machinery/camera/network/interrogation
 
 /obj/machinery/porta_turret/industrial
 /obj/machinery/porta_turret/industrial/teleport_defense
 
-/obj/structure/marker_beacon
+/obj/structure/marker_beacon // should be changed to /obj/item/stack/flag with upright = true?
 	var/mapped_in_color
 
 /obj/machinery/atmospherics/portables_connector/fuel
@@ -79,11 +74,11 @@
 /obj/machinery/alarm/outside
 /obj/item/camera_assembly
 
-/obj/machinery/computer/security/telescreen
-
 /obj/item/radio/intercom/department
 /obj/item/radio/intercom/department/security
 /obj/item/radio/intercom/department/medbay
+
+/obj/item/radio/phone/medbay
 
 /obj/effect/floor_decal
 /obj/effect/floor_decal/milspec
@@ -91,7 +86,10 @@
 /obj/effect/floor_decal/milspec/color/blue
 
 /obj/item/tank/oxygen/red
+
+/obj/item/soap/deluxe
 /obj/item/soap/nanotrasen
+/obj/item/soap/syndie
 
 /obj/machinery/mixer
 /obj/machinery/mixer/cereal
@@ -101,18 +99,19 @@
 /obj/item/book/codex/corp_regs
 /obj/item/book/codex/lore
 /obj/item/book/codex/lore/news
+/obj/item/book/codex/lore/robutt
+/obj/item/book/codex/lore/vir
 
-/obj/turbolift_map_holder
-/obj/turbolift_map_holder/cynosure
-/obj/turbolift_map_holder/cynosure/west
-/obj/turbolift_map_holder/cynosure/center
-/obj/turbolift_map_holder/cynosure/cargo
-/obj/turbolift_map_holder/cynosure/engineering
-/obj/turbolift_map_holder/cynosure/medbay
-/obj/turbolift_map_holder/cynosure/sci
-/obj/turbolift_map_holder/cynosure/sec
+/obj/abstract/turbolift_spawner
+/obj/abstract/turbolift_spawner/cynosure
+/obj/abstract/turbolift_spawner/cynosure/west
+/obj/abstract/turbolift_spawner/cynosure/center
+/obj/abstract/turbolift_spawner/cynosure/cargo
+/obj/abstract/turbolift_spawner/cynosure/engineering
+/obj/abstract/turbolift_spawner/cynosure/medbay
+/obj/abstract/turbolift_spawner/cynosure/sci
+/obj/abstract/turbolift_spawner/cynosure/sec
 
-/mob/living/simple_mob/animal/passive/mouse/brown/Tom
 /obj/item/stack/tile/floor/steel_dirty
 
 /decl/flooring/tiling/steel_dirty
@@ -126,6 +125,7 @@
 /obj/structure/sign/clock
 /obj/structure/sign/science
 /obj/structure/sign/warning/cold
+/obj/structure/sign/warning/secure_area/armory
 /obj/structure/sign/explosive
 /obj/structure/sign/redcross
 
@@ -169,20 +169,69 @@
 /obj/structure/sign/directions/cargo/refinery
 /obj/structure/sign/directions/science
 /obj/structure/sign/directions/science/xenoarch
+/obj/structure/sign/directions/science/xenoflora
+/obj/structure/sign/directions/science/xenobiology
+/obj/structure/sign/directions/science/exploration
 /obj/structure/sign/directions/science/toxins
+/obj/structure/sign/directions/teleporter
+/obj/structure/sign/directions/security/interrogation
+/obj/structure/sign/directions/security/internal_affairs
+/obj/structure/sign/directions/security/forensics/alt
+/obj/structure/sign/directions/security/brig
+/obj/structure/sign/directions/security/armory
+/obj/structure/sign/directions/science/robotics
+/obj/structure/sign/directions/science/rnd
+/obj/structure/sign/directions/roomnum
+/obj/structure/sign/directions/recreation
+/obj/structure/sign/directions/pool
+/obj/structure/sign/directions/medical/virology
+/obj/structure/sign/directions/medical/surgery
+/obj/structure/sign/directions/medical/operating_2
+/obj/structure/sign/directions/medical/operating_1
+/obj/structure/sign/directions/medical/cloning
+/obj/structure/sign/directions/janitor
+/obj/structure/sign/directions/eva
+/obj/structure/sign/directions/bar
+/obj/structure/sign/directions/ai_core
+/obj/structure/sign/directions/stairs_down
+
+/obj/structure/sign/poster/custom // interactable, adjustable subtype
+
+/obj/structure/sign/pods
+
+/obj/structure/sign/calendar
+
+/obj/structure/sign/bigname
+/obj/structure/sign/bigname/seg_2
+/obj/structure/sign/bigname/seg_3
+/obj/structure/sign/bigname/seg_4
+/obj/structure/sign/bigname/seg_5
+/obj/structure/sign/bigname/seg_6
+/obj/structure/sign/bigname/seg_7
 
 /obj/structure/sign/level
 /obj/structure/sign/level/ground
 /obj/structure/sign/level/ground/large
 /obj/structure/sign/level/basement
 /obj/structure/sign/level/basement/large
+/obj/structure/sign/level/two
+/obj/structure/sign/level/two/large
 
 /obj/structure/sign/levels
 /obj/structure/sign/levels/medical
 /obj/structure/sign/levels/medical/virology
 /obj/structure/sign/levels/medical/morgue
+/obj/structure/sign/levels/medical/surgery
+/obj/structure/sign/levels/medical/cloning
+/obj/structure/sign/levels/medical/chemlab
 /obj/structure/sign/levels/engineering
+/obj/structure/sign/levels/engineering/reactor
 /obj/structure/sign/levels/security
+/obj/structure/sign/levels/security/seceqp
+/obj/structure/sign/levels/security/interrogation
+/obj/structure/sign/levels/security/forensics
+/obj/structure/sign/levels/security/brig
+/obj/structure/sign/levels/security/armory
 /obj/structure/sign/levels/armory
 /obj/structure/sign/levels/brig
 /obj/structure/sign/levels/cryo
@@ -197,10 +246,10 @@
 /obj/structure/sign/levels/science/toxins
 /obj/structure/sign/levels/science/xenoarch
 /obj/structure/sign/levels/science/rnd
-/obj/structure/sign/levels/command
 /obj/structure/sign/levels/dorms
 /obj/structure/sign/levels/cargo
 /obj/structure/sign/levels/cargo/mining
+/obj/structure/sign/levels/recreation
 
 /obj/item/clothing/shoes/winterboots/mining
 /obj/item/clothing/shoes/winterboots/explorer
@@ -220,6 +269,7 @@
 
 /obj/item/cane/crutch
 
+/obj/item/knife/tacknife/survival
 
 /obj/structure/bed/sofa/brown/right
 /obj/structure/bed/sofa/brown/left
@@ -326,10 +376,94 @@
 /obj/item/tabloid
 
 /obj/random/multiple/ore_pile
-/obj/random/cigarettes
 /obj/random/multiple/corp_crate/no_weapons
 /obj/random/multiple/voidsuit/mining
 /obj/random/mug
+
+// mining machinery
+/obj/machinery/mineral/equipment_vendor
+
+// higher-tier medical gear
+/obj/item/roller/adv
+/obj/item/scanner/health/advanced
+/obj/item/scanner/health/improved
+
+// legcuffs
+/obj/item/handcuffs/legcuffs // you can handcuff people's shoes instead apparently? maybe delete?
+
+// folders
+/obj/item/folder/blue_captain
+/obj/item/folder/blue_hop
+/obj/item/folder/red_hos
+/obj/item/folder/white
+/obj/item/folder/white_cmo
+/obj/item/folder/white_rd
+/obj/item/folder/yellow_ce
+
+// double beds/bedsheets
+/obj/item/bedsheet/bluedouble
+/obj/item/bedsheet/browndouble
+/obj/item/bedsheet/captaindouble
+/obj/item/bedsheet/double
+/obj/item/bedsheet/iandouble
+/obj/item/bedsheet/mimedouble
+/obj/item/bedsheet/orangedouble
+/obj/item/bedsheet/purpledouble
+/obj/item/bedsheet/rddouble
+/obj/item/bedsheet/reddouble
+/obj/item/bedsheet/yellowdouble
+/obj/structure/bed/double
+/obj/structure/bed/double/padded
+
+// firearms and ammo
+/obj/item/ammo_magazine/clip
+/obj/item/ammo_magazine/clip/c762
+/obj/item/ammo_magazine/clip/c762/hunter
+/obj/item/ammo_magazine/m10mm
+/obj/item/ammo_magazine/m45
+/obj/item/ammo_magazine/m45/practice
+/obj/item/ammo_magazine/m45/rubber
+/obj/item/ammo_magazine/m45/flash
+/obj/item/ammo_magazine/m545
+/obj/item/ammo_magazine/m545saw
+/obj/item/ammo_magazine/m9mm
+/obj/item/ammo_magazine/m9mmp90
+/obj/item/ammo_magazine/m9mmt
+/obj/item/ammo_magazine/m9mmt/rubber
+/obj/item/ammo_magazine/m9mmt/practice
+/obj/item/gun/energy/phasegun/pistol
+/obj/item/gun/projectile/automatic/c20r
+/obj/item/gun/projectile/automatic/l6_saw
+/obj/item/gun/projectile/automatic/p90
+/obj/item/gun/projectile/automatic/pdw
+/obj/item/gun/projectile/automatic/sts35
+/obj/item/gun/projectile/shotgun/pump/combat
+/obj/item/gun/projectile/shotgun/pump/rifle
+/obj/item/gun/projectile/shotgun/pump/rifle/lever
+/obj/item/gunbox
+
+/obj/machinery/cash_register
+	construct_state = /decl/machine_construction/default/panel_closed
+	base_type = /obj/machinery/cash_register
+/obj/item/stock_parts/circuitboard/cash_register
+	board_type = "machine"
+	build_path = /obj/machinery/cash_register
+	origin_tech = "{'programming':1}"
+/datum/fabricator_recipe/imprinter/circuit/cash_register
+	path = /obj/item/stock_parts/circuitboard/cash_register
+/obj/machinery/cash_register/civilian
+
+/obj/item/box/fancy/markers
+
+/obj/item/gps/xenofauna
+/obj/item/gps/security
+/obj/item/gps/security/hos
+
+// communicators. todo: modular computer subtype?
+/obj/item/communicator
+	var/static_name
+	var/occupation
+/obj/item/communicator/desktop
 
 /* Migrations to document
 obj/machinery/atmospherics/omni/atmos_filter : obj/machinery/atmospherics/omni/filter
@@ -385,3 +519,78 @@ corgi statue for central hall
 /turf/floor/tiled/techfloor/grid/cryo
 	initial_gas = list(/decl/material/gas/nitrogen = MOLES_CELLSTANDARD)
 	temperature = 73
+
+// TODO: MOVE
+// CLOSETS:
+/decl/closet_appearance/secure_closet/expedition
+	color = COLOR_BLUE_GRAY
+	decals = list(
+		"lower_side_vent"
+	)
+	extra_decals = list(
+		"stripe_vertical_mid_full" = COLOR_PURPLE,
+		"exped" = COLOR_PURPLE
+	)
+
+//SC Exploration Secure Closets Port
+/obj/structure/closet/secure_closet/explorer
+	name = "explorer locker"
+	closet_appearance = /decl/closet_appearance/secure_closet/expedition
+	// req_access = list(access_explorer)
+
+/obj/structure/closet/secure_closet/explorer/WillContain()
+	. = list(
+		/obj/item/clothing/jumpsuit/explorer,
+		// /obj/item/clothing/suit/armor/pcarrier/explorer/light, // todo: port explorer plate carrier
+		/obj/item/clothing/suit/toggle/explorer,
+		/obj/item/clothing/mask/gas/explorer,
+		/obj/item/clothing/shoes/winterboots/explorer,
+		/obj/item/clothing/gloves/black,
+		// /obj/item/radio/headset/explorer,
+		/obj/item/flashlight,
+		/obj/item/gps/explorer,
+		/obj/item/box/flares,
+		/obj/item/geiger,
+		/obj/item/cell/device,
+		/obj/item/radio,
+		/obj/item/stack/flag = 3, // 30, since each is a full stack of 10
+		/obj/item/cataloguer)
+	if(prob(50))
+		. += /obj/item/backpack/rucksack
+	else
+		. += /obj/item/backpack/satchel/grey
+	if(prob(75))
+		. += /obj/item/knife/tacknife/survival
+
+// Medical closets
+/obj/structure/closet/secure_closet/anesthetics
+	name = "anesthetics closet"
+	desc = "Used to knock people out."
+	closet_appearance = /decl/closet_appearance/secure_closet/medical/alt
+	req_access = list(access_surgery)
+
+/obj/structure/closet/secure_closet/anesthetics/WillContain()
+	return list(
+		/obj/item/tank/anesthetic = 3,
+		/obj/item/clothing/mask/breath/medical = 3
+	)
+
+/obj/structure/closet/secure_closet/medical_wall/anesthetics
+	name = "anesthetics wall closet"
+	desc = "Used to knock people out."
+	req_access = list(access_surgery)
+
+/obj/structure/closet/secure_closet/medical_wall/anesthetics/WillContain()
+	return list(
+		/obj/item/tank/anesthetic = 3,
+		/obj/item/clothing/mask/breath/medical = 3
+	)
+
+/obj/structure/closet/secure_closet/medical_wall/anesthetics/robotics
+	name = "robotics anesthetics wall closet"
+	desc = "Used to knock people out... but in the Robotics lab."
+	req_access = list(access_robotics)
+
+/obj/item/eftpos/departmental/service
+/obj/item/eftpos/departmental/security
+/obj/item/eftpos/departmental/cargo
