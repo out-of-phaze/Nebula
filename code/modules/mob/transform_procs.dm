@@ -39,7 +39,7 @@
 	spawning = 1
 	return ..()
 
-/mob/living/human/AIize(move = TRUE) // 'move' argument needs defining here too because BYOND is dumb
+/mob/living/human/AIize(move = TRUE)
 	if (HAS_TRANSFORMATION_MOVEMENT_HANDLER(src))
 		return
 	QDEL_NULL_LIST(worn_underwear)
