@@ -500,7 +500,7 @@
 	health = 1e+006
 	},
 /turf/wall/shuttle/dark/no_join,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "axn" = (
 /obj/machinery/light{
 	dir = 8
@@ -957,7 +957,7 @@
 "bcB" = (
 /obj/structure/rack,
 /obj/item/rig/ert,
-/obj/item/clothing/webbing/black_vest,
+/obj/item/clothing/webbing/vest/black,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "dark"
@@ -1056,7 +1056,7 @@
 	dir = 4
 	},
 /turf/floor/tiled/milspec/raised,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "biP" = (
 /obj/structure/undies_wardrobe,
 /obj/item/radio/intercom{
@@ -1081,12 +1081,12 @@
 /obj/item/gun/projectile/revolver/stun,
 /obj/item/flash,
 /obj/item/flash,
-/obj/item/clothing/webbing/brown_vest,
-/obj/item/clothing/webbing/brown_vest,
-/obj/item/clothing/webbing/brown_vest,
-/obj/item/clothing/webbing/brown_vest,
-/obj/item/clothing/webbing/brown_vest,
-/obj/item/clothing/webbing/brown_vest,
+/obj/item/clothing/webbing/vest/brown,
+/obj/item/clothing/webbing/vest/brown,
+/obj/item/clothing/webbing/vest/brown,
+/obj/item/clothing/webbing/vest/brown,
+/obj/item/clothing/webbing/vest/brown,
+/obj/item/clothing/webbing/vest/brown,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "dark"
@@ -1366,7 +1366,7 @@
 	},
 /obj/effect/floor_decal/milspec/color/white,
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "bBh" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/unsimulated/floor{
@@ -1534,7 +1534,7 @@
 	dir = 8
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "bJF" = (
 /obj/machinery/door/airlock,
 /turf/unsimulated/floor{
@@ -1546,7 +1546,7 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/centcom/evac)
 "bKZ" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
@@ -1618,7 +1618,7 @@
 /obj/effect/floor_decal/milspec/color/blue,
 /obj/effect/floor_decal/milspec/color/white,
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "bQE" = (
 /obj/structure/rack,
 /obj/item/energy_blade/sword/pirate,
@@ -1759,7 +1759,7 @@
 /obj/effect/floor_decal/milspec/color/blue,
 /obj/effect/floor_decal/milspec/color/white,
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "bYU" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
@@ -1795,14 +1795,14 @@
 	icon_state = "white_window2"
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "cbu" = (
 /obj/structure/shuttle/falsewall_no_join/window{
 	icon = 'icons/turf/wall_masks_tgmc_win.dmi';
 	icon_state = "white_rwindow2"
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "cbv" = (
 /obj/structure/closet/crate/freezer,
 /obj/effect/floor_decal/borderfloorwhite{
@@ -2285,7 +2285,7 @@
 /obj/item/book/codex/corp_regs,
 /obj/effect/floor_decal/milspec/color/white,
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "cDr" = (
 /obj/structure/target_stake,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -2484,7 +2484,7 @@
 	dir = 4
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "cSr" = (
 /obj/machinery/door/blast/regular{
 	id_tag = "crescent_thunderdome";
@@ -2524,16 +2524,16 @@
 	id_tag = "CREED";
 	name = "Ready Room"
 	},
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/centcom/evac)
 "cVQ" = (
 /obj/structure/rack,
-/obj/item/clothing/webbing/white_vest,
-/obj/item/clothing/webbing/white_vest,
-/obj/item/clothing/webbing/white_vest,
-/obj/item/clothing/webbing/white_vest,
-/obj/item/clothing/webbing/white_vest,
-/obj/item/clothing/webbing/white_vest,
+/obj/item/clothing/webbing/vest/white,
+/obj/item/clothing/webbing/vest/white,
+/obj/item/clothing/webbing/vest/white,
+/obj/item/clothing/webbing/vest/white,
+/obj/item/clothing/webbing/vest/white,
+/obj/item/clothing/webbing/vest/white,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -2618,8 +2618,8 @@
 /area/shuttle/merchant/home)
 "deX" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/taser,
+/obj/item/mech_equipment/mounted_system/taser/ion,
+/obj/item/mech_equipment/mounted_system/taser,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -2772,7 +2772,7 @@
 	icon_state = "white_window1"
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "dmM" = (
 /obj/structure/rack,
 /obj/item/clothing/jumpsuit/green,
@@ -2891,7 +2891,7 @@
 "duO" = (
 /obj/structure/table,
 /obj/item/box/syndie_kit/chameleon,
-/obj/item/box/syndie_kit/clerical,
+/obj/item/backpack/satchel/syndie_kit/clerical,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -3089,7 +3089,7 @@
 "dFX" = (
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
-	products = list(/obj/item/box/fancy/cigarettes=10,/obj/item/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2);
+	products = list(/obj/item/box/fancy/cigarettes=10,/obj/item/box/matches=10,/obj/item/flame/fuelled/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2);
 	markup = 0
 	},
 /turf/unsimulated/floor{
@@ -3412,12 +3412,12 @@
 /area/skipjack_station/start)
 "dYv" = (
 /obj/structure/rack,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3428,7 +3428,7 @@
 	dir = 1
 	},
 /turf/wall/shuttle/dark/no_join,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "dZT" = (
 /obj/machinery/light/no_nightshift,
 /obj/effect/floor_decal/milspec/color/blue,
@@ -3437,7 +3437,7 @@
 	pixel_y = -2
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "ebh" = (
 /obj/structure/hygiene/shower{
 	dir = 8
@@ -3755,7 +3755,7 @@
 	},
 /area/syndicate_mothership/elite_squad)
 "esB" = (
-/obj/item/gun/launcher/crossbow,
+/obj/item/gun/launcher/bow/crossbow/powered,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -3864,15 +3864,6 @@
 "ewB" = (
 /turf/wall/shuttle/dark/hard_corner,
 /area/centcom/specops)
-"exo" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/mecha_parts/mecha_equipment/tool/passenger,
-/obj/item/mecha_parts/mecha_equipment/tool/passenger,
-/turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
-	},
-/area/centcom/specops)
 "eyk" = (
 /obj/machinery/cooker/grill,
 /obj/effect/floor_decal/corner/white/diagonal,
@@ -3887,18 +3878,6 @@
 	icon_state = "dark"
 	},
 /area/wizard_station)
-"ezf" = (
-/obj/item/mecha_parts/mecha_equipment/teleporter,
-/obj/item/mecha_parts/mecha_tracking,
-/obj/item/mecha_parts/mecha_tracking,
-/obj/item/mecha_parts/mecha_tracking,
-/obj/item/mecha_parts/mecha_tracking,
-/obj/structure/table/steel_reinforced,
-/turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
-	},
-/area/centcom/specops)
 "ezG" = (
 /obj/machinery/computer/cloning{
 	dir = 1
@@ -3950,24 +3929,8 @@
 /turf/floor/shuttle/white,
 /area/centcom/main_hall)
 "eDu" = (
-/obj/item/mecha_parts/mecha_equipment/tool/sleeper,
-/obj/item/mecha_parts/mecha_equipment/tool/sleeper,
-/obj/item/mecha_parts/mecha_equipment/tool/syringe_gun,
-/obj/structure/table/steel_reinforced,
-/turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
-	},
-/area/centcom/specops)
-"eEu" = (
-/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
-/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
-/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
-/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
-/obj/item/mecha_parts/mecha_equipment/repair_droid,
-/obj/item/mecha_parts/mecha_equipment/repair_droid,
-/obj/item/mecha_parts/mecha_equipment/repair_droid,
-/obj/item/mecha_parts/mecha_equipment/repair_droid,
+/obj/item/mech_equipment/sleeper,
+/obj/item/mech_equipment/sleeper,
 /obj/structure/table/steel_reinforced,
 /turf/unsimulated/floor{
 	icon_state = "plating";
@@ -4054,7 +4017,7 @@
 	dir = 4
 	},
 /turf/floor/shuttle/carry,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "eJH" = (
 /obj/machinery/door/airlock,
 /turf/floor/shuttle/black,
@@ -4145,10 +4108,10 @@
 /area/centcom/medical)
 "eRt" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/space/vox/pressure,
-/obj/item/clothing/suit/space/vox/pressure,
-/obj/item/clothing/head/helmet/space/vox/pressure,
-/obj/item/clothing/head/helmet/space/vox/pressure,
+/obj/item/clothing/suit/space/vox,
+/obj/item/clothing/suit/space/vox,
+/obj/item/clothing/head/helmet/space/vox,
+/obj/item/clothing/head/helmet/space/vox,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -4269,7 +4232,7 @@
 /area/centcom/command)
 "eXb" = (
 /obj/structure/table,
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/centcom/evac)
 "eXo" = (
 /obj/structure/mirror{
@@ -4497,7 +4460,7 @@
 /obj/machinery/light/no_nightshift,
 /obj/effect/floor_decal/milspec/color/white,
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "fjB" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
@@ -4537,12 +4500,12 @@
 /area/holodeck/source_beach)
 "fkL" = (
 /obj/structure/rack,
-/obj/item/clothing/webbing/brown_vest,
-/obj/item/clothing/webbing/brown_vest,
-/obj/item/clothing/webbing/brown_vest,
-/obj/item/clothing/webbing/brown_vest,
-/obj/item/clothing/webbing/brown_vest,
-/obj/item/clothing/webbing/brown_vest,
+/obj/item/clothing/webbing/vest/brown,
+/obj/item/clothing/webbing/vest/brown,
+/obj/item/clothing/webbing/vest/brown,
+/obj/item/clothing/webbing/vest/brown,
+/obj/item/clothing/webbing/vest/brown,
+/obj/item/clothing/webbing/vest/brown,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -4627,7 +4590,7 @@
 	dir = 8
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "fnR" = (
 /obj/effect/floor_decal/carpet,
 /obj/effect/floor_decal/carpet{
@@ -4735,8 +4698,8 @@
 	},
 /obj/effect/floor_decal/milspec/color/red,
 /obj/effect/floor_decal/milspec/color/white,
-/turf/wall/shuttle/floor,
-/area/shuttle/arrival/pre_game)
+/turf/floor/shuttle/blue,
+/area/shuttle/arrival)
 "fvA" = (
 /obj/structure/rack,
 /obj/item/box/ammo/shotgunammo/large,
@@ -4790,18 +4753,18 @@
 	dir = 4
 	},
 /obj/structure/rack,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_drop_pouches,
-/obj/item/clothing/webbing/black_drop_pouches,
-/obj/item/clothing/webbing/black_drop_pouches,
-/obj/item/clothing/webbing/black_drop_pouches,
-/obj/item/clothing/webbing/black_drop_pouches,
-/obj/item/clothing/webbing/black_drop_pouches,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/drop_pouches/black,
+/obj/item/clothing/webbing/drop_pouches/black,
+/obj/item/clothing/webbing/drop_pouches/black,
+/obj/item/clothing/webbing/drop_pouches/black,
+/obj/item/clothing/webbing/drop_pouches/black,
+/obj/item/clothing/webbing/drop_pouches/black,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/techfloor.dmi';
 	icon_state = "techfloor_gray"
@@ -4836,12 +4799,12 @@
 /area/centcom/specops)
 "fCC" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/clothing/head/collectable/bearpelt,
+/obj/item/clothing/head/bearpelt,
 /obj/item/clothing/head/bowler,
 /obj/item/clothing/head/caphat/cap,
 /obj/item/clothing/head/beaverhat,
 /obj/item/clothing/head/beret/corp/centcom/officer,
-/obj/item/clothing/head/beret/sec,
+/obj/item/clothing/head/beret/corp/sec,
 /obj/item/clothing/head/collectable/kitty,
 /obj/item/clothing/head/collectable/kitty,
 /obj/item/clothing/head/collectable/kitty,
@@ -4857,9 +4820,9 @@
 /obj/item/clothing/head/hairflower/blue,
 /obj/item/clothing/head/hairflower/yellow,
 /obj/item/clothing/head/hairflower/pink,
-/obj/item/clothing/head/collectable/philosopher_wig,
-/obj/item/clothing/head/collectable/plaguedoctorhat,
-/obj/item/clothing/head/collectable/xenos,
+/obj/item/clothing/head/philosopher_wig,
+/obj/item/clothing/head/plaguedoctorhat,
+/obj/item/clothing/head/xenos,
 /turf/floor/shuttle/black,
 /area/shuttle/merchant/home)
 "fCK" = (
@@ -4881,11 +4844,11 @@
 	},
 /obj/effect/floor_decal/milspec/color/white,
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "fED" = (
 /obj/machinery/ai_status_display,
 /turf/wall/titanium,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "fEH" = (
 /obj/item/robot_parts/l_leg,
 /turf/unsimulated/floor{
@@ -4940,18 +4903,18 @@
 /area/centcom/creed)
 "fIt" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/vest/heavy/merc{
+/obj/item/clothing/suit/armor/pcarrier/merc{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/clothing/suit/vest/heavy/merc{
+/obj/item/clothing/suit/armor/pcarrier/merc{
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/clothing/suit/vest/heavy/merc,
-/obj/item/clothing/suit/vest/heavy/merc,
-/obj/item/clothing/suit/vest/heavy/merc,
-/obj/item/clothing/suit/vest/heavy/merc,
+/obj/item/clothing/suit/armor/pcarrier/merc,
+/obj/item/clothing/suit/armor/pcarrier/merc,
+/obj/item/clothing/suit/armor/pcarrier/merc,
+/obj/item/clothing/suit/armor/pcarrier/merc,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -5052,8 +5015,8 @@
 /area/centcom/bar)
 "fPj" = (
 /obj/structure/table/reinforced,
-/obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp,
-/obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp,
+/obj/item/mech_equipment/clamp,
+/obj/item/mech_equipment/clamp,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -5065,15 +5028,15 @@
 /obj/item/clothing/webbing/holster/armpit,
 /obj/item/clothing/webbing/holster/armpit,
 /obj/item/clothing/webbing/holster/hip,
-/obj/item/clothing/webbing/white_vest,
-/obj/item/clothing/webbing/white_vest,
-/obj/item/clothing/webbing/webbing,
-/obj/item/clothing/webbing/webbing,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/brown_vest,
-/obj/item/clothing/webbing/brown_vest,
-/obj/item/clothing/neck/scarf/white,
+/obj/item/clothing/webbing/vest/white,
+/obj/item/clothing/webbing/vest/white,
+/obj/item/clothing/webbing/vest,
+/obj/item/clothing/webbing/vest,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/brown,
+/obj/item/clothing/webbing/vest/brown,
+/obj/item/clothing/neck/scarf,
 /obj/item/clothing/neck/scarf/lightblue,
 /obj/item/clothing/neck/scarf/red,
 /obj/item/clothing/neck/scarf/purple,
@@ -5082,10 +5045,10 @@
 /obj/item/clothing/armband/engine,
 /obj/item/clothing/armband/cargo,
 /obj/item/clothing/armband,
-/obj/item/clothing/medal/nobel_science,
+/obj/item/clothing/medal/nanotrasen/silver,
 /obj/item/clothing/medal/silver,
 /obj/item/clothing/medal/gold,
-/obj/item/clothing/medal/bronze_heart,
+/obj/item/clothing/medal/nanotrasen/bronze,
 /turf/floor/shuttle/black,
 /area/shuttle/merchant/home)
 "fRL" = (
@@ -5543,7 +5506,7 @@
 /obj/item/towel/random,
 /obj/item/towel/random,
 /obj/item/towel/random,
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/centcom/evac)
 "gqi" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -5852,8 +5815,8 @@
 /turf/floor/tiled/milspec/dark,
 /area/shuttle/escape/centcom)
 "gJJ" = (
-/obj/item/mecha_parts/mecha_equipment/tool/extinguisher,
-/obj/item/mecha_parts/mecha_equipment/tool/rcd,
+/obj/item/mech_equipment/mounted_system/extinguisher,
+/obj/item/mech_equipment/mounted_system/rcd,
 /obj/item/tool/drill/diamond,
 /obj/structure/table/steel_reinforced,
 /turf/unsimulated/floor{
@@ -6245,7 +6208,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/centcom/evac)
 "hiU" = (
 /obj/structure/table,
@@ -6562,7 +6525,7 @@
 /area/centcom/security)
 "hCX" = (
 /obj/machinery/door/airlock/external,
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/centcom/evac)
 "hDd" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -7231,7 +7194,7 @@
 	dir = 10
 	},
 /turf/floor/shuttle/carry,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "inZ" = (
 /obj/structure/table/reinforced,
 /obj/item/plate/tray{
@@ -7306,37 +7269,37 @@
 	pixel_x = -6;
 	pixel_y = -6
 	},
-/obj/item/pill_bottle/dylovene{
+/obj/item/pill_bottle/antitoxins{
 	pixel_y = -6
 	},
-/obj/item/pill_bottle/dylovene{
+/obj/item/pill_bottle/antitoxins{
 	pixel_x = -6
 	},
-/obj/item/pill_bottle/dylovene{
+/obj/item/pill_bottle/antitoxins{
 	pixel_x = -6
 	},
-/obj/item/pill_bottle/dermaline{
+/obj/item/pill_bottle/burn_meds{
 	pixel_x = -3;
 	pixel_y = -3
 	},
-/obj/item/pill_bottle/dermaline{
+/obj/item/pill_bottle/burn_meds{
 	pixel_x = -3;
 	pixel_y = -3
 	},
-/obj/item/pill_bottle/dermaline{
+/obj/item/pill_bottle/burn_meds{
 	pixel_x = -3;
 	pixel_y = -3
 	},
 /obj/item/pill_bottle/antibiotics,
-/obj/item/pill_bottle/dexalin_plus{
+/obj/item/pill_bottle/oxygen/plus{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/pill_bottle/dexalin_plus{
+/obj/item/pill_bottle/oxygen/plus{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/pill_bottle/dexalin_plus{
+/obj/item/pill_bottle/oxygen/plus{
 	pixel_x = 4;
 	pixel_y = 4
 	},
@@ -7599,8 +7562,7 @@
 /turf/floor/shuttle/white,
 /area/shuttle/merchant/home)
 "iIh" = (
-/obj/item/mecha_parts/mecha_equipment/tool/drill/diamonddrill,
-/obj/item/mecha_parts/mecha_equipment/tool/cable_layer,
+/obj/item/mech_equipment/drill/diamond,
 /obj/structure/table/steel_reinforced,
 /turf/unsimulated/floor{
 	icon_state = "plating";
@@ -7691,7 +7653,7 @@
 /turf/floor/tiled/milspec/dark,
 /area/shuttle/escape/centcom)
 "iNR" = (
-/obj/item/robot_parts/frame,
+/obj/item/robot_parts/robot_suit,
 /obj/item/robot_parts/r_leg,
 /obj/item/robot_parts/r_arm,
 /turf/floor/shuttle,
@@ -7999,7 +7961,7 @@
 /obj/effect/floor_decal/milspec/color/blue,
 /obj/effect/floor_decal/milspec/color/white/half,
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "jbx" = (
 /obj/machinery/door/window/holowindoor{
 	dir = 1
@@ -8101,7 +8063,7 @@
 /area/holodeck/source_beach)
 "jeE" = (
 /obj/machinery/recharge_station,
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/centcom/evac)
 "jeV" = (
 /obj/structure/table/holo_woodentable,
@@ -8118,7 +8080,7 @@
 	icon_state = "white1"
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "jgo" = (
 /obj/item/ore,
 /turf/unsimulated/floor{
@@ -8370,7 +8332,7 @@
 /obj/effect/floor_decal/milspec/color/red,
 /obj/effect/floor_decal/milspec/color/white/half,
 /turf/floor/tiled/milspec/raised,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "jAm" = (
 /obj/item/chems/condiment/small/saltshaker{
 	pixel_x = -6
@@ -8810,12 +8772,12 @@
 /area/ninja_dojo/start)
 "kbj" = (
 /obj/structure/rack,
-/obj/item/clothing/webbing/holster/leg,
-/obj/item/clothing/webbing/holster/leg,
-/obj/item/clothing/webbing/holster/leg,
-/obj/item/clothing/webbing/holster/leg,
-/obj/item/clothing/webbing/holster/leg,
-/obj/item/clothing/webbing/holster/leg,
+/obj/item/clothing/webbing/holster/thigh,
+/obj/item/clothing/webbing/holster/thigh,
+/obj/item/clothing/webbing/holster/thigh,
+/obj/item/clothing/webbing/holster/thigh,
+/obj/item/clothing/webbing/holster/thigh,
+/obj/item/clothing/webbing/holster/thigh,
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -8916,7 +8878,7 @@
 	
 	},
 /obj/effect/floor_decal/milspec/color/blue,
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/shuttle/escape/centcom)
 "kgI" = (
 /obj/structure/table/glass,
@@ -8976,7 +8938,7 @@
 	dir = 1
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "kiG" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Special Operations";
@@ -9677,7 +9639,7 @@
 /turf/floor/shuttle/voidcraft,
 /area/syndicate_station/start)
 "kLb" = (
-/obj/item/box/syndie_kit/clerical,
+/obj/item/backpack/satchel/syndie_kit/clerical,
 /obj/structure/table,
 /turf/unsimulated/floor{
 	icon_state = "cult";
@@ -9746,9 +9708,9 @@
 /area/holodeck/source_boxingcourt)
 "kPZ" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/vest/heavy/merc,
-/obj/item/clothing/suit/vest/heavy,
-/obj/item/clothing/suit/vest,
+/obj/item/clothing/suit/armor/pcarrier/merc,
+/obj/item/clothing/suit/armor/vest/heavy,
+/obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet,
 /obj/item/clothing/head/helmet,
 /turf/unsimulated/floor{
@@ -9941,7 +9903,7 @@
 /turf/floor/shuttle/black,
 /area/shuttle/merchant/home)
 "lac" = (
-/obj/machinery/fabricator/pipe/orderable,
+/obj/machinery/fabricator/pipe,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "dark"
@@ -10003,12 +9965,12 @@
 /area/centcom/main_hall)
 "lgz" = (
 /obj/structure/table/reinforced,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
-/obj/item/clothing/webbing/black_vest,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
+/obj/item/clothing/webbing/vest/black,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "dark"
@@ -10170,7 +10132,7 @@
 	},
 /area/centcom/main_hall)
 "loZ" = (
-/obj/item/clothing/head/collectable/philosopher_wig,
+/obj/item/clothing/head/philosopher_wig,
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
@@ -10181,7 +10143,7 @@
 	dir = 1
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "lpK" = (
 /obj/effect/forcefield{
 	desc = "You can't get in. Heh.";
@@ -10203,7 +10165,7 @@
 /obj/effect/floor_decal/milspec/color/blue,
 /obj/effect/floor_decal/milspec/hatchmarks,
 /turf/floor/tiled/milspec,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "lse" = (
 /obj/structure/closet/crate/nanotrasen,
 /obj/item/firstaid/fire,
@@ -10247,7 +10209,7 @@
 	},
 /obj/effect/floor_decal/milspec/color/red,
 /turf/floor/tiled/milspec/raised,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "lvQ" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
@@ -10454,7 +10416,7 @@
 	},
 /area/wizard_station)
 "lIS" = (
-/obj/machinery/robotic_fabricator,
+/obj/machinery/fabricator/robotics,
 /obj/effect/floor_decal/milspec/color/red,
 /turf/floor/shuttle/red,
 /area/shuttle/administration/centcom)
@@ -10510,7 +10472,7 @@
 	},
 /area/centcom/command)
 "lLl" = (
-/obj/item/gun/magic/firestaff,
+/obj/item/gun/energy/staff/fire,
 /turf/unsimulated/floor{
 	icon_state = "steel_dirty"
 	},
@@ -10524,9 +10486,9 @@
 /area/shuttle/merchant/home)
 "lMq" = (
 /obj/structure/table,
-/obj/item/clothing/medal/permit,
-/obj/item/clothing/medal/permit,
-/obj/item/clothing/medal/permit,
+/obj/item/clothing/permit,
+/obj/item/clothing/permit,
+/obj/item/clothing/permit,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -11459,7 +11421,7 @@
 /obj/item/book/codex/lore/vir,
 /obj/effect/floor_decal/milspec/color/white,
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "mMW" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
@@ -11633,7 +11595,7 @@
 /turf/floor/tiled/white,
 /area/centcom/bar)
 "mWp" = (
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/centcom/evac)
 "mXs" = (
 /obj/structure/closet/crate/medical,
@@ -11678,7 +11640,7 @@
 	health = 1e+006
 	},
 /turf/wall/shuttle/dark/no_join,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "mZs" = (
 /turf/floor/tiled/milspec/raised,
 /area/shuttle/escape/centcom)
@@ -11954,15 +11916,6 @@
 	icon_state = "carpet"
 	},
 /area/centcom/command)
-"nnn" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster,
-/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster,
-/turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
-	},
-/area/centcom/specops)
 "nol" = (
 /obj/machinery/light/no_nightshift{
 	dir = 1
@@ -11976,7 +11929,7 @@
 	pixel_y = 2
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "noE" = (
 /obj/item/robot_parts/head,
 /turf/unsimulated/floor{
@@ -12819,17 +12772,18 @@
 /obj/item/clothing/costume/hosformalmale,
 /obj/item/clothing/costume/hosformalfem,
 /obj/item/clothing/shirt/harness,
-/obj/item/clothing/costume/costume/gladiator,
+/obj/item/clothing/costume/gladiator,
 /obj/item/clothing/costume/ert,
-/obj/item/clothing/costume/costume/schoolgirl,
-/obj/item/clothing/costume/costume/redcoat,
-/obj/item/clothing/costume/costume/sexymime,
-/obj/item/clothing/costume/costume/sexyclown,
-/obj/item/clothing/costume/costume/soviet,
-/obj/item/clothing/costume/space,
-/obj/item/clothing/costume/swimsuit/stripper/mankini,
+/obj/item/clothing/costume/schoolgirl,
+/obj/item/clothing/costume/redcoat,
+/obj/item/clothing/costume/sexymime,
+/obj/item/clothing/costume/sexyclown,
+/obj/item/clothing/costume/soviet,
+/obj/item/clothing/jumpsuit/space,
+/obj/item/clothing/pants/mankini,
 /obj/item/clothing/costume/suit_jacket/female,
-/obj/item/clothing/costume/rank/psych/turtleneck,
+/obj/item/clothing/shirt/sweater/turquoise,
+/obj/item/clothing/pants/slacks/navy,
 /obj/item/clothing/shirt/syndicate/combat,
 /obj/item/clothing/shirt/syndicate/combat,
 /obj/item/clothing/shirt/syndicate/tacticool,
@@ -13149,7 +13103,7 @@
 	dir = 5
 	},
 /turf/floor/shuttle/carry,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "oNc" = (
 /obj/structure/table,
 /obj/item/food/chips,
@@ -13245,7 +13199,7 @@
 /area/shuttle/merchant/home)
 "oPQ" = (
 /obj/structure/table,
-/obj/item/clothing/costume/costume/rainbow,
+/obj/item/clothing/jumpsuit/rainbow,
 /obj/item/clothing/glasses/sunglasses,
 /obj/item/clothing/head/collectable/petehat{
 	pixel_y = 5
@@ -13498,7 +13452,7 @@
 	icon_state = "white2"
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "piF" = (
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -13630,7 +13584,7 @@
 "pol" = (
 /obj/structure/hull_corner,
 /turf/floor/shuttle/carry,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "poo" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -13681,7 +13635,7 @@
 	dir = 1
 	},
 /turf/floor/shuttle/carry,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "pte" = (
 /obj/item/stool/padded{
 	dir = 8
@@ -13868,21 +13822,21 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/clothing/webbing/brown_drop_pouches{
+/obj/item/clothing/webbing/drop_pouches/brown{
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/clothing/webbing/brown_drop_pouches,
-/obj/item/clothing/webbing/brown_drop_pouches{
+/obj/item/clothing/webbing/drop_pouches/brown,
+/obj/item/clothing/webbing/drop_pouches/brown{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/clothing/webbing/brown_vest{
+/obj/item/clothing/webbing/vest/brown{
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/clothing/webbing/brown_vest,
-/obj/item/clothing/webbing/brown_vest{
+/obj/item/clothing/webbing/vest/brown,
+/obj/item/clothing/webbing/vest/brown{
 	pixel_x = 2;
 	pixel_y = 2
 	},
@@ -13952,24 +13906,24 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/clothing/webbing/white_vest{
+/obj/item/clothing/webbing/vest/white{
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/clothing/webbing/white_vest,
-/obj/item/clothing/webbing/white_vest{
+/obj/item/clothing/webbing/vest/white,
+/obj/item/clothing/webbing/vest/white{
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/clothing/webbing/white_drop_pouches{
+/obj/item/clothing/webbing/drop_pouches/white{
 	pixel_x = -4;
 	pixel_y = -4
 	},
-/obj/item/clothing/webbing/white_drop_pouches{
+/obj/item/clothing/webbing/drop_pouches/white{
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/clothing/webbing/white_drop_pouches,
+/obj/item/clothing/webbing/drop_pouches/white,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/techfloor.dmi';
 	icon_state = "techfloor_gray"
@@ -13977,7 +13931,7 @@
 /area/centcom/specops)
 "pFt" = (
 /turf/space/transit/north,
-/area/shuttle/escape/transit)
+/area/shuttle/escape)
 "pFK" = (
 /obj/machinery/button/access{
 	command = "cycle_interior";
@@ -14104,12 +14058,12 @@
 "pNU" = (
 /obj/effect/floor_decal/milspec/color/blue,
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "pNX" = (
 /obj/effect/floor_decal/milspec/color/blue,
 /obj/effect/floor_decal/emblem/nt2,
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "pOm" = (
 /obj/structure/lattice,
 /obj/structure/window/reinforced{
@@ -14143,7 +14097,7 @@
 "pQq" = (
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
-	products = list(/obj/item/box/fancy/cigarettes=10,/obj/item/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2);
+	products = list(/obj/item/box/fancy/cigarettes=10,/obj/item/box/matches=10,/obj/item/flame/fuelled/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2);
 	markup = 0
 	},
 /turf/unsimulated/floor{
@@ -14265,7 +14219,7 @@
 	},
 /obj/effect/shuttle_landmark{
 	base_area = /area/centcom/specops;
-	base_turf = /turf/simulated/floor;
+	base_turf = /turf/floor;
 	docking_controller = "response_base";
 	landmark_tag = "response_ship_start";
 	name = "ERT Shuttle Bay"
@@ -14453,7 +14407,7 @@
 /area/holodeck/source_basketball)
 "qiU" = (
 /obj/structure/rack,
-/obj/item/gun/launcher/crossbow,
+/obj/item/gun/launcher/bow/crossbow/powered,
 /obj/item/stack/material/rods/ten,
 /obj/machinery/light/small{
 	dir = 8
@@ -14470,7 +14424,7 @@
 /obj/machinery/vending/cigarette{
 	dir = 4;
 	name = "hacked cigarette machine";
-	products = list(/obj/item/box/fancy/cigarettes=10,/obj/item/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2);
+	products = list(/obj/item/box/fancy/cigarettes=10,/obj/item/box/matches=10,/obj/item/flame/fuelled/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2);
 	markup = 0
 	},
 /turf/unsimulated/floor{
@@ -14607,7 +14561,7 @@
 /area/centcom/main_hall)
 "qqm" = (
 /obj/structure/closet/secure_closet/personal,
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/centcom/evac)
 "qqE" = (
 /obj/structure/bed/chair/office/light{
@@ -14629,7 +14583,7 @@
 "qrS" = (
 /obj/effect/shuttle_landmark/cynosure/escape/transit,
 /turf/space/transit/north,
-/area/shuttle/escape/transit)
+/area/shuttle/escape)
 "qsn" = (
 /obj/structure/signpost,
 /turf/unsimulated/beach/sand,
@@ -14762,7 +14716,7 @@
 /obj/effect/floor_decal/milspec/color/blue,
 /obj/effect/floor_decal/milspec/hatchmarks,
 /turf/floor/tiled/milspec,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "qAv" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -14984,7 +14938,7 @@
 	dir = 9
 	},
 /turf/floor/shuttle/carry,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "qLH" = (
 /obj/structure/table/woodentable_reinforced,
 /obj/machinery/recharger,
@@ -14995,7 +14949,7 @@
 /area/ninja_dojo/dojo)
 "qMP" = (
 /turf/floor/shuttle/carry,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "qOh" = (
 /obj/effect/floor_decal/carpet{
 	dir = 4
@@ -15060,7 +15014,7 @@
 /obj/machinery/vending/cigarette{
 	dir = 4;
 	name = "hacked cigarette machine";
-	products = list(/obj/item/box/fancy/cigarettes=10,/obj/item/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2);
+	products = list(/obj/item/box/fancy/cigarettes=10,/obj/item/box/matches=10,/obj/item/flame/fuelled/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2);
 	markup = 0
 	},
 /turf/floor/shuttle/black,
@@ -15100,7 +15054,7 @@
 /obj/effect/floor_decal/milspec/color/blue,
 /obj/effect/floor_decal/emblem/nt3,
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "qSo" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 9
@@ -15189,7 +15143,7 @@
 "qWz" = (
 /obj/effect/floor_decal/milspec/color/white,
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "qWM" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -15629,7 +15583,7 @@
 	},
 /area/centcom/medical)
 "rqR" = (
-/obj/item/gun/launcher/spikethrower,
+/obj/item/gun/launcher/alien/spikethrower,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -15890,7 +15844,7 @@
 	},
 /obj/effect/floor_decal/milspec/color/white,
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "rBz" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1
@@ -16150,7 +16104,7 @@
 	},
 /area/centcom/command)
 "rPy" = (
-/obj/machinery/fabricator/pipe/disposal/orderable,
+/obj/machinery/fabricator/pipe/disposal,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "dark"
@@ -16454,7 +16408,7 @@
 	icon_state = "white_rwindow1"
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "sfb" = (
 /obj/item/chems/drinks/cans/cola,
 /obj/item/chems/drinks/cans/cola,
@@ -16489,7 +16443,7 @@
 /area/centcom/creed)
 "shq" = (
 /obj/structure/rack,
-/obj/item/gun/launcher/spikethrower,
+/obj/item/gun/launcher/alien/spikethrower,
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
@@ -16537,7 +16491,7 @@
 	dir = 8
 	},
 /turf/floor/shuttle/carry,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "sko" = (
 /obj/machinery/door/blast/regular{
 	id_tag = "spawnred";
@@ -17453,7 +17407,7 @@
 	dir = 1
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "thr" = (
 /obj/machinery/door/airlock/double/glass,
 /turf/floor/shuttle/black,
@@ -17467,7 +17421,7 @@
 	},
 /obj/effect/floor_decal/milspec/color/white,
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "tim" = (
 /obj/structure/table/steel,
 /obj/item/toolbox/syndicate/powertools,
@@ -17556,7 +17510,7 @@
 	name = "Doorstop"
 	},
 /turf/floor/tiled/milspec/raised,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "trt" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/button/alternate{
@@ -17576,7 +17530,7 @@
 	name = "JoinLate"
 	},
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "tsG" = (
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -17709,7 +17663,7 @@
 /obj/effect/floor_decal/milspec/color/red,
 /obj/effect/floor_decal/milspec/color/white/half,
 /turf/floor/tiled/milspec/raised,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "txG" = (
 /obj/effect/floor_decal/milspec/color/blue,
 /obj/effect/floor_decal/emblem/nt1,
@@ -17768,7 +17722,7 @@
 	dir = 6
 	},
 /turf/floor/shuttle/carry,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "tDh" = (
 /obj/machinery/constructable_frame/computerframe,
 /obj/machinery/light{
@@ -17883,7 +17837,7 @@
 	},
 /obj/effect/floor_decal/milspec/color/blue,
 /obj/effect/floor_decal/milspec/color/blue,
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/shuttle/escape/centcom)
 "tJi" = (
 /obj/machinery/disposal/deliveryChute{
@@ -17986,7 +17940,7 @@
 /area/ninja_dojo/start)
 "tQa" = (
 /turf/wall/titanium,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "tQt" = (
 /turf/space/transit/east,
 /area/space)
@@ -18082,14 +18036,14 @@
 /area/shuttle/escape/centcom)
 "tTz" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/clothing/suit/costume/hgpirate,
+/obj/item/clothing/suit/hgpirate,
 /obj/item/clothing/suit/leathercoat,
 /obj/item/clothing/suit/costume/justice,
 /obj/item/clothing/suit/costume/justice,
 /obj/item/clothing/suit/costume/justice,
 /obj/item/clothing/suit/costume/justice,
 /obj/item/clothing/suit/costume/justice,
-/obj/item/clothing/suit/costume,
+/obj/item/clothing/suit/pirate,
 /turf/floor/shuttle/black,
 /area/shuttle/merchant/home)
 "tTN" = (
@@ -18322,7 +18276,7 @@
 "ucH" = (
 /obj/structure/shuttle/engine/propulsion,
 /turf/wall/shuttle/dark/no_join,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "ucM" = (
 /obj/machinery/door/airlock/external/white{
 	icon_state = "door_locked";
@@ -18412,7 +18366,7 @@
 "ukN" = (
 /obj/structure/sign/warning/secure_area,
 /turf/wall/titanium,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "ulh" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/neck/stethoscope,
@@ -18424,8 +18378,8 @@
 /obj/item/hand_labeler,
 /obj/item/chems/spray/cleaner,
 /obj/item/chems/spray/cleaner,
-/obj/item/chems/spray/sterilizine,
-/obj/item/chems/spray/sterilizine,
+/obj/item/chems/spray/antiseptic,
+/obj/item/chems/spray/antiseptic,
 /obj/item/flashlight/pen,
 /obj/item/flashlight/pen,
 /turf/unsimulated/floor{
@@ -18665,7 +18619,7 @@
 "uAk" = (
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
-	products = list(/obj/item/box/fancy/cigarettes=10,/obj/item/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2);
+	products = list(/obj/item/box/fancy/cigarettes=10,/obj/item/box/matches=10,/obj/item/flame/fuelled/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2);
 	markup = 0
 	},
 /turf/floor/shuttle/voidcraft,
@@ -18691,7 +18645,7 @@
 	},
 /obj/effect/floor_decal/milspec/color/white,
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "uAX" = (
 /obj/machinery/singularity_generator,
 /turf/unsimulated/floor{
@@ -18809,7 +18763,7 @@
 	},
 /obj/effect/floor_decal/milspec/color/white,
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "uHS" = (
 /obj/structure/bed/chair/comfy/red{
 	dir = 4
@@ -19115,7 +19069,7 @@
 	},
 /obj/effect/floor_decal/milspec/color/white,
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "uWu" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -19195,7 +19149,7 @@
 "vfj" = (
 /obj/effect/floor_decal/milspec/color/red,
 /turf/floor/tiled/milspec/raised,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "vft" = (
 /turf/floor/holofloor/tiled,
 /area/holodeck/source_boxingcourt)
@@ -19341,7 +19295,7 @@
 /area/ninja_dojo/dojo)
 "voj" = (
 /obj/structure/table/woodentable,
-/obj/item/clothing/shoes/boots/workboots,
+/obj/item/clothing/shoes/workboots,
 /obj/item/clothing/costume/technomancer,
 /obj/item/clothing/head/technomancer,
 /obj/item/box/syndie_kit/chameleon,
@@ -19382,7 +19336,7 @@
 	dir = 1
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "vqL" = (
 /obj/structure/table/reinforced,
 /obj/machinery/faxmachine,
@@ -19561,7 +19515,7 @@
 	},
 /obj/effect/floor_decal/milspec/color/red,
 /turf/floor/tiled/milspec/raised,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "vBy" = (
 /turf/floor/tiled/milspec,
 /area/shuttle/supply)
@@ -19583,8 +19537,8 @@
 /area/beach)
 "vCL" = (
 /obj/structure/table/steel,
-/obj/item/clothing/glasses/regular,
-/obj/item/clothing/glasses/regular,
+/obj/item/clothing/glasses/prescription,
+/obj/item/clothing/glasses/prescription,
 /turf/floor/shuttle/darkred,
 /area/skipjack_station/start)
 "vDV" = (
@@ -19777,7 +19731,7 @@
 /obj/effect/floor_decal/milspec/color/red,
 /obj/effect/floor_decal/milspec/color/white/half,
 /turf/floor/tiled/milspec/raised,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "vPo" = (
 /obj/machinery/vending/medical{
 	dir = 8
@@ -19880,7 +19834,7 @@
 /area/skipjack_station/start)
 "vTt" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/clothing/head/collectable/philosopher_wig,
+/obj/item/clothing/head/philosopher_wig,
 /obj/item/radio/intercom{
 	desc = "Talk through this. Evilly";
 	dir = 8;
@@ -19991,7 +19945,7 @@
 "waw" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/medical,
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/centcom/evac)
 "waS" = (
 /obj/machinery/computer/modular/preset/engineering,
@@ -20080,9 +20034,9 @@
 /area/centcom/command)
 "wdr" = (
 /obj/structure/closet/crate,
-/obj/item/clothing/pants/vox/vox_utility,
-/obj/item/clothing/pants/vox/vox_utility,
-/obj/item/clothing/pants/vox/vox_utility,
+/obj/item/clothing/pants/vox,
+/obj/item/clothing/pants/vox,
+/obj/item/clothing/pants/vox,
 /obj/item/clothing/suit/robe/vox,
 /obj/item/clothing/suit/robe/vox,
 /obj/item/clothing/suit/robe/vox,
@@ -20229,11 +20183,6 @@
 "wjq" = (
 /obj/structure/rack,
 /obj/effect/floor_decal/industrial/warning,
-/obj/item/kit/paint/gygax/darkgygax,
-/obj/item/kit/paint/gygax/recitence,
-/obj/item/kit/paint/durand,
-/obj/item/kit/paint/durand/phazon,
-/obj/item/kit/paint/durand/seraph,
 /turf/floor/shuttle/black,
 /area/shuttle/merchant/home)
 "wjG" = (
@@ -21059,7 +21008,7 @@
 /area/centcom/terminal)
 "xdd" = (
 /obj/structure/aicore/deactivated,
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/shuttle/escape/centcom)
 "xdf" = (
 /obj/machinery/door/airlock/glass/engineering{
@@ -21130,7 +21079,7 @@
 	},
 /area/wizard_station)
 "xfC" = (
-/obj/item/clothing/head/collectable/xenos,
+/obj/item/clothing/head/xenos,
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
@@ -21160,7 +21109,7 @@
 	icon_state = "white_window3"
 	},
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "xid" = (
 /obj/machinery/dna_scannernew,
 /obj/effect/floor_decal/borderfloorwhite{
@@ -21239,7 +21188,7 @@
 	dir = 8
 	},
 /turf/floor/tiled/milspec/sterile,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "xkU" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 6
@@ -21765,7 +21714,7 @@
 "xNP" = (
 /obj/machinery/status_display,
 /turf/wall/titanium,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "xNV" = (
 /obj/machinery/sleeper{
 	dir = 4
@@ -21975,7 +21924,7 @@
 /obj/effect/floor_decal/milspec/color/blue,
 /obj/effect/floor_decal/emblem/nt1,
 /turf/floor/tiled/milspec/dark,
-/area/shuttle/arrival/pre_game)
+/area/shuttle/arrival)
 "yae" = (
 /obj/structure/flora/bush/fullgrass,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -22138,7 +22087,7 @@
 	dir = 1
 	},
 /obj/item/bedsheet/medical,
-/turf/wall/shuttle/floor,
+/turf/floor/shuttle/blue,
 /area/centcom/evac)
 "yjS" = (
 /obj/structure/table/reinforced,
@@ -30797,7 +30746,7 @@ ebT
 uAa
 cUf
 ewB
-exo
+cUf
 ebT
 ebT
 izR
@@ -31054,7 +31003,7 @@ ewB
 ewB
 ewB
 ewB
-ezf
+cUf
 ebT
 ebT
 uAa
@@ -32080,9 +32029,9 @@ puk
 ewB
 ebT
 uAa
-nnn
+cUf
 ewB
-eEu
+cUf
 fPj
 gJJ
 iIh

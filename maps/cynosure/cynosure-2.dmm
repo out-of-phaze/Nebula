@@ -2508,7 +2508,11 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/turf/floor/pool/filled,
+/obj/abstract/landmark/mapped_fluid{
+	fluid_initial = 300;
+	name = "mapped shallow pool"
+	},
+/turf/floor/pool,
 /area/surface/station/crew_quarters/pool)
 "bjK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
@@ -9086,7 +9090,11 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/turf/floor/pool/filled,
+/obj/abstract/landmark/mapped_fluid{
+	fluid_initial = 300;
+	name = "mapped shallow pool"
+	},
+/turf/floor/pool,
 /area/surface/station/crew_quarters/pool)
 "esn" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
@@ -11150,7 +11158,7 @@
 /turf/floor/tiled/white,
 /area/surface/station/rnd/hallway/gnd)
 "flI" = (
-/obj/structure/sign/chemistry,
+/obj/structure/sign/department/chemistry,
 /turf/wall,
 /area/surface/station/medical/chemistry)
 "flJ" = (
@@ -14877,7 +14885,11 @@
 /turf/floor/tiled/hydro,
 /area/surface/station/hydroponics)
 "gZn" = (
-/turf/floor/pool/filled,
+/obj/abstract/landmark/mapped_fluid{
+	fluid_initial = 300;
+	name = "mapped shallow pool"
+	},
+/turf/floor/pool,
 /area/surface/station/crew_quarters/pool)
 "gZq" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -17660,7 +17672,7 @@
 	dir = 4
 	},
 /obj/structure/table/steel_reinforced,
-/obj/item/stack/material/pane/mapped/glass/phoronglass/twenty,
+/obj/item/stack/material/pane/mapped/borosilicate/twenty,
 /obj/item/stack/material/pane/mapped/glass/fifty,
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -19563,9 +19575,9 @@
 	dir = 6
 	},
 /obj/structure/closet/wardrobe/red,
-/obj/item/clothing/medal/badge/holo,
-/obj/item/clothing/medal/badge/holo,
-/obj/item/clothing/medal/badge/holo/cord,
+/obj/item/clothing/badge/holo,
+/obj/item/clothing/badge/holo,
+/obj/item/clothing/badge/holo/cord,
 /obj/item/clothing/suit/hazardvest/green,
 /obj/item/clothing/suit/hazardvest/green,
 /turf/floor/tiled/techmaint,
@@ -20187,7 +20199,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/obj/item/banner/nt,
+/obj/item/banner/nanotrasen,
 /turf/floor/wood/sif,
 /area/surface/station/chapel/main)
 "jPo" = (
@@ -22340,7 +22352,11 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
 	},
-/turf/floor/pool/filled,
+/obj/abstract/landmark/mapped_fluid{
+	fluid_initial = 300;
+	name = "mapped shallow pool"
+	},
+/turf/floor/pool,
 /area/surface/station/crew_quarters/pool)
 "kJx" = (
 /obj/machinery/door/firedoor/border_only,
@@ -24461,7 +24477,6 @@
 /turf/floor/tiled/techfloor,
 /area/surface/station/security/interrogation)
 "lMe" = (
-/obj/machinery/blackbox_recorder,
 /turf/floor/bluegrid,
 /area/surface/station/ai/server_room)
 "lMg" = (
@@ -24746,7 +24761,11 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
 	},
-/turf/floor/pool/filled,
+/obj/abstract/landmark/mapped_fluid{
+	fluid_initial = 300;
+	name = "mapped shallow pool"
+	},
+/turf/floor/pool,
 /area/surface/station/crew_quarters/pool)
 "lSf" = (
 /obj/structure/table/woodentable_reinforced,
@@ -27492,7 +27511,7 @@
 /obj/effect/floor_decal/corner/blue/bordercorner2{
 	dir = 10
 	},
-/obj/item/banner/nt,
+/obj/item/banner/nanotrasen,
 /turf/floor/tiled/techmaint,
 /area/surface/station/hallway/primary/groundfloor/south)
 "naO" = (
@@ -28223,9 +28242,7 @@
 /area/surface/station/crew_quarters/kitchen)
 "nvX" = (
 /turf/floor/concrete,
-/area/shuttle/arrival/station{
-	dynamic_lighting = 1
-	})
+/area/shuttle/arrival)
 "nwe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -29000,9 +29017,7 @@
 "nNy" = (
 /obj/effect/shuttle_landmark/cynosure/escape/station,
 /turf/floor/concrete,
-/area/shuttle/escape/station{
-	dynamic_lighting = 1
-	})
+/area/shuttle/escape)
 "nNG" = (
 /obj/machinery/door/window/northright{
 	name = "Range Access"
@@ -32870,9 +32885,7 @@
 "psJ" = (
 /obj/effect/shuttle_landmark/cynosure/arrivals_station,
 /turf/floor/concrete,
-/area/shuttle/arrival/station{
-	dynamic_lighting = 1
-	})
+/area/shuttle/arrival)
 "psP" = (
 /turf/wall/concrete/reinforced,
 /area/surface/station/maintenance/weststairwell/gnd)
@@ -35649,7 +35662,6 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/rack,
-/obj/item/box/seccarts,
 /obj/item/box/handcuffs{
 	pixel_x = 2
 	},
@@ -36065,7 +36077,11 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/turf/floor/pool/filled,
+/obj/abstract/landmark/mapped_fluid{
+	fluid_initial = 300;
+	name = "mapped shallow pool"
+	},
+/turf/floor/pool,
 /area/surface/station/crew_quarters/pool)
 "qRt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -45684,9 +45700,7 @@
 /area/surface/station/maintenance/chapel)
 "vBC" = (
 /turf/floor/concrete,
-/area/shuttle/escape/station{
-	dynamic_lighting = 1
-	})
+/area/shuttle/escape)
 "vBD" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -46932,7 +46946,7 @@
 /turf/floor/plating,
 /area/surface/station/engineering/reactor_waste)
 "wiR" = (
-/obj/structure/sign/warning/falling{
+/obj/structure/sign/warning/fall{
 	desc = "It appears to be a sign warning against falling off the cliffs, ahead. Foolproof."
 	},
 /turf/wall/sifwood,
@@ -48086,7 +48100,7 @@
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/food/cube/monkeycube/wrapped,
+/obj/item/food/monkeycube/wrapped,
 /turf/floor/tiled/neutral,
 /area/surface/station/rnd/xenobiology)
 "wOs" = (
@@ -49594,7 +49608,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/obj/item/banner/nt,
+/obj/item/banner/nanotrasen,
 /turf/floor/wood/sif,
 /area/surface/station/chapel/main)
 "xzZ" = (
