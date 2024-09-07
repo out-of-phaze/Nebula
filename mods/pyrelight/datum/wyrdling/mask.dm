@@ -48,39 +48,59 @@
 /mob/living/proc/copy_wyrd_eyes_color(new_color)
 	return
 
-/mob/living/simple_animal/passive/fox/copy_wyrd_fur_color(new_color)
-	fur_color = new_color
-	if(!fur_color || fur_color == COLOR_BLACK)
-		fur_color = initial(fur_color)
-/mob/living/simple_animal/passive/fox/copy_wyrd_marking_color(new_color)
-	markings_color = new_color
-	if(!markings_color || markings_color == COLOR_BLACK)
-		markings_color = initial(markings_color)
-/mob/living/simple_animal/passive/fox/copy_wyrd_socks_color(new_color)
-	socks_color    = new_color
-	if(!socks_color || socks_color == COLOR_BLACK)
-		socks_color = initial(socks_color)
-/mob/living/simple_animal/passive/fox/copy_wyrd_eyes_color(new_color)
-	eyes_color     = new_color
-	if(!eyes_color ||eyes_color == COLOR_BLACK)
-		eyes_color = initial(eyes_color)
+/mob/living/simple_animal/proc/get_default_animal_colours()
+	return
 
-/mob/living/simple_animal/passive/deer/copy_wyrd_fur_color(new_color)
-	fur_color = new_color
-	if(!fur_color || fur_color == COLOR_BLACK)
-		fur_color = initial(fur_color)
-/mob/living/simple_animal/passive/deer/copy_wyrd_marking_color(new_color)
-	markings_color = new_color
-	if(!markings_color || markings_color == COLOR_BLACK)
-		markings_color = initial(markings_color)
-/mob/living/simple_animal/passive/deer/copy_wyrd_socks_color(new_color)
-	socks_color    = new_color
-	if(!socks_color || socks_color == COLOR_BLACK)
-		socks_color = initial(socks_color)
-/mob/living/simple_animal/passive/deer/copy_wyrd_eyes_color(new_color)
-	eyes_color     = new_color
-	if(!eyes_color ||eyes_color == COLOR_BLACK)
-		eyes_color = initial(eyes_color)
+/mob/living/simple_animal/passive/fox/get_default_animal_colours()
+	var/static/list/default_colors = list(
+		"base"     = "#ed5a20",
+		"markings" = "#efe9e6",
+		"socks"    = "#36221b"
+	)
+	return default_colors
+
+/mob/living/simple_animal/passive/deer/get_default_animal_colours()
+	var/static/list/default_colors = list(
+		"base"     = "#b39161",
+		"markings" = "#3a3329",
+		"socks"    = "#ddd5c9"
+	)
+	return default_colors
+
+/mob/living/simple_animal/passive/rabbit/get_default_animal_colours()
+	var/static/list/default_colors = list(
+		"base"     = "#e6e5da",
+		"markings" = "#c8b1a5",
+		"socks"    = "#e6e5da"
+	)
+	return default_colors
+
+/mob/living/simple_animal/proc/get_default_animal_colour(marking_type)
+	var/list/colors = get_default_animal_colours()
+	return LAZYACCESS(colors, marking_type) || COLOR_BLACK
+
+/mob/living/simple_animal/copy_wyrd_fur_color(new_color)
+	if(!new_color || new_color == COLOR_BLACK)
+		new_color = get_default_animal_colour("base")
+	LAZYINITLIST(draw_visible_overlays)
+	draw_visible_overlays["base"] = new_color
+
+/mob/living/simple_animal/copy_wyrd_marking_color(new_color)
+	if(!new_color || new_color == COLOR_BLACK)
+		new_color = get_default_animal_colour("markings")
+	LAZYINITLIST(draw_visible_overlays)
+	draw_visible_overlays["markings"] = new_color
+
+/mob/living/simple_animal/copy_wyrd_socks_color(new_color)
+	if(!new_color || new_color == COLOR_BLACK)
+		new_color = get_default_animal_colour("socks")
+	LAZYINITLIST(draw_visible_overlays)
+	draw_visible_overlays["socks"] = new_color
+
+/mob/living/simple_animal/copy_wyrd_eyes_color(new_color)
+	if(!new_color || new_color == COLOR_BLACK)
+		new_color = initial(eye_color)
+	eye_color = new_color
 
 /decl/loadout_option/fantasy/mask/ghost_caul
 	name = "customised wyrdling mask"
