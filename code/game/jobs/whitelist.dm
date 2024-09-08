@@ -15,7 +15,7 @@ var/global/list/whitelist = list()
 /proc/check_whitelist(mob/M /*, var/rank*/)
 	if(!whitelist)
 		return 0
-	return ("[M.ckey]" in whitelist)
+	return ("[M.ckey]" in whitelist) || check_rights(R_ADMIN|R_EVENT, 0, M)
 
 var/global/list/alien_whitelist = list()
 /hook/startup/proc/loadAlienWhitelist()
