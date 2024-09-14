@@ -45,7 +45,7 @@
 				else
 					limb.createwound(BURN, rand(limb.max_damage * 0.25, limb.max_damage * 0.5))
 
-	set_max_health(round(species.total_health / 3))
+	set_max_health(round(species.total_health / 2))
 	vessel.remove_any(vessel.total_volume * rand(0.2, 0.5))
 	update_body()
 

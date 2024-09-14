@@ -20,7 +20,7 @@
 
 /mob/living/human/get_attack_telegraph_delay()
 	if(has_trait(/decl/trait/undead))
-		return (1 SECOND)
+		return (0.6 SECONDS)
 	return ..()
 
 /datum/skillset/undead

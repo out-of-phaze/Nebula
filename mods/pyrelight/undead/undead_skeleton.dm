@@ -24,7 +24,7 @@
 		remove_organ(organ, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE)
 		qdel(organ)
 
-	set_max_health(round(species.total_health / 4))
+	set_max_health(round(species.total_health / 3))
 	vessel?.clear_reagents()
 	SET_HAIR_STYLE(src, /decl/sprite_accessory/hair/bald, FALSE)
 	update_body()

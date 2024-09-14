@@ -151,6 +151,18 @@
 	compost_value = 0.8
 	has_textile_fibers = TRUE
 
+/decl/material/solid/organic/cloth/wool
+	name      = "wool"
+	lore_text = "Fibers from the wooly fleece of a sheep or similar animal."
+	uid       = "solid_wool"
+	color     = "#fbfcdb"
+
+/decl/material/solid/organic/cloth/wool/diyaab
+	name      = "diyaab wool"
+	lore_text = "Fibers from the wooly fleece of a diyaab."
+	uid       = "solid_wool_diyaab"
+	color     = "#c9eeff"
+
 /decl/material/solid/organic/cloth/synthetic
 	name = "nylon"
 	uid = "solid_cloth_synthetic"
@@ -178,6 +190,7 @@
 	sound_manipulate = 'sound/foley/paperpickup2.ogg'
 	sound_dropped = 'sound/foley/paperpickup1.ogg'
 	fishing_bait_value = 0.75
+	allergen_flags = ALLERGEN_VEGETABLE
 
 /// Used for plant products that aren't quite wood, but are still tougher than normal plant matter.
 /decl/material/solid/organic/plantmatter/pith
