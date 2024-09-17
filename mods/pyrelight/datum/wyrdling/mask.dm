@@ -144,9 +144,11 @@
 	return override_preview_screen_locs
 
 /obj/item/clothing/mask/ghost_caul/Destroy()
-	if(_our_animal?.loc == src)
+	// Only qdel our animal if they are not out and about in the world.
+	if(_our_animal && !_our_animal.key && (_our_animal.loc == src || isnull(_our_animal.loc)))
 		qdel(_our_animal)
 	_our_animal = null
+	our_owner = null
 	. = ..()
 
 /mob/proc/revert_veering()
