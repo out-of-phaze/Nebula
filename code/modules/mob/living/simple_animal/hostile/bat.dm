@@ -16,7 +16,7 @@
 
 /mob/living/simple_animal/hostile/scarybat/cave
 	name = "cave bats"
-	desc = "A swarm of screeching cave bats, twisted by death anima and hungering for blood."
+	desc = "A swarm of screeching cave bats, twisted by the deep dark and hungering for blood."
 	faction = "undead"
 
 /datum/mob_controller/aggressive/bats
