@@ -95,6 +95,7 @@
 	lore_text = "Circulatory Stimulant N is an emergency stimulant for stabilizing or resuscitating critically injured Replikas of Generation 3 and up."
 
 /decl/material/liquid/klstim_n/affect_blood(mob/living/victim, removed, datum/reagents/holder)
+	. = ..()
 	if(!istype(victim) || !victim.has_trait(/decl/trait/biosynthetic_healing))
 		return
 	var/replika_gen = victim.GetTraitLevel(/decl/trait/biosynthetic_healing)
