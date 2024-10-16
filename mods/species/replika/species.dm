@@ -59,8 +59,8 @@
 		/decl/pronouns/neuter,
 		/decl/pronouns/neuter/person
 	)
-	available_cultural_info = list(
-		TAG_CULTURE = list(/decl/cultural_info/culture/synthetic/replika)
+	available_background_info = list(
+		/decl/background_category/heritage = list(/decl/background_detail/heritage/synthetic/replika)
 	)
 
 	exertion_effect_chance = 10
@@ -76,11 +76,11 @@
 		SAC_MARKINGS
 	)
 
-/decl/cultural_info/culture/synthetic/replika
+/decl/background_detail/heritage/synthetic/replika
 	name = "Replika"
 	description = "You are a biosynthetic humanoid created by the Nation to serve as their primary workforce."
 
-/decl/cultural_info/culture/synthetic/replika/get_random_name(mob/M, gender)
+/decl/background_detail/heritage/synthetic/replika/get_random_name(mob/M, gender)
 	var/decl/species/our_species = get_species_by_key(M?.client?.prefs?.species)
 	if(our_species?.get_root_species_name() != SPECIES_REPLIKA)
 		return ..()
