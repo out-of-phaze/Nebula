@@ -149,7 +149,7 @@
 		// based on how many wounds there are and where,
 		// the longer it takes to apply.
 		user.visible_message("<b>\The [user]</b> starts searching \the [victim] for a wound to treat...", SPAN_NOTICE("You start searching \the [victim] for a wound to treat..."))
-		var/time_taken = 5 SECONDS - FLOOR(4 SECONDS * (wounded_organ_points / (100 * length(external_organs))))
+		var/time_taken = 5 SECONDS - floor(4 SECONDS * (wounded_organ_points / (100 * length(external_organs))))
 		if(!do_mob(user, victim, time_taken))
 			user.visible_message("<b>\The [user]</b> stops treating \the [victim].", SPAN_NOTICE("You stop treating \the [victim]."))
 			return TRUE
