@@ -136,7 +136,7 @@
 		access_engine_equip,
 		access_atmospherics
 	)
-	outfit_type = /decl/hierarchy/outfit/job/generic/engineer/luciferase/chief
+	outfit_type = /decl/outfit/job/generic/engineer/luciferase/chief
 	skill_points = 25
 	min_skill = list(
 		SKILL_LITERACY     = SKILL_ADEPT,
@@ -168,14 +168,14 @@
 		"Maintenance Technician",
 		"Engine Technician",
 		"Electrician",
-		"Atmospheric Technician" = /decl/hierarchy/outfit/job/generic/engineer/luciferase/atmos,
+		"Atmospheric Technician" = /decl/outfit/job/generic/engineer/luciferase/atmos,
 	)
 	access = list(
 		access_engine,
 		access_engine_equip,
 		access_atmospherics
 	)
-	outfit_type = /decl/hierarchy/outfit/job/generic/engineer/luciferase
+	outfit_type = /decl/outfit/job/generic/engineer/luciferase
 	min_skill = list(
 		SKILL_LITERACY     = SKILL_BASIC,
 		SKILL_EVA          = SKILL_ADEPT,
@@ -204,7 +204,7 @@
 	access = list(
 		access_engine
 	)
-	outfit_type = /decl/hierarchy/outfit/job/generic/luciferase_deckhand
+	outfit_type = /decl/outfit/job/generic/luciferase_deckhand
 	skill_points = 25
 	min_skill = list(
 		SKILL_LITERACY = SKILL_BASIC,
@@ -227,7 +227,7 @@
 		access_medical,
 		access_medical_equip
 	)
-	outfit_type = /decl/hierarchy/outfit/job/generic/doctor/luciferase
+	outfit_type = /decl/outfit/job/generic/doctor/luciferase
 	skill_points = 32
 	min_skill = list(
 		SKILL_LITERACY = SKILL_ADEPT,
@@ -248,7 +248,7 @@
 	title = "Engineering Vessel Pilot"
 	info = "You are the pilot of a Luciferase-class prototype engineering vessel, responsible for navigating the ship."
 	total_positions = 1
-	outfit_type = /decl/hierarchy/outfit/job/generic/luciferase_pilot
+	outfit_type = /decl/outfit/job/generic/luciferase_pilot
 	skill_points = 25
 	min_skill = list(
 		SKILL_LITERACY = SKILL_BASIC,
@@ -262,31 +262,31 @@
 	whitelisted_species = null
 	blacklisted_species = null
 
-/decl/hierarchy/outfit/job/generic/luciferase_pilot
+/decl/outfit/job/generic/luciferase_pilot
 	name = "Job - Engineering vessel pilot"
 	uniform = /obj/item/clothing/jumpsuit/pilot
 
-/decl/hierarchy/outfit/job/generic/engineer/luciferase
+/decl/outfit/job/generic/engineer/luciferase
 	name = "Job - Engineering vessel engineer"
 	uniform = /obj/item/clothing/jumpsuit/engineer
 	belt = /obj/item/belt/utility/full
 
-/decl/hierarchy/outfit/job/generic/engineer/luciferase/atmos
+/decl/outfit/job/generic/engineer/luciferase/atmos
 	name = "Job - Engineering vessel atmospheric technician"
 	uniform = /obj/item/clothing/jumpsuit/atmospheric_technician
 	belt = /obj/item/belt/utility/atmostech
 	pda_type = /obj/item/modular_computer/pda/engineering
 
-/decl/hierarchy/outfit/job/generic/engineer/luciferase/chief
+/decl/outfit/job/generic/engineer/luciferase/chief
 	name = "Job - Engineering vessel chief engineer"
 	uniform = /obj/item/clothing/jumpsuit/chief_engineer
 	pda_type = /obj/item/modular_computer/pda/heads/ce
 	id_type = /obj/item/card/id/civilian/head
 
-/decl/hierarchy/outfit/job/generic/doctor/luciferase
+/decl/outfit/job/generic/doctor/luciferase
 	name = "Job - Engineering vessel medic"
 
-/decl/hierarchy/outfit/job/generic/luciferase_deckhand
+/decl/outfit/job/generic/luciferase_deckhand
 	name = "Job - Engineering vessel deckhand"
 
 // Comms

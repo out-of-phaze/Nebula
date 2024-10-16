@@ -57,7 +57,7 @@
 	title = "Tanker Pilot"
 	info = "You are the pilot of an Astor-class tanker, ferrying gases in the outer regions of explored space."
 	total_positions = 1
-	outfit_type = /decl/hierarchy/outfit/job/generic/tanker_pilot
+	outfit_type = /decl/outfit/job/generic/tanker_pilot
 	skill_points = 25
 	min_skill = list(
 		SKILL_LITERACY = SKILL_ADEPT,
@@ -75,7 +75,7 @@
 	title = "Tanker Technician"
 	info = "You are the atmospheric technician of an Astor-class tanker, ferrying gases in the outer regions of explored space."
 	total_positions = 1
-	outfit_type = /decl/hierarchy/outfit/job/generic/engineer/tanker_technician
+	outfit_type = /decl/outfit/job/generic/engineer/tanker_technician
 	min_skill = list(
 		SKILL_LITERACY     = SKILL_ADEPT,
 		SKILL_EVA          = SKILL_ADEPT,
@@ -92,11 +92,11 @@
 	skill_points = 20
 	selection_color = "#fff5cc"
 
-/decl/hierarchy/outfit/job/generic/tanker_pilot
+/decl/outfit/job/generic/tanker_pilot
 	name = "Job - Tanker pilot"
 	uniform = /obj/item/clothing/jumpsuit/pilot
 
-/decl/hierarchy/outfit/job/generic/engineer/tanker_technician
+/decl/outfit/job/generic/engineer/tanker_technician
 	name = "Job - Tanker technician"
 	uniform = /obj/item/clothing/jumpsuit/atmospheric_technician
 	belt = /obj/item/belt/utility/atmostech

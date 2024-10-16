@@ -69,9 +69,9 @@
 	title = "Mining Skiff Operator"
 	info = "You are the sole operator of a Gravedigger-class mining skiff, often piloted by convicts or the desperate. Without even walls or floors to protect you from the harsh vacuum of space, it will be difficult for you to survive."
 	total_positions = 1
-	outfit_type = /decl/hierarchy/outfit/job/generic/skiff_operator
+	outfit_type = /decl/outfit/job/generic/skiff_operator
 	alt_titles = list(
-		"Mining Skiff Convict" = /decl/hierarchy/outfit/job/generic/skiff_operator/convict
+		"Mining Skiff Convict" = /decl/outfit/job/generic/skiff_operator/convict
 	)
 	skill_points = 30 + 4 // bonus for literacy
 	min_skill = list(
@@ -82,11 +82,11 @@
 	blacklisted_species = null
 	no_warn_unsafe = TRUE // will always be 0kPa
 
-/decl/hierarchy/outfit/job/generic/skiff_operator/post_equip(mob/living/human/H)
+/decl/outfit/job/generic/skiff_operator/post_equip(mob/living/human/H)
 	. = ..()
 	H.set_internals_to_best_available_tank()
 
-/decl/hierarchy/outfit/job/generic/skiff_operator
+/decl/outfit/job/generic/skiff_operator
 	name = "Job - Mining skiff operator"
 	head = /obj/item/clothing/head/helmet/space/emergency
 	mask = /obj/item/clothing/mask/breath/scba
@@ -96,7 +96,7 @@
 	back = /obj/item/tank/oxygen
 	l_ear = null
 
-/decl/hierarchy/outfit/job/generic/skiff_operator/convict
+/decl/outfit/job/generic/skiff_operator/convict
 	name = "Job - Mining skiff convict"
 	uniform = /obj/item/clothing/jumpsuit/orange
 	back = /obj/item/tank/oxygen/yellow

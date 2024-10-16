@@ -82,7 +82,7 @@
 	title = "Mining Vessel Pilot"
 	info = "You are the pilot of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
 	total_positions = 1
-	outfit_type = /decl/hierarchy/outfit/job/generic/johnson_pilot
+	outfit_type = /decl/outfit/job/generic/johnson_pilot
 	skill_points = 25
 	min_skill = list(
 		SKILL_LITERACY = SKILL_ADEPT,
@@ -102,7 +102,7 @@
 	title = "Mining Vessel Technician"
 	info = "You are the maintenance technician of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
 	total_positions = 1
-	outfit_type = /decl/hierarchy/outfit/job/generic/engineer/johnson_technician
+	outfit_type = /decl/outfit/job/generic/engineer/johnson_technician
 	min_skill = list(
 		SKILL_LITERACY     = SKILL_BASIC,
 		SKILL_EVA          = SKILL_ADEPT,
@@ -127,7 +127,7 @@
 	title = "Mining Vessel Crewman"
 	info = "You are a crew member of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
 	total_positions = 3
-	outfit_type = /decl/hierarchy/outfit/job/generic/johnson_mining
+	outfit_type = /decl/outfit/job/generic/johnson_mining
 	alt_titles = list(
 		"Mining Vessel Drill Technician",
 		"Mining Vessel Prospector"
@@ -149,7 +149,7 @@
 	title = "Mining Vessel Medic"
 	info = "You are the medic of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
 	total_positions = 1
-	outfit_type = /decl/hierarchy/outfit/job/generic/doctor/johnson_medic
+	outfit_type = /decl/outfit/job/generic/doctor/johnson_medic
 	skill_points = 32
 	min_skill = list(
 		SKILL_LITERACY = SKILL_ADEPT,
@@ -166,20 +166,20 @@
 	blacklisted_species = null
 	selection_color = "#026865"
 
-/decl/hierarchy/outfit/job/generic/johnson_pilot
+/decl/outfit/job/generic/johnson_pilot
 	name = "Job - Mining vessel pilot"
 	uniform = /obj/item/clothing/jumpsuit/pilot
 	id_type = /obj/item/card/id/civilian/head
 	pda_type = /obj/item/modular_computer/pda/heads/captain
 	l_ear = null
 
-/decl/hierarchy/outfit/job/generic/engineer/johnson_technician
+/decl/outfit/job/generic/engineer/johnson_technician
 	name = "Job - Mining vessel technician"
 	uniform = /obj/item/clothing/jumpsuit/engineer
 	belt = /obj/item/belt/utility/full
 	l_ear = null
 
-/decl/hierarchy/outfit/job/generic/johnson_mining
+/decl/outfit/job/generic/johnson_mining
 	name = "Job - Mining vessel shaft miner"
 	uniform = /obj/item/clothing/jumpsuit/miner
 	pda_type = /obj/item/modular_computer/pda/science
@@ -187,10 +187,10 @@
 	outfit_flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
 	l_ear = null
 
-/decl/hierarchy/outfit/job/generic/johnson_mining/Initialize()
+/decl/outfit/job/generic/johnson_mining/Initialize()
 	. = ..()
 	BACKPACK_OVERRIDE_ENGINEERING
 
-/decl/hierarchy/outfit/job/generic/doctor/johnson_medic
+/decl/outfit/job/generic/doctor/johnson_medic
 	name = "Job - Mining vessel medic"
 	l_ear = null
