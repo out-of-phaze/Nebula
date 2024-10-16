@@ -66,7 +66,7 @@
 	title = "Escape Pod Survivor"
 	info = "You are the sole occupant of a Lozenge-class emergency pod, likely having just narrowly escaped a disaster. Now your supplies are dwindling and you need to find a way to survive."
 	total_positions = 1
-	outfit_type = /decl/hierarchy/outfit/job/generic/lozenge_survivor
+	outfit_type = /decl/outfit/job/generic/lozenge_survivor
 	skill_points = 25 + 4 // bonus for literacy
 	min_skill = list(
 		SKILL_LITERACY = SKILL_NONE,
@@ -75,7 +75,7 @@
 	whitelisted_species = null
 	blacklisted_species = null
 
-/decl/hierarchy/outfit/job/generic/lozenge_survivor
+/decl/outfit/job/generic/lozenge_survivor
 	name = "Job - Escape pod survivor"
 	head = /obj/item/clothing/head/helmet/space/emergency
 	suit = /obj/item/clothing/suit/space/emergency
