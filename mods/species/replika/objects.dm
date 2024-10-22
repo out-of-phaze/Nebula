@@ -17,9 +17,19 @@
 	to_chat(user, SPAN_WARNING("You [ATOM_IS_OPEN_CONTAINER(src) ? "close" : "open"] \the [src]'s refill cap!"))
 	atom_flags ^= ATOM_FLAG_OPEN_CONTAINER
 
+// Don't let us drink from it unless our mouth is targeted.
+/obj/item/chems/repair_spray/handle_eaten_by_mob(mob/user, mob/target)
+	if(user?.zone_sel?.selecting != BP_MOUTH)
+		return EATEN_INVALID
+	return ..()
+
 /obj/item/chems/repair_spray/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
-	if(!ATOM_IS_OPEN_CONTAINER(src) || !proximity_flag)
-		return
+	if(!proximity_flag)
+		return FALSE
+
+	if(ATOM_IS_OPEN_CONTAINER(src))
+		to_chat(user, SPAN_WARNING("\The [src]'s refill cap is open, close it first!"))
+		return TRUE
 
 	if(standard_dispenser_refill(user, target))
 		return TRUE
@@ -29,7 +39,7 @@
 
 	if(reagents.total_volume < amount_per_transfer_from_this)
 		to_chat(user, SPAN_WARNING("\The [src] is empty!"))
-		return
+		return TRUE
 
 	playsound(src, sound_spray, 50, TRUE, -6)
 
@@ -39,6 +49,7 @@
 			target.visible_message(SPAN_NOTICE("\The [user] sprays themselves with \the [src]."))
 		else
 			target.visible_message(SPAN_NOTICE("\The [user] sprays \the [target] with \the [src]."))
+	return TRUE
 
 /obj/item/chems/repair_spray/populate_reagents()
 	reagents.add_reagent(/decl/material/solid/plastifoam, 15)
