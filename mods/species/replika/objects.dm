@@ -57,31 +57,37 @@
 // This is really bad and I don't like it :(
 /obj/item/chems/repair_spray/on_update_icon()
 	. = ..()
-	if(!reagents?.total_volume) // keep whatever we had last
-		return
-	if(reagents.primary_reagent == /decl/material/solid/plastifoam/quick)
-		icon = 'mods/species/replika/icons/repair_spray+.dmi'
-	else if (reagents.primary_reagent == /decl/material/solid/plastifoam)
-		icon = 'mods/species/replika/icons/repair_spray.dmi'
+	switch(reagents?.get_primary_reagent_type())
+		if(null) // keep whatever we had last
+			return
+		if(/decl/material/solid/plastifoam/quick)
+			icon = 'mods/species/replika/icons/repair_spray+.dmi'
+		if (/decl/material/solid/plastifoam)
+			icon = 'mods/species/replika/icons/repair_spray.dmi'
 
 // i like this even less, maybe just make it always repair spray or have compiled-in repair spray+ objects use a label
 // so that we can go with the de-arcadification of requiring a paint sprayer and labeler for them
-/obj/item/chems/repair_spray/update_container_name()
-	if(!reagents?.total_volume) // keep whatever we had last
-		return
-	if(reagents.primary_reagent == /decl/material/solid/plastifoam/quick)
-		name = "repair spray+"
-	else if (reagents.primary_reagent == /decl/material/solid/plastifoam)
-		name = "repair spray"
+/obj/item/chems/repair_spray/update_name()
+	var/container_name = base_name
+	switch(reagents?.get_primary_reagent_type())
+		if(null)
+			return // don't change
+		if(/decl/material/solid/plastifoam/quick)
+			container_name = "repair spray+"
+		if(/decl/material/solid/plastifoam)
+			container_name = "repair spray"
+		// todo: more options?
+	SetName(container_name)
 
 // i have no idea how to de-arcade this. maybe just make it show the lore text of the chem inside? extra labeler functionality? idk
 /obj/item/chems/repair_spray/update_container_desc()
-	if(!reagents?.total_volume) // keep whatever we had last
-		return
-	if(reagents.primary_reagent == /decl/material/solid/plastifoam/quick)
-		desc = "A single-use spray gun used to fill damaged areas with fast-curing polyurethane-based expanding foam."
-	else if (reagents.primary_reagent == /decl/material/solid/plastifoam)
-		desc = "A single-use spray gun to fill damaged areas with polyurethane-based expanding foam."
+	switch(reagents?.get_primary_reagent_type())
+		if(null)
+			return
+		if(/decl/material/solid/plastifoam/quick)
+			desc = "A single-use spray gun used to fill damaged areas with fast-curing polyurethane-based expanding foam."
+		if (/decl/material/solid/plastifoam)
+			desc = "A single-use spray gun to fill damaged areas with polyurethane-based expanding foam."
 
 /obj/item/chems/hypospray/autoinjector/klstim
 	name = "autoinjector"
