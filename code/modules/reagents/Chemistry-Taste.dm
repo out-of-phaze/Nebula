@@ -43,8 +43,7 @@ calculate text size per text.
 		else
 			LAZYADD(., "[intensity_desc] [taste]")
 
-	if(length(.))
-		. = english_list(., "something indescribable")
+	return english_list(., "something indescribable")
 
 /datum/reagents/proc/get_taste_list(datum/reagents/source_holder)
 	var/list/tastes = list() //descriptor = strength
