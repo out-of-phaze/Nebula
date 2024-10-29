@@ -6,8 +6,8 @@
 	var/warmup_time = 0
 	var/moving_status = SHUTTLE_IDLE
 
-	var/list/shuttle_area //can be both single area type or a list of areas
-	var/obj/effect/shuttle_landmark/current_location //This variable is type-abused initially: specify the landmark_tag, not the actual landmark.
+	var/list/shuttle_area as anything //can be both single area type or a list of areas
+	var/obj/effect/shuttle_landmark/current_location as text|OD_INST(/obj/effect/shuttle_landmark)|null //This variable is type-abused initially: specify the landmark_tag, not the actual landmark.
 
 	var/arrive_time = 0	//the time at which the shuttle arrives when long jumping
 	var/flags = 0

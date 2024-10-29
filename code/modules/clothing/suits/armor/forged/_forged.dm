@@ -29,8 +29,8 @@
 		ARMOR_ENERGY = ARMOR_ENERGY_MINOR,
 		ARMOR_BOMB   = ARMOR_BOMB_PADDED
 	)
-	var/decl/material/strap_material  = /decl/material/solid/organic/leather
-	var/decl/material/detail_material = /decl/material/solid/metal/bronze
+	var/decl/material/strap_material  = /decl/material/solid/organic/leather as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
+	var/decl/material/detail_material = /decl/material/solid/metal/bronze as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
 
 /obj/item/clothing/suit/armor/forged/Initialize()
 	if(strap_material)

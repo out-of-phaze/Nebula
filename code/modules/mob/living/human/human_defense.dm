@@ -58,7 +58,7 @@ meteor_act
 		return
 	return ..()
 
-/mob/living/human/get_armors_by_zone(obj/item/organ/external/def_zone, damage_type, damage_flags)
+/mob/living/human/get_armors_by_zone(obj/item/organ/external/def_zone as text|OD_INST(/obj/item/organ/external), damage_type, damage_flags)
 	if(!def_zone)
 		def_zone = ran_zone()
 	if(!istype(def_zone))

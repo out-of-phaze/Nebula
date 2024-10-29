@@ -213,7 +213,7 @@
 	interface_name = "mounted gun"
 	interface_desc = "A shoulder-mounted cell-powered laser gun."
 
-	var/obj/item/gun/gun
+	var/obj/item/gun/gun as obj|null|OD_PATH(/obj/item/gun)
 
 /obj/item/rig_module/mounted/Destroy()
 	QDEL_NULL(gun)

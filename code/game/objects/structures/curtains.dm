@@ -12,7 +12,7 @@
 	if(curtain_kind_path)
 		set_curtain_kind(GET_DECL(curtain_kind_path))
 
-/obj/item/curtain/proc/set_curtain_kind(var/decl/curtain_kind/kind)
+/obj/item/curtain/proc/set_curtain_kind(var/decl/curtain_kind/kind as OD_INST(/decl/curtain_kind))
 
 	if(!istype(kind))
 		CRASH("Invalid curtain kind supplied to set_curtain_kind on [type]: [kind || "NULL"]")
@@ -85,7 +85,7 @@
 	if(curtain_kind_path)
 		set_curtain_kind(GET_DECL(curtain_kind_path))
 
-/obj/structure/curtain/proc/set_curtain_kind(var/decl/curtain_kind/kind)
+/obj/structure/curtain/proc/set_curtain_kind(var/decl/curtain_kind/kind as OD_INST(/decl/curtain_kind))
 
 	if(!istype(kind))
 		CRASH("Invalid curtain kind supplied to set_curtain_kind on [type]: [kind || "NULL"]")

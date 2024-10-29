@@ -1118,11 +1118,11 @@
 		return FALSE
 	return TRUE
 
-/mob/proc/get_species()
+/mob/proc/get_species() as OD_INST(/decl/species)
 	RETURN_TYPE(/decl/species)
 	return
 
-/mob/proc/get_bodytype()
+/mob/proc/get_bodytype() as OD_INST(/decl/bodytype)|null
 	RETURN_TYPE(/decl/bodytype)
 
 /mob/proc/has_body_flag(flag, default = FALSE)

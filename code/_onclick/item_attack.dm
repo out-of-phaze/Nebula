@@ -29,7 +29,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 		add_fingerprint(user)
 	return A.attackby(src, user, click_params)
 
-/atom/proc/attackby(obj/item/used_item, mob/user, var/click_params)
+/atom/proc/attackby(obj/item/used_item as OD_INST(/obj/item), mob/user as OD_INST(/mob)|mob, var/click_params) as OD_BOOL
 	if(storage)
 		if(isrobot(user) && (used_item == user.get_active_held_item()))
 			return FALSE //Robots can't store their modules.
@@ -44,7 +44,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 	if(!.)
 		return bash(W,user)
 
-/atom/movable/proc/bash(obj/item/weapon, mob/user)
+/atom/movable/proc/bash(obj/item/weapon, mob/user) as OD_BOOL
 	if(isliving(user) && user.a_intent == I_HELP)
 		return FALSE
 	if(!weapon.user_can_attack_with(user))
@@ -105,7 +105,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 	var/mob/living/attackee = null
 
 //I would prefer to rename this attack_as_weapon(), but that would involve touching hundreds of files.
-/obj/item/proc/use_on_mob(mob/living/target, mob/living/user, animate = TRUE)
+/obj/item/proc/use_on_mob(mob/living/target, mob/living/user, animate = TRUE as OD_BOOL) as OD_BOOL
 
 	// TODO: revisit if this should be a silent failure/parent call instead, for mob-level storage interactions?
 	// like a horse with a saddlebag or something

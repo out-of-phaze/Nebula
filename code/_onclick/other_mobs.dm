@@ -8,7 +8,7 @@
 /atom/proc/can_interact_with_storage(user, strict = FALSE)
 	return isliving(user)
 
-/atom/proc/attack_hand(mob/user)
+/atom/proc/attack_hand(mob/user) as OD_BOOL
 	SHOULD_CALL_PARENT(TRUE)
 
 	if(can_interact_with_storage(user, strict = TRUE) && storage && user.check_dexterity((DEXTERITY_HOLD_ITEM|DEXTERITY_EQUIP_ITEM), TRUE))

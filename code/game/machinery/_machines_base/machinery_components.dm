@@ -100,7 +100,7 @@ var/global/list/machine_path_to_circuit_type
 			.[path] += uncreated_component_parts[path]
 
 // Returns a component instance of the given type, or null if no such type is present.
-/obj/machinery/proc/get_component_of_type(var/part_type, var/strict = FALSE)
+/obj/machinery/proc/get_component_of_type(var/part_type as OD_PATH(/obj), var/strict = FALSE) as OD_PARAM(part_type as instance)
 	if(strict)
 		for(var/obj/component in component_parts)
 			if(component.type == part_type)

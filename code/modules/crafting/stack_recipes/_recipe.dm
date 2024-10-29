@@ -55,27 +55,27 @@
 		/obj/item/stack/material/bar,
 		/obj/item/stack/material/puck,
 		/obj/item/stack/material/brick
-	)
+	) as anything
 	/// What stack types cannot be used to make this recipe?
 	var/list/forbidden_craft_stack_types = list(
 		/obj/item/stack/material/ore,
 		/obj/item/stack/material/log,
 		/obj/item/stack/material/lump,
 		/obj/item/stack/material/slab
-	)
+	) as anything
 	/// If set, will group recipes under a stack recipe list.
-	var/category
+	var/category as text|null
 	/// Modifies the matter values retrieved by req_amount calculation. Should always be more than 1.
 	var/crafting_extra_cost_factor       = 1.2
 	/// Skill to check for the recipe.
-	var/recipe_skill                     = SKILL_CONSTRUCTION
+	var/recipe_skill                     = SKILL_CONSTRUCTION as OD_PATH(/decl/skill)
 
 	/// Tool archetype required, if any.
-	var/required_tool
+	var/required_tool as null|OD_PATH(/decl/tool_archetype)
 	/// Can this recipe use a material? Set to type for a specific material.
-	var/required_material                = MATERIAL_REQUIRED
+	var/required_material                = MATERIAL_REQUIRED as num|OD_PATH(/decl/material)
 	/// Can this recipe use a reinforced material? Set to type for a specific material.
-	var/required_reinforce_material      = MATERIAL_FORBIDDEN
+	var/required_reinforce_material      = MATERIAL_FORBIDDEN as num|OD_PATH(/decl/material)
 
 	/// Minimum material wall support value.
 	var/required_wall_support_value

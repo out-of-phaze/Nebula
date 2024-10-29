@@ -1,4 +1,4 @@
-/proc/create_objects_in_loc(var/atom/loc, var/atom_paths)
+/proc/create_objects_in_loc(var/atom/loc as OD_INST(/atom), var/atom_paths as OD_INST(/datum/atom_creator)|OD_LIST(OD_PATH(/atom/movable)))
 	if(!istype(loc))
 		CRASH("Inappropriate loction given.")
 
@@ -14,15 +14,15 @@
 	else
 		CRASH("Unhandled input: [log_info_line(atom_paths)]")
 
-/datum/atom_creator/proc/create(var/loc)
+/datum/atom_creator/proc/create(var/atom/loc as OD_INST(/atom))
 	return
 
 /datum/atom_creator/simple
-	var/path
+	var/path as OD_PATH(/atom/movable)|OD_LIST(OD_PATH(/atom/movable))
 	var/probability
 	var/prob_method = GLOBAL_PROC_REF(prob_call)
 
-/datum/atom_creator/simple/New(var/path, var/probability)
+/datum/atom_creator/simple/New(var/path as OD_PATH(/atom/movable)|OD_LIST(OD_PATH(/atom/movable)), var/probability as num)
 	if(args.len != 2)
 		CRASH("Invalid number of arguments. Expected 2, was [args.len]")
 	if(!isnum(probability) || probability < 1 || probability > 99)
@@ -30,7 +30,7 @@
 	src.probability = probability
 	src.path = path
 
-/datum/atom_creator/simple/create(var/loc)
+/datum/atom_creator/simple/create(var/atom/loc as OD_INST(/atom))
 	if(call(prob_method)(probability))
 		create_objects_in_loc(loc, path)
 

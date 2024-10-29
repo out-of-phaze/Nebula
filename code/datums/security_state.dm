@@ -2,8 +2,8 @@
 	abstract_type = /decl/security_state
 	// When defining any of these values type paths should be used, not instances. Instances will be acquired in /New()
 
-	var/decl/security_level/severe_security_level // At which security level (and higher) the use of nuclear fission devices and other extreme measures are allowed. Defaults to the last entry in all_security_levels if unset.
-	var/decl/security_level/high_security_level   // At which security level (and higher) transfer votes are disabled, ERT may be requested, and other similar high alert implications. Defaults to the second to last entry in all_security_levels if unset.
+	var/decl/security_level/severe_security_level as OD_INST(/decl/security_level)|OD_PATH(/decl/security_level)|null // At which security level (and higher) the use of nuclear fission devices and other extreme measures are allowed. Defaults to the last entry in all_security_levels if unset.
+	var/decl/security_level/high_security_level as OD_INST(/decl/security_level)|OD_PATH(/decl/security_level)|null // At which security level (and higher) transfer votes are disabled, ERT may be requested, and other similar high alert implications. Defaults to the second to last entry in all_security_levels if unset.
 	// All security levels within the above convention: Low, Guarded, Elevated, High, Severe
 
 
@@ -11,10 +11,10 @@
 	// The crew may also not adjust the security level once it is above the highest_standard_security_level.
 	// Defaults to the second to last entry in all_security_levels if unset/null.
 	// Set to FALSE/0 if there should be no restrictions.
-	var/decl/security_level/highest_standard_security_level
+	var/decl/security_level/highest_standard_security_level as OD_INST(/decl/security_level)|OD_PATH(/decl/security_level)|null
 
-	var/decl/security_level/current_security_level  // The current security level. Defaults to the first entry in all_security_levels if unset.
-	var/decl/security_level/stored_security_level   // The security level that we are escalating to high security from - we will return to this level once we choose to revert.
+	var/decl/security_level/current_security_level as OD_INST(/decl/security_level)|OD_PATH(/decl/security_level)|null // The current security level. Defaults to the first entry in all_security_levels if unset.
+	var/decl/security_level/stored_security_level  as OD_INST(/decl/security_level)|OD_PATH(/decl/security_level)|null// The security level that we are escalating to high security from - we will return to this level once we choose to revert.
 	var/list/all_security_levels                    // List of all available security levels
 	var/list/standard_security_levels               // List of all normally selectable security levels
 	var/list/comm_console_security_levels           // List of all selectable security levels for the command and communication console - basically standard_security_levels - 1
@@ -147,7 +147,7 @@
 	var/up_description
 	var/down_description
 
-	var/datum/alarm_appearance/alarm_appearance
+	var/datum/alarm_appearance/alarm_appearance as OD_PATH(/datum/alarm_appearance)|OD_INST(/datum/alarm_appearance)|null
 
 	abstract_type = /decl/security_level
 

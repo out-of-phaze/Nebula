@@ -48,9 +48,9 @@
 	_base_attack_force = 5
 
 	//Inbuilt devices.
-	var/obj/item/clothing/shoes/magboots/boots = null // Deployable boots, if any.
-	var/obj/item/clothing/head/helmet/helmet = null   // Deployable helmet, if any.
-	var/obj/item/tank/tank = null              // Deployable tank, if any.
+	var/obj/item/clothing/shoes/magboots/boots = null as obj|null|OD_PATH(/obj/item/clothing/shoes/magboots) // Deployable boots, if any.
+	var/obj/item/clothing/head/helmet/helmet = null as obj|null|OD_PATH(/obj/item/clothing/head/helmet) // Deployable helmet, if any.
+	var/obj/item/tank/tank = null as obj|null|OD_PATH(/obj/item/tank) // Deployable tank, if any.
 
 	action_button_name = "Toggle Helmet"
 	var/helmet_deploy_sound = 'sound/items/helmet_close.ogg'

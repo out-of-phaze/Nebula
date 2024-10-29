@@ -53,7 +53,7 @@
 		. += "</center>"
 	. += "</td></tr>"
 
-/datum/character_comment/proc/deserialize_mood(var/decl/comment_mood/mood_input)
+/datum/character_comment/proc/deserialize_mood(var/decl/comment_mood/mood_input as anything)
 	if(mood_input && !istype(mood_input))
 		if(ispath(mood_input, /decl/comment_mood))
 			mood_input = GET_DECL(mood_input)

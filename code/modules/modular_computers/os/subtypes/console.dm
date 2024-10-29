@@ -5,7 +5,7 @@
 /datum/extension/interactive/os/console/get_hardware_flag()
 	return PROGRAM_CONSOLE
 
-/datum/extension/interactive/os/console/get_component(var/part_type)
+/datum/extension/interactive/os/console/get_component(var/part_type as OD_PATH(/obj/item/stock_parts/computer))
 	var/obj/machinery/M = holder
 	if(ispath(part_type, PART_DRIVE))
 		return ..()	//special handling for removable disks

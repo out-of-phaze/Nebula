@@ -25,7 +25,7 @@
 
 	var/can_flip = TRUE
 	var/is_flipped = FALSE
-	var/decl/material/additional_reinf_material
+	var/decl/material/additional_reinf_material as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
 
 	var/top_surface_noun = "tabletop"
 

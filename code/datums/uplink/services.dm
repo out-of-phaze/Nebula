@@ -132,7 +132,7 @@
 /obj/item/uplink_service/jamming
 	service_duration = 10 MINUTES
 	service_label = "Suit Sensor Shutdown"
-	var/suit_sensor_jammer_method/ssjm = /suit_sensor_jammer_method/cap_off
+	var/suit_sensor_jammer_method/ssjm = /suit_sensor_jammer_method/cap_off as OD_PATH(/suit_sensor_jammer_method)|OD_INST(/suit_sensor_jammer_method)|null
 
 /obj/item/uplink_service/jamming/Initialize()
 	. = ..()

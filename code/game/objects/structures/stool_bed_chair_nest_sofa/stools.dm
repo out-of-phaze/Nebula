@@ -12,7 +12,7 @@
 	_base_attack_force = 10
 	var/base_icon      = "stool"
 	var/padding_color
-	var/decl/material/padding_material
+	var/decl/material/padding_material as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
 
 /obj/item/stool/padded
 	icon_state = "stool_padded_preview" //set for the map

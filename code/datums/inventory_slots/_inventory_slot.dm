@@ -9,15 +9,15 @@
 	var/ui_label
 	var/overlay_slot
 
-	var/obj/item/_holding
-	var/list/drop_slots_on_unequip
+	var/obj/item/_holding as OD_INST(/obj/item)|null
+	var/list/drop_slots_on_unequip as OD_LIST(text)|null
 	var/covering_flags = 0
-	var/covering_slots
-	var/can_be_hidden = FALSE
+	var/covering_slots as text|OD_LIST(text)|null
+	var/can_be_hidden = FALSE as OD_BOOL
 	var/skip_on_inventory_display = FALSE
 	var/skip_on_strip_display = FALSE
 	var/requires_slot_flags
-	var/requires_organ_tag
+	var/requires_organ_tag as text|OD_LIST(text)|null
 	var/quick_equip_priority = 0 // Higher priority means it will be checked first. If null, will not be considered for quick equip.
 
 	var/mob_overlay_layer
@@ -122,7 +122,7 @@
 /datum/inventory_slot/proc/get_covering_flags(var/mob/user)
 	return covering_flags
 
-/datum/inventory_slot/proc/get_equipped_item()
+/datum/inventory_slot/proc/get_equipped_item() as OD_INST(/obj/item)|null
 	return _holding
 
 /datum/inventory_slot/proc/get_equipped_name()

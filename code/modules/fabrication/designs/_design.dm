@@ -3,14 +3,14 @@
 	var/path
 	var/hidden
 	var/category = "General"
-	var/list/resources
+	var/list/resources as null|OD_MAP(OD_PATH(/decl/material), num)
 	var/list/fabricator_types = list(
 		FABRICATOR_CLASS_GENERAL
 	)
 	var/build_time = 5 SECONDS
 	var/max_amount = 1 // How many instances can be queued at once
-	var/list/required_technology
-	var/list/species_locked
+	var/list/required_technology as OD_MAP(text, num)|num|null // list, or TRUE to auto-set
+	var/list/species_locked as OD_LIST(OD_PATH(/decl/species))|null
 	/// Set to explicit FALSE to cause n stacks to be created instead of 1 stack of n amount.
 	/// Does not work for non-stacks being created as stacks, do not set to explicit TRUE for non-stacks.
 	var/pass_multiplier_to_product_new

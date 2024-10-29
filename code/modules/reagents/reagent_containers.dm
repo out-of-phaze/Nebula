@@ -190,7 +190,7 @@
 	if(update_reagents)
 		reagents.update_total()
 
-/obj/item/chems/take_vaporized_reagent(reagent, amount)
+/obj/item/chems/take_vaporized_reagent(reagent as OD_PATH(/decl/material), amount as num)
 	if(!reagents?.maximum_volume)
 		return ..()
 	var/take_reagent = min(amount, REAGENTS_FREE_SPACE(reagents))

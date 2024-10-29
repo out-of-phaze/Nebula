@@ -264,7 +264,7 @@
 				return TRUE
 	return FALSE
 
-/obj/machinery/material_processing/extractor/proc/can_process_material_name(mtype)
+/obj/machinery/material_processing/extractor/proc/can_process_material_name(mtype as OD_PATH(/decl/material))
 	var/decl/material/mat = GET_DECL(mtype)
 	ASSERT(istype(mat))
 	return (is_material_extractable(mat) || has_extractable_heating_products(mat))
@@ -277,7 +277,7 @@
 			return TRUE
 	return FALSE
 
-/obj/machinery/material_processing/extractor/proc/is_material_extractable(decl/material/M)
+/obj/machinery/material_processing/extractor/proc/is_material_extractable(decl/material/M as OD_INST(/decl/material))
 	//If is gas or liquid at operating temp we can process
 	var/phase = M.phase_at_temperature(temperature)
 	return phase == MAT_PHASE_LIQUID || phase == MAT_PHASE_GAS

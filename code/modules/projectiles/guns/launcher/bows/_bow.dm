@@ -16,7 +16,7 @@
 	autofire_enabled = TRUE
 
 	/// What are we strung with?
-	var/obj/item/bowstring/string = /obj/item/bowstring
+	var/obj/item/bowstring/string = /obj/item/bowstring as anything
 	/// Does this weapon require a string to fire?
 	var/requires_string = TRUE
 	/// Currently loaded ammo.

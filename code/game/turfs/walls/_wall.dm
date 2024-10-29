@@ -37,16 +37,16 @@ var/global/list/wall_fullblend_objects = list(
 	var/unique_merge_identifier
 	var/damage = 0
 	var/can_open = 0
-	var/decl/material/material
-	var/decl/material/reinf_material
-	var/decl/material/girder_material = /decl/material/solid/metal/steel
+	var/decl/material/material as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
+	var/decl/material/reinf_material as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
+	var/decl/material/girder_material = /decl/material/solid/metal/steel as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
 	var/construction_stage
 	var/hitsound = 'sound/weapons/Genhit.ogg'
 	/// A list of connections to walls for each corner, used for icon generation. Can be converted to a list of dirs with corner_states_to_dirs().
 	var/list/wall_connections
 	/// A list of connections to non-walls for each corner, used for icon generation. Can be converted to a list of dirs with corner_states_to_dirs().
 	var/list/other_connections
-	var/floor_type = /turf/floor/plating //turf it leaves after destruction
+	var/floor_type = /turf/floor/plating as OD_PATH(/turf/floor)|null //turf it leaves after destruction
 	var/stripe_color
 	var/handle_structure_blending = TRUE
 	var/min_dismantle_amount = 2
@@ -57,7 +57,7 @@ var/global/list/wall_fullblend_objects = list(
 	/// TRUE = open, FALSE = closed, null = no shutter.
 	var/shutter_state
 	/// Overrides base material for shutter icon if set.
-	var/decl/material/shutter_material
+	var/decl/material/shutter_material as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
 	/// Shutter open/close sound.
 	var/shutter_sound = 'sound/weapons/Genhit.ogg'
 

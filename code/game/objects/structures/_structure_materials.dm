@@ -1,6 +1,6 @@
 /obj/structure
-	var/decl/material/material
-	var/decl/material/reinf_material
+	var/decl/material/material as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
+	var/decl/material/reinf_material as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
 	var/material_alteration
 	var/dismantled
 

@@ -14,9 +14,9 @@
 	/// Material is used for the head, handle is handle(d) below.
 	material = /decl/material/solid/metal/steel
 	/// Material used for our handle. Set to base material if null.
-	var/decl/material/handle_material
+	var/decl/material/handle_material as OD_PATH(/decl/material)|OD_INST(/decl/material)|null
 	/// Material used for binding.
-	var/decl/material/binding_material = /decl/material/solid/organic/meat/gut
+	var/decl/material/binding_material = /decl/material/solid/organic/meat/gut as OD_PATH(/decl/material)|OD_INST(/decl/material)|null
 
 /obj/item/tool/examine(mob/user)
 	. = ..()

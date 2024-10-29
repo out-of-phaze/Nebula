@@ -14,7 +14,7 @@
 	/// Flag for drawing the skin/rind or not.
 	var/draw_rind  = TRUE
 	/// Reference to the originating seed datum we were produced from.
-	var/datum/seed/seed
+	var/datum/seed/seed as anything
 	/// Used in recipes to distinguish between general types.
 	var/processed_grown_tag
 

@@ -24,15 +24,15 @@
 
 /datum/stressor
 	/// A name string, used solely for input().
-	var/name
+	var/name as text|null
 	/// A short string shown in Check Stressors.
-	var/desc
+	var/desc as text|null
 	/// A message shown when the stressor begins.
-	var/on_addition_message
+	var/on_addition_message as text|null
 	/// A message shown when the stressor expires.
-	var/on_removal_message
+	var/on_removal_message as text|null
 	/// Amount that this stressor will contribute to stress.
-	var/stress_value = 0
+	var/stress_value = 0 as num
 	/// A list of stressor IDs that will prevent this stressor being added if present.
 	var/list/incompatible_with_stressors
 	/// A list of stressor IDs that will be hidden/not counted while this stressor is present.
@@ -51,7 +51,7 @@
 		return ..()
 	return QDEL_HINT_LETMELIVE
 
-/datum/stressor/proc/tick(var/mob/living/owner)
+/datum/stressor/proc/tick(var/mob/living/owner) as num
 	var/expiry = LAZYACCESS(owner.stressors, src)
 	if(expiry != STRESSOR_DURATION_INDEFINITE && world.time >= expiry)
 		remove_from(owner)

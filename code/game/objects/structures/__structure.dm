@@ -51,7 +51,7 @@
 			matter[reinf_material.type] = max(matter[reinf_material.type], round(MATTER_AMOUNT_REINFORCEMENT * matter_mult))
 		UNSETEMPTY(matter)
 
-/obj/structure/Initialize(var/ml, var/_mat, var/_reinf_mat)
+/obj/structure/Initialize(var/ml, var/_mat as OD_PATH(/decl/material)|null, var/_reinf_mat as OD_PATH(/decl/material)|null)
 	if(ispath(_mat, /decl/material))
 		material = _mat
 	if(ispath(material, /decl/material))

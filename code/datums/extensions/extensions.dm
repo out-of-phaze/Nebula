@@ -25,7 +25,7 @@
 	CRASH("Use 'copy_from()' on a new extension instance instead of using Clone()! Extensions cannot be created without a holder.")
 
 ///Workaround for extensions not supporting Clone(). Copy data from another extension, so we're essentially a clone of that other extension.
-/datum/extension/proc/copy_from(var/datum/extension/source)
+/datum/extension/proc/copy_from(var/datum/extension/source as OD_INST(/datum/extension))
 	SHOULD_CALL_PARENT(TRUE)
 	//Make sure our types are compatible
 	if(!istype(src, source.type))
@@ -38,7 +38,7 @@
 	source.PopulateClone(src)
 
 /datum
-	var/list/datum/extension/extensions
+	var/list/datum/extension/extensions as OD_MAP(OD_PATH(/datum/extension), OD_INST(/datum/extension))
 
 //Variadic - Additional positional arguments can be given. Named arguments might not work so well
 /proc/set_extension(var/datum/source, var/datum/extension/extension_type)
@@ -72,7 +72,7 @@
 		set_extension(arglist(args))
 	return get_extension(source, base_type)
 
-/proc/get_extension(var/datum/source, var/base_type)
+/proc/get_extension(var/datum/source, var/base_type as OD_PATH(/datum/extension)) as OD_PARAM(base_type as instance)|null
 	// Invalid holder datum.
 	if(!istype(source))
 		PRINT_STACK_TRACE("Invalid source provided to get_extension(): [source || "null"]")
@@ -95,14 +95,14 @@
 		return created
 
 //Fast way to check if it has an extension, also doesn't trigger instantiation of lazy loaded extensions
-/proc/has_extension(var/datum/source, var/base_type)
+/proc/has_extension(var/datum/source as OD_INST(/datum), var/base_type as OD_PATH(/datum/extension))
 	return !!(source.extensions && source.extensions[base_type])
 
 /proc/construct_extension_instance(var/extension_type, var/datum/source, var/list/arguments)
 	arguments = list(source) + arguments
 	return new extension_type(arglist(arguments))
 
-/proc/remove_extension(var/datum/source, var/base_type)
+/proc/remove_extension(var/datum/source as OD_INST(/datum), var/base_type as OD_PATH(/datum/extension))
 	if(!source.extensions || !source.extensions[base_type])
 		return
 	if(!islist(source.extensions[base_type]))
@@ -110,7 +110,7 @@
 	LAZYREMOVE(source.extensions, base_type)
 
 ///Copy the extension instance on the 'source' and put it on the 'destination'.
-/proc/copy_extension(var/datum/source, var/datum/destination, var/base_type)
+/proc/copy_extension(var/datum/source as OD_INST(/datum), var/datum/destination as OD_INST(/datum), var/base_type as OD_PATH(/datum/extension))
 	if(!istype(source) || !istype(destination))
 		CRASH("Tried to copy extension to or from invalid datums. source: [source], destination: [destination]")
 

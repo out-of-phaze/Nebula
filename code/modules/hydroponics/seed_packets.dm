@@ -10,7 +10,7 @@
 
 	var/seed_mask_icon = 'icons/obj/seeds/seed_masks.dmi'
 	var/seed_base_name = "packet"
-	var/datum/seed/seed
+	var/datum/seed/seed as anything
 	var/modified = 0
 
 /obj/item/seeds/Initialize(loc, material, _seed)

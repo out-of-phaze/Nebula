@@ -88,12 +88,12 @@ Class Procs:
 	temperature_sensitive = TRUE
 	abstract_type = /obj/machinery
 
-	var/stat = 0
+	var/stat = 0 as num
 	var/waterproof = TRUE
 	var/reason_broken = 0
 	var/stat_immune = NOSCREEN | NOINPUT // The machine will never set stat to these flags.
 	var/emagged = 0
-	var/datum/wires/wires //wire datum, if any. If you place a type path, it will be autoinitialized.
+	var/datum/wires/wires as OD_INST(/datum/wires)|OD_PATH(/datum/wires)|null //wire datum, if any. If you place a type path, it will be autoinitialized.
 	var/use_power = POWER_USE_IDLE
 		//0 = dont run the auto
 		//1 = run auto, use idle
@@ -187,17 +187,17 @@ Class Procs:
 		stat ^= NOINPUT
 		return TRUE
 
-/obj/machinery/proc/is_broken(var/additional_flags = 0)
-	return (stat & (BROKEN|additional_flags))
+/obj/machinery/proc/is_broken(var/additional_flags = 0) as OD_BOOL
+	return (stat & (BROKEN|additional_flags)) ? TRUE : FALSE
 
-/obj/machinery/proc/is_unpowered(var/additional_flags = 0)
-	return (stat & (NOPOWER|additional_flags))
+/obj/machinery/proc/is_unpowered(var/additional_flags = 0) as OD_BOOL
+	return (stat & (NOPOWER|additional_flags)) ? TRUE : FALSE
 
-/obj/machinery/proc/operable(var/additional_flags = 0)
+/obj/machinery/proc/operable(var/additional_flags = 0) as OD_BOOL
 	return !inoperable(additional_flags)
 
-/obj/machinery/proc/inoperable(var/additional_flags = 0)
-	return (stat & (NOPOWER|BROKEN|additional_flags))
+/obj/machinery/proc/inoperable(var/additional_flags = 0) as OD_BOOL
+	return (stat & (NOPOWER|BROKEN|additional_flags)) ? TRUE : FALSE
 
 /obj/machinery/CanUseTopic(var/mob/user)
 	if(stat & BROKEN)
@@ -266,7 +266,7 @@ Class Procs:
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-/obj/machinery/attack_ai(mob/living/silicon/ai/user)
+/obj/machinery/attack_ai(mob/living/silicon/ai/user) as OD_BOOL
 	if(CanUseTopic(user, DefaultTopicState()) > STATUS_CLOSE)
 		return interface_interact(user)
 
@@ -302,12 +302,12 @@ Class Procs:
 // Return TRUE for handled.
 // If you perform direct interactions in here, you are responsible for ensuring that full interactivity checks have been made (i.e CanInteract).
 // The checks leading in to here only guarantee that the user should be able to view a UI.
-/obj/machinery/proc/interface_interact(user)
+/obj/machinery/proc/interface_interact(user) as OD_BOOL
 	return FALSE
 
 // If you want a physical interaction which happens after all relevant checks but preempts the UI interactions, do it here.
 // Return TRUE for handled.
-/obj/machinery/proc/physical_attack_hand(user)
+/obj/machinery/proc/physical_attack_hand(user) as OD_BOOL
 	return FALSE
 
 /obj/machinery/proc/RefreshParts()

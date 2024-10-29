@@ -43,13 +43,13 @@
 	var/shown_robot_modules = 0
 	var/obj/screen/robot_modules_background/robot_modules_background
 	/// 3 Modules can be activated at any one time.
-	var/obj/item/robot_module/module = null
+	var/obj/item/robot_module/module = null as anything
 	var/obj/item/module_active
 	var/obj/item/module_state_1
 	var/obj/item/module_state_2
 	var/obj/item/module_state_3
 	var/mob/living/silicon/ai/connected_ai = null
-	var/obj/item/cell/cell = /obj/item/cell/high
+	var/obj/item/cell/cell = /obj/item/cell/high as anything
 	var/cell_emp_mult = 2.5
 	/// Components are basically robot organs.
 	var/list/components = list()

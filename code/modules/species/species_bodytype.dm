@@ -4,44 +4,44 @@ var/global/list/bodytypes_by_category = list()
 	decl_flags = DECL_FLAG_MANDATORY_UID
 	abstract_type = /decl/bodytype
 	/// Name used in general.
-	var/name = "default"
+	var/name = "default" as text|null
 	/// Name used in preference bodytype selection. Defaults to name.
-	var/pref_name
+	var/pref_name as text|null
 	/// Seen when examining a prosthetic limb, if non-null.
-	var/desc
-	var/icon_base
-	var/icon_deformed
-	var/cosmetics_icon
-	var/bandages_icon
-	var/bodytype_flag = BODY_EQUIP_FLAG_HUMANOID
-	var/bodytype_category = BODYTYPE_OTHER
+	var/desc as text|null
+	var/icon_base as icon|null
+	var/icon_deformed as icon|null
+	var/cosmetics_icon as icon|null
+	var/bandages_icon as icon|null
+	var/bodytype_flag = BODY_EQUIP_FLAG_HUMANOID as num
+	var/bodytype_category = BODYTYPE_OTHER as text
 	var/limb_icon_intensity = 1.5
-	var/blood_overlays
-	var/vulnerable_location = BP_GROIN //organ tag that can be kicked for increased pain, previously `sexybits_location`.
+	var/blood_overlays as icon|null
+	var/vulnerable_location = BP_GROIN as text|null //organ tag that can be kicked for increased pain, previously `sexybits_location`.
 	var/limb_blend = ICON_ADD
-	var/damage_overlays = 'icons/mob/human_races/species/default_damage_overlays.dmi'
-	var/husk_icon =       'icons/mob/human_races/species/default_husk.dmi'
-	var/skeletal_icon =   'icons/mob/human_races/species/human/skeleton.dmi'
-	var/icon_template =   'icons/mob/human_races/species/template.dmi' // Used for mob icon generation for non-32x32 species.
-	var/ignited_icon =    'icons/mob/OnFire.dmi'
+	var/damage_overlays = 'icons/mob/human_races/species/default_damage_overlays.dmi' as icon|null
+	var/husk_icon =       'icons/mob/human_races/species/default_husk.dmi' as icon|null
+	var/skeletal_icon =   'icons/mob/human_races/species/human/skeleton.dmi' as icon|null
+	var/icon_template =   'icons/mob/human_races/species/template.dmi' as icon|null // Used for mob icon generation for non-32x32 species.
+	var/ignited_icon =    'icons/mob/OnFire.dmi' as icon|null
 	var/associated_gender
 	var/appearance_flags = 0 // Appearance/display related features.
 
 	/// Used when filing your nails.
-	var/nail_noun
+	var/nail_noun as text|null
 	/// What tech levels should limbs of this type use/need?
-	var/limb_tech = @'{"biotech":2}'
-	var/icon_cache_uid
+	var/limb_tech = @'{"biotech":2}' as text
+	var/icon_cache_uid as text
 	/// Determines if eyes should render on heads using this bodytype.
-	var/has_eyes = TRUE
+	var/has_eyes = TRUE as OD_BOOL
 	/// Prefixed to the initial name of the limb, if non-null.
 	var/modifier_string
 	/// Modifies min and max broken damage for the limb.
 	var/hardiness = 1
 	/// Applies a slowdown value to this limb.
-	var/movement_slowdown = 0
+	var/movement_slowdown = 0 as num
 	/// Determines if this bodytype can be repaired by nanopaste, sparks when damaged, can malfunction, and can take EMP damage.
-	var/is_robotic = FALSE
+	var/is_robotic = FALSE as OD_BOOL
 	/// For hands, determines the dexterity value passed to get_manual_dexterity(). If null, defers to species.
 	var/manual_dexterity = null
 	/// Determines how the limb behaves with regards to manual attachment/detachment.
@@ -65,7 +65,7 @@ var/global/list/bodytypes_by_category = list()
 
 	var/z_flags = 0
 
-	var/list/prone_overlay_offset = list(0, 0) // amount to shift overlays when lying
+	var/list/prone_overlay_offset = list(0, 0) as OD_LIST(num) // amount to shift overlays when lying
 
 	// Per-bodytype per-zone message strings, see /mob/proc/get_hug_zone_messages
 	var/list/default_hug_message
@@ -86,7 +86,7 @@ var/global/list/bodytypes_by_category = list()
 			"$USER$ pats $TARGET$ on the shoulder.",
 			"You pat $TARGET$ on the shoulder."
 		)
-	)
+	) as OD_MAP(text, OD_LIST(text))
 
 	var/list/override_emote_sounds = list(
 		"cough" = list(
@@ -96,39 +96,40 @@ var/global/list/bodytypes_by_category = list()
 		"sneeze" = list(
 			'sound/voice/emotes/f_sneeze.ogg'
 		)
-	)
+	) as OD_MAP(text, OD_LIST(sound))
+
 	var/list/emote_sounds = list(
 		"whistle"  = list('sound/voice/emotes/longwhistle.ogg'),
 		"qwhistle" = list('sound/voice/emotes/shortwhistle.ogg'),
 		"wwhistle" = list('sound/voice/emotes/wolfwhistle.ogg'),
 		"swhistle" = list('sound/voice/emotes/summon_whistle.ogg')
-	)
+	) as OD_MAP(text, OD_LIST(sound))
 	var/list/broadcast_emote_sounds = list(
 		"swhistle" = list('sound/voice/emotes/summon_whistle.ogg')
-	)
+	) as OD_MAP(text, OD_LIST(sound))
 	var/list/bodyfall_sounds = list(
 		'sound/foley/meat1.ogg',
 		'sound/foley/meat2.ogg'
-	)
+	) as OD_LIST(sound)
 
 	// Used for initializing prefs/preview
 	var/base_color =      COLOR_BLACK
 	var/base_eye_color =  COLOR_BLACK
 
 	/// Used to initialize organ material
-	var/material =        /decl/material/solid/organic/meat
+	var/material =        /decl/material/solid/organic/meat as OD_PATH(/decl/material)
 	/// Used to initialize organ matter
 	var/list/matter =     null
 	/// The reagent organs are filled with, which currently affects what mobs that eat the organ will receive.
 	/// TODO: Remove this in a later matter edibility refactor.
-	var/edible_reagent =  /decl/material/solid/organic/meat
+	var/edible_reagent =  /decl/material/solid/organic/meat as OD_PATH(/decl/material)
 	/// A bitfield representing various bodytype-specific features.
 	var/body_flags = 0
 	/// Used to modify the arterial_bleed_severity of organs.
 	var/arterial_bleed_multiplier = 1
 	/// Associative list of organ_tag = "encased value". If set, sets the organ's encased var to the corresponding value; used in surgery.
 	/// If the list is set, organ tags not present in the list will get encased set to null.
-	var/list/apply_encased
+	var/list/apply_encased as null|OD_MAP(text, text)
 	/// Associative list of organ_tag = organ_data.
 	/// Organ data currently supports setting "path" and "descriptor", while "has_children" is automatically set.
 	var/list/has_limbs = list(
@@ -143,7 +144,7 @@ var/global/list/bodytypes_by_category = list()
 		BP_R_HAND = list("path" = /obj/item/organ/external/hand/right),
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
-	)
+	) as OD_MAP(text, OD_MAP(text, anything)) // todo: OD structs
 	/// An associative list of target zones (ex. BP_CHEST, BP_MOUTH) mapped to all possible keys associated
 	/// with the zone. Used for species with body layouts that do not map directly to a standard humanoid body.
 	var/list/limb_mapping
@@ -161,12 +162,12 @@ var/global/list/bodytypes_by_category = list()
 		BP_BRAIN =    /obj/item/organ/internal/brain,
 		BP_APPENDIX = /obj/item/organ/internal/appendix,
 		BP_EYES =     /obj/item/organ/internal/eyes
-	)
+	) as OD_MAP(text, OD_PATH(/obj/item/organ/internal))
 
 	/// If set, an organ with this tag is required for vision.
-	var/vision_organ
+	var/vision_organ as null|text
 	/// If set, an organ with this tag is required for breathing
-	var/breathing_organ
+	var/breathing_organ as null|text
 
 	var/list/override_organ_types // Used for species that only need to change one or two entries in has_organ.
 
@@ -177,10 +178,10 @@ var/global/list/bodytypes_by_category = list()
 	)
 
 	/// Losing an organ from this list will give a grace period of `vital_organ_failure_death_delay` then kill the mob.
-	var/list/vital_organs = list(BP_BRAIN)
+	var/list/vital_organs = list(BP_BRAIN) as null|OD_LIST(text)
 	/// The grace period before mob death when an organ in `vital_organs` is lost
-	var/vital_organ_failure_death_delay = 25 SECONDS
-	var/mob_size = MOB_SIZE_MEDIUM
+	var/vital_organ_failure_death_delay = 25 SECONDS as num
+	var/mob_size = MOB_SIZE_MEDIUM as num
 
 	var/list/default_sprite_accessories
 
@@ -197,41 +198,41 @@ var/global/list/bodytypes_by_category = list()
 	// Other eye vars.
 	var/eye_contaminant_guard = 0
 	var/eye_innate_flash_protection = FLASH_PROTECTION_NONE
-	var/eye_icon = 'icons/mob/human_races/species/default_eyes.dmi'
-	var/apply_eye_colour = TRUE
+	var/eye_icon = 'icons/mob/human_races/species/default_eyes.dmi' as icon|null
+	var/apply_eye_colour = TRUE as OD_BOOL
 	var/eye_darksight_range = 2
 	var/eye_blend = ICON_ADD
 	/// Stun from blindness modifier.
 	var/eye_flash_mod = 1
 
 	// Bodytype temperature damage thresholds.
-	var/cold_level_1 = 243  // Cold damage level 1 below this point. -30 Celsium degrees
-	var/cold_level_2 = 200  // Cold damage level 2 below this point.
-	var/cold_level_3 = 120  // Cold damage level 3 below this point.
-	var/heat_level_1 = 360  // Heat damage level 1 above this point.
-	var/heat_level_2 = 400  // Heat damage level 2 above this point.
-	var/heat_level_3 = 1000 // Heat damage level 3 above this point.
+	var/cold_level_1 = 243 as num  // Cold damage level 1 below this point. -30 Celsium degrees
+	var/cold_level_2 = 200 as num  // Cold damage level 2 below this point.
+	var/cold_level_3 = 120 as num  // Cold damage level 3 below this point.
+	var/heat_level_1 = 360 as num  // Heat damage level 1 above this point.
+	var/heat_level_2 = 400 as num  // Heat damage level 2 above this point.
+	var/heat_level_3 = 1000 as num // Heat damage level 3 above this point.
 
 	// Temperature comfort levels and strings.
-	var/heat_discomfort_level = 315
-	var/cold_discomfort_level = 285
+	var/heat_discomfort_level = 315 as num
+	var/cold_discomfort_level = 285 as num
 	/// Aesthetic messages about feeling warm.
 	var/list/heat_discomfort_strings = list(
 		"You feel sweat drip down your neck.",
 		"You feel uncomfortably warm.",
 		"Your skin prickles in the heat."
-	)
+	) as OD_LIST(text)|null
 	/// Aesthetic messages about feeling chilly.
 	var/list/cold_discomfort_strings = list(
 		"You feel chilly.",
 		"You shiver suddenly.",
 		"Your chilly flesh stands out in goosebumps."
-	)
+	) as OD_LIST(text)|null
 
 	/// Add emotes to this list to remove them from defaults (ie. blinking for a species with no eyes)
-	var/list/removed_emotes
+	var/list/removed_emotes as null|OD_LIST(OD_PATH(/decl/emote))
 	/// Add emotes to this list to add them to the defaults (ie. a humanoid species that also has a purr)
-	var/list/additional_emotes
+	var/list/additional_emotes as null|OD_LIST(OD_PATH(/decl/emote))
 
 	/// Generalized emote list available to mobs with this bodytype.
 	var/list/default_emotes = list(
@@ -323,9 +324,9 @@ var/global/list/bodytypes_by_category = list()
 		/decl/emote/audible/whistle/quiet,
 		/decl/emote/audible/whistle/wolf,
 		/decl/emote/audible/whistle/summon
-	)
+	) as OD_LIST(OD_PATH(/decl/emote))|null
 	/// Set to FALSE if the mob will update prone icon based on state rather than transform.
-	var/rotate_on_prone = TRUE
+	var/rotate_on_prone = TRUE as OD_BOOL
 
 /decl/bodytype/Initialize()
 	. = ..()
@@ -731,7 +732,7 @@ var/global/list/bodytypes_by_category = list()
 		var/obj/item/organ/internal/new_innard = new organ_type(limb.owner, null, supplied_data)
 		limb.owner.add_organ(new_innard, GET_EXTERNAL_ORGAN(limb.owner, new_innard.parent_organ), FALSE, FALSE)
 
-/decl/bodytype/proc/get_body_temperature_threshold(var/threshold)
+/decl/bodytype/proc/get_body_temperature_threshold(var/threshold) as num|null
 	switch(threshold)
 		if(COLD_LEVEL_1)
 			return cold_level_1
@@ -785,7 +786,7 @@ var/global/list/limbs_with_nails = list(
 	BP_R_FOOT
 )
 
-/decl/bodytype/proc/get_default_grooming_results(obj/item/organ/external/limb, obj/item/grooming/tool)
+/decl/bodytype/proc/get_default_grooming_results(obj/item/organ/external/limb, obj/item/grooming/tool) as OD_MAP(text, anything)|null
 	if(nail_noun && (tool.grooming_flags & GROOMABLE_FILE) && (limb?.organ_tag in limbs_with_nails))
 		return list(
 			"success"    = GROOMING_RESULT_SUCCESS,
@@ -793,5 +794,5 @@ var/global/list/limbs_with_nails = list(
 		)
 	return null
 
-/decl/bodytype/proc/get_movement_slowdown(var/mob/living/human/H)
+/decl/bodytype/proc/get_movement_slowdown(var/mob/living/human/H) as num
 	return movement_slowdown

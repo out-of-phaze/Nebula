@@ -13,15 +13,15 @@ var/global/list/shuttle_landmarks = list()
 
 	var/landmark_tag
 	//ID of the controller on the dock side
-	var/datum/computer/file/embedded_program/docking/docking_controller
+	var/datum/computer/file/embedded_program/docking/docking_controller as anything
 	//Docking cues for shuttles with multiple docking controllers. Format: shuttle type -> string cue. On the shuttle, set docking_cues as well.
 	var/list/special_dock_targets
 
 	//when the shuttle leaves this landmark, it will leave behind the base area
 	//also used to determine if the shuttle can arrive here without obstruction
-	var/area/base_area
+	var/area/base_area as anything
 	//Will also leave this type of turf behind if set, if the turfs do not have prev_type set.
-	var/turf/base_turf
+	var/turf/base_turf as anything
 	//Type path of a shuttle to which this landmark is restricted, null for generic waypoint.
 	var/shuttle_restricted
 	var/overmap_id = OVERMAP_ID_SPACE

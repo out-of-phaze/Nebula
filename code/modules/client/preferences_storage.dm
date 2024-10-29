@@ -8,7 +8,7 @@
 /datum/pref_record_reader/proc/get_version()
 	CRASH("abstract - must be overridden")
 
-/datum/pref_record_reader/proc/read(key)
+/datum/pref_record_reader/proc/read(key as text)
 	CRASH("abstract - must be overridden")
 
 
@@ -18,7 +18,7 @@
 /datum/pref_record_writer/New()
 	CRASH("abstract - must be overridden")
 
-/datum/pref_record_writer/proc/write(key, val)
+/datum/pref_record_writer/proc/write(key as text, val as text|OD_PATH(/datum)|OD_MAP(anything, anything))
 	CRASH("abstract - must be overridden")
 
 
@@ -43,7 +43,7 @@
 /datum/pref_record_reader/json_list
 	var/list/data
 
-/datum/pref_record_reader/json_list/New(list/data)
+/datum/pref_record_reader/json_list/New(list/data as OD_LIST(anything))
 	src.data = data
 	ASSERT(istype(data))
 	ASSERT(isnum(get_version()))
@@ -60,7 +60,7 @@
 /datum/pref_record_reader/null_reader
 	var/version
 
-/datum/pref_record_reader/null_reader/New(version)
+/datum/pref_record_reader/null_reader/New(version as num)
 	src.version = version
 
 /datum/pref_record_reader/null_reader/get_version()

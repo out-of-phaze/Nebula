@@ -33,7 +33,7 @@
 	if(H)
 		var/decl/species/S = get_species_by_key(wrapped_species_by_ref["\ref[H]"])
 		if(S) return S.default_bodytype.get_husk_icon(H)
-	 return ..()
+	return ..()
 
 /decl/bodytype/shapeshifter/get_icon_cache_uid(var/mob/H)
 	. = ..()

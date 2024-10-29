@@ -15,7 +15,7 @@
 	fire_delay       = 1
 
 	var/foam_charges_per_shot = 1
-	var/obj/item/sealant_tank/loaded_tank
+	var/obj/item/sealant_tank/loaded_tank as anything
 
 /obj/item/gun/launcher/sealant/on_update_icon()
 	update_world_inventory_state()

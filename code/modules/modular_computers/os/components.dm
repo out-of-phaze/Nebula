@@ -1,4 +1,4 @@
-/datum/extension/interactive/os/proc/get_component(var/part_type)
+/datum/extension/interactive/os/proc/get_component(var/part_type as OD_PATH(/obj/item/stock_parts)) as OD_PARAM(part_type)|null
 	return locate(part_type) in holder
 
 /datum/extension/interactive/os/proc/get_all_components()
@@ -11,7 +11,7 @@
 		if(findtext(P.name, partname))
 			return P
 
-/datum/extension/interactive/os/proc/has_component(var/part_type)
+/datum/extension/interactive/os/proc/has_component(var/part_type as OD_PATH(/obj/item/stock_parts)) as OD_BOOL
 	return !!get_component(part_type)
 
 /datum/extension/interactive/os/proc/print_paper(content, title)
@@ -36,7 +36,7 @@
 	else
 		return 0
 
-/datum/extension/interactive/os/proc/get_inserted_id()
+/datum/extension/interactive/os/proc/get_inserted_id() as OD_INST(/obj/item/card/id)|null
 	var/obj/item/stock_parts/computer/card_slot/card_slot = get_component(PART_CARD)
 	if(card_slot)
 		return card_slot.stored_card

@@ -359,7 +359,7 @@ var/global/list/robot_hud_colours = list("#ffffff","#cccccc","#aaaaaa","#888888"
 	else
 		. = 3
 
-/obj/item/organ/external/proc/resolve_accessory_to_decl(var/decl/sprite_accessory/accessory_style)
+/obj/item/organ/external/proc/resolve_accessory_to_decl(var/decl/sprite_accessory/accessory_style as OD_PATH(/decl/sprite_accessory)|OD_INST(/decl/sprite_accessory)|null)
 	if(ispath(accessory_style))
 		accessory_style = GET_DECL(accessory_style)
 	// Check if this style is permitted for this species, period.

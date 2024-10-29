@@ -1,5 +1,8 @@
 // Defined here due to being used immediately below.
-#define GET_DECL(D) (ispath(D, /decl) ? (decls_repository.fetched_decls[D] || decls_repository.get_decl(D)) : null)
+#define GET_DECL(D) decls_repository.get_decl_cheap(D) // (ispath(D, /decl) ? (decls_repository.fetched_decls[D] || decls_repository.get_decl(D)) : null)
+
+/repository/decls/get_decl_cheap(decl_type as OD_PATH(/decl)) as OD_PARAM(decl_type as instance)
+	return (ispath(decl_type, /decl) ? (decls_repository.fetched_decls[decl_type] || decls_repository.get_decl(decl_type)) : null)
 
 // Defined here due to compile order; overrides in macros make the compiler complain.
 /decl/global_vars

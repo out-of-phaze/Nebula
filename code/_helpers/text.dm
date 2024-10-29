@@ -341,7 +341,7 @@
 
 // Returns a string with reserved characters and spaces before the first letter removed
 // not work for unicode spaces - you should cleanup them first with sanitize()
-/proc/trim_left(text)
+/proc/trim_left(text as text|null) as text
 	for (var/i = 1 to length(text))
 		if (text2ascii(text, i) > 32)
 			return copytext(text, i)
@@ -349,26 +349,25 @@
 
 // Returns a string with reserved characters and spaces after the last letter removed
 // not work for unicode spaces - you should cleanup them first with sanitize()
-/proc/trim_right(text)
+/proc/trim_right(text as text|null) as text
 	for (var/i = length(text), i > 0, i--)
 		if (text2ascii(text, i) > 32)
 			return copytext(text, 1, i + 1)
-
 	return ""
 
 // Returns a string with reserved characters and spaces before the first word and after the last word removed.
 // not work for unicode spaces - you should cleanup them first with sanitize()
-/proc/trim(text)
+/proc/trim(text as text|null) as text
 	return trim_left(trim_right(text))
 
 //Returns a string with the first element of the string capitalized.
-/proc/capitalize(text)
-	if(text)
-		text = uppertext(text[1]) + copytext(text, 1 + length(text[1]))
-	return text
+/proc/capitalize(text as text|null) as text
+	if(!text)
+		return ""
+	return uppertext(text[1]) + copytext(text, 1 + length(text[1]))
 
 //Returns a string with the first element of the every word of the string capitalized.
-/proc/capitalize_words(text)
+/proc/capitalize_words(text as text|null) as text
 	var/list/S = splittext(text, " ")
 	var/list/M = list()
 	for (var/w in S)

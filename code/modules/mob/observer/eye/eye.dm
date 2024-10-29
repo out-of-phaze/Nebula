@@ -112,7 +112,7 @@
 /mob
 	var/mob/observer/eye/eyeobj
 
-/mob/proc/EyeMove(n, direct)
+/mob/proc/EyeMove(n, direct) as OD_BOOL
 	if(!eyeobj)
 		return FALSE
 

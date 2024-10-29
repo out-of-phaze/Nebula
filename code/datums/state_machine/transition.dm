@@ -2,7 +2,7 @@
 // On a directed graph, these would be the arrows connecting the nodes representing states.
 /decl/state_transition
 	var/list/from = null
-	var/decl/state/target = null
+	var/decl/state/target = null as OD_PATH(/decl/state)|OD_INST(/decl/state)|null
 
 // Called by one or more state decls acting as nodes in a directed graph.
 /decl/state_transition/Initialize()
@@ -12,5 +12,5 @@
 		target = GET_DECL(target)
 
 // Tells the FSM if it should or should not be allowed to transfer to the target state.
-/decl/state_transition/proc/is_open(datum/holder)
+/decl/state_transition/proc/is_open(datum/holder) as OD_BOOL
 	return FALSE

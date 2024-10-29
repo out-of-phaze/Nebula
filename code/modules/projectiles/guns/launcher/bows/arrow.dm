@@ -48,7 +48,7 @@
 	plural_name = "arrows"
 	icon = 'icons/obj/items/weapon/arrow.dmi'
 	desc = "A long, sharp stick, fletched at one end."
-	var/decl/material/fletching_material
+	var/decl/material/fletching_material as OD_INST(/decl/material)|OD_PATH(/decl/material)
 
 /obj/item/stack/material/bow_ammo/arrow/iron
 	material = /decl/material/solid/metal/iron

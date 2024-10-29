@@ -1632,7 +1632,7 @@
 	if(mind && (mind.current && !isghost(mind.current)))
 		. += "<A HREF='byond://?[source];adminplayerobservefollow=\ref[mind.current]'>[prefix][short_links ? "B" : "BDY"][sufix]</A>"
 
-/proc/admin_jump_link(var/datum/target, var/source, var/delimiter = "|", var/prefix, var/sufix, var/short_links)
+/proc/admin_jump_link(var/datum/target as OD_INST(/datum), var/source, var/delimiter = "|", var/prefix, var/sufix, var/short_links)
 	if(!istype(target))
 		CRASH("Invalid admin jump link target: [log_info_line(target)]")
 	// The way admin jump links handle their src is weirdly inconsistent...

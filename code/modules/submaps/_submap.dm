@@ -69,5 +69,5 @@
 /datum/submap/proc/sync_cell(var/obj/effect/overmap/visitable/cell)
 	name = cell.name
 
-/datum/submap/proc/available()
+/datum/submap/proc/available() as OD_BOOL
 	return TRUE

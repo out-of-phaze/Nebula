@@ -125,7 +125,7 @@ var/global/list/areas = list()
 
 // Changes the area of T to A. Do not do this manually.
 // Area is expected to be a non-null instance.
-/proc/ChangeArea(var/turf/T, var/area/A)
+/proc/ChangeArea(var/turf/T, var/area/A as OD_INST(/area))
 	if(!istype(A))
 		CRASH("Area change attempt failed: invalid area supplied.")
 	var/old_outside = T.is_outside()

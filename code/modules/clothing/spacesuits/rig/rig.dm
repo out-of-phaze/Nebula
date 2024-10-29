@@ -56,16 +56,16 @@
 	var/list/initial_modules
 
 	//Component/device holders.
-	var/obj/item/clothing/boots  // Deployable boots, if any.
-	var/obj/item/clothing/chest  // Deployable chestpiece, if any.
-	var/obj/item/clothing/helmet // Deployable helmet, if any.
-	var/obj/item/clothing/gloves // Deployable gauntlets, if any.
-	var/obj/item/tank/air_supply = /obj/item/tank/oxygen // Starting air supply, if any.
-	var/obj/item/cell/cell =       /obj/item/cell/high   // Starting cell type, if any.
+	var/obj/item/clothing/boots as obj|null|OD_PATH(/obj/item/clothing)  // Deployable boots, if any.
+	var/obj/item/clothing/chest as obj|null|OD_PATH(/obj/item/clothing)  // Deployable chestpiece, if any.
+	var/obj/item/clothing/helmet as obj|null|OD_PATH(/obj/item/clothing) // Deployable helmet, if any.
+	var/obj/item/clothing/gloves as obj|null|OD_PATH(/obj/item/clothing) // Deployable gauntlets, if any.
+	var/obj/item/tank/air_supply = /obj/item/tank/oxygen as obj|null|OD_PATH(/obj/item/tank) // Starting air supply, if any.
+	var/obj/item/cell/cell =       /obj/item/cell/high as obj|null|OD_PATH(/obj/item/cell) // Starting cell type, if any.
 
-	var/obj/item/rig_module/selected_module // Primary system (used with middle-click)
-	var/obj/item/rig_module/vision/visor    // Kinda shitty to have a var for a module, but saves time.
-	var/obj/item/rig_module/voice/speech    // As above.
+	var/obj/item/rig_module/selected_module as obj|null|OD_PATH(/obj/item/rig_module) // Primary system (used with middle-click)
+	var/obj/item/rig_module/vision/visor as obj|null|OD_PATH(/obj/item/rig_module/vision) // Kinda shitty to have a var for a module, but saves time.
+	var/obj/item/rig_module/voice/speech as obj|null|OD_PATH(/obj/item/rig_module/voice) // As above.
 	var/mob/living/human/wearer      // The person currently wearing the rig.
 	var/list/installed_modules = list()     // Power consumption/use bookkeeping.
 

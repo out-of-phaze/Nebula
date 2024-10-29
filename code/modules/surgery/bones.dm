@@ -30,7 +30,7 @@
 	max_duration = 60
 	shock_level = 20
 
-/decl/surgery_step/bone/glue/begin_step(mob/user, mob/living/target, target_zone, obj/item/tool)
+/decl/surgery_step/bone/glue/begin_step(mob/user, mob/living/target, target_zone as null|text, obj/item/tool)
 	var/obj/item/organ/external/affected = GET_EXTERNAL_ORGAN(target, target_zone)
 	var/bone = affected.encased ? "\the [target]'s [affected.encased]" : "bones in \the [target]'s [affected.name]"
 	if (affected.stage == 0)

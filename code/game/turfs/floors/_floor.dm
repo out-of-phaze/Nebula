@@ -25,8 +25,8 @@
 	var/floor_icon_state_override
 
 	// TODO:
-	VAR_PROTECTED/decl/flooring/_base_flooring = /decl/flooring/plating
-	VAR_PROTECTED/decl/flooring/_flooring
+	VAR_PROTECTED/decl/flooring/_base_flooring = /decl/flooring/plating as OD_INST(/decl/flooring)|OD_PATH(/decl/flooring)|null
+	VAR_PROTECTED/decl/flooring/_flooring as OD_INST(/decl/flooring)|OD_PATH(/decl/flooring)|null
 
 	var/const/TRENCH_DEPTH_PER_ACTION = 100
 
@@ -122,7 +122,7 @@
 		return GET_DECL(_flooring)
 	return _flooring
 
-/turf/floor/proc/set_flooring(var/decl/flooring/newflooring, skip_update, place_product)
+/turf/floor/proc/set_flooring(var/decl/flooring/newflooring as OD_INST(/decl/flooring)|OD_PATH(/decl/flooring)|null, skip_update, place_product)
 
 	if(ispath(newflooring, /decl/flooring))
 		newflooring = GET_DECL(newflooring)

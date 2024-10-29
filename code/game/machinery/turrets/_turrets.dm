@@ -28,13 +28,13 @@
 	var/turn_off_sound = null // The above, in reverse.
 
 	// Shooting
-	var/obj/item/gun/installed_gun = /obj/item/gun/energy/laser/practice // Instance of the gun inside the turret.
+	var/obj/item/gun/installed_gun = /obj/item/gun/energy/laser/practice as obj|null|OD_PATH(/obj/item/gun) // Instance of the gun inside the turret.
 	var/gun_looting_prob = 25 // If the turret dies and then is disassembled, this is the odds of getting the gun.
 	var/reloading_progress = 0
 	var/reloading_speed = 50
 
 	// Power
-	var/enabled = TRUE // If false, turret turns off.
+	var/enabled = TRUE as OD_BOOL // If false, turret turns off.
 
 	// Angles
 	// Remember that in BYOND, NORTH equals 0 absolute degrees, and not 90.
@@ -44,7 +44,7 @@
 	var/current_bearing = 0 // Current absolute angle the turret has, used to calculate if it needs to turn to try to shoot the target.
 	var/target_bearing = 0 // The desired bearing. If the current bearing is too far from this, the turret will turn towards it until within tolerence.
 	var/bearing_tolerence = 3 // Degrees that the turret must be within to be able to shoot at the target.
-	var/turning_rate = 90 // Degrees per second.
+	var/turning_rate = 90 as num // Degrees per second.
 	var/default_bearing = null // If no target is found, the turret will return to this bearing automatically.
 
 	// Detection.
@@ -57,7 +57,7 @@
 	var/weakref/target = null
 	var/list/potential_targets = list()
 	var/timer_id = null
-	var/decl/hostility/hostility = /decl/hostility/turret
+	var/decl/hostility/hostility = /decl/hostility/turret as OD_INST(/decl/hostility)|OD_PATH(/decl/hostility)|null
 
 /obj/machinery/turret/Initialize()
 	if(ispath(installed_gun))
@@ -266,14 +266,14 @@
 	// The turret can traverse the entire circle, so it must decide which direction is a shorter distance.
 	return closer_angle_difference(current_bearing, target_bearing)
 
-/obj/machinery/turret/proc/within_bearing()
+/obj/machinery/turret/proc/within_bearing() as OD_BOOL
 	var/distance_from_target_bearing = closer_angle_difference(current_bearing, target_bearing)
 	return abs(distance_from_target_bearing) <= bearing_tolerence
 
 #undef TURN_CLOCKWISE
 #undef TURN_COUNTERCLOCKWISE
 
-/obj/machinery/turret/proc/calculate_turn_rate_per_process()
+/obj/machinery/turret/proc/calculate_turn_rate_per_process() as num
 	return turning_rate / (1 SECOND / TURRET_WAIT)
 
 // Turret proximity handling
@@ -351,7 +351,7 @@
 	state_machine.evaluate()
 
 // Returns whether the turret should reload at the moment. If a valid target is in sight, only reloads the minimum amount to shoot again.
-/obj/machinery/turret/proc/should_reload()
+/obj/machinery/turret/proc/should_reload() as OD_BOOL
 	if(istype(installed_gun, /obj/item/gun/projectile))
 		var/obj/item/gun/projectile/proj_gun = installed_gun
 		if(proj_gun.load_method & MAGAZINE)

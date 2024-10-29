@@ -3,20 +3,20 @@
 	abstract_type = /decl/natural_attack
 	var/name
 	var/selector_icon_state
-	var/attack_verb = list("attacks")	// Empty hand hurt intent verb.
-	var/attack_noun = list("fist")
+	var/attack_verb = list("attacks") as OD_LIST(text) // Empty hand hurt intent verb.
+	var/attack_noun = list("fist") as OD_LIST(text)
 	var/damage = 0						// Extra empty hand attack damage.
-	var/attack_sound = "punch"
-	var/miss_sound = 'sound/weapons/punchmiss.ogg'
+	var/attack_sound = "punch" as text|sound|null
+	var/miss_sound = 'sound/weapons/punchmiss.ogg' as text|sound|null
 	var/shredding = 0 // Calls the old attack_alien() behavior on objects/mobs when on harm intent.
 	var/sharp = 0
 	var/edge = 0
 	var/delay = 0
 	var/deal_halloss
-	var/sparring_variant_type = /decl/natural_attack/light_strike
+	var/sparring_variant_type = /decl/natural_attack/light_strike as OD_PATH(/decl/natural_attack)
 	var/eye_attack_text
 	var/eye_attack_text_victim
-	var/list/usable_with_limbs = list(BP_L_HAND, BP_R_HAND)
+	var/list/usable_with_limbs = list(BP_L_HAND, BP_R_HAND) as OD_LIST(text)
 	var/is_starting_default = FALSE
 
 /decl/natural_attack/proc/summarize()

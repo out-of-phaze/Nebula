@@ -21,7 +21,7 @@
 	var/armor_penetration = 0
 	var/anchor_fall = FALSE
 	var/holographic = 0 //if the obj is a holographic object spawned by the holodeck
-	var/list/directional_offset ///JSON list of directions to x,y offsets to be applied to the object depending on its direction EX: @'{"NORTH":{"x":12,"y":5}, "EAST":{"x":10,"y":50}}'
+	var/directional_offset as text ///JSON list of directions to x,y offsets to be applied to the object depending on its direction EX: @'{"NORTH":{"x":12,"y":5}, "EAST":{"x":10,"y":50}}'
 
 /obj/Initialize(mapload)
 	//Health should be set to max_health only if it's null.
@@ -95,7 +95,7 @@
 	ui_interact(user)
 	..()
 
-/obj/proc/interact(mob/user)
+/obj/proc/interact(mob/user) as OD_BOOL
 	return FALSE
 
 /obj/proc/hide(var/hide)

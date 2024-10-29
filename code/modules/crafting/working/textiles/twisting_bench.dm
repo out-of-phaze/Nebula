@@ -3,7 +3,7 @@
 	desc                     = "An arrangement of hooks and levers used to spin dried gut fibers into catgut."
 	icon                     = 'icons/obj/structures/twisting_bench.dmi'
 	work_sound               = /datum/composite_sound/spinning_wheel_working
-	var/accepts_gut_material = /decl/material/solid/organic/leather/gut
+	var/accepts_gut_material = /decl/material/solid/organic/leather/gut as OD_PATH(/decl/material)
 
 /obj/structure/working/spinning_wheel/twisting_bench/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/food/butchery/offal) && !istype(W, /obj/item/food/butchery/offal/small))

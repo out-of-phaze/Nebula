@@ -51,7 +51,7 @@
 	var/unsuitable_atmos_damage = 2	//This damage is taken when atmos doesn't fit all the requirements above
 
 	//LETTING SIMPLE ANIMALS ATTACK? WHAT COULD GO WRONG. Defaults to zero so Ian can still be cuddly
-	var/obj/item/natural_weapon/natural_weapon
+	var/obj/item/natural_weapon/natural_weapon as anything
 	var/environment_smash = 0
 	var/resistance		  = 0	// Damage reduction
 	var/armor_type = /datum/extension/armor

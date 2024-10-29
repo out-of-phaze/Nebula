@@ -60,7 +60,7 @@
 	/// (BOOL) Does this atom respond to changes in local temperature via the `temperature` var?
 	var/temperature_sensitive = FALSE
 	/// (DATUM) /datum/storage instance to use for this obj. Set to a type for instantiation on init.
-	var/datum/storage/storage
+	var/datum/storage/storage as OD_INST(/datum/storage)|OD_PATH(/datum/storage)|null
 	/// (FLOAT) world.time of last on_reagent_update call, used to prevent recursion due to reagents updating reagents
 	VAR_PRIVATE/_reagent_update_started = 0
 
@@ -97,7 +97,7 @@
 
 	- Return: A `/datum/gas_mixture` containing the gas removed if successful, otherwise `null`
 */
-/atom/proc/remove_air(amount)
+/atom/proc/remove_air(amount) as OD_PATH(/datum/gas_mixture)|null
 	RETURN_TYPE(/datum/gas_mixture)
 	return null
 
@@ -113,7 +113,7 @@
 
 	- Return: The `/datum/gas_mixture` of this atom
 */
-/atom/proc/return_air()
+/atom/proc/return_air() as OD_INST(/datum/gas_mixture)|null
 	RETURN_TYPE(/datum/gas_mixture)
 	return loc?.return_air()
 

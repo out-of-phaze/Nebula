@@ -9,7 +9,7 @@
 	return
 /mob/proc/has_organ(organ_tag)
 	return !!get_organ(organ_tag, /obj/item/organ)
-/mob/proc/get_organ(var/organ_tag, var/expected_type)
+/mob/proc/get_organ(var/organ_tag as text|null, var/expected_type as OD_PATH(/obj/item/organ)) as OD_PARAM(expected_type as instance)
 	RETURN_TYPE(/obj/item/organ)
 	return
 /mob/proc/get_injured_organs()

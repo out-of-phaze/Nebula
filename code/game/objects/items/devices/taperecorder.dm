@@ -15,7 +15,7 @@
 	var/recording = 0.0
 	var/playing = 0.0
 	var/playsleepseconds = 0.0
-	var/obj/item/magnetic_tape/mytape = /obj/item/magnetic_tape/random
+	var/obj/item/magnetic_tape/mytape = /obj/item/magnetic_tape/random as obj|null|OD_PATH(/obj/item/magnetic_tape)
 	var/canprint = 1
 	var/datum/wires/taperecorder/wires = null // Wires datum
 	var/maintenance = 0

@@ -6,7 +6,7 @@
 	organ_tag = BP_CELL
 	parent_organ = BP_CHEST
 	var/open
-	var/obj/item/cell/cell = /obj/item/cell/hyper
+	var/obj/item/cell/cell = /obj/item/cell/hyper as obj|null|OD_PATH(/obj/item/cell)
 	//at 0.8 completely depleted after 60ish minutes of constant walking or 130 minutes of standing still
 	var/servo_cost = 0.8
 

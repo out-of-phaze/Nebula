@@ -5,7 +5,7 @@
 	. = TRUE
 
 /obj/machinery
-	var/decl/machine_construction/construct_state
+	var/decl/machine_construction/construct_state as OD_PATH(/decl/machine_construction)|OD_INST(/decl/machine_construction)|null
 
 /obj/machinery/Initialize()
 	if(construct_state)

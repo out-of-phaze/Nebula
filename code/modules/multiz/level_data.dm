@@ -555,7 +555,7 @@
 //
 // Accessors
 //
-/datum/level_data/proc/get_exterior_atmosphere()
+/datum/level_data/proc/get_exterior_atmosphere() as OD_INST(/datum/gas_mixture)|null
 	if(exterior_atmosphere && !istype(exterior_atmosphere))
 		PRINT_STACK_TRACE("Attempting to retrieve exterior atmosphere before it is set up!")
 		return

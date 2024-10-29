@@ -1,13 +1,13 @@
 var/global/obj/temp_reagents_holder = new
 var/global/datum/reagents/sink/infinite_reagent_sink = new
 
-/atom/proc/add_to_reagents(reagent_type, amount, data, safety = FALSE, defer_update = FALSE)
+/atom/proc/add_to_reagents(reagent_type as OD_PATH(/decl/material), amount as num, data, safety = FALSE, defer_update = FALSE)
 	return reagents?.add_reagent(reagent_type, amount, data, safety, defer_update)
 
-/atom/proc/remove_from_reagents(reagent_type, amount, safety = FALSE, defer_update = FALSE)
+/atom/proc/remove_from_reagents(reagent_type as OD_PATH(/decl/material), amount as num, safety = FALSE, defer_update = FALSE)
 	return reagents?.remove_reagent(reagent_type, amount, safety, defer_update)
 
-/atom/proc/remove_any_reagents(amount = 1, defer_update = FALSE, removed_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID), skip_reagents = null)
+/atom/proc/remove_any_reagents(amount = 1 as num, defer_update = FALSE, removed_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID), skip_reagents = null)
 	return reagents?.remove_any(amount, defer_update, removed_phases, skip_reagents)
 
 /atom/proc/get_reagent_space()
@@ -18,7 +18,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 /atom/proc/get_reagents()
 	return reagents
 
-/atom/proc/take_waste_burn_products(list/materials, exposed_temperature)
+/atom/proc/take_waste_burn_products(list/materials as OD_MAP(OD_PATH(/decl/material), num), exposed_temperature as num)
 
 	// This might not be needed. Leaving it in for safety.
 	var/turf/T = get_turf(src)
@@ -56,24 +56,24 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 	liquids?.update_total()
 
 /datum/reagents
-	var/primary_reagent
-	var/primary_solid
-	var/primary_liquid
-	var/list/reagent_volumes
+	var/primary_reagent as OD_PATH(/decl/material)
+	var/primary_solid as OD_PATH(/decl/material)
+	var/primary_liquid as OD_PATH(/decl/material)
+	var/list/reagent_volumes as OD_MAP(OD_PATH(/decl/material), num)|null
 
-	var/list/liquid_volumes
-	var/list/solid_volumes		// This should be taken as powders/flakes, rather than large solid pieces of material.
+	var/list/liquid_volumes as OD_MAP(OD_PATH(/decl/material), num)|null
+	var/list/solid_volumes as OD_MAP(OD_PATH(/decl/material), num)|null // This should be taken as powders/flakes, rather than large solid pieces of material.
 
 	var/list/reagent_data
-	var/total_volume = 0
-	var/maximum_volume = 120
+	var/total_volume = 0 as num
+	var/maximum_volume = 120 as num
 
-	var/total_liquid_volume // Used to determine when to create fluids in the world and the like.
+	var/total_liquid_volume as num|null // Used to determine when to create fluids in the world and the like.
 
 	var/atom/my_atom
 	var/cached_color
 
-/datum/reagents/New(var/maximum_volume = 120, var/atom/my_atom)
+/datum/reagents/New(var/maximum_volume = 120 as num, var/atom/my_atom as OD_INST(/atom)|null)
 	src.maximum_volume = maximum_volume
 	src.my_atom = my_atom
 	..()
@@ -116,7 +116,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 		return get_turf(my_atom)
 	return my_atom
 
-/datum/reagents/proc/get_primary_reagent_name(var/codex = FALSE) // Returns the name of the reagent with the biggest volume.
+/datum/reagents/proc/get_primary_reagent_name(var/codex = FALSE) as text // Returns the name of the reagent with the biggest volume.
 	var/decl/material/reagent = get_primary_reagent_decl()
 	if(reagent)
 		if(codex && reagent.codex_name)
@@ -127,10 +127,10 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 			else
 				return reagent.get_reagent_name(src, MAT_PHASE_SOLID)
 
-/datum/reagents/proc/get_primary_reagent_type()
+/datum/reagents/proc/get_primary_reagent_type() as OD_PATH(/decl/material)
 	return primary_reagent
 
-/datum/reagents/proc/get_primary_reagent_decl()
+/datum/reagents/proc/get_primary_reagent_decl() as OD_INST(/decl/material)
 	return GET_DECL(primary_reagent)
 
 /datum/reagents/proc/update_total() // Updates volume.
@@ -289,14 +289,14 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 	my_atom?.try_on_reagent_change()
 
 ///Set and call updates on the target holder.
-/datum/reagents/proc/set_holder(var/obj/new_holder)
+/datum/reagents/proc/set_holder(var/atom/new_holder as OD_INST(/atom))
 	if(my_atom == new_holder)
 		return
 	my_atom = new_holder
 	my_atom?.try_on_reagent_change()
 	handle_update()
 
-/datum/reagents/proc/add_reagent(var/reagent_type, var/amount, var/data = null, var/safety = 0, var/defer_update = FALSE, var/phase)
+/datum/reagents/proc/add_reagent(var/reagent_type as OD_PATH(/decl/material), var/amount as num, var/data = null, var/safety = 0, var/defer_update = FALSE, var/phase)
 
 	amount = CHEMS_QUANTIZE(min(amount, REAGENTS_FREE_SPACE(src)))
 	if(amount <= 0)
@@ -350,7 +350,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 		handle_update(safety)
 	return TRUE
 
-/datum/reagents/proc/remove_reagent(var/reagent_type, var/amount, var/safety = 0, var/defer_update = FALSE, var/removed_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID))
+/datum/reagents/proc/remove_reagent(var/reagent_type as OD_PATH(/decl/material), var/amount as num, var/safety = 0, var/defer_update = FALSE, var/removed_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID))
 	amount = CHEMS_QUANTIZE(amount)
 	if(!isnum(amount) || amount <= 0 || REAGENT_VOLUME(src, reagent_type) <= 0)
 		return FALSE
@@ -381,7 +381,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 		handle_update(safety)
 	return TRUE
 
-/datum/reagents/proc/clear_reagent(var/reagent_type, var/defer_update = FALSE, var/force = FALSE)
+/datum/reagents/proc/clear_reagent(var/reagent_type as OD_PATH(/decl/material), var/defer_update = FALSE, var/force = FALSE)
 	. = force || !!REAGENT_DATA(src, reagent_type) || !!REAGENT_VOLUME(src, reagent_type)
 	if(.)
 
@@ -404,7 +404,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 		else
 			handle_update()
 
-/datum/reagents/proc/has_reagent(var/reagent_type, var/amount, var/phases)
+/datum/reagents/proc/has_reagent(var/reagent_type as OD_PATH(/decl/material), var/amount as num, var/phases)
 	. = 0
 	if(phases)
 		if(phases & MAT_PHASE_SOLID)
@@ -416,13 +416,13 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 	if(. && amount)
 		. = (. >= amount)
 
-/datum/reagents/proc/has_any_reagent(var/list/check_reagents, var/phases)
+/datum/reagents/proc/has_any_reagent(var/list/check_reagents as OD_MAP(OD_PATH(/decl/material), num), var/phases)
 	for(var/check in check_reagents)
 		if(has_reagent(check, check_reagents[check], phases))
 			return TRUE
 	return FALSE
 
-/datum/reagents/proc/has_all_reagents(var/list/check_reagents, var/phases)
+/datum/reagents/proc/has_all_reagents(var/list/check_reagents as OD_MAP(OD_PATH(/decl/material), num), var/phases)
 	. = TRUE
 	for(var/check in check_reagents)
 		. = min(., has_reagent(check, check_reagents[check], phases))
@@ -440,7 +440,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 	total_volume = 0
 	my_atom?.try_on_reagent_change()
 
-/datum/reagents/proc/get_overdose(var/decl/material/current)
+/datum/reagents/proc/get_overdose(var/decl/material/current as OD_PATH(/decl/material))
 	if(current)
 		return initial(current.overdose)
 	return 0
@@ -467,13 +467,13 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 			. += "[current.get_reagent_name(src, MAT_PHASE_SOLID)] ([volume])"
 	return english_list(., "EMPTY", "", ", ", ", ")
 
-/datum/reagents/proc/get_dirtiness()
+/datum/reagents/proc/get_dirtiness() as num
 	for(var/rtype in reagent_volumes)
 		var/decl/material/current = GET_DECL(rtype)
 		. += current.dirtiness
 	return . / length(reagent_volumes)
 
-/datum/reagents/proc/get_accelerant_value()
+/datum/reagents/proc/get_accelerant_value() as num
 	for(var/rtype in reagent_volumes)
 		var/decl/material/current = GET_DECL(rtype)
 		. += current.accelerant_value
@@ -481,7 +481,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 
 /* Holder-to-holder and similar procs */
 /// Removes up to [amount] of reagents from [src]. Returns actual amount removed.
-/datum/reagents/proc/remove_any(var/amount = 1, var/defer_update = FALSE, var/removed_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID), skip_reagents = null)
+/datum/reagents/proc/remove_any(var/amount = 1 as num, var/defer_update = FALSE, var/removed_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID), skip_reagents = null)
 
 	if(amount <= 0)
 		return 0
@@ -546,7 +546,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 // Returns actual amount removed from [src] (not amount transferred to [target]).
 // Use safety = 1 for temporary targets to avoid queuing them up for processing.
 // Reagent phases are preserved.
-/datum/reagents/proc/trans_to_holder(var/datum/reagents/target, var/amount = 1, var/multiplier = 1, var/copy = 0, var/safety = 0, var/defer_update = FALSE, var/list/skip_reagents, var/transferred_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID))
+/datum/reagents/proc/trans_to_holder(var/datum/reagents/target as OD_INST(/datum/reagents), var/amount = 1 as num, var/multiplier = 1, var/copy = 0, var/safety = 0, var/defer_update = FALSE, var/list/skip_reagents, var/transferred_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID))
 
 	if(!target || !istype(target))
 		return
@@ -650,7 +650,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 	return 0
 
 //Splashing reagents is messier than trans_to, the target's loc gets some of the reagents as well. All phases are transferred by default
-/datum/reagents/proc/splash(var/atom/target, var/amount = 1, var/multiplier = 1, var/copy = 0, var/min_spill=0, var/max_spill=60, var/defer_update = FALSE)
+/datum/reagents/proc/splash(var/atom/target as OD_INST(/atom), var/amount = 1 as num, var/multiplier = 1, var/copy = 0, var/min_spill=0, var/max_spill=60, var/defer_update = FALSE)
 
 	if(!istype(target))
 		return
@@ -668,7 +668,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 		trans_to(target, amount, multiplier, copy, defer_update = defer_update)
 
 //Spreads the contents of this reagent holder all over the vicinity of the target turf.
-/datum/reagents/proc/splash_area(var/turf/epicentre, var/range = 3, var/portion = 1.0, var/multiplier = 1, var/copy = 0)
+/datum/reagents/proc/splash_area(var/turf/epicentre as turf, var/range = 3, var/portion = 1.0, var/multiplier = 1, var/copy = 0)
 	var/list/things = list()
 	DVIEW(things, range, epicentre, INVISIBILITY_LIGHTING)
 
@@ -691,7 +691,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 
 //Spreads the contents of this reagent holder all over the target turf, dividing among things in it.
 //50% is divided between mobs, 20% between objects, and whatever's left on the turf itself
-/datum/reagents/proc/splash_turf(var/turf/T, var/amount = null, var/multiplier = 1, var/copy = 0)
+/datum/reagents/proc/splash_turf(var/turf/T as turf, var/amount = null, var/multiplier = 1, var/copy = 0)
 	if (isnull(amount))
 		amount = total_volume
 	else
@@ -729,7 +729,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 	if (total_volume <= 0)
 		qdel(src)
 
-/datum/reagents/proc/trans_type_to(var/atom/target, var/type, var/amount = 1, var/multiplier = 1, var/defer_update = FALSE, var/transferred_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID))
+/datum/reagents/proc/trans_type_to(var/atom/target as OD_INST(/atom), var/type as OD_PATH(/decl/material), var/amount = 1, var/multiplier = 1, var/defer_update = FALSE, var/transferred_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID))
 	if (!target || !target.reagents || !target.simulated || !transferred_phases)
 		return
 
@@ -771,7 +771,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 	. = F.trans_to(target, amount, multiplier, defer_update = defer_update, transferred_phases = transferred_phases) // Let this proc check the atom's type
 	qdel(F)
 
-/datum/reagents/proc/trans_type_to_holder(var/datum/reagents/target, var/type, var/amount = 1, var/multiplier = 1, var/defer_update = FALSE, var/transferred_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID))
+/datum/reagents/proc/trans_type_to_holder(var/datum/reagents/target as OD_INST(/datum/reagents), var/type as OD_PATH(/decl/material), var/amount = 1 as num, var/multiplier = 1, var/defer_update = FALSE, var/transferred_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID))
 	if (!target)
 		return
 
@@ -796,14 +796,14 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 // Options are touch_turf(), touch_mob() and touch_obj(). This does not handle transferring reagents to things.
 // For example, splashing someone with water will get them wet and extinguish them if they are on fire,
 // even if they are wearing an impermeable suit that prevents the reagents from contacting the skin.
-/datum/reagents/proc/touch_mob(var/mob/target)
+/datum/reagents/proc/touch_mob(var/mob/target as mob)
 	if(!target || !istype(target) || !target.simulated)
 		return
 	for(var/rtype in reagent_volumes)
 		var/decl/material/current = GET_DECL(rtype)
 		current.touch_mob(target, REAGENT_VOLUME(src, rtype), src)
 
-/datum/reagents/proc/touch_turf(var/turf/target)
+/datum/reagents/proc/touch_turf(var/turf/target as turf)
 	if(!istype(target) || !target.simulated)
 		return
 	for(var/rtype in reagent_volumes)
@@ -831,7 +831,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 			if(dirtiness <= DIRTINESS_CLEAN)
 				target.clean()
 
-/datum/reagents/proc/touch_obj(var/obj/target)
+/datum/reagents/proc/touch_obj(var/obj/target as obj)
 	if(!target || !istype(target) || !target.simulated)
 		return
 	for(var/rtype in reagent_volumes)
@@ -841,14 +841,14 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 // Attempts to place a reagent on the mob's skin.
 // Reagents are not guaranteed to transfer to the target.
 // Do not call this directly, call trans_to() instead.
-/datum/reagents/proc/splash_mob(var/mob/target, var/amount = 1, var/copy = 0, var/defer_update = FALSE)
+/datum/reagents/proc/splash_mob(var/mob/target as mob, var/amount = 1 as num, var/copy = 0, var/defer_update = FALSE)
 	var/perm = 1
 	if(isliving(target)) //will we ever even need to tranfer reagents to non-living mobs?
 		var/mob/living/L = target
 		perm = L.reagent_permeability()
 	return trans_to_mob(target, amount * perm, CHEM_TOUCH, 1, copy, defer_update = defer_update)
 
-/datum/reagents/proc/trans_to_mob(var/mob/target, var/amount = 1, var/type = CHEM_INJECT, var/multiplier = 1, var/copy = 0, var/defer_update = FALSE, var/transferred_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID)) // Transfer after checking into which holder...
+/datum/reagents/proc/trans_to_mob(var/mob/target as mob, var/amount = 1 as num, var/type = CHEM_INJECT, var/multiplier = 1, var/copy = 0, var/defer_update = FALSE, var/transferred_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID)) // Transfer after checking into which holder...
 	if(!target || !istype(target) || !target.simulated)
 		return
 	if(isliving(target))
@@ -874,7 +874,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 	R.touch_mob(target)
 	qdel(R)
 
-/datum/reagents/proc/trans_to_turf(var/turf/target, var/amount = 1, var/multiplier = 1, var/copy = 0, var/defer_update = FALSE, var/transferred_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID))
+/datum/reagents/proc/trans_to_turf(var/turf/target as turf, var/amount = 1 as num, var/multiplier = 1, var/copy = 0, var/defer_update = FALSE, var/transferred_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID))
 	if(!target?.simulated)
 		return
 
@@ -897,7 +897,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 		target.fluid_act(target.reagents)
 
  // Objects may or may not have reagents; if they do, it's probably a beaker or something and we need to transfer properly; otherwise, just touch.
-/datum/reagents/proc/trans_to_obj(var/obj/target, var/amount = 1, var/multiplier = 1, var/copy = 0, var/defer_update = FALSE, var/transferred_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID))
+/datum/reagents/proc/trans_to_obj(var/obj/target as obj, var/amount = 1 as num, var/multiplier = 1, var/copy = 0, var/defer_update = FALSE, var/transferred_phases = (MAT_PHASE_LIQUID | MAT_PHASE_SOLID))
 	if(!target || !target.simulated)
 		return
 
@@ -912,7 +912,7 @@ var/global/datum/reagents/sink/infinite_reagent_sink = new
 
 /* Atom reagent creation - use it all the time */
 
-/atom/proc/create_reagents(var/max_vol)
+/atom/proc/create_reagents(var/max_vol as num)
 	if(reagents)
 		log_debug("Attempted to create a new reagents holder when already referencing one: [log_info_line(src)]")
 		reagents.maximum_volume = max(reagents.maximum_volume, max_vol)

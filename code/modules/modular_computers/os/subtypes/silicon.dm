@@ -7,7 +7,7 @@
 /datum/extension/interactive/os/silicon/get_hardware_flag()
 	return PROGRAM_CONSOLE
 
-/datum/extension/interactive/os/silicon/get_component(var/part_type)
+/datum/extension/interactive/os/silicon/get_component(var/part_type as OD_PATH(/obj/item/stock_parts/computer))
 	var/mob/living/silicon/M = holder
 	return locate(part_type) in M.stock_parts
 
@@ -37,7 +37,7 @@
 	var/datum/extension/interactive/os/os = get_extension(src, /datum/extension/interactive/os)
 	if(os)
 		return os.check_eye()
-	else 
+	else
 		return ..()
 
 /datum/extension/interactive/os/silicon/small/get_hardware_flag()

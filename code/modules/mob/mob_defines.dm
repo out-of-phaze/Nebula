@@ -42,13 +42,13 @@
 	var/stat = CONSCIOUS //Whether a mob is alive or dead. TODO: Move this to living - Nodrak
 
 	var/obj/screen/robot_module/select/hands
-	var/obj/screen/warning_cells/cells
-	var/obj/screen/internals/internals
-	var/obj/screen/oxygen/oxygen
+	var/obj/screen/warning_cells/cells as OD_INST(/obj/screen)|null
+	var/obj/screen/internals/internals as OD_INST(/obj)|null
+	var/obj/screen/oxygen/oxygen as OD_INST(/obj/screen)|null
 	var/obj/screen/toxins/toxin
-	var/obj/screen/fire_warning/fire
+	var/obj/screen/fire_warning/fire as OD_INST(/obj/screen)|null
 	var/obj/screen/bodytemp/bodytemp
-	var/obj/screen/health_warning/healths
+	var/obj/screen/health_warning/healths as OD_INST(/obj/screen)|null
 	var/obj/screen/throw_toggle/throw_icon
 	var/obj/screen/maneuver/maneuver_icon
 	var/obj/screen/food/nutrition_icon
@@ -99,8 +99,8 @@
 	var/shakecamera = 0
 	var/a_intent = I_HELP//Living
 
-	var/decl/move_intent/move_intent = /decl/move_intent/walk
-	var/list/move_intents = list(/decl/move_intent/walk)
+	var/decl/move_intent/move_intent = /decl/move_intent/walk as OD_INST(/decl/move_intent)|OD_PATH(/decl/move_intent)|null
+	var/list/move_intents = list(/decl/move_intent/walk) as OD_LIST(OD_PATH(/decl/move_intent))
 
 	var/decl/move_intent/default_walk_intent
 	var/decl/move_intent/default_run_intent
@@ -142,13 +142,13 @@
 
 	var/flavor_text = ""
 
-	var/datum/skillset/skillset = /datum/skillset
+	var/datum/skillset/skillset = /datum/skillset as OD_INST(/datum/skillset)|OD_PATH(/datum/skillset)|null
 
 	var/list/additional_vision_handlers // A lazylist of atoms from which additional vision data is retrieved
 
 	var/list/progressbars = null //for stacking do_after bars
 
-	var/datum/mob_controller/ai						// Type abused. Define with path and will automagically create. Determines behaviour for clientless mobs.
+	var/datum/mob_controller/ai as OD_INST(/datum/mob_controller)|OD_PATH(/datum/mob_controller)|null // Type abused. Define with path and will automagically create. Determines behaviour for clientless mobs.
 
 	var/holder_type
 	/// If this mob is or was piloted by a player with typing indicators enabled, an instance of one.

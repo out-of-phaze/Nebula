@@ -8,7 +8,7 @@ You still need to set the controller's "id_tag" to something unique.
 	is_spawnable_type = FALSE
 	layer = ABOVE_DOOR_LAYER
 	/// The controller we're using. Set to a type to locate the type during Initialize().
-	var/obj/machinery/embedded_controller/radio/my_controller = /obj/machinery/embedded_controller/radio/airlock
+	var/obj/machinery/embedded_controller/radio/my_controller = /obj/machinery/embedded_controller/radio/airlock as obj|null|OD_PATH(/obj/machinery/embedded_controller/radio)
 	/// The device we're setting up. Set to a type to locate the type during Initialize().
 	var/my_device
 	/// Adjusts the various radio tags used to configure airlock devices.

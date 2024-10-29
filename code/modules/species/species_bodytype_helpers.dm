@@ -1,39 +1,39 @@
-/decl/bodytype/proc/get_ignited_icon(var/mob/living/human/victim)
+/decl/bodytype/proc/get_ignited_icon(var/mob/living/human/victim) as icon
 	return ignited_icon
 
-/decl/bodytype/proc/get_ignited_icon_state(mob/living/victim)
+/decl/bodytype/proc/get_ignited_icon_state(mob/living/victim) as text
 	return "Standing"
 
-/decl/bodytype/proc/get_icon_cache_uid(var/mob/H)
+/decl/bodytype/proc/get_icon_cache_uid(var/mob/H) as text
 	if(!icon_cache_uid)
 		icon_cache_uid = "[sequential_id(/decl/bodytype)]"
 	return icon_cache_uid
 
-/decl/bodytype/proc/get_bandages_icon(var/mob/living/human/H)
+/decl/bodytype/proc/get_bandages_icon(var/mob/living/human/H) as icon
 	return bandages_icon
 
-/decl/bodytype/proc/get_blood_overlays(var/mob/living/human/H)
+/decl/bodytype/proc/get_blood_overlays(var/mob/living/human/H) as icon
 	return blood_overlays
 
-/decl/bodytype/proc/get_damage_overlays(var/mob/living/human/H)
+/decl/bodytype/proc/get_damage_overlays(var/mob/living/human/H) as icon
 	return damage_overlays
 
-/decl/bodytype/proc/get_husk_icon(var/mob/living/human/H)
+/decl/bodytype/proc/get_husk_icon(var/mob/living/human/H) as icon
 	return husk_icon
 
-/decl/bodytype/proc/get_skeletal_icon(var/mob/living/human/H)
+/decl/bodytype/proc/get_skeletal_icon(var/mob/living/human/H) as icon
 	return skeletal_icon
 
-/decl/bodytype/proc/get_cosmetics_icon(var/decl/sprite_accessory/cosmetics/cosmetics_style)
+/decl/bodytype/proc/get_cosmetics_icon(var/decl/sprite_accessory/cosmetics/cosmetics_style) as icon
 	return cosmetics_icon
 
-/decl/bodytype/proc/get_vulnerable_location(var/mob/living/human/H)
+/decl/bodytype/proc/get_vulnerable_location(var/mob/living/human/H) as text
 	return vulnerable_location
 
-/decl/bodytype/proc/get_base_icon(var/mob/living/human/H, var/get_deform)
+/decl/bodytype/proc/get_base_icon(var/mob/living/human/H, var/get_deform) as icon
 	return get_deform ? icon_deformed : icon_base
 
-/decl/bodytype/proc/handle_post_bodytype_pref_set(datum/preferences/pref)
+/decl/bodytype/proc/handle_post_bodytype_pref_set(datum/preferences/pref) as OD_VOID
 
 	if(!pref)
 		return
@@ -59,7 +59,7 @@
 			var/list/default_data = default_sprite_accessories[accessory_category][accessory]
 			pref.sprite_accessories[accessory_category][accessory] = islist(default_data) ? default_data.Copy() : list()
 
-/decl/bodytype/proc/apply_appearance(var/mob/living/human/H)
+/decl/bodytype/proc/apply_appearance(var/mob/living/human/H) as OD_VOID
 	if(base_color)
 		H.set_skin_colour(base_color)
 
@@ -83,5 +83,5 @@
 	//Make sure only supported descriptors are left
 	H.appearance_descriptors = new_descriptors
 
-/decl/bodytype/proc/adjust_status(mob/living/target, condition, amount)
+/decl/bodytype/proc/adjust_status(mob/living/target, condition as OD_PATH(/decl/status_condition), amount as num) as num
 	return amount

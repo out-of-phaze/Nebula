@@ -12,7 +12,7 @@
 		/obj/item/stock_parts/computer/card_slot,
 	)
 	var/list/default_software
-	var/datum/computer_file/program/autorun_program
+	var/datum/computer_file/program/autorun_program as OD_PATH(/datum/computer_file/program)|null
 
 /obj/machinery/computer/modular/telescreen/preset/Initialize(mapload, d=0, populate_parts = TRUE)
 	. = ..()

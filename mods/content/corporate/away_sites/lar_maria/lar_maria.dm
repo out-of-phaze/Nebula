@@ -41,7 +41,7 @@
 	natural_weapon = /obj/item/natural_weapon/punch
 	ai = /datum/mob_controller/aggressive/lar_maria
 
-	var/obj/abstract/landmark/corpse/lar_maria/corpse = null
+	var/obj/abstract/landmark/corpse/lar_maria/corpse = null as anything
 	var/weapon = null
 
 /datum/mob_controller/aggressive/lar_maria

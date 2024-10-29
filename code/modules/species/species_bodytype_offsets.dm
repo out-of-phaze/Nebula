@@ -18,8 +18,8 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 */
 
 /decl/bodytype
-	var/list/equip_adjust
-	var/list/equip_overlays = list()
+	var/list/equip_adjust as OD_MAP(text, OD_MAP(OD_DIR, OD_LIST(num)))
+	var/list/equip_overlays = list() as OD_MAP(text, OD_INST(/image))
 
 /decl/bodytype/proc/get_equip_adjust(mob/mob)
 	return equip_adjust

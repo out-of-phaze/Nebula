@@ -15,8 +15,8 @@
 		/decl/material/solid/silicon      = MATTER_AMOUNT_TRACE,
 	)
 
-	var/obj/item/shockpaddles/linked/paddles
-	var/obj/item/cell/bcell = null
+	var/obj/item/shockpaddles/linked/paddles as obj|null|OD_PATH(/obj/item/shockpaddles/linked)
+	var/obj/item/cell/bcell = null as obj|null|OD_PATH(/obj/item/cell)
 
 /obj/item/defibrillator/Initialize() //starts without a cell for rnd
 	if(ispath(paddles))

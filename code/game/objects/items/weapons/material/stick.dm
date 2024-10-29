@@ -31,7 +31,7 @@
 
 		var/obj/item/stack/material/cloth = W
 
-		var/atom/product_type
+		var/atom/product_type as OD_PATH(/atom)
 		var/cloth_cost
 		if(choice == "Splint")
 			product_type = /obj/item/stack/medical/splint/crafted

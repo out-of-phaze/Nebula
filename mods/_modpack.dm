@@ -5,7 +5,7 @@
 	var/desc
 	/// A string with authors of this modpack.
 	var/author
-	var/secrets_directory
+	var/secrets_directory as text|null
 	var/list/dreams //! A list of strings to be added to the random dream proc.
 
 	var/list/credits_other           //! A list of strings that are used by the end of round credits roll.
@@ -17,7 +17,7 @@
 	var/list/credits_topics          //! A list of strings that are used by the end of round credits roll.
 	var/list/credits_nouns           //! A list of strings that are used by the end of round credits roll.
 
-/decl/modpack/proc/get_player_panel_options(var/mob/M)
+/decl/modpack/proc/get_player_panel_options(var/mob/M) as text
 	return
 
 /decl/modpack/proc/pre_initialize()
@@ -70,11 +70,11 @@
 		. = "<hr><br><center><b><font size = 3>Modpacks List</font></b></center><br><hr><br>"
 		for(var/modpack in SSmodpacks.loaded_modpacks)
 			var/decl/modpack/M = SSmodpacks.loaded_modpacks[modpack]
-			
+
 			if(M.name)
 				. += "<div class = 'statusDisplay'>"
 				. += "<center><b>[M.name]</b></center>"
-				
+
 				if(M.desc || M.author)
 					. += "<br>"
 					if(M.desc)

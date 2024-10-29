@@ -20,7 +20,7 @@
 
 	var/glasses_hud_type
 	var/obj/screen/screen_overlay
-	var/obj/item/clothing/glasses/hud/hud // Hud glasses, if any
+	var/obj/item/clothing/glasses/hud/hud as obj|null|OD_PATH(/obj/item/clothing/glasses/hud) // Hud glasses, if any
 	var/activation_sound =   'sound/items/goggles_charge.ogg'
 	var/deactivation_sound // set this if you want a sound on deactivation
 	var/toggle_on_message =  "You activate the optical matrix on $ITEM$."

@@ -19,7 +19,7 @@
 	scale_max_damage_to_species_health = FALSE
 	transfer_brainmob_with_organ = TRUE
 	var/locked = FALSE
-	var/obj/item/organ/internal/brain/holding_brain = /obj/item/organ/internal/brain
+	var/obj/item/organ/internal/brain/holding_brain = /obj/item/organ/internal/brain as obj|null|OD_PATH(/obj/item/organ/internal/brain)
 
 /obj/item/organ/internal/brain_interface/is_preserved()
 	return TRUE

@@ -8,7 +8,7 @@
 	var/const/MAIN_CHANNEL = "Main Frequency"
 	var/lawchannel = MAIN_CHANNEL // Default channel on which to state laws
 	var/list/stating_laws = list()// Channels laws are currently being stated on
-	var/obj/item/radio/silicon_radio
+	var/obj/item/radio/silicon_radio as anything
 
 	var/list/hud_list[10]
 	var/list/speech_synthesizer_langs = list()	//which languages can be vocalized by the speech synthesizer
@@ -18,7 +18,7 @@
 	var/speak_exclamation = "declares"
 	var/speak_query = "queries"
 	var/pose //Yes, now AIs can pose too.
-	var/obj/item/camera/siliconcam/silicon_camera = null //photography
+	var/obj/item/camera/siliconcam/silicon_camera = null as anything //photography
 	var/local_transmit //If set, can only speak to others of the same type within a short range.
 
 	var/sensor_mode = 0 //Determines the current HUD.
@@ -26,7 +26,7 @@
 	var/next_alarm_notice
 	var/list/datum/alarm/queued_alarms = new()
 
-	var/obj/item/card/id/idcard = /obj/item/card/id/synthetic
+	var/obj/item/card/id/idcard = /obj/item/card/id/synthetic as anything
 	// Various machinery stock parts used by stuff like OS (should be merged with above at some point)
 	var/list/stock_parts = list()
 	var/list/starting_stock_parts = list(

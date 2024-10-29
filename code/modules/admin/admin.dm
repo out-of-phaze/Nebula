@@ -1282,7 +1282,7 @@ var/global/BSACooldown = 0
 		M = input("Select mob.", "Select mob.") as null|anything in global.player_list
 	if(!istype(M))
 		return
-	var/datum/nano_module/skill_ui/NM = /datum/nano_module/skill_ui
+	var/datum/nano_module/skill_ui/NM = /datum/nano_module/skill_ui as OD_PATH(/datum/nano_module/skill_ui)|OD_INST(/datum/nano_module/skill_ui)
 	if(is_admin(usr))
 		NM = /datum/nano_module/skill_ui/admin //They get the fancy version that lets you change skills and debug stuff.
 	NM = new NM(usr, override = M.skillset)

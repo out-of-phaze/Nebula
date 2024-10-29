@@ -247,7 +247,7 @@ var/global/list/STANDARD_AIRMIX = list(
 		zone = null
 
 /turf/remove_air(amount as num)
-	var/datum/gas_mixture/GM = return_air()
+	var/datum/gas_mixture/GM = return_air() as OD_INST(/datum/gas_mixture)
 	return GM.remove(amount)
 
 /turf/proc/assume_gas(gasid, moles, temp = null)
@@ -272,9 +272,9 @@ var/global/list/STANDARD_AIRMIX = list(
 	return air
 
 // Returns the external air if this turf is outside, modified by weather and heat sources. Outside checks do not occur in this proc!
-/turf/proc/get_external_air(include_heat_sources = TRUE)
+/turf/proc/get_external_air(include_heat_sources = TRUE) as OD_INST(/datum/gas_mixture)|null
 	var/datum/level_data/level = SSmapping.levels_by_z[z]
-	var/datum/gas_mixture/gas = level.get_exterior_atmosphere()
+	var/datum/gas_mixture/gas = level.get_exterior_atmosphere() as OD_INST(/datum/gas_mixture)|null
 	if(!include_heat_sources)
 		return gas
 

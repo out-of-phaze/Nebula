@@ -63,7 +63,7 @@
 	var/decl/sprite_accessory_category/acc_category = GET_DECL(accessory_category)
 	var/list/valid_styles = species?.get_available_accessories(root_bodytype, accessory_category)
 
-	var/decl/sprite_accessory/new_style
+	var/decl/sprite_accessory/new_style as OD_INST(/decl/sprite_accessory)|OD_PATH(/decl/sprite_accessory)|null
 	if(length(valid_styles))
 		new_style = pick(valid_styles)
 	else

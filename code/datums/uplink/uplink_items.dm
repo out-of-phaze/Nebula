@@ -31,7 +31,7 @@ var/global/datum/uplink/uplink = new()
 	var/desc
 	var/item_cost = 0
 	var/list/antag_costs = list()			// Allows specific antag roles to purchase at a different cost
-	var/datum/uplink_category/category		// Item category
+	var/datum/uplink_category/category as OD_PATH(/datum/uplink_category)|null // Item category
 	/// Antag roles this item is displayed to. If empty, display to all. If it includes 'Exclude", anybody except this role can view it
 	/// Examples: list(/decl/special_role/someone); list("Exclude", /decl/special_role/whoever); etc
 	var/list/decl/special_role/antag_roles

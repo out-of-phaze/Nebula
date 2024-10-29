@@ -9,9 +9,9 @@
 		/decl/emote/audible/cough,
 		/decl/emote/audible/gasp,
 		/decl/emote/audible/choke
-	)
+	) as OD_LIST(OD_PATH(/decl/emote))
 	var/list/allergy_faint_emotes = list(
 		/decl/emote/visible/pale,
 		/decl/emote/visible/shiver,
 		/decl/emote/visible/twitch
-	)
+	) as OD_LIST(OD_PATH(/decl/emote))

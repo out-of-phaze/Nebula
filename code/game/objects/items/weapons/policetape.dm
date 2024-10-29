@@ -50,7 +50,7 @@ var/global/list/image/hazard_overlays //Cached hazard floor overlays for the bar
 	w_class            = ITEM_SIZE_SMALL
 	var/tmp/turf/start                             //The turf we started unrolling from
 	var/tmp/weakref/unroller                       //The mob currently unrolling us
-	var/decl/barricade_tape_template/tape_template //Template containing details on how the tape roll will look and behave, along with what it will place down
+	var/decl/barricade_tape_template/tape_template as OD_PATH(/decl/barricade_tape_template)|OD_INST(/decl/barricade_tape_template)|null //Template containing details on how the tape roll will look and behave, along with what it will place down
 
 /obj/item/stack/tape_roll/barricade_tape/Initialize()
 	. = ..()
@@ -207,7 +207,7 @@ var/global/list/image/hazard_overlays //Cached hazard floor overlays for the bar
 	var/neighbors    = 0                              //Contains all the direction flags of all the neighboring tape_barricades
 	var/is_lifted    = 0                              //Whether the tape is lifted and we're allowing everyone passage.
 	var/is_crumpled  = 0                              //Whether the tape was damaged
-	var/decl/barricade_tape_template/tape_template   //Details about the behavior and looks of the barricade
+	var/decl/barricade_tape_template/tape_template as OD_PATH(/decl/barricade_tape_template)|OD_INST(/decl/barricade_tape_template)|null //Details about the behavior and looks of the barricade
 
 /obj/structure/tape_barricade/Initialize(ml, _mat, _reinf_mat, var/decl/barricade_tape_template/_tape_template)
 	. = ..()

@@ -99,7 +99,7 @@
 	/// Header for root traits in char prefs.
 	var/category
 	/// Parent/prerequisite for this trait.
-	var/decl/trait/parent
+	var/decl/trait/parent as OD_INST(/decl/trait)|OD_PATH(/decl/trait)|null
 	/// Aspects with this trait as a parent
 	var/list/children
 	/// Typelist of traits that prevent this one from being taken

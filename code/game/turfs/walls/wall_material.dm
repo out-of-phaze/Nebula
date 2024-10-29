@@ -1,7 +1,7 @@
 /turf/wall/get_default_material()
 	. = GET_DECL(DEFAULT_WALL_MATERIAL)
 
-/turf/wall/set_turf_materials(decl/material/new_material, decl/material/new_reinf_material, force, decl/material/new_girder_material, skip_update)
+/turf/wall/set_turf_materials(decl/material/new_material as anything, decl/material/new_reinf_material as anything, force, decl/material/new_girder_material as anything, skip_update)
 
 	if(ispath(new_material))
 		new_material = GET_DECL(new_material)

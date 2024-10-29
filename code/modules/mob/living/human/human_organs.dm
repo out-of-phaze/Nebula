@@ -1,17 +1,17 @@
 /// organ-related variables, see organ.dm and human_organs.dm, shouldn't be accessed directly
 /mob/living/human
 	/// organs we check until they are good.
-	var/list/bad_external_organs
+	var/list/bad_external_organs as OD_LIST(/obj/item/organ/external)
 	/// organs grouped by category, largely used for stance calc
-	var/list/organs_by_category
+	var/list/organs_by_category as OD_MAP(text, /obj/item/organ)
 	/// organs indexed by organ_tag
-	var/list/organs_by_tag
+	var/list/organs_by_tag as OD_MAP(text, /obj/item/organ)
 	/// unassociated list of internal organs
-	var/tmp/list/internal_organs
+	var/tmp/list/internal_organs as OD_LIST(/obj/item/organ/internal)
 	/// unassociated list of external organs
-	var/tmp/list/external_organs
+	var/tmp/list/external_organs as OD_LIST(/obj/item/organ/external)
 
-/mob/living/human/get_organ(var/organ_tag, var/expected_type = /obj/item/organ)
+/mob/living/human/get_organ(var/organ_tag as text, var/expected_type = /obj/item/organ as OD_PATH(/obj/item/organ))
 	RETURN_TYPE(expected_type)
 	var/obj/item/organ = LAZYACCESS(organs_by_tag, organ_tag)
 	if(!expected_type || istype(organ, expected_type))

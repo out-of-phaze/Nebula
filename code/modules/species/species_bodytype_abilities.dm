@@ -1,5 +1,5 @@
 /decl/bodytype
-	var/list/ability_handlers
+	var/list/ability_handlers as OD_LIST(OD_PATH(/datum/ability_handler))|null
 
 /decl/bodytype/proc/grant_abilities(mob/living/subject)
 	if(!istype(subject) || !length(ability_handlers))

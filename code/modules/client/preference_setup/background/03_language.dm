@@ -94,7 +94,7 @@
 		if(user.has_admin_rights() || ((lang.flags & LANG_FLAG_WHITELISTED) && is_alien_whitelisted(user, lang)))
 			allowed_languages[thing] = TRUE
 
-/datum/category_item/player_setup_item/background/languages/proc/is_allowed_language(var/mob/user, var/decl/language/lang)
+/datum/category_item/player_setup_item/background/languages/proc/is_allowed_language(var/mob/user, var/decl/language/lang as OD_INST(/decl/language)|OD_PATH(/decl/language)|null)
 	if(ispath(lang, /decl/language))
 		lang = GET_DECL(lang)
 	if(!istype(lang) || (lang.flags & LANG_FLAG_FORBIDDEN))

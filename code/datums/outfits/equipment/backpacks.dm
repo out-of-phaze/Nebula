@@ -46,9 +46,9 @@
 /* Code */
 /decl/backpack_outfit
 	var/flags
-	var/name
-	var/path
-	var/is_default = FALSE
+	var/name as text|null
+	var/path as OD_PATH(/obj/item)|null
+	var/is_default = FALSE as OD_BOOL
 	var/list/tweaks
 
 /decl/backpack_outfit/Initialize()

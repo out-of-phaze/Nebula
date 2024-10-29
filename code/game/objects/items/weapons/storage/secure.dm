@@ -17,7 +17,7 @@
 	material = /decl/material/solid/metal/steel
 	abstract_type = /obj/item/secure_storage
 	///The type of lockable extension to use for this secure storage.
-	var/lock_type = /datum/extension/lockable/storage
+	var/lock_type = /datum/extension/lockable/storage as OD_PATH(/datum/extension/lockable/storage)
 	///An overlay displayed while the thing is being hacked
 	var/overlay_hack       = "overlay-hack"
 	///An overlay displayed after the thing has been emagged

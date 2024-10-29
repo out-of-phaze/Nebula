@@ -20,8 +20,8 @@
 	// Reference data.
 	var/datum/mob_snapshot/organ_appearance
 	var/mob/living/human/owner      // Current mob owning the organ.
-	var/decl/species/species               // Original species.
-	var/decl/bodytype/bodytype             // Original bodytype.
+	var/decl/species/species as OD_PATH(/decl/species)|OD_INST(/decl/species)|null // Original species.
+	var/decl/bodytype/bodytype as OD_PATH(/decl/bodytype)|OD_INST(/decl/bodytype)|null // Original bodytype.
 	var/list/ailments                      // Current active ailments if any.
 	var/meat_name                          // Taken from first owner.
 
@@ -123,7 +123,7 @@
 	if(organ_appearance.root_bodytype)
 		set_bodytype(organ_appearance.root_bodytype)
 
-/obj/item/organ/proc/set_bodytype(decl/bodytype/new_bodytype, override_material = null, apply_to_internal_organs = TRUE)
+/obj/item/organ/proc/set_bodytype(decl/bodytype/new_bodytype as OD_INST(/decl/bodytype)|OD_PATH(/decl/bodytype), override_material = null, apply_to_internal_organs = TRUE)
 	SHOULD_CALL_PARENT(TRUE)
 	if(isnull(new_bodytype))
 		PRINT_STACK_TRACE("Null bodytype passed to set_bodytype!")

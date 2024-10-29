@@ -40,18 +40,18 @@
  * TYPE_PROC_REF(/some/type/, some_proc_here)
  */
 /datum/callback
-	var/datum/object = GLOBAL_PROC
+	var/datum/object = GLOBAL_PROC as text|OD_INST(/datum)
 	var/delegate
 	var/list/arguments
 
-/datum/callback/New(thingtocall, proctocall, ...)
+/datum/callback/New(thingtocall as text|OD_INST(/datum), proctocall as text|OD_PATH(/proc), ...)
 	if (thingtocall)
 		object = thingtocall
 	delegate = proctocall
 	if (length(args) > 2)
 		arguments = args.Copy(3)
 
-/proc/ImmediateInvokeAsync(thingtocall, proctocall, ...)
+/proc/ImmediateInvokeAsync(thingtocall as text|OD_INST(/datum), proctocall as text|OD_PATH(/proc), ...)
 	set waitfor = FALSE
 
 	if (!thingtocall)

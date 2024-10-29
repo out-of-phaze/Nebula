@@ -7,8 +7,8 @@
 	anchored = TRUE
 	material = /decl/material/solid/metal/steel
 	tool_interaction_flags = TOOL_INTERACTION_ANCHOR | TOOL_INTERACTION_DECONSTRUCT
-	var/list/oxygen_tanks =   6
-	var/list/hydrogen_tanks = 6
+	var/list/oxygen_tanks =   6 as num | OD_LIST(OD_INST(/obj/item/tank/oxygen)) | null
+	var/list/hydrogen_tanks = 6 as num | OD_LIST(OD_INST(/obj/item/tank/hydrogen)) | null
 
 /obj/structure/tank_rack/Initialize()
 	. = ..()

@@ -32,20 +32,20 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	                               //Also including them lets us override already created jobs, letting us keep the datums to a minimum mostly.
 	                               //This is probably a lot longer explanation than it needs to be.
 
-	var/station_name  = "BAD Station"
-	var/station_short = "Baddy"
-	var/dock_name     = "THE PirateBay"
-	var/boss_name     = "Captain Roger"
-	var/boss_short    = "Cap'"
-	var/company_name  = "BadMan"
-	var/company_short = "BM"
-	var/system_name = "Uncharted System"
-	var/ground_noun = "ground"
+	var/station_name  = "BAD Station" as text
+	var/station_short = "Baddy" as text
+	var/dock_name     = "THE PirateBay" as text
+	var/boss_name     = "Captain Roger" as text
+	var/boss_short    = "Cap'" as text
+	var/company_name  = "BadMan" as text
+	var/company_short = "BM" as text
+	var/system_name = "Uncharted System" as text
+	var/ground_noun = "ground" as text
 
-	var/default_announcement_frequency = "Common"
+	var/default_announcement_frequency = "Common" as text
 
 	// Current game year. Uses current system year + game_year num.
-	var/game_year = 288
+	var/game_year = 288 as num
 
 	/**
 	 * Associative list of network URIs to a list with their display name, color, and "req_access formated" needed access list.
@@ -53,7 +53,7 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	 */
 	var/list/map_admin_faxes
 
-	var/map_tech_level = MAP_TECH_LEVEL_SPACE
+	var/map_tech_level = MAP_TECH_LEVEL_SPACE as num
 
 	var/shuttle_docked_message
 	var/shuttle_leaving_dock
@@ -75,13 +75,13 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	var/allowed_latejoin_spawns = list(
 		/decl/spawnpoint/arrivals
 	)
-	var/default_spawn = /decl/spawnpoint/arrivals
+	var/default_spawn = /decl/spawnpoint/arrivals as OD_PATH(/decl/spawnpoint)|null
 
 	var/flags = 0
-	var/evac_controller_type = /datum/evacuation_controller
+	var/evac_controller_type = /datum/evacuation_controller as OD_PATH(/datum/evacuation_controller)|null
 	var/list/overmap_ids // Assoc list of overmap ID to overmap type, leave empty to disable overmap.
 
-	var/pray_reward_type = /obj/item/food/cookie // What reward should be given by admin when a prayer is received?
+	var/pray_reward_type = /obj/item/food/cookie as OD_PATH(/obj/item) // What reward should be given by admin when a prayer is received?
 
 	// The list of lobby screen images to pick() from.
 	var/list/lobby_screens = list('icons/default_lobby.png')
@@ -89,22 +89,22 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	// The track that will play in the lobby screen.
 	var/decl/music_track/lobby_track
 	// The list of lobby tracks to pick() from. If left unset will randomly select among all available /music_track subtypes.
-	var/list/lobby_tracks = list()
+	var/list/lobby_tracks = list() as OD_LIST(OD_PATH(/decl/music_track))
 
 	// A server logo displayed on the taskbar and top-left part of the window. Leave null for the default DM icon.
 	var/window_icon
 
 	// Sounds played on roundstart
-	var/list/welcome_sound = 'sound/AI/welcome.ogg'
+	var/list/welcome_sound = 'sound/AI/welcome.ogg' as anything
 	// Sounds played with end titles (credits)
 	var/list/credit_sound = list('sound/music/THUNDERDOME.ogg', 'sound/music/europa/Chronox_-_03_-_In_Orbit.ogg', 'sound/music/europa/asfarasitgets.ogg')
 	// Sounds played on server reboot
 	var/list/reboot_sound = list('sound/AI/newroundsexy.ogg','sound/misc/apcdestroyed.ogg','sound/misc/bangindonk.ogg')
 
-	var/default_law_type = /datum/ai_laws/asimov  // The default lawset use by synth units, if not overriden by their laws var.
-	var/security_state = /decl/security_state/default // The default security state system to use.
+	var/default_law_type = /datum/ai_laws/asimov as OD_PATH(/datum/ai_laws) // The default lawset use by synth units, if not overriden by their laws var.
+	var/security_state = /decl/security_state/default as OD_PATH(/decl/security_state) // The default security state system to use.
 
-	var/id_hud_icons = 'icons/mob/hud.dmi' // Used by the ID HUD (primarily sechud) overlay.
+	var/id_hud_icons = 'icons/mob/hud.dmi' as icon // Used by the ID HUD (primarily sechud) overlay.
 
 	var/num_exoplanets = 0
 	var/force_exoplanet_type // Used to override exoplanet weighting and always pick the same exoplanet.
@@ -121,25 +121,25 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	var/starting_money = 75000		       // Money in station account
 	var/department_money = 5000		       // Money in department accounts
 	var/salary_modifier	= 1			       // Multiplier to starting character money
-	var/passport_type = /obj/item/passport // Item type to grant people on join.
+	var/passport_type = /obj/item/passport as OD_PATH(/obj/item)|null // Item type to grant people on join.
 
-	var/list/station_departments = list()//Gets filled automatically depending on jobs allowed
+	var/list/station_departments = list() as OD_LIST(OD_PATH(/decl/department))//Gets filled automatically depending on jobs allowed
 
-	var/default_species = SPECIES_HUMAN
+	var/default_species = SPECIES_HUMAN as text
 
 	var/list/available_background_info = list(
 		/decl/background_category/homeworld = list(/decl/background_detail/location/other),
 		/decl/background_category/faction =   list(/decl/background_detail/faction/other),
 		/decl/background_category/heritage =   list(/decl/background_detail/heritage/other),
 		/decl/background_category/religion =  list(/decl/background_detail/religion/other)
-	)
+	) as OD_MAP(OD_PATH(/decl/background_category), OD_LIST(OD_PATH(/decl/background_detail)))
 
 	var/list/default_background_info = list(
 		/decl/background_category/homeworld = /decl/background_detail/location/other,
 		/decl/background_category/faction =   /decl/background_detail/faction/other,
 		/decl/background_category/heritage =   /decl/background_detail/heritage/other,
 		/decl/background_category/religion =  /decl/background_detail/religion/other
-	)
+	) as OD_MAP(OD_PATH(/decl/background_category), OD_PATH(/decl/background_detail))
 
 	var/access_modify_region = list(
 		ACCESS_REGION_SECURITY = list(access_hos, access_change_ids),
@@ -149,8 +149,8 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		ACCESS_REGION_COMMAND = list(access_change_ids),
 		ACCESS_REGION_GENERAL = list(access_change_ids),
 		ACCESS_REGION_SUPPLY = list(access_change_ids)
-	)
-	var/secrets_directory
+	) as OD_MAP(num, OD_LIST(text))
+	var/secrets_directory as text|null
 
 	/// A list of /decl/loadout_category types which will be available for characters made on this map. Uses all categories if null.
 	var/list/decl/loadout_category/loadout_categories
@@ -162,10 +162,10 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	var/list/decl/starting_cash_choice/starting_cash_choices
 
 	/// A reagent used to prefill lanterns.
-	var/default_liquid_fuel_type = /decl/material/liquid/fuel
+	var/default_liquid_fuel_type = /decl/material/liquid/fuel as OD_PATH(/decl/material)
 
 	/// Decl list of backpacks available to outfits and in character generation.
-	var/list/_available_backpacks
+	var/list/_available_backpacks as OD_MAP(OD_PATH(/decl/backpack_outfit), OD_INST(/decl/backpack_outfit))
 	var/backpacks_setup = FALSE
 
 	var/list/char_preview_bgstate_options = list(
@@ -178,11 +178,11 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		"dark",
 		"plating",
 		"reinforced"
-	)
+	) as OD_LIST(text)
 	var/background_categories_generated = FALSE
-	var/list/_background_categories
+	var/list/_background_categories as OD_MAP(OD_PATH(/decl/background_category), OD_INST(/decl/background_category))
 
-/datum/map/proc/get_background_categories()
+/datum/map/proc/get_background_categories() as OD_MAP(OD_PATH(/decl/background_category), OD_INST(/decl/background_category))|null
 	if(!background_categories_generated)
 		if(isnull(_background_categories))
 			_background_categories = decls_repository.get_decls_of_type(/decl/background_category)
@@ -192,8 +192,8 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		background_categories_generated = TRUE
 	return _background_categories
 
-/datum/map/proc/get_random_location()
-	var/list/options = list()
+/datum/map/proc/get_random_location() as OD_INST(/decl/background_detail/location)|null
+	var/list/options = list() as /list(OD_PATH(/decl/background_detail/location))
 	for(var/cat_type in available_background_info)
 		var/decl/background_category/background_cat = GET_DECL(cat_type)
 		if(istype(background_cat) && (background_cat.background_flags & BACKGROUND_FLAG_LOCATION))
@@ -202,7 +202,7 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		return GET_DECL(pick(options))
 	return GET_DECL(/decl/background_detail/location/other)
 
-/datum/map/proc/get_lobby_track(var/exclude)
+/datum/map/proc/get_lobby_track(var/exclude) as OD_INST(/decl/music_track)|null
 	var/lobby_track_type
 	if(LAZYLEN(lobby_tracks) == 1)
 		lobby_track_type = lobby_tracks[1]
@@ -212,7 +212,7 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		lobby_track_type = pick(decls_repository.get_decl_paths_of_subtype(/decl/music_track) - exclude)
 	return GET_DECL(lobby_track_type)
 
-/datum/map/proc/get_available_backpacks()
+/datum/map/proc/get_available_backpacks() as OD_MAP(OD_PATH(/decl/backpack_outfit), OD_INST(/decl/backpack_outfit))
 	if(!backpacks_setup)
 		backpacks_setup = TRUE
 		if(length(_available_backpacks))
@@ -373,7 +373,7 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 #endif
 
 ///Returns an associative list of all the planet templates we get to pick from. The key is the template name, and the value is the template instance.
-/datum/map/proc/get_all_planet_templates()
+/datum/map/proc/get_all_planet_templates() as OD_MAP(text, OD_INST(/datum/map_template))
 	. = list()
 	var/list/exoplanet_templates = SSmapping.get_templates_by_category(MAP_TEMPLATE_CATEGORY_EXOPLANET)
 	if(islist(exoplanet_templates))
@@ -401,7 +401,7 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 #endif
 
 // By default return a random accessible z-level, or the current level if one is unavailable
-/datum/map/proc/get_transit_zlevel(var/current_z_level)
+/datum/map/proc/get_transit_zlevel(var/current_z_level as num) as num
 	var/list/candidates = SSmapping.accessible_z_levels.Copy()
 	candidates.Remove(num2text(current_z_level))
 
@@ -434,7 +434,7 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	to_chat(victim, "<h2>Current map information</h2>")
 	to_chat(victim, get_map_info())
 
-/datum/map/proc/get_map_info()
+/datum/map/proc/get_map_info() as text
 	return "No map information available"
 
 /datum/map/proc/bolt_saferooms()
@@ -482,10 +482,10 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 /datum/map/proc/get_radio_chatter_types()
 	return
 
-/datum/map/proc/get_universe_end_evac_areas()
+/datum/map/proc/get_universe_end_evac_areas() as OD_LIST(OD_PATH(/area))
 	. = list(/area/space)
 
-/datum/map/proc/get_specops_area()
+/datum/map/proc/get_specops_area() as OD_PATH(/area)|null
 	return
 
 /datum/map/proc/summarize_roundend_for(var/mob/player)

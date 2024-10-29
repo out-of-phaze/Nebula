@@ -59,7 +59,7 @@ Class Procs:
 	air.group_multiplier = 1
 	air.volume = CELL_VOLUME
 
-/zone/proc/add(turf/T)
+/zone/proc/add(turf/T as turf)
 #ifdef ZASDBG
 	ASSERT(!invalid)
 	ASSERT(istype(T))
@@ -76,7 +76,7 @@ Class Procs:
 		SSair.active_fire_zones |= src
 	T.update_vis_contents()
 
-/zone/proc/remove(turf/T)
+/zone/proc/remove(turf/T as turf)
 #ifdef ZASDBG
 	ASSERT(!invalid)
 	ASSERT(istype(T))
@@ -94,7 +94,7 @@ Class Procs:
 	else
 		c_invalidate()
 
-/zone/proc/c_merge(var/zone/into)
+/zone/proc/c_merge(var/zone/into as OD_INST(/zone))
 #ifdef ZASDBG
 	ASSERT(!invalid)
 	ASSERT(istype(into))

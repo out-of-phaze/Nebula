@@ -18,8 +18,8 @@
 	var/interact_time = 8 SECONDS
 
 	var/list/cylinders = list()
-	var/list/max_cylinders = 6
-	var/list/prefilled = FALSE
+	var/max_cylinders = 6 as num
+	var/prefilled = FALSE as OD_BOOL
 
 /obj/machinery/nuclear_cylinder_storage/buildable
 	locked = FALSE

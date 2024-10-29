@@ -1,25 +1,25 @@
 /decl/species/proc/get_valid_shapeshifter_forms(var/mob/living/human/H)
 	return list()
 
-/decl/species/proc/get_additional_examine_text(var/mob/living/human/H)
+/decl/species/proc/get_additional_examine_text(var/mob/living/human/H) as text|null
 	return
 
-/decl/species/proc/get_knockout_message(var/mob/living/human/H)
+/decl/species/proc/get_knockout_message(var/mob/living/human/H) as text
 	return ((H && H.isSynthetic()) ? "encounters a hardware fault and suddenly reboots!" : knockout_message)
 
-/decl/species/proc/get_species_death_message(var/mob/living/human/H)
+/decl/species/proc/get_species_death_message(var/mob/living/human/H) as text
 	return ((H && H.isSynthetic()) ? "gives one shrill beep before falling lifeless." : death_message)
 
-/decl/species/proc/get_ssd(var/mob/living/human/H)
+/decl/species/proc/get_ssd(var/mob/living/human/H) as text
 	return ((H && H.isSynthetic()) ? "flashing a 'system offline' glyph on their monitor" : show_ssd)
 
-/decl/species/proc/get_species_flesh_color(var/mob/living/human/H)
+/decl/species/proc/get_species_flesh_color(var/mob/living/human/H) as color
 	return ((H && H.isSynthetic()) ? SYNTH_FLESH_COLOUR : flesh_color)
 
-/decl/species/proc/get_vision_flags(var/mob/living/human/H)
+/decl/species/proc/get_vision_flags(var/mob/living/human/H) as num
 	return vision_flags
 
-/decl/species/proc/get_surgery_overlay_icon(var/mob/living/human/H)
+/decl/species/proc/get_surgery_overlay_icon(var/mob/living/human/H) as icon|null
 	return 'icons/mob/surgery.dmi'
 
 /decl/species/proc/get_footstep(var/mob/living/human/H, var/footstep_type)

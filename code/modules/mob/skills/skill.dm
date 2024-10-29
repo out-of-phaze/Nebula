@@ -2,7 +2,7 @@
 
 	abstract_type = /decl/skill // Don't mess with this without changing how Initialize works.
 	var/name = "None"                     // Name of the skill. This is what the player sees.
-	var/decl/skill_category/category      // Category this skill belongs to.
+	var/decl/skill_category/category as OD_INST(/decl/skill_category)|OD_PATH(/decl/skill_category)|null // Category this skill belongs to.
 	var/desc = "Placeholder skill"        // Generic description of this skill.
 	var/difficulty = SKILL_AVERAGE        //Used to compute how expensive the skill is
 	var/default_max = SKILL_ADEPT         //Makes the skill capped at this value in selection unless overriden at job level.

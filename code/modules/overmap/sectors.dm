@@ -31,7 +31,7 @@ var/global/list/known_overmap_sectors
 	var/list/map_z = list()
 	var/list/associated_machinery
 
-/obj/effect/overmap/visitable/proc/get_linked_machines_of_type(var/base_type)
+/obj/effect/overmap/visitable/proc/get_linked_machines_of_type(var/base_type as OD_PATH(/obj/machinery))
 	ASSERT(ispath(base_type, /obj/machinery))
 	for(var/thing in LAZYACCESS(associated_machinery, base_type))
 		var/weakref/machine_ref = thing
@@ -41,13 +41,13 @@ var/global/list/known_overmap_sectors
 		else
 			LAZYREMOVE(associated_machinery[base_type], thing)
 
-/obj/effect/overmap/visitable/proc/unregister_machine(var/obj/machinery/machine, var/base_type)
+/obj/effect/overmap/visitable/proc/unregister_machine(var/obj/machinery/machine as OD_INST(/obj/machinery), var/base_type as OD_PATH(/obj/machinery)|null)
 	ASSERT(istype(machine))
 	base_type = base_type || machine.base_type || machine.type
 	if(islist(associated_machinery) && associated_machinery[base_type])
 		LAZYREMOVE(associated_machinery[base_type], weakref(machine))
 
-/obj/effect/overmap/visitable/proc/register_machine(var/obj/machinery/machine, var/base_type)
+/obj/effect/overmap/visitable/proc/register_machine(var/obj/machinery/machine as OD_INST(/obj/machinery), var/base_type as OD_PATH(/obj/machinery)|null)
 	ASSERT(istype(machine))
 	if(!QDELETED(machine))
 		base_type = base_type || machine.base_type || machine.type

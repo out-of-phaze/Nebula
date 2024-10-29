@@ -9,12 +9,12 @@
 	var/datum/feed_channel/parent_channel
 	var/is_admin_message = 0
 	var/icon/img = null
-	var/icon/caption = ""
+	var/caption = "" as text
 	var/time_stamp = ""
 	var/backup_body = ""
 	var/backup_author = ""
 	var/icon/backup_img = null
-	var/icon/backup_caption = ""
+	var/backup_caption = "" as text
 
 /datum/feed_channel
 	var/channel_name=""

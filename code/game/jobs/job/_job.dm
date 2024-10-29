@@ -61,7 +61,7 @@
 	var/defer_roundstart_spawn = FALSE        // If true, the job will be put off until all other jobs have been populated.
 	var/list/species_branch_rank_cache_ = list()
 
-	var/required_language
+	var/required_language as OD_PATH(/decl/language)|null
 
 	var/no_warn_unsafe                        // If true, we don't prompt the user to confirm on spawning if the environment is unsafe.
 

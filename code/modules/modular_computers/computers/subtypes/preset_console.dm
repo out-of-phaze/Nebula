@@ -1,9 +1,9 @@
 /obj/machinery/computer/modular/preset
 	var/list/default_software
-	var/datum/computer_file/program/autorun_program
+	var/datum/computer_file/program/autorun_program as OD_PATH(/datum/computer_file/program)|null
 	/// Mounts the mainframe with the corresponding key as its ID to the root directory named after the value.
 	/// Ex. list("RECORDS_MAINFRAME" = "records")
-	var/automount_disks
+	var/automount_disks as OD_MAP(text, text)
 	base_type = /obj/machinery/computer/modular
 
 /obj/machinery/computer/modular/preset/full

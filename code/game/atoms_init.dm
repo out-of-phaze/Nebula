@@ -38,7 +38,7 @@
 //Other parameters are passed from New (excluding loc)
 //Must return an Initialize hint. Defined in __DEFINES/subsystems.dm
 
-/atom/proc/Initialize(mapload, ...)
+/atom/proc/Initialize(mapload, ...) as num
 	SHOULD_CALL_PARENT(TRUE)
 	SHOULD_NOT_SLEEP(TRUE)
 

@@ -18,7 +18,7 @@
 	///Sound played when the poster is destroyed or ruined
 	var/sound_destroyed = 'sound/items/poster_ripped.ogg'
 	///Type path to the /decl for the design on this poster. At runtime is replaced with the actual /decl instance.
-	var/decl/poster_design/poster_design
+	var/decl/poster_design/poster_design as OD_INST(/decl/poster_design)|OD_PATH(/decl/poster_design)|null
 
 	///The icon state to use when the poster is ruined
 	var/ruined_icon_state = "poster_ripped"
@@ -98,7 +98,7 @@
 	if(distance <= 1)
 		to_chat(user, "The bottom right of \the [src] reads: '[poster_design.serial_number]'.")
 
-/obj/structure/sign/poster/proc/set_design(var/decl/poster_design/_design_path)
+/obj/structure/sign/poster/proc/set_design(var/decl/poster_design/_design_path as OD_INST(/decl/poster_design)|OD_PATH(/decl/poster_design)|null)
 	if(ispath(_design_path, /decl))
 		_design_path = GET_DECL(_design_path)
 	if(!istype(_design_path))
@@ -140,7 +140,7 @@
 	set_design(given_poster_type || poster_design || pick(decls_repository.get_decl_paths_of_subtype(/decl/poster_design)))
 	return ..(ml, material_key)
 
-/obj/item/poster/proc/set_design(var/decl/poster_design/_design_path)
+/obj/item/poster/proc/set_design(var/decl/poster_design/_design_path as OD_INST(/decl/poster_design)|OD_PATH(/decl/poster_design)|null)
 	if(ispath(_design_path, /decl))
 		_design_path = GET_DECL(_design_path)
 	if(_design_path == poster_design)

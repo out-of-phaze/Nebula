@@ -64,7 +64,7 @@
 /datum/gear_tweak/path
 	var/list/valid_paths
 
-/datum/gear_tweak/path/New(var/list/valid_paths)
+/datum/gear_tweak/path/New(var/list/valid_paths as OD_MAP(text, OD_PATH(/obj/item)))
 	if(!valid_paths.len)
 		CRASH("No type paths given")
 	var/list/duplicate_keys = duplicates(valid_paths)
@@ -85,13 +85,13 @@
 		valid_paths_san[path_name_san] = selection_type
 	src.valid_paths = sortTim(valid_paths, /proc/cmp_text_asc)
 
-/datum/gear_tweak/path/type/New(var/type_path)
+/datum/gear_tweak/path/type/New(var/type_path as OD_PATH(/obj/item))
 	..(atomtype2nameassoclist(type_path))
 
-/datum/gear_tweak/path/subtype/New(var/type_path)
+/datum/gear_tweak/path/subtype/New(var/type_path as OD_PATH(/obj/item))
 	..(atomtypes2nameassoclist(subtypesof(type_path)))
 
-/datum/gear_tweak/path/specified_types_list/New(var/type_paths)
+/datum/gear_tweak/path/specified_types_list/New(var/type_paths as OD_LIST(OD_PATH(/obj/item)))
 	..(atomtypes2nameassoclist(type_paths))
 
 /datum/gear_tweak/path/get_contents(var/metadata)

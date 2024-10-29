@@ -51,7 +51,7 @@ var/global/list/all_virtual_listeners = list()
 * Virtual Mob Creation *
 ***********************/
 /atom/movable
-	var/mob/observer/virtual/virtual_mob
+	var/mob/observer/virtual/virtual_mob as anything
 
 // There is a hook in the common /atom/movable/Initialize() fn.
 // The below function was also inlined in that function, as nowhere else used it.

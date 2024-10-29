@@ -2,9 +2,9 @@ var/global/list/global_listen_count = list()
 
 /datum
 	/// Tracks how many event registrations are listening to us. Used in cleanup to prevent dangling references.
-	var/event_source_count = 0
+	var/event_source_count = 0 as num
 	/// Tracks how many event registrations we are listening to. Used in cleanup to prevent dangling references.
-	var/event_listen_count = 0
+	var/event_listen_count = 0 as num
 
 /proc/cleanup_events(var/datum/source)
 	if(global.global_listen_count && global.global_listen_count[source])

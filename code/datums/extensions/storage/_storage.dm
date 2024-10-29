@@ -1,6 +1,6 @@
 /datum/storage
 	var/atom/holder
-	var/expected_type = /atom
+	var/expected_type = /atom as OD_PATH(/atom)
 
 	/// Has the storage been opened?
 	var/opened = FALSE
@@ -29,7 +29,7 @@
 	/// sound played when used. null for no sound.
 	var/use_sound = "rustle"
 	/// What storage UI do we use?
-	var/datum/storage_ui/storage_ui = /datum/storage_ui/default
+	var/datum/storage_ui/storage_ui = /datum/storage_ui/default as OD_PATH(/datum/storage_ui)|OD_INST(/datum/storage_ui)|null
 
 
 #ifdef UNIT_TEST
@@ -193,7 +193,7 @@ var/global/list/_test_storage_items = list()
 //This proc handles items being inserted. It does not perform any checks of whether an item can or can't be inserted. That's done by can_be_inserted()
 //The stop_warning parameter will stop the insertion message from being displayed. It is intended for cases where you are inserting multiple items at once,
 //such as when picking up all the items on a tile with one click.
-/datum/storage/proc/handle_item_insertion(mob/user, obj/item/W, prevent_warning, skip_update, click_params)
+/datum/storage/proc/handle_item_insertion(mob/user, obj/item/W, prevent_warning, skip_update, click_params) as OD_BOOL
 	if(!istype(W))
 		return FALSE
 	if(ismob(W.loc))

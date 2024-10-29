@@ -6,7 +6,7 @@
 	uid = "acc_hair_vox_longquills"
 
 /decl/sprite_accessory/hair/vox/get_accessory_icon(obj/item/organ/external/organ)
-	var/decl/bodytype/vox/voxtype = organ.bodytype
+	var/decl/bodytype/vox/voxtype = organ.bodytype as OD_INST(/decl/bodytype/vox)|null
 	if(istype(voxtype))
 		return voxtype.vox_hair_icon
 	return ..()

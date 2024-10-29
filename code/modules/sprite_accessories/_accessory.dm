@@ -20,11 +20,11 @@
 	abstract_type = /decl/sprite_accessory
 	decl_flags = DECL_FLAG_MANDATORY_UID
 	/// The preview name of the accessory
-	var/name
+	var/name as text|null
 	/// the icon file the accessory is located in
-	var/icon
+	var/icon as icon|null
 	/// the icon_state of the accessory
-	var/icon_state
+	var/icon_state as text|null
 	/// Restricted to specific bodytypes. null matches any
 	var/list/decl/bodytype/bodytypes_allowed
 	/// Restricted from specific bodytypes. null matches none
@@ -50,7 +50,7 @@
 	/// Flags to check when applying this accessory to the mob.
 	var/requires_appearance_flags = 0
 	/// Icon cache for various icon generation steps.
-	var/list/cached_icons = list()
+	var/list/cached_icons = list() as OD_MAP(text, icon)
 	/// Whether or not this overlay should be trimmed to fit the base bodypart icon.
 	var/mask_to_bodypart = FALSE
 	/// What blend mode to use when colourizing this accessory.
@@ -86,7 +86,7 @@
 /decl/sprite_accessory/proc/refresh_mob(var/mob/living/subject)
 	return
 
-/decl/sprite_accessory/proc/accessory_is_available(mob/owner, decl/species/species, decl/bodytype/bodytype, list/traits)
+/decl/sprite_accessory/proc/accessory_is_available(mob/owner, decl/species/species, decl/bodytype/bodytype, list/traits) as OD_BOOL
 	if(species)
 		var/species_is_permitted = TRUE
 		if(species_allowed)
@@ -135,7 +135,7 @@
 /decl/sprite_accessory/proc/get_hidden_substitute()
 	return
 
-/decl/sprite_accessory/proc/is_hidden(var/obj/item/organ/external/organ)
+/decl/sprite_accessory/proc/is_hidden(var/obj/item/organ/external/organ) as OD_BOOL
 	if(!organ?.owner)
 		return FALSE
 	if(hidden_by_gear_slot)
@@ -145,28 +145,28 @@
 				if(hiding && (hiding.flags_inv & hidden_by_gear_flag))
 					return TRUE
 		else
-			var/obj/item/hiding = organ.owner.get_equipped_item(hidden_by_gear_slot)
-			return hiding && (hiding.flags_inv & hidden_by_gear_flag)
+			var/obj/item/hiding = organ.owner.get_equipped_item(hidden_by_gear_slot) as OD_INST(/obj/item)|null
+			return (hiding && (hiding.flags_inv & hidden_by_gear_flag)) ? TRUE : FALSE
 	return FALSE
 
-/decl/sprite_accessory/proc/get_accessory_icon(var/obj/item/organ/external/organ)
+/decl/sprite_accessory/proc/get_accessory_icon(var/obj/item/organ/external/organ) as icon
 	return icon
 
-/decl/sprite_accessory/proc/can_be_groomed_with(obj/item/organ/external/organ, obj/item/grooming/tool)
+/decl/sprite_accessory/proc/can_be_groomed_with(obj/item/organ/external/organ, obj/item/grooming/tool) as num
 	if(istype(tool) && (grooming_flags & tool.grooming_flags))
 		return GROOMING_RESULT_SUCCESS
 	return GROOMING_RESULT_FAILED
 
-/decl/sprite_accessory/proc/get_grooming_descriptor(grooming_result, obj/item/organ/external/organ, obj/item/grooming/tool)
+/decl/sprite_accessory/proc/get_grooming_descriptor(grooming_result, obj/item/organ/external/organ, obj/item/grooming/tool) as text
 	return "mystery grooming target"
 
-/decl/sprite_accessory/proc/get_default_accessory_metadata()
+/decl/sprite_accessory/proc/get_default_accessory_metadata() as OD_MAP(OD_PATH(/decl/sprite_accessory_metadata), anything)
 	. = list()
 	for(var/metadata_type in accessory_metadata_types)
 		var/decl/sprite_accessory_metadata/metadata_decl = GET_DECL(metadata_type)
 		.[metadata_type] = metadata_decl.default_value
 
-/decl/sprite_accessory/proc/validate_cached_icon_metadata(list/metadata)
+/decl/sprite_accessory/proc/validate_cached_icon_metadata(list/metadata) as OD_MAP(OD_PATH(/decl/sprite_accessory_metadata), anything)
 	LAZYINITLIST(metadata)
 	for(var/metadata_type in accessory_metadata_types)
 		var/decl/sprite_accessory_metadata/metadata_decl = GET_DECL(metadata_type)
@@ -174,13 +174,13 @@
 			metadata[metadata_type] = metadata_decl.default_value
 	return metadata
 
-/decl/sprite_accessory/proc/get_cached_accessory_icon_key(var/obj/item/organ/external/organ, var/list/metadata)
-	. = list(organ.bodytype, organ.icon_state)
+/decl/sprite_accessory/proc/get_cached_accessory_icon_key(var/obj/item/organ/external/organ, var/list/metadata) as text
+	var/list/out = list(organ.bodytype, organ.icon_state)
 	for(var/metadata_type in accessory_metadata_types)
-		. += LAZYACCESS(metadata, metadata_type) || "null"
-	return JOINTEXT(.)
+		out += LAZYACCESS(metadata, metadata_type) || "null"
+	return JOINTEXT(out)
 
-/decl/sprite_accessory/proc/get_cached_accessory_icon(var/obj/item/organ/external/organ, var/list/metadata)
+/decl/sprite_accessory/proc/get_cached_accessory_icon(var/obj/item/organ/external/organ, var/list/metadata) as icon|null
 
 	if(!icon_state || !istype(organ))
 		return null
@@ -190,7 +190,7 @@
 		return null
 
 	var/cache_key = get_cached_accessory_icon_key(organ, metadata)
-	var/icon/accessory_icon = cached_icons[cache_key]
+	var/icon/accessory_icon = cached_icons[cache_key] as icon|null
 	if(!accessory_icon)
 
 		// make a new one to avoid mutating the base
@@ -246,7 +246,7 @@
 
 	return accessory_icon
 
-/decl/sprite_accessory/proc/update_metadata(list/new_metadata, list/old_metadata)
+/decl/sprite_accessory/proc/update_metadata(list/new_metadata, list/old_metadata) as OD_MAP(OD_PATH(/decl/sprite_accessory_metadata), anything)
 	if(!islist(new_metadata) && !islist(old_metadata))
 		return get_default_accessory_metadata()
 	if(!islist(new_metadata))
@@ -261,7 +261,7 @@
 			new_metadata -= metadata_type
 	return new_metadata
 
-/decl/sprite_accessory/proc/get_random_metadata()
+/decl/sprite_accessory/proc/get_random_metadata() as OD_MAP(OD_PATH(/decl/sprite_accessory_metadata), anything)
 	return list(SAM_COLOR = get_random_colour())
 
 /decl/sprite_accessory_category/proc/prepare_character(mob/living/character, list/accessories)

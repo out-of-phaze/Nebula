@@ -348,7 +348,7 @@ SUBSYSTEM_DEF(timer)
  */
 /datum/timedevent
 	/// ID used for timers when the TIMER_STOPPABLE flag is present
-	var/id
+	var/id = TIMER_ID_NULL as text
 	/// The callback to invoke after the timer completes
 	var/datum/callback/callBack
 	/// The time at which the callback should be invoked at
@@ -376,9 +376,8 @@ SUBSYSTEM_DEF(timer)
 	/// Initial bucket position
 	var/bucket_pos = -1
 
-/datum/timedevent/New(datum/callback/callBack, wait, flags, datum/controller/subsystem/timer/timer_subsystem, hash, source)
+/datum/timedevent/New(datum/callback/callBack as OD_INST(/datum/callback), wait as num, flags, datum/controller/subsystem/timer/timer_subsystem as OD_INST(/datum/controller/subsystem/timer)|null, hash, source)
 	var/static/nextid = 1
-	id = TIMER_ID_NULL
 	src.callBack = callBack
 	src.wait = wait
 	src.flags = flags
@@ -558,7 +557,7 @@ SUBSYSTEM_DEF(timer)
  * * wait deciseconds to run the timer for
  * * flags flags for this timer, see: code\__DEFINES\subsystems.dm
  */
-/proc/_addtimer(datum/callback/callback, wait = 0, flags = 0, datum/controller/subsystem/timer/timer_subsystem, file, line)
+/proc/_addtimer(datum/callback/callback as OD_INST(/datum/callback), wait = 0 as num, flags = 0, datum/controller/subsystem/timer/timer_subsystem as OD_INST(/datum/controller/subsystem/timer)|null, file, line)
 	if (!callback)
 		CRASH("addtimer called without a callback")
 
@@ -629,7 +628,7 @@ SUBSYSTEM_DEF(timer)
  * Arguments:
  * * id a timerid or a /datum/timedevent
  */
-/proc/deltimer(id, datum/controller/subsystem/timer/timer_subsystem)
+/proc/deltimer(id as text|OD_INST(/datum/timedevent), datum/controller/subsystem/timer/timer_subsystem as OD_INST(/datum/controller/subsystem/timer)|null)
 	if (!id)
 		return FALSE
 	if (id == TIMER_ID_NULL)
@@ -651,7 +650,7 @@ SUBSYSTEM_DEF(timer)
  * Arguments:
  * * id a timerid or a /datum/timedevent
  */
-/proc/timeleft(id, datum/controller/subsystem/timer/timer_subsystem)
+/proc/timeleft(id, datum/controller/subsystem/timer/timer_subsystem as OD_INST(/datum/controller/subsystem/timer)|null)
 	if (!id)
 		return null
 	if (id == TIMER_ID_NULL)

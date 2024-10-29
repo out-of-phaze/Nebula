@@ -11,11 +11,11 @@ var/global/list/all_conveyor_switches = list()
 	desc = "A conveyor belt."
 	layer = BELOW_OBJ_LAYER	// so they appear under stuff
 	anchored = TRUE
-	var/operating = 0  // 1 if running forward, -1 if backwards, 0 if off
-	var/operable = 1   // true if can operate (no broken segments in this belt run)
-	var/forwards       // this is the default (forward) direction, set by the map dir
-	var/backwards      // hopefully self-explanatory
-	var/movedir        // the actual direction to move stuff in
+	var/operating = 0 as num // 1 if running forward, -1 if backwards, 0 if off
+	var/operable = 1 as OD_BOOL // true if can operate (no broken segments in this belt run)
+	var/forwards as OD_DIR // this is the default (forward) direction, set by the map dir
+	var/backwards as OD_DIR // hopefully self-explanatory
+	var/movedir as OD_DIR // the actual direction to move stuff in
 	var/list/affecting // the list of all items that will be moved this ptick
 
 /obj/machinery/conveyor/centcom_auto

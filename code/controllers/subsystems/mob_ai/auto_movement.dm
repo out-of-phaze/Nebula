@@ -8,7 +8,7 @@ SUBSYSTEM_DEF(automove)
 	var/list/moving_metadata = list()
 	var/list/processing_atoms
 
-/datum/controller/subsystem/automove/proc/unregister_mover(atom/movable/mover)
+/datum/controller/subsystem/automove/proc/unregister_mover(atom/movable/mover as OD_INST(/atom/movable))
 	if(!istype(mover))
 		CRASH("Invalid parameters to unregister_mover: [mover || "NULL"]")
 	if(length(moving_atoms))
@@ -18,7 +18,7 @@ SUBSYSTEM_DEF(automove)
 	if(length(processing_atoms))
 		processing_atoms -= mover
 
-/datum/controller/subsystem/automove/proc/register_mover(atom/movable/mover, controller_type, datum/automove_metadata/metadata)
+/datum/controller/subsystem/automove/proc/register_mover(atom/movable/mover as OD_INST(/atom/movable), controller_type as OD_PATH(/decl/automove_controller)|OD_INST(/decl/automove_controller), datum/automove_metadata/metadata)
 	if(!istype(mover) || (!ispath(controller_type, /decl/automove_controller) && !istype(controller_type, /decl/automove_controller)))
 		CRASH("Invalid parameters to register_mover: [controller_type || "NULL"], [mover || "NULL"]")
 

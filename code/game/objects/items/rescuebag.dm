@@ -8,7 +8,7 @@
 	origin_tech = @'{"biotech":2}'
 	material = /decl/material/solid/organic/plastic
 	matter = list(/decl/material/solid/silicon = MATTER_AMOUNT_SECONDARY)
-	var/obj/item/tank/airtank
+	var/obj/item/tank/airtank as obj|null|OD_PATH(/obj/item/tank)
 
 /obj/item/bodybag/rescue/loaded
 	airtank = /obj/item/tank/emergency/oxygen/double

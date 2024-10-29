@@ -96,7 +96,7 @@
 
 /decl/state_transition/turret/shoot/is_open(obj/machinery/turret/turret)
 	. = ..()
-	return . && turret.find_target() && turret.within_bearing()
+	return . && !isnull(turret.find_target()) && turret.within_bearing()
 
 /decl/state_transition/turret/reload
 	target = /decl/state/turret/reloading

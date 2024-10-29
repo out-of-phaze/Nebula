@@ -38,7 +38,7 @@
 	var/tip_material = /decl/material/solid/organic/bone //No ivory material :c
 
 /obj/item/cane/fancy/sword
-	var/obj/item/concealed_blade = /obj/item/knife/folding/combat/switchblade
+	var/obj/item/concealed_blade = /obj/item/knife/folding/combat/switchblade as obj|null|OD_PATH(/obj/item)
 
 /obj/item/cane/fancy/sword/Initialize()
 	if(ispath(concealed_blade))

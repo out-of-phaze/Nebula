@@ -8,7 +8,7 @@
 	w_class = ITEM_SIZE_SMALL
 	material = /decl/material/solid/metal/aluminium
 	matter = list(/decl/material/solid/fiberglass = MATTER_AMOUNT_REINFORCEMENT)
-	var/obj/item/implant/imp = null
+	var/obj/item/implant/imp = null as anything
 
 /obj/item/implanter/Initialize()
 	. = ..()

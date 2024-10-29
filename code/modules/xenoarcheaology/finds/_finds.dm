@@ -1,5 +1,5 @@
 /datum/find
-	var/decl/archaeological_find/find_type					//random according to the digsite type
+	var/decl/archaeological_find/find_type as OD_PATH(/decl/archaeological_find) //random according to the digsite type
 	var/excavation_required = 0		//random 10 - 190
 	var/view_range = 40				//how close excavation has to come to show an overlay on the turf
 	var/clearance_range = 3			//how close excavation has to come to extract the item

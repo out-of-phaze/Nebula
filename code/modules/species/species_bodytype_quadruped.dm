@@ -16,8 +16,8 @@
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot/quadruped),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right/quadruped)
 	)
-	var/ridable = TRUE
-	var/riding_offset = @"{'x':0,'y':0,'z':8}"
+	var/ridable = TRUE as OD_BOOL
+	var/riding_offset = @"{'x':0,'y':0,'z':8}" as text
 
 /decl/bodytype/quadruped/apply_appearance(var/mob/living/human/H)
 	. = ..()

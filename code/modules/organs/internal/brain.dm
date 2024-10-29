@@ -17,7 +17,7 @@
 	var/can_use_brain_interface = TRUE
 	var/should_announce_brain_damage = TRUE
 	var/oxygen_reserve = 6
-	VAR_PRIVATE/mob/living/_brainmob = /mob/living/brain
+	VAR_PRIVATE/mob/living/_brainmob = /mob/living/brain as mob|null|OD_PATH(/mob/living)
 
 /obj/item/organ/internal/brain/get_brainmob(var/create_if_missing = FALSE)
 	if(!istype(_brainmob) && create_if_missing)

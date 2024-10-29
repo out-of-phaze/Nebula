@@ -14,7 +14,7 @@
 	calls_and_responses = list(
 		new /datum/chatter_conversation/debug_one
 	)
-	
+
 /datum/chatter_conversation/debug_one/create_lines()
 	chatter_lines = list(
 		new /datum/chatter_line("Sir One",  "Dame Two", "This is $NAME$ to $TARGET$, what's our vector, Victor?"),
@@ -39,7 +39,7 @@
 	var/max_chatter_time_elapsed = 8 MINUTES
 	var/chatter_on_frequency =     PUB_FREQ
 	var/datum/chatter_conversation/current_dialogue_sequence
-	var/obj/item/radio/virtual/listener_instance = /obj/item/radio/virtual
+	var/obj/item/radio/virtual/listener_instance = /obj/item/radio/virtual as obj|null|OD_PATH(/obj/item/radio/virtual)
 	var/listener_landmark
 
 /decl/radio_chatter/Initialize()
@@ -94,7 +94,7 @@
 		next_chatter_time = world.time + rand(min_chatter_time_elapsed, max_chatter_time_elapsed)
 	else
 		next_chatter_time = world.time + rand(min_line_time, max_line_time)
-		
+
 /decl/radio_chatter/proc/hear_chat()
 	if(current_dialogue_sequence)
 		interrupted = TRUE

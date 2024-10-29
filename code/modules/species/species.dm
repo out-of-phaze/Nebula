@@ -19,7 +19,7 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 
 	var/holder_icon
 	var/list/available_bodytypes = list()
-	var/decl/bodytype/default_bodytype
+	var/decl/bodytype/default_bodytype as OD_PATH(/decl/bodytype)|OD_INST(/decl/bodytype)
 	var/base_external_prosthetics_model = /decl/bodytype/prosthetic/basic_human
 	var/base_internal_prosthetics_model
 
@@ -63,7 +63,7 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	var/organs_icon		//species specific internal organs icons
 
 	var/strength = STR_MEDIUM
-	var/show_ssd = "fast asleep"
+	var/show_ssd = "fast asleep" as text|null
 	var/short_sighted                         // Permanent weldervision.
 	var/light_sensitive                       // Ditto, but requires sunglasses to fix
 	var/blood_volume = SPECIES_BLOOD_DEFAULT  // Initial blood volume.
@@ -76,7 +76,7 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	var/assisted_langs    = list()            // The languages the species can't speak without an assisted organ.
 	var/unspeakable_langs = list()            // The languages the species can't speak at all.
 	var/list/speech_sounds                    // A list of sounds to potentially play when speaking.
-	var/list/speech_chance                    // The likelihood of a speech sound playing.
+	var/speech_chance = 0 as num              // The likelihood of a speech sound playing.
 	var/scream_verb_1p = "scream"
 	var/scream_verb_3p = "screams"
 
@@ -99,7 +99,7 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	var/paralysis_mod =  1                    // Paralysis period modifier.
 	var/weaken_mod =     1                    // Weaken period modifier.
 
-	var/vision_flags = SEE_SELF               // Same flags as glasses.
+	var/vision_flags = SEE_SELF as num        // Same flags as glasses.
 
 	// Death vars.
 	var/butchery_data = /decl/butchery_data/humanoid
@@ -111,10 +111,10 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	var/snow_slowdown_mod = 0
 
 	var/death_sound
-	var/death_message = "seizes up and falls limp, their eyes dead and lifeless..."
-	var/knockout_message = "collapses, having been knocked unconscious."
-	var/halloss_message = "slumps over, too weak to continue fighting..."
-	var/halloss_message_self = "The pain is too severe for you to keep going..."
+	var/death_message = "seizes up and falls limp, their eyes dead and lifeless..." as text
+	var/knockout_message = "collapses, having been knocked unconscious." as text
+	var/halloss_message = "slumps over, too weak to continue fighting..." as text
+	var/halloss_message_self = "The pain is too severe for you to keep going..." as text
 
 	var/sniff_message_3p = "sniffs the air."
 	var/sniff_message_1p = "You sniff the air."
@@ -125,29 +125,29 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	var/breath_type = /decl/material/gas/oxygen                 // Non-oxygen gas breathed, if any.
 	/// Material types considered noticeably poisonous when inhaled (ie. updates the toxins indicator on the HUD).
 	/// This is an associative list for speed.
-	var/poison_types = list(/decl/material/gas/chlorine = TRUE)
-	var/exhale_type = /decl/material/gas/carbon_dioxide         // Exhaled gas type.
-	var/blood_reagent = /decl/material/liquid/blood
+	var/poison_types = list(/decl/material/gas/chlorine = TRUE) as OD_MAP(OD_PATH(/decl/material), OD_BOOL)|null
+	var/exhale_type = /decl/material/gas/carbon_dioxide as OD_PATH(/decl/material)         // Exhaled gas type.
+	var/blood_reagent = /decl/material/liquid/blood as OD_PATH(/decl/material)
 
-	var/max_pressure_diff = 60                                  // Maximum pressure difference that is safe for lungs
+	var/max_pressure_diff = 60 as num                           // Maximum pressure difference that is safe for lungs
 
-	var/passive_temp_gain = 0		                            // Species will gain this much temperature every second
-	var/hazard_high_pressure = HAZARD_HIGH_PRESSURE             // Dangerously high pressure.
-	var/warning_high_pressure = WARNING_HIGH_PRESSURE           // High pressure warning.
-	var/warning_low_pressure = WARNING_LOW_PRESSURE             // Low pressure warning.
-	var/hazard_low_pressure = HAZARD_LOW_PRESSURE               // Dangerously low pressure.
-	var/body_temperature = 310.15	                            // Species will try to stabilize at this temperature.
+	var/passive_temp_gain = 0 as num                            // Species will gain this much temperature every second
+	var/hazard_high_pressure = HAZARD_HIGH_PRESSURE as num      // Dangerously high pressure.
+	var/warning_high_pressure = WARNING_HIGH_PRESSURE as num    // High pressure warning.
+	var/warning_low_pressure = WARNING_LOW_PRESSURE as num      // Low pressure warning.
+	var/hazard_low_pressure = HAZARD_LOW_PRESSURE as num        // Dangerously low pressure.
+	var/body_temperature = 310.15 as num|null                   // Species will try to stabilize at this temperature.
 	                                                            // (also affects temperature processing)
 	var/water_soothe_amount
 
 	// HUD data vars.
 	var/datum/hud_data/species_hud
 
-	var/grab_type = /decl/grab/normal/passive // The species' default grab type.
+	var/grab_type = /decl/grab/normal/passive as OD_PATH(/decl/grab) // The species' default grab type.
 
 	// Body/form vars.
 	var/list/inherent_verbs 	  // Species-specific verbs.
-	var/shock_vulnerability = 1   // The lower, the thicker the skin and better the insulation.
+	var/shock_vulnerability = 1 as num // The lower, the thicker the skin and better the insulation.
 	var/species_flags = 0         // Various specific features.
 	var/spawn_flags = 0           // Flags that specify who can spawn as this species
 	// Move intents. Earlier in list == default for that type of movement.
@@ -164,9 +164,9 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 	var/rarity_value = 1          // Relative rarity/collector value for this species.
 	                              // Determines the organs that the species spawns with and
 
-	var/obj/effect/decal/cleanable/blood/tracks/move_trail = /obj/effect/decal/cleanable/blood/tracks/footprints // What marks are left when walking
+	var/obj/effect/decal/cleanable/blood/tracks/move_trail = /obj/effect/decal/cleanable/blood/tracks/footprints as anything // What marks are left when walking
 
-	var/decl/pronouns/default_pronouns
+	var/decl/pronouns/default_pronouns as OD_PATH(/decl/pronouns)|OD_INST(/decl/pronouns)
 	var/list/available_pronouns = list(
 		/decl/pronouns,
 		/decl/pronouns/neuter/person,
@@ -204,7 +204,7 @@ var/global/const/DEFAULT_SPECIES_HEALTH = 200
 
 	var/manual_dexterity = DEXTERITY_FULL
 
-	var/datum/mob_controller/ai						// Type abused. Define with path and will automagically create. Determines behaviour for clientless mobs. This will override mob AIs.
+	var/datum/mob_controller/ai as OD_INST(/datum/mob_controller)|OD_PATH(/datum/mob_controller)|null // Type abused. Define with path and will automagically create. Determines behaviour for clientless mobs. This will override mob AIs.
 
 	var/exertion_emote_chance =    5
 	var/exertion_effect_chance =   0

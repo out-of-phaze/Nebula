@@ -146,7 +146,7 @@
 	ai = /datum/mob_controller/chick
 	holder_type = /obj/item/holder
 	var/amount_grown = 0
-	var/decl/skill/examine_skill = SKILL_BOTANY // for maps that change the default skills, or for alien eggs that need science/medical/anatomy instead
+	var/decl/skill/examine_skill = SKILL_BOTANY as OD_PATH(/decl/skill) // for maps that change the default skills, or for alien eggs that need science/medical/anatomy instead
 	var/examine_difficulty = SKILL_ADEPT
 
 /mob/living/simple_animal/chick/examine(mob/user, distance, infix, suffix)
@@ -301,7 +301,7 @@ var/global/chicken_count = 0
 
 /obj/item/food/egg
 	var/amount_grown = 0
-	var/decl/skill/examine_skill = SKILL_BOTANY // for maps that change the default skills, or for alien eggs that need science/medical/anatomy instead
+	var/decl/skill/examine_skill = SKILL_BOTANY as OD_PATH(/decl/skill)|null // for maps that change the default skills, or for alien eggs that need science/medical/anatomy instead
 	var/examine_difficulty = SKILL_ADEPT
 
 /obj/item/food/egg/examine(mob/user, distance, infix, suffix)

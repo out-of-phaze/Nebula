@@ -10,8 +10,8 @@
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	var/use_ui_template
 	var/allow_ui_config =  FALSE
-	var/turf/input_turf =  WEST
-	var/turf/output_turf = EAST
+	var/turf/input_turf =  WEST as OD_DIR|turf|null
+	var/turf/output_turf = EAST as OD_DIR|turf|null
 
 /obj/machinery/material_processing/emp_act(severity)
 	if(severity == 1 || (severity == 2 && prob(50)))

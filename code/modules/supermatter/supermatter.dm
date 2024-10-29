@@ -649,12 +649,12 @@ var/global/list/supermatter_delam_accent_sounds = list(
 	if(!Consume(null, AM))
 		return ..()
 
-/obj/machinery/power/supermatter/proc/Consume(var/mob/living/user, var/obj/item/thing, var/touched)
-	. = try_supermatter_consume(user, thing, src, touched)
-	if(. <= 0)
-		return
-	power += . * 200
-	. = !!.
+/obj/machinery/power/supermatter/proc/Consume(var/mob/living/user, var/obj/item/thing, var/touched) as OD_BOOL
+	var/consumed = try_supermatter_consume(user, thing, src, touched) as num
+	if(consumed <= 0)
+		return FALSE
+	power += consumed * 200
+	return consumed > 0
 
 /proc/supermatter_pull(var/atom/target, var/pull_range = 255, var/pull_power = STAGE_FIVE)
 	for(var/atom/A in range(pull_range, target))

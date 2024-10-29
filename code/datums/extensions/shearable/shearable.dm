@@ -7,9 +7,9 @@
 	var/next_fleece = 0
 	var/fleece_time = 5 MINUTES
 	var/fleece_type = /obj/item/fleece
-	var/decl/material/fleece_material = /decl/material/solid/organic/cloth/wool
+	var/decl/material/fleece_material = /decl/material/solid/organic/cloth/wool as OD_PATH(/decl/material)
 
-	var/decl/skill/shearing_skill = SKILL_BOTANY
+	var/decl/skill/shearing_skill = SKILL_BOTANY as OD_PATH(/decl/skill)
 	var/shearing_skill_req        = SKILL_BASIC
 
 /datum/extension/shearable/New(datum/holder, _fleece_material)

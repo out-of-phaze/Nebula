@@ -4,7 +4,7 @@
 	var/list/ability_items
 	var/datum/extension/abilities/master
 
-/datum/ability_handler/New(_master)
+/datum/ability_handler/New(_master as OD_INST(/datum/extension/abilities))
 	master = _master
 	if(!istype(master))
 		CRASH("Ability handler received invalid master!")

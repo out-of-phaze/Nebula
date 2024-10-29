@@ -18,7 +18,7 @@
 
 /obj/item/modkit/Initialize(ml, material_key)
 	if(!target_bodytype)
-		var/decl/species/species = GET_DECL(global.using_map.default_species)
+		var/decl/species/species = get_species_by_key(global.using_map.default_species)
 		target_bodytype = species.default_bodytype.bodytype_flag
 	. = ..()
 

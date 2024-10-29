@@ -26,7 +26,7 @@
 	return target
 
 /datum/objective/loot
-	var/target_obj
+	var/target_obj as null|OD_PATH(/obj)
 
 /datum/objective/loot/find_target()
 	var/loot = "an object"

@@ -10,11 +10,11 @@
 	bulk = GUN_BULK_RIFLE
 	combustion = 1
 
-	var/obj/item/stock_parts/capacitor/capacitor               // Installed capacitor. Higher rating == faster charge between shots.
+	var/obj/item/stock_parts/capacitor/capacitor as anything   // Installed capacitor. Higher rating == faster charge between shots.
 	var/removable_components = TRUE                            // Whether or not the gun can be dismantled.
 	var/gun_unreliable = 15                                    // Percentage chance of detonating in your hands.
 
-	var/obj/item/loaded                                        // Currently loaded object, for retrieval/unloading.
+	var/obj/item/loaded as anything                            // Currently loaded object, for retrieval/unloading.
 	var/load_type = /obj/item/stack/material/rods              // Type of stack to load with.
 	var/load_sheet_max = 1                                     // Maximum number of "sheets" you can load from a stack.
 	var/projectile_type = /obj/item/projectile/bullet/magnetic // Actual fire type, since this isn't throw_at rod launcher.

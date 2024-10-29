@@ -8,7 +8,7 @@
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
 	volume = 120
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME
-	var/decl/material/stopper_material = /decl/material/solid/organic/cloth/hemp
+	var/decl/material/stopper_material = /decl/material/solid/organic/cloth/hemp as OD_PATH(/decl/material)|null
 
 /obj/item/chems/waterskin/proc/get_stopper_message()
 	var/decl/material/stopper_material_instance = GET_DECL(stopper_material)

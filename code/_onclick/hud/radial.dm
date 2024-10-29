@@ -12,7 +12,7 @@ var/global/list/radial_menus = list()
 
 	var/selected_choice
 	var/list/obj/screen/elements = list()
-	var/obj/screen/radial/center/close_button
+	var/obj/screen/radial/center/close_button as OD_INST(/obj/screen/radial)|null
 	var/client/current_user
 	var/atom/anchor
 	var/image/menu_holder

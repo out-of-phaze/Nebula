@@ -69,7 +69,7 @@
 	slot_flags        = SLOT_BACK
 	w_class           = ITEM_SIZE_HUGE
 	volume            = 350
-	var/obj/item/weldingtool/weldpack/welder = /obj/item/weldingtool/weldpack
+	var/obj/item/weldingtool/weldpack/welder = /obj/item/weldingtool/weldpack as obj|null|OD_PATH(/obj/item/weldingtool/weldpack)
 
 /obj/item/chems/weldpack/populate_reagents()
 	add_to_reagents(/decl/material/liquid/fuel, reagents.maximum_volume)

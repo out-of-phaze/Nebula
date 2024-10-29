@@ -5,7 +5,7 @@
 */
 
 /mob
-	var/datum/hud/hud_used
+	var/datum/hud/hud_used as OD_INST(/datum/hud)|OD_PATH(/datum/hud)|null
 
 /mob/proc/InitializeHud()
 	if(istype(hud_used))

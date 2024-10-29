@@ -4,8 +4,8 @@
 	idle_power_usage = 10
 	layer = ABOVE_WINDOW_LAYER
 	clicksound = "button"
-	var/datum/computer/file/embedded_program/program	//the currently executing program
-	var/on = 1
+	var/datum/computer/file/embedded_program/program as OD_PATH(/datum/computer/file/embedded_program)|OD_INST(/datum/computer/file/embedded_program)|null	//the currently executing program
+	var/on = TRUE as OD_BOOL
 
 /obj/machinery/embedded_controller/Initialize(mapload, d, populate_parts)
 	if(ispath(program))

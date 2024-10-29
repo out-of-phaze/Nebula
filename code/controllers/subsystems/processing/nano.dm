@@ -36,7 +36,7 @@ PROCESSING_SUBSYSTEM_DEF(nano)
   *
   * @return /nanoui Returns the found ui, or null if none exists
   */
-/datum/controller/subsystem/processing/nano/proc/get_open_ui(mob/user, src_object, ui_key)
+/datum/controller/subsystem/processing/nano/proc/get_open_ui(mob/user, src_object, ui_key) as OD_PATH(/datum/nanoui)|null
 	var/src_object_key = "\ref[src_object]"
 	if (!open_uis[src_object_key] || !open_uis[src_object_key][ui_key])
 		return

@@ -35,7 +35,7 @@
 /datum/shuttle/autodock/multi/antag
 	warmup_time = 10 SECONDS //replaced the old move cooldown
 	 //This variable is type-abused initially: specify the landmark_tag, not the actual landmark.
-	var/obj/effect/shuttle_landmark/home_waypoint
+	var/obj/effect/shuttle_landmark/home_waypoint as anything
 
 	var/cloaked = 1
 	var/announcer

@@ -15,7 +15,7 @@
 		/decl/material/solid/silicon         = MATTER_AMOUNT_REINFORCEMENT,
 	)
 	var/icon_state_closed = "laptop-closed"
-	
+
 /obj/item/modular_computer/laptop/on_update_icon()
 	if(anchored)
 		..()

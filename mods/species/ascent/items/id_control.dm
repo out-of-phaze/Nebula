@@ -36,7 +36,7 @@
 	organ_tag = BP_SYSTEM_CONTROLLER
 	surface_accessible = TRUE
 	organ_properties = ORGAN_PROP_PROSTHETIC
-	var/obj/item/card/id/id_card = /obj/item/card/id/ascent
+	var/obj/item/card/id/id_card = /obj/item/card/id/ascent as OD_PATH(/obj/item/card/id)|obj|null
 
 /obj/item/organ/internal/controller/do_install(mob/living/human/target, obj/item/organ/external/affected, in_place, update_icon, detached)
 	. = ..()

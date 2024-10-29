@@ -1,6 +1,6 @@
 /datum
 	/// Used to indicate that this type is abstract and should not itself be instantiated.
-	var/abstract_type = /datum
+	var/abstract_type = /datum as OD_PATH(/datum)
 	/// Time when this object was destroyed.
 	var/tmp/gc_destroyed
 	/// Indicates if a processing subsystem is currenting queuing this datum

@@ -12,7 +12,7 @@
 			join_as(locate(href_list["joining"]), jobs[join_as])
 			return TRUE
 
-/datum/submap/proc/check_general_join_blockers(var/mob/new_player/joining, var/datum/job/submap/job)
+/datum/submap/proc/check_general_join_blockers(var/mob/new_player/joining, var/datum/job/submap/job) as OD_BOOL
 
 	if(!istype(job)) // This proc uses a specific type that check_latejoin_blockers() does not.
 		log_debug("Job assignment error for [name] - job does not exist or is of the incorrect type.")

@@ -49,9 +49,9 @@
 	var/target_bodytype
 
 	var/mob/living/human/occupant
-	var/obj/item/clothing/suit/space/void/suit
-	var/obj/item/clothing/head/helmet/space/helmet
-	var/obj/item/clothing/shoes/magboots/boots
+	var/obj/item/clothing/suit/space/void/suit as obj|null|OD_PATH(/obj/item/clothing/suit/space/void)
+	var/obj/item/clothing/head/helmet/space/helmet as obj|null|OD_PATH(/obj/item/clothing/head/helmet/space)
+	var/obj/item/clothing/shoes/magboots/boots as obj|null|OD_PATH(/obj/item/clothing/shoes/magboots)
 
 	wires = /datum/wires/suit_cycler
 

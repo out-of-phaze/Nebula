@@ -231,8 +231,8 @@ var/global/list/solars_list = list()
 	anchored = FALSE
 	material = /decl/material/solid/metal/steel
 	var/tracker = 0
-	var/glass_type
-	var/glass_reinforced
+	var/glass_type as OD_PATH(/decl/material)|null
+	var/glass_reinforced as OD_PATH(/decl/material)|null
 
 // Give back the glass type we were supplied with
 /obj/item/solar_assembly/proc/give_glass()

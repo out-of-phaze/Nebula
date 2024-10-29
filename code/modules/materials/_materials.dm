@@ -137,7 +137,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	var/bench_icon = 'icons/obj/structures/benches.dmi'
 	var/pew_icon = 'icons/obj/structures/pews.dmi'
 
-	var/list/stack_origin_tech = @'{"materials":1}' // Research level for stacks.
+	var/stack_origin_tech = @'{"materials":1}' as text // Research level for stacks.
 
 	// Attributes
 	/// How rare is this material in exoplanet xenoflora?
@@ -231,7 +231,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 	// Gas behavior.
 	var/gas_overlay_limit
-	var/gas_specific_heat = 20    // J/(mol*K)
+	var/gas_specific_heat = 20 as num // J/(mol*K)
 	var/gas_symbol_html
 	var/gas_symbol
 	var/gas_flags = 0
@@ -256,7 +256,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	var/inhale_met = 0
 	var/overdose = 0
 	var/scannable = 0 // Shows up on health analyzers.
-	var/color = COLOR_BEIGE
+	var/color = COLOR_BEIGE as text
 	var/color_weight = 1
 	var/cocktail_ingredient
 	var/defoliant
@@ -565,7 +565,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 #undef FALSEWALL_STATE
 
 // Return the matter comprising this material.
-/decl/material/proc/get_matter()
+/decl/material/proc/get_matter() as OD_MAP(OD_PATH(/decl/material), num)
 	var/list/temp_matter = list()
 	temp_matter[type] = SHEET_MATERIAL_AMOUNT
 	return temp_matter
@@ -582,13 +582,13 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	return (radioactivity>0) //todo
 
 //Clausius–Clapeyron relation
-/decl/material/proc/get_boiling_temp(var/pressure = ONE_ATMOSPHERE)
+/decl/material/proc/get_boiling_temp(var/pressure = ONE_ATMOSPHERE as num)
 	var/pressure_ratio = (pressure > 0)? log(pressure / ONE_ATMOSPHERE) : 0
 	return (1 / (1/max(boiling_point, TCMB)) - ((R_IDEAL_GAS_EQUATION * pressure_ratio) / (latent_heat * molar_mass)))
 
 /// Returns the phase of the matterial at the given temperature and pressure
 /// Defaults to standard temperature and pressure (20c at one atmosphere)
-/decl/material/proc/phase_at_temperature(var/temperature = T20C, var/pressure = ONE_ATMOSPHERE)
+/decl/material/proc/phase_at_temperature(var/temperature = T20C as num, var/pressure = ONE_ATMOSPHERE as num)
 	//#TODO: implement plasma temperature and do pressure checks
 	if(!isnull(boiling_point) && temperature >= get_boiling_temp(pressure))
 		return MAT_PHASE_GAS
@@ -598,7 +598,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	return MAT_PHASE_SOLID
 
 // Returns the number of mols of material for the amount of solid or liquid units passed.
-/decl/material/proc/get_mols_from_units(units, phase)
+/decl/material/proc/get_mols_from_units(units as num, phase)
 	var/ml = units*10 // Rough estimation.
 	switch(phase)
 		if(MAT_PHASE_LIQUID)
@@ -622,7 +622,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 /// Generic material product (sheets, bricks, etc). Used ALL THE TIME.
 /// May return an instance list, a single instance, or nothing if there is no instance produced.
-/decl/material/proc/create_object(var/atom/target, var/amount = 1, var/object_type, var/reinf_type)
+/decl/material/proc/create_object(var/atom/target as OD_INST(/atom), var/amount = 1, var/object_type as OD_PATH(/atom/movable)|null, var/reinf_type as OD_PATH(/decl/material)|null)
 
 	if(!object_type)
 		object_type = default_solid_form
@@ -654,18 +654,18 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 // General wall debris product placement.
 // Not particularly necessary aside from snowflakey cult girders.
-/decl/material/proc/place_dismantled_product(var/turf/target, var/is_devastated, var/amount = 2, var/drop_type)
+/decl/material/proc/place_dismantled_product(var/turf/target as turf, var/is_devastated as OD_BOOL, var/amount = 2 as num, var/drop_type as OD_PATH(/obj)|null)
 	amount = is_devastated ? floor(amount * 0.5) : amount
 	if(amount > 0)
 		return create_object(target, amount, object_type = drop_type)
 
 // As above.
-/decl/material/proc/place_shards(var/turf/target, var/amount = 1)
+/decl/material/proc/place_shards(var/turf/target as turf, var/amount = 1 as num)
 	if(shard_type)
 		return create_object(target, amount, /obj/item/shard)
 
-/**Places downa as many shards as needed for the given amount of matter units. Returns a list of all the cuttings. */
-/decl/material/proc/place_cuttings(var/turf/target, var/matter_units)
+/**Places down as many shards as needed for the given amount of matter units. Returns a list of all the cuttings. */
+/decl/material/proc/place_cuttings(var/turf/target as turf, var/matter_units as num)
 	if(!shard_type && matter_units <= 0)
 		return
 	var/list/shard_mat = atom_info_repository.get_matter_for(shard_type, type, 1)
@@ -734,12 +734,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 #define FLAMMABLE_LIQUID_DIVISOR 7
 // This doesn't apply to skin contact - this is for, e.g. extinguishers and sprays. The difference is that reagent is not directly on the mob's skin - it might just be on their clothing.
-/decl/material/proc/touch_mob(var/mob/living/M, var/amount, var/datum/reagents/holder)
+/decl/material/proc/touch_mob(var/mob/living/M as OD_INST(/mob/living), var/amount as num, var/datum/reagents/holder as OD_INST(/datum/reagents))
 	if(accelerant_value != FUEL_VALUE_NONE && amount && istype(M))
 		M.fire_stacks += floor((amount * accelerant_value)/FLAMMABLE_LIQUID_DIVISOR)
 #undef FLAMMABLE_LIQUID_DIVISOR
 
-/decl/material/proc/touch_turf(var/turf/T, var/amount, var/datum/reagents/holder) // Cleaner cleaning, lube lubbing, etc, all go here
+/decl/material/proc/touch_turf(var/turf/T as turf, var/amount as num, var/datum/reagents/holder as OD_INST(/datum/reagents)) // Cleaner cleaning, lube lubbing, etc, all go here
 
 	if(REAGENT_VOLUME(holder, type) < turf_touch_threshold)
 		return
@@ -813,7 +813,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	if(remove_dose)
 		holder.remove_reagent(type, removed)
 
-/decl/material/proc/affect_blood(var/mob/living/M, var/removed, var/datum/reagents/holder)
+/decl/material/proc/affect_blood(var/mob/living/M as mob, var/removed as num, var/datum/reagents/holder as OD_INST(/datum/reagents))
 
 	SHOULD_CALL_PARENT(TRUE)
 
@@ -864,7 +864,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	if(euphoriant)
 		SET_STATUS_MAX(M, STAT_DRUGGY, euphoriant)
 
-/decl/material/proc/affect_ingest(var/mob/living/M, var/removed, var/datum/reagents/holder)
+/decl/material/proc/affect_ingest(var/mob/living/M as mob, var/removed as num, var/datum/reagents/holder as OD_INST(/datum/reagents))
 
 	SHOULD_CALL_PARENT(TRUE)
 
@@ -872,7 +872,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	if(affect_blood_on_ingest)
 		affect_blood(M, removed * affect_blood_on_ingest, holder)
 
-/decl/material/proc/affect_inhale(var/mob/living/M, var/removed, var/datum/reagents/holder)
+/decl/material/proc/affect_inhale(var/mob/living/M as mob, var/removed as num, var/datum/reagents/holder as OD_INST(/datum/reagents))
 
 	SHOULD_CALL_PARENT(TRUE)
 
@@ -936,7 +936,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 			subject.adjust_hydration(effective_power)
 
 // Slightly different to other reagent processing - return TRUE to consume the removed amount, FALSE not to consume.
-/decl/material/proc/affect_touch(var/mob/living/M, var/removed, var/datum/reagents/holder)
+/decl/material/proc/affect_touch(var/mob/living/M as mob, var/removed as num, var/datum/reagents/holder as OD_INST(/datum/reagents)) as OD_BOOL
 
 	SHOULD_CALL_PARENT(TRUE)
 
@@ -987,7 +987,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 		holder.remove_reagent(type, REAGENT_VOLUME(holder, type))
 		. = TRUE
 
-/decl/material/proc/affect_overdose(mob/living/M, total_dose) // Overdose effect. Doesn't happen instantly.
+/decl/material/proc/affect_overdose(mob/living/M as mob, total_dose as num) // Overdose effect. Doesn't happen instantly.
 	M.add_chemical_effect(CE_TOXIN, 1)
 	M.take_damage(REM, TOX)
 
@@ -997,7 +997,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 		LAZYINITLIST(.)
 		.["allergen_flags"] |= allergen_flags
 
-/decl/material/proc/mix_data(var/datum/reagents/reagents, var/list/newdata, var/amount)
+/decl/material/proc/mix_data(var/datum/reagents/reagents as OD_INST(/datum/reagents), var/list/newdata, var/amount)
 	reagents.cached_color = null // colour masking may change
 	. = REAGENT_DATA(reagents, type)
 	if(!length(newdata) || !islist(newdata))
@@ -1047,15 +1047,15 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	SHOULD_CALL_PARENT(TRUE)
 	. = TRUE
 
-/decl/material/proc/get_value()
+/decl/material/proc/get_value() as num
 	. = value
 
-/decl/material/proc/get_presentation_name(var/obj/item/prop)
+/decl/material/proc/get_presentation_name(var/obj/item/prop) as text
 	. = glass_name || liquid_name
 	if(prop?.reagents?.total_volume)
 		. = build_presentation_name_from_reagents(prop, .)
 
-/decl/material/proc/build_presentation_name_from_reagents(var/obj/item/prop, var/supplied)
+/decl/material/proc/build_presentation_name_from_reagents(var/obj/item/prop, var/supplied) as text
 	. = supplied
 
 	if(cocktail_ingredient)
@@ -1066,12 +1066,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	if(prop.reagents.has_reagent(/decl/material/solid/ice))
 		. = "iced [.]"
 
-/decl/material/proc/get_presentation_desc(var/obj/item/prop)
+/decl/material/proc/get_presentation_desc(var/obj/item/prop) as text
 	. = glass_desc
 	if(prop?.reagents?.total_volume)
 		. = build_presentation_desc_from_reagents(prop, .)
 
-/decl/material/proc/build_presentation_desc_from_reagents(var/obj/item/prop, var/supplied)
+/decl/material/proc/build_presentation_desc_from_reagents(var/obj/item/prop, var/supplied) as text
 	. = supplied
 
 	if(cocktail_ingredient)
@@ -1094,7 +1094,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 		if(total_interacted_units <= 0)
 			return
 
-/decl/material/proc/add_burn_product(var/datum/gas_mixture/environment, var/amount)
+/decl/material/proc/add_burn_product(var/datum/gas_mixture/environment as OD_INST(/datum/gas_mixture), var/amount as num)
 	if(!environment || amount <= 0 || !burn_product)
 		return
 	environment.adjust_gas(burn_product, amount)
@@ -1102,7 +1102,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 // Returns null for no burn, empty list for burn with no products, assoc
 // matter to value list for waste products.
 // We assume a normalized mole amount for 'amount'.
-/decl/material/proc/get_burn_products(var/amount, var/burn_temperature)
+/decl/material/proc/get_burn_products(var/amount as num, var/burn_temperature as num) as null|OD_MAP(OD_PATH(/decl/material), num)
 
 	// No chance of burning.
 	if(isnull(ignition_point) && isnull(boiling_point) && !length(vapor_products))
@@ -1126,7 +1126,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	if(!isnull(boiling_point) && burn_temperature >= boiling_point)
 		LAZYSET(., type, amount)
 
-/decl/material/proc/get_reagent_name(datum/reagents/holder, phase = MAT_PHASE_LIQUID)
+/decl/material/proc/get_reagent_name(datum/reagents/holder as OD_INST(/datum/reagents), phase = MAT_PHASE_LIQUID)
 
 	if(istype(holder) && holder.reagent_data)
 		var/list/rdata = holder.reagent_data[type]
@@ -1152,7 +1152,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 	return "something"
 
-/decl/material/proc/get_reagent_color(datum/reagents/holder)
+/decl/material/proc/get_reagent_color(datum/reagents/holder as OD_INST(/datum/reagents)) as text
 	if(istype(holder) && holder.reagent_data)
 		var/list/rdata = holder.reagent_data[type]
 		if(rdata)
@@ -1161,8 +1161,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 				return data_color
 	return color
 
-/decl/material/proc/can_hold_sharpness()
+/decl/material/proc/can_hold_sharpness() as OD_BOOL
 	return hardness > MAT_VALUE_FLEXIBLE
 
-/decl/material/proc/can_hold_edge()
+/decl/material/proc/can_hold_edge() as OD_BOOL
 	return hardness > MAT_VALUE_FLEXIBLE

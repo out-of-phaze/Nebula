@@ -2,7 +2,7 @@
 	decl_flags = DECL_FLAG_MANDATORY_UID
 	abstract_type = /decl/survival_box_option
 	var/name = "survival box option"
-	var/box_type
+	var/box_type as OD_PATH(/obj/item)|null
 
 /decl/survival_box_option/none
 	name = "nothing"

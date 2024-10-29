@@ -15,7 +15,7 @@
 	var/turf_flags
 
 	/// Either a mapping of material decls to mol amounts, or a reserved initial gas define like GAS_STANDARD_AIRMIX.
-	var/list/initial_gas
+	var/list/initial_gas as OD_MAP(OD_PATH(/decl/material), num)|text|null
 
 	//Properties for airtight tiles (/wall)
 	var/thermal_conductivity = 0.05

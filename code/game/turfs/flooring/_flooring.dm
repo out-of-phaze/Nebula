@@ -45,7 +45,7 @@ var/global/list/flooring_cache = list()
 	var/turf_light_power
 	var/turf_light_color
 
-	var/decl/material/force_material
+	var/decl/material/force_material as OD_PATH(/decl/material)|OD_INST(/decl/material)
 
 	var/movement_delay
 

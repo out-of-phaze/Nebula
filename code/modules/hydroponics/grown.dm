@@ -13,7 +13,7 @@
 	allergen_flags = ALLERGEN_VEGETABLE
 	var/work_skill = SKILL_BOTANY
 	var/seeds_extracted = FALSE
-	var/datum/seed/seed
+	var/datum/seed/seed as OD_INST(/datum/seed)|OD_PATH(/datum/seed)|text|null
 
 /obj/item/food/grown/examine(mob/user, distance)
 	. = ..()

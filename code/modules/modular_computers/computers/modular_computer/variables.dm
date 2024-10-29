@@ -16,9 +16,9 @@
 	var/light_strength = 0	// Intensity of light this computer emits. Comparable to numbers light fixtures use.
 	var/list/terminals // List of open terminal datums.
 	var/stores_pen = FALSE
-	var/obj/item/pen/stored_pen
+	var/obj/item/pen/stored_pen as OD_PATH(/obj/item/pen)|OD_INST(/obj/item/pen)|null
 	var/interact_sounds
 	var/interact_sound_volume = 40
 	var/list/default_hardware = list()
 	var/list/default_programs = list()
-	var/computer_type = /datum/extension/assembly/modular_computer
+	var/computer_type = /datum/extension/assembly/modular_computer as OD_PATH(/datum/extension/assembly/modular_computer)

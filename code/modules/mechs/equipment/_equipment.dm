@@ -95,7 +95,7 @@
 
 /obj/item/mech_equipment/mounted_system
 	abstract_type = /obj/item/mech_equipment/mounted_system
-	var/obj/item/holding
+	var/obj/item/holding as anything
 
 /obj/item/mech_equipment/mounted_system/attack_self(var/mob/user)
 	. = ..()

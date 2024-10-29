@@ -38,7 +38,7 @@ var/global/list/state_machines = list()
 	var/weakref/holder_ref
 	var/base_type = /datum/state_machine
 	var/expected_type = /datum
-	var/decl/state/current_state = null // Acts both as a ref to the current state and holds which state it will default to on init.
+	var/decl/state/current_state = null as OD_PATH(/decl/state)|OD_INST(/decl/state) // Acts both as a ref to the current state and holds which state it will default to on init.
 
 /datum/state_machine/New(var/datum/_holder)
 	..()

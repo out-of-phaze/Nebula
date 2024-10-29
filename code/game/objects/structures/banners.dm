@@ -16,7 +16,7 @@
 	max_health = 50
 	var/base_icon_state = "banner_stand"
 	/// Reference to any banner currently hung on the frame.
-	var/obj/item/banner/banner
+	var/obj/item/banner/banner as obj|null|OD_PATH(/obj/item/banner)
 
 /obj/structure/banner_frame/Initialize(ml, _mat, _reinf_mat)
 	if(ispath(banner))

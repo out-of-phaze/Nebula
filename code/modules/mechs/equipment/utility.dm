@@ -383,7 +383,7 @@
 	equipment_delay = 10
 
 	//Drill can have a head
-	var/obj/item/drill_head/drill_head
+	var/obj/item/drill_head/drill_head as anything
 	origin_tech = @'{"materials":2,"engineering":2}'
 
 /obj/item/mech_equipment/drill/Initialize()

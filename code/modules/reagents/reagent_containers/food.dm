@@ -38,10 +38,10 @@
 	// The flavour strength text is determined by the ratio of flavour strengths in the snack.
 	var/list/nutriment_desc
 	/// Either a path to a sound file, a get_sfx sound string, or a list of any combination of those.
-	var/list/eat_sound = 'sound/items/eatfood.ogg'
+	var/list/eat_sound = 'sound/items/eatfood.ogg' as anything
 	var/filling_color = "#ffffff" //Used by sandwiches.
 	var/trash
-	var/obj/item/plate/plate
+	var/obj/item/plate/plate as anything
 	/// A type used when cloning this food item for utensils.
 	var/utensil_food_type
 	/// A set of utensil flags determining which utensil interactions are valid with this food.

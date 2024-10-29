@@ -48,9 +48,9 @@
 	var/grab_action             = "grab intent"
 	var/harm_action             = "harm intent"
 	/// The grab that this will upgrade to if it upgrades, null means no upgrade
-	var/decl/grab/upgrab
+	var/decl/grab/upgrab as OD_INST(/decl/grab)|OD_PATH(/decl/grab)|null
 	/// The grab that this will downgrade to if it downgrades, null means break grab on downgrade
-	var/decl/grab/downgrab
+	var/decl/grab/downgrab as OD_INST(/decl/grab)|OD_PATH(/decl/grab)|null
 
 
 /decl/grab/Initialize()

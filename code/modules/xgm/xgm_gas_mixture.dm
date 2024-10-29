@@ -3,23 +3,23 @@
 	//Gases with 0 moles are not tracked and are pruned by update_values()
 	var/list/gas = list()
 	//Temperature in Kelvin of this gas mix.
-	var/temperature = 0
+	var/temperature = 0 as num
 
 	//Sum of all the gas moles in this mix.  Updated by update_values()
-	var/total_moles = 0
+	var/total_moles = 0 as num
 	//Volume of this mix.
-	var/volume = CELL_VOLUME
+	var/volume = CELL_VOLUME as num
 	//Size of the group this gas_mixture is representing.  1 for singletons.
-	var/group_multiplier = 1
+	var/group_multiplier = 1 as num
 
 	//List of active tile overlays for this gas_mixture.  Updated by check_tile_graphic()
 	var/list/graphic = list()
 	//Cache of gas overlay objects
 	var/list/tile_overlay_cache
 	///The last cached color of the gas mixture
-	var/tmp/cached_mix_color
+	var/tmp/cached_mix_color as text
 
-/datum/gas_mixture/New(_volume, _temperature, _group_multiplier)
+/datum/gas_mixture/New(_volume as num|null, _temperature as num|null, _group_multiplier as num|null)
 	if(!isnull(_volume))
 		volume = _volume
 	if(!isnull(_temperature))
@@ -54,7 +54,7 @@
 
 
 //Same as adjust_gas(), but takes a temperature which is mixed in with the gas.
-/datum/gas_mixture/proc/adjust_gas_temp(gasid, moles, temp, update = 1)
+/datum/gas_mixture/proc/adjust_gas_temp(gasid as OD_PATH(/decl/material), moles as num, temp as num, update = 1)
 	if(moles == 0)
 		return
 
@@ -135,7 +135,7 @@
 
 
 //Returns the heat capacity of the gas mix based on the specific heat of the gases.
-/datum/gas_mixture/proc/heat_capacity()
+/datum/gas_mixture/proc/heat_capacity() as num
 	. = 0
 	for(var/g in gas)
 		var/decl/material/mat = GET_DECL(g)
@@ -221,19 +221,19 @@
 	cached_mix_color = null
 
 //Returns the pressure of the gas mix.  Only accurate if there have been no gas modifications since update_values() has been called.
-/datum/gas_mixture/proc/return_pressure()
+/datum/gas_mixture/proc/return_pressure() as num
 	if(volume)
 		return total_moles * R_IDEAL_GAS_EQUATION * temperature / volume
 	return 0
 
 
 //Removes moles from the gas mixture and returns a gas_mixture containing the removed air.
-/datum/gas_mixture/proc/remove(amount)
+/datum/gas_mixture/proc/remove(amount) as OD_INST(/datum/gas_mixture)|null
 	amount = min(amount, total_moles * group_multiplier) //Can not take more air than the gas mixture has!
 	if(amount <= 0)
 		return null
 
-	var/datum/gas_mixture/removed = new
+	var/datum/gas_mixture/removed = new() as OD_INST(/datum/gas_mixture)
 
 	for(var/g in gas)
 		removed.gas[g] = QUANTIZE((gas[g] / total_moles) * amount)
@@ -247,7 +247,7 @@
 
 
 //Removes a ratio of gas from the mixture and returns a gas_mixture containing the removed air.
-/datum/gas_mixture/proc/remove_ratio(ratio, out_group_multiplier = 1)
+/datum/gas_mixture/proc/remove_ratio(ratio, out_group_multiplier = 1) as OD_INST(/datum/gas_mixture)|null
 	if(ratio <= 0)
 		return null
 	out_group_multiplier = clamp(out_group_multiplier, 1, group_multiplier)
@@ -269,14 +269,14 @@
 	return removed
 
 //Removes a volume of gas from the mixture and returns a gas_mixture containing the removed air with the given volume
-/datum/gas_mixture/proc/remove_volume(removed_volume)
-	var/datum/gas_mixture/removed = remove_ratio(removed_volume/(volume*group_multiplier), 1)
+/datum/gas_mixture/proc/remove_volume(removed_volume) as OD_INST(/datum/gas_mixture)|null
+	var/datum/gas_mixture/removed = remove_ratio(removed_volume/(volume*group_multiplier), 1) as OD_INST(/datum/gas_mixture)|null
 	removed.volume = removed_volume
 	return removed
 
 //Removes moles from the gas mixture, limited by a given flag.  Returns a gax_mixture containing the removed air.
-/datum/gas_mixture/proc/remove_by_flag(flag, amount, mat_flag = FALSE)
-	var/datum/gas_mixture/removed = new
+/datum/gas_mixture/proc/remove_by_flag(flag, amount, mat_flag = FALSE) as OD_INST(/datum/gas_mixture)|null
+	var/datum/gas_mixture/removed = new() as OD_INST(/datum/gas_mixture)|null
 
 	if(!flag || amount <= 0)
 		return removed
@@ -302,7 +302,7 @@
 	return removed
 
 //Returns the amount of gas that has the given flag, in moles
-/datum/gas_mixture/proc/get_by_flag(flag)
+/datum/gas_mixture/proc/get_by_flag(flag) as num
 	. = 0
 	for(var/g in gas)
 		var/decl/material/mat = GET_DECL(g)
@@ -327,7 +327,7 @@
 	return clone
 
 //Checks if we are within acceptable range of another gas_mixture to suspend processing or merge.
-/datum/gas_mixture/proc/compare(const/datum/gas_mixture/sample, var/vacuum_exception = 0)
+/datum/gas_mixture/proc/compare(const/datum/gas_mixture/sample, var/vacuum_exception = 0) as num
 	if(!sample) return 0
 
 	if(vacuum_exception)
@@ -366,7 +366,7 @@
 //Rechecks the gas_mixture and adjusts the graphic list if needed.
 //Two lists can be passed by reference if you need know specifically which graphics were added and removed.
 // Returns TRUE if the graphics list was mutated.
-/datum/gas_mixture/proc/check_tile_graphic(list/graphic_add = null, list/graphic_remove = null)
+/datum/gas_mixture/proc/check_tile_graphic(list/graphic_add = null, list/graphic_remove = null) as OD_BOOL
 	for(var/obj/effect/gas_overlay/O in graphic)
 		if(gas[O.material.type] <= O.material.gas_overlay_limit)
 			LAZYADD(graphic_remove, O)
@@ -414,7 +414,7 @@
 
 
 //Shares gas with another gas_mixture based on the amount of connecting tiles and a fixed lookup table.
-/datum/gas_mixture/proc/share_ratio(datum/gas_mixture/other, connecting_tiles, share_size = null, one_way = 0)
+/datum/gas_mixture/proc/share_ratio(datum/gas_mixture/other, connecting_tiles, share_size = null, one_way = 0) as num
 	var/static/list/sharing_lookup_table = list(0.30, 0.40, 0.48, 0.54, 0.60, 0.66)
 	//Shares a specific ratio of gas between mixtures using simple weighted averages.
 	var/ratio = sharing_lookup_table[6]
@@ -461,20 +461,20 @@
 
 
 //A wrapper around share_ratio for spacing gas at the same rate as if it were going into a large airless room.
-/datum/gas_mixture/proc/share_space(datum/gas_mixture/unsim_air)
+/datum/gas_mixture/proc/share_space(datum/gas_mixture/unsim_air) as num
 	return share_ratio(unsim_air, unsim_air.group_multiplier, max(1, max(group_multiplier + 3, 1) + unsim_air.group_multiplier), one_way = 1)
 
 //Equalizes a list of gas mixtures.  Used for pipe networks.
 /proc/equalize_gases(list/datum/gas_mixture/gases)
 	//Calculate totals from individual components
-	var/total_volume = 0
-	var/total_thermal_energy = 0
-	var/total_heat_capacity = 0
+	var/total_volume = 0 as num
+	var/total_thermal_energy = 0 as num
+	var/total_heat_capacity = 0 as num
 
 	var/list/total_gas = list()
 	for(var/datum/gas_mixture/gasmix in gases)
 		total_volume += gasmix.volume
-		var/temp_heatcap = gasmix.heat_capacity()
+		var/temp_heatcap = gasmix.heat_capacity() as num
 		total_thermal_energy += gasmix.temperature * temp_heatcap
 		total_heat_capacity += temp_heatcap
 		for(var/g in gasmix.gas)
@@ -504,18 +504,18 @@
 
 	return 1
 
-/datum/gas_mixture/proc/get_mass()
+/datum/gas_mixture/proc/get_mass() as num
 	for(var/g in gas)
 		var/decl/material/mat = GET_DECL(g)
 		. += gas[g] * mat.molar_mass * group_multiplier
 
-/datum/gas_mixture/proc/specific_mass()
+/datum/gas_mixture/proc/specific_mass() as num
 	var/M = get_total_moles()
 	if(M)
 		return get_mass()/M
 
 ///Returns a color blended from all materials the gas mixture contains
-/datum/gas_mixture/proc/get_overall_color()
+/datum/gas_mixture/proc/get_overall_color() as text
 	if(!cached_mix_color)
 		if(!LAZYLEN(gas))
 			cached_mix_color = "#ffffffff"

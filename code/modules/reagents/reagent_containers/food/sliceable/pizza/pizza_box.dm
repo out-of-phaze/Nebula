@@ -9,7 +9,7 @@
 	var/const/MAXIMUM_PIZZA_STACK = 15
 	var/open = FALSE // Is the box open?
 	var/image/messy_overlay
-	var/obj/item/food/sliceable/pizza/pizza
+	var/obj/item/food/sliceable/pizza/pizza as anything
 	var/list/obj/item/pizzabox/stacked_boxes
 	var/box_tag
 	var/box_tag_color = COLOR_BLACK

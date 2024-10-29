@@ -14,7 +14,7 @@
 	var/far_sound       = 'sound/effects/bell_far.ogg'
 	var/next_ring       = 0
 	var/ring_cooldown   = 1 MINUTE
-	var/decl/material/bell_material = /decl/material/solid/metal/bronze
+	var/decl/material/bell_material = /decl/material/solid/metal/bronze as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
 
 /obj/structure/town_bell/Initialize(mapload)
 	if(bell_material)

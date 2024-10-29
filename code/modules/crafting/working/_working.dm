@@ -12,9 +12,9 @@
 	throwpass           = TRUE // You can reach over these to things behind them.
 
 	var/tmp/working     = FALSE
-	var/work_skill      = SKILL_CONSTRUCTION
-	var/product_type
-	var/datum/composite_sound/work_sound
+	var/work_skill      = SKILL_CONSTRUCTION as OD_PATH(/decl/skill)
+	var/product_type as OD_PATH(/obj)
+	var/datum/composite_sound/work_sound as OD_INST(/datum/composite_sound)|OD_PATH(/datum/composite_sound)|null
 
 /obj/structure/working/Initialize()
 	. = ..()

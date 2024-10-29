@@ -449,7 +449,7 @@
 				else
 					jostle_internal_object(parent, O)
 
-/mob/living/human/proc/jostle_internal_object(var/obj/item/organ/external/organ, var/obj/item/O)
+/mob/living/human/proc/jostle_internal_object(var/obj/item/organ/external/organ as OD_INST(/obj/item/organ/external), var/obj/item/O as OD_INST(/obj/item))
 	// All kinds of embedded objects cause bleeding.
 	if(!organ.can_feel_pain())
 		to_chat(src, SPAN_DANGER("You feel [O] moving inside your [organ.name]."))
@@ -461,10 +461,10 @@
 		custom_pain(msg,40,affecting = organ)
 	organ.take_external_damage(rand(1,3) + O.w_class, DAM_EDGE, 0)
 
-/mob/proc/set_bodytype(var/decl/bodytype/new_bodytype)
+/mob/proc/set_bodytype(var/decl/bodytype/new_bodytype as OD_INST(/decl/bodytype)|OD_PATH(/decl/bodytype)|null)
 	return
 
-/mob/living/human/set_bodytype(var/decl/bodytype/new_bodytype)
+/mob/living/human/set_bodytype(var/decl/bodytype/new_bodytype as OD_INST(/decl/bodytype)|OD_PATH(/decl/bodytype)|null)
 
 	var/decl/bodytype/old_bodytype = get_bodytype()
 	if(ispath(new_bodytype))
@@ -891,7 +891,7 @@
 	if(!QDELETED(src) && fluids?.total_volume)
 		species.fluid_act(src, fluids)
 
-/mob/living/human/proc/set_background_value(var/cat_type, var/decl/background_detail/_background, var/defer_language_update)
+/mob/living/human/proc/set_background_value(var/cat_type as OD_PATH(/decl/background_category), var/decl/background_detail/_background as OD_INST(/decl/background_detail)|OD_PATH(/decl/background_detail)|null, var/defer_language_update)
 	if(ispath(_background, /decl/background_detail))
 		_background = GET_DECL(_background)
 	if(istype(_background))

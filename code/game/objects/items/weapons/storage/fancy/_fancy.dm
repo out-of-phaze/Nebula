@@ -5,9 +5,9 @@
 /obj/item/box/fancy
 	abstract_type = /obj/item/box/fancy
 	/// A string modifier used to generate overlays for contents.
-	var/use_single_icon_overlay_state
+	var/use_single_icon_overlay_state as text|null
 	/// The root type of the key item that this "fancy" container is meant to store.
-	var/obj/item/key_type
+	var/obj/item/key_type as OD_PATH(/obj/item)
 
 /obj/item/box/fancy/proc/adjust_contents_overlay(var/overlay_index, var/image/overlay)
 	return overlay

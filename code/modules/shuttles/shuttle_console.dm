@@ -88,7 +88,7 @@
 		return TOPIC_REFRESH
 
 	if(href_list["set_codes"])
-		var/newcode = input("Input new docking codes", "Docking codes", shuttle.docking_codes) as text|null
+		var/newcode = input("Input new docking codes", "Docking codes", shuttle.docking_codes) as text|null as text|null
 		if (newcode && CanInteract(usr, global.default_topic_state))
 			shuttle.set_docking_codes(uppertext(newcode))
 		return TOPIC_REFRESH

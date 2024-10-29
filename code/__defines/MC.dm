@@ -105,7 +105,7 @@ if(Datum.is_processing) {\
 /// These are the flags forbidden when putting zero-wait TIMER_UNIQUE timers on SSdpc instead of SStimer.
 #define UDPC_FORBID_FLAGS  TIMER_OVERRIDE | TIMER_STOPPABLE | TIMER_LOOP
 
-#define TIMER_ID_NULL -1
+#define TIMER_ID_NULL "-1"
 
 /**
 	Create a new timer and add it to the queue.

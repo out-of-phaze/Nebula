@@ -9,8 +9,8 @@
 	critical = 0
 	origin_tech = @'{"programming":2,"engineering":2}'
 
-	var/datum/computer_file/program/scanner/driver_type = /datum/computer_file/program/scanner		// A program type that the scanner interfaces with and attempts to install on insertion.
-	var/datum/computer_file/program/scanner/driver		 		// A driver program which has been set up to interface with the scanner.
+	var/datum/computer_file/program/scanner/driver_type = /datum/computer_file/program/scanner as OD_PATH(/datum/computer_file/program/scanner) // A program type that the scanner interfaces with and attempts to install on insertion.
+	var/datum/computer_file/program/scanner/driver as OD_INST(/datum/computer_file/program/scanner)|null // A driver program which has been set up to interface with the scanner.
 	var/can_run_scan = 0	//Whether scans can be run from the program directly.
 	var/can_view_scan = 1	//Whether the scan output can be viewed in the program.
 	var/can_save_scan = 1	//Whether the scan output can be saved to disk.

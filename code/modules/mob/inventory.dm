@@ -327,7 +327,7 @@
 		try_unequip(thing)
 
 //Returns the item equipped to the specified slot, if any.
-/mob/proc/get_equipped_item(var/slot)
+/mob/proc/get_equipped_item(var/slot) as OD_INST(/obj/item)|null
 	SHOULD_CALL_PARENT(TRUE)
 	var/datum/inventory_slot/inv_slot = get_inventory_slot_datum(slot)
 	return inv_slot?.get_equipped_item()

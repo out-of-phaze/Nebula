@@ -15,9 +15,9 @@
 	slot_flags                        = SLOT_LOWER_BODY
 	material                          = /decl/material/solid/metal/steel
 	_base_attack_force                = 10
-	var/decl/material/hilt_material   = /decl/material/solid/organic/wood
-	var/decl/material/guard_material  = /decl/material/solid/organic/wood
-	var/decl/material/pommel_material = /decl/material/solid/organic/wood
+	var/decl/material/hilt_material   = /decl/material/solid/organic/wood as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
+	var/decl/material/guard_material  = /decl/material/solid/organic/wood as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
+	var/decl/material/pommel_material = /decl/material/solid/organic/wood as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
 	/// Cache var for blade material shine calculation.
 	var/tmp/shine
 

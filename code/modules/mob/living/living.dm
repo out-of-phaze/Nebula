@@ -883,7 +883,7 @@ default behaviour is:
 		set_status(STAT_JITTER, rand(150,200))
 		take_damage(rand(50, 60), PAIN)
 
-/mob/living/proc/get_digestion_product()
+/mob/living/proc/get_digestion_product() as OD_PATH(/decl/material)|null
 	return null
 
 /mob/living/proc/handle_additional_vomit_reagents(var/obj/effect/decal/cleanable/vomit/vomit)

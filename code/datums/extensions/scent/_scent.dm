@@ -41,9 +41,9 @@ Scent intensity
 	expected_type = /atom
 	flags = EXTENSION_FLAG_IMMEDIATE
 
-	var/scent = "something"
-	var/decl/scent_intensity/intensity = /decl/scent_intensity
-	var/descriptor = SCENT_DESC_SMELL //unambiguous descriptor of smell; food is generally good, sewage is generally bad. how 'nice' the scent is
+	var/scent = "something" as text
+	var/decl/scent_intensity/intensity = /decl/scent_intensity as OD_PATH(/decl/scent_intensity)|OD_INST(/decl/scent_intensity)
+	var/descriptor = SCENT_DESC_SMELL as text //unambiguous descriptor of smell; food is generally good, sewage is generally bad. how 'nice' the scent is
 	var/range = 1 //range in tiles
 
 /datum/extension/scent/New()

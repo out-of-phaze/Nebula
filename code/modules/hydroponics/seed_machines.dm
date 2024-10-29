@@ -216,7 +216,7 @@
 		if(!genetics || !loaded_disk)
 			return
 
-		var/decl/plant_gene/gene_master = locate(href_list["get_gene"])
+		var/decl/plant_gene/gene_master = locate(href_list["get_gene"]) as OD_INST(/decl/plant_gene)|OD_PATH(/decl/plant_gene)
 		if(ispath(gene_master))
 			gene_master = GET_DECL(gene_master)
 

@@ -2,7 +2,7 @@
 	var/artist
 	var/title
 	var/album
-	var/decl/license/license
+	var/decl/license/license as OD_INST(/decl/license)|OD_PATH(/decl/license)|null
 	var/song
 	var/url // Remember to include http:// or https:// or BYOND will be sad
 	var/volume = 70

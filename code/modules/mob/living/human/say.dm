@@ -103,7 +103,7 @@
 		return returns
 	return ..()
 
-/mob/living/human/can_speak(decl/language/speaking)
+/mob/living/human/can_speak(decl/language/speaking as OD_INST(/decl/language)|OD_PATH(/decl/language)|null)
 	if(ispath(speaking, /decl/language))
 		speaking = GET_DECL(speaking)
 	if(!istype(speaking))

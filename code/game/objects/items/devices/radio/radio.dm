@@ -59,7 +59,7 @@
 	var/default_color = "#6d3f40"
 	var/decrypt_all_messages = FALSE
 	var/can_use_analog = TRUE
-	var/datum/extension/network_device/radio/radio_device_type = /datum/extension/network_device/radio
+	var/datum/extension/network_device/radio/radio_device_type = /datum/extension/network_device/radio as OD_PATH(/datum/extension/network_device/radio)|null
 	var/analog = FALSE
 	var/analog_secured = list() // list of accesses used for encrypted analog, mainly for mercs/raiders
 	var/datum/radio_frequency/analog_radio_connection

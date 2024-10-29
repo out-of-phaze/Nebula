@@ -11,7 +11,7 @@
 	w_class = ITEM_SIZE_TINY
 	material = /decl/material/solid/metal/aluminium
 	matter = list(/decl/material/solid/glass = MATTER_AMOUNT_REINFORCEMENT)
-	var/obj/item/implant/imp = null
+	var/obj/item/implant/imp = null as obj|null|OD_PATH(/obj/item/implant)
 
 /obj/item/implantcase/Initialize()
 	. = ..()

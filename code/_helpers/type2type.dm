@@ -9,11 +9,11 @@
  */
 
 // Splits the text of a file at seperator and returns them in a list.
-/proc/file2list(filename, seperator = "\n")
+/proc/file2list(filename, seperator = "\n") as OD_LIST(text)
 	return splittext(safe_file2text(filename), seperator)
 
 // Turns a direction into text
-/proc/dir2text(direction)
+/proc/dir2text(direction as OD_DIR) as text
 	switch (direction)
 		if (NORTH)     return "north"
 		if (SOUTH)     return "south"
@@ -28,7 +28,7 @@
 	return "unknown ([direction])"
 
 // Turns text into proper directions
-/proc/text2dir(direction)
+/proc/text2dir(direction as text) as OD_DIR
 	switch (uppertext(direction))
 		if ("NORTH")     return NORTH
 		if ("SOUTH")     return SOUTH
@@ -40,7 +40,7 @@
 		if ("SOUTHWEST") return SOUTHWEST
 
 // Converts an angle (degrees) into an ss13 direction
-/proc/angle2dir(var/degree)
+/proc/angle2dir(var/degree) as OD_DIR
 	degree = (degree + 22.5) % 360 // 22.5 = 45 / 2
 	if (degree < 45)  return NORTH
 	if (degree < 90)  return NORTHEAST
@@ -52,7 +52,7 @@
 	return NORTH|WEST
 
 // Returns the north-zero clockwise angle in degrees, given a direction
-/proc/dir2angle(var/D)
+/proc/dir2angle(var/D as OD_DIR) as num
 	switch (D)
 		if (NORTH)     return 0
 		if (SOUTH)     return 180
@@ -64,7 +64,7 @@
 		if (SOUTHWEST) return 225
 
 // Returns the angle in english
-/proc/angle2text(var/degree)
+/proc/angle2text(var/degree as num) as text
 	return dir2text(angle2dir(degree))
 
 // Converts a blend_mode constant to one acceptable to icon.Blend()
@@ -172,14 +172,14 @@
 /proc/isLeap(y)
 	return ((y) % 4 == 0 && ((y) % 100 != 0 || (y) % 400 == 0))
 
-/proc/atomtypes2nameassoclist(var/list/atom_types)
+/proc/atomtypes2nameassoclist(var/list/atom_types as OD_LIST(OD_PATH(/atom)))
 	. = list()
 	for(var/atom_type in atom_types)
 		var/atom/A = atom_type
 		.[initial(A.name)] = atom_type
 	. = sortTim(., /proc/cmp_text_asc)
 
-/proc/atomtype2nameassoclist(var/atom_type)
+/proc/atomtype2nameassoclist(var/atom_type as OD_PATH(/atom))
 	return atomtypes2nameassoclist(typesof(atom_type))
 
 //checks if a file exists and contains text

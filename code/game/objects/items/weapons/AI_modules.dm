@@ -18,7 +18,7 @@ AI MODULES
 	origin_tech = @'{"programming":3}'
 	material = /decl/material/solid/fiberglass
 	matter = list(/decl/material/solid/metal/gold = MATTER_AMOUNT_REINFORCEMENT)
-	var/datum/ai_laws/laws = null
+	var/datum/ai_laws/laws = null as anything
 
 /obj/item/aiModule/proc/install(obj/machinery/computer/upload/comp, mob/user)
 	if(!istype(comp))

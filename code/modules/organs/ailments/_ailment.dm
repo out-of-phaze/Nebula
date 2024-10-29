@@ -8,19 +8,19 @@
 	var/obj/item/organ/organ      // Organ associated with the ailment (ailment is in organ.ailments list).
 
 	// Requirements before applying to a target.
-	var/list/applies_to_organ          // What organ tags (BP_HEAD, etc) is the ailment valid for?
+	var/list/applies_to_organ as OD_LIST(text) // What organ tags (BP_HEAD, etc) is the ailment valid for?
 	var/applies_to_prosthetics = FALSE // Does the ailment affect prosthetic or non-prosthetic limbs?
 	var/applies_to_robotics    = FALSE // Does the ailment affect robotic limbs?
 	var/applies_to_crystalline = FALSE // Does the ailment affect crystalline limbs?
-	var/specific_organ_subtype = /obj/item/organ/external // What organ subtype, if any, does the ailment apply to?
+	var/specific_organ_subtype = /obj/item/organ/external as OD_PATH(/obj/item/organ) // What organ subtype, if any, does the ailment apply to?
 
 	// Treatment types
-	var/treated_by_item_type                // What item type can be used in physical interaction to cure the ailment?
-	var/treated_by_item_cost = 1            // If treated_by_item_type is a stack, how many should be used?
-	var/list/treated_by_reagent_type        // What reagent type(s) cures this ailment when metabolized? Can be a single type or a list of types.
-	var/treated_by_reagent_dosage = 1       // What is the minimum dosage for a reagent to cure this ailment? TODO: merge with list above
-	var/list/treated_by_chem_effect         // What chemical effect cures this ailment? Can be a single effect or a list of effects.
-	var/treated_by_chem_effect_strength = 1 // How strong must the chemical effect be to cure this ailment? TODO: merge with list above
+	var/treated_by_item_type                    // What item type can be used in physical interaction to cure the ailment?
+	var/treated_by_item_cost = 1                // If treated_by_item_type is a stack, how many should be used?
+	var/list/treated_by_reagent_type as anything // What reagent type(s) cures this ailment when metabolized? Can be a single type or a list of types.
+	var/treated_by_reagent_dosage = 1           // What is the minimum dosage for a reagent to cure this ailment? TODO: merge with list above
+	var/list/treated_by_chem_effect as anything // What chemical effect cures this ailment? Can be a single effect or a list of effects.
+	var/treated_by_chem_effect_strength = 1     // How strong must the chemical effect be to cure this ailment? TODO: merge with list above
 
 	// Fluff strings
 	var/initial_ailment_message = "Your $ORGAN$ $ORGAN_DOES$n't feel quite right..."        // Shown in New()

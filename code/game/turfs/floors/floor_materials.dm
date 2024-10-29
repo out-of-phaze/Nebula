@@ -1,7 +1,7 @@
 /turf/floor
-	VAR_PROTECTED/decl/material/floor_material
+	VAR_PROTECTED/decl/material/floor_material as OD_INST(/decl/material)|OD_PATH(/decl/material)|null
 
-/turf/floor/set_turf_materials(decl/material/new_material, decl/material/new_reinf_material, force, decl/material/new_girder_material, skip_update)
+/turf/floor/set_turf_materials(decl/material/new_material as OD_INST(/decl/material)|OD_PATH(/decl/material)|null, decl/material/new_reinf_material as OD_INST(/decl/material)|OD_PATH(/decl/material)|null, force, decl/material/new_girder_material as OD_INST(/decl/material)|OD_PATH(/decl/material)|null, skip_update)
 
 	if(ispath(new_material))
 		new_material = GET_DECL(new_material)

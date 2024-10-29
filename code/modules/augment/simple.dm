@@ -2,7 +2,7 @@
 /obj/item/organ/internal/augment/active/simple
 	origin_tech = null
 	var/retracting
-	var/obj/item/holding
+	var/obj/item/holding as obj|null|OD_PATH(/obj/item)
 
 /obj/item/organ/internal/augment/active/simple/Initialize()
 	. = ..()

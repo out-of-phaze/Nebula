@@ -29,13 +29,13 @@
 	///The habitability rating for this planetoid
 	var/habitability_class = HABITABILITY_DEAD
 	///The cached planet's atmosphere that sub-levels of this planet should use. Can be a type path at definition, and an instance at runtime.
-	var/datum/gas_mixture/atmosphere
+	var/datum/gas_mixture/atmosphere as OD_PATH(/datum/gas_mixture)|OD_INST(/datum/gas_mixture)|null
 	///The minimum temperature that can be reached on the planet.(For instance via meteo or sunlight/shade or whatever)
 	var/temperature_min = 0 CELSIUS
 	///The maximum temperature that can be reached on the planet.(For instance via meteo or sunlight/shade or whatever)
 	var/temperature_max = 25 CELSIUS
 	///What weather state to use for this planet initially. If null, will not initialize any weather system. Must be a typepath rather than an instance.
-	var/decl/state/weather/initial_weather_state = /decl/state/weather/calm
+	var/decl/state/weather/initial_weather_state = /decl/state/weather/calm as OD_PATH(/decl/state/weather)|OD_INST(/decl/state/weather)|null
 
 	// *** Appearence ***
 	///A weak reference to the overmap marker for this template instance if any exists. Or at definition the type path of the marker to use
@@ -53,7 +53,7 @@
 	///If we have rings, this is the sprite we picked for it
 	var/ring_type_name = SKYBOX_PLANET_RING_TYPE_SPARSE
 	///The overall strata of the planet. May be a type path at definition, or instance at runtime.
-	var/decl/strata/strata
+	var/decl/strata/strata as OD_INST(/decl/strata)|OD_PATH(/decl/strata)|null
 
 	// *** Generated Features ***
 	///List of theme types that were randomly picked from the possible list at runtime. Also used by the overmap marker.
@@ -77,9 +77,10 @@
 
 	// *** fauna/flora handling ***
 	///The flora generator instance that generates and keep track of the flora types for this planet. May be set to a path to instantiate.
-	var/datum/planet_flora/flora
+	var/datum/planet_flora/flora as OD_PATH(/datum/planet_flora)|OD_INST(/datum/planet_flora)|null
+	//#TODO: Temporary thing for allowing animal stuff to be customized in the map_template
 	///The instance of the fauna generator currently managing our fauna if any. May be set to a path to instantiate.
-	var/datum/fauna_generator/fauna //#TODO: Temporary thing for allowing animal stuff to be customized in the map_template
+	var/datum/fauna_generator/fauna as OD_PATH(/datum/fauna_generator)|OD_INST(/datum/fauna_generator)|null
 
 	// *** Special Overrides ***
 	//#TODO: There is probably a way to handle options set from manually spawning planets that is less shitty?
@@ -155,7 +156,7 @@
 	atmosphere = A.Clone()
 
 ///Resets the given weather state to our planet replacing the old one, and trigger updates. Can be a type path or instance.
-/datum/planetoid_data/proc/reset_weather(var/decl/state/weather/W)
+/datum/planetoid_data/proc/reset_weather(var/decl/state/weather/W as OD_INST(/decl/state/weather)|OD_PATH(/decl/state/weather)|null)
 	initial_weather_state = W
 	if(!(topmost_level_id in SSmapping.levels_by_id))
 		return //It's entire possible the levels weren't initialized yet, so don't bother.

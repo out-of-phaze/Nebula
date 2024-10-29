@@ -1,30 +1,30 @@
 /decl/outfit
 	abstract_type = /decl/outfit
 	var/name = "Naked"
-	var/uniform = null
-	var/suit = null
-	var/back = null
-	var/belt = null
-	var/gloves = null
-	var/shoes = null
-	var/head = null
-	var/mask = null
-	var/l_ear = null
-	var/r_ear = null
-	var/glasses = null
-	var/id = null
-	var/l_pocket = null
-	var/r_pocket = null
-	var/suit_store = null
-	var/holster = null
+	var/uniform = null as OD_PATH(/obj/item)|null
+	var/suit = null as OD_PATH(/obj/item)|null
+	var/back = null as OD_PATH(/obj/item)|null
+	var/belt = null as OD_PATH(/obj/item)|null
+	var/gloves = null as OD_PATH(/obj/item)|null
+	var/shoes = null as OD_PATH(/obj/item)|null
+	var/head = null as OD_PATH(/obj/item)|null
+	var/mask = null as OD_PATH(/obj/item)|null
+	var/l_ear = null as OD_PATH(/obj/item)|null
+	var/r_ear = null as OD_PATH(/obj/item)|null
+	var/glasses = null as OD_PATH(/obj/item)|null
+	var/id = null as OD_PATH(/obj/item)|null
+	var/l_pocket = null as OD_PATH(/obj/item)|null
+	var/r_pocket = null as OD_PATH(/obj/item)|null
+	var/suit_store = null as OD_PATH(/obj/item)|null
+	var/holster = null as OD_PATH(/obj/item)|null
 	var/list/hands
 	var/list/backpack_contents = list() // In the list(path=count,otherpath=count) format
 
-	var/id_type
+	var/id_type as OD_PATH(/obj/item)|null
 	var/id_desc
 	var/id_slot
 
-	var/pda_type
+	var/pda_type as OD_PATH(/obj/item)|null
 	var/pda_slot
 
 	var/id_pda_assignment

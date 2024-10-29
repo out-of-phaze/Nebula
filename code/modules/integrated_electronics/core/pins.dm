@@ -21,7 +21,7 @@ D [1]/  ||
 /datum/integrated_io
 	var/name = "input/output"
 	var/obj/item/integrated_circuit/holder
-	var/weakref/data  // This is a weakref, to reduce typecasts.  Note that oftentimes numbers and text may also occupy this.
+	var/weakref/data as anything // This is a weakref, to reduce typecasts.  Note that oftentimes numbers and text may also occupy this.
 	var/list/linked = list()
 	var/io_type = DATA_CHANNEL
 	var/pin_type			// IC_INPUT, IC_OUTPUT, IC_ACTIVATOR - used in saving assembly wiring

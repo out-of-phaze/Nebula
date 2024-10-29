@@ -59,7 +59,7 @@
 	)
 	parts_type = /obj/item/sign/diploma
 	///Details on the diploma this plaque contains. Can be a path on definition, turns into an instance at runtime.
-	var/datum/diploma_details/details = /datum/diploma_details
+	var/datum/diploma_details/details = /datum/diploma_details as OD_PATH(/datum/diploma_details)|OD_INST(/datum/diploma_details)
 
 /obj/structure/sign/plaque/diploma/Initialize(ml, _mat, _reinf_mat)
 	//Must be done before parent init
@@ -90,7 +90,7 @@
 		/decl/material/solid/organic/paper = MATTER_AMOUNT_TRACE,
 	)
 	///Details on the diploma this plaque contains.  Can be a path on definition, turns into an instance at runtime.
-	var/datum/diploma_details/details = /datum/diploma_details
+	var/datum/diploma_details/details = /datum/diploma_details as OD_PATH(/datum/diploma_details)|OD_INST(/datum/diploma_details)|null
 
 /obj/item/sign/diploma/Initialize(ml, material_key)
 	. = ..()

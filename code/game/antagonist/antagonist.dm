@@ -6,7 +6,7 @@
 	var/list/protected_jobs = 		list() // As above.
 	var/list/blocked_job_event_categories  // Job event categories that blacklist a job from being this antagonist.
 	// Jobs that can NEVER be this antagonist
-	var/list/blacklisted_jobs =	(/datum/job/submap)
+	var/list/blacklisted_jobs =	list(/datum/job/submap) as OD_LIST(OD_PATH(/datum/job))|null
 
 	// Strings.
 	var/welcome_text = "Cry havoc and let slip the dogs of war!"
@@ -42,12 +42,12 @@
 
 	// Misc.
 	var/landmark_id                         // Spawn point identifier.
-	var/mob_path = /mob/living/human // Mobtype this antag will use if none is provided.
+	var/mob_path = /mob/living/human as OD_PATH(/mob) // Mobtype this antag will use if none is provided.
 	var/minimum_player_age = 7            	// Players need to be at least minimum_player_age days old before they are eligable for auto-spawning
 	var/flags = 0                           // Various runtime options.
 	var/show_objectives_on_creation = 1     // Whether or not objectives are shown when a player is added to this antag datum
-	var/datum/antag_skill_setter/skill_setter = /datum/antag_skill_setter/generic // Used to set up skills.
-	var/decl/language/required_language
+	var/datum/antag_skill_setter/skill_setter = /datum/antag_skill_setter/generic as OD_PATH(/datum/antag_skill_setter)|OD_INST(/datum/antag_skill_setter)|null // Used to set up skills.
+	var/decl/language/required_language as OD_PATH(/decl/language)|null
 
 	// Used for setting appearance.
 	var/list/valid_species

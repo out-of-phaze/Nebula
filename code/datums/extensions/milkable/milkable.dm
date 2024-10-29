@@ -3,13 +3,13 @@
 	expected_type = /mob/living
 	flags = EXTENSION_FLAG_IMMEDIATE
 
-	var/milk_type = /decl/material/liquid/drink/milk
+	var/milk_type = /decl/material/liquid/drink/milk as OD_PATH(/decl/material)
 	var/milk_prob = 5
 	var/milk_min  = 5
 	var/milk_max  = 10
 
 	var/impatience = 0
-	var/decl/skill/milking_skill = SKILL_BOTANY
+	var/decl/skill/milking_skill = SKILL_BOTANY as OD_PATH(/decl/skill)
 	var/milking_skill_req        = SKILL_BASIC
 
 	var/datum/reagents/udder

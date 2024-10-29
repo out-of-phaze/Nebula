@@ -23,7 +23,7 @@
 	var/welding                         = FALSE 	//Whether or not the welding tool is off(0), on(1) or currently welding(2)
 	var/status                          = TRUE 		//Whether the welder is secured or unsecured (able to attach rods to it to make a flamethrower)
 	var/tmp/welding_resource            = "welding fuel"
-	var/obj/item/chems/welder_tank/tank = /obj/item/chems/welder_tank // where the fuel is stored
+	var/obj/item/chems/welder_tank/tank = /obj/item/chems/welder_tank as obj|null|OD_PATH(/obj/item/chems/welder_tank) // where the fuel is stored
 	var/tmp/activate_sound              = 'sound/items/welderactivate.ogg'
 	var/tmp/deactivate_sound            = 'sound/items/welderdeactivate.ogg'
 
