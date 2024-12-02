@@ -414,6 +414,14 @@
 
 	if(drying_wetness > 0 && drying_wetness != initial(drying_wetness))
 		desc_comp += "\The [src] is [get_dryness_text()]."
+		desc_comp += "*--------*"
+
+	var/list/attacks = list()
+	for(var/decl/melee_attack_profile/attack as anything in get_melee_attack_profiles())
+		if(attack.usage_desc)
+			attacks += SPAN_INFO(attack.usage_desc)
+	if(length(attacks))
+		desc_comp |= attacks
 
 	if(coating?.total_volume)
 		desc_comp += "It is covered in [coating.get_coated_name()]." // It is covered in dilute oily slimy bloody mud.

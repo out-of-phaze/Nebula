@@ -199,6 +199,9 @@
 		. += move_intent.move_delay
 	else
 		. += _automove_delay
+	var/obj/item/active_item = get_active_held_item()
+	if(active_item && active_item.is_charging_attack())
+		. *= 1.75
 	. = max(. + (ENCUMBERANCE_MOVEMENT_MOD * encumbrance()), 1)
 
 #undef ENCUMBERANCE_MOVEMENT_MOD
@@ -1484,3 +1487,9 @@
 /mob/proc/is_cloaked()
 	return FALSE
 
+/mob/proc/can_autofire(var/obj/item/gun/autofiring, var/atom/autofiring_at)
+	if(!client || !(autofiring_at in view(client.view,src)))
+		return FALSE
+	if(get_active_held_item() != autofiring || incapacitated())
+		return FALSE
+	return TRUE

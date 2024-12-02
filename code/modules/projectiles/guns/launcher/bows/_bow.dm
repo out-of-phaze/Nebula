@@ -46,6 +46,14 @@
 	/// How big is this bow when unstrung? Uses initial w_class if unset.
 	var/unstrung_w_class
 
+/obj/item/gun/launcher/bow/is_charging_attack()
+	if(autofire_enabled)
+		if(tension >= max_tension)
+			return 2
+		if(tension > 0 || drawing_bow)
+			return 1
+	return 0
+
 /obj/item/gun/launcher/bow/set_autofire(var/atom/fire_at, var/mob/fire_by, var/autoturn = TRUE)
 	if(!autofire_enabled || autofiring_at)
 		return ..()
