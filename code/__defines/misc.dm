@@ -367,6 +367,9 @@
 /// Call by name proc reference, checks if the proc is an existing global proc
 #define GLOBAL_PROC_REF(X) (/proc/##X)
 
+/// Call a type's proc "statically". Must not reference src, or else runtime errors will occur.
+#define STATIC_CALL(TYPE, X, ARGS...) call(TYPE, ##TYPE::##X())(ARGS)
+
 #define RADIAL_LABELS_NONE     0
 #define RADIAL_LABELS_OFFSET   1
 #define RADIAL_LABELS_CENTERED 2
