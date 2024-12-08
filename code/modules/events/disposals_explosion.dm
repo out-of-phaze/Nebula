@@ -78,9 +78,7 @@
 
 		// Fill it with trash
 		for(var/i = 0 to rand(5,8))
-			var/chosen_trash = pick(subtypesof(/obj/item/trash))
-			var/obj/item/trash/T = new chosen_trash()
-			T.forceMove(trash_holder)
+			new /obj/random/junk(trash_holder) // create a random junk item in trash_holder
 
 		// Add the trash to the pipe
 		trash_holder.forceMove(bursting_pipe)
