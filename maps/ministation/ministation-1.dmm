@@ -919,13 +919,6 @@
 /obj/machinery/door/firedoor,
 /turf/floor/plating,
 /area/ministation/maint/secmaint)
-"eF" = (
-/obj/item/mollusc/barnacle{
-	pixel_x = -13;
-	pixel_y = 17
-	},
-/turf/space,
-/area/space)
 "eH" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -7001,13 +6994,6 @@
 /obj/item/clothing/suit/armor/laserproof,
 /turf/floor/tiled/dark,
 /area/ministation/security)
-"DI" = (
-/obj/item/mollusc/barnacle{
-	pixel_x = -13;
-	pixel_y = -14
-	},
-/turf/space,
-/area/space)
 "DJ" = (
 /obj/machinery/door/airlock/hatch/maintenance,
 /turf/floor/plating,
@@ -7033,14 +7019,6 @@
 	},
 /turf/floor/tiled,
 /area/ministation/security)
-"DZ" = (
-/obj/item/mollusc/barnacle{
-	pixel_x = -13;
-	pixel_y = -14
-	},
-/obj/structure/lattice,
-/turf/space,
-/area/space)
 "Ea" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -9894,12 +9872,6 @@
 	},
 /turf/floor/plating,
 /area/ministation/arrival)
-"UV" = (
-/obj/item/mollusc/barnacle{
-	pixel_x = 15
-	},
-/turf/space,
-/area/space)
 "UW" = (
 /obj/structure/bed/chair,
 /turf/floor/tiled,
@@ -10248,13 +10220,6 @@
 /obj/structure/rack,
 /turf/floor/plating,
 /area/ministation/maint/hydromaint)
-"WF" = (
-/obj/item/mollusc/barnacle{
-	pixel_x = 15;
-	pixel_y = -13
-	},
-/turf/space,
-/area/space)
 "WL" = (
 /obj/machinery/smartfridge/drying_oven,
 /turf/floor/plating,
@@ -10323,13 +10288,6 @@
 	},
 /turf/floor/tiled/white,
 /area/ministation/hall/e2)
-"Xi" = (
-/obj/item/mollusc/barnacle{
-	pixel_x = -13;
-	pixel_y = -14
-	},
-/turf/floor/reinforced/airless,
-/area/space)
 "Xl" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -34239,7 +34197,7 @@ aa
 aa
 aa
 aa
-WF
+aa
 kZ
 ad
 rt
@@ -34517,7 +34475,7 @@ ad
 aa
 aa
 aa
-UV
+aa
 aa
 aa
 mG
@@ -38123,7 +38081,7 @@ MA
 uI
 qf
 qf
-eF
+aa
 aa
 aa
 aa
@@ -38872,7 +38830,7 @@ aa
 aa
 aa
 aa
-DI
+aa
 aa
 aa
 mq
@@ -43515,7 +43473,7 @@ qf
 qf
 HO
 HO
-Xi
+HO
 HO
 HO
 HO
@@ -45053,7 +45011,7 @@ qI
 Om
 mH
 aa
-DI
+aa
 aa
 aa
 aa
@@ -49135,7 +49093,7 @@ aa
 aa
 aa
 aa
-WF
+aa
 cY
 YF
 KS
@@ -50947,7 +50905,7 @@ aa
 aa
 aa
 aa
-DI
+aa
 aa
 aa
 vK
@@ -51456,7 +51414,7 @@ cY
 cY
 cY
 cY
-DZ
+ad
 ad
 ad
 ad

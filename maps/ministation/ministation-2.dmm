@@ -1545,13 +1545,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/floor/tiled,
 /area/ministation/hall/n3)
-"gF" = (
-/obj/item/mollusc/barnacle{
-	pixel_x = -13;
-	pixel_y = -14
-	},
-/turf/floor/reinforced/airless,
-/area/space)
 "gG" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -3240,13 +3233,6 @@
 /obj/machinery/computer/modular/preset/engineering,
 /turf/floor/tiled,
 /area/ministation/bridge)
-"pa" = (
-/obj/item/mollusc/barnacle{
-	pixel_x = -13;
-	pixel_y = -14
-	},
-/turf/space,
-/area/space)
 "pb" = (
 /obj/structure/lattice,
 /obj/structure/ladder,
@@ -38250,7 +38236,7 @@ vA
 vA
 vA
 vA
-pa
+vA
 ah
 aR
 br
@@ -38535,7 +38521,7 @@ vA
 vA
 vA
 cw
-gF
+cw
 Cd
 Oo
 Lq
@@ -41888,7 +41874,7 @@ cw
 cw
 cw
 cw
-gF
+cw
 ae
 dw
 dt
@@ -46792,7 +46778,7 @@ VX
 WA
 ae
 cw
-pa
+vA
 vA
 vA
 vA

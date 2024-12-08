@@ -5188,12 +5188,6 @@
 /obj/structure/closet/lasertag/blue,
 /turf/floor/laminate/walnut,
 /area/ministation/dorms)
-"wZ" = (
-/obj/item/mollusc/barnacle{
-	pixel_x = 20
-	},
-/turf/floor/plating/airless,
-/area/space)
 "xg" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -11252,13 +11246,6 @@
 /obj/item/box,
 /turf/floor/tiled,
 /area/ministation/cargo)
-"Pr" = (
-/obj/item/mollusc/barnacle{
-	pixel_x = -13;
-	pixel_y = -14
-	},
-/turf/space,
-/area/space)
 "Ps" = (
 /obj/effect/wallframe_spawn/reinforced,
 /turf/floor/plating,
@@ -13267,12 +13254,6 @@
 	},
 /turf/floor/plating,
 /area/ministation/maint/eastatmos)
-"WY" = (
-/obj/item/mollusc/barnacle{
-	pixel_x = 20
-	},
-/turf/space,
-/area/space)
 "Xb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
@@ -40647,7 +40628,7 @@ aa
 aa
 aa
 aa
-WY
+aa
 aa
 ad
 ad
@@ -42187,7 +42168,7 @@ PR
 Bp
 lK
 ce
-wZ
+cn
 bX
 cN
 dq
@@ -45011,7 +44992,7 @@ aa
 aa
 ad
 aa
-WY
+aa
 aa
 aa
 au
@@ -47348,7 +47329,7 @@ nN
 zW
 aa
 DU
-Pr
+aa
 aa
 aa
 aa
@@ -53038,7 +53019,7 @@ aa
 aa
 aa
 aa
-Pr
+aa
 aa
 aa
 aa
