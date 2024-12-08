@@ -41,7 +41,7 @@
 		/obj/item/food/butchery/meat/fish = 3,
 		/obj/item/food/butchery/meat/fish/shark = 3,
 		/obj/item/food/butchery/meat/fish/octopus = 3,
-		/obj/item/mollusc/clam = 3
+		/obj/item/mollusc/clam/fished = 3
 		)
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "seafood crate"
