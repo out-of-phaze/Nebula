@@ -29,5 +29,5 @@ for(var/entry in OUT) { \
 for(var/entry in LIST) { \
 	var/assoc_val = LIST[entry]; \
 	var/weight = isnull(assoc_val) ? 1 : assoc_val; \
-	OUT[entry] = weight * TOTAL; \
+	OUT[entry] += weight * TOTAL; \
 }
