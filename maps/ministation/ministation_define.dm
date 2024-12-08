@@ -39,8 +39,6 @@
 
 	evac_controller_type = /datum/evacuation_controller/shuttle
 
-	pray_reward_type = /obj/item/mollusc/clam
-
 	starting_money = 5000
 	department_money = 1000
 	salary_modifier = 0.2
