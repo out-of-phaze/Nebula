@@ -5,24 +5,28 @@
 	icon_state = "medrandom"
 
 /obj/random/medical/spawn_choices()
-	var/static/list/spawnable_choices = list(
-		/obj/random/medical/lite                 = 21,
-		/obj/item/bodybag                        =  2,
-		/obj/item/chems/glass/bottle/stabilizer  =  2,
-		/obj/item/chems/glass/bottle/antitoxin   =  2,
-		/obj/item/pill_bottle                    =  2,
-		/obj/item/pill_bottle/painkillers        =  2,
-		/obj/item/pill_bottle/strong_painkillers =  1,
-		/obj/item/pill_bottle/antidepressants    =  2,
-		/obj/item/pill_bottle/oxygen             =  1,
-		/obj/item/pill_bottle/burn_meds          =  1,
-		/obj/item/pill_bottle/brute_meds         =  1,
-		/obj/item/chems/syringe/antitoxin        =  2,
-		/obj/item/chems/syringe/antibiotic       =  1,
-		/obj/item/chems/syringe/stabilizer       =  2,
-		/obj/item/box/freezer                    =  1,
-		/obj/item/stack/nanopaste                =  1
-	)
+	var/static/list/spawnable_choices
+	if(!spawnable_choices)
+		spawnable_choices = list(
+			/obj/item/bodybag                        =  2,
+			/obj/item/chems/glass/bottle/stabilizer  =  2,
+			/obj/item/chems/glass/bottle/antitoxin   =  2,
+			/obj/item/pill_bottle                    =  2,
+			/obj/item/pill_bottle/painkillers        =  2,
+			/obj/item/pill_bottle/strong_painkillers =  1,
+			/obj/item/pill_bottle/antidepressants    =  2,
+			/obj/item/pill_bottle/oxygen             =  1,
+			/obj/item/pill_bottle/burn_meds          =  1,
+			/obj/item/pill_bottle/brute_meds         =  1,
+			/obj/item/chems/syringe/antitoxin        =  2,
+			/obj/item/chems/syringe/antibiotic       =  1,
+			/obj/item/chems/syringe/stabilizer       =  2,
+			/obj/item/box/freezer                    =  1,
+			/obj/item/stack/nanopaste                =  1
+		)
+		var/list/temp_spawnables
+		var/total_weight
+		EXPAND_RANDOM_SPAWNER_LIST(/obj/random/medical/lite, temp_spawnables, total_weight, spawnable_choices, 21)
 	return spawnable_choices
 
 /obj/random/medical/lite

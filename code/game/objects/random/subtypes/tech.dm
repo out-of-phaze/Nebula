@@ -57,21 +57,25 @@
 	spawn_nothing_percentage = 50
 
 /obj/random/tech_supply/spawn_choices()
-	var/static/list/spawnable_choices = list(
-		/obj/random/powercell                     = 3,
-		/obj/random/technology_scanner            = 2,
-		/obj/item/stack/package_wrap/twenty_five  = 1,
-		/obj/item/hand_labeler                    = 1,
-		/obj/random/bomb_supply                   = 2,
-		/obj/item/chems/spray/extinguisher        = 1,
-		/obj/item/clothing/gloves/insulated/cheap = 1,
-		/obj/item/stack/cable_coil/random         = 2,
-		/obj/random/toolbox                       = 2,
-		/obj/item/belt/utility                    = 2,
-		/obj/item/belt/utility/atmostech          = 1,
-		/obj/random/tool                          = 5,
-		/obj/item/stack/tape_roll/duct_tape       = 2
-	)
+	var/static/list/spawnable_choices
+	if(!spawnable_choices)
+		spawnable_choices = list(
+			/obj/item/stack/package_wrap/twenty_five  = 1,
+			/obj/item/hand_labeler                    = 1,
+			/obj/item/chems/spray/extinguisher        = 1,
+			/obj/item/clothing/gloves/insulated/cheap = 1,
+			/obj/item/stack/cable_coil/random         = 2,
+			/obj/item/belt/utility                    = 2,
+			/obj/item/belt/utility/atmostech          = 1,
+			/obj/item/stack/tape_roll/duct_tape       = 2
+		)
+		var/list/temp_spawnables
+		var/total_weight
+		EXPAND_RANDOM_SPAWNER_LIST(/obj/random/powercell, temp_spawnables, total_weight, spawnable_choices, 3)
+		EXPAND_RANDOM_SPAWNER_LIST(/obj/random/technology_scanner, temp_spawnables, total_weight, spawnable_choices, 2)
+		EXPAND_RANDOM_SPAWNER_LIST(/obj/random/bomb_supply, temp_spawnables, total_weight, spawnable_choices, 2)
+		EXPAND_RANDOM_SPAWNER_LIST(/obj/random/toolbox, temp_spawnables, total_weight, spawnable_choices, 2)
+		EXPAND_RANDOM_SPAWNER_LIST(/obj/random/tool, temp_spawnables, total_weight, spawnable_choices, 5)
 	return spawnable_choices
 
 /obj/random/tank

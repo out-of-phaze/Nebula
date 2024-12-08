@@ -123,23 +123,18 @@
 	var/static/list/spawnable_choices
 	if(!spawnable_choices)
 		spawnable_choices = list(
-			/obj/effect/decal/cleanable/generic            = 20,
-			/obj/effect/decal/cleanable/spiderling_remains = 95,
 			/obj/item/remains/mouse                        = 95,
 			/obj/item/remains/robot                        = 95,
 			/obj/item/paper/crumpled                       = 95,
 			/obj/item/inflatable/torn                      = 95,
-			/obj/effect/decal/cleanable/molten_item        = 95,
 			/obj/item/shard                                = 95,
 			/obj/item/hand/missing_card                    = 95,
-			/obj/random/useful                             =  4
 		)
-		for(var/trash_type in subtypesof(/obj/item/trash))
+		var/list/useful_spawn_choices = STATIC_CALL(/obj/random/useful, spawn_choices)
+		for(var/useful_item in useful_spawn_choices)
+			spawnable_choices[useful_item] = 4
+		for(var/trash_type in subtypesof(/obj/item/trash) - typesof(/obj/item/trash/mollusc_shell, /obj/item/trash/snack_bowl, /obj/item/trash/syndi_cakes))
 			spawnable_choices[trash_type] = 95
-		for(var/trash_type in typesof(/obj/item/trash/cigbutt))
-			spawnable_choices[trash_type] = 95
-		spawnable_choices -= /obj/item/trash/snack_bowl
-		spawnable_choices -= /obj/item/trash/syndi_cakes
 		var/lunches = lunchables_lunches()
 		for(var/lunch in lunches)
 			spawnable_choices[lunches[lunch]] = 1
@@ -153,6 +148,8 @@
 
 /obj/random/trash/spawn_choices()
 	var/static/list/spawnable_choices = list(
+		/obj/effect/decal/cleanable/generic,
+		/obj/effect/decal/cleanable/spiderling_remains,
 		/obj/item/remains/lizard,
 		/obj/effect/decal/cleanable/blood/gibs/robot,
 		/obj/effect/decal/cleanable/blood/oil,
@@ -165,7 +162,8 @@
 		/obj/effect/decal/cleanable/generic,
 		/obj/effect/decal/cleanable/flour,
 		/obj/effect/decal/cleanable/dirt,
-		/obj/item/remains/robot
+		/obj/item/remains/robot,
+		/obj/effect/decal/cleanable/molten_item
 	)
 	return spawnable_choices
 
@@ -337,49 +335,53 @@
 	icon_state = "gift_3"
 
 /obj/random/loot/spawn_choices()
-	var/static/list/spawnable_choices = list(
-		/obj/random/energy                                            = 10,
-		/obj/random/projectile                                        = 10,
-		/obj/random/voidhelmet                                        = 10,
-		/obj/random/voidsuit                                          = 10,
-		/obj/random/hardsuit                                          = 10,
-		/obj/item/clothing/mask/gas/syndicate                         = 10,
-		/obj/item/clothing/mask/muzzle                                =  7,
-		/obj/item/clothing/glasses/night                              =  3,
-		/obj/item/clothing/glasses/thermal                            =  1,
-		/obj/item/clothing/glasses/welding/superior                   =  7,
-		/obj/item/clothing/head/collectable/petehat                   =  4,
-		/obj/item/clothing/suit/armor/pcarrier/merc                   =  3,
-		/obj/item/clothing/suit/straight_jacket                       =  6,
-		/obj/item/clothing/head/helmet/merc                           =  3,
-		/obj/item/stack/material/gemstone/mapped/diamond/ten          =  7,
-		/obj/item/stack/material/pane/mapped/rborosilicate/ten        =  7,
-		/obj/item/stack/material/brick/mapped/marble/ten              =  8,
-		/obj/item/stack/material/ingot/mapped/gold/ten                =  7,
-		/obj/item/stack/material/ingot/mapped/silver/ten              =  7,
-		/obj/item/stack/material/ingot/mapped/osmium/ten              =  7,
-		/obj/item/stack/material/ingot/mapped/platinum/ten            =  8,
-		/obj/item/stack/material/aerogel/mapped/tritium/ten           =  7,
-		/obj/item/stack/material/segment/mapped/mhydrogen/ten         =  6,
-		/obj/item/stack/material/sheet/reinforced/mapped/plasteel/ten =  9,
-		/obj/item/stack/material/ingot/mapped/copper/ten              =  8,
-		/obj/item/box/animal_cubes/monkeys                            =  5,
-		/obj/item/firstaid/surgery                                    =  4,
-		/obj/item/cell/infinite                                       =  1,
-		/obj/random/archaeological_find                               =  2,
-		/obj/item/multitool/hacktool                                  =  2,
-		/obj/item/surgicaldrill                                       =  7,
-		/obj/item/sutures                                             =  7,
-		/obj/item/retractor                                           =  7,
-		/obj/item/hemostat                                            =  7,
-		/obj/item/cautery                                             =  7,
-		/obj/item/bonesetter                                          =  7,
-		/obj/item/bonegel                                             =  7,
-		/obj/item/circular_saw                                        =  7,
-		/obj/item/scalpel                                             =  7,
-		/obj/item/baton/loaded                                        =  9,
-		/obj/item/radio/headset/hacked                                =  6
-	)
+	var/static/list/spawnable_choices
+	if(!spawnable_choices)
+		spawnable_choices = list(
+			/obj/item/clothing/mask/gas/syndicate                         = 10,
+			/obj/item/clothing/mask/muzzle                                =  7,
+			/obj/item/clothing/glasses/night                              =  3,
+			/obj/item/clothing/glasses/thermal                            =  1,
+			/obj/item/clothing/glasses/welding/superior                   =  7,
+			/obj/item/clothing/head/collectable/petehat                   =  4,
+			/obj/item/clothing/suit/armor/pcarrier/merc                   =  3,
+			/obj/item/clothing/suit/straight_jacket                       =  6,
+			/obj/item/clothing/head/helmet/merc                           =  3,
+			/obj/item/stack/material/gemstone/mapped/diamond/ten          =  7,
+			/obj/item/stack/material/pane/mapped/rborosilicate/ten        =  7,
+			/obj/item/stack/material/brick/mapped/marble/ten              =  8,
+			/obj/item/stack/material/ingot/mapped/gold/ten                =  7,
+			/obj/item/stack/material/ingot/mapped/silver/ten              =  7,
+			/obj/item/stack/material/ingot/mapped/osmium/ten              =  7,
+			/obj/item/stack/material/ingot/mapped/platinum/ten            =  8,
+			/obj/item/stack/material/aerogel/mapped/tritium/ten           =  7,
+			/obj/item/stack/material/segment/mapped/mhydrogen/ten         =  6,
+			/obj/item/stack/material/sheet/reinforced/mapped/plasteel/ten =  9,
+			/obj/item/stack/material/ingot/mapped/copper/ten              =  8,
+			/obj/item/box/animal_cubes/monkeys                            =  5,
+			/obj/item/firstaid/surgery                                    =  4,
+			/obj/item/cell/infinite                                       =  1,
+			/obj/item/multitool/hacktool                                  =  2,
+			/obj/item/surgicaldrill                                       =  7,
+			/obj/item/sutures                                             =  7,
+			/obj/item/retractor                                           =  7,
+			/obj/item/hemostat                                            =  7,
+			/obj/item/cautery                                             =  7,
+			/obj/item/bonesetter                                          =  7,
+			/obj/item/bonegel                                             =  7,
+			/obj/item/circular_saw                                        =  7,
+			/obj/item/scalpel                                             =  7,
+			/obj/item/baton/loaded                                        =  9,
+			/obj/item/radio/headset/hacked                                =  6
+		)
+		var/list/temp_spawnables
+		var/total_weight
+		EXPAND_RANDOM_SPAWNER_LIST(/obj/random/energy, temp_spawnables, total_weight, spawnable_choices, 10)
+		EXPAND_RANDOM_SPAWNER_LIST(/obj/random/projectile, temp_spawnables, total_weight, spawnable_choices, 10)
+		EXPAND_RANDOM_SPAWNER_LIST(/obj/random/voidhelmet, temp_spawnables, total_weight, spawnable_choices, 10)
+		EXPAND_RANDOM_SPAWNER_LIST(/obj/random/voidsuit, temp_spawnables, total_weight, spawnable_choices, 10)
+		EXPAND_RANDOM_SPAWNER_LIST(/obj/random/hardsuit, temp_spawnables, total_weight, spawnable_choices, 10)
+		EXPAND_RANDOM_SPAWNER_LIST(/obj/random/archaeological_find, temp_spawnables, total_weight, spawnable_choices, 2)
 	return spawnable_choices
 
 /obj/random/vendor

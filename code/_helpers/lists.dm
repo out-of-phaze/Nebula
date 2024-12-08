@@ -867,3 +867,35 @@ var/global/list/json_cache = list()
 /// Is this a dense (all keys have non-null values) associative list with at least one entry?
 /proc/is_dense_assoc(var/list/L)
 	return length(L) > 0 && !isnull(L[L[1]])
+
+/// This might be expensive, so use sparingly. Loop over every element and return TRUE when we find one with an associated value.
+/proc/is_assoc(list/L)
+	for(var/key in L)
+		if(!isnull(L[key]))
+			return TRUE
+	return FALSE
+
+/// Returns the sum of all numbers in a list. O(n) complexity.
+/proc/list_sum(list/L)
+	. = 0
+	for(var/val in L)
+		if(isnum(val))
+			. += val
+
+/// Returns the sum of all numerical values in an associative list. O(n log n) complexity because associative lookup is O(log n).
+/proc/assoc_sum(list/L)
+	. = 0
+	for(var/key in L)
+		var/val = L[key]
+		if(isnum(val))
+			. += val
+
+/// Returns the sum of all numerical values in an associative list. Null values are counted as 1. O(n log n) complexity because associative lookup is O(log n).
+/proc/sparse_assoc_sum(list/L)
+	. = 0
+	for(var/key in L)
+		var/val = L[key]
+		if(isnum(val))
+			. += val
+		else if(isnull(val))
+			. += 1

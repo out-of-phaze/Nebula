@@ -21,13 +21,17 @@
 	desc = "This is a random rare powertool for maintenance"
 
 /obj/random/tool/power/spawn_choices()
-	var/static/list/spawnable_choices = list(
-		/obj/random/tool                   = 320,
-		/obj/item/weldingtool/electric     = 15,
-		/obj/item/weldingtool/experimental =  3,
-		/obj/item/tool/hydraulic_cutter    =  1,
-		/obj/item/tool/power_drill         =  1
-	)
+	var/static/list/spawnable_choices
+	if(!spawnable_choices)
+		spawnable_choices = list(
+			/obj/item/weldingtool/electric     = 15,
+			/obj/item/weldingtool/experimental =  3,
+			/obj/item/tool/hydraulic_cutter    =  1,
+			/obj/item/tool/power_drill         =  1
+		)
+		var/list/temp_spawnables
+		var/total_weight
+		EXPAND_RANDOM_SPAWNER_LIST(/obj/random/tool, temp_spawnables, total_weight, spawnable_choices, 320)
 	return spawnable_choices
 
 /obj/random/toolbox
