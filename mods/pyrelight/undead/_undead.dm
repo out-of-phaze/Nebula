@@ -23,5 +23,26 @@
 		return (0.6 SECONDS)
 	return ..()
 
+/mob/living/human/get_death_message(gibbed)
+	if(has_trait(/decl/trait/undead, TRAIT_LEVEL_MODERATE))
+		return "crumbles and falls apart!"
+	return ..()
+
+/mob/living/human/gib(do_gibs = TRUE)
+	do_gibs &&= !has_trait(/decl/trait/undead, TRAIT_LEVEL_MODERATE)
+	return ..(do_gibs)
+
+/mob/living/human/get_self_death_message(gibbed)
+	return has_trait(/decl/trait/undead, TRAIT_LEVEL_MODERATE) ? "You have crumbled." : ..()
+
+/mob/living/human/death(gibbed)
+	if(!(. = ..()))
+		return
+	if(!QDELETED(src) && !gibbed && has_trait(/decl/trait/undead, TRAIT_LEVEL_MODERATE))
+		gib()
+
+/mob/living/human/get_gibber_type()
+	return has_trait(/decl/trait/undead, TRAIT_LEVEL_MODERATE) ? null : ..()
+
 /datum/skillset/undead
 	default_value = SKILL_BASIC
