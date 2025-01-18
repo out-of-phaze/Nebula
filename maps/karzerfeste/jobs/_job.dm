@@ -1,5 +1,4 @@
 /datum/map/karzerfeste
-	id_hud_icons        = 'maps/karzerfeste/jobs/icons.dmi'
 	default_job_type    = /datum/job/karzerfeste/local/traveller
 	allowed_jobs        = list(
 		/datum/job/karzerfeste/guild/master,
@@ -40,6 +39,7 @@
 
 /datum/job/karzerfeste
 	abstract_type       = /datum/job/karzerfeste
+	hud_icon            = 'maps/karzerfeste/jobs/icons.dmi'
 	min_skill           = list()
 	// if you consider adding something like literacy to this list to make it rarer/more exclusive
 	// consider making the higher levels cost more points instead
