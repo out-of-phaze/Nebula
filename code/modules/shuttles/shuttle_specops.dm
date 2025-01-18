@@ -16,9 +16,6 @@
 	var/cancel_countdown = 0
 	category = /datum/shuttle/autodock/ferry/specops
 
-/datum/shuttle/autodock/ferry/specops/New()
-	..()
-
 /datum/shuttle/autodock/ferry/specops/launch(var/user)
 	if (!can_launch())
 		return
