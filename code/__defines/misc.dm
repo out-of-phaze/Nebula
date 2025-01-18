@@ -373,3 +373,8 @@
 
 // Default UI style applied to client prefs.
 #define DEFAULT_UI_STYLE /decl/ui_style/midnight
+
+#define CRAYON_DRAW_RUNE     "rune"
+#define CRAYON_DRAW_GRAFFITI "graffiti"
+#define CRAYON_DRAW_LETTER   "letter"
+#define CRAYON_DRAW_ARROW    "arrow"
