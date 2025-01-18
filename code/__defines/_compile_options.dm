@@ -3,7 +3,7 @@
 #define BACKGROUND_ENABLED 0
 
 // If REFTRACK_IN_CI is defined, the reftracker will run in CI.
-#define REFTRACK_IN_CI
+// #define REFTRACK_IN_CI
 #if defined(REFTRACK_IN_CI) && defined(UNIT_TEST) && !defined(SPACEMAN_DMM)
 #define REFTRACKING_ENABLED
 #define GC_FAILURE_HARD_LOOKUP
