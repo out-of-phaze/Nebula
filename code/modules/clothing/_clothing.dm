@@ -100,7 +100,7 @@
 
 /obj/item/clothing/attackby(obj/item/I, mob/user)
 	var/rags = RAG_COUNT(src)
-	if(istype(material) && material.default_solid_form && rags && (I.edge || I.sharp) && user.check_intent(I_FLAG_HARM))
+	if(istype(material) && material.default_solid_form && rags && (I.is_sharp() || I.has_edge()) && user.check_intent(I_FLAG_HARM))
 		if(length(accessories))
 			to_chat(user, SPAN_WARNING("You should remove the accessories attached to \the [src] first."))
 			return TRUE
@@ -450,8 +450,9 @@
 /decl/interaction_handler/clothing_set_sensors
 	name = "Set Sensors Level"
 	expected_target_type = /obj/item/clothing
+	examine_desc = "adjust vitals sensors"
 
 /decl/interaction_handler/clothing_set_sensors/invoked(atom/target, mob/user, obj/item/prop)
-	var/obj/item/clothing/U = target
-	U.set_sensors(user)
+	var/obj/item/clothing/clothes = target
+	clothes.set_sensors(user)
 

@@ -1205,6 +1205,7 @@ default behaviour is:
 	expected_user_type = /mob/observer
 	expected_target_type = /mob/living
 	interaction_flags = 0
+	examine_desc = null // DO NOT show this in general.
 
 /decl/interaction_handler/admin_kill/is_possible(atom/target, mob/user, obj/item/prop)
 	. = ..()
@@ -1585,7 +1586,7 @@ default behaviour is:
 
 /mob/living/proc/handle_walking_tracks(turf/T, old_loc)
 
-	if(!T.can_show_footsteps())
+	if(!T.can_show_coating_footprints())
 		return
 
 	// Tracking blood or other contaminants
@@ -1753,7 +1754,7 @@ default behaviour is:
 	user.set_special_ability_cooldown(5 SECONDS)
 	visible_message(SPAN_DANGER("You hear something rumbling inside [src]'s stomach..."))
 	var/obj/item/I = user.get_active_held_item()
-	var/force = I?.get_attack_force(user)
+	var/force = I?.expend_attack_force(user)
 	if(!force)
 		return
 	var/d = rand(round(force / 4), force)
@@ -1923,8 +1924,8 @@ default behaviour is:
 		var/screen_locs = gear.get_preview_screen_locs()
 		if(screen_locs)
 			return screen_locs
-	var/decl/species/my_species = get_species()
-	return my_species?.character_preview_screen_locs
+	var/decl/bodytype/my_bodytype = get_bodytype()
+	return my_bodytype?.character_preview_screen_locs
 
 /mob/living/can_twohand_item(obj/item/item)
 	if(!istype(item) || !item.can_be_twohanded)
