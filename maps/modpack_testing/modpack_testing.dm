@@ -6,6 +6,7 @@
 	#include "../../mods/content/mundane.dm"
 	#include "../../mods/content/scaling_descriptors.dm"
 	#include "../../mods/content/standard_jobs/_standard_jobs.dme"
+	#include "../../mods/content/tabloids/_tabloids.dme"
 
 	#include "../../mods/content/anima/_anima.dme"
 	#include "../../mods/pyrelight/_pyrelight.dme"
