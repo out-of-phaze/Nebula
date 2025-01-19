@@ -31,8 +31,10 @@
 		var/obj/effect/decal/cleanable/blood/gibs/gib = new(loc)
 		var/weakref/g = weakref(gib)
 		ignore_list += g
-		spawn(600)
-			ignore_list -= g
+		addtimer(CALLBACK(src, PROC_REF(unignore_gibs), g), 60 SECONDS)
+
+/mob/living/bot/cleanbot/proc/unignore_gibs(weakref/gib)
+	ignore_list -= gib
 
 /mob/living/bot/cleanbot/lookForTargets()
 	for(var/obj/effect/decal/cleanable/decal in view(world.view + 1, src))
