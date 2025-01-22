@@ -6,7 +6,7 @@
 	modular_limb_tier =      MODULAR_BODYPART_CYBERNETIC
 	body_flags =             0
 	modifier_string =        "biosynthetic"
-	material =               /decl/material/solid/fiberglass // todo: polyethylene
+	organ_material =         /decl/material/solid/fiberglass // todo: polyethylene
 	base_eye_color =         COLOR_COMMAND_BLUE
 	appearance_descriptors = null
 	age_descriptor =         /datum/appearance_descriptor/age/replika
@@ -104,7 +104,7 @@
 
 /decl/bodytype/replika/star/Initialize()
 	. = ..()
-	equip_adjust = list(
+	_equip_adjust = list(
 		BP_L_HAND =           list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list(0, 2), "[WEST]" = list(0, 2)),
 		BP_R_HAND =           list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list(0, 2), "[WEST]" = list(0, 2)),
 		slot_head_str =       list("[NORTH]" = list(0, 2), "[EAST]" = list(0, 2), "[SOUTH]" = list(0, 2), "[WEST]" = list(0, 2)),
@@ -141,7 +141,7 @@
 
 /decl/bodytype/replika/klbr/Initialize()
 	. = ..()
-	equip_adjust = list(
+	_equip_adjust = list(
 		BP_L_HAND =           list("[NORTH]" = list(0, -1), "[EAST]" = list(0, -1), "[SOUTH]" = list(0, -1), "[WEST]" = list(0, -1)),
 		BP_R_HAND =           list("[NORTH]" = list(0, -1), "[EAST]" = list(0, -1), "[SOUTH]" = list(0, -1), "[WEST]" = list(0, -1)),
 		slot_head_str =       list("[NORTH]" = list(0, -1), "[EAST]" = list(0, -1), "[SOUTH]" = list(0, -1), "[WEST]" = list(0, -1)),
