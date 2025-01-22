@@ -1601,7 +1601,7 @@
 /turf/simulated/floor/plating,
 /area/planetary_outpost/power)
 "NO" = (
-/obj/structure/closet/crate/freezer/rations,
+/obj/structure/closet/crate/plastic/rations,
 /turf/simulated/floor/tiled/white,
 /area/planetary_outpost/mess)
 "NR" = (

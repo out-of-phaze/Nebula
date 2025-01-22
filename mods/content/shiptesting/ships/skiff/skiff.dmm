@@ -98,7 +98,7 @@
 /obj/structure/railing/mapped{
 	material = /decl/material/solid/organic/plastic
 	},
-/obj/structure/closet/crate/freezer/rations,
+/obj/structure/closet/crate/plastic/rations,
 /obj/structure/catwalk{
 	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
@@ -142,7 +142,7 @@
 	},
 /obj/item/hoist_kit,
 /obj/item/mobile_ladder,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/skiff)
 "G" = (
 /obj/structure/railing/mapped{
@@ -168,7 +168,7 @@
 	material = /decl/material/solid/organic/plastic;
 	material_alteration = 16777215
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/skiff)
 "J" = (
 /obj/structure/catwalk{

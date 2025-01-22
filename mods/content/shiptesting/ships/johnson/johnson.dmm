@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/obj/structure/closet/crate/freezer/rations,
+/obj/structure/closet/crate/plastic/rations,
 /obj/item/bag/trash,
 /obj/item/bag/trash,
 /obj/item/box/donkpockets,
@@ -250,7 +250,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson/medical)
 "eO" = (
 /obj/effect/floor_decal/techfloor{
@@ -272,7 +272,7 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson)
 "fx" = (
 /obj/machinery/vending/wallmed1{
@@ -365,7 +365,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson)
 "hw" = (
 /obj/structure/cable/yellow{
@@ -399,7 +399,7 @@
 /obj/machinery/power/terminal{
 	icon_state = "term-omni"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson)
 "iq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -439,7 +439,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson)
 "iL" = (
 /obj/effect/catwalk_plated/dark,
@@ -595,7 +595,7 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/yellow,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson)
 "kM" = (
 /turf/space,
@@ -736,7 +736,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson/medical)
 "qk" = (
 /obj/machinery/power/solar,
@@ -746,7 +746,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson/medical)
 "qA" = (
 /obj/machinery/button/access/exterior{
@@ -901,7 +901,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson/medical)
 "tV" = (
 /obj/structure/cable/yellow{
@@ -1068,7 +1068,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson/medical)
 "zB" = (
 /obj/structure/catwalk,
@@ -1099,7 +1099,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/solar,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson)
 "zS" = (
 /obj/structure/cable{
@@ -1669,7 +1669,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson/medical)
 "Kr" = (
 /turf/wall/r_wall,
@@ -1808,7 +1808,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson)
 "Nu" = (
 /obj/structure/curtain/open/shower/engineering,
@@ -1869,7 +1869,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson/medical)
 "Oj" = (
 /obj/random/vendor,
@@ -2092,7 +2092,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson)
 "UV" = (
 /obj/effect/floor_decal/techfloor{
@@ -2306,7 +2306,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/johnson)
 "Zp" = (
 /obj/structure/table/reinforced,
