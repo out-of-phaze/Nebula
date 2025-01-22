@@ -52,7 +52,7 @@
 	name = "Mining Vessel Infirmary"
 
 /decl/submap_archetype/spawnable_ship/johnson
-	descriptor = "Johnson-class mining vessel"
+	name = "Johnson-class mining vessel"
 	crew_jobs = list(
 		/datum/job/submap/shiptesting/johnson_pilot,
 		/datum/job/submap/shiptesting/johnson_medic,

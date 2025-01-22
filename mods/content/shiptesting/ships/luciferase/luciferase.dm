@@ -92,7 +92,7 @@
 	name = "Engineering Vessel Cargo Bay"
 
 /decl/submap_archetype/spawnable_ship/luciferase
-	descriptor = "Luciferase-class prototype engineering vessel"
+	name = "Luciferase-class prototype engineering vessel"
 	crew_jobs = list(
 		/datum/job/submap/shiptesting/luciferase_chief,
 		/datum/job/submap/shiptesting/luciferase_engineer,

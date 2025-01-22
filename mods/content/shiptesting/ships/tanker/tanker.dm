@@ -37,7 +37,7 @@
 	icon_state = "yellow"
 
 /decl/submap_archetype/spawnable_ship/tanker
-	descriptor = "Astor-class gas tanker"
+	name = "Astor-class gas tanker"
 	crew_jobs = list(
 		/datum/job/submap/shiptesting/tanker_pilot,
 		/datum/job/submap/shiptesting/tanker_technician

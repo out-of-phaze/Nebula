@@ -51,7 +51,7 @@
 	is_outside = TRUE // you don't have WALLS
 
 /decl/submap_archetype/spawnable_ship/skiff
-	descriptor = "Gravedigger-class mining skiff"
+	name = "Gravedigger-class mining skiff"
 	crew_jobs = list(
 		/datum/job/submap/shiptesting/skiff_operator
 	)
