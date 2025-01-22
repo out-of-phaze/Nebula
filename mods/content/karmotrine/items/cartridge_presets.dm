@@ -1,5 +1,5 @@
 /obj/item/chems/chem_disp_cartridge/karmotrine/populate_reagents()
-	reagents.add_reagent(/decl/material/liquid/ethanol/karmotrine, reagents.maximum_volume)
+	reagents.add_reagent(/decl/material/liquid/alcohol/ethanol/karmotrine, reagents.maximum_volume)
 
 /obj/item/chems/chem_disp_cartridge/adelhyde/populate_reagents()
 	reagents.add_reagent(/decl/material/liquid/blendable/adelhyde, reagents.maximum_volume)

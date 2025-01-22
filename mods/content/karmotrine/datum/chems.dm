@@ -1,4 +1,4 @@
-/decl/material/liquid/ethanol/karmotrine
+/decl/material/liquid/alcohol/ethanol/karmotrine
 	name = "karmotrine"
 	lore_text = "A synthetic ethanol substitute, imported to Glitch City in bulk by the British Trademark Council."
 	taste_description = "synthetic alcohol"

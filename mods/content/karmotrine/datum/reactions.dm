@@ -1,7 +1,7 @@
 // CHEMICALS
 /decl/chemical_reaction/karmotrine
 	name = "Karmotrine"
-	result = /decl/material/liquid/ethanol/karmotrine
+	result = /decl/material/liquid/alcohol/ethanol/karmotrine
 	required_reagents = list(/decl/material/liquid/acid = 1, /decl/material/liquid/fuel/hydrazine = 1, /decl/material/solid/phosphorus = 1)
 	result_amount = 3
 
