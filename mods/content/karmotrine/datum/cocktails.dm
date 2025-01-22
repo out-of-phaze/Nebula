@@ -9,7 +9,7 @@
 		/decl/material/liquid/blendable/bronson_extract =      2,
 		/decl/material/liquid/blendable/powdered_delta =       2,
 		/decl/material/liquid/capsaicin/flanergide = 2,
-		/decl/material/liquid/ethanol/karmotrine =   4
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   4
 	)
 	tastes = list(
 		"sour apples" = 0.5,
@@ -28,7 +28,7 @@
 		/decl/material/liquid/blendable/bronson_extract =      2,
 		/decl/material/liquid/blendable/powdered_delta =       1,
 		/decl/material/liquid/capsaicin/flanergide = 2,
-		/decl/material/liquid/ethanol/karmotrine =   4
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   4
 	)
 	tastes = list(
 		"beer" = 0.8,
@@ -78,7 +78,7 @@
 		/decl/material/liquid/blendable/adelhyde/aged =        4,
 		/decl/material/liquid/blendable/powdered_delta =       1,
 		/decl/material/liquid/capsaicin/flanergide = 2,
-		/decl/material/liquid/ethanol/karmotrine =   3,
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   3,
 		/decl/material/solid/ice
 	)
 	tastes = list(
@@ -95,7 +95,7 @@
 	ratios = list(
 		/decl/material/liquid/blendable/adelhyde/aged =        6,
 		/decl/material/liquid/blendable/powdered_delta =       3,
-		/decl/material/liquid/ethanol/karmotrine =   1
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   1
 	)
 	tastes = list(
 		"drunken fruit" = 0.8,
@@ -113,7 +113,7 @@
 	ratios = list(
 		/decl/material/liquid/blendable/adelhyde =             2,
 		/decl/material/liquid/capsaicin/flanergide = 3,
-		/decl/material/liquid/ethanol/karmotrine =   5,
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   5,
 		/decl/material/solid/ice
 	)
 	tastes = list(
@@ -150,7 +150,7 @@
 		/decl/material/liquid/blendable/bronson_extract =      1,
 		/decl/material/liquid/blendable/powdered_delta =       2,
 		/decl/material/liquid/capsaicin/flanergide = 3,
-		/decl/material/liquid/ethanol/karmotrine =   5,
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   5,
 	)
 	tastes = list(
 		"burning spiciness" = 1
@@ -181,7 +181,7 @@
 	glass_icon_state = "fringe_weaver"
 	ratios = list(
 		/decl/material/liquid/blendable/adelhyde/aged =        1,
-		/decl/material/liquid/ethanol/karmotrine =   9
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   9
 	)
 	// default taste; it's just alcohol and sugar
 
@@ -213,7 +213,7 @@
 		/decl/material/liquid/blendable/adelhyde =             3,
 		/decl/material/liquid/blendable/bronson_extract =      3,
 		/decl/material/liquid/blendable/powdered_delta =       3,
-		/decl/material/liquid/ethanol/karmotrine =   1
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   1
 	)
 	blended = TRUE
 	// tastes bland and like chemicals, so exactly what it's made of
@@ -242,7 +242,7 @@
 		/decl/material/liquid/blendable/bronson_extract =      6,
 		/decl/material/liquid/blendable/powdered_delta =       1,
 		/decl/material/liquid/capsaicin/flanergide = 4,
-		/decl/material/liquid/ethanol/karmotrine =   2
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   2
 	)
 	blended = TRUE
 	tastes = list(
@@ -262,7 +262,7 @@
 		/decl/material/liquid/blendable/bronson_extract =      1,
 		/decl/material/liquid/blendable/powdered_delta =       3,
 		/decl/material/liquid/capsaicin/flanergide = 3,
-		/decl/material/liquid/ethanol/karmotrine =   2,
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   2,
 		/decl/material/solid/ice
 	)
 	blended = TRUE
@@ -278,7 +278,7 @@
 		/decl/material/liquid/blendable/adelhyde =             6,
 		/decl/material/liquid/blendable/powdered_delta =       1,
 		/decl/material/liquid/capsaicin/flanergide = 1,
-		/decl/material/liquid/ethanol/karmotrine =   2,
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   2,
 		/decl/material/solid/ice
 	)
 	blended = TRUE
@@ -295,7 +295,7 @@
 		/decl/material/liquid/blendable/bronson_extract =      3,
 		/decl/material/liquid/blendable/powdered_delta =       5,
 		/decl/material/liquid/capsaicin/flanergide = 5,
-		/decl/material/liquid/ethanol/karmotrine =   3,
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   3,
 		/decl/material/solid/ice
 	)
 	tastes = list(
@@ -314,7 +314,7 @@
 		/decl/material/liquid/blendable/bronson_extract/aged = 5,
 		/decl/material/liquid/blendable/powdered_delta =       2,
 		/decl/material/liquid/capsaicin/flanergide = 3,
-		/decl/material/liquid/ethanol/karmotrine =   3
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   3
 	)
 	tastes = list(
 		"sweet citrusy syrup" = 1
@@ -330,7 +330,7 @@
 	ratios = list(
 		/decl/material/liquid/blendable/bronson_extract =      3,
 		/decl/material/liquid/capsaicin/flanergide = 3,
-		/decl/material/liquid/ethanol/karmotrine =   4
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   4
 	)
 	tastes = list(
 		"a sore throat" = 1
@@ -397,7 +397,7 @@
 		/decl/material/liquid/blendable/adelhyde =             2,
 		/decl/material/liquid/blendable/bronson_extract =      4,
 		/decl/material/liquid/capsaicin/flanergide = 3,
-		/decl/material/liquid/ethanol/karmotrine =   3,
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   3,
 		/decl/material/solid/ice
 	)
 	hidden_from_codex = TRUE
@@ -417,7 +417,7 @@
 		/decl/material/liquid/blendable/bronson_extract =      4,
 		/decl/material/liquid/blendable/powdered_delta =       4,
 		/decl/material/liquid/capsaicin/flanergide = 4,
-		/decl/material/liquid/ethanol/karmotrine =   4,
+		/decl/material/liquid/alcohol/ethanol/karmotrine =   4,
 		/decl/material/solid/ice
 	)
 	// tastes like the disgusting mix of its ingredients it is
