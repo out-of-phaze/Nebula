@@ -48,7 +48,7 @@
 	icon_state = "yellow"
 
 /decl/submap_archetype/spawnable_ship/lozenge
-	descriptor = "Lozenge-class escape pod"
+	name = "Lozenge-class escape pod"
 	crew_jobs = list(
 		/datum/job/submap/shiptesting/lozenge_survivor
 	)

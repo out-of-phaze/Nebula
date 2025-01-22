@@ -126,7 +126,7 @@
 	for(var/datum/submap/submap in submaps)
 		if(!submap.archetype.is_manifest_visible())
 			continue
-		dat += "<tr><th colspan=2>[submap.name] ([submap.archetype.descriptor]):</th></tr>"
+		dat += "<tr><th colspan=2>[submap.name] ([submap.archetype.name]):</th></tr>"
 		for(var/entry in submaps[submap])
 			dat += "<tr class='candystripe'><td>[entry[1]]</td><td>[entry[2]]</td></tr>"
 	dat += "</table>"
