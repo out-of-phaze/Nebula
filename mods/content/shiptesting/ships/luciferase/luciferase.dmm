@@ -92,7 +92,7 @@
 	icon_state = "1-8"
 	},
 /obj/abstract/exterior_marker/outside,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/cargo)
 "bt" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
@@ -120,7 +120,7 @@
 /area/luciferase/engine)
 "bA" = (
 /obj/abstract/exterior_marker/outside,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/atmos)
 "bD" = (
 /obj/machinery/computer/cryopod{
@@ -297,7 +297,7 @@
 /obj/structure/handrail{
 	dir = 1
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/cargo)
 "dL" = (
 /obj/machinery/power/smes/buildable/preset,
@@ -496,7 +496,7 @@
 	},
 /obj/abstract/exterior_marker/outside,
 /obj/structure/handrail,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/cargo)
 "gw" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -515,7 +515,7 @@
 	id_tag = "waste"
 	},
 /obj/abstract/exterior_marker/outside,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/engine)
 "gL" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -973,7 +973,7 @@
 	icon_state = "1-2"
 	},
 /obj/abstract/exterior_marker/outside,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/cargo)
 "mb" = (
 /obj/machinery/atmospherics/unary/vent_pump/airlock{
@@ -990,7 +990,7 @@
 /obj/machinery/shipcomms/broadcaster{
 	dir = 8
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/atmos)
 "mp" = (
 /obj/structure/cable/yellow{
@@ -1016,7 +1016,7 @@
 	icon_state = "2-4"
 	},
 /obj/abstract/exterior_marker/outside,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/cargo)
 "mT" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -1055,7 +1055,7 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/cargo)
 "nQ" = (
 /turf/wall/r_wall/prepainted,
@@ -1155,7 +1155,7 @@
 	icon_state = "1-4"
 	},
 /obj/abstract/exterior_marker/outside,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/cargo)
 "oU" = (
 /obj/structure/closet/radiation,
@@ -1431,7 +1431,7 @@
 "rT" = (
 /obj/abstract/exterior_marker/outside,
 /obj/machinery/shipcomms/receiver,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/maint)
 "rV" = (
 /obj/structure/cable{
@@ -1775,7 +1775,7 @@
 	icon_state = "2-8"
 	},
 /obj/abstract/exterior_marker/outside,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/cargo)
 "wj" = (
 /obj/machinery/atmospherics/binary/circulator{
@@ -1994,7 +1994,7 @@
 /area/luciferase/maint)
 "yW" = (
 /obj/abstract/exterior_marker/outside,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/maint)
 "ze" = (
 /obj/machinery/computer/operating{
@@ -2031,7 +2031,7 @@
 /area/luciferase/infirmary)
 "zm" = (
 /obj/abstract/exterior_marker/outside,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/cargo)
 "zu" = (
 /obj/machinery/power/smes/buildable/preset{
@@ -2520,7 +2520,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/cargo)
 "DK" = (
 /obj/machinery/door/airlock/maintenance,
@@ -2790,7 +2790,7 @@
 /turf/floor/tiled/monotile,
 /area/luciferase/cargo)
 "GS" = (
-/obj/structure/closet/crate/freezer/rations,
+/obj/structure/closet/crate/plastic/rations,
 /obj/item/bag/trash,
 /obj/item/bag/trash,
 /obj/item/box/donkpockets,
@@ -3079,7 +3079,7 @@
 	icon_state = "term-omni"
 	},
 /obj/abstract/exterior_marker/outside,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/cargo)
 "Kf" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -3624,7 +3624,7 @@
 /obj/structure/handrail{
 	dir = 8
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/maint)
 "St" = (
 /obj/random/maintenance{
@@ -3784,7 +3784,7 @@
 /obj/structure/handrail{
 	dir = 8
 	},
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/atmos)
 "VG" = (
 /obj/structure/cable{
@@ -3895,7 +3895,7 @@
 	icon_state = "4-8"
 	},
 /obj/abstract/exterior_marker/outside,
-/turf/floor/airless,
+/turf/floor/plating/airless,
 /area/luciferase/cargo)
 "XH" = (
 /obj/structure/cable{
