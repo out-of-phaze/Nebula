@@ -30,3 +30,8 @@
 	name = "gentleman's cap"
 	desc = "A checkered gray flat cap."
 	icon = 'icons/clothing/head/flatcap.dmi'
+
+/obj/item/clothing/head/maid
+	name = "maid's headband"
+	desc = "This dainty, frilled thing is apparently meant to go on your head."
+	icon = 'icons/clothing/head/maid.dmi'

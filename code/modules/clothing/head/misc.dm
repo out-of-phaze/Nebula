@@ -269,3 +269,9 @@
 	material = /decl/material/solid/organic/cloth
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME | MAT_FLAG_ALTERATION_DESC
 	accessory_slot = null // cannot be equipped on top of helmets
+
+/obj/item/clothing/head/maid
+	name = "maid's headband"
+	desc = "This dainty, frilled thing is apparently meant to go on your head."
+	icon = 'icons/clothing/head/maid.dmi'
+	markings_state_modifier = null

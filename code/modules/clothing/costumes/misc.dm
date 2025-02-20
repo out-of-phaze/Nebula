@@ -121,3 +121,8 @@
 	name = "rogue's uniform"
 	desc = "For the man who doesn't care because he's still free."
 	icon = 'icons/clothing/rogue_captain.dmi'
+
+/obj/item/clothing/costume/maid
+	name = "maid's uniform"
+	desc = "The uniform of someone you'd expect to see dusting off an antique display case."
+	icon = 'icons/clothing/costumes/maid.dmi'
