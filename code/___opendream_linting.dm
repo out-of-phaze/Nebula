@@ -1,3 +1,4 @@
+#define UNIT_TEST
 #ifdef OPENDREAM
 //1000-1999
 #pragma FileAlreadyIncluded error
