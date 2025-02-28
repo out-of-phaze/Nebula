@@ -1,13 +1,13 @@
 #define SHIP_NAMES_FILE "mods/content/shiptesting/ship_names.json"
 
 /datum/map_template/ship
-	// Prefix/suffix system copied from ruins because for some reason it's not on /datum/map_template.
-	var/prefix = "mods/content/shiptesting/ships/"
-	var/list/suffixes
-	template_parent_type = /datum/map_template/ship
+	abstract_type = /datum/map_template/ship
 	template_categories = list(MAP_TEMPLATE_CATEGORY_SHIP)
 	template_flags = TEMPLATE_FLAG_ALLOW_DUPLICATES
 	modify_tag_vars = TRUE
+	// Prefix/suffix system copied from ruins because for some reason it's not on /datum/map_template.
+	var/prefix = "mods/content/shiptesting/ships/"
+	var/list/suffixes
 
 var/global/list/ship_names_by_class = list()
 
