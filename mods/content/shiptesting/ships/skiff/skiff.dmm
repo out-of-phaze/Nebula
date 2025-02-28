@@ -73,7 +73,7 @@
 /turf/space,
 /area/skiff)
 "o" = (
-/obj/structure/bed/chair{
+/obj/structure/chair{
 	dir = 4
 	},
 /obj/abstract/submap_landmark/spawnpoint/skiff_operator,
