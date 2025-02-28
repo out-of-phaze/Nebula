@@ -46,11 +46,6 @@
 
 	preview_outfit = null
 
-	unarmed_attacks = list(
-		/decl/natural_attack/stomp,
-		/decl/natural_attack/kick,
-		/decl/natural_attack/punch
-	)
 	default_pronouns = /decl/pronouns/female
 	available_pronouns = list(
 		/decl/pronouns,

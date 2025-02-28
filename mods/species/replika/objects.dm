@@ -8,10 +8,10 @@
 	possible_transfer_amounts = @"[5,10,15]"
 	var/tmp/sound_spray = 'sound/effects/spray.ogg' ///Sound played when spraying
 
-/obj/item/chems/repair_spray/examine(mob/user, distance, infix, suffix)
+/obj/item/chems/repair_spray/get_examine_strings(mob/user, distance, infix, suffix)
 	. = ..()
 	if(distance <= 2)
-		to_chat(user, SPAN_NOTICE("\The [src]'s refill cap is [ATOM_IS_OPEN_CONTAINER(src) ? "open" : "closed"]."))
+		. += SPAN_NOTICE("\The [src]'s refill cap is [ATOM_IS_OPEN_CONTAINER(src) ? "open" : "closed"].")
 
 /obj/item/chems/repair_spray/attack_self(mob/user)
 	to_chat(user, SPAN_WARNING("You [ATOM_IS_OPEN_CONTAINER(src) ? "close" : "open"] \the [src]'s refill cap!"))
@@ -19,7 +19,7 @@
 
 // Don't let us drink from it unless our mouth is targeted.
 /obj/item/chems/repair_spray/handle_eaten_by_mob(mob/user, mob/target)
-	if(user?.zone_sel?.selecting != BP_MOUTH)
+	if(user?.get_target_zone() != BP_MOUTH)
 		return EATEN_INVALID
 	return ..()
 
@@ -140,7 +140,7 @@
 	if(!ATOM_IS_OPEN_CONTAINER(src))
 		to_chat(user, SPAN_NOTICE("You need to open \the [src] first!"))
 		return TRUE
-	var/obj/item/organ/external/targeted_organ = GET_EXTERNAL_ORGAN(victim, user.zone_sel.selecting || BP_CHEST)
+	var/obj/item/organ/external/targeted_organ = GET_EXTERNAL_ORGAN(victim, user.get_target_zone() || BP_CHEST)
 	if(!isliving(victim))
 		return TRUE
 	if(!reagents?.total_volume)
