@@ -52,7 +52,7 @@
 	var/obj/item/organ/internal/lungs/lung = GET_INTERNAL_ORGAN(victim, BP_LUNGS)
 	if(!istype(lung))
 		return
-	lung.take_internal_damage(removed, FALSE)
+	lung.take_damage(removed, silent = FALSE)
 
 /decl/material/solid/koagulant_k
 	name = "Coagulant K"
@@ -115,7 +115,7 @@
 			var/mob/living/human/human_victim = victim
 			if(human_victim.resuscitate())
 				var/obj/item/organ/internal/heart = GET_INTERNAL_ORGAN(human_victim, BP_HEART)
-				heart.take_internal_damage(heart.max_damage * 0.15)
+				heart.take_damage(heart.max_damage * 0.15)
 	if(replika_gen == REPLIKA_EARLY_GEN) // ARARs get some nasty side effects
 		SET_STATUS_MAX(victim, STAT_BLURRY, 30)
 		victim.add_chemical_effect(CE_BLOCKAGE, (45 + REAGENT_VOLUME(holder, type))/100)
