@@ -285,7 +285,7 @@
 /turf/floor/tiled/steel_grid,
 /area/tanker)
 "yG" = (
-/obj/structure/bed/chair/office,
+/obj/structure/chair/office,
 /obj/abstract/submap_landmark/spawnpoint/tanker_technician_spawn,
 /turf/floor/tiled/steel_grid,
 /area/tanker)
@@ -344,7 +344,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/structure/bed/chair/shuttle{
+/obj/structure/chair/shuttle{
 	dir = 8
 	},
 /obj/abstract/submap_landmark/spawnpoint/tanker_pilot_spawn,
@@ -530,7 +530,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/structure/bed/chair/shuttle{
+/obj/structure/chair/shuttle{
 	dir = 8
 	},
 /turf/floor/tiled/steel_grid,

@@ -2684,7 +2684,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/structure/bed/chair/shuttle/blue{
+/obj/structure/chair/shuttle/blue{
 	dir = 4;
 	name = "Helm"
 	},
@@ -3433,7 +3433,7 @@
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
 "Pg" = (
-/obj/structure/bed/chair/shuttle/blue{
+/obj/structure/chair/shuttle/blue{
 	dir = 4;
 	name = "Operations"
 	},
@@ -3656,7 +3656,7 @@
 /turf/floor/plating,
 /area/luciferase/cargo)
 "SF" = (
-/obj/structure/bed/chair/shuttle/blue{
+/obj/structure/chair/shuttle/blue{
 	dir = 4;
 	name = "Helm"
 	},
@@ -3826,7 +3826,7 @@
 /turf/floor/tiled/techfloor/grid,
 /area/luciferase/engine)
 "WN" = (
-/obj/structure/bed/chair/shuttle/blue{
+/obj/structure/chair/shuttle/blue{
 	dir = 4;
 	name = "Sensors"
 	},
@@ -3838,7 +3838,7 @@
 /turf/floor/tiled/monotile,
 /area/luciferase/bridge/starboard)
 "Xn" = (
-/obj/structure/bed/chair/shuttle/blue{
+/obj/structure/chair/shuttle/blue{
 	dir = 4;
 	name = "Reactor"
 	},
