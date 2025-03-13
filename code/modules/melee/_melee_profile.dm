@@ -6,6 +6,13 @@
 	var/strike_range = 1
 	/// A string describing how to use this attack.
 	var/usage_desc
+	/// The maximum number of hits that can be performed in one attack before it ends early.
+	/// If null or zero, overwritten to strike_range in Initialize.
+	var/max_hits = 1
+
+/decl/melee_attack_profile/Initialize()
+	max_hits ||= strike_range
+	. = ..()
 
 /decl/melee_attack_profile/proc/get_all_candidate_turfs(mob/user, obj/item/weapon, turf/origin_turf, turf/target_turf, turf/direction_indicator_turf)
 	return
@@ -13,6 +20,8 @@
 /decl/melee_attack_profile/proc/can_target_turf(mob/user, turf/candidate, turf/last_turf)
 	return isnull(last_turf) || candidate.Adjacent(last_turf)
 
+/// Attempts to strike any atom on the turf `striking` using the item `weapon`.
+/// Returns the hit atom.
 /decl/melee_attack_profile/proc/strike_turf(mob/user, obj/item/weapon, turf/striking, turf/last_turf)
 	var/marker_dir = last_turf ? get_dir(last_turf, striking) : get_dir(get_turf(user), striking)
 	for(var/atom/movable/thing as anything in striking)
@@ -23,14 +32,14 @@
 		if(thing.attackby(weapon, user))
 			var/obj/effect/melee_marker/hit/marker = new(striking)
 			marker.set_dir(marker_dir)
-			return TRUE
+			return thing
 	if(striking.density && striking.attackby(weapon, user))
 		var/obj/effect/melee_marker/hit/marker = new(striking)
 		marker.set_dir(marker_dir)
-		return TRUE
+		return striking
 	var/obj/effect/melee_marker/miss/marker = new(striking)
 	marker.set_dir(marker_dir)
-	return FALSE
+	return null
 
 /decl/melee_attack_profile/proc/build_strike_turf_list(mob/user, obj/item/weapon, turf/origin_turf, turf/target_turf, turf/direction_indicator_turf)
 	var/list/candidates = get_all_candidate_turfs(user, weapon, origin_turf, target_turf, direction_indicator_turf)
@@ -53,9 +62,13 @@
 	var/list/strike_turfs = build_strike_turf_list(user, weapon, origin_turf, target_turf, weapon.get_melee_direction_indicator_turf())
 	if(!length(strike_turfs))
 		return FALSE
-	var/turf/last_turf
+	var/atoms_hit = 0
+	var/atom/last_hit_atom = null
+	var/turf/last_turf = get_turf(user)
 	for(var/turf/striking as anything in strike_turfs)
-		if(!strike_turf(user, weapon, striking, last_turf))
-			continue
-		. = TRUE
+		last_hit_atom = strike_turf(user, weapon, striking, last_turf)
+		if(last_hit_atom && ++atoms_hit >= max_hits)
+			user.face_atom(last_hit_atom)
+			return TRUE
 		last_turf = striking
+	return FALSE
