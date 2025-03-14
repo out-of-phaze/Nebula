@@ -23,7 +23,8 @@
 
 
 /decl/species/replika
-	name =                  SPECIES_REPLIKA
+	uid =                   "species_replika"
+	name =                  "Replika"
 	name_plural =           "Replikas"
 	description =           "Artificial humanoids made of bioengineered flesh and created using Gestalt neural patterns."
 	cyborg_noun = null
@@ -76,10 +77,9 @@
 	description = "You are a biosynthetic humanoid created by the Nation to serve as their primary workforce."
 
 /decl/background_detail/heritage/synthetic/replika/get_random_name(mob/M, gender)
-	var/decl/species/our_species = get_species_by_key(M?.client?.prefs?.species)
-	if(our_species?.get_root_species_name() != SPECIES_REPLIKA)
+	var/decl/bodytype/replika/our_bodytype = M.client.prefs.get_bodytype_decl()
+	if(!istype(our_bodytype, /decl/bodytype/replika))
 		return ..()
-	var/decl/bodytype/replika/our_bodytype = our_species.get_bodytype_by_name(M.client.prefs.bodytype)
 	return our_bodytype.get_default_name()
 
 /decl/species/replika/equip_survival_gear(mob/living/human/victim)
