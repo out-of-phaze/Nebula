@@ -1,6 +1,6 @@
 /decl/sprite_accessory/hair/replika
 	abstract_type = /decl/sprite_accessory/hair/replika
-	species_allowed = list(SPECIES_REPLIKA)
+	species_allowed = list(/decl/species/replika::uid)
 
 /decl/sprite_accessory/hair/bald/Initialize()
 	. = ..()

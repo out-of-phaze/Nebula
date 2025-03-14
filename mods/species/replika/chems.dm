@@ -66,7 +66,7 @@
 
 /decl/material/solid/koagulant_k/affect_blood(mob/living/patient, removed, datum/reagents/holder)
 	// Toxic to non-Replikas.
-	if(!istype(patient) || !patient.has_trait(/decl/trait/biosynthetic_healing)) //istype(patient) || !patient.species || (patient.species.get_root_species_name() != SPECIES_REPLIKA)
+	if(!istype(patient) || !patient.has_trait(/decl/trait/biosynthetic_healing))
 		SET_STATUS_MAX(patient, STAT_BLURRY, 30)
 		patient.add_chemical_effect(CE_BLOCKAGE, (45 + REAGENT_VOLUME(holder, type))/100)
 		patient.adjustToxLoss(2 * removed)
@@ -100,7 +100,7 @@
 		return
 	var/replika_gen = victim.GetTraitLevel(/decl/trait/biosynthetic_healing)
 	var/volume = REAGENT_VOLUME(holder, type)
-	var/dose = LAZYACCESS(victim.chem_doses, type)
+	var/dose = LAZYACCESS(victim._chem_doses, type)
 	if(dose < 0.2)	//not that effective after initial rush
 		victim.add_chemical_effect(CE_PAINKILLER, min(30*volume, 80))
 		victim.add_chemical_effect(CE_PULSE, 1)

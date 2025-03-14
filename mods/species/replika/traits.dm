@@ -1,6 +1,6 @@
 /decl/trait/build_references()
 	. = ..()
-	LAZYDISTINCTADD(blocked_species, SPECIES_REPLIKA)
+	LAZYDISTINCTADD(blocked_species, /decl/species/replika::uid)
 
 /decl/trait/replika
 	abstract_type = /decl/trait/replika
@@ -8,7 +8,7 @@
 /decl/trait/replika/build_references()
 	. = ..()
 	blocked_species = null
-	permitted_species = list(SPECIES_REPLIKA)
+	permitted_species = list(/decl/species/replika::uid)
 
 // Cosmetic/armour changes, different models of limb
 /decl/trait/replika/customisation

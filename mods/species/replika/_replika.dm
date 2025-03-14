@@ -1,4 +1,3 @@
-#define SPECIES_REPLIKA "Replika"
 #define REPLIKA_EARLY_GEN 1
 #define REPLIKA_LATE_GEN  2
 #define CE_REGEN_BRUTE_REPLIKA "brutehealreplika" // Causes prosthetic brute damage to regenerate.
@@ -25,14 +24,17 @@
 
 /decl/modpack/replika/pre_initialize()
 	. = ..()
-	SSmodpacks.default_submap_whitelisted_species |= SPECIES_REPLIKA
+	SSmodpacks.default_submap_whitelisted_species |= /decl/species/replika::uid
 
 /mob/living/human/replika
-	teleop = TRUE
 	var/decl/bodytype/replika/starting_bodytype
 
 /mob/living/human/replika/Initialize(mapload)
-	. = ..(mapload, SPECIES_REPLIKA, null, starting_bodytype)
+	var/datum/mob_snapshot/dummy_appearance = new
+	dummy_appearance.root_species = GET_DECL(/decl/species/replika)
+	dummy_appearance.root_bodytype = GET_DECL(starting_bodytype)
+	. = ..(mapload, /decl/species/replika::uid, dummy_appearance)
+	QDEL_NULL(dummy_appearance)
 	var/decl/bodytype/replika/model = get_bodytype()
 	set_real_name(model.get_default_name())
 
