@@ -54,6 +54,16 @@
 	}                                                     \
 	APPLY_CORNER(C, now, Sx, Sy, corner_height);
 
+#define APPLY_CORNER_BY_HEIGHT_WITH_OFFSET(now, offset)   \
+	if (C.z != Sz) {                                      \
+		corner_height = CALCULATE_CORNER_HEIGHT(C.z, Sz); \
+	}                                                     \
+	else {                                                \
+		corner_height = LIGHTING_HEIGHT;                  \
+	}                                                     \
+	corner_height += offset;                              \
+	APPLY_CORNER(C, now, Sx, Sy, corner_height);
+
 #define INIT_CORNER_BY_HEIGHT(now)                        \
 	if (C.z != Sz) {                                      \
 		corner_height = CALCULATE_CORNER_HEIGHT(C.z, Sz); \
@@ -61,4 +71,14 @@
 	else {                                                \
 		corner_height = LIGHTING_HEIGHT;                  \
 	}                                                     \
+	INIT_CORNER(C, now, Sx, Sy, corner_height);
+
+#define INIT_CORNER_BY_HEIGHT_WITH_OFFSET(now, offset)    \
+	if (C.z != Sz) {                                      \
+		corner_height = CALCULATE_CORNER_HEIGHT(C.z, Sz); \
+	}                                                     \
+	else {                                                \
+		corner_height = LIGHTING_HEIGHT;                  \
+	}                                                     \
+	corner_height += offset;                              \
 	INIT_CORNER(C, now, Sx, Sy, corner_height);
