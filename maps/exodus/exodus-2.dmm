@@ -4900,10 +4900,10 @@
 /turf/floor/tiled/techfloor/grid,
 /area/exodus/security/brig/interrogation)
 "aky" = (
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/machinery/computer/modular/preset/security,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/floor/lino,
 /area/exodus/security/detectives_office)
 "akz" = (
@@ -7099,6 +7099,9 @@
 /area/exodus/maintenance/evahallway)
 "aoU" = (
 /obj/machinery/photocopier,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/floor/lino,
 /area/exodus/security/detectives_office)
 "aoV" = (
@@ -7138,7 +7141,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/floor/laminate,
+/turf/floor/laminate/walnut,
 /area/exodus/maintenance/dormitory)
 "apb" = (
 /obj/structure/cable{
@@ -7197,11 +7200,11 @@
 /turf/floor/plating/airless,
 /area/exodus/maintenance/exterior)
 "api" = (
-/obj/machinery/light{
-	dir = 8
-	},
 /obj/machinery/computer/modular/preset/security{
 	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 8
 	},
 /turf/floor/lino,
 /area/exodus/security/detectives_office)
@@ -7426,11 +7429,11 @@
 /turf/floor/tiled/steel_grid,
 /area/exodus/security/lobby)
 "apF" = (
-/turf/floor/laminate,
+/turf/floor/laminate/walnut,
 /area/exodus/maintenance/dormitory)
 "apG" = (
 /obj/structure/chair/wood/wings,
-/turf/floor/laminate,
+/turf/floor/laminate/walnut,
 /area/exodus/maintenance/dormitory)
 "apH" = (
 /obj/machinery/hologram/holopad,
@@ -7847,14 +7850,14 @@
 /obj/structure/table/gamblingtable,
 /obj/item/board,
 /obj/item/box/checkers/chess/red,
-/turf/floor/laminate,
+/turf/floor/laminate/walnut,
 /area/exodus/maintenance/dormitory)
 "aqu" = (
 /obj/structure/table/gamblingtable,
 /obj/item/deck/cards{
 	pixel_y = 4
 	},
-/turf/floor/laminate,
+/turf/floor/laminate/walnut,
 /area/exodus/maintenance/dormitory)
 "aqv" = (
 /obj/structure/chair{
@@ -7868,6 +7871,9 @@
 "aqw" = (
 /obj/machinery/computer/modular/preset/medical{
 	dir = 1
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/floor/tiled/white,
 /area/exodus/security/detectives_office)
@@ -7917,7 +7923,7 @@
 /area/exodus/maintenance/dormitory)
 "aqC" = (
 /obj/item/stool/padded,
-/turf/floor/laminate,
+/turf/floor/laminate/walnut,
 /area/exodus/maintenance/dormitory)
 "aqD" = (
 /turf/wall/r_wall/prepainted,
@@ -8022,7 +8028,6 @@
 	},
 /obj/structure/table/glass,
 /obj/machinery/forensic/microscope,
-/obj/machinery/light,
 /turf/floor/tiled/white,
 /area/exodus/security/detectives_office)
 "aqN" = (
@@ -8042,7 +8047,7 @@
 "aqP" = (
 /obj/structure/table,
 /obj/item/dice,
-/turf/floor/laminate,
+/turf/floor/laminate/walnut,
 /area/exodus/maintenance/dormitory)
 "aqQ" = (
 /obj/machinery/light/small{
@@ -8226,6 +8231,9 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/floor/tiled/white,
 /area/exodus/security/detectives_office)
 "arh" = (
@@ -8278,13 +8286,13 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/structure/table/glass,
 /turf/floor/tiled/white,
 /area/exodus/security/detectives_office)
 "arm" = (
 /obj/machinery/computer/modular/preset/cardslot/command{
 	dir = 1
 	},
-/obj/machinery/light,
 /turf/floor/tiled/white,
 /area/exodus/security/detectives_office)
 "arn" = (
@@ -8412,7 +8420,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/floor/laminate,
+/turf/floor/laminate/walnut,
 /area/exodus/maintenance/dormitory)
 "arx" = (
 /turf/wall/prepainted,
@@ -8473,7 +8481,7 @@
 "arD" = (
 /obj/structure/table/gamblingtable,
 /obj/item/box/checkers/chess,
-/turf/floor/laminate,
+/turf/floor/laminate/walnut,
 /area/exodus/maintenance/dormitory)
 "arE" = (
 /turf/wall/prepainted,
@@ -8544,7 +8552,7 @@
 /obj/machinery/vending/cigarette{
 	dir = 8
 	},
-/turf/floor/laminate,
+/turf/floor/laminate/walnut,
 /area/exodus/maintenance/dormitory)
 "arO" = (
 /obj/machinery/door/blast/regular/open{
@@ -8662,7 +8670,7 @@
 /obj/structure/chair/wood/wings{
 	dir = 1
 	},
-/turf/floor/laminate,
+/turf/floor/laminate/walnut,
 /area/exodus/maintenance/dormitory)
 "asb" = (
 /obj/structure/chair{
@@ -17338,11 +17346,11 @@
 /obj/item/radio/intercom{
 	pixel_y = 20
 	},
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/structure/table/reinforced,
 /obj/item/flame/fuelled/lighter/zippo,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/floor/lino,
 /area/exodus/crew_quarters/bar)
 "aKR" = (
@@ -18332,7 +18340,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/machinery/light{
+/obj/machinery/light/small{
 	dir = 4
 	},
 /turf/floor/carpet,
@@ -18872,7 +18880,7 @@
 	name = "Bar Shutters";
 	pixel_y = 25
 	},
-/obj/machinery/light{
+/obj/machinery/light/small{
 	dir = 1
 	},
 /turf/floor/lino,
@@ -20680,7 +20688,6 @@
 /obj/machinery/camera/network/civilian_east{
 	c_tag = "Bar East"
 	},
-/obj/structure/table/laminate,
 /obj/item/paper_bin,
 /obj/item/pen/blue{
 	pixel_x = -3;
@@ -20691,8 +20698,10 @@
 	pixel_y = 2
 	},
 /obj/structure/noticeboard{
-	default_pixel_y = 27
+	default_pixel_y = 27;
+	pixel_y = 32
 	},
+/obj/structure/table/laminate,
 /turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aSg" = (
@@ -21914,9 +21923,6 @@
 /turf/floor/tiled/steel_grid,
 /area/exodus/hallway/secondary/exit)
 "aUU" = (
-/obj/machinery/light{
-	dir = 8
-	},
 /obj/machinery/vending/wallmed1{
 	pixel_x = -25;
 	dir = 4
@@ -22410,11 +22416,11 @@
 	pixel_x = 2;
 	pixel_y = 6
 	},
-/obj/structure/table/laminate,
 /obj/item/chems/condiment/small/saltshaker{
 	pixel_x = -2;
 	pixel_y = 4
 	},
+/obj/structure/table/laminate,
 /turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aWf" = (
@@ -23017,9 +23023,9 @@
 /turf/floor/tiled/techfloor/grid,
 /area/exodus/research/mixing)
 "aXz" = (
+/obj/item/utensil/fork,
+/obj/item/utensil/fork,
 /obj/structure/table/laminate,
-/obj/item/utensil/fork,
-/obj/item/utensil/fork,
 /turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aXA" = (
@@ -23030,14 +23036,14 @@
 /turf/floor/tiled/white,
 /area/exodus/crew_quarters/kitchen)
 "aXB" = (
-/obj/structure/table/laminate,
 /obj/item/board,
+/obj/structure/table/laminate,
 /turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aXD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/table/laminate,
 /obj/item/box/checkers/chess/red,
+/obj/structure/table/laminate,
 /turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aXE" = (
@@ -23059,8 +23065,8 @@
 /area/exodus/crew_quarters/kitchen)
 "aXF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/table/laminate,
 /obj/structure/disposalpipe/segment,
+/obj/structure/table/laminate,
 /turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aXG" = (
@@ -23148,7 +23154,7 @@
 "aXP" = (
 /obj/structure/table/gamblingtable,
 /obj/item/box/checkers,
-/turf/floor/laminate,
+/turf/floor/laminate/walnut,
 /area/exodus/maintenance/dormitory)
 "aXQ" = (
 /obj/effect/floor_decal/corner/blue/three_quarters{
@@ -23504,8 +23510,8 @@
 /turf/floor/tiled/steel_grid,
 /area/exodus/crew_quarters/locker)
 "aYF" = (
-/obj/structure/table/laminate,
 /obj/item/box/checkers,
+/obj/structure/table/laminate,
 /turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aYG" = (
@@ -23901,9 +23907,9 @@
 /area/exodus/crew_quarters/kitchen)
 "aZp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/table/laminate,
 /obj/structure/disposalpipe/segment,
 /obj/item/camera,
+/obj/structure/table/laminate,
 /turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "aZq" = (
@@ -24706,18 +24712,6 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/floor/tiled/steel_grid,
 /area/exodus/crew_quarters/locker)
-"bbd" = (
-/obj/structure/table/laminate,
-/obj/item/chems/condiment/small/peppermill{
-	pixel_x = 2;
-	pixel_y = 6
-	},
-/obj/item/chems/condiment/small/saltshaker{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/turf/floor/laminate/walnut,
-/area/exodus/crew_quarters/bar)
 "bbe" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -24736,13 +24730,13 @@
 /turf/floor/tiled/techfloor/grid,
 /area/exodus/hallway/primary/starboard)
 "bbg" = (
+/obj/item/utensil/fork,
+/obj/item/utensil/fork,
+/obj/item/utensil/fork,
+/obj/item/utensil/fork,
+/obj/item/utensil/fork,
+/obj/item/utensil/fork,
 /obj/structure/table/laminate,
-/obj/item/utensil/fork,
-/obj/item/utensil/fork,
-/obj/item/utensil/fork,
-/obj/item/utensil/fork,
-/obj/item/utensil/fork,
-/obj/item/utensil/fork,
 /turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bbh" = (
@@ -24808,8 +24802,8 @@
 /turf/floor/tiled/steel_grid,
 /area/exodus/hallway/primary/starboard)
 "bbo" = (
-/obj/structure/table/laminate,
 /obj/item/flame/candle,
+/obj/structure/table/laminate,
 /turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bbp" = (
@@ -25419,8 +25413,8 @@
 /obj/machinery/button/blast_door{
 	id_tag = "kitchen";
 	name = "Kitchen Shutters Control";
-	pixel_x = -1;
-	pixel_y = -24
+	pixel_y = -32;
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/brown/diagonal{
 	dir = 8
@@ -26109,6 +26103,7 @@
 /obj/machinery/vending/cola{
 	dir = 1
 	},
+/obj/machinery/light/small,
 /turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "beh" = (
@@ -26225,7 +26220,8 @@
 	},
 /obj/machinery/light_switch{
 	pixel_x = -21;
-	pixel_y = -10
+	pixel_y = -10;
+	dir = 4
 	},
 /obj/machinery/centrifuge/mapped,
 /turf/floor/tiled/steel_grid,
@@ -26793,8 +26789,8 @@
 /area/exodus/crew_quarters/captain)
 "bfG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/table/laminate,
 /obj/item/box/checkers/chess,
+/obj/structure/table/laminate,
 /turf/floor/laminate/walnut,
 /area/exodus/crew_quarters/bar)
 "bfH" = (
@@ -30327,7 +30323,6 @@
 /turf/floor/tiled/dark,
 /area/exodus/medical/morgue)
 "bmQ" = (
-/obj/machinery/light,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
@@ -31240,6 +31235,9 @@
 	},
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/floor/tiled/white,
 /area/exodus/research/robotics)
 "boN" = (
@@ -33008,7 +33006,8 @@
 	},
 /obj/abstract/landmark/latejoin/cyborg,
 /obj/machinery/computer/cryopod/robot{
-	dir = 1
+	dir = 4;
+	pixel_x = -24
 	},
 /turf/floor/tiled/dark,
 /area/exodus/research/chargebay)
@@ -34015,8 +34014,8 @@
 	dir = 8
 	},
 /obj/machinery/light_switch{
-	pixel_x = -5;
-	pixel_y = -22
+	dir = 1;
+	pixel_y = -20
 	},
 /turf/floor/tiled/white,
 /area/exodus/research/lab)
@@ -34709,9 +34708,9 @@
 	pixel_y = 4
 	},
 /obj/item/toolbox/mechanical,
-/obj/machinery/status_display{
-	pixel_x = 32;
-	dir = 4
+/obj/machinery/newscaster{
+	pixel_x = 26;
+	pixel_y = 1
 	},
 /turf/floor/tiled/steel_grid,
 /area/exodus/research/robotics)
@@ -35632,9 +35631,9 @@
 /obj/item/scanner/health,
 /obj/item/scanner/health,
 /obj/item/scanner/health,
-/obj/machinery/newscaster{
-	pixel_x = 26;
-	pixel_y = 1
+/obj/machinery/light_switch{
+	pixel_x = 25;
+	dir = 8
 	},
 /turf/floor/tiled/steel_grid,
 /area/exodus/research/robotics)
@@ -37223,7 +37222,6 @@
 /turf/floor/tiled/dark,
 /area/exodus/research/robotics)
 "bAM" = (
-/obj/machinery/light,
 /obj/structure/table,
 /obj/item/paper_bin,
 /obj/item/pen,
@@ -37250,14 +37248,12 @@
 	},
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/glasses/welding,
-/obj/machinery/light_switch{
-	pixel_x = 25;
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/light,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/floor/tiled/white,
 /area/exodus/research/robotics)
 "bAP" = (
@@ -44275,7 +44271,8 @@
 	dir = 1
 	},
 /obj/structure/noticeboard{
-	default_pixel_y = 27
+	default_pixel_y = 27;
+	pixel_y = 32
 	},
 /obj/effect/floor_decal/corner/lime{
 	dir = 4
@@ -64302,6 +64299,18 @@
 	},
 /turf/floor/plating,
 /area/exodus/quartermaster/miningdock)
+"sqf" = (
+/obj/item/stool/padded,
+/obj/abstract/landmark/start{
+	name = "Roboticist"
+	},
+/obj/machinery/status_display{
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/machinery/light,
+/turf/floor/tiled/white,
+/area/exodus/research/robotics)
 "ssg" = (
 /turf/floor/tiled/techfloor,
 /area/exodus/engineering/storage)
@@ -101456,7 +101465,7 @@ aUo
 aWh
 aZm
 aZm
-bbd
+aWe
 aSS
 bej
 aZz
@@ -108925,7 +108934,7 @@ buh
 bza
 bza
 jYD
-bAN
+sqf
 bpp
 bmx
 bFq
