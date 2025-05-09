@@ -213,8 +213,8 @@
 	var/solid_volumes = REAGENT_SOLID_VOLUMES(solids)
 	if(LAZYLEN(solid_volumes))
 		var/list/matter_list = list()
-		for(var/decl/material/reagent as anything in REAGENT_SOLID_VOLUMES(solid_volumes))
-			var/reagent_amount = SOLID_VOLUME(solids, reagent)
+		for(var/decl/material/reagent as anything in solid_volumes)
+			var/reagent_amount = solid_volumes[reagent]
 			matter_list[reagent.type] = round(reagent_amount/REAGENT_UNITS_PER_MATERIAL_UNIT)
 			solids.remove_reagent(reagent, reagent_amount, defer_update = TRUE, removed_phases = MAT_PHASE_SOLID)
 
