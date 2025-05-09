@@ -27,6 +27,7 @@ var/global/list/all_apcs = list()
 	clicksound = "switch"
 	layer = ABOVE_WINDOW_LAYER
 	directional_offset = @'{"NORTH":{"y":22}, "SOUTH":{"y":-22}, "EAST":{"x":22}, "WEST":{"x":-22}}'
+	light_wedge = LIGHT_WIDE
 
 	var/powered_down = FALSE
 	var/area/area
@@ -126,6 +127,7 @@ var/global/list/all_apcs = list()
 		return ..() // Spawned in nullspace means it's a test entity or prototype.
 
 	. = ..()
+	light_dir = global.reverse_dir[dir]
 
 	if(!populate_parts)
 		operating = 0
@@ -354,6 +356,10 @@ var/global/list/all_apcs = list()
 	if(. && (stat & BROKEN))
 		operating = 0
 		update()
+
+/obj/machinery/apc/set_dir(ndir)
+	. = ..()
+	light_dir = global.reverse_dir[ndir] // for some reason our dir is backwards, so to fix the light we have to flip it
 
 /obj/machinery/apc/cannot_transition_to(state_path, mob/user)
 	if(ispath(state_path, /decl/machine_construction/wall_frame/panel_open))

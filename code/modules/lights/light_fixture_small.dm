@@ -7,6 +7,7 @@
 	accepts_light_type = /obj/item/light/bulb
 	base_type = /obj/machinery/light/small
 	frame_type = /obj/item/frame/light/small
+	light_wedge = LIGHT_LESS_NARROW
 
 /obj/machinery/light/small/emergency
 	light_type = /obj/item/light/bulb/red

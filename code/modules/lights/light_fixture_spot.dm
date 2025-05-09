@@ -5,3 +5,4 @@
 	accepts_light_type = /obj/item/light/tube/large
 	base_type = /obj/machinery/light/spot
 	frame_type = /obj/item/frame/light/spot
+	light_wedge = LIGHT_VERY_WIDE

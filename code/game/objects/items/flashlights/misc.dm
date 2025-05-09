@@ -21,7 +21,9 @@
 	attack_verb = list ("smacked", "thwacked", "thunked")
 	material = /decl/material/solid/metal/aluminium
 	matter = list(/decl/material/solid/glass = MATTER_AMOUNT_REINFORCEMENT)
-	light_wedge = LIGHT_NARROW
+	flashlight_power = 0.8
+	flashlight_range = 7 // that's a long range!
+	light_wedge = LIGHT_ULTRANARROW // but really narrow.
 
 /******************************Lantern*******************************/
 /obj/item/flashlight/lantern

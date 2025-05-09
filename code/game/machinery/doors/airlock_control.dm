@@ -97,6 +97,7 @@
 	name = "airlock sensor"
 	icon = 'icons/obj/machines/airlock_sensor.dmi'
 	icon_state = "sensor"
+	light_wedge = LIGHT_VERY_WIDE
 	layer = ABOVE_WINDOW_LAYER
 	anchored = TRUE
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
