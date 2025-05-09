@@ -13,6 +13,7 @@
 	required_interaction_dexterity = DEXTERITY_SIMPLE_MACHINES
 	z_flags = ZMM_MANGLE_PLANES
 	layer = ABOVE_WINDOW_LAYER
+	light_wedge = LIGHT_ULTRANARROW
 
 	var/on = null // if null, takes from config option on init
 	var/area/connected_area = null

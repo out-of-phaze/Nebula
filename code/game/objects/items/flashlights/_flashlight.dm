@@ -13,6 +13,7 @@
 	matter = list(/decl/material/solid/glass = MATTER_AMOUNT_REINFORCEMENT)
 	action_button_name = "Toggle Flashlight"
 	light_wedge = LIGHT_WIDE
+	light_color = LIGHT_COLOR_HALOGEN
 	var/on = FALSE
 	var/activation_sound = 'sound/effects/flashlight.ogg'
 	var/flashlight_range = 4 // range of light when on, can be negative

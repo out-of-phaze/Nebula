@@ -38,6 +38,7 @@
 	base_type = /obj/machinery/light
 	frame_type = /obj/item/frame/light
 	directional_offset = @'{"NORTH":{"y":21}, "EAST":{"x":10}, "WEST":{"x":-10}}'
+	light_wedge = LIGHT_VERY_WIDE
 
 	var/on = 0					// 1 if on, 0 if off
 	var/flickering = 0
@@ -68,6 +69,7 @@
 	accepts_light_type = /obj/item/light/bulb
 	base_type = /obj/machinery/light/small
 	frame_type = /obj/item/frame/light/small
+	light_wedge = LIGHT_LESS_NARROW
 
 /obj/machinery/light/small/emergency
 	light_type = /obj/item/light/bulb/red
@@ -82,6 +84,7 @@
 	accepts_light_type = /obj/item/light/tube/large
 	base_type = /obj/machinery/light/spot
 	frame_type = /obj/item/frame/light/spot
+	light_wedge = LIGHT_VERY_WIDE
 
 // create a new lighting fixture
 /obj/machinery/light/Initialize(mapload, d=0, populate_parts = TRUE)
@@ -89,13 +92,18 @@
 
 	switch (dir)
 		if (NORTH)
+			light_offset_x = 0
 			light_offset_y = WORLD_ICON_SIZE * 0.5
 		if (SOUTH)
+			light_offset_x = 0
 			light_offset_y = WORLD_ICON_SIZE * -0.5
 		if (EAST)
 			light_offset_x = WORLD_ICON_SIZE * 0.5
+			light_offset_y = 0
 		if (WEST)
 			light_offset_x = WORLD_ICON_SIZE * -0.5
+			light_offset_y = 0
+	light_dir = global.reverse_dir[dir]
 
 	if(populate_parts && ispath(light_type))
 		lightbulb = new light_type(src)
@@ -113,6 +121,24 @@
 /obj/machinery/light/Destroy()
 	QDEL_NULL(lightbulb)
 	. = ..()
+
+/obj/machinery/light/set_dir(ndir)
+	. = ..()
+	switch (dir)
+		if (NORTH)
+			light_offset_x = 0
+			light_offset_y = WORLD_ICON_SIZE * 0.5
+		if (SOUTH)
+			light_offset_x = 0
+			light_offset_y = WORLD_ICON_SIZE * -0.5
+		if (EAST)
+			light_offset_x = WORLD_ICON_SIZE * 0.5
+			light_offset_y = 0
+		if (WEST)
+			light_offset_x = WORLD_ICON_SIZE * -0.5
+			light_offset_y = 0
+	light_dir = global.reverse_dir[dir]
+	update_light()
 
 /// Handles light updates that were formerly done in update_icon.
 /// * trigger (BOOL): if TRUE, this can trigger effects like burning out, rigged light explosions, etc.

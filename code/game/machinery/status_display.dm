@@ -19,6 +19,7 @@
 	density = FALSE
 	idle_power_usage = 10
 	directional_offset = @'{"NORTH":{"y":-32}, "SOUTH":{"y":32}, "EAST":{"x":32}, "WEST":{"x":-32}}'
+	light_wedge = LIGHT_WIDER
 	var/mode = 1	// 0 = Blank
 					// 1 = Shuttle timer
 					// 2 = Arbitrary message(s)

@@ -4,6 +4,7 @@
 	idle_power_usage = 10
 	layer = ABOVE_WINDOW_LAYER
 	clicksound = "button"
+	light_wedge = LIGHT_WIDE
 	var/datum/computer/file/embedded_program/program	//the currently executing program
 	var/on = 1
 

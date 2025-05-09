@@ -56,6 +56,7 @@
 	clickvol = 30
 	layer = ABOVE_WINDOW_LAYER
 	obj_flags = OBJ_FLAG_MOVES_UNSUPPORTED
+	light_wedge = LIGHT_NARROW
 
 	base_type = /obj/machinery/alarm
 	frame_type = /obj/item/frame/air_alarm

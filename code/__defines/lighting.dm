@@ -69,5 +69,10 @@
 // Some angle presets for directional lighting.
 #define LIGHT_OMNI 0
 #define LIGHT_SEMI 180
+#define LIGHT_VERY_WIDE 135
+#define LIGHT_WIDER 110
 #define LIGHT_WIDE 90
+#define LIGHT_LESS_NARROW 60
 #define LIGHT_NARROW 45
+// This is the lowest that will work without going completely invisible. This is basically just a straight line.
+#define LIGHT_ULTRANARROW 15
