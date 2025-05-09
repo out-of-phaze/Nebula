@@ -147,17 +147,39 @@
 
 #define POLAR_TO_CART_X(R,T) ((R) * cos(T))
 #define POLAR_TO_CART_Y(R,T) ((R) * sin(T))
+// The determinant of the vectors A and B.
+// Mostly used in lighting code to determine whether B is counterclockwise (determinant > 0) or clockwise (determinant < 0) from A.
+// To understand this, read the section of "Remark (Signed volumes)." in this textbook about 2x2 matrices.
+// https://web.archive.org/web/20250227145100/https://textbooks.math.gatech.edu/ila/determinants-volumes.html
+// tl;dr: det(limit_a, test) > 0 checks if test is left of limit_a (the left edge),
+// and det(limit_b, test) < 0 checks if test is right of limit_b (the right edge).
 #define DETERMINANT(A_X,A_Y,B_X,B_Y) ((A_X)*(B_Y) - (A_Y)*(B_X))
+/// Evaluates to TRUE if the point (TEST_X, TEST_Y) is clockwise from the line (0,0) to (BASIS_X, BASIS_Y).
+#define IS_CLOCKWISE_FROM(BASIS_X, BASIS_Y, TEST_X, TEST_Y) (DETERMINANT(BASIS_X, BASIS_Y, TEST_X, TEST_Y) < 0)
+/// Evaluates to TRUE if the point (TEST_X, TEST_Y) is counter-clockwise from the line (0,0) to (BASIS_X, BASIS_Y).
+#define IS_COUNTER_CLOCKWISE_FROM(BASIS_X, BASIS_Y, TEST_X, TEST_Y) (DETERMINANT(BASIS_X, BASIS_Y, TEST_X, TEST_Y) > 0)
+/// Compute unsigned distance of point (px,py) from line formed by (ax, ay) (bx, by)
+#define DISTANCE_FROM_LINE(PX,PY,AX,AY,BX,BY) (abs((BX-AX)*PX + (BY-AY)*PY)/sqrt((BX-AX)**2 + (BY-AY)**2))
+#define DISTANCE_FROM_ORIGIN_LINE(PX,PY,TX,TY) (abs(TX*PX + TY*PY)/sqrt(TX**2 + TY**2))
+// This number serves purely to make sure that the endpoint used for the cone extends past the actual light range.
 #define ARBITRARY_NUMBER 10
+/// Compute the distance from the closest side of the light cone.
+/// Intended mostly for corners outside the cone.
+#define COMPUTE_EFFECTIVE_DIR_DISTANCE(VTW, Ex, Ey) \
+if (IS_COUNTER_CLOCKWISE_FROM(limit_a_x, limit_a_y, Ex, Ey)) { \
+	VTW = DISTANCE_FROM_LINE(Ex, Ey, limit_a_x, limit_a_y, pixel_turf.x, pixel_turf.y); \
+} else if (IS_CLOCKWISE_FROM(limit_b_x, limit_b_y, Ex, Ey) > 0) { \
+	VTW = DISTANCE_FROM_LINE(Ex, Ey, limit_b_x, limit_b_y, pixel_turf.x, pixel_turf.y); \
+} else {	/* ?! */ VTW = INFINITY; }
 
 /datum/light_source/proc/regenerate_angle(ndir)
 	old_direction = ndir
 
-	var/turf/front = get_step(source_turf, old_direction)
+	var/turf/front = get_step(pixel_turf, old_direction)
 	facing_opaque = (front && front.has_opaque_atom)
 
-	cached_origin_x = test_x_offset = source_turf.x
-	cached_origin_y = test_y_offset = source_turf.y
+	cached_origin_x = test_x_offset = pixel_turf.x
+	cached_origin_y = test_y_offset = pixel_turf.y
 
 	if (facing_opaque)
 		return
@@ -165,27 +187,59 @@
 	var/limit_a_t
 	var/limit_b_t
 
+	// We have an isosceles triangle with orientation (90 - dir2angle(old_direction)) and angle light_angle.
+	// We need to get the left and right edges.
+	// We do this by halving the angle (because both originate from the midpoint)
+	// and adding or subtracting it from an offset,
+	// then later turning those angles into points.
+	// by the way,
+	// (test_x_offset, test_y_offset) = (pixel_turf.x + cos(90-dir2angle(old_direction)), pixel_turf.y + sin(90-dir2angle(old_direction)))
+	// which might be useful if we ever switch this to using angles for orientation instead of dirs.
 	var/angle = light_angle * 0.5
 	switch (old_direction)
 		if (NORTH)
-			limit_a_t = angle + 90
-			limit_b_t = -(angle) + 90
-			test_y_offset += 1
+			limit_a_t = 90 + angle
+			limit_b_t = 90 - angle
+			test_y_offset += sin(90) * 0.5 // this const folds
 
 		if (SOUTH)
-			limit_a_t = (angle) - 90
-			limit_b_t = -(angle) - 90
-			test_y_offset -= 1
+			limit_a_t = -90 + angle
+			limit_b_t = -90 - angle
+			test_y_offset += sin(-90) * 0.5
 
 		if (EAST)
-			limit_a_t = angle
-			limit_b_t = -(angle)
-			test_x_offset += 1
+			limit_a_t = 0 + angle
+			limit_b_t = 0 - angle
+			test_x_offset += cos(0) * 0.5
 
 		if (WEST)
-			limit_a_t = angle + 180
-			limit_b_t = -(angle) - 180
-			test_x_offset -= 1
+			limit_a_t = 180 + angle
+			limit_b_t = 180 - angle
+			test_x_offset += cos(180) * 0.5
+
+		if(NORTHEAST)
+			limit_a_t = 45 + angle
+			limit_b_t = 45 - angle
+			test_x_offset += cos(45) * 0.5
+			test_y_offset += sin(45) * 0.5
+
+		if(SOUTHEAST)
+			limit_a_t = -45 + angle
+			limit_b_t = -45 - angle
+			test_x_offset += cos(-45) * 0.5
+			test_y_offset += sin(-45) * 0.5
+
+		if(NORTHWEST)
+			limit_a_t = 135 + angle
+			limit_b_t = 135 - angle
+			test_x_offset += cos(135) * 0.5
+			test_y_offset += sin(135) * 0.5
+
+		if(SOUTHWEST)
+			limit_a_t = -135 + angle
+			limit_b_t = -135 - angle
+			test_x_offset += cos(-135) * 0.5
+			test_y_offset += sin(-135) * 0.5
 
 	// Convert our angle + range into a vector.
 	limit_a_x = POLAR_TO_CART_X(light_range + ARBITRARY_NUMBER, limit_a_t)
@@ -293,6 +347,7 @@
 		update = TRUE
 
 	if (light_angle)
+		UPDATE_APPROXIMATE_PIXEL_TURF // expensive, but necessary to avoid weirdness. todo: track last offset and recalculate?
 		var/ndir
 		if (ismob(top_atom) && top_atom:facing_dir)
 			ndir = top_atom:facing_dir
@@ -306,21 +361,21 @@
 			update = TRUE
 		else // Check if it was just a x/y translation, and update our vars without an regenerate_angle() call if it is.
 			var/co_updated = FALSE
-			if (source_turf.x != cached_origin_x)
-				test_x_offset += source_turf.x - cached_origin_x
-				cached_origin_x = source_turf.x
+			if (pixel_turf.x != cached_origin_x)
+				test_x_offset += pixel_turf.x - cached_origin_x
+				cached_origin_x = pixel_turf.x
 
 				co_updated = TRUE
 
-			if (source_turf.y != cached_origin_y)
-				test_y_offset += source_turf.y - cached_origin_y
-				cached_origin_y = source_turf.y
+			if (pixel_turf.y != cached_origin_y)
+				test_y_offset += pixel_turf.y - cached_origin_y
+				cached_origin_y = pixel_turf.y
 
 				co_updated = TRUE
 
 			if (co_updated)
 				// We might be facing a wall now.
-				var/turf/front = get_step(source_turf, old_direction)
+				var/turf/front = get_step(pixel_turf, old_direction)
 				var/new_fo = (front && front.has_opaque_atom)
 				if (new_fo != facing_opaque)
 					facing_opaque = new_fo
@@ -347,15 +402,20 @@
 	var/test_x
 	var/test_y
 
-	var/should_do_wedge = light_angle && !facing_opaque
+	// Disabling the cone check when facing an opaque atom simulates bouncing light off of the opaque atom.
+	// Theoretically this could be modified to do something more complex in the future,
+	// like taking into account material reflectiveness or having a backwards-facing cone.
+	// For now this works well enough, and it's cheap too.
+	var/should_check_cone = light_angle && !facing_opaque
 
-	FOR_DVIEW(T, NONUNIT_CEILING(actual_range, 1), source_turf, 0) do
-		if (should_do_wedge)	// Directional lighting coordinate filter.
+	FOR_DVIEW(T, NONUNIT_CEILING(actual_range, 1), pixel_turf, 0) do
+		if (should_check_cone)	// Directional lighting coordinate filter.
 			test_x = T.x - test_x_offset
 			test_y = T.y - test_y_offset
 
-			// If the signs of these are the same, then the point is within the cone.
-			if ((DETERMINANT(limit_a_x, limit_a_y, test_x, test_y) > 0) || DETERMINANT(test_x, test_y, limit_b_x, limit_b_y) > 0)
+			// If it's left of the left edge or right of the right edge,
+			// there's no way it could ever be inside the light cone.
+			if (IS_COUNTER_CLOCKWISE_FROM(limit_a_x, limit_a_y, test_x, test_y) || IS_CLOCKWISE_FROM(limit_b_x, limit_b_y, test_x, test_y))
 				continue
 
 		if (TURF_IS_DYNAMICALLY_LIT_UNSAFE(T) || T.light_source_solo || T.light_source_multi)
@@ -401,6 +461,7 @@
 		LAZYREMOVE(T.affecting_lights, src)
 
 	LAZYINITLIST(effect_str)
+	var/effective_distance
 	if (needs_update == LIGHTING_VIS_UPDATE)
 		for (thing in corners - effect_str)
 			C = thing
@@ -409,7 +470,12 @@
 				effect_str[C] = 0
 				continue
 
-			APPLY_CORNER_BY_HEIGHT(now)
+			if (should_check_cone)
+				// Apply a smooth falloff the farther we get from the center of the light cone.
+				COMPUTE_EFFECTIVE_DIR_DISTANCE(effective_distance, C.x, C.y)
+				APPLY_CORNER_BY_HEIGHT_WITH_DIR_ADJACENCY(now)
+			else
+				APPLY_CORNER_BY_HEIGHT(now)
 	else
 		L = corners - effect_str
 		for (thing in L)
@@ -419,7 +485,12 @@
 				effect_str[C] = 0
 				continue
 
-			APPLY_CORNER_BY_HEIGHT(now)
+			if (should_check_cone)
+				// Apply a smooth falloff the farther we get from the center of the light cone.
+				COMPUTE_EFFECTIVE_DIR_DISTANCE(effective_distance, C.x, C.y)
+				APPLY_CORNER_BY_HEIGHT_WITH_DIR_ADJACENCY(now)
+			else
+				APPLY_CORNER_BY_HEIGHT(now)
 
 		for (thing in corners - L)
 			C = thing
@@ -427,7 +498,12 @@
 				effect_str[C] = 0
 				continue
 
-			APPLY_CORNER_BY_HEIGHT(now)
+			if (should_check_cone)
+				// Apply a smooth falloff the farther we get from the center of the light cone.
+				COMPUTE_EFFECTIVE_DIR_DISTANCE(effective_distance, C.x, C.y)
+				APPLY_CORNER_BY_HEIGHT_WITH_DIR_ADJACENCY(now)
+			else
+				APPLY_CORNER_BY_HEIGHT(now)
 
 	L = effect_str - corners
 	for (thing in L)
