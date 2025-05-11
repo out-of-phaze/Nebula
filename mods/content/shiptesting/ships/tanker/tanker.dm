@@ -95,9 +95,11 @@
 /decl/outfit/job/generic/tanker_pilot
 	name = "Job - Tanker pilot"
 	uniform = /obj/item/clothing/jumpsuit/pilot
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
 
 /decl/outfit/job/generic/engineer/tanker_technician
 	name = "Job - Tanker technician"
 	uniform = /obj/item/clothing/jumpsuit/atmospheric_technician
 	belt = /obj/item/belt/utility/atmostech
 	pda_type = /obj/item/modular_computer/pda/engineering
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR

@@ -83,3 +83,4 @@
 	pda_type = null
 	belt = /obj/item/tank/emergency/oxygen/engi
 	l_ear = null
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR

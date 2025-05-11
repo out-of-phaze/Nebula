@@ -172,19 +172,21 @@
 	id_type = /obj/item/card/id/civilian/head
 	pda_type = /obj/item/modular_computer/pda/heads/captain
 	l_ear = null
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
 
 /decl/outfit/job/generic/engineer/johnson_technician
 	name = "Job - Mining vessel technician"
 	uniform = /obj/item/clothing/jumpsuit/engineer
 	belt = /obj/item/belt/utility/full
 	l_ear = null
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
 
 /decl/outfit/job/generic/johnson_mining
 	name = "Job - Mining vessel shaft miner"
 	uniform = /obj/item/clothing/jumpsuit/miner
 	pda_type = /obj/item/modular_computer/pda/science
 	backpack_contents = list(/obj/item/crowbar = 1, /obj/item/ore = 1)
-	outfit_flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	outfit_flags = (parent_type::outfit_flags | OUTFIT_EXTENDED_SURVIVAL) & ~OUTFIT_HAS_VITALS_SENSOR
 	l_ear = null
 
 /decl/outfit/job/generic/johnson_mining/Initialize()
@@ -194,3 +196,4 @@
 /decl/outfit/job/generic/doctor/johnson_medic
 	name = "Job - Mining vessel medic"
 	l_ear = null
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR

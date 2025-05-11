@@ -265,29 +265,35 @@
 /decl/outfit/job/generic/luciferase_pilot
 	name = "Job - Engineering vessel pilot"
 	uniform = /obj/item/clothing/jumpsuit/pilot
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
 
 /decl/outfit/job/generic/engineer/luciferase
 	name = "Job - Engineering vessel engineer"
 	uniform = /obj/item/clothing/jumpsuit/engineer
 	belt = /obj/item/belt/utility/full
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
 
 /decl/outfit/job/generic/engineer/luciferase/atmos
 	name = "Job - Engineering vessel atmospheric technician"
 	uniform = /obj/item/clothing/jumpsuit/atmospheric_technician
 	belt = /obj/item/belt/utility/atmostech
 	pda_type = /obj/item/modular_computer/pda/engineering
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
 
 /decl/outfit/job/generic/engineer/luciferase/chief
 	name = "Job - Engineering vessel chief engineer"
 	uniform = /obj/item/clothing/jumpsuit/chief_engineer
 	pda_type = /obj/item/modular_computer/pda/heads/ce
 	id_type = /obj/item/card/id/civilian/head
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
 
 /decl/outfit/job/generic/doctor/luciferase
 	name = "Job - Engineering vessel medic"
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
 
 /decl/outfit/job/generic/luciferase_deckhand
 	name = "Job - Engineering vessel deckhand"
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
 
 // Comms
 /obj/machinery/network/telecomms_hub/luciferase
