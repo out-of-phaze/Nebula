@@ -95,8 +95,10 @@
 	pda_type = null
 	back = /obj/item/tank/oxygen
 	l_ear = null
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
 
 /decl/outfit/job/generic/skiff_operator/convict
 	name = "Job - Mining skiff convict"
 	uniform = /obj/item/clothing/jumpsuit/orange
 	back = /obj/item/tank/oxygen/yellow
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
