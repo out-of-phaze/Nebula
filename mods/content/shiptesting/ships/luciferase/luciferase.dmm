@@ -212,6 +212,7 @@
 	dir = 4;
 	pixel_x = 22
 	},
+/obj/machinery/light/small,
 /turf/floor/tiled/techmaint,
 /area/luciferase/cryo)
 "cG" = (
@@ -275,6 +276,19 @@
 /obj/effect/paint/amber,
 /turf/wall/r_wall,
 /area/luciferase/engine)
+"dq" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/machinery/light/small/red,
+/turf/floor/reinforced,
+/area/luciferase/maint)
 "ds" = (
 /obj/machinery/power/smes/buildable/preset,
 /obj/structure/cable/cyan{
@@ -870,6 +884,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/closet/emcloset,
+/obj/machinery/light/small/red,
 /turf/floor/plating,
 /area/luciferase/maint)
 "kG" = (
@@ -1261,9 +1276,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/floor/tiled/techmaint,
 /area/luciferase/engineering_equipmentroom)
 "pK" = (
@@ -1465,7 +1477,6 @@
 	dir = 8;
 	pixel_x = -20
 	},
-/obj/machinery/light/small,
 /turf/floor/tiled/techmaint,
 /area/luciferase/infirmary)
 "sk" = (
@@ -1709,6 +1720,9 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/floor/tiled/techmaint,
 /area/luciferase/infirmary)
 "vr" = (
@@ -1886,6 +1900,9 @@
 	dir = 6
 	},
 /obj/item/blueprints/shuttle,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/floor/tiled/monotile,
 /area/luciferase/engineering_equipmentroom)
 "xK" = (
@@ -2002,9 +2019,6 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
-	},
-/obj/machinery/light/small{
-	dir = 4
 	},
 /turf/floor/tiled/white,
 /area/luciferase/infirmary)
@@ -2719,9 +2733,6 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber,
-/obj/machinery/light/small{
-	dir = 1
-	},
 /obj/machinery/power/apc{
 	dir = 8;
 	pixel_x = -22
@@ -2893,7 +2904,9 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/engineering_personal,
-/obj/machinery/light/small,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/floor/tiled/monotile,
 /area/luciferase/mess)
 "HZ" = (
@@ -3087,9 +3100,6 @@
 	},
 /obj/structure/cable{
 	icon_state = "2-5"
-	},
-/obj/machinery/light/small{
-	dir = 4
 	},
 /turf/floor/tiled/techmaint,
 /area/luciferase/cryo)
@@ -3310,6 +3320,9 @@
 	},
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
+	},
+/obj/machinery/light/small/red{
+	dir = 1
 	},
 /turf/floor/plating,
 /area/luciferase/maint)
@@ -3576,6 +3589,9 @@
 /obj/machinery/alarm{
 	pixel_y = 21
 	},
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/floor/tiled/monotile,
 /area/luciferase/mess)
 "RO" = (
@@ -3626,6 +3642,21 @@
 	},
 /turf/floor/plating/airless,
 /area/luciferase/maint)
+"Ss" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/floor/reinforced,
+/area/luciferase/atmos)
 "St" = (
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
@@ -3862,9 +3893,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/machinery/light/small/red{
-	dir = 4
-	},
 /turf/floor/plating,
 /area/luciferase/maint)
 "Xr" = (
@@ -3998,6 +4026,9 @@
 /obj/item/stack/material/sheet/reinforced/mapped/fiberglass/thirty,
 /obj/item/stack/material/sheet/shiny/mapped/aluminium/fifty,
 /obj/item/stack/material/strut/mapped/steel/fifty,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/floor/tiled/monotile,
 /area/luciferase/engineering_equipmentroom)
 "Yq" = (
@@ -5322,7 +5353,7 @@ XM
 Bt
 ZB
 ZB
-ZB
+dq
 dt
 Qd
 dt
@@ -5334,7 +5365,7 @@ sq
 sq
 th
 rJ
-wZ
+Ss
 wZ
 wZ
 eZ
