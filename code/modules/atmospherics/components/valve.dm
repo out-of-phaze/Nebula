@@ -9,8 +9,7 @@
 	dir = SOUTH
 	initialize_directions = SOUTH|NORTH
 
-	var/open = 0
-	var/openDuringInit = 0
+	var/open = FALSE
 
 	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_SUPPLY|CONNECT_TYPE_SCRUBBER|CONNECT_TYPE_FUEL
 	connect_dir_type = SOUTH | NORTH
@@ -18,19 +17,18 @@
 	pipe_class = PIPE_CLASS_BINARY
 	build_icon_state = "mvalve"
 
-	uncreated_component_parts = list(
-		/obj/item/stock_parts/power/apc
-	)
+	uncreated_component_parts = null
 	frame_type = /obj/item/pipe
 	construct_state = /decl/machine_construction/default/panel_closed/item_chassis
 	base_type = /obj/machinery/atmospherics/valve/buildable
 	interact_offline = TRUE
+	stat_immune = NOSCREEN | NOINPUT | NOPOWER
 
 /obj/machinery/atmospherics/valve/buildable
 	uncreated_component_parts = null
 
 /obj/machinery/atmospherics/valve/open
-	open = 1
+	open = TRUE
 	icon_state = "map_valve1"
 
 /obj/machinery/atmospherics/valve/proc/do_turn_animation()
@@ -101,13 +99,6 @@
 /obj/machinery/atmospherics/valve/Process()
 	..()
 	return PROCESS_KILL
-
-/obj/machinery/atmospherics/valve/atmos_init()
-	..()
-	if(openDuringInit)
-		close()
-		open()
-		openDuringInit = 0
 
 /obj/machinery/atmospherics/valve/return_network_air(datum/pipe_network/reference)
 	return null
