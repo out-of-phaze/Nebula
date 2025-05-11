@@ -67,14 +67,14 @@
 		..()
 
 /datum/job/submap/is_species_allowed(var/decl/species/S)
-	if(LAZYLEN(whitelisted_species) && !(S.name in whitelisted_species))
+	if(LAZYLEN(whitelisted_species) && !(S.uid in whitelisted_species))
 		return FALSE
-	if(S.name in blacklisted_species)
+	if(S.uid in blacklisted_species)
 		return FALSE
 	if(owner && owner.archetype)
-		if(LAZYLEN(owner.archetype.whitelisted_species) && !(S.name in owner.archetype.whitelisted_species))
+		if(LAZYLEN(owner.archetype.whitelisted_species) && !(S.uid in owner.archetype.whitelisted_species))
 			return FALSE
-		if(S.name in owner.archetype.blacklisted_species)
+		if(S.uid in owner.archetype.blacklisted_species)
 			return FALSE
 	return TRUE
 
