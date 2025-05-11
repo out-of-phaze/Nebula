@@ -847,10 +847,17 @@
 		return ..()
 
 /mob/proc/set_stat(var/new_stat)
+	var/old_stat = stat
 	. = stat != new_stat
 	if(.)
 		stat = new_stat
 		SStyping.set_indicator_state(client, FALSE)
+		// I'm not sure if this is necessary, but it used to be hardcoded in VV handling
+		// and broke setting the stat var on machinery entirely.
+		if(old_stat == DEAD)
+			switch_from_dead_to_living_mob_list()
+		else
+			switch_from_living_to_dead_mob_list()
 
 /mob/verb/northfaceperm()
 	set hidden = 1

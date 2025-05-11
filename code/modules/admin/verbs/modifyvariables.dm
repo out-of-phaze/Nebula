@@ -459,20 +459,9 @@
 			var_value = var_new
 
 		if("num")
-			if(variable=="stat")
-				var/var_new = input("Enter new number:","Num",O.get_variable_value(variable)) as null|num
-				if(var_new == null) return
-				if((O.get_variable_value(variable) == 2) && (var_new < 2))//Bringing the dead back to life
-					var/mob/M = O
-					M.switch_from_dead_to_living_mob_list()
-				if((O.get_variable_value(variable) < 2) && (var_new == 2))//Kill he
-					var/mob/M = O
-					M.switch_from_living_to_dead_mob_list()
-				var_value = var_new
-			else
-				var/var_new =  input("Enter new number:","Num",O.get_variable_value(variable)) as null|num
-				if(var_new==null) return
-				var_value = var_new
+			var/var_new =  input("Enter new number:","Num",O.get_variable_value(variable)) as null|num
+			if(var_new==null) return
+			var_value = var_new
 
 		if("type")
 			var/var_new = input("Enter type:","Type",O.get_variable_value(variable)) as null|anything in typesof(/obj,/mob,/area,/turf)
