@@ -12,6 +12,7 @@
 	var/on = 0
 	use_power = POWER_USE_OFF
 	interact_offline = TRUE
+	stat_immune = NOSCREEN | NOINPUT | NOPOWER
 
 	uncreated_component_parts = null
 	frame_type = /obj/item/pipe
