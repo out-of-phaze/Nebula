@@ -98,7 +98,7 @@
 	. = ..()
 	if(!istype(victim) || !victim.has_trait(/decl/trait/biosynthetic_healing))
 		return
-	var/replika_gen = victim.GetTraitLevel(/decl/trait/biosynthetic_healing)
+	var/replika_gen = victim.get_trait_level(/decl/trait/biosynthetic_healing)
 	var/volume = REAGENT_VOLUME(holder, type)
 	var/dose = LAZYACCESS(victim._chem_doses, type)
 	if(dose < 0.2)	//not that effective after initial rush

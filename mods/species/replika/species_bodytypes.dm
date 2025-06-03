@@ -42,14 +42,8 @@
 
 /decl/bodytype/replika/on_gain(mob/living/human/organism)
 	. = ..()
-	for(var/trait in traits)
-		organism.set_trait(trait, traits[trait])
 	organism.reset_hair()
 
-/decl/bodytype/replika/on_lose(mob/living/human/organism)
-	. = ..()
-	for(var/trait in traits)
-		organism.RemoveExtrinsicTrait(trait)
 
 /decl/bodytype/replika/eulr
 	name =            "EULR"

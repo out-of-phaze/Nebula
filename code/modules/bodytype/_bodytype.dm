@@ -489,7 +489,7 @@ var/global/list/bodytypes_by_category = list()
 /decl/bodytype/proc/on_lose(mob/living/human/organism)
 	remove_inherent_verbs(organism)
 	for(var/trait in traits)
-		organism.RemoveExtrinsicTrait(trait)
+		organism.remove_extrinsic_trait(trait)
 
 /decl/bodytype/validate()
 	. = ..()
