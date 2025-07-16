@@ -1,3 +1,6 @@
+// The Luciferase requires the supermatter modpack.
+// At some point this should be enforced somewhere but for now we don't do that...
+// This might break the "no modpack cross-dependencies" test. If we ever do that for Spacefarers...
 /datum/map_template/ship/luciferase
 	name = "Luciferase-class prototype engineering vessel"
 	suffixes = list("luciferase/luciferase.dmm")

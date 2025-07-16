@@ -45,13 +45,15 @@
 	// CONTENT
 
 	#include "../../mods/content/bigpharma/_bigpharma.dme"
-	#include "../../mods/content/government/_government.dme"
 	#include "../../mods/content/corporate/_corporate.dme"
+	#include "../../mods/content/government/_government.dme"
 	#include "../../mods/content/karmotrine/_karmotrine.dme"
 	#include "../../mods/content/matchmaking/_matchmaking.dme"
 	#include "../../mods/content/modern_earth/_modern_earth.dme"
 	#include "../../mods/content/psionics/_psionics.dme"
+	#include "../../mods/content/supermatter/_supermatter.dme"
 	#include "../../mods/content/xenobiology/_xenobiology.dme"
+	#include "../../mods/content/tabloids/_tabloids.dme"
 
 	#include "empty_lobby.dm"
 
