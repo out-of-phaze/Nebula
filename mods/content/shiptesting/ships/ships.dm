@@ -11,11 +11,11 @@
 
 var/global/list/ship_names_by_class = list()
 
-/hook/startup/proc/load_ship_names()
+/decl/modpack/shiptesting/post_initialize()
+	. = ..()
 	// Load our banned map list, if we have one.
 	if(fexists(SHIP_NAMES_FILE))
 		global.ship_names_by_class = cached_json_decode(safe_file2text(SHIP_NAMES_FILE))
-	return TRUE
 
 /datum/map_template/ship/New()
 	for (var/suffix in suffixes)
