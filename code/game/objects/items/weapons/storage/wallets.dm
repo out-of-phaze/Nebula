@@ -49,7 +49,7 @@
 
 /obj/item/wallet/random/Initialize(ml, material_key)
 	. = ..()
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/wallet/poly
 	name = "polychromic wallet"
@@ -58,7 +58,7 @@
 /obj/item/wallet/poly/Initialize(ml, material_key)
 	. = ..()
 	set_color(get_random_colour())
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/wallet/poly/verb/change_color()
 	set name = "Change Wallet Color"

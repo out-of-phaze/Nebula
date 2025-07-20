@@ -61,7 +61,7 @@
 	update_moving()
 
 	add_filter("glow", 1, list(type = "drop_shadow", color = color + "F0", size = 2, offset = 1,x = 0, y = 0))
-	update_icon()
+	lazy_update_icon()
 
 /obj/effect/overmap/Crossed(atom/movable/AM)
 	var/obj/effect/overmap/visitable/other = AM
@@ -149,7 +149,7 @@
 		SSovermap.moving_entities -= src
 	else
 		SSovermap.moving_entities[src] = TRUE
-	update_icon()
+	lazy_update_icon()
 
 /obj/effect/overmap/Destroy()
 	STOP_PROCESSING(SSobj, src)

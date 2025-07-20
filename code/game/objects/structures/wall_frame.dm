@@ -39,7 +39,7 @@
 /obj/structure/wall_frame/LateInitialize()
 	..()
 	update_connections(1)
-	update_icon()
+	lazy_update_icon()
 
 /obj/structure/wall_frame/get_examine_strings(mob/user, distance, infix, suffix)
 	. = ..()
@@ -131,7 +131,7 @@
 		if(spacefacing)
 			var/bleach_factor = rand(10,50)
 			paint_color = adjust_brightness(paint_color, bleach_factor)
-		update_icon()
+		// don't call update_icon(), it runs in LateInitialize already
 
 /obj/structure/wall_frame/bullet_act(var/obj/item/projectile/Proj)
 	var/proj_damage = Proj.get_structure_damage()

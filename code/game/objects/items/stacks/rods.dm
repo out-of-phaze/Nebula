@@ -35,7 +35,6 @@
 
 /obj/item/stack/material/rods/Initialize()
 	. = ..()
-	update_icon()
 	set_extension(src, /datum/extension/tool, list(TOOL_SURGICAL_DRILL = TOOL_QUALITY_WORST))
 
 /obj/item/stack/material/rods/update_state_from_amount()

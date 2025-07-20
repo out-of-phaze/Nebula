@@ -70,7 +70,7 @@
 	. = ..()
 	on = expected_to_be_on()
 	update_light_status(FALSE)
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/light/Destroy()
 	QDEL_NULL(lightbulb)
@@ -175,7 +175,7 @@
 /obj/machinery/light/proc/seton(var/state)
 	on = (state && get_bulb_status() == lightbulb::STATUS_OK)
 	update_light_status(TRUE)
-	update_icon()
+	lazy_update_icon()
 
 // examine verb
 /obj/machinery/light/get_examine_strings(mob/user, distance, infix, suffix)
@@ -352,7 +352,7 @@
 			spark_at(src, cardinal_only = TRUE)
 	lightbulb.status = lightbulb::STATUS_BROKEN
 	update_light_status(TRUE)
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/light/proc/fix()
 	if(get_bulb_status() == lightbulb::STATUS_OK || !lightbulb)

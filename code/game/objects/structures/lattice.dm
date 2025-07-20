@@ -53,7 +53,7 @@
 	for (var/dir in global.cardinal)
 		var/obj/structure/lattice/L = locate(/obj/structure/lattice, get_step(location, dir))
 		if(L)
-			L.update_icon()
+			L.lazy_update_icon()
 
 /obj/structure/lattice/explosion_act(severity)
 	..()

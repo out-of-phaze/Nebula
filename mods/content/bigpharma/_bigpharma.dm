@@ -59,4 +59,4 @@ var/global/list/reagent_names_to_icon_state
 			thing.attach_label(null, null, new_name)
 	if(meds.container_description)
 		thing.desc = meds.container_description
-	thing.update_icon()
+	thing.lazy_update_icon()

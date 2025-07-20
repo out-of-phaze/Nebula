@@ -23,7 +23,7 @@
 	if(!spawn_type)
 		return INITIALIZE_HINT_QDEL
 	if(wrapper_type)
-		update_icon()
+		lazy_update_icon()
 
 /obj/item/food/animal_cube/on_update_icon()
 	. = ..()

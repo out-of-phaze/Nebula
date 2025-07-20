@@ -23,10 +23,12 @@
 	dirt_amount = 60
 	persistent = FALSE // This is a subtype for mapping.
 
-/obj/effect/decal/cleanable/dirt/Initialize()
+/obj/effect/decal/cleanable/dirt/Initialize(mapload, _age, new_dirt_amount)
 	. = ..()
+	if(!isnull(new_dirt_amount))
+		dirt_amount = new_dirt_amount
 	verbs.Cut()
-	update_icon()
+	lazy_update_icon()
 
 /obj/effect/decal/cleanable/dirt/on_update_icon()
 	. = ..()

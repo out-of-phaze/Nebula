@@ -33,7 +33,7 @@
 		for(var/gas in filling)
 			air_contents.adjust_gas(gas, start_pressure * filling[gas] * (air_contents.total_volume)/(R_IDEAL_GAS_EQUATION*air_contents.temperature), FALSE)
 		air_contents.update_values()
-		update_icon()
+		lazy_update_icon()
 
 /obj/machinery/atmospherics/unary/tank/set_initial_level()
 	// This effectively does nothing, it's ignored due to hide() being overwritten
@@ -44,7 +44,7 @@
 	build_device_underlays(FALSE)
 
 /obj/machinery/atmospherics/unary/tank/hide()
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/atmospherics/unary/tank/return_air()
 	return air_contents

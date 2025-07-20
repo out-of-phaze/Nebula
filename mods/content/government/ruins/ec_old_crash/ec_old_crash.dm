@@ -67,8 +67,7 @@
 /obj/item/paper/ecrashlog
 	name = "handwritten note"
 
-/obj/item/paper/ecrashlog/Initialize()
-	. = ..()
+/obj/item/paper/ecrashlog/Initialize(mapload, material_key)
 	var/shipname = "TEV [pick("Magellan", "Gagarin", "Drake", "Horizon", "Aurora")]"
 	var/decl/background_detail/S = GET_DECL(/decl/background_detail/heritage/human)
 	var/new_info = {"
@@ -89,7 +88,7 @@
 	I am Lieutenant Hao Ru, captain of [shipname] of the Terran Commonwealth Expeditionary Corps. I will be joining my crew in cryo now.<br>
 	<i>3rd December [global.using_map.game_year - 142]</i></tt>
 	"}
-	set_content(new_info)
+	. = ..(mapload, material_key, new_info)
 
 /obj/machinery/alarm/low/Initialize()
 	. = ..()

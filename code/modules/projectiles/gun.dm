@@ -702,7 +702,7 @@
 
 /obj/item/gun/equipped()
 	..()
-	update_icon()
+	lazy_update_icon()
 	last_handled = world.time
 
 /obj/item/gun/on_active_hand()

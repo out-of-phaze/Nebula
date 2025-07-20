@@ -61,7 +61,7 @@
 /obj/item/clothing/sensor/vitals/proc/set_sensor_mode(var/new_sensor_mode)
 	if(sensor_mode != new_sensor_mode)
 		sensor_mode = new_sensor_mode
-		update_icon()
+		lazy_update_icon()
 
 /obj/item/clothing/sensor/vitals/on_update_icon()
 	. = ..()

@@ -90,7 +90,7 @@
 	// change visibility status and force update of icon
 /obj/structure/disposalpipe/hide(var/intact)
 	set_invisibility(intact ? 101: 0)	// hide if floor is intact
-	update_icon()
+	lazy_update_icon()
 
 // expel the held objects into a turf
 // called when there is a break in the pipe

@@ -57,7 +57,7 @@
 
 /obj/item/pill_bottle/Initialize()
 	. = ..()
-	update_icon()
+	lazy_update_icon()
 	if(istext(labeled_name))
 		attach_label(null, null, labeled_name)
 
@@ -74,7 +74,7 @@
 		var/label_length = length(tmp_label)
 		if(label_length > 50)
 			to_chat(user, "<span class='notice'>The label can be at most 50 characters long.</span>")
-		else 
+		else
 			if(label_length > 10)
 				to_chat(user, "<span class='notice'>You set the label.</span>")
 			else

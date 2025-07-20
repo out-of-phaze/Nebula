@@ -108,7 +108,7 @@
 	var/on_turf = isturf(loc)
 	. = ..()
 	if(. && on_turf != isturf(loc))
-		update_icon()
+		lazy_update_icon()
 
 /obj/item/stack/attack_self(mob/user)
 	list_recipes(user)

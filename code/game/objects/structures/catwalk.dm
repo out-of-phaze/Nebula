@@ -31,7 +31,7 @@
 /obj/structure/catwalk/LateInitialize()
 	..()
 	update_connections(1)
-	update_icon()
+	lazy_update_icon()
 
 /obj/structure/catwalk/Destroy()
 	var/turf/oldloc = loc
@@ -65,7 +65,7 @@
 		var/obj/structure/catwalk/L = locate() in get_step(src, direction)
 		if(L)
 			L.update_connections()
-			L.update_icon() //so siding get updated properly
+			L.lazy_update_icon() //so siding get updated properly
 
 /obj/structure/catwalk/on_update_icon()
 	update_connections()
@@ -219,7 +219,7 @@
 		var/obj/structure/catwalk/catwalk = new /obj/structure/catwalk(loc)
 		catwalk.plated_tile += GET_DECL(plating_type)
 		catwalk.name = "plated catwalk"
-		catwalk.update_icon()
+		catwalk.lazy_update_icon()
 	activated = 1
 	for(var/turf/T in orange(src, 1))
 		for(var/obj/effect/catwalk_plated/other in T)

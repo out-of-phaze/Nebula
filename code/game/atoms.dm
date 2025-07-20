@@ -419,6 +419,7 @@
 	on_update_icon()
 	if(event_listeners?[/decl/observ/updated_icon])
 		raise_event_non_global(/decl/observ/updated_icon)
+	icon_update_queued = FALSE
 
 /**
  * Update this atom's icon.

@@ -68,7 +68,7 @@ var/global/list/byond_genders = list(MALE, FEMALE, NEUTER, PLURAL)
 		else
 			gender = NEUTER
 		if(update_body)
-			update_icon()
+			lazy_update_icon()
 		return TRUE
 	return FALSE
 

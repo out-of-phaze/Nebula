@@ -19,9 +19,8 @@
 	var/produce_heat = 1500
 
 /obj/item/flashlight/flare/Initialize()
-	. = ..()
 	fuel = rand(800, 1000) // Sorry for changing this so much but I keep under-estimating how long X number of ticks last in seconds.v
-	update_icon()
+	. = ..()
 
 /obj/item/flashlight/flare/Destroy()
 	. = ..()

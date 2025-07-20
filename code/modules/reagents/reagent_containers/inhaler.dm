@@ -30,7 +30,7 @@
 		add_to_reagents(T, starts_with[T])
 	if(ATOM_IS_OPEN_CONTAINER(src) && REAGENT_TOTAL_VOLUME(reagents) > 0)
 		atom_flags &= ~ATOM_FLAG_OPEN_CONTAINER
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/chems/inhaler/on_update_icon()
 	icon_state = get_world_inventory_state()

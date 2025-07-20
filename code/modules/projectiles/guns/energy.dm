@@ -39,7 +39,7 @@ var/global/list/registered_cyborg_weapons = list()
 	. = ..()
 	if(self_recharge)
 		START_PROCESSING(SSobj, src)
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/gun/energy/Destroy()
 	if(self_recharge)

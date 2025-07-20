@@ -62,7 +62,6 @@ var/global/list/global/tank_gauge_cache = list()
 	air_contents.update_values()
 
 	START_PROCESSING(SSobj, src)
-	update_icon()
 
 /obj/item/tank/Destroy()
 	QDEL_NULL(air_contents)

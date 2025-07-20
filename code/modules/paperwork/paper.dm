@@ -77,7 +77,7 @@
 		SetName(title)
 	info = html_encode(text)
 	info = parsepencode(text)
-	update_icon()
+	lazy_update_icon()
 	update_space(info)
 	updateinfolinks()
 	updateUsrDialog()

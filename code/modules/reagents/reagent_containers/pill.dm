@@ -26,10 +26,9 @@
 	return
 
 /obj/item/chems/pill/Initialize()
-	. = ..()
-	if(!icon_state)
+	if(!icon_state) // do prior to ..() so that it updates on reagent change correctly
 		icon_state = pick(colorizable_icon_states) //preset pills only use colour changing or unique icons
-	update_icon()
+	. = ..()
 	if(label_text)
 		update_name()
 

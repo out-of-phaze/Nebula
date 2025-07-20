@@ -137,7 +137,7 @@
 	_icon_cache_key = null
 	. = ..()
 	skin_blend = bodytype.limb_blend
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/organ/external/set_bodytype(decl/bodytype/new_bodytype, override_material = null, apply_to_internal_organs = TRUE)
 	_icon_cache_key = null
@@ -146,7 +146,7 @@
 	if(bodytype != old_bodytype && apply_to_internal_organs)
 		bodytype.rebuild_internal_organs(src, override_material)
 	if(.)
-		update_icon()
+		lazy_update_icon()
 
 /obj/item/organ/external/copy_from_mob_snapshot(datum/mob_snapshot/supplied_appearance)
 	_icon_cache_key = null

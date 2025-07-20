@@ -63,7 +63,7 @@ Pipelines + Other Objects -> Pipe network
 			for(var/obj/machinery/atmospherics/target in get_step(src,direction))
 				if((target.initialize_directions & get_dir(target,src)) && check_connect_types(target, src))
 					LAZYDISTINCTADD(nodes_to_networks, target)
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/atmospherics/proc/nodes_in_dir(var/direction)
 	. = list()

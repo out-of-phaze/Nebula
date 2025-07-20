@@ -98,7 +98,6 @@
 	update_desc()
 	if(REAGENT_TOTAL_VOLUME(reagents) > 0)
 		bitesize = 1 + round(REAGENT_TOTAL_VOLUME(reagents) / 2, 1)
-	update_icon()
 
 /obj/item/food/grown/populate_reagents()
 	. = ..()

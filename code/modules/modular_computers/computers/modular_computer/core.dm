@@ -61,7 +61,7 @@
 	set_extension(src, computer_type)
 	if(stores_pen && ispath(stored_pen))
 		stored_pen = new stored_pen(src)
-	update_icon()
+	lazy_update_icon()
 	update_verbs()
 	update_name()
 	..()

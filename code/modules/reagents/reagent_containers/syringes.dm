@@ -28,7 +28,7 @@
 
 /obj/item/chems/syringe/Initialize(var/mapload)
 	. = ..()
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/chems/syringe/populate_reagents()
 	SHOULD_CALL_PARENT(TRUE)

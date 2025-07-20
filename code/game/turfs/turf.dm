@@ -447,8 +447,10 @@
 		qdel(cleanable)
 
 /turf/proc/remove_decals()
-	LAZYCLEARLIST(decals)
-	update_icon()
+	if(LAZYLEN(decals))
+		decals.Cut()
+		decals = null
+		lazy_update_icon()
 
 // Called when turf is hit by a thrown object
 /turf/hitby(atom/movable/AM, var/datum/thrownthing/TT)

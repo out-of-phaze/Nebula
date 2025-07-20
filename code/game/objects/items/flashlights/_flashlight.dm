@@ -25,8 +25,7 @@
 /obj/item/flashlight/Initialize()
 	. = ..()
 	set_flashlight()
-	update_icon()
-	update_held_icon()
+	lazy_update_icon()
 
 /obj/item/flashlight/proc/get_emissive_overlay_color()
 	return COLOR_WHITE // Icons are usually coloured already.

@@ -25,7 +25,7 @@
 
 	if(program)
 		program.receive_signal(signal, receive_method, receive_param)
-	update_icon()
+	lazy_update_icon()
 			//spawn(5) program.process() //no, program.process sends some signals and machines respond and we here again and we lag -rastaf0
 
 /obj/machinery/embedded_controller/OnTopic(mob/user, href_list)
@@ -76,7 +76,7 @@
 	. = ..()
 	set_frequency(frequency)
 	set_extension(src, /datum/extension/interactive/multitool/embedded_controller)
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/embedded_controller/radio/Destroy()
 	if(radio_controller)
@@ -137,7 +137,6 @@
 	var/list/filters = program?.get_receive_filters()
 	for(var/filter in filters)
 		radio_connection = radio_controller.add_object(src, frequency, filter)
-	update_icon()
 
 // resets all id_tags (including in programs) based on the given tag.
 /obj/machinery/embedded_controller/radio/proc/reset_id_tags(base_tag)

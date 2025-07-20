@@ -37,4 +37,4 @@
 			if(prob(10))
 				new/obj/item/remains/xeno/charred(crater)
 			crater.handle_melting()
-			crater.update_icon()
+			crater.lazy_update_icon()

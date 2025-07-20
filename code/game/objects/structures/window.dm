@@ -73,7 +73,7 @@
 /obj/structure/window/LateInitialize()
 	..()
 	update_connections(1)
-	update_icon()
+	lazy_update_icon()
 	update_nearby_tiles(need_rebuild=1)
 
 /obj/structure/window/Destroy()
@@ -385,7 +385,7 @@
 		if(S == src)
 			continue
 		S.update_connections()
-		S.update_icon()
+		S.lazy_update_icon()
 
 /obj/structure/window/Move()
 	var/ini_dir = dir

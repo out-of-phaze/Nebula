@@ -286,7 +286,7 @@
 	verbs |= /mob/living/simple_animal/hostile/parrot/verb/drop_held_item_player
 	verbs |= /mob/living/simple_animal/hostile/parrot/proc/perch_player
 
-	update_icon()
+	lazy_update_icon()
 
 /mob/living/simple_animal/hostile/parrot/Destroy()
 	parrot_interest = null

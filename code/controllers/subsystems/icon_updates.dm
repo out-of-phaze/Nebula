@@ -26,7 +26,7 @@ SUBSYSTEM_DEF(icon_update)
 			break
 		// Pops the atom from the queue
 		var/atom/A = cached_refs[count++] // count is used to cut our list later and save time
-		if(QDELETED(A))
+		if(QDELETED(A) || !A.icon_update_queued) // if something unset our queue var we don't want to run it again
 			continue
 		A.icon_update_queued = FALSE
 		A.update_icon()

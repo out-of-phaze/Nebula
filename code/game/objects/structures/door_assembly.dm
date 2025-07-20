@@ -45,7 +45,6 @@
 /obj/structure/door_assembly/Initialize(mapload, _mat, _reinf_mat, _dir)
 	. = ..(mapload, _mat, _reinf_mat)
 	set_dir(_dir)
-	update_icon()
 
 /obj/structure/door_assembly/set_dir(new_dir)
 	if(width == 1) // This logic doesn't support multitle doors.

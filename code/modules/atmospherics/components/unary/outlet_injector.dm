@@ -125,7 +125,7 @@
 	flick("inject", src)
 
 /obj/machinery/atmospherics/unary/outlet_injector/hide(var/i)
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/atmospherics/unary/outlet_injector/attackby(var/obj/item/used_item, var/mob/user)
 	if(IS_MULTITOOL(used_item))

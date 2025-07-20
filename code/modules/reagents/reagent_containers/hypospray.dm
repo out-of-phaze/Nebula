@@ -185,7 +185,7 @@
 	. = ..()
 	if(label_text)
 		update_name()
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/chems/hypospray/autoinjector/populate_reagents()
 	SHOULD_CALL_PARENT(TRUE)

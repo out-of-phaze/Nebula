@@ -41,7 +41,7 @@
 
 	pixel_x = rand(-1,1)
 	pixel_y = rand(-1,1)
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/portable_atmospherics/hydroponics/soil/dismantle()
 	dump_contents()

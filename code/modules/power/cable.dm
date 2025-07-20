@@ -136,7 +136,7 @@ var/global/list/obj/structure/cable/all_cables = list()
 /obj/structure/cable/hide(var/i)
 	if(isturf(loc))
 		set_invisibility(i ? 101 : 0)
-	update_icon()
+	lazy_update_icon()
 
 /obj/structure/cable/hides_under_flooring()
 	return 1
@@ -558,7 +558,7 @@ var/global/list/obj/structure/cable/all_cables = list()
 	))
 	if (can_have_color && param_color) // It should be red by default, so only recolor it if parameter was specified.
 		set_color(param_color)
-	update_icon()
+	lazy_update_icon()
 	update_wclass()
 
 ///////////////////////////////////
