@@ -174,7 +174,7 @@
 	return 1
 
 /obj/machinery/atmospherics/unary/vent_scrubber/hide(var/i) //to make the little pipe section invisible, the icon changes.
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/atmospherics/unary/vent_scrubber/proc/toggle_panic()
 	var/decl/public_access/public_variable/panic/panic = GET_DECL(/decl/public_access/public_variable/panic)

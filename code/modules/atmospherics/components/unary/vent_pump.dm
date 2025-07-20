@@ -187,7 +187,7 @@
 	icon_state = "[vent_prefix][vent_icon]"
 
 /obj/machinery/atmospherics/unary/vent_pump/hide()
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/atmospherics/unary/vent_pump/proc/can_pump()
 	if(stat & (NOPOWER|BROKEN))

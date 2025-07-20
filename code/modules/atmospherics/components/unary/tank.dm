@@ -35,7 +35,7 @@
 			gases += gas
 			gases += start_pressure * filling[gas] * (air_contents.volume)/(R_IDEAL_GAS_EQUATION*air_contents.temperature)
 		air_contents.adjust_multi(arglist(gases))
-		update_icon()
+		lazy_update_icon()
 
 /obj/machinery/atmospherics/unary/tank/set_initial_level()
 	// This effectively does nothing, it's ignored due to hide() being overwritten
@@ -46,7 +46,7 @@
 	build_device_underlays(FALSE)
 
 /obj/machinery/atmospherics/unary/tank/hide()
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/atmospherics/unary/tank/return_air()
 	return air_contents

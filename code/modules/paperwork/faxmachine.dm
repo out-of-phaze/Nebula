@@ -540,7 +540,7 @@ var/global/list/adminfaxes     = list()	//cache for faxes that have been sent to
 /**Cause the nanoui to update, also updates the icon of the machine. */
 /obj/machinery/faxmachine/proc/update_ui()
 	SSnano.update_uis(src)
-	update_icon()
+	lazy_update_icon()
 
 /**Plays print animation async. */
 /obj/machinery/faxmachine/proc/on_printed_page()

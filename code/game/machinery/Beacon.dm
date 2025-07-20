@@ -23,7 +23,7 @@
 	// update the invisibility and icon
 /obj/machinery/tracking_beacon/hide(var/intact)
 	set_invisibility(intact ? 101 : 0)
-	update_icon()
+	lazy_update_icon()
 
 	// update the icon_state
 /obj/machinery/tracking_beacon/on_update_icon()

@@ -38,7 +38,7 @@
 		var/datum/extension/atmospherics_connection/connection = get_extension(src, /datum/extension/atmospherics_connection)
 		if(connection)
 			connection.connect(port)
-			update_icon()
+			lazy_update_icon()
 
 /obj/machinery/portable_atmospherics/Process()
 	if(get_port()) // Only react when pipe_network will not do it for you

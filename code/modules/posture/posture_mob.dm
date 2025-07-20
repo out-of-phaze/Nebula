@@ -54,7 +54,7 @@
 
 	if(skip_buckled_update)
 		reset_layer()
-		update_icon()
+		lazy_update_icon()
 		update_transform()
 	else
 		update_posture(force_update = TRUE)

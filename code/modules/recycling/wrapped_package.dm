@@ -31,7 +31,7 @@
 	if(length(_attached_note))
 		attached_note = _attached_note
 
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/parcel/on_update_icon()
 	. = ..()
@@ -149,7 +149,7 @@
 
 	//Make sure we contain exactly the amount of paper sheets used to wrap ourselves
 	LAZYSET(matter, material.type, (AM.wrapping_paper_needed_to_wrap() * SHEET_MATERIAL_AMOUNT))
-	update_icon()
+	lazy_update_icon()
 	update_held_icon()
 	return TRUE
 

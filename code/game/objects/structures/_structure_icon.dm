@@ -30,7 +30,7 @@ var/global/list/default_noblend_objects = list(/obj/machinery/door/window, /obj/
 /obj/structure/proc/refresh_neighbors()
 	for(var/thing in RANGE_TURFS(src, 1))
 		var/turf/T = thing
-		T.update_icon()
+		T.lazy_update_icon()
 
 /obj/structure/proc/find_blendable_obj_in_turf(var/turf/T, var/propagate)
 	if(is_type_in_list(T, global.default_blend_objects))
@@ -64,7 +64,7 @@ var/global/list/default_noblend_objects = list(/obj/machinery/door/window, /obj/
 				if(can_visually_connect_to(S) && S.can_visually_connect())
 					if(propagate)
 						S.update_connections()
-						S.update_icon()
+						S.lazy_update_icon()
 					LAZYADD(dirs, direction)
 			if((direction in global.cardinal) && find_blendable_obj_in_turf(T, propagate))
 				LAZYDISTINCTADD(dirs, direction)

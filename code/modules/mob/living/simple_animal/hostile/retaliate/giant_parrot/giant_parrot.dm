@@ -39,7 +39,7 @@
 		if(get_subspecies_name)
 			SetName(parrot_species.name)
 	set_scale(2)
-	update_icon()
+	lazy_update_icon()
 
 /mob/living/simple_animal/hostile/parrot/space/apply_attack_effects(mob/living/target)
 	. = ..()

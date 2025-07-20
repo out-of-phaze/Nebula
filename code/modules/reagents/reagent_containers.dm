@@ -82,7 +82,7 @@
 	if((. = ..()))
 		update_name()
 		update_container_desc()
-		update_icon()
+		lazy_update_icon()
 
 /obj/item/chems/verb/set_amount_per_transfer_from_this()
 	set name = "Set Transfer Amount"
@@ -162,7 +162,7 @@
 /obj/item/chems/proc/set_detail_color(var/new_color)
 	if(new_color != detail_color)
 		detail_color = new_color
-		update_icon()
+		lazy_update_icon()
 		return TRUE
 	return FALSE
 

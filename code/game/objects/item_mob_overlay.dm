@@ -17,7 +17,7 @@ var/global/list/bodypart_to_slot_lookup_table = list(
 		icon_state = get_world_inventory_state()
 		. = TRUE
 	if(. || update_icon)
-		update_icon()
+		lazy_update_icon()
 
 // For checking if we have a specific state, for inventory icons and nonhumanoid species.
 // Cached cause asking icons is expensive. This is still expensive, so avoid using it if
@@ -61,7 +61,7 @@ var/global/list/icon_state_cache = list()
 		var/last_state = icon_state
 		icon_state = get_world_inventory_state()
 		if(last_state != icon_state)
-			update_icon()
+			lazy_update_icon()
 
 /obj/item/proc/get_world_inventory_state()
 	if(use_single_icon)

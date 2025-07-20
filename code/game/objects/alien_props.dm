@@ -78,4 +78,4 @@
 	if(A)
 		door_color = A.color
 	stripe_color = get_random_colour(FALSE, 0, 255)
-	update_icon()
+	lazy_update_icon()

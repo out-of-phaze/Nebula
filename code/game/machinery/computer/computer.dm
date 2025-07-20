@@ -23,7 +23,7 @@
 /obj/machinery/computer/Initialize()
 	. = ..()
 	overlay_layer = layer
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/computer/emp_act(severity)
 	if(prob(20/severity)) set_broken(TRUE)

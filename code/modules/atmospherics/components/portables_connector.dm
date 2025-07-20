@@ -30,7 +30,7 @@
 	build_device_underlays(FALSE)
 
 /obj/machinery/atmospherics/portables_connector/hide(var/i)
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/atmospherics/portables_connector/Process()
 	..()

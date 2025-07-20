@@ -39,7 +39,7 @@
 	build_device_underlays(FALSE)
 
 /obj/machinery/atmospherics/tvalve/hide(var/i)
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/atmospherics/tvalve/proc/paired_dirs() // these two dirs are connected
 	if(state) // "go to side"

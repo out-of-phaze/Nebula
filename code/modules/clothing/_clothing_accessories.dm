@@ -86,7 +86,7 @@
 	accessory.on_attached(src, user)
 	if(accessory.accessory_removable)
 		src.verbs |= /obj/item/clothing/proc/removetie_verb
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/clothing/proc/remove_accessory(mob/user, obj/item/clothing/accessory)
 	if(!accessory || !(accessory in accessories) || !accessory.accessory_removable || !accessory.canremove)
@@ -173,7 +173,7 @@
 		LAZYADD(holder.accessories, src)
 		holder.update_clothing_toggle_verbs()
 		holder.update_accessory_slowdown()
-		holder.update_icon()
+		holder.lazy_update_icon()
 		holder.update_clothing_icon()
 		return TRUE
 	return FALSE

@@ -44,7 +44,7 @@
 
 /obj/item/clothing/glasses/eyepatch/hud/Initialize()
 	. = ..()
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/clothing/glasses/eyepatch/hud/equipped(mob/user)
 	. = ..()

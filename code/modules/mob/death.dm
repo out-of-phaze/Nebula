@@ -107,7 +107,7 @@
 		mind.StoreMemory("Time of death: [stationtime2text()]", /decl/memory_options/system)
 	switch_from_living_to_dead_mob_list()
 
-	update_icon()
+	lazy_update_icon()
 
 	if(SSticker.mode)
 		SSticker.mode.check_win()

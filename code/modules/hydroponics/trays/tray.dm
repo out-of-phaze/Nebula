@@ -147,7 +147,6 @@
 		weedlevel = 0
 
 	check_plant_health()
-	update_icon()
 
 /obj/machinery/portable_atmospherics/hydroponics/attack_ghost(var/mob/observer/ghost/user)
 	if(!(harvest && seed && ispath(seed.product_type, /mob)))
@@ -170,7 +169,7 @@
 	create_reagents(200)
 	if(mechanical)
 		connect()
-	update_icon()
+	lazy_update_icon()
 	STOP_PROCESSING_MACHINE(src, MACHINERY_PROCESS_ALL)
 	START_PROCESSING(SSplants, src)
 	return INITIALIZE_HINT_LATELOAD
@@ -217,7 +216,7 @@
 		die()
 	check_level_sanity()
 	if(icon_update)
-		update_icon()
+		lazy_update_icon()
 
 /obj/machinery/portable_atmospherics/hydroponics/proc/die()
 	dead = 1

@@ -61,7 +61,7 @@
 	build_device_underlays(FALSE)
 
 /obj/machinery/atmospherics/binary/passive_gate/hide(var/i)
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/atmospherics/binary/passive_gate/Process()
 	..()

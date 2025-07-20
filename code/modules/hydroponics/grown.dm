@@ -97,8 +97,6 @@
 	if(reagents.total_volume > 0)
 		bitesize = 1 + round(reagents.total_volume / 2, 1)
 
-	update_icon()
-
 /obj/item/food/grown/populate_reagents()
 	. = ..()
 	// Fill the object up with the appropriate reagents.

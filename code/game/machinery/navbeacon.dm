@@ -30,7 +30,7 @@ var/global/list/navbeacons = list()
 
 /obj/machinery/navbeacon/hide(var/intact)
 	set_invisibility(intact ? INVISIBILITY_ABSTRACT : INVISIBILITY_NONE)
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/navbeacon/on_update_icon()
 	var/state="navbeacon[open]"

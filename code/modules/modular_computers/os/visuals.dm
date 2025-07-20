@@ -2,7 +2,7 @@
 /datum/extension/interactive/os/proc/update_host_icon()
 	var/atom/A = holder
 	if(istype(A))
-		A.update_icon()
+		A.lazy_update_icon()
 
 /datum/extension/interactive/os/proc/get_screen_icon_file()
 	if(istype(holder, /obj/item/modular_computer))

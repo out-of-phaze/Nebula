@@ -80,7 +80,7 @@
 					if(ladder.anchored && !ladder.target_up)
 						target_down = ladder
 						target_down.target_up = src
-						target_down.update_icon()
+						target_down.lazy_update_icon()
 						break
 		if(HasAbove(z))
 			var/turf/T = GetAbove(src)
@@ -95,9 +95,9 @@
 						if(ladder.anchored && !ladder.target_down)
 							target_up = ladder
 							target_up.target_down = src
-							target_up.update_icon()
+							target_up.lazy_update_icon()
 							break
-	update_icon()
+	lazy_update_icon()
 
 /obj/structure/ladder/Destroy()
 	if(target_down)

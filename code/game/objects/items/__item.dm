@@ -243,7 +243,7 @@
 		var/list/will_contain = WillContain()
 		if(length(will_contain))
 			create_objects_in_loc(src, will_contain)
-			update_icon()
+			lazy_update_icon()
 
 /obj/item/Destroy()
 

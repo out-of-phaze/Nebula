@@ -33,7 +33,7 @@
 				set_dir(global.reverse_dir[checkdir])
 				break
 
-	update_icon()
+	lazy_update_icon()
 
 /obj/structure/noticeboard/Destroy()
 	QDEL_NULL_LIST(notices)
@@ -44,7 +44,7 @@
 		LAZYDISTINCTADD(notices, paper)
 		paper.forceMove(src)
 		if(!skip_icon_update)
-			update_icon()
+			lazy_update_icon()
 
 /obj/structure/noticeboard/proc/remove_paper(var/atom/movable/paper, var/skip_icon_update)
 	if(istype(paper) && paper.loc == src)

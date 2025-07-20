@@ -34,7 +34,7 @@
 			if(!keep_health)
 				current_health += bonus_health
 		current_health = keep_health ? min(current_health, max_health) : max_health
-	update_icon()
+	lazy_update_icon()
 
 /obj/structure/proc/update_material_name(var/override_name)
 	var/base_name = override_name || initial(name)

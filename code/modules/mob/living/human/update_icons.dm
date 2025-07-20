@@ -180,7 +180,7 @@ Please contact me on #coderbus IRC. ~Carn x
 /mob/living/human/update_appearance_flags(add_flags, remove_flags)
 	. = ..()
 	if(.)
-		update_icon()
+		lazy_update_icon()
 
 // Separate and duplicated from human logic due to humans having postures and many overlays.
 /mob/living/update_transform()
@@ -257,6 +257,7 @@ Please contact me on #coderbus IRC. ~Carn x
 		if(isnull(part) || part.skip_body_icon_draw)
 			. += "skip"
 			continue
+		// This CANNOT be lazy_update_icon, since we NEED _icon_cache_key.
 		part.update_icon() // This wil regenerate their icon if needed, and more importantly set their cache key.
 		. += part._icon_cache_key
 	. += "husked_[!!has_genetic_condition(GENE_COND_HUSK)]"

@@ -35,7 +35,8 @@
 			if(other.currency != currency)
 				continue
 			other.absolute_worth += absolute_worth
-			other.update_from_worth()
+			if(other.atom_flags & ATOM_FLAG_INITIALIZED)
+				other.update_from_worth() // if it's not initialized, it'll run anyway
 			return INITIALIZE_HINT_QDEL
 
 	if(absolute_worth > 0)
@@ -115,7 +116,7 @@
 		SetName("pile of [cur.name]")
 		desc = "[initial(desc)] It totals up to [current_worth] [current_worth == 1 ? cur.name_singular : cur.name]."
 		w_class = ITEM_SIZE_SMALL
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/cash/attack_self(var/mob/user)
 
@@ -216,7 +217,7 @@
 		var/image/I = image(icon, "[icon_state]-[grade]")
 		I.appearance_flags |= RESET_COLOR
 		add_overlay(I, TRUE)
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/charge_stick/proc/update_name_desc()
 	if(!isnull(currency))
@@ -231,7 +232,7 @@
 	loaded_worth += amt
 	if(loaded_worth < 0)
 		loaded_worth = 0
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/charge_stick/get_examine_strings(mob/user, distance, infix, suffix)
 	. = ..(user)

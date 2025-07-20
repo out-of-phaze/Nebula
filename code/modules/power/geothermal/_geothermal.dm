@@ -70,7 +70,7 @@ var/global/const/MAX_GEOTHERMAL_PRESSURE =               12000
 	if(istype(E))
 		E.set_obstructed(hide)
 	. = ..()
-	update_icon()
+	lazy_update_icon()
 
 //////////////////////////////////////////////////////////////////////
 // Underwater Geyser Variant

@@ -21,7 +21,7 @@
 	. = ..()
 	if(isnull(charge))
 		charge = maxcharge
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/cell/drain_power(var/drain_check, var/surge, var/power = 0)
 

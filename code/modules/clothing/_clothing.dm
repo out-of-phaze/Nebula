@@ -64,7 +64,7 @@
 		set_extension(src, /datum/extension/interactive/multitool/items/clothing)
 
 	if(update_clothing_state_toggles() || (markings_color && markings_state_modifier))
-		update_icon()
+		lazy_update_icon()
 
 /obj/item/clothing/Destroy()
 	if(is_accessory())
@@ -271,7 +271,7 @@
 		to_chat(user, SPAN_WARNING("\The [src] [gender == PLURAL ? "do" : "does"] not fit you."))
 
 /obj/item/clothing/equipped(var/mob/user)
-	update_icon()
+	lazy_update_icon()
 	if(needs_vision_update())
 		update_wearer_vision()
 	return ..()

@@ -699,7 +699,7 @@
 	reset_layer()
 
 	if(. || force_update)
-		update_icon()
+		lazy_update_icon()
 		update_transform()
 
 /mob/proc/facedir(var/ndir)

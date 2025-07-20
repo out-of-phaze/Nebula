@@ -92,7 +92,7 @@
 		if(-INFINITY to 0) // don't even bother trying to dry this
 			return
 	drytime = world.time + time_to_dry * (amount+1)
-	update_icon()
+	lazy_update_icon()
 	START_PROCESSING(SSobj, src)
 
 /obj/effect/decal/cleanable/blood/Process()
@@ -260,7 +260,7 @@
 			if (i > 0)
 				var/obj/effect/decal/cleanable/blood/b = new /obj/effect/decal/cleanable/blood/splatter(loc, null, chemical)
 				b.basecolor = src.basecolor
-				b.update_icon()
+				b.lazy_update_icon()
 			if (step_to(src, get_step(src, direction), 0))
 				break
 

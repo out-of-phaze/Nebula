@@ -61,7 +61,7 @@
 		flip(dir, TRUE)
 	else
 		update_connections(TRUE)
-		update_icon()
+		lazy_update_icon()
 
 /obj/structure/table/Destroy()
 	var/turf/oldloc = loc
@@ -432,7 +432,7 @@
 		if(propagate)
 			spawn(0)
 				T.update_connections(FALSE)
-				T.update_icon()
+				T.lazy_update_icon()
 	connections = dirs_to_corner_states(connection_dirs)
 
 /obj/structure/table/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)

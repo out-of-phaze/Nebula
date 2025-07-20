@@ -50,7 +50,7 @@
 		machine.power_change()
 		machine.queue_icon_update()
 	set_component_status(machine, PART_STAT_CONNECTED)
-	update_icon()
+	lazy_update_icon()
 	return cell
 
 /obj/item/stock_parts/power/battery/proc/remove_cell()
@@ -62,21 +62,21 @@
 		if(istype(machine))
 			machine.power_change()
 			machine.queue_icon_update()
-		update_icon()
+		lazy_update_icon()
 		unset_status(machine, PART_STAT_CONNECTED)
 
 /obj/item/stock_parts/power/battery/proc/extract_cell(mob/user)
 	if(!cell)
 		return
 	cell.add_fingerprint(user)
-	cell.update_icon()
+	cell.lazy_update_icon()
 
 	user.visible_message("<span class='warning'>\The [user] removes the power cell from [src]!</span>",\
 							"<span class='notice'>You remove the power cell.</span>")
 	. = remove_cell()
 	var/obj/machinery/machine = loc
 	if(machine)
-		machine.update_icon()
+		machine.lazy_update_icon()
 
 /obj/item/stock_parts/power/battery/machine_process(var/obj/machinery/machine)
 	last_cell_charge = cell && cell.charge

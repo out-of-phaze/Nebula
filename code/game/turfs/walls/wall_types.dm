@@ -35,7 +35,7 @@
 		if(spacefacing)
 			var/bleach_factor = rand(10,50)
 			paint_color = adjust_brightness(paint_color, bleach_factor)
-	update_icon()
+	// no need for a direct update_icon() call here, LateInitialize will do it in update_material
 
 /turf/wall/titanium
 	color = COLOR_SILVER

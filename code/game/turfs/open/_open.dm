@@ -18,10 +18,10 @@
 		for(var/direction in global.alldirs)
 			var/turf/target_turf = get_step_resolving_mimic(src, direction)
 			if(istype(target_turf))
-				if(TICK_CHECK) // not CHECK_TICK -- only queue if the server is overloaded
+				if(TICK_CHECK) // not CHECK_TICK -- only queue post-init if the server is overloaded
 					target_turf.queue_icon_update()
 				else
-					target_turf.update_icon()
+					target_turf.lazy_update_icon()
 
 /turf/open/flooded
 	name = "open water"

@@ -115,8 +115,7 @@ var/global/list/map_count = list()
 	to_chat(user, JOINTEXT(dat))
 
 /datum/random_map/proc/set_map_size()
-	map = list()
-	map.len = limit_x * limit_y
+	map = new /list(limit_x * limit_y)
 
 /datum/random_map/proc/seed_map()
 	for(var/x = 1, x <= limit_x, x++)

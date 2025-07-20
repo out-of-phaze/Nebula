@@ -304,61 +304,61 @@ EMPTY_CANISTER(hydrogen, /obj/machinery/portable_atmospherics/canister/hydrogen)
 /obj/machinery/portable_atmospherics/canister/oxygen/Initialize()
 	. = ..()
 	air_contents.adjust_gas(/decl/material/gas/oxygen, MolesForPressure())
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/portable_atmospherics/canister/hydrogen/Initialize()
 	. = ..()
 	air_contents.adjust_gas(/decl/material/gas/hydrogen, MolesForPressure())
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled/Initialize()
 	. = ..()
 	air_contents.temperature = 80
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/portable_atmospherics/canister/sleeping_agent/Initialize()
 	. = ..()
 	air_contents.adjust_gas(/decl/material/gas/nitrous_oxide, MolesForPressure())
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/portable_atmospherics/canister/nitrogen/Initialize()
 	. = ..()
 	air_contents.adjust_gas(/decl/material/gas/nitrogen, MolesForPressure())
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/portable_atmospherics/canister/nitrogen/prechilled/Initialize()
 	. = ..()
 	air_contents.temperature = 80
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide/Initialize()
 	. = ..()
 	air_contents.adjust_gas(/decl/material/gas/carbon_dioxide, MolesForPressure())
-	update_icon()
+	lazy_update_icon()
 
 
 /obj/machinery/portable_atmospherics/canister/air/Initialize()
 	. = ..()
 	var/list/air_mix = StandardAirMix()
 	air_contents.adjust_multi(/decl/material/gas/oxygen, air_mix[/decl/material/gas/oxygen], /decl/material/gas/nitrogen, air_mix[/decl/material/gas/nitrogen])
-	update_icon()
+	lazy_update_icon()
 
 
 // Special types used for engine setup admin verb, they contain double amount of that of normal canister.
 /obj/machinery/portable_atmospherics/canister/nitrogen/engine_setup/Initialize()
 	. = ..()
 	air_contents.adjust_gas(/decl/material/gas/nitrogen, MolesForPressure())
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup/Initialize()
 	. = ..()
 	air_contents.adjust_gas(/decl/material/gas/carbon_dioxide, MolesForPressure())
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/portable_atmospherics/canister/hydrogen/engine_setup/Initialize()
 	. = ..()
 	air_contents.adjust_gas(/decl/material/gas/hydrogen, MolesForPressure())
-	update_icon()
+	lazy_update_icon()
 
 // Spawn debug tanks.
 /obj/machinery/portable_atmospherics/canister/helium
@@ -370,7 +370,7 @@ EMPTY_CANISTER(hydrogen, /obj/machinery/portable_atmospherics/canister/hydrogen)
 /obj/machinery/portable_atmospherics/canister/helium/Initialize()
 	. = ..()
 	air_contents.adjust_gas(/decl/material/gas/helium, MolesForPressure())
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/portable_atmospherics/canister/methyl_bromide
 	name           = "\improper CH3Br canister"
@@ -381,7 +381,7 @@ EMPTY_CANISTER(hydrogen, /obj/machinery/portable_atmospherics/canister/hydrogen)
 /obj/machinery/portable_atmospherics/canister/methyl_bromide/Initialize()
 	. = ..()
 	air_contents.adjust_gas(/decl/material/gas/methyl_bromide, MolesForPressure())
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/portable_atmospherics/canister/chlorine
 	name           = "chlorine canister"
@@ -392,5 +392,5 @@ EMPTY_CANISTER(hydrogen, /obj/machinery/portable_atmospherics/canister/hydrogen)
 /obj/machinery/portable_atmospherics/canister/chlorine/Initialize()
 	. = ..()
 	air_contents.adjust_gas(/decl/material/gas/chlorine, MolesForPressure())
-	update_icon()
+	lazy_update_icon()
 // End debug tanks.

@@ -46,7 +46,7 @@
 	if(material.sound_dropped)
 		drop_sound = material.sound_dropped
 	update_strings()
-	update_icon()
+	lazy_update_icon()
 
 /obj/item/stack/material/get_codex_value()
 	return (material && !material.hidden_from_codex) ? "[lowertext(material.codex_name || material.name)] (substance)" : ..()

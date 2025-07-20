@@ -78,7 +78,7 @@ Thus, the two variables affect pump operation are set in New():
 	build_device_underlays(FALSE)
 
 /obj/machinery/atmospherics/binary/pump/hide(var/i)
-	update_icon()
+	lazy_update_icon()
 
 /obj/machinery/atmospherics/binary/pump/Process()
 	last_power_draw = 0

@@ -145,13 +145,36 @@
 		// map = next_map
 		CHECK_TICK
 
+#define CHECK_AND_VERIFY_CELL(X, Y) \
+	TRANSLATE_AND_VERIFY_COORD(X,Y);\
+	if(tmp_cell) {\
+		if(get_appropriate_path(map[tmp_cell]) == expected_path) { \
+			continue;\
+		}\
+		tmp_neighbors += tmp_cell;\
+	}
+
 	if(smooth_single_tiles)
+		var/list/tmp_neighbors = list()
+		var/mapcell
+		var/tmp_cell
+		var/expected_path
 		for(var/x in 1 to limit_x - 1)
 			for(var/y in 1 to limit_y - 1)
-				var/mapcell = TRANSLATE_COORD(x,y)
-				if(has_neighbor_with_path(x, y, get_appropriate_path(map[mapcell]), TRUE))
-					continue
-				map[mapcell] = map[pick(get_neighbors(x, y, TRUE))]
+				mapcell = TRANSLATE_COORD(x,y)
+				expected_path = get_appropriate_path(map[mapcell])
+				tmp_neighbors.Cut()
+				CHECK_AND_VERIFY_CELL(x-1,y)
+				CHECK_AND_VERIFY_CELL(x+1,y)
+				CHECK_AND_VERIFY_CELL(x,y+1)
+				CHECK_AND_VERIFY_CELL(x,y-1)
+				CHECK_AND_VERIFY_CELL(x+1,y+1)
+				CHECK_AND_VERIFY_CELL(x+1,y-1)
+				CHECK_AND_VERIFY_CELL(x-1,y-1)
+				CHECK_AND_VERIFY_CELL(x-1,y+1)
+				map[mapcell] = map[pick(tmp_neighbors)]
+
+#undef CHECK_AND_VERIFY_CELL
 
 #define CHECK_NEIGHBOR_FOR_PATH(X, Y) \
 	TRANSLATE_AND_VERIFY_COORD(X,Y);\
