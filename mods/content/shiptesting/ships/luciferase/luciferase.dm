@@ -6,6 +6,8 @@
 	suffixes = list("luciferase/luciferase.dmm")
 	area_usage_test_exempted_root_areas = list(/area/luciferase)
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/luciferase)
+	// The Luciferase is admin-spawn only for now given its propensity for exploding.
+	template_categories = null // template_categories = list(MAP_TEMPLATE_CATEGORY_SHIP)
 
 /obj/effect/overmap/visitable/ship/landable/spawnable/luciferase
 	name = "Prototype Vessel"
