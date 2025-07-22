@@ -38,7 +38,7 @@
 	material = /decl/material/solid/metal/aluminium
 	matter = list(/decl/material/solid/fiberglass = MATTER_AMOUNT_REINFORCEMENT)
 
-	var/power_usage = 2800
+	var/power_usage = 1400
 	var/last_radio_sound = -INFINITY
 	var/initial_network_id
 	var/initial_network_key
