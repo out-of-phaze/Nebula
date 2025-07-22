@@ -103,6 +103,7 @@
 	name = "Engine Access Hatch";
 	dir = 4
 	},
+/obj/machinery/door/airlock/hatch/autoname/engineering,
 /turf/floor/reinforced,
 /area/luciferase/engine)
 "bv" = (
@@ -169,8 +170,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
 	},
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
@@ -183,6 +184,9 @@
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -21
+	},
+/obj/abstract/landmark/variable_setter/closet_opener{
+	probability = 10
 	},
 /turf/floor/plating,
 /area/luciferase/electrical)
@@ -197,13 +201,13 @@
 /turf/space,
 /area/luciferase/engine)
 "co" = (
-/obj/machinery/suit_cycler/engineering,
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+/obj/machinery/suit_cycler/engineering/prepared,
 /turf/floor/tiled/monotile,
 /area/luciferase/engineering_equipmentroom)
 "cF" = (
@@ -212,7 +216,6 @@
 	dir = 4;
 	pixel_x = 22
 	},
-/obj/machinery/light/small,
 /turf/floor/tiled/techmaint,
 /area/luciferase/cryo)
 "cG" = (
@@ -261,15 +264,18 @@
 /turf/floor/tiled,
 /area/luciferase/cargo)
 "cY" = (
-/obj/machinery/vending/wallmed1{
-	dir = 4;
-	pixel_x = -24
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/vending/wallmed1{
+	dir = 4;
+	pixel_x = -24
+	},
+/obj/abstract/landmark/carnage_mark{
+	movement_prob = 10
+	},
 /turf/floor/tiled/techmaint,
 /area/luciferase/infirmary)
 "db" = (
@@ -290,13 +296,18 @@
 /turf/floor/reinforced,
 /area/luciferase/maint)
 "ds" = (
-/obj/machinery/power/smes/buildable/preset,
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/machinery/power/smes/buildable/preset{
+	_fully_charged = 1;
+	_input_maxed = 1;
+	_output_maxed = 1;
+	_output_on = 1
 	},
 /turf/floor/plating,
 /area/luciferase/electrical)
@@ -387,6 +398,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/abstract/landmark/carnage_mark{
+	movement_prob = 5
+	},
 /turf/floor/plating,
 /area/luciferase/electrical)
 "eF" = (
@@ -426,7 +440,11 @@
 /turf/floor/tiled/techmaint,
 /area/luciferase/cargo)
 "eS" = (
-/turf/unsimulated/dark_filler,
+/obj/structure/sign/warning/hot_exhaust{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/space,
 /area/space)
 "eZ" = (
 /obj/effect/paint_stripe/yellow,
@@ -443,10 +461,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 10
 	},
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/critical{
 	dir = 1;
 	pixel_y = 22
 	},
@@ -654,9 +672,11 @@
 /turf/floor/tiled/monotile,
 /area/luciferase/atmos)
 "hK" = (
-/obj/machinery/atmospherics/valve,
 /obj/abstract/landmark/proc_caller/floor_breaker{
 	probability = 20
+	},
+/obj/machinery/atmospherics/valve/open{
+	name = "manual valve (CO2 to Thrusters)"
 	},
 /turf/floor/tiled/monotile,
 /area/luciferase/maint)
@@ -681,7 +701,9 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/atmospherics/portables_connector{
+	name = "connector port (Nitrogen)"
+	},
 /obj/machinery/firealarm{
 	pixel_y = 21
 	},
@@ -726,10 +748,6 @@
 	name = "Scrubbers to Waste"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -20
-	},
 /turf/floor/tiled/monotile,
 /area/luciferase/atmos)
 "je" = (
@@ -740,6 +758,10 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -20
+	},
 /turf/floor/tiled/monotile,
 /area/luciferase/atmos)
 "jk" = (
@@ -824,7 +846,7 @@
 	dir = 4
 	},
 /turf/floor/tiled/monotile,
-/area/luciferase/cargo)
+/area/luciferase/maint)
 "jU" = (
 /obj/structure/flaps/airtight,
 /obj/machinery/door/blast/regular{
@@ -871,6 +893,9 @@
 	dir = 5
 	},
 /obj/structure/closet/secure_closet/atmos_personal,
+/obj/abstract/landmark/variable_setter/closet_opener{
+	probability = 10
+	},
 /turf/floor/tiled/monotile,
 /area/luciferase/mess)
 "kE" = (
@@ -885,6 +910,9 @@
 	},
 /obj/structure/closet/emcloset,
 /obj/machinery/light/small/red,
+/obj/abstract/landmark/variable_setter/closet_opener{
+	probability = 10
+	},
 /turf/floor/plating,
 /area/luciferase/maint)
 "kG" = (
@@ -922,7 +950,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/manifold4w/visible/green,
+/obj/machinery/atmospherics/pipe/manifold/visible/green,
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
 "lu" = (
@@ -930,12 +958,17 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/emitter{
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/emitter/anchored{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/power/terminal{
+	icon_state = "term-omni"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 5
+	},
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
 "lI" = (
@@ -970,7 +1003,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/portables_connector{
-	dir = 8
+	dir = 8;
+	name = "connector port (Fuel Input)"
 	},
 /turf/floor/tiled/monotile,
 /area/luciferase/atmos)
@@ -1019,7 +1053,7 @@
 	},
 /obj/machinery/atmospherics/binary/pump/high_power{
 	dir = 4;
-	name = "Hotloop to Propulsion"
+	name = "high power gas pump (Hotloop to Propulsion)"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 8
@@ -1144,6 +1178,7 @@
 	dir = 1;
 	pixel_y = -21
 	},
+/obj/structure/chair/office/light,
 /turf/floor/tiled/white,
 /area/luciferase/infirmary)
 "oy" = (
@@ -1178,6 +1213,10 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
+/obj/item/plunger,
+/obj/abstract/landmark/variable_setter/closet_opener{
+	probability = 10
+	},
 /turf/floor/plating,
 /area/luciferase/maint)
 "oV" = (
@@ -1190,6 +1229,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/abstract/landmark/carnage_mark{
+	movement_prob = 5
 	},
 /turf/floor/tiled/techmaint,
 /area/luciferase/cryo)
@@ -1330,11 +1372,17 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/abstract/landmark/carnage_mark{
+	movement_prob = 20
+	},
 /turf/floor/plating,
 /area/luciferase/maint)
 "qk" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 9
+	},
 /obj/machinery/atmospherics/unary/vent_scrubber{
-	dir = 1
+	dir = 4
 	},
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
@@ -1345,11 +1393,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/visible/green{
+	dir = 1
+	},
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
 "qF" = (
@@ -1385,7 +1432,8 @@
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 10
 	},
-/turf/wall/r_wall/prepainted,
+/obj/machinery/computer/ship/engines,
+/turf/floor/tiled/monotile,
 /area/luciferase/atmos)
 "qR" = (
 /obj/structure/cable{
@@ -1449,16 +1497,23 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/machinery/atmospherics/binary/pump/high_power,
+/obj/machinery/atmospherics/binary/pump/high_power{
+	name = "high power gas pump (Starboard Thrusters)"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/floor/plating,
 /area/luciferase/maint)
 "sg" = (
-/obj/machinery/generator,
+/obj/machinery/generator{
+	anchored = 1
+	},
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 8
 	},
 /turf/floor/tiled/techfloor,
@@ -1480,9 +1535,6 @@
 /turf/floor/tiled/techmaint,
 /area/luciferase/infirmary)
 "sk" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 8
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
@@ -1569,11 +1621,11 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 6
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 1
 	},
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
@@ -1601,6 +1653,10 @@
 	},
 /turf/floor/tiled/monotile,
 /area/luciferase/mess)
+"ue" = (
+/obj/machinery/recharge_station,
+/turf/floor/tiled/techfloor,
+/area/luciferase/engine)
 "uf" = (
 /obj/machinery/button/blast_door{
 	id_tag = "kugel_engine_vent";
@@ -1646,12 +1702,16 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/machinery/suit_cycler/engineering/alt,
 /obj/structure/fireaxecabinet{
 	pixel_y = 32
 	},
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/machinery/suit_cycler/engineering/prepared/atmospheric,
+/obj/structure/sign/warning/compressed_gas{
+	dir = 4;
+	pixel_x = -34
 	},
 /turf/floor/tiled/monotile,
 /area/luciferase/atmos)
@@ -1769,7 +1829,7 @@
 	pixel_y = 10
 	},
 /turf/floor/tiled/monotile,
-/area/luciferase/cargo)
+/area/luciferase/maint)
 "vu" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 4
@@ -1885,12 +1945,6 @@
 "xm" = (
 /turf/wall,
 /area/luciferase/cryo)
-"xn" = (
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	dir = 5
-	},
-/turf/floor/tiled/techfloor,
-/area/luciferase/engine)
 "xq" = (
 /obj/structure/table/steel_reinforced,
 /obj/structure/cable{
@@ -1903,6 +1957,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/item/box/lights/bulbs,
 /turf/floor/tiled/monotile,
 /area/luciferase/engineering_equipmentroom)
 "xK" = (
@@ -1910,9 +1965,12 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/binary/pump{
-	dir = 8
+	dir = 8;
+	name = "gas pump (Connector to Thrusters)"
 	},
-/obj/machinery/atmospherics/valve,
+/obj/machinery/atmospherics/valve{
+	name = "manual valve (Fuel Tank)"
+	},
 /turf/floor/tiled/monotile,
 /area/luciferase/atmos)
 "xY" = (
@@ -1988,7 +2046,8 @@
 	tag_west = 1;
 	tag_east = 1;
 	tag_west_con = 0.21;
-	tag_north_con = 0
+	tag_north_con = 0;
+	name = "omni gas mixer (Air Mixer)"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -2041,6 +2100,9 @@
 	},
 /obj/item/med_pouch/radiation,
 /obj/item/med_pouch/burn,
+/obj/abstract/landmark/variable_setter/closet_opener{
+	probability = 10
+	},
 /turf/floor/tiled/white,
 /area/luciferase/infirmary)
 "zm" = (
@@ -2052,7 +2114,8 @@
 	_fully_charged = 1;
 	_input_maxed = 1;
 	_output_maxed = 1;
-	_output_on = 1
+	_output_on = 1;
+	name = "power storage unit (Ship Power)"
 	},
 /obj/structure/cable{
 	icon_state = "0-10"
@@ -2113,18 +2176,25 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/portables_connector{
-	dir = 1
+	dir = 1;
+	name = "connector port (Air Mix)"
 	},
 /turf/floor/plating,
 /area/luciferase/maint)
 "Ad" = (
-/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/atmospherics/portables_connector{
+	name = "connector port (Oxygen)"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
 	icon_state = "6-8"
 	},
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/structure/sign/warning/compressed_gas{
+	dir = 8;
+	pixel_x = 34
 	},
 /turf/floor/tiled/monotile,
 /area/luciferase/atmos)
@@ -2136,6 +2206,10 @@
 	},
 /obj/machinery/light/small/red{
 	dir = 8
+	},
+/obj/structure/sign/warning/compressed_gas{
+	dir = 8;
+	pixel_x = 34
 	},
 /turf/floor/plating,
 /area/luciferase/maint)
@@ -2255,7 +2329,8 @@
 /area/luciferase/maint)
 "BE" = (
 /obj/machinery/atmospherics/binary/pump{
-	dir = 8
+	dir = 8;
+	name = "gas pump (Hot Loop Injection)"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -2295,6 +2370,7 @@
 	pixel_y = 21;
 	initial_network_id = "lucynet"
 	},
+/obj/structure/chair/office/dark,
 /turf/floor/plating,
 /area/luciferase/maint)
 "BY" = (
@@ -2356,8 +2432,10 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/binary/pump/high_power,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
+	dir = 8
+	},
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
 "Cv" = (
@@ -2387,7 +2465,8 @@
 	tag_south = 1;
 	tag_west = 8;
 	tag_filter_gas_east = "gas_oxygen";
-	tag_filter_gas_west = "gas_nitrogen"
+	tag_filter_gas_west = "gas_nitrogen";
+	name = "omni gas filter (Waste Filter)"
 	},
 /turf/floor/tiled/monotile,
 /area/luciferase/atmos)
@@ -2421,9 +2500,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/obj/machinery/light/small/red{
-	dir = 1
-	},
 /turf/floor/plating,
 /area/luciferase/maint)
 "CR" = (
@@ -2434,7 +2510,9 @@
 /turf/space,
 /area/luciferase/engine)
 "CS" = (
-/obj/machinery/vending/engivend,
+/obj/machinery/vending/engivend{
+	markup = null
+	},
 /obj/effect/floor_decal/industrial/outline/orange,
 /turf/floor/tiled/steel_grid,
 /area/luciferase/cargo)
@@ -2470,14 +2548,11 @@
 /turf/floor/plating,
 /area/luciferase/maint)
 "Dc" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 9
-	},
 /obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/hydrogen/engine_setup,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/portable_atmospherics/canister/nitrogen/engine_setup,
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
 "Dj" = (
@@ -2686,7 +2761,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/binary/pump{
-	dir = 8
+	dir = 8;
+	name = "gas pump (Cold Loop Injection)"
 	},
 /obj/machinery/alarm{
 	dir = 1;
@@ -2705,6 +2781,15 @@
 /obj/abstract/submap_landmark/spawnpoint/luciferase_pilot_spawn,
 /turf/floor/tiled/dark/monotile,
 /area/luciferase/cargo)
+"FY" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/black{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/luciferase/engine)
 "Gj" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2737,7 +2822,7 @@
 	dir = 8;
 	pixel_x = -22
 	},
-/obj/abstract/submap_landmark/spawnpoint/luciferase_engineer_spawn,
+/obj/structure/table/steel_reinforced,
 /turf/floor/tiled/techmaint,
 /area/luciferase/engineering_equipmentroom)
 "Gm" = (
@@ -2907,6 +2992,9 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/abstract/landmark/variable_setter/closet_opener{
+	probability = 10
+	},
 /turf/floor/tiled/monotile,
 /area/luciferase/mess)
 "HZ" = (
@@ -2943,15 +3031,15 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -20
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
+	dir = 8
 	},
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
@@ -2995,7 +3083,8 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/binary/pump{
-	dir = 8
+	dir = 8;
+	name = "gas pump (Waste to Hot Loop)"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 4
@@ -3003,11 +3092,20 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/floor/plating,
 /area/luciferase/atmos)
+"ID" = (
+/obj/structure/sign/warning/hot_exhaust{
+	pixel_y = 32
+	},
+/turf/space,
+/area/space)
 "IJ" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible/red,
+/obj/abstract/landmark/carnage_mark{
+	movement_prob = 5
+	},
 /turf/floor/tiled/monotile,
 /area/luciferase/atmos)
 "Ja" = (
@@ -3066,6 +3164,9 @@
 	dir = 6
 	},
 /obj/structure/closet/secure_closet/engineering_chief,
+/obj/abstract/landmark/variable_setter/closet_opener{
+	probability = 10
+	},
 /turf/floor/tiled/monotile,
 /area/luciferase/mess)
 "JP" = (
@@ -3100,6 +3201,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "2-5"
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/floor/tiled/techmaint,
 /area/luciferase/cryo)
@@ -3141,8 +3245,9 @@
 /turf/floor/tiled,
 /area/luciferase/cargo)
 "KW" = (
-/obj/machinery/atmospherics/valve/open{
-	dir = 8
+/obj/machinery/atmospherics/valve{
+	dir = 8;
+	name = "manual valve (Connector to Fuel Line)"
 	},
 /turf/wall/prepainted,
 /area/luciferase/maint)
@@ -3153,7 +3258,6 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/machinery/portable_atmospherics/canister/empty/oxygen,
 /turf/floor/plating,
 /area/luciferase/maint)
 "Lj" = (
@@ -3214,6 +3318,9 @@
 /area/luciferase/electrical)
 "Ma" = (
 /obj/structure/closet/secure_closet/engineering_personal,
+/obj/abstract/landmark/variable_setter/closet_opener{
+	probability = 10
+	},
 /turf/floor/tiled/monotile,
 /area/luciferase/mess)
 "Md" = (
@@ -3324,6 +3431,9 @@
 /obj/machinery/light/small/red{
 	dir = 1
 	},
+/obj/abstract/landmark/variable_setter/closet_opener{
+	probability = 10
+	},
 /turf/floor/plating,
 /area/luciferase/maint)
 "ND" = (
@@ -3347,6 +3457,7 @@
 /obj/structure/cable{
 	icon_state = "2-10"
 	},
+/obj/abstract/submap_landmark/spawnpoint/luciferase_engineer_spawn,
 /turf/floor/tiled/techmaint,
 /area/luciferase/engineering_equipmentroom)
 "NV" = (
@@ -3388,7 +3499,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/abstract/landmark/proc_caller/floor_burner{
-	probability = 40
+	probability = 60
 	},
 /turf/floor/tiled/monotile,
 /area/luciferase/cargo)
@@ -3417,7 +3528,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/binary/passive_gate{
+	name = "pressure regulator (Pump Bypass)"
+	},
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
 "OZ" = (
@@ -3439,8 +3552,10 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
 /turf/floor/tiled/techfloor,
@@ -3457,6 +3572,19 @@
 /obj/abstract/submap_landmark/spawnpoint/luciferase_engineer_spawn,
 /turf/floor/tiled/monotile,
 /area/luciferase/bridge/port)
+"Pp" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/hygiene/sink{
+	dir = 4;
+	pixel_x = 16
+	},
+/turf/floor/plating,
+/area/luciferase/maint)
 "Pv" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 9
@@ -3508,7 +3636,7 @@
 	dir = 5
 	},
 /obj/abstract/landmark/proc_caller/floor_burner{
-	probability = 40
+	probability = 60
 	},
 /turf/floor/tiled,
 /area/luciferase/cargo)
@@ -3558,6 +3686,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
+/obj/abstract/landmark/carnage_mark{
+	movement_prob = 5
+	},
 /turf/floor/tiled/monotile,
 /area/luciferase/mess)
 "Rb" = (
@@ -3592,6 +3723,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/machinery/recharger,
 /turf/floor/tiled/monotile,
 /area/luciferase/mess)
 "RO" = (
@@ -3609,10 +3741,10 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/binary/pump/high_power{
+	name = "high power gas pump (Coolant Pump)"
+	},
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
 "RZ" = (
@@ -3633,6 +3765,7 @@
 	name = "Engine Access Hatch";
 	dir = 4
 	},
+/obj/machinery/door/airlock/hatch/autoname/engineering,
 /turf/floor/reinforced,
 /area/luciferase/engine)
 "Sp" = (
@@ -3677,6 +3810,13 @@
 /obj/effect/shuttle_landmark/ship/luciferase{
 	dir = 4
 	},
+/obj/structure/sign/warning/compressed_gas{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/machinery/light/small/red{
+	dir = 1
+	},
 /turf/floor/plating,
 /area/luciferase/maint)
 "Sx" = (
@@ -3707,7 +3847,9 @@
 /turf/space,
 /area/luciferase/engine)
 "Te" = (
-/obj/machinery/vending/engineering,
+/obj/machinery/vending/engineering{
+	markup = null
+	},
 /obj/effect/floor_decal/industrial/outline/orange,
 /turf/floor/tiled/steel_grid,
 /area/luciferase/cargo)
@@ -3724,7 +3866,7 @@
 /obj/structure/reagent_dispensers/fueltank,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/abstract/landmark/proc_caller/floor_burner{
-	probability = 50
+	probability = 80
 	},
 /turf/floor/tiled,
 /area/luciferase/cargo)
@@ -3747,6 +3889,13 @@
 	},
 /turf/floor/tiled,
 /area/luciferase/bridge/port)
+"TQ" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/hydrogen/engine_setup,
+/turf/floor/tiled/techfloor/grid,
+/area/luciferase/engine)
 "TS" = (
 /turf/wall/r_wall,
 /area/luciferase/atmos)
@@ -3805,8 +3954,8 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-5"
 	},
-/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 9
 	},
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
@@ -3893,6 +4042,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/structure/curtain/privacy,
+/obj/item/stack/tape_roll/barricade_tape/toilet,
+/obj/structure/hygiene/toilet{
+	dir = 8
+	},
+/obj/item/plunger,
 /turf/floor/plating,
 /area/luciferase/maint)
 "Xr" = (
@@ -3935,6 +4090,7 @@
 /obj/random/maintenance{
 	spawn_nothing_percentage = 50
 	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/floor/tiled/monotile,
 /area/luciferase/atmos)
 "XM" = (
@@ -3944,13 +4100,8 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	dir = 10
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/floor/tiled/techfloor,
 /area/luciferase/engine)
 "XT" = (
@@ -3972,7 +4123,8 @@
 	spawn_nothing_percentage = 50
 	},
 /obj/machinery/atmospherics/portables_connector{
-	dir = 8
+	dir = 8;
+	name = "connector port (Waste Input)"
 	},
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /obj/machinery/light/small{
@@ -3981,7 +4133,6 @@
 /turf/floor/tiled/monotile,
 /area/luciferase/atmos)
 "XX" = (
-/obj/machinery/suit_cycler/engineering,
 /obj/machinery/atmospherics/unary/vent_pump/airlock{
 	id_tag = "kugel_service_pump";
 	dir = 4
@@ -3991,6 +4142,7 @@
 	id_tag = "kugel_service_sensor";
 	pixel_x = -22
 	},
+/obj/machinery/suit_cycler/engineering/prepared,
 /turf/floor/tiled/techmaint,
 /area/luciferase/cryo)
 "Ye" = (
@@ -4065,16 +4217,6 @@
 	},
 /turf/floor/reinforced/nitrogen/engine,
 /area/luciferase/engine)
-"YI" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 4
-	},
-/obj/machinery/portable_atmospherics/canister/nitrogen/engine_setup,
-/turf/floor/tiled/techfloor/grid,
-/area/luciferase/engine)
 "YL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
@@ -4083,7 +4225,7 @@
 	pixel_y = 28
 	},
 /obj/abstract/landmark/proc_caller/floor_burner{
-	probability = 40
+	probability = 60
 	},
 /turf/floor/tiled,
 /area/luciferase/cargo)
@@ -4927,7 +5069,7 @@ Wc
 GC
 My
 li
-xn
+Wc
 av
 dt
 RZ
@@ -5042,8 +5184,8 @@ XM
 XM
 XM
 XM
-eS
 XM
+dt
 dt
 fa
 OY
@@ -5055,7 +5197,7 @@ sk
 BE
 FJ
 RZ
-XM
+dt
 XM
 XM
 XM
@@ -5104,9 +5246,9 @@ XM
 XM
 Fw
 XM
-eS
 XM
 dt
+ue
 cc
 Xr
 Pf
@@ -5116,8 +5258,8 @@ Vr
 Dc
 Rl
 VG
-RZ
-XM
+TQ
+dt
 XM
 XM
 fW
@@ -5167,7 +5309,7 @@ XM
 rT
 XM
 eS
-XM
+dt
 dt
 Qd
 dt
@@ -5177,10 +5319,10 @@ jl
 sq
 sq
 sq
-qb
+FY
 RZ
-XM
-XM
+dt
+ID
 XM
 mo
 XM
@@ -5239,7 +5381,7 @@ mp
 Zl
 ds
 sq
-YI
+qb
 RZ
 XM
 XM
@@ -5418,7 +5560,7 @@ OQ
 uC
 kp
 CW
-Dw
+Pp
 Dw
 hu
 oy
@@ -5431,7 +5573,7 @@ Jp
 MU
 XH
 eZ
-eS
+XM
 XM
 XM
 XM
@@ -5493,7 +5635,7 @@ qL
 xK
 Xt
 ti
-eS
+XM
 XM
 XM
 XM
@@ -5555,7 +5697,7 @@ iZ
 lW
 PT
 ti
-eS
+XM
 XM
 XM
 XM
@@ -5617,7 +5759,7 @@ EH
 nW
 rF
 eZ
-eS
+XM
 XM
 XM
 XM
@@ -5679,7 +5821,7 @@ CF
 IJ
 hD
 eZ
-eS
+XM
 XM
 XM
 XM
@@ -5741,7 +5883,7 @@ qR
 XW
 uE
 eZ
-eS
+XM
 XM
 XM
 XM
@@ -5803,7 +5945,7 @@ wS
 JV
 wS
 TS
-eS
+XM
 XM
 XM
 XM
@@ -5846,7 +5988,7 @@ XM
 XM
 XM
 XM
-eS
+XM
 ND
 Dx
 pg
@@ -5864,8 +6006,8 @@ UF
 cY
 sj
 wS
-eS
-eS
+XM
+XM
 XM
 XM
 XM
@@ -5927,7 +6069,7 @@ uY
 Ir
 wS
 XM
-eS
+XM
 XM
 XM
 XM
@@ -6112,7 +6254,7 @@ JV
 JV
 wS
 wS
-eS
+XM
 XM
 XM
 XM
@@ -6165,7 +6307,7 @@ GL
 Se
 qF
 Se
-AY
+ou
 sx
 aO
 sx
@@ -6342,7 +6484,7 @@ XM
 XM
 XM
 XM
-eS
+XM
 XM
 zZ
 nQ
