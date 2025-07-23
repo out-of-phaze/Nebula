@@ -54,17 +54,21 @@
 	. += "<br>"
 	var/datum/gas_mixture/atmosphere = get_atmosphere()
 	if(atmosphere)
-		if(user.skill_check(SKILL_SCIENCE, SKILL_EXPERT) || user.skill_check(SKILL_ATMOS, SKILL_EXPERT))
-			var/list/gases = list()
-			for(var/g in atmosphere.gas)
-				if(atmosphere.gas[g] > atmosphere.total_moles * 0.05)
-					var/decl/material/mat = GET_DECL(g)
-					gases += mat.gas_name
-			. += "Atmosphere composition: [english_list(gases)]<br>"
-			var/inaccuracy = rand(8,12)/10
-			. += "Atmosphere pressure [atmosphere.return_pressure()*inaccuracy] kPa, temperature [atmosphere.temperature*inaccuracy] K<br>"
-		else if(user.skill_check(SKILL_SCIENCE, SKILL_BASIC) || user.skill_check(SKILL_ATMOS, SKILL_BASIC))
-			. += "Atmosphere present<br>"
+		// SPACEFARERS EDIT - use combined science + atmos instead of checking for expert across the board
+		var/combined_level = user.get_skill_value(SKILL_SCIENCE) + user.get_skill_value(SKILL_ATMOS)
+		switch(combined_level)
+			if(SKILL_EXPERT to INFINITY)
+				var/list/gases = list()
+				for(var/g in atmosphere.gas)
+					if(atmosphere.gas[g] > atmosphere.total_moles * 0.05)
+						var/decl/material/mat = GET_DECL(g)
+						gases += mat.gas_name
+				. += "Atmosphere composition: [english_list(gases)]<br>"
+				var/inaccuracy = rand(8,12)/10
+				. += "Atmosphere pressure [atmosphere.return_pressure()*inaccuracy] kPa, temperature [atmosphere.temperature*inaccuracy] K<br>"
+			if(SKILL_BASIC to SKILL_EXPERT)
+				. += "Atmosphere present<br>"
+		// END SPACEFARERS EDIT
 		. += "<br>"
 
 	var/datum/planetoid_data/E = get_planetoid_data()
