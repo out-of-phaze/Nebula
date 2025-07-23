@@ -845,6 +845,7 @@
 			return ..(facing_dir)
 	else
 		return ..()
+	return FALSE
 
 /mob/proc/set_stat(var/new_stat)
 	var/old_stat = stat
