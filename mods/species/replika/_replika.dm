@@ -37,6 +37,8 @@
 	QDEL_NULL(dummy_appearance)
 	var/decl/bodytype/replika/model = get_bodytype()
 	set_real_name(model.get_default_name())
+	reset_hair() // I have no clue why this is necessary.
+	// todo: figure out why we let snapshot overwrite bodytype-default accessories
 
 /decl/bodytype/replika/proc/get_default_name()
 	return "[name]-[add_zero(num2text(random_id(name, 0, 99)), 2)]"
