@@ -170,10 +170,10 @@
 	info = "You are an engineer on a Luciferase-class prototype engineering vessel, responsible for maintaining and repairing the ship's systems."
 	total_positions = 3
 	alt_titles = list(
-		"Maintenance Technician",
-		"Engine Technician",
-		"Electrician",
-		"Atmospheric Technician" = /decl/outfit/job/generic/engineer/luciferase/atmos,
+		"Engineering Vessel Maintenance Technician",
+		"Engineering Vessel Engine Technician",
+		"Engineering Vessel Electrician",
+		"Engineering Vessel Atmospheric Technician" = /decl/outfit/job/generic/engineer/luciferase/atmos,
 	)
 	access = list(
 		access_engine,
@@ -186,9 +186,9 @@
 		SKILL_EVA          = SKILL_ADEPT,
 		SKILL_CONSTRUCTION = SKILL_BASIC,
 		SKILL_ELECTRICAL   = SKILL_BASIC,
-		SKILL_ATMOS        = SKILL_BASIC,
+		SKILL_ATMOS        = SKILL_ADEPT,
 		SKILL_COMPUTER     = SKILL_BASIC,
-		SKILL_ENGINES      = SKILL_BASIC
+		SKILL_ENGINES      = SKILL_ADEPT
 	)
 	max_skill = list(
 		SKILL_CONSTRUCTION = SKILL_MAX,
@@ -261,7 +261,9 @@
 		SKILL_EVA      = SKILL_BASIC
 	)
 	max_skill = list(
-		SKILL_PILOT    = SKILL_MAX
+		SKILL_PILOT    = SKILL_MAX,
+		SKILL_ATMOS    = SKILL_MAX,
+		SKILL_SCIENCE  = SKILL_MAX
 	)
 	no_skill_buffs = TRUE // stopgap for utility frames
 	whitelisted_species = null
