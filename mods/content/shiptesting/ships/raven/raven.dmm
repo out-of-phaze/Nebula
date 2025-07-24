@@ -1,0 +1,9730 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"ao" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 10
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump"
+	},
+/obj/structure/closet/crate,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"ap" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 1
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"aE" = (
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/floor/plating,
+/area/raven/electrical)
+"aV" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/cyan,
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"bm" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 1
+	},
+/obj/structure/closet/crate,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"bD" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/floor/tiled/white,
+/area/raven/dining)
+"bQ" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -21
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/computer/ship/comms{
+	dir = 1
+	},
+/turf/floor/plating,
+/area/raven/atmospherics)
+"bZ" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump";
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 10
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"ca" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown";
+	dir = 4
+	},
+/turf/floor/plating,
+/area/raven/bridge)
+"cb" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/floor/tiled/white,
+/area/raven/dining)
+"ci" = (
+/obj/effect/floor_decal/spline/plain/grey,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump"
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"cu" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/rack,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 4
+	},
+/obj/item/wrench,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"dq" = (
+/obj/effect/floor_decal/spline/plain/grey,
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal"
+	},
+/obj/structure/closet/crate/med_crate,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"dB" = (
+/obj/structure/curtain/open/shower,
+/obj/structure/hygiene/shower{
+	pixel_y = 8
+	},
+/obj/machinery/light/small,
+/turf/floor/tiled/freezer,
+/area/raven/medical)
+"dJ" = (
+/obj/machinery/computer/ship/sensors{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/three_quarters{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/raven/bridge)
+"et" = (
+/obj/machinery/computer/cryopod{
+	dir = 8;
+	pixel_x = 24
+	},
+/obj/item/crowbar/cheap,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/structure/handrail,
+/turf/floor/tiled/white,
+/area/raven/medical)
+"eF" = (
+/obj/effect/paint/silver,
+/turf/wall/prepainted,
+/area/raven/crew_quarters)
+"eZ" = (
+/obj/effect/paint/silver,
+/turf/wall/r_wall/prepainted,
+/area/raven/atmospherics)
+"fk" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/floor/tiled,
+/area/raven/damage_control)
+"fp" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/door/airlock/atmos{
+	name = "Atmospherics"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/floor/tiled/techfloor/grid,
+/area/raven/atmospherics)
+"fD" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/button/access/interior{
+	dir = 1;
+	pixel_y = -22;
+	pixel_x = 10;
+	id_tag = "raven_starboard_airlock"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/floor/tiled,
+/area/raven/eva/starboard)
+"fF" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/glass/medical{
+	name = "Infirmary"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/medical)
+"fK" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/floor/plating,
+/area/raven/electrical)
+"fO" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan,
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"fQ" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel{
+	dir = 10
+	},
+/obj/effect/wallframe_spawn/reinforced,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown";
+	dir = 8
+	},
+/turf/floor/plating,
+/area/raven/atmospherics)
+"fX" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump";
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 9
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"gb" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Canteen"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/dining)
+"ge" = (
+/obj/effect/paint/silver,
+/turf/wall/prepainted,
+/area/raven/cargo_bay)
+"gh" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"gr" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/external/glass/bolted_open{
+	id_tag = "raven_cargo_inner"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/cargo_bay)
+"gu" = (
+/obj/structure/rack,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/belt/utility,
+/obj/item/clothing/head/welding,
+/obj/item/weldingtool,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"gx" = (
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/binary/pump,
+/turf/floor/plating,
+/area/raven/atmospherics)
+"gF" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 8
+	},
+/obj/structure/closet/crate/internals,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"gM" = (
+/obj/structure/table,
+/obj/item/stack/material/pane/mapped/rglass/twenty,
+/obj/item/stack/material/pane/mapped/glass/fifty,
+/obj/item/stack/material/sheet/mapped/steel/fifty,
+/obj/item/stack/material/sheet/reinforced/mapped/fiberglass/twenty,
+/obj/item/stack/material/sheet/shiny/mapped/aluminium/fifty,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/item/stack/material/rods/mapped/steel/twentyfive,
+/turf/floor/tiled/dark,
+/area/raven/damage_control)
+"hm" = (
+/obj/structure/rack,
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = -30
+	},
+/obj/item/toolbox/electrical,
+/obj/item/toolbox/mechanical,
+/obj/item/toolbox/repairs,
+/obj/item/toolbox/emergency,
+/obj/item/multitool,
+/obj/item/clothing/gloves/insulated,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 29
+	},
+/obj/effect/floor_decal/industrial/fire{
+	dir = 4
+	},
+/obj/item/crowbar/brace_jack,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/turf/floor/tiled/dark,
+/area/raven/damage_control)
+"hq" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown"
+	},
+/turf/floor/plating,
+/area/raven/eva/port)
+"hu" = (
+/obj/effect/paint/silver,
+/turf/wall/r_wall/prepainted,
+/area/raven/medical)
+"hz" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/cyan,
+/obj/machinery/meter,
+/obj/effect/catwalk_plated,
+/turf/floor/plating,
+/area/raven/cargo_bay)
+"hB" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 5
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"hF" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 10
+	},
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"hI" = (
+/obj/structure/rack,
+/obj/item/clothing/sensor/buddytag,
+/obj/item/gps/mining,
+/obj/machinery/power/apc{
+	dir = 1;
+	pixel_y = 22
+	},
+/obj/item/radio,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/geiger,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/item/scanner/gas,
+/obj/machinery/button/access/interior{
+	dir = 4;
+	pixel_x = -20;
+	id_tag = "raven_cargo";
+	pixel_y = -8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/item/box/greenglowsticks,
+/turf/floor/tiled/dark,
+/area/raven/eva/starboard)
+"hN" = (
+/obj/effect/paint/red,
+/turf/wall/r_wall/prepainted,
+/area/raven/electrical)
+"it" = (
+/obj/machinery/computer/ship/helm{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/floor/tiled/dark,
+/area/raven/bridge)
+"iP" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -21
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/network/telecomms_hub{
+	initial_network_id = "metacomms"
+	},
+/turf/floor/plating,
+/area/raven/atmospherics)
+"iV" = (
+/obj/structure/rack,
+/obj/machinery/power/apc{
+	dir = 1;
+	pixel_y = 22
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/item/briefcase/inflatable,
+/obj/item/belt/utility,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 29
+	},
+/obj/effect/floor_decal/industrial/fire{
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/raven/damage_control)
+"jf" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/turf/floor/tiled/white,
+/area/raven/medical)
+"jt" = (
+/obj/structure/mirror{
+	dir = 8;
+	pixel_x = 29
+	},
+/obj/structure/hygiene/sink{
+	dir = 4;
+	pixel_x = 16
+	},
+/obj/structure/hygiene/toilet{
+	dir = 1
+	},
+/obj/abstract/submap_landmark/spawnpoint/raven/deck_hand,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/turf/floor/tiled/freezer,
+/area/raven/medical)
+"jM" = (
+/obj/machinery/alarm/monitor{
+	dir = 8;
+	pixel_x = 21
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 4
+	},
+/obj/structure/closet,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"jP" = (
+/obj/effect/floor_decal/spline/plain/grey,
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal"
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"jU" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 1
+	},
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "raven_cargo_outer"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/cargo_bay)
+"kc" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/alarm{
+	pixel_y = 21
+	},
+/obj/effect/floor_decal/industrial/outline,
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/turf/floor/tiled/dark,
+/area/raven/eva/starboard)
+"kd" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Electrical"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/floor/tiled/techfloor/grid,
+/area/raven/electrical)
+"kh" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/item/roller,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/power/apc{
+	pixel_y = -22
+	},
+/obj/structure/cable,
+/obj/item/toolbox/mechanical,
+/obj/structure/table/glass,
+/turf/floor/tiled/white,
+/area/raven/medical)
+"kt" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 9
+	},
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"kI" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"kX" = (
+/obj/machinery/cryopod{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/floor/tiled/white,
+/area/raven/medical)
+"la" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline,
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"lk" = (
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Canteen"
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/floor/tiled/techfloor/grid,
+/area/raven/dining)
+"ll" = (
+/obj/effect/overmap/visitable/ship/landable/spawnable/raven,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/turf/floor/tiled/techfloor,
+/area/raven/bridge)
+"lm" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/cyan,
+/obj/machinery/meter,
+/obj/effect/catwalk_plated,
+/turf/floor/plating,
+/area/raven/cargo_bay)
+"lv" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"lx" = (
+/obj/machinery/shipcomms/broadcaster,
+/obj/abstract/exterior_marker/outside,
+/obj/structure/sign/warning/docking_area{
+	dir = 8;
+	pixel_x = 32
+	},
+/turf/floor/plating/airless,
+/area/raven/cargo_bay)
+"lA" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/handrail{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 9
+	},
+/obj/structure/closet/crate,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 8
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"lE" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/cyan,
+/obj/effect/catwalk_plated,
+/turf/floor/plating,
+/area/raven/cargo_bay)
+"lX" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel{
+	dir = 9
+	},
+/obj/effect/wallframe_spawn/reinforced,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown";
+	dir = 8
+	},
+/turf/floor/plating,
+/area/raven/electrical)
+"mg" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown"
+	},
+/turf/floor/plating,
+/area/raven/atmospherics)
+"mH" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"mN" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "raven_cargo_outer"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/cargo_bay)
+"nw" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/effect/wallframe_spawn/reinforced,
+/turf/floor/plating,
+/area/raven/cargo_bay)
+"nA" = (
+/obj/machinery/door/airlock/external/glass/bolted_open{
+	id_tag = "raven_cargo_inner"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/cargo_bay)
+"nF" = (
+/obj/machinery/power/apc{
+	pixel_y = -22
+	},
+/obj/structure/cable,
+/obj/machinery/space_heater,
+/turf/floor/plating,
+/area/raven/electrical)
+"nQ" = (
+/obj/machinery/power/smes/buildable/preset{
+	_fully_charged = 1;
+	_input_maxed = 1;
+	_output_maxed = 1;
+	_output_on = 1;
+	name = "power storage unit (Ship Power)"
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/industrial/danger/full,
+/obj/structure/sign/warning/high_voltage{
+	pixel_y = 32
+	},
+/obj/machinery/light/small/red{
+	dir = 8
+	},
+/turf/floor/plating,
+/area/raven/electrical)
+"nT" = (
+/obj/structure/table,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/item/box/glasses/mug,
+/obj/item/chems/rag,
+/obj/item/chems/drinks/bottle/vodka,
+/obj/item/chems/drinks/bottle/vermouth,
+/obj/item/chems/drinks/bottle/tequila,
+/obj/item/chems/drinks/bottle/kahlua,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -29;
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/fire,
+/turf/floor/tiled/white,
+/area/raven/dining)
+"nU" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -21
+	},
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"oe" = (
+/obj/structure/table,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/power/apc{
+	dir = 1;
+	pixel_y = 22
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/item/stack/material/cardstock/mapped/cardboard/fifteen,
+/obj/item/stack/material/segment/mapped/nutriment/fifteen,
+/obj/item/box/donkpockets,
+/turf/floor/tiled/white,
+/area/raven/dining)
+"ow" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/obj/machinery/meter,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/floor/plating,
+/area/raven/atmospherics)
+"oK" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown";
+	dir = 2
+	},
+/turf/floor/plating,
+/area/raven/electrical)
+"oR" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/port_gen/pacman,
+/obj/structure/cable/yellow,
+/obj/structure/sign/warning/nosmoking_2{
+	pixel_y = -32;
+	dir = 1
+	},
+/turf/floor/plating,
+/area/raven/electrical)
+"pi" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"pj" = (
+/obj/machinery/suit_cycler/engineering/prepared,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -21
+	},
+/turf/floor/tiled/dark,
+/area/raven/damage_control)
+"pu" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	pixel_y = 22
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"py" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown";
+	dir = 4
+	},
+/turf/floor/plating,
+/area/raven/bridge)
+"qH" = (
+/obj/effect/paint/silver,
+/turf/wall/prepainted,
+/area/raven/dining)
+"qJ" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown";
+	dir = 4
+	},
+/turf/floor/plating,
+/area/raven/bridge)
+"rg" = (
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/obj/effect/wallframe_spawn/reinforced,
+/turf/floor/plating,
+/area/raven/cargo_bay)
+"ry" = (
+/obj/machinery/hologram/holopad/longrange/remoteship,
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/raven,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor,
+/area/raven/bridge)
+"rD" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/machinery/light/small/red{
+	dir = 4
+	},
+/turf/floor/plating,
+/area/raven/atmospherics)
+"rM" = (
+/obj/machinery/fabricator/replicator{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/dummy_airlock_controller{
+	id_tag = "raven_port_airlock";
+	pixel_y = 24
+	},
+/turf/floor/tiled/dark,
+/area/raven/dining)
+"rN" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/floor/tiled,
+/area/raven/damage_control)
+"rP" = (
+/obj/effect/paint/silver,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/wall/prepainted,
+/area/raven/cargo_bay)
+"rS" = (
+/obj/structure/table,
+/obj/machinery/microwave{
+	throwpass = 1;
+	pixel_y = 6
+	},
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/sign/warning/smoking{
+	pixel_y = 32
+	},
+/turf/floor/tiled/white,
+/area/raven/dining)
+"sf" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/curtain/open/privacy,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/turf/floor/tiled/white,
+/area/raven/medical)
+"sr" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/button/access/interior{
+	dir = 4;
+	pixel_x = -20;
+	id_tag = "raven_aft_airlock";
+	pixel_y = -8
+	},
+/turf/floor/tiled,
+/area/raven/damage_control)
+"sy" = (
+/obj/effect/paint/silver,
+/turf/wall/prepainted,
+/area/raven/electrical)
+"sI" = (
+/obj/machinery/firealarm{
+	pixel_y = 21
+	},
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"sU" = (
+/obj/effect/paint/silver,
+/turf/wall/prepainted,
+/area/raven/eva/starboard)
+"sZ" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 4
+	},
+/obj/machinery/button/access/interior{
+	dir = 8;
+	pixel_x = 20;
+	id_tag = "raven_cargo";
+	pixel_y = 8
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/floor/plating,
+/area/raven/atmospherics)
+"td" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/sign/warning/compressed_gas{
+	pixel_y = 32
+	},
+/obj/machinery/light/small/red{
+	dir = 4
+	},
+/turf/floor/plating,
+/area/raven/atmospherics)
+"tf" = (
+/obj/effect/paint/silver,
+/turf/wall/r_wall/prepainted,
+/area/raven/cargo_bay)
+"tj" = (
+/obj/structure/closet/firecloset,
+/obj/machinery/power/apc{
+	dir = 1;
+	pixel_y = 22
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/floor/plating,
+/area/raven/atmospherics)
+"tm" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/button/access/interior{
+	dir = 4;
+	pixel_x = -20;
+	id_tag = "raven_cargo";
+	pixel_y = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"tn" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/shuttle_landmark/ship/raven{
+	dir = 4
+	},
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/effect/wallframe_spawn/reinforced,
+/turf/floor/plating,
+/area/raven/dining)
+"tw" = (
+/obj/machinery/shipsensors,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/abstract/exterior_marker/outside,
+/obj/machinery/airlock_sensor{
+	id_tag = "raven_cargo_exterior_sensor";
+	pixel_y = 24
+	},
+/turf/floor/plating/airless,
+/area/raven/medical)
+"tz" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/machinery/sleeper/standard,
+/obj/machinery/vending/wallmed1{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/floor/tiled/white,
+/area/raven/medical)
+"tC" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 4
+	},
+/turf/floor/plating/airless,
+/area/raven/electrical)
+"tG" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/recharger,
+/obj/machinery/alarm{
+	pixel_y = 21
+	},
+/obj/item/radio/phone{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/turf/floor/tiled/dark,
+/area/raven/bridge)
+"tP" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/effect/floor_decal/industrial/outline,
+/obj/structure/sign/warning/nosmoking_2{
+	pixel_y = 32
+	},
+/turf/floor/plating,
+/area/raven/atmospherics)
+"tW" = (
+/obj/machinery/light/small/red{
+	dir = 4
+	},
+/obj/machinery/recycler,
+/turf/floor/plating,
+/area/raven/electrical)
+"ud" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/floor/tiled,
+/area/raven/eva/port)
+"ux" = (
+/obj/machinery/door/airlock/freezer{
+	name = "Bathroom"
+	},
+/obj/machinery/door/firedoor,
+/turf/floor/tiled/techfloor/grid,
+/area/raven/medical)
+"uS" = (
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "raven_starboard_airlock_inner"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/turf/floor/tiled/techfloor/grid,
+/area/raven/eva/starboard)
+"vc" = (
+/obj/effect/paint/silver,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 1
+	},
+/turf/wall/r_wall/prepainted,
+/area/raven/cargo_bay)
+"vg" = (
+/obj/effect/paint/silver,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/wall/r_wall/prepainted,
+/area/raven/cargo_bay)
+"vl" = (
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 20
+	},
+/obj/abstract/submap_landmark/spawnpoint/raven/pilot,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/floor/tiled,
+/area/raven/dining)
+"wi" = (
+/obj/abstract/exterior_marker/outside,
+/turf/floor/plating/airless,
+/area/raven/crew_quarters)
+"wu" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 6
+	},
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"wv" = (
+/obj/effect/paint/silver,
+/turf/wall/r_wall/prepainted,
+/area/raven/damage_control)
+"wy" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/power/apc{
+	dir = 1;
+	pixel_y = 22
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/item/paper_bin,
+/obj/item/folder/yellow,
+/obj/item/pen,
+/turf/floor/tiled/dark,
+/area/raven/bridge)
+"wA" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 10
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 8
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"wM" = (
+/obj/structure/tank_rack/oxygen,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/button/access/interior{
+	dir = 8;
+	pixel_x = 20;
+	id_tag = "raven_cargo";
+	pixel_y = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"wS" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"wU" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 10
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 8
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"xa" = (
+/obj/machinery/light/small/red{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	dir = 4;
+	id_tag = "raven_aft_airlock_pump"
+	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	dir = 1;
+	pixel_y = -22;
+	id_tag = "raven_aft_airlock";
+	tag_airpump = "raven_aft_airlock_pump";
+	tag_exterior_door = "raven_aft_airlock_outer";
+	tag_interior_door = "raven_aft_airlock_inner";
+	tag_chamber_sensor = "raven_aft_airlock_sensor";
+	name = "aft airlock controller"
+	},
+/obj/machinery/airlock_sensor{
+	id_tag = "raven_aft_airlock_sensor";
+	pixel_y = 24
+	},
+/obj/effect/floor_decal/industrial/danger/full,
+/turf/floor/plating,
+/area/raven/damage_control)
+"xy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/turf/floor/plating,
+/area/raven/atmospherics)
+"xH" = (
+/obj/effect/paint/silver,
+/turf/wall/r_wall/prepainted,
+/area/raven/eva/starboard)
+"xN" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 20
+	},
+/obj/machinery/optable,
+/turf/floor/tiled/white,
+/area/raven/medical)
+"yy" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 9
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 8
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"zd" = (
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "raven_aft_airlock_outer"
+	},
+/obj/machinery/button/access/exterior{
+	dir = 8;
+	pixel_x = -12;
+	id_tag = "raven_aft_airlock";
+	pixel_y = -24
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/damage_control)
+"zf" = (
+/obj/structure/sign/warning/vacuum{
+	dir = 8;
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 1
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"zj" = (
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "raven_aft_airlock_inner"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/damage_control)
+"zk" = (
+/obj/structure/cable,
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 8
+	},
+/obj/machinery/power/apc/high{
+	dir = 8;
+	pixel_x = -22
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 8
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"zw" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"zT" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/turf/floor/tiled,
+/area/raven/medical)
+"Ac" = (
+/obj/machinery/computer/shuttle_control/explore{
+	dir = 8;
+	name = "shuttle control console";
+	shuttle_tag = "Salvage Vessel"
+	},
+/obj/effect/floor_decal/corner/blue/three_quarters,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/raven/bridge)
+"Ai" = (
+/obj/abstract/exterior_marker/outside,
+/turf/floor/plating/airless,
+/area/raven/cargo_bay)
+"Ak" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/turf/floor/tiled/white,
+/area/raven/dining)
+"Ay" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/floor/tiled,
+/area/raven/eva/port)
+"AH" = (
+/obj/structure/chair{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/abstract/submap_landmark/spawnpoint/raven/salvager,
+/turf/floor/tiled/white,
+/area/raven/dining)
+"AI" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/chair/office/light,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/floor/tiled/white,
+/area/raven/medical)
+"AV" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
+	dir = 1
+	},
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"Bp" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/turf/floor/tiled,
+/area/raven/damage_control)
+"Bs" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown";
+	dir = 4
+	},
+/turf/floor/plating,
+/area/raven/bridge)
+"BE" = (
+/obj/machinery/light/small/red{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	dir = 1;
+	id_tag = "raven_starboard_airlock_pump"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	dir = 8;
+	id_tag = "raven_starboard_airlock";
+	pixel_x = 22;
+	tag_exterior_door = "raven_starboard_airlock_outer";
+	tag_interior_door = "raven_starboard_airlock_inner";
+	tag_chamber_sensor = "raven_starboard_airlock_sensor";
+	tag_airpump = "raven_starboard_airlock_pump";
+	name = "starboard airlock controller"
+	},
+/obj/machinery/airlock_sensor{
+	dir = 4;
+	pixel_x = -22;
+	id_tag = "raven_starboard_airlock_sensor"
+	},
+/obj/effect/floor_decal/industrial/danger/full,
+/turf/floor/plating,
+/area/raven/eva/starboard)
+"BJ" = (
+/obj/effect/paint/silver,
+/turf/wall/prepainted,
+/area/raven/atmospherics)
+"Cc" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/closet/medical_wall/filled{
+	pixel_y = 32
+	},
+/obj/item/firstaid/surgery,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/item/med_pouch/radiation,
+/obj/item/med_pouch/burn,
+/obj/item/med_pouch/oxyloss,
+/obj/structure/table/glass,
+/turf/floor/tiled/white,
+/area/raven/medical)
+"Ch" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"Cj" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump";
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 8
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"Dm" = (
+/obj/abstract/exterior_marker/outside,
+/obj/abstract/exterior_marker/outside,
+/obj/structure/sign/warning/vent_port{
+	pixel_y = 32
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "raven_cargo_pump_out_external";
+	dir = 4
+	},
+/turf/floor/plating/airless,
+/area/raven/cargo_bay)
+"Dq" = (
+/obj/effect/paint/silver,
+/turf/wall/r_wall/prepainted,
+/area/raven/eva/port)
+"Dt" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"DE" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/glass/civilian,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/eva/starboard)
+"DK" = (
+/obj/abstract/exterior_marker/outside,
+/obj/structure/sign/warning/vent_port{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "raven_cargo_pump_out_external";
+	dir = 8
+	},
+/turf/floor/plating/airless,
+/area/raven/cargo_bay)
+"DN" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/button/access/interior{
+	pixel_y = 22;
+	pixel_x = 10;
+	id_tag = "raven_port_airlock"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/floor/tiled,
+/area/raven/eva/port)
+"DQ" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/button/access/interior{
+	dir = 8;
+	pixel_x = 20;
+	id_tag = "raven_cargo";
+	pixel_y = -8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/floor/plating,
+/area/raven/electrical)
+"Ep" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/fabricator,
+/turf/floor/tiled/dark,
+/area/raven/damage_control)
+"Ex" = (
+/obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
+	dir = 8;
+	pixel_x = 22;
+	id_tag = "raven_cargo";
+	tag_airpump = "raven_cargo_pump";
+	tag_chamber_sensor = "raven_cargo_sensor";
+	tag_exterior_door = "raven_cargo_outer";
+	tag_interior_door = "raven_cargo_inner";
+	tag_pump_out_internal = "raven_cargo_pump_out_internal";
+	tag_pump_out_external = "raven_cargo_pump_out_external";
+	tag_secure = 1;
+	tag_exterior_sensor = "raven_cargo_exterior_sensor";
+	name = "cargo bay airlock controller";
+	cycle_to_external_air = 1
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"Fb" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1
+	},
+/turf/floor/plating,
+/area/raven/atmospherics)
+"Fd" = (
+/obj/machinery/door/airlock/external/glass/bolted_open{
+	id_tag = "raven_cargo_inner"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/cargo_bay)
+"Fs" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/floor/tiled,
+/area/raven/eva/starboard)
+"FA" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown"
+	},
+/turf/floor/plating,
+/area/raven/medical)
+"FE" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 6
+	},
+/obj/structure/closet/crate,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"FL" = (
+/obj/structure/table,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/item/chems/drinks/bottle/whiskey,
+/obj/item/chems/drinks/bottle/wine,
+/obj/item/chems/drinks/bottle/rum,
+/obj/item/chems/drinks/bottle/gin,
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/floor/tiled/white,
+/area/raven/dining)
+"FN" = (
+/obj/machinery/shipcomms/receiver,
+/obj/abstract/exterior_marker/outside,
+/obj/structure/sign/warning/docking_area{
+	dir = 8;
+	pixel_x = 32
+	},
+/turf/floor/plating/airless,
+/area/raven/cargo_bay)
+"FR" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan,
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"FU" = (
+/obj/structure/reagent_dispensers/fueltank,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/button/access/interior{
+	dir = 4;
+	pixel_x = -20;
+	id_tag = "raven_cargo";
+	pixel_y = -8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"Gs" = (
+/obj/abstract/exterior_marker/outside,
+/obj/structure/sign/warning/vent_port{
+	pixel_y = 32
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "raven_cargo_pump_out_external";
+	dir = 8
+	},
+/turf/floor/plating/airless,
+/area/raven/cargo_bay)
+"GC" = (
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 20
+	},
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"GF" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/floor/tiled/white,
+/area/raven/dining)
+"Hm" = (
+/obj/structure/chair/shuttle{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 4
+	},
+/obj/machinery/network/requests_console{
+	pixel_y = 32;
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/floor/tiled/dark,
+/area/raven/bridge)
+"HF" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump";
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 5
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"HP" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/turf/floor/tiled,
+/area/raven/eva/port)
+"HX" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/blueprints/shuttle,
+/obj/item/megaphone,
+/obj/item/radio,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/dummy_airlock_controller{
+	dir = 1;
+	id_tag = "raven_cargo";
+	pixel_y = -22
+	},
+/turf/floor/tiled/dark,
+/area/raven/bridge)
+"Ib" = (
+/obj/effect/paint/silver,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 4
+	},
+/turf/wall/prepainted,
+/area/raven/dining)
+"Ii" = (
+/obj/effect/paint/silver,
+/turf/wall/r_wall/prepainted,
+/area/raven/crew_quarters)
+"Iq" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown";
+	dir = 2
+	},
+/turf/floor/plating,
+/area/raven/eva/starboard)
+"Iv" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown"
+	},
+/turf/floor/plating,
+/area/raven/bridge)
+"IH" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/radio_beacon,
+/obj/item/gps,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -21
+	},
+/obj/item/toolbox/emergency,
+/turf/floor/tiled/dark,
+/area/raven/bridge)
+"II" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump";
+	dir = 1
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"IQ" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 4
+	},
+/turf/floor/plating/airless,
+/area/raven/atmospherics)
+"IT" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown";
+	dir = 2
+	},
+/turf/floor/plating,
+/area/raven/bridge)
+"IY" = (
+/obj/structure/rack,
+/obj/item/clothing/sensor/buddytag,
+/obj/item/gps/mining,
+/obj/machinery/power/apc{
+	pixel_y = -22
+	},
+/obj/item/radio,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/geiger,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/item/scanner/gas,
+/obj/machinery/button/access/interior{
+	dir = 4;
+	pixel_x = -20;
+	id_tag = "raven_cargo";
+	pixel_y = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/item/box/greenglowsticks,
+/turf/floor/tiled/dark,
+/area/raven/eva/port)
+"Jc" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/effect/catwalk_plated,
+/turf/floor/plating,
+/area/raven/cargo_bay)
+"Je" = (
+/obj/structure/table,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/item/box/checkers/chess,
+/obj/item/box/checkers/chess/red,
+/obj/item/box/checkers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/floor/tiled/white,
+/area/raven/dining)
+"Jn" = (
+/obj/machinery/recharge_station,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/alarm{
+	pixel_y = 21
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/floor/plating,
+/area/raven/electrical)
+"Jr" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	pixel_y = 21
+	},
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/turf/floor/tiled/dark,
+/area/raven/damage_control)
+"Jt" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 21
+	},
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"JI" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/turf/floor/tiled,
+/area/raven/dining)
+"Kj" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 21
+	},
+/obj/abstract/submap_landmark/spawnpoint/raven/medic,
+/turf/floor/tiled,
+/area/raven/dining)
+"Kn" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 5
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"Kq" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -21
+	},
+/obj/effect/floor_decal/industrial/outline,
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/turf/floor/tiled/dark,
+/area/raven/eva/port)
+"Kz" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/crate,
+/obj/item/stack/material/brick/mapped/graphite/twentyfive,
+/obj/machinery/light/small/red{
+	dir = 4
+	},
+/turf/floor/plating,
+/area/raven/electrical)
+"KB" = (
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"KS" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/item/clothing/suit/space/void/engineering/salvage,
+/obj/item/clothing/head/helmet/space/void/engineering/salvage,
+/obj/item/clothing/shoes/magboots,
+/obj/machinery/suit_cycler/generic,
+/turf/floor/tiled/dark,
+/area/raven/eva/port)
+"Lp" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/floor/plating,
+/area/raven/cargo_bay)
+"LD" = (
+/obj/structure/chair/shuttle{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/floor/tiled/techfloor,
+/area/raven/bridge)
+"LF" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 5
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump";
+	dir = 1
+	},
+/obj/structure/closet/crate,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"LU" = (
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Cryogenics"
+	},
+/obj/machinery/door/firedoor,
+/turf/floor/tiled/techfloor/grid,
+/area/raven/medical)
+"Mm" = (
+/obj/structure/chair/shuttle{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue,
+/obj/machinery/button/blast_door{
+	id_tag = "raven_window_lockdown";
+	desc = "This opens the cargo bay doors.";
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/floor/tiled/dark,
+/area/raven/bridge)
+"Mq" = (
+/obj/structure/chair,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/abstract/submap_landmark/spawnpoint/raven/salvager,
+/turf/floor/tiled/white,
+/area/raven/dining)
+"Mr" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/item/clothing/neck/stethoscope,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 21
+	},
+/obj/item/box/gloves{
+	pixel_y = 10
+	},
+/obj/item/belt/medical/emt,
+/obj/structure/table/glass,
+/turf/floor/tiled/white,
+/area/raven/medical)
+"Nc" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/closet/firecloset,
+/obj/machinery/button/access/interior{
+	dir = 8;
+	pixel_x = 20;
+	id_tag = "raven_cargo";
+	pixel_y = -8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"Nn" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/turf/floor/tiled,
+/area/raven/damage_control)
+"Nt" = (
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/item/scanner/gas,
+/turf/floor/plating,
+/area/raven/atmospherics)
+"NJ" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"NO" = (
+/obj/machinery/button/access/exterior{
+	dir = 4;
+	pixel_x = -20;
+	id_tag = "raven_cargo"
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal"
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"NW" = (
+/obj/effect/paint/silver,
+/turf/wall/prepainted,
+/area/raven/medical)
+"Oo" = (
+/obj/machinery/computer/ship/engines{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/light/small/red{
+	dir = 8
+	},
+/obj/machinery/network/router/wall_mounted{
+	pixel_y = -21;
+	initial_network_id = "metacomms";
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/defective,
+/turf/floor/plating,
+/area/raven/atmospherics)
+"Oq" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/item/clothing/suit/space/void/engineering/salvage,
+/obj/item/clothing/head/helmet/space/void/engineering/salvage,
+/obj/item/clothing/shoes/magboots,
+/obj/machinery/suit_cycler/generic,
+/turf/floor/tiled/dark,
+/area/raven/eva/starboard)
+"Ou" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/manifold/visible/fuel,
+/obj/effect/wallframe_spawn/reinforced,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown";
+	dir = 8
+	},
+/turf/floor/plating,
+/area/raven/atmospherics)
+"OF" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump";
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 4
+	},
+/obj/structure/closet/crate,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"OP" = (
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "raven_starboard_airlock_outer"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/button/access/exterior{
+	id_tag = "raven_starboard_airlock";
+	pixel_y = -10;
+	pixel_x = 22
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/eva/starboard)
+"OQ" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 9
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump";
+	dir = 1
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"Ph" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/turf/floor/tiled,
+/area/raven/eva/starboard)
+"PG" = (
+/obj/effect/paint/silver,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
+/turf/wall/r_wall/prepainted,
+/area/raven/cargo_bay)
+"PQ" = (
+/obj/structure/chair{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/abstract/submap_landmark/spawnpoint/raven/deck_hand,
+/turf/floor/tiled/white,
+/area/raven/dining)
+"PS" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown";
+	dir = 8
+	},
+/turf/floor/plating,
+/area/raven/damage_control)
+"Qm" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump";
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"Qy" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"QI" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown";
+	dir = 2
+	},
+/turf/floor/plating,
+/area/raven/crew_quarters)
+"QJ" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/floor/plating,
+/area/raven/electrical)
+"QL" = (
+/obj/effect/paint/silver,
+/turf/wall/prepainted,
+/area/raven/eva/port)
+"QT" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/firealarm{
+	pixel_y = 21
+	},
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil/yellow,
+/obj/item/cell,
+/turf/floor/plating,
+/area/raven/electrical)
+"RK" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"RS" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/manifold/visible/fuel{
+	dir = 1
+	},
+/obj/effect/wallframe_spawn/reinforced,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/door/blast/regular/open{
+	id_tag = "raven_window_lockdown";
+	dir = 8
+	},
+/turf/floor/plating,
+/area/raven/electrical)
+"Sj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 5
+	},
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"Su" = (
+/turf/space,
+/area/space)
+"Sw" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump";
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"SB" = (
+/obj/structure/table,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/item/board,
+/obj/item/deck/cards,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/floor/tiled/white,
+/area/raven/dining)
+"SI" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline,
+/turf/floor/tiled,
+/area/raven/cargo_bay)
+"SP" = (
+/obj/structure/rack,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/box/lights/bulbs,
+/obj/item/stack/cable_coil,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"SX" = (
+/obj/machinery/button/access/exterior{
+	id_tag = "raven_cargo";
+	pixel_y = -10;
+	pixel_x = 22
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "raven_cargo_outer"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/cargo_bay)
+"Th" = (
+/obj/machinery/light/small/red{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	id_tag = "raven_port_airlock_pump"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	dir = 8;
+	id_tag = "raven_port_airlock";
+	pixel_x = 22;
+	tag_exterior_door = "raven_port_airlock_outer";
+	tag_interior_door = "raven_port_airlock_inner";
+	tag_airpump = "raven_port_airlock_pump";
+	tag_chamber_sensor = "raven_port_airlock_sensor";
+	name = "port airlock controller"
+	},
+/obj/machinery/airlock_sensor{
+	dir = 4;
+	pixel_x = -22;
+	id_tag = "raven_port_airlock_sensor"
+	},
+/obj/effect/floor_decal/industrial/danger/full,
+/turf/floor/plating,
+/area/raven/eva/port)
+"Tl" = (
+/obj/abstract/exterior_marker/outside,
+/obj/structure/sign/warning/vent_port{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "raven_cargo_pump_out_external";
+	dir = 4
+	},
+/turf/floor/plating/airless,
+/area/raven/cargo_bay)
+"Ty" = (
+/obj/effect/paint/red,
+/turf/wall/r_wall/prepainted,
+/area/raven/atmospherics)
+"TH" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/floor/tiled,
+/area/raven/eva/starboard)
+"TM" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump";
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 6
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"TN" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/vending/cigarette{
+	dir = 8
+	},
+/obj/machinery/dummy_airlock_controller{
+	dir = 1;
+	id_tag = "raven_starboard_airlock";
+	pixel_y = -22
+	},
+/turf/floor/tiled/dark,
+/area/raven/dining)
+"TS" = (
+/obj/structure/rack,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/plunger,
+/obj/item/bag/trash,
+/obj/item/chems/glass/bucket,
+/obj/item/mop,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"Ul" = (
+/obj/abstract/docking_port_spawner/raven,
+/turf/space,
+/area/space)
+"UB" = (
+/obj/item/wrench,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/floor/plating,
+/area/raven/electrical)
+"UX" = (
+/obj/machinery/airlock_sensor{
+	dir = 4;
+	id_tag = "raven_cargo_sensor";
+	pixel_x = -22
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 8
+	},
+/obj/structure/closet/crate,
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"Vf" = (
+/obj/effect/paint/silver,
+/turf/wall/prepainted,
+/area/raven/damage_control)
+"Vk" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/turf/floor/tiled,
+/area/raven/medical)
+"VM" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 4
+	},
+/turf/floor/plating,
+/area/raven/dining)
+"VU" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/machinery/computer/operating,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/floor/tiled/white,
+/area/raven/medical)
+"VV" = (
+/obj/effect/paint/silver,
+/turf/wall/prepainted,
+/area/raven/bridge)
+"Wi" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/floor/plating,
+/area/raven/electrical)
+"Wy" = (
+/obj/effect/paint/silver,
+/turf/wall/r_wall/prepainted,
+/area/raven/electrical)
+"Wz" = (
+/obj/machinery/button/access/exterior{
+	dir = 4;
+	pixel_x = -20;
+	id_tag = "raven_cargo"
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 1
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"WH" = (
+/obj/machinery/button/access/exterior{
+	id_tag = "raven_cargo";
+	pixel_y = 11;
+	pixel_x = 22;
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 1
+	},
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "raven_cargo_outer"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/cargo_bay)
+"WP" = (
+/obj/structure/table,
+/obj/item/cell,
+/obj/machinery/cell_charger,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/item/cell,
+/obj/item/cell,
+/turf/floor/tiled/dark,
+/area/raven/damage_control)
+"WY" = (
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/machinery/atmospherics/binary/pump,
+/turf/floor/plating,
+/area/raven/atmospherics)
+"Xe" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"Xw" = (
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "raven_port_airlock_outer"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/button/access/exterior{
+	id_tag = "raven_port_airlock";
+	pixel_y = 11;
+	pixel_x = 22;
+	dir = 1
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/eva/port)
+"XA" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump"
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"XI" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/floor/tiled,
+/area/raven/crew_quarters)
+"Yd" = (
+/obj/structure/chair,
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/abstract/submap_landmark/spawnpoint/raven/deck_hand,
+/turf/floor/tiled/white,
+/area/raven/dining)
+"Ye" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/floor/plating,
+/area/raven/electrical)
+"Yo" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal";
+	dir = 8
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"YS" = (
+/obj/structure/sign/warning/vacuum{
+	dir = 8;
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 6
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "raven_cargo_pump_out_internal"
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
+"YU" = (
+/obj/machinery/door/airlock/command{
+	name = "Bridge"
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/bridge)
+"Zx" = (
+/obj/machinery/door/airlock/glass/civilian,
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/eva/port)
+"ZI" = (
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "raven_port_airlock_inner"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/turf/floor/tiled/techfloor/grid,
+/area/raven/eva/port)
+"ZU" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/civilian,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/raven/crew_quarters)
+"ZY" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/hygiene/sink{
+	dir = 8;
+	pixel_x = -16
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/iv_drip,
+/turf/floor/tiled/white,
+/area/raven/medical)
+
+(1,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(2,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(3,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(4,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(5,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(6,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(7,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(8,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(9,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(10,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(11,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(12,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(13,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(14,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(15,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(16,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(17,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(18,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(19,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(20,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(21,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(22,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(23,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(24,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(25,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(26,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Ty
+IQ
+IQ
+Ty
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+hN
+tC
+tC
+hN
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(27,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+eZ
+eZ
+fQ
+Ou
+eZ
+eZ
+Su
+Su
+Su
+Su
+Su
+Wy
+Wy
+RS
+lX
+Wy
+Wy
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(28,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+eZ
+tP
+gx
+Nt
+Oo
+eZ
+Su
+wv
+zd
+wv
+Su
+Wy
+nQ
+fK
+aE
+oR
+Wy
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(29,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+eZ
+td
+Fb
+xy
+iP
+eZ
+PS
+wv
+xa
+wv
+PS
+Wy
+QT
+Wi
+UB
+Kz
+Wy
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(30,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+eZ
+eZ
+tj
+ow
+bQ
+BJ
+pj
+Vf
+zj
+Vf
+Jr
+sy
+Jn
+QJ
+nF
+Wy
+Wy
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(31,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Ai
+mg
+rD
+WY
+sZ
+fp
+Nn
+sr
+rN
+fk
+Bp
+kd
+DQ
+Ye
+tW
+oK
+Ai
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(32,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Tl
+tf
+ge
+nA
+ge
+ge
+iV
+gM
+Ep
+WP
+hm
+ge
+ge
+gr
+ge
+tf
+Dm
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(33,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+vc
+vg
+FU
+zw
+gu
+rP
+rP
+rg
+nw
+Lp
+rP
+rP
+TS
+lv
+tm
+vg
+PG
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(34,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+jU
+Wz
+ao
+Sj
+yy
+gF
+UX
+wA
+la
+lA
+zk
+Yo
+wU
+wu
+OQ
+NO
+mN
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(35,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+jU
+ap
+ci
+fO
+HF
+Qm
+Qm
+TM
+Jc
+HF
+Qm
+OF
+TM
+AV
+II
+jP
+mN
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(36,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+jU
+bm
+ci
+lm
+aV
+aV
+aV
+aV
+lE
+aV
+aV
+aV
+aV
+hz
+II
+jP
+mN
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(37,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+jU
+bm
+ci
+FR
+fX
+Sw
+Cj
+bZ
+Jc
+fX
+Cj
+Cj
+bZ
+AV
+II
+dq
+mN
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(38,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+WH
+zf
+XA
+kt
+hB
+aa
+Ex
+FE
+SI
+Kn
+jM
+aa
+Xe
+hF
+LF
+YS
+SX
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(39,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+vc
+vg
+Nc
+Ch
+SP
+Ib
+Ib
+VM
+tn
+VM
+Ib
+Ib
+cu
+Dt
+wM
+vg
+PG
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(40,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+DK
+tf
+ge
+Fd
+ge
+qH
+rS
+Mq
+Je
+AH
+nT
+qH
+ge
+gr
+ge
+tf
+Gs
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(41,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+FN
+hq
+KS
+Ay
+IY
+qH
+oe
+Yd
+SB
+PQ
+FL
+qH
+hI
+TH
+Oq
+Iq
+lx
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(42,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Dq
+Dq
+QL
+DN
+ud
+lk
+cb
+GF
+Ak
+GF
+bD
+gb
+Fs
+fD
+sU
+xH
+xH
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(43,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Ul
+Xw
+Th
+ZI
+HP
+Kq
+qH
+rM
+Kj
+JI
+vl
+TN
+qH
+kc
+Ph
+uS
+BE
+OP
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(44,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Dq
+QL
+QL
+Zx
+QL
+qH
+VV
+VV
+YU
+VV
+VV
+qH
+sU
+DE
+sU
+sU
+xH
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(45,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+hu
+kX
+NW
+zT
+NW
+dB
+VV
+wy
+ll
+HX
+VV
+sI
+KB
+NJ
+pi
+nU
+Ii
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(46,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+FA
+et
+LU
+Vk
+ux
+jt
+VV
+tG
+ry
+IH
+VV
+KB
+XI
+wS
+KB
+kI
+QI
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(47,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+hu
+NW
+NW
+fF
+NW
+NW
+VV
+Hm
+LD
+Mm
+VV
+eF
+eF
+ZU
+eF
+eF
+Ii
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(48,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+FA
+VU
+ZY
+sf
+kh
+hu
+Iv
+dJ
+it
+Ac
+IT
+Ii
+pu
+RK
+mH
+Qy
+QI
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(49,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+hu
+xN
+jf
+AI
+Mr
+hu
+ca
+Bs
+py
+qJ
+qJ
+Ii
+Jt
+gh
+KB
+GC
+Ii
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(50,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+hu
+hu
+Cc
+tz
+hu
+hu
+tw
+Su
+Su
+Su
+wi
+Ii
+Ii
+KB
+kI
+Ii
+Ii
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(51,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+hu
+hu
+hu
+hu
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Ii
+Ii
+Ii
+Ii
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(52,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(53,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(54,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(55,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(56,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(57,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(58,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(59,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(60,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(61,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(62,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(63,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(64,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(65,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(66,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(67,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(68,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(69,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(70,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(71,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(72,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(73,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(74,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(75,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(76,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(77,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(78,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(79,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
+(80,1,1) = {"
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+"}
