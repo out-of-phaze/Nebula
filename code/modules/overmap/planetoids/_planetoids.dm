@@ -67,7 +67,7 @@
 				var/inaccuracy = rand(8,12)/10
 				. += "Atmosphere pressure [atmosphere.return_pressure()*inaccuracy] kPa, temperature [atmosphere.temperature*inaccuracy] K<br>"
 			if(SKILL_BASIC to SKILL_EXPERT)
-				. += "Atmosphere present<br>"
+				. += "Atmosphere present. Sensor suite calibration required for detailed scan. Contact a qualified technician for calibration assistance.<br>"
 		// END SPACEFARERS EDIT
 		. += "<br>"
 
