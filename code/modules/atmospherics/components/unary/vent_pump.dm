@@ -161,7 +161,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume
 	name = "large air vent"
 	desc = "A high-volume vent that moves lots of air into or out of the attached pipe system, and uses a valve and pump to prevent backflow."
-	power_channel = EQUIP
 	power_rating = 45000
 	base_type = /obj/machinery/atmospherics/unary/vent_pump/high_volume/buildable
 
