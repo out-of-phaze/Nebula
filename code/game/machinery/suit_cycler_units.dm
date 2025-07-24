@@ -17,6 +17,13 @@
 	helmet = /obj/item/clothing/head/helmet/space/void/atmos
 	suit = /obj/item/clothing/suit/space/void/atmos
 
+/obj/machinery/suit_cycler/engineering/prepared/salvage
+	available_modifications = list(
+		/decl/item_modifier/space_suit/salvage
+	)
+	helmet = /obj/item/clothing/head/helmet/space/void/engineering/salvage
+	suit = /obj/item/clothing/suit/space/void/engineering/salvage
+
 /obj/machinery/suit_cycler/engineering/alt
 	available_modifications = list(
 		/decl/item_modifier/space_suit/engineering/alt,
