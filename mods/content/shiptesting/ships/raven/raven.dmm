@@ -6,9 +6,9 @@
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
-	dir = 4
+/obj/machinery/atmospherics/unary/tank/air{
+	dir = 8;
+	start_pressure = 30
 	},
 /turf/floor/tiled/dark,
 /area/raven/cargo_bay)
@@ -369,6 +369,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 8
 	},
+/obj/item/scanner/price,
 /turf/floor/tiled/dark,
 /area/raven/cargo_bay)
 "gx" = (
@@ -385,11 +386,10 @@
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
-	dir = 8
+/obj/machinery/atmospherics/unary/tank/air{
+	dir = 4;
+	start_pressure = 30
 	},
-/obj/structure/closet/crate/internals,
 /turf/floor/tiled/dark,
 /area/raven/cargo_bay)
 "gM" = (
@@ -405,6 +405,11 @@
 /obj/item/stack/material/rods/mapped/steel/twentyfive,
 /turf/floor/tiled/dark,
 /area/raven/damage_control)
+"gV" = (
+/obj/effect/paint/silver,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/wall/prepainted,
+/area/raven/dining)
 "hm" = (
 /obj/structure/rack,
 /obj/item/radio/intercom{
@@ -686,10 +691,6 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
-	},
-/obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -697,6 +698,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline,
+/obj/machinery/atmospherics/unary/tank/air{
+	dir = 4;
+	start_pressure = 30
+	},
 /turf/floor/tiled,
 /area/raven/cargo_bay)
 "lk" = (
@@ -1114,6 +1119,15 @@
 	},
 /turf/floor/tiled/white,
 /area/raven/dining)
+"rX" = (
+/obj/abstract/docking_port_spawner/raven{
+	core_landmark_tag = "nav_raven";
+	docking_tag = "raven_dock_aft";
+	dir = 4;
+	port_name = "aft docking port"
+	},
+/turf/space,
+/area/space)
 "sf" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/structure/cable{
@@ -1259,6 +1273,10 @@
 	id_tag = "raven_cargo_exterior_sensor";
 	pixel_y = 24
 	},
+/obj/machinery/power/terminal{
+	dir = 1;
+	icon_state = "term-omni"
+	},
 /turf/floor/plating/airless,
 /area/raven/medical)
 "tz" = (
@@ -1297,6 +1315,15 @@
 	},
 /turf/floor/plating,
 /area/raven/atmospherics)
+"tR" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
 "tW" = (
 /obj/machinery/light/small/red{
 	dir = 4
@@ -1408,6 +1435,7 @@
 	id_tag = "raven_cargo_pump_out_internal";
 	dir = 8
 	},
+/obj/structure/closet/crate/internals,
 /turf/floor/tiled/dark,
 /area/raven/cargo_bay)
 "wM" = (
@@ -2020,8 +2048,7 @@
 	dir = 4
 	},
 /obj/machinery/network/requests_console{
-	pixel_y = 32;
-	dir = 1
+	pixel_y = 32
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/floor/tiled/dark,
@@ -2191,15 +2218,13 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/item/box/checkers/chess,
-/obj/item/box/checkers/chess/red,
-/obj/item/box/checkers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/random/toy,
 /turf/floor/tiled/white,
 /area/raven/dining)
 "Jn" = (
@@ -2249,6 +2274,15 @@
 	},
 /turf/floor/tiled,
 /area/raven/dining)
+"Kh" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/raven/cargo_bay)
 "Kj" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/alarm{
@@ -2306,10 +2340,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/item/clothing/suit/space/void/engineering/salvage,
-/obj/item/clothing/head/helmet/space/void/engineering/salvage,
-/obj/item/clothing/shoes/magboots,
-/obj/machinery/suit_cycler/generic,
+/obj/machinery/suit_cycler/engineering/prepared/salvage,
 /turf/floor/tiled/dark,
 /area/raven/eva/port)
 "Lp" = (
@@ -2497,10 +2528,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/item/clothing/suit/space/void/engineering/salvage,
-/obj/item/clothing/head/helmet/space/void/engineering/salvage,
-/obj/item/clothing/shoes/magboots,
-/obj/machinery/suit_cycler/generic,
+/obj/machinery/suit_cycler/engineering/prepared/salvage,
 /turf/floor/tiled/dark,
 /area/raven/eva/starboard)
 "Ou" = (
@@ -2517,14 +2545,13 @@
 /turf/floor/plating,
 /area/raven/atmospherics)
 "OF" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump";
-	dir = 4
-	},
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 4
 	},
 /obj/structure/closet/crate,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
 /turf/floor/tiled/dark,
 /area/raven/cargo_bay)
 "OP" = (
@@ -2702,14 +2729,13 @@
 /turf/space,
 /area/space)
 "Sw" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump";
-	dir = 8
-	},
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
 /turf/floor/tiled/dark,
 /area/raven/cargo_bay)
 "SB" = (
@@ -2718,7 +2744,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/item/board,
 /obj/item/deck/cards,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2728,14 +2753,19 @@
 	},
 /turf/floor/tiled/white,
 /area/raven/dining)
+"SH" = (
+/obj/abstract/docking_port_spawner/raven{
+	core_landmark_tag = "nav_raven";
+	docking_tag = "raven_dock_starboard";
+	dir = 1;
+	port_name = "starboard docking port"
+	},
+/turf/space,
+/area/space)
 "SI" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
-/obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -2743,6 +2773,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline,
+/obj/machinery/atmospherics/unary/tank/air{
+	dir = 8;
+	start_pressure = 30
+	},
 /turf/floor/tiled,
 /area/raven/cargo_bay)
 "SP" = (
@@ -2807,6 +2841,11 @@
 	},
 /turf/floor/plating/airless,
 /area/raven/cargo_bay)
+"Tu" = (
+/obj/effect/paint/silver,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/wall/prepainted,
+/area/raven/cargo_bay)
 "Ty" = (
 /obj/effect/paint/red,
 /turf/wall/r_wall/prepainted,
@@ -2860,7 +2899,11 @@
 /turf/floor/tiled/dark,
 /area/raven/cargo_bay)
 "Ul" = (
-/obj/abstract/docking_port_spawner/raven,
+/obj/abstract/docking_port_spawner/raven{
+	core_landmark_tag = "nav_raven";
+	docking_tag = "raven_dock_port";
+	port_name = "port docking port"
+	},
 /turf/space,
 /area/space)
 "UB" = (
@@ -3076,19 +3119,6 @@
 	},
 /turf/floor/plating,
 /area/raven/electrical)
-"Yo" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/effect/floor_decal/spline/plain/grey{
-	dir = 8
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
-	dir = 8
-	},
-/turf/floor/tiled/dark,
-/area/raven/cargo_bay)
 "YS" = (
 /obj/structure/sign/warning/vacuum{
 	dir = 8;
@@ -5341,7 +5371,7 @@ eZ
 eZ
 Su
 Su
-Su
+rX
 Su
 Su
 Wy
@@ -5830,13 +5860,13 @@ vg
 FU
 zw
 gu
-rP
+Tu
 rP
 rg
 nw
 Lp
 rP
-rP
+Tu
 TS
 lv
 tm
@@ -5918,7 +5948,7 @@ wA
 la
 lA
 zk
-Yo
+gF
 wU
 wu
 OQ
@@ -5994,7 +6024,7 @@ ap
 ci
 fO
 HF
-Qm
+tR
 Qm
 TM
 Jc
@@ -6164,7 +6194,7 @@ bZ
 Jc
 fX
 Cj
-Cj
+Kh
 bZ
 AV
 II
@@ -6322,13 +6352,13 @@ vg
 Nc
 Ch
 SP
-Ib
+gV
 Ib
 VM
 tn
 VM
 Ib
-Ib
+gV
 cu
 Dt
 wM
@@ -6662,7 +6692,7 @@ Ph
 uS
 BE
 OP
-Su
+SH
 Su
 Su
 Su
