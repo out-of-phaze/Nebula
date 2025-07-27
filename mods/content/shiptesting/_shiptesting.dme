@@ -8,7 +8,7 @@
 #include "ships/lozenge/lozenge.dm"
 #include "ships/luciferase/luciferase.dm"
 #include "ships/tanker/tanker.dm"
-#include "ships/raven/raven.dm"
+#include "ships/metastasis/metastasis.dm"
 #include "ships/skiff/skiff.dm"
 #include "props/coffee_maker.dm"
 #endif
