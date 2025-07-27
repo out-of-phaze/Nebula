@@ -1,13 +1,13 @@
-/datum/map_template/ship/raven
-	name = "Raven-class salvage vessel"
-	suffixes = list("raven/raven.dmm")
-	area_usage_test_exempted_root_areas = list(/area/raven)
-	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/raven)
+/datum/map_template/ship/metastasis
+	name = "Metastasis-class salvage vessel"
+	suffixes = list("metastasis/metastasis.dmm")
+	area_usage_test_exempted_root_areas = list(/area/metastasis)
+	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/metastasis)
 
 
-/obj/effect/overmap/visitable/ship/landable/spawnable/raven
+/obj/effect/overmap/visitable/ship/landable/spawnable/metastasis
 	name = "Salvage Vessel"
-	desc = "Sensors detect a Raven-class salvage vessel."
+	desc = "Sensors detect a Metastasis-class salvage vessel."
 	shuttle = "Salvage Vessel"
 	fore_dir = EAST
 	max_speed = 1/(3 SECONDS)
@@ -16,128 +16,121 @@
 	ship_name_classes = list("GENERAL", "SPACE", "NATURAL")
 
 
-/datum/shuttle/autodock/overmap/raven
+/datum/shuttle/autodock/overmap/metastasis
 	name = "Salvage Vessel"
 	warmup_time = 4 // in seconds
 	fuel_consumption = 0
-	current_location = "nav_raven"
-	dock_target = "raven_dock"
+	current_location = "nav_metastasis"
+	dock_target = "metastasis_dock"
 	defer_initialisation = TRUE
 	shuttle_area = list(
-		/area/raven/bridge,
-		/area/raven/dining,
-		/area/raven/eva/port,
-		/area/raven/eva/starboard,
-		/area/raven/medical,
-		/area/raven/crew_quarters,
-		/area/raven/cargo_bay,
-		/area/raven/electrical,
-		/area/raven/damage_control,
-		/area/raven/atmospherics
+		/area/metastasis/bridge,
+		/area/metastasis/dining,
+		/area/metastasis/eva/port,
+		/area/metastasis/eva/starboard,
+		/area/metastasis/medical,
+		/area/metastasis/crew_quarters,
+		/area/metastasis/cargo_bay,
+		/area/metastasis/electrical,
+		/area/metastasis/damage_control,
+		/area/metastasis/atmospherics
 	)
 	flags = SHUTTLE_FLAGS_PROCESS
 
 
-/obj/effect/shuttle_landmark/ship/raven
+/obj/effect/shuttle_landmark/ship/metastasis
 	shuttle_name = "Salvage Vessel"
-	landmark_tag = "nav_raven"
+	landmark_tag = "nav_metastasis"
 	flags = SLANDMARK_FLAG_ZERO_G | SLANDMARK_FLAG_REORIENT
 	base_area = /area/space
 	base_turf = /turf/space
 
 
-/obj/abstract/docking_port_spawner/raven
-	abstract_type = /obj/abstract/docking_port_spawner/raven
-	docking_tag = "raven_dock"
+/obj/abstract/docking_port_spawner/metastasis
+	abstract_type = /obj/abstract/docking_port_spawner/metastasis
+	docking_tag = "metastasis_dock"
 
-/obj/abstract/docking_port_spawner/raven/port
-	core_landmark_tag = "nav_raven_port"
+/obj/abstract/docking_port_spawner/metastasis/port
+	core_landmark_tag = "nav_metastasis_port"
 
-/obj/abstract/docking_port_spawner/raven/starboard
-	core_landmark_tag = "nav_raven_starboard"
+/obj/abstract/docking_port_spawner/metastasis/starboard
+	core_landmark_tag = "nav_metastasis_starboard"
 
 
 
-/area/raven
+/area/metastasis
 	name = "Salvage Vessel"
 	icon_state = "yellow"
 
-/area/raven/bridge
+/area/metastasis/bridge
 	name = "Salvage Vessel Bridge"
 
-/area/raven/dining
+/area/metastasis/dining
 	name = "Salvage Vessel Canteen"
 
-/area/raven/eva
-	abstract_type = /area/raven/eva
+/area/metastasis/eva
+	abstract_type = /area/metastasis/eva
 
-/area/raven/eva/port
+/area/metastasis/eva/port
 	name = "Salvage Vessel Port EVA"
 
-/area/raven/eva/starboard
+/area/metastasis/eva/starboard
 	name = "Salvage Vessel Starboard EVA"
 
-/area/raven/crew_quarters
+/area/metastasis/crew_quarters
 	name = "Salvage Vessel Crew Quarters"
 
-/area/raven/medical
+/area/metastasis/medical
 	name = "Salvage Vessel Infirmary"
 
-/area/raven/cargo_bay
+/area/metastasis/cargo_bay
 	name = "Salvage Vessel Cargo Bay"
 
-/area/raven/aft_hatch
-	name = "Salvage Vessel Aft Hatch"
-
-/area/raven/damage_control
+/area/metastasis/damage_control
 	name = "Salvage Vessel Damage Control"
 
-/area/raven/electrical
+/area/metastasis/electrical
 	name = "Salvage Vessel Electrical Room"
 
-/area/raven/atmospherics
+/area/metastasis/atmospherics
 	name = "Salvage Vessel Atmospherics"
 
 
 
-/decl/submap_archetype/spawnable_ship/raven
-	name = "Raven-class salvage vessel"
+/decl/submap_archetype/spawnable_ship/metastasis
+	name = "Metastasis-class salvage vessel"
 	crew_jobs = list(
-		/datum/job/submap/shiptesting/raven/pilot,
-		/datum/job/submap/shiptesting/raven/medic,
-		/datum/job/submap/shiptesting/raven/salvager,
-		/datum/job/submap/shiptesting/raven/deck_hand,
+		/datum/job/submap/shiptesting/metastasis/pilot,
+		/datum/job/submap/shiptesting/metastasis/medic,
+		/datum/job/submap/shiptesting/metastasis/salvager,
+		/datum/job/submap/shiptesting/metastasis/deck_hand,
 	)
 	whitelisted_species = null
 	blacklisted_species = null
 
-/obj/abstract/submap_landmark/spawnpoint/raven
-	abstract_type = /obj/abstract/submap_landmark/spawnpoint/raven
+/obj/abstract/submap_landmark/spawnpoint/metastasis
+	abstract_type = /obj/abstract/submap_landmark/spawnpoint/metastasis
 
-/obj/abstract/submap_landmark/spawnpoint/raven/pilot
-//	name = "Salvage Vessel Pilot"
-	name = /datum/job/submap/shiptesting/raven/pilot::title
+/obj/abstract/submap_landmark/spawnpoint/metastasis/pilot
+	name = /datum/job/submap/shiptesting/metastasis/pilot::title
 
-/obj/abstract/submap_landmark/spawnpoint/raven/salvager
-//	name = "Salvage Vessel Salvager"
-	name = /datum/job/submap/shiptesting/raven/salvager::title
+/obj/abstract/submap_landmark/spawnpoint/metastasis/salvager
+	name = /datum/job/submap/shiptesting/metastasis/salvager::title
 
-/obj/abstract/submap_landmark/spawnpoint/raven/medic
-//	name = "Salvage Vessel Medic"
-	name = /datum/job/submap/shiptesting/raven/medic::title
+/obj/abstract/submap_landmark/spawnpoint/metastasis/medic
+	name = /datum/job/submap/shiptesting/metastasis/medic::title
 
-/obj/abstract/submap_landmark/spawnpoint/raven/deck_hand
-//	name = "Salvage Vessel Deck Hand"
-	name = /datum/job/submap/shiptesting/raven/deck_hand::title
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deck_hand
+	name = /datum/job/submap/shiptesting/metastasis/deck_hand::title
 
 
-/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/raven
-	name = "Raven-class salvage vessel"
-	archetype = /decl/submap_archetype/spawnable_ship/raven
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/metastasis
+	name = "Metastasis-class salvage vessel"
+	archetype = /decl/submap_archetype/spawnable_ship/metastasis
 
 
-/datum/job/submap/shiptesting/raven
-	abstract_type = /datum/job/submap/shiptesting/raven
+/datum/job/submap/shiptesting/metastasis
+	abstract_type = /datum/job/submap/shiptesting/metastasis
 	skill_points = 25
 	no_skill_buffs = TRUE // stopgap for utility frames
 	whitelisted_species = null
@@ -145,10 +138,10 @@
 	selection_color = "#7f6e2c"
 
 // Pilot.
-/datum/job/submap/shiptesting/raven/pilot
+/datum/job/submap/shiptesting/metastasis/pilot
 	title = "Salvage Vessel Pilot"
-	info = "You are the pilot of a Raven-class salvage vessel, profiting off the misfortune of others who came before you."
-	outfit_type = /decl/outfit/job/generic/raven_pilot
+	info = "You are the pilot of a Metastasis-class salvage vessel, profiting off the misfortune of others who came before you."
+	outfit_type = /decl/outfit/job/generic/metastasis_pilot
 	total_positions = 1
 	min_skill = list(
 		SKILL_LITERACY = SKILL_BASIC,
@@ -159,15 +152,15 @@
 		SKILL_PILOT    = SKILL_MAX
 	)
 
-/decl/outfit/job/generic/raven_pilot
+/decl/outfit/job/generic/metastasis_pilot
 	name = "Job - Salvage vessel pilot"
 	uniform = /obj/item/clothing/jumpsuit/pilot
 	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
 
 // Salvager.
-/datum/job/submap/shiptesting/raven/salvager
+/datum/job/submap/shiptesting/metastasis/salvager
 	title = "Salvage Vessel Salvager"
-	info = "You are a salvager of a Raven-class salvage vessel, profiting off the misfortune of others who came before you."
+	info = "You are a salvager of a Metastasis-class salvage vessel, profiting off the misfortune of others who came before you."
 	outfit_type = /decl/outfit/job/generic/engineer/johnson_technician
 	total_positions = 2
 	min_skill = list(
@@ -185,9 +178,9 @@
 		SKILL_ENGINES      = SKILL_MAX
 	)
 
-/datum/job/submap/shiptesting/raven/medic
+/datum/job/submap/shiptesting/metastasis/medic
 	title = "Salvage Vessel Medic"
-	info = "You are the medic of a Raven-class salvage vessel, profiting off the misfortune of others who came before you."
+	info = "You are the medic of a Metastasis-class salvage vessel, profiting off the misfortune of others who came before you."
 	selection_color = "#026865"
 	outfit_type = /decl/outfit/job/generic/doctor/johnson_medic
 	total_positions = 1
@@ -203,9 +196,9 @@
 		SKILL_CHEMISTRY = SKILL_MAX
 	)
 
-/datum/job/submap/shiptesting/raven/deck_hand
+/datum/job/submap/shiptesting/metastasis/deck_hand
 	title = "Salvage Vessel Deck Hand"
-	info = "You are a crew member of a Raven-class salvage vessel, profiting off the misfortune of others who came before you."
+	info = "You are a crew member of a Metastasis-class salvage vessel, profiting off the misfortune of others who came before you."
 	total_positions = 3
 	outfit_type = /decl/outfit/job/generic/johnson_mining
 	min_skill = list(
