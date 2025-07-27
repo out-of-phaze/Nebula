@@ -275,6 +275,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/salvor,
 /turf/floor/tiled,
 /area/metastasis/eva/starboard)
 "fF" = (
@@ -372,6 +373,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/medic,
 /turf/floor/tiled/white,
 /area/metastasis/medical)
 "gr" = (
@@ -566,6 +568,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/item/suit_cooling_unit,
 /turf/floor/tiled/dark,
 /area/metastasis/eva/starboard)
 "hN" = (
@@ -618,6 +621,7 @@
 /obj/effect/floor_decal/industrial/fire{
 	dir = 4
 	},
+/obj/item/suit_cooling_unit,
 /turf/floor/tiled/dark,
 /area/metastasis/damage_control)
 "jf" = (
@@ -636,13 +640,13 @@
 /obj/structure/hygiene/toilet{
 	dir = 1
 	},
-/obj/abstract/submap_landmark/spawnpoint/metastasis/deck_hand,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deckhand,
 /turf/floor/tiled/freezer,
 /area/metastasis/crew_quarters)
 "jC" = (
@@ -756,6 +760,11 @@
 /obj/machinery/airlock_sensor{
 	id_tag = "metastasis_aft_airlock_exterior_sensor";
 	pixel_y = 24
+	},
+/obj/machinery/airlock_sensor{
+	id_tag = "metastasis_cargo_exterior_sensor";
+	dir = 1;
+	pixel_y = -18
 	},
 /turf/floor/plating/airless,
 /area/metastasis/damage_control)
@@ -1172,6 +1181,7 @@
 	dir = 4
 	},
 /obj/structure/handrail,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deckhand,
 /turf/floor/tiled/white,
 /area/metastasis/medical)
 "qH" = (
@@ -1255,6 +1265,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 10
 	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deckhand,
 /turf/floor/tiled,
 /area/metastasis/damage_control)
 "rO" = (
@@ -1553,11 +1564,11 @@
 	dir = 4;
 	pixel_x = 20
 	},
-/obj/abstract/submap_landmark/spawnpoint/metastasis/pilot,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1;
 	scrubbing = "scrub"
 	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/captain,
 /turf/floor/tiled,
 /area/metastasis/dining)
 "vK" = (
@@ -1718,6 +1729,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deckhand,
 /turf/floor/plating,
 /area/metastasis/atmospherics)
 "xH" = (
@@ -1896,7 +1908,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/abstract/submap_landmark/spawnpoint/metastasis/salvager,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/medic,
 /turf/floor/tiled/white,
 /area/metastasis/dining)
 "AI" = (
@@ -2106,6 +2118,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/salvor,
 /turf/floor/tiled,
 /area/metastasis/eva/port)
 "DQ" = (
@@ -2474,6 +2487,7 @@
 	dir = 4
 	},
 /obj/item/box/greenglowsticks,
+/obj/item/suit_cooling_unit,
 /turf/floor/tiled/dark,
 /area/metastasis/eva/port)
 "Jc" = (
@@ -2572,7 +2586,7 @@
 	dir = 8;
 	pixel_x = 21
 	},
-/obj/abstract/submap_landmark/spawnpoint/metastasis/medic,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/pilot,
 /turf/floor/tiled,
 /area/metastasis/dining)
 "Kn" = (
@@ -2684,6 +2698,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/pilot,
 /turf/floor/tiled/techfloor,
 /area/metastasis/bridge)
 "LF" = (
@@ -2726,7 +2741,7 @@
 "Mq" = (
 /obj/structure/chair,
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/abstract/submap_landmark/spawnpoint/metastasis/salvager,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deckhand,
 /turf/floor/tiled/white,
 /area/metastasis/dining)
 "Mr" = (
@@ -2934,7 +2949,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/abstract/submap_landmark/spawnpoint/metastasis/deck_hand,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/salvor,
 /turf/floor/tiled/white,
 /area/metastasis/dining)
 "PS" = (
@@ -3346,6 +3361,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deckhand,
 /turf/floor/plating,
 /area/metastasis/electrical)
 "Wy" = (
@@ -3449,7 +3465,7 @@
 "Yd" = (
 /obj/structure/chair,
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/abstract/submap_landmark/spawnpoint/metastasis/deck_hand,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/salvor,
 /turf/floor/tiled/white,
 /area/metastasis/dining)
 "Ye" = (

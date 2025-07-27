@@ -100,10 +100,11 @@
 /decl/submap_archetype/spawnable_ship/metastasis
 	name = "Metastasis-class salvage vessel"
 	crew_jobs = list(
+		/datum/job/submap/shiptesting/metastasis/captain,
 		/datum/job/submap/shiptesting/metastasis/pilot,
 		/datum/job/submap/shiptesting/metastasis/medic,
-		/datum/job/submap/shiptesting/metastasis/salvager,
-		/datum/job/submap/shiptesting/metastasis/deck_hand,
+		/datum/job/submap/shiptesting/metastasis/salvor,
+		/datum/job/submap/shiptesting/metastasis/deckhand,
 	)
 	whitelisted_species = null
 	blacklisted_species = null
@@ -111,17 +112,20 @@
 /obj/abstract/submap_landmark/spawnpoint/metastasis
 	abstract_type = /obj/abstract/submap_landmark/spawnpoint/metastasis
 
+/obj/abstract/submap_landmark/spawnpoint/metastasis/captain
+	name = /datum/job/submap/shiptesting/metastasis/captain::title
+
 /obj/abstract/submap_landmark/spawnpoint/metastasis/pilot
 	name = /datum/job/submap/shiptesting/metastasis/pilot::title
 
-/obj/abstract/submap_landmark/spawnpoint/metastasis/salvager
-	name = /datum/job/submap/shiptesting/metastasis/salvager::title
+/obj/abstract/submap_landmark/spawnpoint/metastasis/salvor
+	name = /datum/job/submap/shiptesting/metastasis/salvor::title
 
 /obj/abstract/submap_landmark/spawnpoint/metastasis/medic
 	name = /datum/job/submap/shiptesting/metastasis/medic::title
 
-/obj/abstract/submap_landmark/spawnpoint/metastasis/deck_hand
-	name = /datum/job/submap/shiptesting/metastasis/deck_hand::title
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deckhand
+	name = /datum/job/submap/shiptesting/metastasis/deckhand::title
 
 
 /obj/abstract/submap_landmark/joinable_submap/spawnable_ship/metastasis
@@ -131,16 +135,47 @@
 
 /datum/job/submap/shiptesting/metastasis
 	abstract_type = /datum/job/submap/shiptesting/metastasis
+	supervisors = "the Captain"
 	skill_points = 25
 	no_skill_buffs = TRUE // stopgap for utility frames
 	whitelisted_species = null
 	blacklisted_species = null
 	selection_color = "#7f6e2c"
 
+// Captain.
+/datum/job/submap/shiptesting/metastasis/captain
+	title = "Salvage Vessel Captain"
+	info = "You are the captain of a Metastasis-class salvage vessel, captaining the ship and commanding its crew."
+	description = "You are the captain of a Metastasis-class salvage vessel, captaining the ship and commanding its crew."
+	supervisors = "your conscience and your bottom line"
+	outfit_type = /decl/outfit/job/generic/metastasis_captain
+	total_positions = 1
+	selection_color = "#1d1d4f"
+	min_skill = list(
+		SKILL_LITERACY     = SKILL_ADEPT,
+		SKILL_PILOT        = SKILL_BASIC,
+		SKILL_EVA          = SKILL_ADEPT,
+		SKILL_CONSTRUCTION = SKILL_BASIC,
+		SKILL_ELECTRICAL   = SKILL_BASIC,
+		SKILL_ATMOS        = SKILL_BASIC,
+		SKILL_COMPUTER     = SKILL_BASIC
+	)
+	max_skill = list(
+		SKILL_PILOT    = SKILL_MAX
+	)
+
+/decl/outfit/job/generic/metastasis_captain
+	name = "Job - Salvage vessel captain"
+	uniform = /obj/item/clothing/jumpsuit/blue
+	pda_type = /obj/item/modular_computer/pda/heads
+	id_type = /obj/item/card/id/civilian/head
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
+
 // Pilot.
 /datum/job/submap/shiptesting/metastasis/pilot
 	title = "Salvage Vessel Pilot"
-	info = "You are the pilot of a Metastasis-class salvage vessel, profiting off the misfortune of others who came before you."
+	info = "You are the pilot of a Metastasis-class salvage vessel, flying the vessel and ensuring it doesn't join the wrecks."
+	description = "You are the pilot of a Metastasis-class salvage vessel, flying the vessel and ensuring it doesn't join the wrecks."
 	outfit_type = /decl/outfit/job/generic/metastasis_pilot
 	total_positions = 1
 	min_skill = list(
@@ -155,34 +190,49 @@
 /decl/outfit/job/generic/metastasis_pilot
 	name = "Job - Salvage vessel pilot"
 	uniform = /obj/item/clothing/jumpsuit/pilot
+	shoes = /obj/item/clothing/shoes/jackboots
+	gloves = /obj/item/clothing/gloves/black
+	glasses = /obj/item/clothing/glasses/sunglasses
 	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
 
-// Salvager.
-/datum/job/submap/shiptesting/metastasis/salvager
-	title = "Salvage Vessel Salvager"
-	info = "You are a salvager of a Metastasis-class salvage vessel, profiting off the misfortune of others who came before you."
-	outfit_type = /decl/outfit/job/generic/engineer/johnson_technician
+// Salvor.
+/datum/job/submap/shiptesting/metastasis/salvor
+	title = "Salvage Vessel Salvor"
+	info = "You are a salvor of a Metastasis-class salvage vessel, exploring wrecks and ruins to profit off the misfortune of others who came before you."
+	description = "You are a salvor of a Metastasis-class salvage vessel, exploring wrecks and ruins to profit off the misfortune of others who came before you."
+	outfit_type = /decl/outfit/job/generic/engineer/metastasis_salvor
 	total_positions = 2
 	min_skill = list(
 		SKILL_LITERACY     = SKILL_BASIC,
 		SKILL_EVA          = SKILL_ADEPT,
+		SKILL_HAULING      = SKILL_BASIC,
 		SKILL_CONSTRUCTION = SKILL_BASIC,
 		SKILL_ELECTRICAL   = SKILL_BASIC,
 		SKILL_ATMOS        = SKILL_BASIC,
 		SKILL_COMPUTER     = SKILL_BASIC
 	)
 	max_skill = list(
-		SKILL_CONSTRUCTION = SKILL_MAX,
-		SKILL_ELECTRICAL   = SKILL_MAX,
-		SKILL_ATMOS        = SKILL_MAX,
-		SKILL_ENGINES      = SKILL_MAX
+		SKILL_CONSTRUCTION = SKILL_EXPERT,
+		SKILL_ELECTRICAL   = SKILL_EXPERT,
+		SKILL_ATMOS        = SKILL_EXPERT
 	)
 
+/decl/outfit/job/generic/engineer/metastasis_salvor
+	name = "Job - Salvage vessel salvor"
+	uniform = /obj/item/clothing/jumpsuit/work/heph
+	head = null
+	gloves = /obj/item/clothing/gloves/thick/duty
+	pda_type = /obj/item/modular_computer/pda/cargo
+	l_ear = /obj/item/radio/headset
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
+
+// Medic.
 /datum/job/submap/shiptesting/metastasis/medic
 	title = "Salvage Vessel Medic"
-	info = "You are the medic of a Metastasis-class salvage vessel, profiting off the misfortune of others who came before you."
+	info = "You are the medic of a Metastasis-class salvage vessel, providing care for your crew so that they do not become future loot for other salvors."
+	description = "You are the medic of a Metastasis-class salvage vessel, providing care for your crew so that they do not become future loot for other salvors."
 	selection_color = "#026865"
-	outfit_type = /decl/outfit/job/generic/doctor/johnson_medic
+	outfit_type = /decl/outfit/job/generic/doctor/metastasis_medic
 	total_positions = 1
 	skill_points = 32
 	min_skill = list(
@@ -196,11 +246,16 @@
 		SKILL_CHEMISTRY = SKILL_MAX
 	)
 
-/datum/job/submap/shiptesting/metastasis/deck_hand
-	title = "Salvage Vessel Deck Hand"
-	info = "You are a crew member of a Metastasis-class salvage vessel, profiting off the misfortune of others who came before you."
+/decl/outfit/job/generic/doctor/metastasis_medic
+	name = "Job - Salvage vessel medic"
+	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
+
+/datum/job/submap/shiptesting/metastasis/deckhand
+	title = "Salvage Vessel Deckhand"
+	info = "You are a crew member of a Metastasis-class salvage vessel, assigned to assist the rest of the crew with running the ship."
+	description = "You are a crew member of a Metastasis-class salvage vessel, assigned to assist the rest of the crew with running the ship."
 	total_positions = 3
-	outfit_type = /decl/outfit/job/generic/johnson_mining
+	outfit_type = /decl/outfit/job/generic/metastasis_deckhand
 	min_skill = list(
 		SKILL_LITERACY = SKILL_BASIC,
 		SKILL_HAULING  = SKILL_ADEPT,
@@ -210,127 +265,8 @@
 		SKILL_PILOT    = SKILL_MAX
 	)
 
-
-/*
-
-/datum/job/submap/shiptesting/johnson_pilot
-	title = "Mining Vessel Pilot"
-	info = "You are the pilot of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
-	total_positions = 1
-	outfit_type = /decl/outfit/job/generic/johnson_pilot
-	skill_points = 25
-	min_skill = list(
-		SKILL_LITERACY = SKILL_ADEPT,
-		SKILL_WEAPONS  = SKILL_ADEPT,
-		SKILL_PILOT    = SKILL_EXPERT
-	)
-	max_skill = list(
-		SKILL_PILOT   = SKILL_MAX,
-		SKILL_WEAPONS = SKILL_MAX
-	)
-	no_skill_buffs = TRUE // stopgap for utility frames
-	whitelisted_species = null
-	blacklisted_species = null
-	selection_color = "#1d1d4f"
-
-/datum/job/submap/shiptesting/johnson_technician
-	title = "Mining Vessel Technician"
-	info = "You are the maintenance technician of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
-	total_positions = 1
-	outfit_type = /decl/outfit/job/generic/engineer/johnson_technician
-	min_skill = list(
-		SKILL_LITERACY     = SKILL_BASIC,
-		SKILL_EVA          = SKILL_ADEPT,
-		SKILL_CONSTRUCTION = SKILL_BASIC,
-		SKILL_ELECTRICAL   = SKILL_BASIC,
-		SKILL_ATMOS        = SKILL_BASIC,
-		SKILL_COMPUTER     = SKILL_BASIC
-	)
-	max_skill = list(
-		SKILL_CONSTRUCTION = SKILL_MAX,
-		SKILL_ELECTRICAL   = SKILL_MAX,
-		SKILL_ATMOS        = SKILL_MAX,
-		SKILL_ENGINES      = SKILL_MAX
-	)
-	skill_points = 25
-	no_skill_buffs = TRUE // stopgap for utility frames
-	whitelisted_species = null
-	blacklisted_species = null
-	selection_color = "#7f6e2c"
-
-/datum/job/submap/shiptesting/johnson_crewman
-	title = "Mining Vessel Crewman"
-	info = "You are a crew member of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
-	total_positions = 3
-	outfit_type = /decl/outfit/job/generic/johnson_mining
-	alt_titles = list(
-		"Mining Vessel Drill Technician",
-		"Mining Vessel Prospector"
-	)
-	skill_points = 25
-	min_skill = list(
-		SKILL_LITERACY = SKILL_BASIC,
-		SKILL_HAULING  = SKILL_ADEPT,
-		SKILL_EVA      = SKILL_BASIC
-	)
-	max_skill = list(
-		SKILL_PILOT    = SKILL_MAX
-	)
-	no_skill_buffs = TRUE // stopgap for utility frames
-	whitelisted_species = null
-	blacklisted_species = null
-
-/datum/job/submap/shiptesting/johnson_medic
-	title = "Mining Vessel Medic"
-	info = "You are the medic of a Johnson-class deep space mining vessel, harvesting ore in the outer regions of explored space."
-	total_positions = 1
-	outfit_type = /decl/outfit/job/generic/doctor/johnson_medic
-	skill_points = 32
-	min_skill = list(
-		SKILL_LITERACY = SKILL_ADEPT,
-		SKILL_EVA      = SKILL_BASIC,
-		SKILL_MEDICAL  = SKILL_BASIC,
-		SKILL_ANATOMY  = SKILL_BASIC
-	)
-	max_skill = list(
-		SKILL_MEDICAL   = SKILL_MAX,
-		SKILL_CHEMISTRY = SKILL_MAX
-	)
-	no_skill_buffs = TRUE // stopgap for utility frames
-	whitelisted_species = null
-	blacklisted_species = null
-	selection_color = "#026865"
-
-/decl/outfit/job/generic/johnson_pilot
-	name = "Job - Mining vessel pilot"
-	uniform = /obj/item/clothing/jumpsuit/pilot
-	id_type = /obj/item/card/id/civilian/head
-	pda_type = /obj/item/modular_computer/pda/heads/captain
-	l_ear = null
+/decl/outfit/job/generic/metastasis_deckhand
+	name = "Job - Salvage vessel deckhand"
+	uniform = /obj/item/clothing/jumpsuit/work
+	suit = null
 	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
-
-/decl/outfit/job/generic/engineer/johnson_technician
-	name = "Job - Mining vessel technician"
-	uniform = /obj/item/clothing/jumpsuit/engineer
-	belt = /obj/item/belt/utility/full
-	l_ear = null
-	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
-
-/decl/outfit/job/generic/johnson_mining
-	name = "Job - Mining vessel shaft miner"
-	uniform = /obj/item/clothing/jumpsuit/miner
-	pda_type = /obj/item/modular_computer/pda/science
-	backpack_contents = list(/obj/item/crowbar = 1, /obj/item/ore = 1)
-	outfit_flags = (parent_type::outfit_flags | OUTFIT_EXTENDED_SURVIVAL) & ~OUTFIT_HAS_VITALS_SENSOR
-	l_ear = null
-
-/decl/outfit/job/generic/johnson_mining/Initialize()
-	. = ..()
-	BACKPACK_OVERRIDE_ENGINEERING
-
-/decl/outfit/job/generic/doctor/johnson_medic
-	name = "Job - Mining vessel medic"
-	l_ear = null
-	outfit_flags = parent_type::outfit_flags & ~OUTFIT_HAS_VITALS_SENSOR
-
-*/
