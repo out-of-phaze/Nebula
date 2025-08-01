@@ -10,18 +10,19 @@
 	dir = 8;
 	start_pressure = 30
 	},
+/obj/effect/floor_decal/industrial/outline,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "ao" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 10
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump"
+	id_tag = "metastasis_cargo_pump"
 	},
 /obj/structure/closet/crate,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "ap" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 1
@@ -30,11 +31,11 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 1
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "aE" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
@@ -43,17 +44,18 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
+	dir = 1;
+	scrubbing = "scrub"
 	},
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "aV" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/cyan,
 /turf/floor/tiled,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "bm" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 1
@@ -62,12 +64,12 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 1
 	},
-/obj/structure/closet/crate,
+/obj/structure/closet/crate/plastic,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "bD" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/cable{
@@ -82,7 +84,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
 "bQ" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -104,17 +106,17 @@
 	dir = 1
 	},
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "bZ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump";
+	id_tag = "metastasis_cargo_pump";
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 10
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "ca" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -125,11 +127,11 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	dir = 4
 	},
 /turf/floor/plating,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "cb" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/cable{
@@ -147,14 +149,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
 "ci" = (
 /obj/effect/floor_decal/spline/plain/grey,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump"
+	id_tag = "metastasis_cargo_pump"
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "cu" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/rack,
@@ -165,25 +167,37 @@
 	dir = 4
 	},
 /obj/item/wrench,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 29
+	},
+/obj/effect/floor_decal/industrial/fire{
+	dir = 4
+	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "dq" = (
 /obj/effect/floor_decal/spline/plain/grey,
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal"
+	id_tag = "metastasis_cargo_pump_out_internal"
 	},
-/obj/structure/closet/crate/med_crate,
+/obj/structure/closet/crate/medical,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "dB" = (
 /obj/structure/curtain/open/shower,
 /obj/structure/hygiene/shower{
 	pixel_y = 8
 	},
 /obj/machinery/light/small,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -21
+	},
+/obj/item/soap,
 /turf/floor/tiled/freezer,
-/area/raven/medical)
+/area/metastasis/crew_quarters)
 "dJ" = (
 /obj/machinery/computer/ship/sensors{
 	dir = 8
@@ -195,30 +209,36 @@
 	dir = 4
 	},
 /turf/floor/tiled/dark,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "et" = (
-/obj/machinery/computer/cryopod{
-	dir = 8;
-	pixel_x = 24
-	},
-/obj/item/crowbar/cheap,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 5
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
-/obj/structure/handrail,
-/turf/floor/tiled/white,
-/area/raven/medical)
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/bed/padded,
+/obj/item/bedsheet,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	scrubbing = "scrub"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/random/plush/carp,
+/turf/floor/tiled/dark,
+/area/metastasis/crew_quarters)
 "eF" = (
 /obj/effect/paint/silver,
 /turf/wall/prepainted,
-/area/raven/crew_quarters)
+/area/metastasis/crew_quarters)
 "eZ" = (
 /obj/effect/paint/silver,
 /turf/wall/r_wall/prepainted,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "fk" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -227,13 +247,13 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
 /turf/floor/tiled,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "fp" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
@@ -241,35 +261,26 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/machinery/door/airlock/atmos{
-	name = "Atmospherics"
+	name = "Atmospherics";
+	door_color = "#ffffff"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/floor/tiled/techfloor/grid,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "fD" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/button/access/interior{
-	dir = 1;
-	pixel_y = -22;
-	pixel_x = 10;
-	id_tag = "raven_starboard_airlock"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/salvor,
 /turf/floor/tiled,
-/area/raven/eva/starboard)
+/area/metastasis/eva/starboard)
 "fF" = (
 /obj/structure/cable{
 	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/glass/medical{
-	name = "Infirmary"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -277,8 +288,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/floor/tiled/techfloor/grid,
-/area/raven/medical)
+/obj/machinery/alarm{
+	pixel_y = 21
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/floor/tiled,
+/area/metastasis/crew_quarters)
 "fK" = (
 /obj/machinery/power/terminal{
 	dir = 1
@@ -299,11 +316,12 @@
 	dir = 6
 	},
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "fO" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan,
-/turf/floor/tiled,
-/area/raven/cargo_bay)
+/obj/effect/catwalk_plated,
+/turf/floor/plating,
+/area/metastasis/cargo_bay)
 "fQ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -314,21 +332,21 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	dir = 8
 	},
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "fX" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump";
+	id_tag = "metastasis_cargo_pump";
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 9
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "gb" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
@@ -337,29 +355,42 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/glass/civilian{
-	name = "Canteen"
+	name = "Canteen";
+	door_color = "#ffffff"
 	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/dining)
+/area/metastasis/dining)
 "ge" = (
 /obj/effect/paint/silver,
 /turf/wall/prepainted,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "gh" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
+	dir = 8;
+	scrubbing = "scrub"
 	},
-/turf/floor/tiled,
-/area/raven/crew_quarters)
+/obj/structure/chair/office/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/medic,
+/turf/floor/tiled/white,
+/area/metastasis/medical)
 "gr" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external/glass/bolted_open{
-	id_tag = "raven_cargo_inner"
+	id_tag = "metastasis_cargo_inner"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "gu" = (
 /obj/structure/rack,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -371,14 +402,14 @@
 	},
 /obj/item/scanner/price,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "gx" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
 	},
 /obj/machinery/atmospherics/binary/pump,
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "gF" = (
 /obj/machinery/light{
 	dir = 8
@@ -390,8 +421,24 @@
 	dir = 4;
 	start_pressure = 30
 	},
+/obj/effect/floor_decal/industrial/outline,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
+"gL" = (
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "metastasis_port_airlock_outer"
+	},
+/obj/machinery/button/access/exterior{
+	id_tag = "metastasis_port_airlock";
+	pixel_x = 20;
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	id_tag = "metastasis_port_airlock_pump_out_internal";
+	dir = 8
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/metastasis/eva/port)
 "gM" = (
 /obj/structure/table,
 /obj/item/stack/material/pane/mapped/rglass/twenty,
@@ -399,17 +446,18 @@
 /obj/item/stack/material/sheet/mapped/steel/fifty,
 /obj/item/stack/material/sheet/reinforced/mapped/fiberglass/twenty,
 /obj/item/stack/material/sheet/shiny/mapped/aluminium/fifty,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
 /obj/item/stack/material/rods/mapped/steel/twentyfive,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8;
+	scrubbing = "scrub"
+	},
 /turf/floor/tiled/dark,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "gV" = (
 /obj/effect/paint/silver,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/wall/prepainted,
-/area/raven/dining)
+/area/metastasis/dining)
 "hm" = (
 /obj/structure/rack,
 /obj/item/radio/intercom{
@@ -434,7 +482,7 @@
 /obj/item/airlock_brace,
 /obj/item/airlock_brace,
 /turf/floor/tiled/dark,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "hq" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -442,14 +490,14 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown"
+	id_tag = "metastasis_window_lockdown"
 	},
 /turf/floor/plating,
-/area/raven/eva/port)
+/area/metastasis/eva/port)
 "hu" = (
 /obj/effect/paint/silver,
 /turf/wall/r_wall/prepainted,
-/area/raven/medical)
+/area/metastasis/medical)
 "hz" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -458,21 +506,26 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/cyan,
-/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /obj/effect/catwalk_plated,
 /turf/floor/plating,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "hB" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "hF" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -480,8 +533,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 10
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/floor/tiled,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "hI" = (
 /obj/structure/rack,
 /obj/item/clothing/sensor/buddytag,
@@ -500,19 +559,22 @@
 /obj/machinery/button/access/interior{
 	dir = 4;
 	pixel_x = -20;
-	id_tag = "raven_cargo";
-	pixel_y = -8
+	id_tag = "metastasis_cargo"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /obj/item/box/greenglowsticks,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/item/suit_cooling_unit,
 /turf/floor/tiled/dark,
-/area/raven/eva/starboard)
+/area/metastasis/eva/starboard)
 "hN" = (
 /obj/effect/paint/red,
 /turf/wall/r_wall/prepainted,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "it" = (
 /obj/machinery/computer/ship/helm{
 	dir = 8
@@ -524,7 +586,7 @@
 	icon_state = "4-8"
 	},
 /turf/floor/tiled/dark,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "iP" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -540,7 +602,7 @@
 	initial_network_id = "metacomms"
 	},
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "iV" = (
 /obj/structure/rack,
 /obj/machinery/power/apc{
@@ -559,12 +621,13 @@
 /obj/effect/floor_decal/industrial/fire{
 	dir = 4
 	},
+/obj/item/suit_cooling_unit,
 /turf/floor/tiled/dark,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "jf" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/floor/tiled/white,
-/area/raven/medical)
+/area/metastasis/medical)
 "jt" = (
 /obj/structure/mirror{
 	dir = 8;
@@ -577,15 +640,34 @@
 /obj/structure/hygiene/toilet{
 	dir = 1
 	},
-/obj/abstract/submap_landmark/spawnpoint/raven/deck_hand,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deckhand,
 /turf/floor/tiled/freezer,
-/area/raven/medical)
+/area/metastasis/crew_quarters)
+"jC" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "metastasis_cargo_outer"
+	},
+/obj/machinery/button/access/exterior{
+	dir = 4;
+	pixel_x = -20;
+	id_tag = "metastasis_cargo"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/metastasis/cargo_bay)
+"jG" = (
+/obj/effect/paint/silver,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
+/turf/wall/r_wall/prepainted,
+/area/metastasis/eva/port)
 "jM" = (
 /obj/machinery/alarm/monitor{
 	dir = 8;
@@ -596,28 +678,28 @@
 	},
 /obj/structure/closet,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 4
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "jP" = (
 /obj/effect/floor_decal/spline/plain/grey,
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal"
+	id_tag = "metastasis_cargo_pump_out_internal"
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "jU" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 1
 	},
 /obj/machinery/door/airlock/external/bolted{
-	id_tag = "raven_cargo_outer"
+	id_tag = "metastasis_cargo_outer"
 	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "kc" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -632,10 +714,12 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/floor/tiled/dark,
-/area/raven/eva/starboard)
+/area/metastasis/eva/starboard)
 "kd" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Electrical"
+	name = "Electrical";
+	stripe_color = "#ffbf00";
+	door_color = "#ffffff"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -645,10 +729,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/floor/tiled/techfloor/grid,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "kh" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/item/roller,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -656,10 +738,14 @@
 	pixel_y = -22
 	},
 /obj/structure/cable,
-/obj/item/toolbox/mechanical,
-/obj/structure/table/glass,
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/bedsheetbin/mapped,
+/obj/structure/table,
+/obj/item/roller/ironingboard,
+/obj/item/ironingiron,
+/obj/item/box/detergent,
 /turf/floor/tiled/white,
-/area/raven/medical)
+/area/metastasis/crew_quarters)
 "kt" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -668,22 +754,39 @@
 	dir = 9
 	},
 /turf/floor/tiled,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
+"kv" = (
+/obj/abstract/exterior_marker/outside,
+/obj/machinery/airlock_sensor{
+	id_tag = "metastasis_aft_airlock_exterior_sensor";
+	pixel_y = 24
+	},
+/obj/machinery/airlock_sensor{
+	id_tag = "metastasis_cargo_exterior_sensor";
+	dir = 1;
+	pixel_y = -18
+	},
+/turf/floor/plating/airless,
+/area/metastasis/damage_control)
 "kI" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/floor/tiled,
-/area/raven/crew_quarters)
-"kX" = (
-/obj/machinery/cryopod{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 1
+/obj/machinery/sleeper/standard,
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/machinery/vending/wallmed1{
+	dir = 8;
+	pixel_x = 24
 	},
 /turf/floor/tiled/white,
-/area/raven/medical)
+/area/metastasis/medical)
+"kX" = (
+/obj/machinery/alarm{
+	pixel_y = 21
+	},
+/obj/structure/closet/secure_closet/personal/empty,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/metastasis/crew_quarters)
 "la" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -691,22 +794,17 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 4;
 	start_pressure = 30
 	},
 /turf/floor/tiled,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "lk" = (
 /obj/machinery/door/airlock/glass/civilian{
-	name = "Canteen"
+	name = "Canteen";
+	door_color = "#ffffff"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
@@ -715,9 +813,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/floor/tiled/techfloor/grid,
-/area/raven/dining)
+/area/metastasis/dining)
 "ll" = (
-/obj/effect/overmap/visitable/ship/landable/spawnable/raven,
+/obj/effect/overmap/visitable/ship/landable/spawnable/metastasis,
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
@@ -737,16 +835,15 @@
 	dir = 6
 	},
 /turf/floor/tiled/techfloor,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "lm" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/cyan,
-/obj/machinery/meter,
 /obj/effect/catwalk_plated,
 /turf/floor/plating,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "lv" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -758,17 +855,26 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/floor/tiled,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "lx" = (
-/obj/machinery/shipcomms/broadcaster,
 /obj/abstract/exterior_marker/outside,
 /obj/structure/sign/warning/docking_area{
 	dir = 8;
 	pixel_x = 32
 	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	id_tag = "metastasis_starboard_airlock_pump_out_external";
+	dir = 4
+	},
 /turf/floor/plating/airless,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "lA" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -779,13 +885,13 @@
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 9
 	},
-/obj/structure/closet/crate,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 8
 	},
+/obj/structure/closet/crate/freezer,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "lE" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -793,16 +899,11 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/cyan,
 /obj/effect/catwalk_plated,
+/obj/machinery/meter,
 /turf/floor/plating,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "lX" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -813,11 +914,11 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	dir = 8
 	},
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "mg" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -825,47 +926,49 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown"
+	id_tag = "metastasis_window_lockdown"
 	},
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "mH" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/turf/floor/tiled,
-/area/raven/crew_quarters)
+/obj/structure/iv_drip,
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/structure/hygiene/sink{
+	dir = 8;
+	pixel_x = -16
+	},
+/turf/floor/tiled/white,
+/area/metastasis/medical)
 "mN" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /obj/machinery/door/airlock/external/bolted{
-	id_tag = "raven_cargo_outer"
+	id_tag = "metastasis_cargo_outer"
 	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "nw" = (
-/obj/machinery/door/firedoor,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/effect/paint_stripe/white{
 	layer = 3
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/effect/wallframe_spawn/reinforced,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
 /turf/floor/plating,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "nA" = (
 /obj/machinery/door/airlock/external/glass/bolted_open{
-	id_tag = "raven_cargo_inner"
+	id_tag = "metastasis_cargo_inner"
 	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "nF" = (
 /obj/machinery/power/apc{
 	pixel_y = -22
@@ -873,7 +976,7 @@
 /obj/structure/cable,
 /obj/machinery/space_heater,
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "nQ" = (
 /obj/machinery/power/smes/buildable/preset{
 	_fully_charged = 1;
@@ -893,7 +996,7 @@
 	dir = 8
 	},
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "nT" = (
 /obj/structure/table,
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -912,14 +1015,26 @@
 	},
 /obj/effect/floor_decal/industrial/fire,
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
 "nU" = (
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -21
 	},
-/turf/floor/tiled,
-/area/raven/crew_quarters)
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/item/food/junk/liquidfood,
+/obj/item/food/junk/liquidfood,
+/obj/item/food/junk/liquidfood,
+/obj/item/food/junk/liquidfood,
+/obj/item/food/junk/liquidfood,
+/obj/item/food/junk/liquidfood,
+/obj/item/food/can/beans,
+/obj/structure/closet/crate/plastic/rations,
+/obj/item/knife/opener,
+/turf/floor/tiled/dark,
+/area/metastasis/medical)
 "oe" = (
 /obj/structure/table,
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -933,8 +1048,23 @@
 /obj/item/stack/material/cardstock/mapped/cardboard/fifteen,
 /obj/item/stack/material/segment/mapped/nutriment/fifteen,
 /obj/item/box/donkpockets,
+/obj/item/plate,
+/obj/item/plate,
+/obj/item/plate,
+/obj/item/plate,
+/obj/item/utensil/fork,
+/obj/item/utensil/fork,
+/obj/item/utensil/fork,
+/obj/item/utensil/fork,
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
+"oo" = (
+/obj/effect/paint/silver,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 4
+	},
+/turf/wall/r_wall/prepainted,
+/area/metastasis/damage_control)
 "ow" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10
@@ -944,7 +1074,7 @@
 	icon_state = "1-2"
 	},
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "oK" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -952,11 +1082,11 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	dir = 2
 	},
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "oR" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/port_gen/pacman,
@@ -966,13 +1096,27 @@
 	dir = 1
 	},
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "pi" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
+/obj/machinery/light/small{
+	dir = 4
 	},
-/turf/floor/tiled,
-/area/raven/crew_quarters)
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1;
+	scrubbing = "scrub"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/closet/emcloset,
+/turf/floor/tiled/dark,
+/area/metastasis/medical)
 "pj" = (
 /obj/machinery/suit_cycler/engineering/prepared,
 /obj/machinery/light/small{
@@ -983,7 +1127,7 @@
 	pixel_y = -21
 	},
 /turf/floor/tiled/dark,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "pu" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -995,8 +1139,12 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/floor/tiled,
-/area/raven/crew_quarters)
+/obj/structure/table/glass,
+/obj/item/roller,
+/obj/item/toolbox/mechanical,
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/turf/floor/tiled/white,
+/area/metastasis/medical)
 "py" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -1007,15 +1155,39 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	dir = 4
 	},
 /turf/floor/plating,
-/area/raven/bridge)
+/area/metastasis/bridge)
+"qG" = (
+/obj/item/crowbar/cheap,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/machinery/computer/cryopod{
+	pixel_y = 32
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	scrubbing = "scrub"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/handrail,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deckhand,
+/turf/floor/tiled/white,
+/area/metastasis/medical)
 "qH" = (
 /obj/effect/paint/silver,
 /turf/wall/prepainted,
-/area/raven/dining)
+/area/metastasis/dining)
 "qJ" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -1023,13 +1195,12 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	dir = 4
 	},
 /turf/floor/plating,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "rg" = (
-/obj/machinery/door/firedoor,
 /obj/effect/paint_stripe/white{
 	layer = 3
 	},
@@ -1037,11 +1208,14 @@
 	dir = 8
 	},
 /obj/effect/wallframe_spawn/reinforced,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
 /turf/floor/plating,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "ry" = (
 /obj/machinery/hologram/holopad/longrange/remoteship,
-/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/raven,
+/obj/abstract/submap_landmark/joinable_submap/spawnable_ship/metastasis,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -1052,7 +1226,7 @@
 	dir = 4
 	},
 /turf/floor/tiled/techfloor,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "rD" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/atmospherics/portables_connector,
@@ -1061,7 +1235,7 @@
 	dir = 4
 	},
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "rM" = (
 /obj/machinery/fabricator/replicator{
 	dir = 8
@@ -1070,11 +1244,11 @@
 	dir = 4
 	},
 /obj/machinery/dummy_airlock_controller{
-	id_tag = "raven_port_airlock";
+	id_tag = "metastasis_port_airlock";
 	pixel_y = 24
 	},
 /turf/floor/tiled/dark,
-/area/raven/dining)
+/area/metastasis/dining)
 "rN" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -1086,24 +1260,36 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/obj/machinery/atmospherics/pipe/simple/hidden{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deckhand,
 /turf/floor/tiled,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
+"rO" = (
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "metastasis_aft_airlock_outer"
+	},
+/obj/machinery/button/access/exterior{
+	dir = 1;
+	id_tag = "metastasis_aft_airlock";
+	pixel_y = -22
+	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	dir = 1;
+	id_tag = "metastasis_aft_airlock_pump_out_internal"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/metastasis/damage_control)
 "rP" = (
 /obj/effect/paint/silver,
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 8
 	},
 /turf/wall/prepainted,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "rS" = (
 /obj/structure/table,
 /obj/machinery/microwave{
@@ -1118,36 +1304,30 @@
 	pixel_y = 32
 	},
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
 "rX" = (
-/obj/abstract/docking_port_spawner/raven{
-	core_landmark_tag = "nav_raven";
-	docking_tag = "raven_dock_aft";
+/obj/abstract/docking_port_spawner/metastasis{
+	core_landmark_tag = "nav_metastasis";
+	docking_tag = "metastasis_dock_aft";
 	dir = 4;
 	port_name = "aft docking port"
 	},
 /turf/space,
 /area/space)
 "sf" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
-/obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 1
+	dir = 9
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 6
-	},
-/turf/floor/tiled/white,
-/area/raven/medical)
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/floor/tiled,
+/area/metastasis/crew_quarters)
 "sr" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -1156,32 +1336,32 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/button/access/interior{
-	dir = 4;
-	pixel_x = -20;
-	id_tag = "raven_aft_airlock";
-	pixel_y = -8
-	},
 /turf/floor/tiled,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "sy" = (
 /obj/effect/paint/silver,
 /turf/wall/prepainted,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "sI" = (
-/obj/machinery/firealarm{
+/obj/machinery/cryopod{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/alarm{
 	pixel_y = 21
 	},
-/turf/floor/tiled,
-/area/raven/crew_quarters)
+/turf/floor/tiled/white,
+/area/metastasis/medical)
 "sU" = (
 /obj/effect/paint/silver,
 /turf/wall/prepainted,
-/area/raven/eva/starboard)
+/area/metastasis/eva/starboard)
 "sZ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 4
@@ -1189,8 +1369,7 @@
 /obj/machinery/button/access/interior{
 	dir = 8;
 	pixel_x = 20;
-	id_tag = "raven_cargo";
-	pixel_y = 8
+	id_tag = "metastasis_cargo"
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -1202,7 +1381,7 @@
 	dir = 10
 	},
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "td" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/empty,
@@ -1214,11 +1393,11 @@
 	dir = 4
 	},
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "tf" = (
 /obj/effect/paint/silver,
 /turf/wall/r_wall/prepainted,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "tj" = (
 /obj/structure/closet/firecloset,
 /obj/machinery/power/apc{
@@ -1229,40 +1408,33 @@
 	icon_state = "0-2"
 	},
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "tm" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/button/access/interior{
 	dir = 4;
 	pixel_x = -20;
-	id_tag = "raven_cargo";
-	pixel_y = 8
+	id_tag = "metastasis_cargo"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "tn" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/effect/shuttle_landmark/ship/raven{
-	dir = 4
-	},
-/obj/effect/paint_stripe/white{
-	layer = 3
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/effect/shuttle_landmark/ship/metastasis{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/effect/wallframe_spawn/reinforced,
+/obj/effect/paint_stripe/white{
+	layer = 3
+	},
 /turf/floor/plating,
-/area/raven/dining)
+/area/metastasis/dining)
 "tw" = (
 /obj/machinery/shipsensors,
 /obj/structure/cable{
@@ -1270,30 +1442,36 @@
 	},
 /obj/abstract/exterior_marker/outside,
 /obj/machinery/airlock_sensor{
-	id_tag = "raven_cargo_exterior_sensor";
-	pixel_y = 24
+	id_tag = "metastasis_cargo_exterior_sensor";
+	dir = 4;
+	pixel_x = -22
 	},
 /obj/machinery/power/terminal{
 	dir = 1;
 	icon_state = "term-omni"
 	},
-/turf/floor/plating/airless,
-/area/raven/medical)
-"tz" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/machinery/sleeper/standard,
-/obj/machinery/vending/wallmed1{
-	dir = 8;
-	pixel_x = 24
+/obj/machinery/airlock_sensor{
+	id_tag = "metastasis_port_airlock_exterior_sensor";
+	pixel_y = 24
 	},
-/turf/floor/tiled/white,
-/area/raven/medical)
+/turf/floor/plating/airless,
+/area/metastasis/medical)
+"tz" = (
+/obj/structure/closet/wardrobe/black,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/floor/tiled,
+/area/metastasis/crew_quarters)
 "tC" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 4
 	},
 /turf/floor/plating/airless,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "tG" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger,
@@ -1305,7 +1483,7 @@
 	pixel_y = 8
 	},
 /turf/floor/tiled/dark,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "tP" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/air,
@@ -1314,7 +1492,7 @@
 	pixel_y = 32
 	},
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "tR" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 4
@@ -1323,14 +1501,14 @@
 	dir = 4
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "tW" = (
 /obj/machinery/light/small/red{
 	dir = 4
 	},
 /obj/machinery/recycler,
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "ud" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -1349,51 +1527,66 @@
 	dir = 4
 	},
 /turf/floor/tiled,
-/area/raven/eva/port)
+/area/metastasis/eva/port)
 "ux" = (
-/obj/machinery/door/airlock/freezer{
-	name = "Bathroom"
-	},
-/obj/machinery/door/firedoor,
+/obj/structure/door/plastic,
 /turf/floor/tiled/techfloor/grid,
-/area/raven/medical)
+/area/metastasis/crew_quarters)
 "uS" = (
 /obj/machinery/door/airlock/external/bolted{
-	id_tag = "raven_starboard_airlock_inner"
+	id_tag = "metastasis_starboard_airlock_inner"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/obj/machinery/button/access/interior{
+	dir = 4;
+	id_tag = "metastasis_starboard_airlock";
+	pixel_x = -20
+	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/eva/starboard)
+/area/metastasis/eva/starboard)
 "vc" = (
 /obj/effect/paint/silver,
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 1
 	},
 /turf/wall/r_wall/prepainted,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "vg" = (
 /obj/effect/paint/silver,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/wall/r_wall/prepainted,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "vl" = (
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 20
 	},
-/obj/abstract/submap_landmark/spawnpoint/raven/pilot,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1;
+	scrubbing = "scrub"
+	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/captain,
+/turf/floor/tiled,
+/area/metastasis/dining)
+"vK" = (
+/obj/effect/paint/silver,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 1
 	},
-/turf/floor/tiled,
-/area/raven/dining)
+/turf/wall/r_wall/prepainted,
+/area/metastasis/eva/starboard)
 "wi" = (
 /obj/abstract/exterior_marker/outside,
+/obj/machinery/airlock_sensor{
+	id_tag = "metastasis_starboard_airlock_exterior_sensor";
+	pixel_y = -18;
+	dir = 1
+	},
 /turf/floor/plating/airless,
-/area/raven/crew_quarters)
+/area/metastasis/crew_quarters)
 "wu" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -1401,12 +1594,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 6
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/floor/tiled,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "wv" = (
 /obj/effect/paint/silver,
 /turf/wall/r_wall/prepainted,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "wy" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/power/apc{
@@ -1423,7 +1622,7 @@
 /obj/item/folder/yellow,
 /obj/item/pen,
 /turf/floor/tiled/dark,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "wA" = (
 /obj/structure/handrail{
 	dir = 4
@@ -1432,115 +1631,150 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 8
 	},
 /obj/structure/closet/crate/internals,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "wM" = (
 /obj/structure/tank_rack/oxygen,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/button/access/interior{
 	dir = 8;
 	pixel_x = 20;
-	id_tag = "raven_cargo";
-	pixel_y = 8
+	id_tag = "metastasis_cargo"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "wS" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /turf/floor/tiled,
-/area/raven/crew_quarters)
+/area/metastasis/medical)
 "wU" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 10
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 8
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "xa" = (
 /obj/machinery/light/small/red{
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/airlock{
 	dir = 4;
-	id_tag = "raven_aft_airlock_pump"
+	id_tag = "metastasis_aft_airlock_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 1;
 	pixel_y = -22;
-	id_tag = "raven_aft_airlock";
-	tag_airpump = "raven_aft_airlock_pump";
-	tag_exterior_door = "raven_aft_airlock_outer";
-	tag_interior_door = "raven_aft_airlock_inner";
-	tag_chamber_sensor = "raven_aft_airlock_sensor";
-	name = "aft airlock controller"
+	id_tag = "metastasis_aft_airlock";
+	tag_airpump = "metastasis_aft_airlock_pump";
+	tag_exterior_door = "metastasis_aft_airlock_outer";
+	tag_interior_door = "metastasis_aft_airlock_inner";
+	tag_chamber_sensor = "metastasis_aft_airlock_sensor";
+	name = "aft airlock controller";
+	tag_pump_out_external = "metastasis_aft_airlock_pump_out_external";
+	tag_pump_out_internal = "metastasis_aft_airlock_pump_out_internal";
+	tag_interior_sensor = "metastasis_aft_airlock_interior_sensor";
+	tag_exterior_sensor = "metastasis_aft_airlock_exterior_sensor";
+	cycle_to_external_air = 1
 	},
-/obj/machinery/airlock_sensor{
-	id_tag = "raven_aft_airlock_sensor";
-	pixel_y = 24
+/obj/effect/floor_decal/industrial/danger/cee{
+	dir = 4
 	},
-/obj/effect/floor_decal/industrial/danger/full,
 /turf/floor/plating,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
+"xr" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 1
+	},
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "metastasis_cargo_outer"
+	},
+/obj/machinery/button/access/exterior{
+	dir = 4;
+	pixel_x = -20;
+	id_tag = "metastasis_cargo"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/metastasis/cargo_bay)
 "xy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deckhand,
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "xH" = (
 /obj/effect/paint/silver,
 /turf/wall/r_wall/prepainted,
-/area/raven/eva/starboard)
+/area/metastasis/eva/starboard)
 "xN" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 20
+/obj/machinery/alarm{
+	pixel_y = 21
 	},
-/obj/machinery/optable,
-/turf/floor/tiled/white,
-/area/raven/medical)
+/obj/structure/closet/secure_closet/personal/empty,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/floor/tiled/dark,
+/area/metastasis/crew_quarters)
 "yy" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 9
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 8
 	},
+/obj/item/flashlight/lamp/floodlamp{
+	dir = 4
+	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "zd" = (
-/obj/machinery/door/airlock/external/bolted{
-	id_tag = "raven_aft_airlock_outer"
+/obj/machinery/airlock_sensor{
+	id_tag = "metastasis_aft_airlock_sensor";
+	pixel_y = -18;
+	dir = 1
 	},
-/obj/machinery/button/access/exterior{
-	dir = 8;
-	pixel_x = -12;
-	id_tag = "raven_aft_airlock";
-	pixel_y = -24
+/obj/effect/floor_decal/industrial/danger/cee{
+	dir = 8
 	},
-/turf/floor/tiled/techfloor/grid,
-/area/raven/damage_control)
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	dir = 1;
+	id_tag = "metastasis_aft_airlock_pump_out_internal"
+	},
+/obj/structure/handrail,
+/turf/floor/plating,
+/area/metastasis/damage_control)
 "zf" = (
 /obj/structure/sign/warning/vacuum{
 	dir = 8;
@@ -1553,20 +1787,24 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 1
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "zj" = (
 /obj/machinery/door/airlock/external/bolted{
-	id_tag = "raven_aft_airlock_inner"
+	id_tag = "metastasis_aft_airlock_inner"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4
 	},
+/obj/machinery/button/access/interior{
+	id_tag = "metastasis_aft_airlock";
+	pixel_y = 24
+	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "zk" = (
 /obj/structure/cable,
 /obj/effect/floor_decal/spline/plain/grey{
@@ -1577,11 +1815,11 @@
 	pixel_x = -22
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 8
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "zw" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
@@ -1591,15 +1829,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/floor/tiled,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "zT" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/handrail{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1614,8 +1849,11 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
 	},
+/obj/machinery/firealarm{
+	pixel_y = 21
+	},
 /turf/floor/tiled,
-/area/raven/medical)
+/area/metastasis/crew_quarters)
 "Ac" = (
 /obj/machinery/computer/shuttle_control/explore{
 	dir = 8;
@@ -1627,11 +1865,12 @@
 	dir = 4
 	},
 /turf/floor/tiled/dark,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "Ai" = (
 /obj/abstract/exterior_marker/outside,
+/obj/machinery/shipcomms/receiver,
 /turf/floor/plating/airless,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Ak" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/cable{
@@ -1643,10 +1882,14 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
 "Ay" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -1655,26 +1898,29 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
+	dir = 4;
+	scrubbing = "scrub"
 	},
 /turf/floor/tiled,
-/area/raven/eva/port)
+/area/metastasis/eva/port)
 "AH" = (
 /obj/structure/chair{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/abstract/submap_landmark/spawnpoint/raven/salvager,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/medic,
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
 "AI" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/structure/chair/office/light,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
+	dir = 8;
+	scrubbing = "scrub"
 	},
-/turf/floor/tiled/white,
-/area/raven/medical)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/floor/tiled,
+/area/metastasis/crew_quarters)
 "AV" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -1682,26 +1928,33 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
 	dir = 1
 	},
-/turf/floor/tiled,
-/area/raven/cargo_bay)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/catwalk_plated,
+/turf/floor/plating,
+/area/metastasis/cargo_bay)
 "Bp" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 5
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/floor/tiled,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "Bs" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -1712,59 +1965,57 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	dir = 4
 	},
 /turf/floor/plating,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "BE" = (
 /obj/machinery/light/small/red{
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/airlock{
 	dir = 1;
-	id_tag = "raven_starboard_airlock_pump"
+	id_tag = "metastasis_starboard_airlock_pump"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 8;
-	id_tag = "raven_starboard_airlock";
+	id_tag = "metastasis_starboard_airlock";
 	pixel_x = 22;
-	tag_exterior_door = "raven_starboard_airlock_outer";
-	tag_interior_door = "raven_starboard_airlock_inner";
-	tag_chamber_sensor = "raven_starboard_airlock_sensor";
-	tag_airpump = "raven_starboard_airlock_pump";
-	name = "starboard airlock controller"
+	tag_exterior_door = "metastasis_starboard_airlock_outer";
+	tag_interior_door = "metastasis_starboard_airlock_inner";
+	tag_chamber_sensor = "metastasis_starboard_airlock_sensor";
+	tag_airpump = "metastasis_starboard_airlock_pump";
+	name = "starboard airlock controller";
+	tag_exterior_sensor = "metastasis_starboard_airlock_exterior_sensor";
+	tag_interior_sensor = "metastasis_starboard_airlock_interior_sensor";
+	tag_pump_out_external = "metastasis_starboard_airlock_pump_out_external";
+	tag_pump_out_internal = "metastasis_starboard_airlock_pump_out_internal";
+	cycle_to_external_air = 1
 	},
-/obj/machinery/airlock_sensor{
-	dir = 4;
-	pixel_x = -22;
-	id_tag = "raven_starboard_airlock_sensor"
+/obj/effect/floor_decal/industrial/danger/cee{
+	dir = 1
 	},
-/obj/effect/floor_decal/industrial/danger/full,
 /turf/floor/plating,
-/area/raven/eva/starboard)
+/area/metastasis/eva/starboard)
 "BJ" = (
 /obj/effect/paint/silver,
 /turf/wall/prepainted,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "Cc" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/structure/closet/medical_wall/filled{
-	pixel_y = 32
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white{
+	layer = 3
 	},
-/obj/item/firstaid/surgery,
-/obj/machinery/light/small{
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 4
 	},
-/obj/item/med_pouch/radiation,
-/obj/item/med_pouch/burn,
-/obj/item/med_pouch/oxyloss,
-/obj/structure/table/glass,
-/turf/floor/tiled/white,
-/area/raven/medical)
+/turf/floor/plating,
+/area/metastasis/dining)
 "Ch" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -1775,17 +2026,17 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/floor/tiled,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Cj" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump";
+	id_tag = "metastasis_cargo_pump";
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 8
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Dm" = (
 /obj/abstract/exterior_marker/outside,
 /obj/abstract/exterior_marker/outside,
@@ -1793,15 +2044,22 @@
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
-	id_tag = "raven_cargo_pump_out_external";
+	id_tag = "metastasis_cargo_pump_out_external";
 	dir = 4
 	},
 /turf/floor/plating/airless,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
+"Do" = (
+/obj/effect/paint/silver,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
+/turf/wall/r_wall/prepainted,
+/area/metastasis/damage_control)
 "Dq" = (
 /obj/effect/paint/silver,
 /turf/wall/r_wall/prepainted,
-/area/raven/eva/port)
+/area/metastasis/eva/port)
 "Dt" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -1811,14 +2069,22 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/floor/tiled,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "DE" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/glass/civilian,
+/obj/machinery/door/airlock/glass/civilian{
+	door_color = "#ffffff"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -1826,7 +2092,7 @@
 	dir = 4
 	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/eva/starboard)
+/area/metastasis/eva/starboard)
 "DK" = (
 /obj/abstract/exterior_marker/outside,
 /obj/structure/sign/warning/vent_port{
@@ -1834,11 +2100,11 @@
 	pixel_y = -32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
-	id_tag = "raven_cargo_pump_out_external";
+	id_tag = "metastasis_cargo_pump_out_external";
 	dir = 8
 	},
 /turf/floor/plating/airless,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "DN" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -1846,19 +2112,15 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/button/access/interior{
-	pixel_y = 22;
-	pixel_x = 10;
-	id_tag = "raven_port_airlock"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/salvor,
 /turf/floor/tiled,
-/area/raven/eva/port)
+/area/metastasis/eva/port)
 "DQ" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -1867,67 +2129,79 @@
 /obj/machinery/button/access/interior{
 	dir = 8;
 	pixel_x = 20;
-	id_tag = "raven_cargo";
-	pixel_y = -8
+	id_tag = "metastasis_cargo"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "Ep" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/fabricator,
 /turf/floor/tiled/dark,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "Ex" = (
 /obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
 	dir = 8;
 	pixel_x = 22;
-	id_tag = "raven_cargo";
-	tag_airpump = "raven_cargo_pump";
-	tag_chamber_sensor = "raven_cargo_sensor";
-	tag_exterior_door = "raven_cargo_outer";
-	tag_interior_door = "raven_cargo_inner";
-	tag_pump_out_internal = "raven_cargo_pump_out_internal";
-	tag_pump_out_external = "raven_cargo_pump_out_external";
+	id_tag = "metastasis_cargo";
+	tag_airpump = "metastasis_cargo_pump";
+	tag_chamber_sensor = "metastasis_cargo_sensor";
+	tag_exterior_door = "metastasis_cargo_outer";
+	tag_interior_door = "metastasis_cargo_inner";
+	tag_pump_out_internal = "metastasis_cargo_pump_out_internal";
+	tag_pump_out_external = "metastasis_cargo_pump_out_external";
 	tag_secure = 1;
-	tag_exterior_sensor = "raven_cargo_exterior_sensor";
+	tag_exterior_sensor = "metastasis_cargo_exterior_sensor";
 	name = "cargo bay airlock controller";
-	cycle_to_external_air = 1
+	cycle_to_external_air = 1;
+	tag_interior_sensor = "metastasis_cargo_interior_sensor"
 	},
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
+"ER" = (
+/obj/structure/closet/medical_wall/filled{
+	pixel_y = 32
+	},
+/obj/structure/table/glass,
+/obj/item/firstaid/surgery,
+/obj/item/med_pouch/radiation,
+/obj/item/med_pouch/burn,
+/obj/item/med_pouch/oxyloss,
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/effect/floor_decal/industrial/firstaid{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/floor/tiled/white,
+/area/metastasis/medical)
 "Fb" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
 	},
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "Fd" = (
 /obj/machinery/door/airlock/external/glass/bolted_open{
-	id_tag = "raven_cargo_inner"
+	id_tag = "metastasis_cargo_inner"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Fs" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -1941,12 +2215,24 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
 /turf/floor/tiled,
-/area/raven/eva/starboard)
+/area/metastasis/eva/starboard)
+"Fx" = (
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	id_tag = "metastasis_aft_airlock_pump_out_external"
+	},
+/obj/abstract/exterior_marker/outside,
+/obj/structure/sign/warning/vent_port{
+	pixel_y = 32
+	},
+/turf/floor/plating/airless,
+/area/metastasis/damage_control)
 "FA" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -1954,10 +2240,10 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown"
+	id_tag = "metastasis_window_lockdown"
 	},
 /turf/floor/plating,
-/area/raven/medical)
+/area/metastasis/crew_quarters)
 "FE" = (
 /obj/structure/handrail{
 	dir = 8
@@ -1967,11 +2253,11 @@
 	},
 /obj/structure/closet/crate,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 4
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "FL" = (
 /obj/structure/table,
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -1984,62 +2270,67 @@
 	pixel_y = -30
 	},
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
 "FN" = (
-/obj/machinery/shipcomms/receiver,
 /obj/abstract/exterior_marker/outside,
 /obj/structure/sign/warning/docking_area{
 	dir = 8;
 	pixel_x = 32
 	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	id_tag = "metastasis_port_airlock_pump_out_external";
+	dir = 4
+	},
 /turf/floor/plating/airless,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "FR" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan,
-/turf/floor/tiled,
-/area/raven/cargo_bay)
+/obj/effect/catwalk_plated,
+/turf/floor/plating,
+/area/metastasis/cargo_bay)
 "FU" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/button/access/interior{
 	dir = 4;
 	pixel_x = -20;
-	id_tag = "raven_cargo";
-	pixel_y = -8
+	id_tag = "metastasis_cargo"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Gs" = (
 /obj/abstract/exterior_marker/outside,
 /obj/structure/sign/warning/vent_port{
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
-	id_tag = "raven_cargo_pump_out_external";
+	id_tag = "metastasis_cargo_pump_out_external";
 	dir = 8
 	},
 /turf/floor/plating/airless,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "GC" = (
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 20
 	},
-/turf/floor/tiled,
-/area/raven/crew_quarters)
+/obj/machinery/optable,
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/turf/floor/tiled/white,
+/area/metastasis/medical)
 "GF" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
 "Hm" = (
 /obj/structure/chair/shuttle{
 	dir = 4
@@ -2048,21 +2339,24 @@
 	dir = 4
 	},
 /obj/machinery/network/requests_console{
-	pixel_y = 32
+	pixel_y = 32;
+	dir = 1
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	scrubbing = "scrub"
+	},
 /turf/floor/tiled/dark,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "HF" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump";
+	id_tag = "metastasis_cargo_pump";
 	dir = 4
 	},
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 5
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "HP" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
@@ -2081,7 +2375,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/floor/tiled,
-/area/raven/eva/port)
+/area/metastasis/eva/port)
 "HX" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/blueprints/shuttle,
@@ -2092,22 +2386,22 @@
 	},
 /obj/machinery/dummy_airlock_controller{
 	dir = 1;
-	id_tag = "raven_cargo";
+	id_tag = "metastasis_cargo";
 	pixel_y = -22
 	},
 /turf/floor/tiled/dark,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "Ib" = (
 /obj/effect/paint/silver,
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 4
 	},
 /turf/wall/prepainted,
-/area/raven/dining)
+/area/metastasis/dining)
 "Ii" = (
 /obj/effect/paint/silver,
 /turf/wall/r_wall/prepainted,
-/area/raven/crew_quarters)
+/area/metastasis/crew_quarters)
 "Iq" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -2115,11 +2409,11 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	dir = 2
 	},
 /turf/floor/plating,
-/area/raven/eva/starboard)
+/area/metastasis/eva/starboard)
 "Iv" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -2127,10 +2421,10 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown"
+	id_tag = "metastasis_window_lockdown"
 	},
 /turf/floor/plating,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "IH" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/radio_beacon,
@@ -2141,23 +2435,23 @@
 	},
 /obj/item/toolbox/emergency,
 /turf/floor/tiled/dark,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "II" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump";
+	id_tag = "metastasis_cargo_pump";
 	dir = 1
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "IQ" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 4
 	},
 /turf/floor/plating/airless,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "IT" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -2165,11 +2459,11 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	dir = 2
 	},
 /turf/floor/plating,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "IY" = (
 /obj/structure/rack,
 /obj/item/clothing/sensor/buddytag,
@@ -2187,46 +2481,33 @@
 /obj/machinery/button/access/interior{
 	dir = 4;
 	pixel_x = -20;
-	id_tag = "raven_cargo";
-	pixel_y = 8
+	id_tag = "metastasis_cargo"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /obj/item/box/greenglowsticks,
+/obj/item/suit_cooling_unit,
 /turf/floor/tiled/dark,
-/area/raven/eva/port)
+/area/metastasis/eva/port)
 "Jc" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4
 	},
-/obj/effect/catwalk_plated,
-/turf/floor/plating,
-/area/raven/cargo_bay)
+/turf/floor/tiled,
+/area/metastasis/cargo_bay)
 "Je" = (
 /obj/structure/table,
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/random/toy,
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
 "Jn" = (
 /obj/machinery/recharge_station,
 /obj/structure/cable{
@@ -2239,7 +2520,7 @@
 	icon_state = "2-8"
 	},
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "Jr" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -2251,15 +2532,26 @@
 	pixel_y = 21
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/airlock_sensor{
+	id_tag = "metastasis_aft_airlock_interior_sensor";
+	pixel_y = -18;
+	dir = 1
+	},
 /turf/floor/tiled/dark,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "Jt" = (
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 21
 	},
-/turf/floor/tiled,
-/area/raven/crew_quarters)
+/obj/structure/table/glass,
+/obj/item/belt/medical/emt,
+/obj/item/box/gloves{
+	pixel_y = 10
+	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/turf/floor/tiled/white,
+/area/metastasis/medical)
 "JI" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2273,7 +2565,12 @@
 	dir = 10
 	},
 /turf/floor/tiled,
-/area/raven/dining)
+/area/metastasis/dining)
+"JM" = (
+/obj/effect/paint/silver,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
+/turf/wall/r_wall/prepainted,
+/area/metastasis/eva/port)
 "Kh" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 8
@@ -2282,16 +2579,16 @@
 	dir = 4
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Kj" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 21
 	},
-/obj/abstract/submap_landmark/spawnpoint/raven/medic,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/pilot,
 /turf/floor/tiled,
-/area/raven/dining)
+/area/metastasis/dining)
 "Kn" = (
 /obj/structure/handrail{
 	dir = 8
@@ -2300,11 +2597,14 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 4
 	},
+/obj/item/flashlight/lamp/floodlamp{
+	dir = 8
+	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Kq" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -2322,7 +2622,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/floor/tiled/dark,
-/area/raven/eva/port)
+/area/metastasis/eva/port)
 "Kz" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/crate,
@@ -2331,18 +2631,49 @@
 	dir = 4
 	},
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "KB" = (
-/turf/floor/tiled,
-/area/raven/crew_quarters)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/civilian{
+	door_color = "#ffffff";
+	name = "Emergency Storage"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/metastasis/medical)
 "KS" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light/small{
 	dir = 8
 	},
 /obj/machinery/suit_cycler/engineering/prepared/salvage,
+/obj/machinery/airlock_sensor{
+	dir = 8;
+	id_tag = "metastasis_cargo_interior_sensor";
+	pixel_x = 22
+	},
+/obj/machinery/airlock_sensor{
+	id_tag = "metastasis_port_airlock_interior_sensor";
+	dir = 8;
+	pixel_x = 22
+	},
 /turf/floor/tiled/dark,
-/area/raven/eva/port)
+/area/metastasis/eva/port)
+"Lj" = (
+/obj/machinery/door/airlock/external/bolted{
+	id_tag = "metastasis_starboard_airlock_outer"
+	},
+/obj/machinery/button/access/exterior{
+	id_tag = "metastasis_starboard_airlock";
+	pixel_x = 20;
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	id_tag = "metastasis_starboard_airlock_pump_out_internal";
+	dir = 8
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/metastasis/eva/starboard)
 "Lp" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -2353,7 +2684,7 @@
 	dir = 8
 	},
 /turf/floor/plating,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "LD" = (
 /obj/structure/chair/shuttle{
 	dir = 4
@@ -2367,78 +2698,77 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/pilot,
 /turf/floor/tiled/techfloor,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "LF" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump";
+	id_tag = "metastasis_cargo_pump";
 	dir = 1
 	},
 /obj/structure/closet/crate,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "LU" = (
-/obj/machinery/door/airlock/glass/civilian{
-	name = "Cryogenics"
-	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/civilian{
+	door_color = "#ffffff";
+	name = "Cabin 1"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/floor/tiled/techfloor/grid,
-/area/raven/medical)
+/area/metastasis/crew_quarters)
 "Mm" = (
 /obj/structure/chair/shuttle{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/blue,
 /obj/machinery/button/blast_door{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	desc = "This opens the cargo bay doors.";
-	pixel_y = -32;
+	pixel_y = -30;
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/item/radio/intercom{
-	dir = 1;
-	pixel_y = -30
-	},
 /turf/floor/tiled/dark,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "Mq" = (
 /obj/structure/chair,
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/abstract/submap_landmark/spawnpoint/raven/salvager,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deckhand,
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
 "Mr" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/item/clothing/neck/stethoscope,
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 21
-	},
-/obj/item/box/gloves{
-	pixel_y = 10
-	},
-/obj/item/belt/medical/emt,
-/obj/structure/table/glass,
+/obj/machinery/washing_machine,
 /turf/floor/tiled/white,
-/area/raven/medical)
+/area/metastasis/crew_quarters)
 "Nc" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/closet/firecloset,
 /obj/machinery/button/access/interior{
 	dir = 8;
 	pixel_x = 20;
-	id_tag = "raven_cargo";
-	pixel_y = -8
+	id_tag = "metastasis_cargo"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
+"Ne" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/floor/tiled/white,
+/area/metastasis/dining)
 "Nn" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2447,7 +2777,6 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
@@ -2455,8 +2784,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/floor/tiled,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "Nt" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
@@ -2467,7 +2797,7 @@
 	},
 /obj/item/scanner/gas,
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "NJ" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2475,36 +2805,38 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
 	},
-/turf/floor/tiled,
-/area/raven/crew_quarters)
-"NO" = (
-/obj/machinery/button/access/exterior{
-	dir = 4;
-	pixel_x = -20;
-	id_tag = "raven_cargo"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -21
+	},
+/turf/floor/tiled,
+/area/metastasis/medical)
+"NO" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal"
+	id_tag = "metastasis_cargo_pump_out_internal"
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "NW" = (
 /obj/effect/paint/silver,
 /turf/wall/prepainted,
-/area/raven/medical)
+/area/metastasis/medical)
 "Oo" = (
 /obj/machinery/computer/ship/engines{
 	dir = 1
@@ -2522,15 +2854,20 @@
 	},
 /obj/effect/floor_decal/industrial/defective,
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "Oq" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light/small{
 	dir = 8
 	},
 /obj/machinery/suit_cycler/engineering/prepared/salvage,
+/obj/machinery/airlock_sensor{
+	id_tag = "metastasis_starboard_airlock_interior_sensor";
+	dir = 8;
+	pixel_x = 22
+	},
 /turf/floor/tiled/dark,
-/area/raven/eva/starboard)
+/area/metastasis/eva/starboard)
 "Ou" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel,
@@ -2539,45 +2876,50 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	dir = 8
 	},
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "OF" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 4
 	},
-/obj/structure/closet/crate,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4
 	},
+/obj/structure/closet/crate/radiation,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "OP" = (
-/obj/machinery/door/airlock/external/bolted{
-	id_tag = "raven_starboard_airlock_outer"
-	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/machinery/button/access/exterior{
-	id_tag = "raven_starboard_airlock";
-	pixel_y = -10;
-	pixel_x = 22
+/obj/effect/floor_decal/industrial/danger/cee,
+/obj/machinery/airlock_sensor{
+	dir = 8;
+	pixel_x = 22;
+	id_tag = "metastasis_starboard_airlock_sensor"
 	},
-/turf/floor/tiled/techfloor/grid,
-/area/raven/eva/starboard)
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	id_tag = "metastasis_starboard_airlock_pump_out_internal";
+	dir = 8
+	},
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/floor/plating,
+/area/metastasis/eva/starboard)
 "OQ" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 9
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump";
+	id_tag = "metastasis_cargo_pump";
 	dir = 1
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Ph" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -2596,20 +2938,20 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/floor/tiled,
-/area/raven/eva/starboard)
+/area/metastasis/eva/starboard)
 "PG" = (
 /obj/effect/paint/silver,
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /turf/wall/r_wall/prepainted,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "PQ" = (
 /obj/structure/chair{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/abstract/submap_landmark/spawnpoint/raven/deck_hand,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/salvor,
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
 "PS" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -2617,27 +2959,31 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	dir = 8
 	},
 /turf/floor/plating,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "Qm" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump";
+	id_tag = "metastasis_cargo_pump";
 	dir = 4
 	},
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 4
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Qy" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/floor/tiled,
-/area/raven/crew_quarters)
+/obj/machinery/computer/operating{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/turf/floor/tiled/white,
+/area/metastasis/medical)
 "QI" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -2645,11 +2991,11 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	dir = 2
 	},
 /turf/floor/plating,
-/area/raven/crew_quarters)
+/area/metastasis/medical)
 "QJ" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -2667,11 +3013,11 @@
 	dir = 4
 	},
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "QL" = (
 /obj/effect/paint/silver,
 /turf/wall/prepainted,
-/area/raven/eva/port)
+/area/metastasis/eva/port)
 "QT" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
@@ -2685,7 +3031,7 @@
 /obj/item/stack/cable_coil/yellow,
 /obj/item/cell,
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "RK" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -2696,14 +3042,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 6
-	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
 	},
-/turf/floor/tiled,
-/area/raven/crew_quarters)
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/structure/curtain/open/privacy,
+/turf/floor/tiled/white,
+/area/metastasis/medical)
 "RS" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
@@ -2714,17 +3062,22 @@
 	layer = 3
 	},
 /obj/machinery/door/blast/regular/open{
-	id_tag = "raven_window_lockdown";
+	id_tag = "metastasis_window_lockdown";
 	dir = 8
 	},
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
+"RT" = (
+/obj/abstract/exterior_marker/outside,
+/obj/machinery/shipcomms/broadcaster,
+/turf/floor/plating/airless,
+/area/metastasis/cargo_bay)
 "Sj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 5
 	},
 /turf/floor/tiled,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Su" = (
 /turf/space,
 /area/space)
@@ -2737,7 +3090,7 @@
 	dir = 4
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "SB" = (
 /obj/structure/table,
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -2745,18 +3098,12 @@
 	icon_state = "4-8"
 	},
 /obj/item/deck/cards,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
 "SH" = (
-/obj/abstract/docking_port_spawner/raven{
-	core_landmark_tag = "nav_raven";
-	docking_tag = "raven_dock_starboard";
+/obj/abstract/docking_port_spawner/metastasis{
+	core_landmark_tag = "nav_metastasis";
+	docking_tag = "metastasis_dock_starboard";
 	dir = 1;
 	port_name = "starboard docking port"
 	},
@@ -2766,19 +3113,13 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 8;
 	start_pressure = 30
 	},
 /turf/floor/tiled,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "SP" = (
 /obj/structure/rack,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -2787,48 +3128,55 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 4
 	},
-/turf/floor/tiled/dark,
-/area/raven/cargo_bay)
-"SX" = (
-/obj/machinery/button/access/exterior{
-	id_tag = "raven_cargo";
-	pixel_y = -10;
-	pixel_x = 22
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 29
 	},
+/obj/effect/floor_decal/industrial/fire{
+	dir = 4
+	},
+/turf/floor/tiled/dark,
+/area/metastasis/cargo_bay)
+"SX" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /obj/machinery/door/airlock/external/bolted{
-	id_tag = "raven_cargo_outer"
+	id_tag = "metastasis_cargo_outer"
+	},
+/obj/machinery/button/access/exterior{
+	dir = 8;
+	pixel_x = 20;
+	id_tag = "metastasis_cargo"
 	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Th" = (
 /obj/machinery/light/small/red{
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/airlock{
-	id_tag = "raven_port_airlock_pump"
+	id_tag = "metastasis_port_airlock_pump"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 8;
-	id_tag = "raven_port_airlock";
+	id_tag = "metastasis_port_airlock";
 	pixel_x = 22;
-	tag_exterior_door = "raven_port_airlock_outer";
-	tag_interior_door = "raven_port_airlock_inner";
-	tag_airpump = "raven_port_airlock_pump";
-	tag_chamber_sensor = "raven_port_airlock_sensor";
-	name = "port airlock controller"
+	tag_exterior_door = "metastasis_port_airlock_outer";
+	tag_interior_door = "metastasis_port_airlock_inner";
+	tag_airpump = "metastasis_port_airlock_pump";
+	tag_chamber_sensor = "metastasis_port_airlock_sensor";
+	name = "port airlock controller";
+	tag_pump_out_internal = "metastasis_port_airlock_pump_out_internal";
+	tag_exterior_sensor = "metastasis_port_airlock_exterior_sensor";
+	tag_pump_out_external = "metastasis_port_airlock_pump_out_external";
+	tag_interior_sensor = "metastasis_port_airlock_interior_sensor";
+	cycle_to_external_air = 1
 	},
-/obj/machinery/airlock_sensor{
-	dir = 4;
-	pixel_x = -22;
-	id_tag = "raven_port_airlock_sensor"
-	},
-/obj/effect/floor_decal/industrial/danger/full,
+/obj/effect/floor_decal/industrial/danger/cee,
 /turf/floor/plating,
-/area/raven/eva/port)
+/area/metastasis/eva/port)
 "Tl" = (
 /obj/abstract/exterior_marker/outside,
 /obj/structure/sign/warning/vent_port{
@@ -2836,20 +3184,34 @@
 	pixel_y = -32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
-	id_tag = "raven_cargo_pump_out_external";
+	id_tag = "metastasis_cargo_pump_out_external";
 	dir = 4
 	},
 /turf/floor/plating/airless,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
+"Tn" = (
+/obj/effect/floor_decal/spline/plain/grey{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "metastasis_cargo_pump_out_internal";
+	dir = 1
+	},
+/obj/structure/closet/crate/hydroponics,
+/turf/floor/tiled/dark,
+/area/metastasis/cargo_bay)
 "Tu" = (
 /obj/effect/paint/silver,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/wall/prepainted,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Ty" = (
 /obj/effect/paint/red,
 /turf/wall/r_wall/prepainted,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "TH" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -2858,20 +3220,27 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4;
+	scrubbing = "scrub"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /turf/floor/tiled,
-/area/raven/eva/starboard)
+/area/metastasis/eva/starboard)
 "TM" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump";
+	id_tag = "metastasis_cargo_pump";
 	dir = 4
 	},
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 6
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "TN" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -2881,11 +3250,11 @@
 	},
 /obj/machinery/dummy_airlock_controller{
 	dir = 1;
-	id_tag = "raven_starboard_airlock";
+	id_tag = "metastasis_starboard_airlock";
 	pixel_y = -22
 	},
 /turf/floor/tiled/dark,
-/area/raven/dining)
+/area/metastasis/dining)
 "TS" = (
 /obj/structure/rack,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -2897,11 +3266,11 @@
 	dir = 8
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Ul" = (
-/obj/abstract/docking_port_spawner/raven{
-	core_landmark_tag = "nav_raven";
-	docking_tag = "raven_dock_port";
+/obj/abstract/docking_port_spawner/metastasis{
+	core_landmark_tag = "nav_metastasis";
+	docking_tag = "metastasis_dock_port";
 	port_name = "port docking port"
 	},
 /turf/space,
@@ -2912,36 +3281,30 @@
 	dir = 1
 	},
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "UX" = (
 /obj/machinery/airlock_sensor{
 	dir = 4;
-	id_tag = "raven_cargo_sensor";
+	id_tag = "metastasis_cargo_sensor";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 8
 	},
-/obj/structure/closet/crate,
+/obj/structure/closet/crate/plastic,
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Vf" = (
 /obj/effect/paint/silver,
 /turf/wall/prepainted,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "Vk" = (
 /obj/structure/cable{
 	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 8
@@ -2950,40 +3313,41 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 10
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4,
-/obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/floor/tiled,
-/area/raven/medical)
+/area/metastasis/crew_quarters)
 "VM" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/firedoor,
-/obj/effect/paint_stripe/white{
-	layer = 3
+/obj/effect/paint/silver,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
-	dir = 4
-	},
-/turf/floor/plating,
-/area/raven/dining)
+/turf/wall/r_wall/prepainted,
+/area/metastasis/eva/starboard)
 "VU" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/machinery/computer/operating,
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/floor/tiled/white,
-/area/raven/medical)
+/obj/structure/bed/padded,
+/obj/item/bedsheet,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	scrubbing = "scrub"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/random/plush/cat,
+/turf/floor/tiled/dark,
+/area/metastasis/crew_quarters)
 "VV" = (
 /obj/effect/paint/silver,
 /turf/wall/prepainted,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "Wi" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -2997,18 +3361,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/abstract/submap_landmark/spawnpoint/metastasis/deckhand,
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "Wy" = (
 /obj/effect/paint/silver,
 /turf/wall/r_wall/prepainted,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "Wz" = (
-/obj/machinery/button/access/exterior{
-	dir = 4;
-	pixel_x = -20;
-	id_tag = "raven_cargo"
-	},
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 9
 	},
@@ -3016,91 +3376,98 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 1
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "WH" = (
-/obj/machinery/button/access/exterior{
-	id_tag = "raven_cargo";
-	pixel_y = 11;
-	pixel_x = 22;
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 1
 	},
 /obj/machinery/door/airlock/external/bolted{
-	id_tag = "raven_cargo_outer"
+	id_tag = "metastasis_cargo_outer"
+	},
+/obj/machinery/button/access/exterior{
+	dir = 8;
+	pixel_x = 20;
+	id_tag = "metastasis_cargo"
 	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "WP" = (
 /obj/structure/table,
 /obj/item/cell,
 /obj/machinery/cell_charger,
+/obj/item/cell,
+/obj/item/cell,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/item/cell,
-/obj/item/cell,
 /turf/floor/tiled/dark,
-/area/raven/damage_control)
+/area/metastasis/damage_control)
 "WY" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
 	},
 /obj/machinery/atmospherics/binary/pump,
 /turf/floor/plating,
-/area/raven/atmospherics)
+/area/metastasis/atmospherics)
 "Xe" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 6
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal";
+	id_tag = "metastasis_cargo_pump_out_internal";
 	dir = 4
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "Xw" = (
-/obj/machinery/door/airlock/external/bolted{
-	id_tag = "raven_port_airlock_outer"
-	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/machinery/button/access/exterior{
-	id_tag = "raven_port_airlock";
-	pixel_y = 11;
+/obj/machinery/atmospherics/unary/vent_pump/airlock{
+	id_tag = "metastasis_port_airlock_pump_out_internal";
+	dir = 8
+	},
+/obj/machinery/airlock_sensor{
+	dir = 8;
 	pixel_x = 22;
+	id_tag = "metastasis_port_airlock_sensor"
+	},
+/obj/effect/floor_decal/industrial/danger/cee{
 	dir = 1
 	},
-/turf/floor/tiled/techfloor/grid,
-/area/raven/eva/port)
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/floor/plating,
+/area/metastasis/eva/port)
 "XA" = (
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 6
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump"
+	id_tag = "metastasis_cargo_pump"
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "XI" = (
-/obj/machinery/light/small{
-	dir = 4
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Cryogenics";
+	door_color = "#ffffff"
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/floor/tiled,
-/area/raven/crew_quarters)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/floor/tiled/techfloor/grid,
+/area/metastasis/medical)
 "Yd" = (
 /obj/structure/chair,
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/abstract/submap_landmark/spawnpoint/raven/deck_hand,
+/obj/abstract/submap_landmark/spawnpoint/metastasis/salvor,
 /turf/floor/tiled/white,
-/area/raven/dining)
+/area/metastasis/dining)
 "Ye" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -3111,14 +3478,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/floor/plating,
-/area/raven/electrical)
+/area/metastasis/electrical)
 "YS" = (
 /obj/structure/sign/warning/vacuum{
 	dir = 8;
@@ -3129,13 +3492,15 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "raven_cargo_pump_out_internal"
+	id_tag = "metastasis_cargo_pump_out_internal"
 	},
 /turf/floor/tiled/dark,
-/area/raven/cargo_bay)
+/area/metastasis/cargo_bay)
 "YU" = (
 /obj/machinery/door/airlock/command{
-	name = "Bridge"
+	name = "Bridge";
+	stripe_color = "#46698c";
+	door_color = "#ffffff"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
@@ -3148,9 +3513,12 @@
 	dir = 4
 	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/bridge)
+/area/metastasis/bridge)
 "Zx" = (
-/obj/machinery/door/airlock/glass/civilian,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Crew Quarters";
+	door_color = "#ffffff"
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -3162,41 +3530,48 @@
 	dir = 4
 	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/eva/port)
+/area/metastasis/eva/port)
 "ZI" = (
 /obj/machinery/door/airlock/external/bolted{
-	id_tag = "raven_port_airlock_inner"
+	id_tag = "metastasis_port_airlock_inner"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/obj/machinery/button/access/interior{
+	id_tag = "metastasis_port_airlock";
+	dir = 4;
+	pixel_x = -20
+	},
 /turf/floor/tiled/techfloor/grid,
-/area/raven/eva/port)
+/area/metastasis/eva/port)
 "ZU" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/civilian,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/floor/tiled/techfloor/grid,
-/area/raven/crew_quarters)
-"ZY" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/structure/hygiene/sink{
-	dir = 8;
-	pixel_x = -16
+/obj/machinery/door/airlock/glass/medical{
+	name = "Infirmary"
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/iv_drip,
-/turf/floor/tiled/white,
-/area/raven/medical)
+/turf/floor/tiled/techfloor/grid,
+/area/metastasis/medical)
+"ZY" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/civilian{
+	door_color = "#ffffff";
+	name = "Cabin 2"
+	},
+/turf/floor/tiled/techfloor/grid,
+/area/metastasis/crew_quarters)
 
 (1,1,1) = {"
 Su
@@ -5289,7 +5664,7 @@ Ty
 Su
 Su
 Su
-Su
+rX
 Su
 Su
 Su
@@ -5370,9 +5745,9 @@ Ou
 eZ
 eZ
 Su
-Su
-rX
-Su
+Do
+rO
+wv
 Su
 Wy
 Wy
@@ -5451,11 +5826,11 @@ gx
 Nt
 Oo
 eZ
-Su
-wv
+Fx
+oo
 zd
 wv
-Su
+kv
 Wy
 nQ
 fK
@@ -5707,7 +6082,7 @@ DQ
 Ye
 tW
 oK
-Ai
+RT
 Su
 Su
 Su
@@ -5937,7 +6312,7 @@ Su
 Su
 Su
 Su
-jU
+xr
 Wz
 ao
 Sj
@@ -5953,7 +6328,7 @@ wU
 wu
 OQ
 NO
-mN
+jC
 Su
 Su
 Su
@@ -6102,7 +6477,7 @@ Su
 Su
 Su
 jU
-bm
+Tn
 ci
 lm
 aV
@@ -6354,9 +6729,9 @@ Ch
 SP
 gV
 Ib
-VM
+Cc
 tn
-VM
+Cc
 Ib
 gV
 cu
@@ -6592,15 +6967,15 @@ Su
 Su
 Su
 Su
-Su
-Dq
+jG
+JM
 Dq
 QL
 DN
 ud
 lk
 cb
-GF
+Ne
 Ak
 GF
 bD
@@ -6609,8 +6984,8 @@ Fs
 fD
 sU
 xH
-xH
-Su
+vK
+VM
 Su
 Su
 Su
@@ -6673,8 +7048,8 @@ Su
 Su
 Su
 Su
-Su
 Ul
+gL
 Xw
 Th
 ZI
@@ -6692,8 +7067,8 @@ Ph
 uS
 BE
 OP
+Lj
 SH
-Su
 Su
 Su
 Su
@@ -6756,7 +7131,7 @@ Su
 Su
 Su
 Su
-Su
+Dq
 Dq
 QL
 QL
@@ -6774,7 +7149,7 @@ DE
 sU
 sU
 xH
-Su
+xH
 Su
 Su
 Su
@@ -6839,11 +7214,11 @@ Su
 Su
 Su
 Su
-hu
+Ii
 kX
-NW
+eF
 zT
-NW
+eF
 dB
 VV
 wy
@@ -6851,11 +7226,11 @@ ll
 HX
 VV
 sI
-KB
+NW
 NJ
-pi
+NW
 nU
-Ii
+hu
 Su
 Su
 Su
@@ -6932,11 +7307,11 @@ tG
 ry
 IH
 VV
-KB
+qG
 XI
 wS
 KB
-kI
+pi
 QI
 Su
 Su
@@ -7003,23 +7378,23 @@ Su
 Su
 Su
 Su
-hu
-NW
-NW
+Ii
+eF
+eF
 fF
-NW
-NW
+eF
+eF
 VV
 Hm
 LD
 Mm
 VV
-eF
-eF
+NW
+NW
 ZU
-eF
-eF
-Ii
+NW
+NW
+hu
 Su
 Su
 Su
@@ -7090,13 +7465,13 @@ VU
 ZY
 sf
 kh
-hu
+Ii
 Iv
 dJ
 it
 Ac
 IT
-Ii
+hu
 pu
 RK
 mH
@@ -7167,23 +7542,23 @@ Su
 Su
 Su
 Su
-hu
+Ii
 xN
-jf
+eF
 AI
 Mr
-hu
+Ii
 ca
 Bs
 py
 qJ
 qJ
-Ii
+hu
 Jt
 gh
-KB
+jf
 GC
-Ii
+hu
 Su
 Su
 Su
@@ -7249,23 +7624,23 @@ Su
 Su
 Su
 Su
-hu
-hu
-Cc
+Ii
+Ii
+eF
 tz
-hu
-hu
+Ii
+Ii
 tw
 Su
 Su
 Su
 wi
-Ii
-Ii
-KB
+hu
+hu
+ER
 kI
-Ii
-Ii
+hu
+hu
 Su
 Su
 Su
@@ -7332,21 +7707,21 @@ Su
 Su
 Su
 Su
-hu
-hu
-hu
-hu
-Su
-Su
-Su
-Su
-Su
-Su
-Su
 Ii
 Ii
 Ii
 Ii
+Su
+Su
+Su
+Su
+Su
+Su
+Su
+hu
+hu
+hu
+hu
 Su
 Su
 Su
