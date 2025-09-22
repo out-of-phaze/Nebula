@@ -49,7 +49,6 @@
 	var/list/children                  // Sub-limbs.
 	var/list/internal_organs           // Internal organs of this body part
 	var/list/implants                  // Currently implanted objects.
-	var/base_miss_chance = 20          // Chance of missing.
 	var/genetic_degradation = 0        // Amount of current genetic damage.
 
 	//Forensics stuff
@@ -112,7 +111,7 @@
 		fingerprint.completeness = rand(10,90)
 		forensics.add_data(/datum/forensics/fingerprints, fingerprint)
 
-/obj/item/organ/external/Initialize(mapload, material_key, datum/mob_snapshot/supplied_appearance, decl/bodytype/new_bodytype)
+/obj/item/organ/external/Initialize(mapload, material_key, datum/mob_snapshot/supplied_appearance)
 	. = ..()
 	if(. != INITIALIZE_HINT_QDEL && isnull(pain_disability_threshold))
 		pain_disability_threshold = (max_damage * 0.75)
@@ -135,7 +134,7 @@
 	if(owner)
 		LAZYREMOVE(owner.bad_external_organs, src)
 
-/obj/item/organ/external/set_species(specie_name)
+/obj/item/organ/external/set_species(species_uid)
 	_icon_cache_key = null
 	. = ..()
 	skin_blend = bodytype.limb_blend
@@ -1087,9 +1086,19 @@ Note that amputating the affected organ does in fact remove the infection from t
 	if(!clean)
 		owner.shock_stage += min_broken_damage
 
-	var/obj/item/organ/external/original_parent = parent
 	var/mob/living/human/victim = owner //Keep a reference for post-removed().
+	var/obj/item/organ/external/original_parent = parent
 	owner.remove_organ(src, TRUE, FALSE, ignore_children, update_icon = FALSE)
+	if(original_parent)
+		// Traumatic amputation is messy.
+		if(!clean && disintegrate != DISMEMBER_METHOD_BURN)
+			original_parent.sever_artery()
+		// Leave a big ol hole.
+		var/datum/wound/lost_limb/stump = new(src, disintegrate, clean)
+		stump.parent_organ = original_parent
+		LAZYADD(original_parent.wounds, stump)
+		original_parent.update_damages()
+
 	var/remaining_organs = victim.get_external_organs()
 	if(istype(victim) && !QDELETED(victim))
 		// If they are down to their last organ, just spawn the organ and delete them.
@@ -1101,20 +1110,9 @@ Note that amputating the affected organ does in fact remove the infection from t
 			victim.dump_contents()
 			qdel(victim)
 		else // We deliberately skip queuing this via remove_organ() above due to potentially immediately deleting the mob.
+			victim.update_damage_overlays(FALSE)
 			victim.regenerate_body_icon = TRUE
 			victim.queue_icon_update()
-
-	if(original_parent)
-
-		// Traumatic amputation is messy.
-		if(!clean && disintegrate != DISMEMBER_METHOD_BURN)
-			original_parent.sever_artery()
-
-		// Leave a big ol hole.
-		var/datum/wound/lost_limb/stump = new(src, disintegrate, clean)
-		stump.parent_organ = original_parent
-		LAZYADD(original_parent.wounds, stump)
-		original_parent.update_damages()
 
 	if(QDELETED(src))
 		return

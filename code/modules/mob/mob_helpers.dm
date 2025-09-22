@@ -201,14 +201,14 @@ var/global/list/global/organ_rel_size = list(
 /proc/Gibberish(t, p)//t is the inputted message, and any value higher than 70 for p will cause letters to be replaced instead of added
 	/* Turn text into complete gibberish! */
 	var/returntext = ""
-	for(var/i = 1, i <= length_char(t), i++)
+	for(var/i in 1 to length_char(t))
 
 		var/letter = copytext_char(t, i, i+1)
 		if(prob(50))
 			if(p >= 70)
 				letter = ""
 
-			for(var/j = 1, j <= rand(0, 2), j++)
+			for(var/j in 1 to rand(0, 2))
 				letter += pick("#","@","*","&","%","$","/", "<", ">", ";","*","*","*","*","*","*","*")
 
 		returntext += letter
@@ -352,7 +352,7 @@ var/global/list/global/organ_rel_size = list(
 		if(istype(belt, /obj/item/gun) || istype(belt, /obj/item/energy_blade) || istype(belt, /obj/item/baton))
 			threatcount += 2
 
-		if(get_species_name() != global.using_map.default_species)
+		if(get_species()?.uid != global.using_map.default_species)
 			threatcount += 2
 
 	if(check_records || check_arrest)

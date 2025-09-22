@@ -6,6 +6,7 @@
 	cooking_category   = RECIPE_CATEGORY_POT
 	presentation_flags = PRESENTATION_FLAG_NAME
 	obj_flags          = OBJ_FLAG_HOLLOW | OBJ_FLAG_INSULATED_HANDLE
+	work_sound = 'sound/effects/boiling-water.ogg'
 	var/last_boil_status
 	var/last_boil_temp
 
@@ -25,16 +26,19 @@
 	. = ..()
 
 /obj/item/chems/cooking_vessel/pot/ProcessAtomTemperature()
+	var/prior_temperature = temperature
 	. = ..()
+	// to avoid issues with it cooling down in ..() and reheating the same tick, we use the highest of the two
+	// todo: just prevent the cooling instead, for a less-hacky solution
+	var/use_temperature = max(temperature, prior_temperature)
 
 	// Largely ignore return value so we don't skip this update on the final time we temperature process.
-	if(temperature != last_boil_temp)
+	if(use_temperature != last_boil_temp)
 
-		last_boil_temp = temperature
+		last_boil_temp = use_temperature
 		var/next_boil_status = FALSE
-		for(var/reagent_type in reagents?.reagent_volumes)
-			var/decl/material/reagent = GET_DECL(reagent_type)
-			if(!isnull(reagent.boiling_point) && temperature >= reagent.boiling_point)
+		for(var/decl/material/reagent as anything in reagents?.reagent_volumes)
+			if(!isnull(reagent.boiling_point) && use_temperature >= reagent.boiling_point)
 				next_boil_status = TRUE
 				break
 

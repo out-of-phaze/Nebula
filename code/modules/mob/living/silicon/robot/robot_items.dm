@@ -80,7 +80,7 @@
 //This is used to unlock other borg covers.
 /obj/item/card/robot //This is not a child of id cards, as to avoid dumb typechecks on computers.
 	name = "access code transmission device"
-	icon_state = "robot_base"
+	icon_state = "emag"
 	desc = "A circuit grafted onto the bottom of an ID card.  It is used to transmit access codes into other robot chassis, \
 	allowing you to lock and unlock other robots' panels."
 
@@ -192,7 +192,7 @@
 /obj/item/borg/combat/shield
 	name = "personal shielding"
 	desc = "A powerful experimental module that turns aside or absorbs incoming attacks at the cost of charge."
-	icon = 'icons/obj/decals.dmi'
+	icon = 'icons/obj/signs/warnings.dmi'
 	icon_state = "shock"
 	var/shield_level = 0.5 //Percentage of damage absorbed by the shield.
 
@@ -208,7 +208,7 @@
 /obj/item/borg/combat/mobility
 	name = "mobility module"
 	desc = "By retracting limbs and tucking in its head, a combat android can roll at high speeds."
-	icon = 'icons/obj/decals.dmi'
+	icon = 'icons/obj/signs/warnings.dmi'
 	icon_state = "shock"
 
 /obj/item/inflatable_dispenser
@@ -339,12 +339,12 @@
 	if(!length(held))
 		to_chat(user, "<span class='notice'>The rack is empty.</span>")
 		return
-	var/obj/item/R = held[length(held)]
-	R.dropInto(loc)
-	held -= R
-	R.attack_self(user) // deploy it
-	to_chat(user, "<span class='notice'>You deploy [R].</span>")
-	R.add_fingerprint(user)
+	var/obj/item/rack = held[length(held)]
+	rack.dropInto(loc)
+	held -= rack
+	rack.attack_self(user) // deploy it
+	to_chat(user, "<span class='notice'>You deploy [rack].</span>")
+	rack.add_fingerprint(user)
 
 /obj/item/robot_rack/resolve_attackby(obj/O, mob/user, click_params)
 	if(istype(O, object_type))
@@ -407,8 +407,8 @@
 	. = ..()
 
 /obj/item/bioreactor/Process()
-	var/mob/living/silicon/robot/R = loc
-	if(!istype(R) || !R.cell || R.cell.fully_charged() || !contents.len)
+	var/mob/living/silicon/robot/robot = loc
+	if(!istype(robot) || !robot.cell || robot.cell.fully_charged() || !contents.len)
 		return
 
 	var/generating_power
@@ -435,4 +435,4 @@
 		qdel(using_item)
 
 	if(generating_power)
-		R.cell.give(generating_power * CELLRATE)
+		robot.cell.give(generating_power * CELLRATE)

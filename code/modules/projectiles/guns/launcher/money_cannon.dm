@@ -30,7 +30,7 @@
 		var/obj/item/cash/bling = new(T)
 		bling.adjust_worth(nv)
 		if(projectile_vomit)
-			for(var/j = 1, j <= rand(2, 4), j++)
+			for(var/j in 1 to rand(2, 4))
 				step(bling, pick(global.cardinal))
 
 	if(projectile_vomit)
@@ -111,9 +111,9 @@
 	unload_receptacle(user)
 	return TRUE
 
-/obj/item/gun/launcher/money/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/cash))
-		var/obj/item/cash/bling = W
+/obj/item/gun/launcher/money/attackby(obj/item/used_item, mob/user)
+	if(istype(used_item, /obj/item/cash))
+		var/obj/item/cash/bling = used_item
 		if(bling.absolute_worth < 1)
 			to_chat(user, "<span class='warning'>You can't seem to get \the [bling] to slide into the receptacle.</span>")
 			return TRUE

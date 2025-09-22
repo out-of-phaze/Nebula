@@ -51,7 +51,7 @@
 	anima of the wilds, carried down through blood and manifesting in strange ways. The \
 	wyrdmarked are often treated with mistrust or fear by the general populace, leading \
 	many to cover their wyrdmarks and hide their nature."
-	permitted_species = list(SPECIES_HUMAN)
+	permitted_species = list(/decl/species/human::uid)
 	uid = "trait_wyrd_wild"
 /*
 	incompatible_with = list(

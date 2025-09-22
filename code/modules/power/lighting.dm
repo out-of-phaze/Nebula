@@ -164,9 +164,9 @@
 			_state = "[base_state]_broken"
 
 	if(istype(lightbulb, /obj/item/light))
-		var/image/I = image(icon, _state)
-		I.color = get_mode_color()
-		add_overlay(I)
+		var/image/overlay_image = image(icon, _state)
+		overlay_image.color = get_mode_color()
+		add_overlay(overlay_image)
 
 	if(on)
 		compile_overlays() // force a compile so that we update prior to the light being set
@@ -250,28 +250,32 @@
 	update_light_status(TRUE)
 	update_icon()
 
+// Just... skip the entire test. We don't need to remove the bulbs from every single light just to test this.
+/obj/machinery/light/fail_construct_state_unit_test()
+	return FALSE
+
 /obj/machinery/light/cannot_transition_to(state_path, mob/user)
 	if(lightbulb && !ispath(state_path, /decl/machine_construction/wall_frame/panel_closed))
 		return SPAN_WARNING("You must first remove the lightbulb!")
 	return ..()
 
-/obj/machinery/light/attackby(obj/item/W, mob/user)
+/obj/machinery/light/attackby(obj/item/used_item, mob/user)
 	. = ..()
 	if(. || panel_open)
 		return
 
 	// attempt to insert light
-	if(istype(W, /obj/item/light))
+	if(istype(used_item, /obj/item/light))
 		if(lightbulb)
 			to_chat(user, "There is a [get_fitting_name()] already inserted.")
 			return
-		if(!istype(W, accepts_light_type))
+		if(!istype(used_item, accepts_light_type))
 			to_chat(user, "This type of light requires a [get_fitting_name()].")
 			return
-		if(!user.try_unequip(W, src))
+		if(!user.try_unequip(used_item, src))
 			return
-		to_chat(user, "You insert [W].")
-		insert_bulb(W)
+		to_chat(user, "You insert [used_item].")
+		insert_bulb(used_item)
 		src.add_fingerprint(user)
 
 		// attempt to break the light
@@ -279,10 +283,10 @@
 
 	else if(lightbulb && (lightbulb.status != LIGHT_BROKEN) && !user.check_intent(I_FLAG_HELP))
 
-		if(prob(1 + W.expend_attack_force(user) * 5))
+		if(prob(1 + used_item.expend_attack_force(user) * 5))
 
 			user.visible_message("<span class='warning'>[user.name] smashed the light!</span>", "<span class='warning'>You smash the light!</span>", "You hear a tinkle of breaking glass.")
-			if(on && (W.obj_flags & OBJ_FLAG_CONDUCTIBLE))
+			if(on && (used_item.obj_flags & OBJ_FLAG_CONDUCTIBLE))
 				if (prob(12))
 					electrocute_mob(user, get_area(src), src, 0.3)
 			broken()
@@ -292,8 +296,8 @@
 
 	// attempt to stick weapon into light socket
 	else if(!lightbulb)
-		to_chat(user, "You stick \the [W] into the light socket!")
-		if(expected_to_be_on() && (W.obj_flags & OBJ_FLAG_CONDUCTIBLE))
+		to_chat(user, "You stick \the [used_item] into the light socket!")
+		if(expected_to_be_on() && (used_item.obj_flags & OBJ_FLAG_CONDUCTIBLE))
 			spark_at(src, cardinal_only = TRUE)
 			if (prob(75))
 				electrocute_mob(user, get_area(src), src, rand(0.7,1.0))
@@ -455,9 +459,9 @@
 	. = ..() // this will handle pixel offsets
 	icon_state = "nav[delay][!!(lightbulb && on)]"
 
-/obj/machinery/light/navigation/attackby(obj/item/W, mob/user)
+/obj/machinery/light/navigation/attackby(obj/item/used_item, mob/user)
 	. = ..()
-	if(!. && IS_MULTITOOL(W))
+	if(!. && IS_MULTITOOL(used_item))
 		delay = 5 + ((delay + 1) % 5)
 		to_chat(user, SPAN_NOTICE("You adjust the delay on \the [src]."))
 		return TRUE
@@ -591,14 +595,13 @@
 
 // attack bulb/tube with object
 // if a syringe, can inject flammable liquids to make it explode
-/obj/item/light/attackby(var/obj/item/I, var/mob/user)
+/obj/item/light/attackby(var/obj/item/used_item, var/mob/user)
 	..()
-	if(istype(I, /obj/item/chems/syringe) && I.reagents?.total_volume)
-		var/obj/item/chems/syringe/S = I
+	if(istype(used_item, /obj/item/chems/syringe) && used_item.reagents?.total_volume)
+		var/obj/item/chems/syringe/S = used_item
 		to_chat(user, "You inject the solution into \the [src].")
-		for(var/rtype in S.reagents?.reagent_volumes)
-			var/decl/material/R = GET_DECL(rtype)
-			if(R.accelerant_value > FUEL_VALUE_ACCELERANT)
+		for(var/decl/material/reagent as anything in S.reagents?.reagent_volumes)
+			if(reagent.accelerant_value > FUEL_VALUE_ACCELERANT)
 				rigged = TRUE
 				log_and_message_admins("injected a light with flammable reagents, rigging it to explode.", user)
 				break
@@ -652,3 +655,18 @@
 	if(lightbulb)
 		remove_bulb()
 	return TRUE
+
+// Partially-constructed presets for mapping
+/obj/machinery/light/fixture
+	icon_state = "tube-construct-stage1"
+
+/obj/machinery/light/fixture/Initialize(mapload, d, populate_parts)
+	. = ..(mapload, d, populate_parts = FALSE)
+	construct_state.post_construct(src)
+
+/obj/machinery/light/small/fixture
+	icon_state = "bulb-construct-stage1"
+
+/obj/machinery/light/small/fixture/Initialize(mapload, d, populate_parts)
+	. = ..(mapload, d, populate_parts = FALSE)
+	construct_state.post_construct(src)

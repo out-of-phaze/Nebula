@@ -4,7 +4,7 @@
 	origin_tech = @'{"materials":1,"engineering":1}'
 	material = /decl/material/solid/organic/cloth
 	paint_verb = "dyed"
-	replaced_in_loadout = TRUE
+	replaced_in_loadout = LOADOUT_CONFLICT_DELETE
 	w_class = ITEM_SIZE_SMALL
 	icon_state = ICON_STATE_WORLD
 	_base_attack_force = 3
@@ -38,9 +38,6 @@
 	var/markings_color	// for things like colored parts of labcoats or shoes
 	var/should_display_id = TRUE
 	var/fallback_slot
-	// Used to track our icon, or custom icon, for resetting when accessories are added/removed
-	var/base_clothing_icon
-	var/base_clothing_state
 
 /obj/item/clothing/get_equipment_tint()
 	return tint
@@ -71,7 +68,7 @@
 
 /obj/item/clothing/Destroy()
 	if(is_accessory())
-		on_removed()
+		on_accessory_removed()
 	return ..()
 
 /obj/item/clothing/get_fallback_slot(slot)
@@ -98,9 +95,9 @@
 // Sort of a placeholder for proper tailoring.
 #define RAG_COUNT(X) ceil((LAZYACCESS(X.matter, /decl/material/solid/organic/cloth) * 0.65) / SHEET_MATERIAL_AMOUNT)
 
-/obj/item/clothing/attackby(obj/item/I, mob/user)
+/obj/item/clothing/attackby(obj/item/used_item, mob/user)
 	var/rags = RAG_COUNT(src)
-	if(istype(material) && material.default_solid_form && rags && (I.is_sharp() || I.has_edge()) && user.check_intent(I_FLAG_HARM))
+	if(istype(material) && material.default_solid_form && rags && (used_item.is_sharp() || used_item.has_edge()) && user.check_intent(I_FLAG_HARM))
 		if(length(accessories))
 			to_chat(user, SPAN_WARNING("You should remove the accessories attached to \the [src] first."))
 			return TRUE
@@ -109,9 +106,9 @@
 			to_chat(user, SPAN_WARNING("You must either be holding \the [src], or [it] must be on the ground, before you can shred [it]."))
 			return TRUE
 		playsound(loc, 'sound/weapons/cablecuff.ogg', 30, 1)
-		user.visible_message(SPAN_DANGER("\The [user] begins ripping apart \the [src] with \the [I]."))
+		user.visible_message(SPAN_DANGER("\The [user] begins ripping apart \the [src] with \the [used_item]."))
 		if(do_after(user, 5 SECONDS, src))
-			user.visible_message(SPAN_DANGER("\The [user] tears \the [src] apart with \the [I]."))
+			user.visible_message(SPAN_DANGER("\The [user] tears \the [src] apart with \the [used_item]."))
 			material.create_object(get_turf(src), rags)
 			if(loc == user)
 				user.drop_from_inventory(src)
@@ -219,24 +216,18 @@
 
 	// Clothing does not generally align with each other's world icons, so we just use the mob overlay in this case.
 	if(should_use_combined_accessory_appearance())
-		var/image/I = get_mob_overlay(ismob(loc) ? loc : null, get_fallback_slot())
-		if(I?.icon) // Null or invisible overlay, we don't want to make our clothing invisible just because it has an accessory.
-			I.plane = plane
-			I.layer = layer
-			I.color = color
-			I.alpha = alpha
-			I.name  = name
-			appearance = I
+		var/image/overlay_image = get_mob_overlay(ismob(loc) ? loc : null, get_fallback_slot())
+		if(overlay_image?.icon) // Null or invisible overlay, we don't want to make our clothing invisible just because it has an accessory.
+			overlay_image.plane = plane
+			overlay_image.layer = layer
+			overlay_image.color = color
+			overlay_image.alpha = alpha
+			overlay_image.name  = name
+			appearance = overlay_image
 			set_dir(SOUTH)
 			update_clothing_icon()
 			return
 
-	if(!base_clothing_icon)
-		base_clothing_icon = initial(icon)
-	set_icon(base_clothing_icon)
-	if(!base_clothing_state)
-		base_clothing_state = initial(icon_state)
-	set_icon_state(base_clothing_state)
 	icon_state = JOINTEXT(list(get_world_inventory_state(), get_clothing_state_modifier()))
 	if(markings_state_modifier && markings_color)
 		add_overlay(mutable_appearance(icon, "[icon_state][markings_state_modifier]", markings_color))
@@ -294,7 +285,8 @@
 
 	var/last_icon = icon
 	var/species_icon = LAZYACCESS(sprite_sheets, target_bodytype)
-	if(species_icon && (check_state_in_icon(ICON_STATE_INV, species_icon) || check_state_in_icon(ICON_STATE_WORLD, species_icon)))
+	// If we use the single icon system we need a world or icon state, otherwise we don't.
+	if(species_icon && check_state_in_icon(ICON_STATE_WORLD, species_icon))
 		icon = species_icon
 
 	if(!skip_rename)
@@ -405,7 +397,7 @@
 /obj/item/clothing/proc/set_sensors(mob/user)
 	if (isobserver(user) || user.incapacitated())
 		return
-	var/obj/item/clothing/sensor/vitals/sensor = locate() in accessories
+	var/obj/item/clothing/sensor/vitals/sensor = get_vitals_sensor()
 	if(sensor)
 		sensor.user_set_sensors(user)
 
@@ -440,6 +432,12 @@
 	remove_hood(skip_update = TRUE)
 	update_icon()
 
+/obj/item/clothing/proc/get_vitals_sensor()
+	for(var/obj/item/clothing/accessory in accessories)
+		var/obj/item/sensor = accessory.get_vitals_sensor()
+		if(sensor)
+			return sensor
+
 /obj/item/clothing/get_alt_interactions(var/mob/user)
 	. = ..()
 	var/list/all_clothing_state_modifiers = list()
@@ -450,14 +448,19 @@
 		var/decl/clothing_state_modifier/modifier = GET_DECL(modifier_type)
 		if(modifier.alt_interaction_type)
 			LAZYADD(., modifier.alt_interaction_type)
-	LAZYADD(., /decl/interaction_handler/clothing_set_sensors)
+	if(get_vitals_sensor())
+		LAZYADD(., /decl/interaction_handler/clothing_set_sensors)
 
 /decl/interaction_handler/clothing_set_sensors
 	name = "Set Sensors Level"
 	expected_target_type = /obj/item/clothing
 	examine_desc = "adjust vitals sensors"
 
+/decl/interaction_handler/clothing_set_sensors/is_possible(atom/target, mob/user, obj/item/prop)
+	var/obj/item/clothing/clothing = target
+	return ..() && istype(clothing) && clothing.get_vitals_sensor()
+
 /decl/interaction_handler/clothing_set_sensors/invoked(atom/target, mob/user, obj/item/prop)
-	var/obj/item/clothing/clothes = target
-	clothes.set_sensors(user)
+	var/obj/item/clothing/clothing = target
+	clothing.set_sensors(user)
 

@@ -5,7 +5,7 @@
 		"Engineering" = 1
 	)
 	camera_channels = list(
-		CAMERA_CAMERA_CHANNEL_ENGINEERING
+		CAMERA_CHANNEL_ENGINEERING
 	)
 	software = list(
 		/datum/computer_file/program/power_monitor
@@ -107,7 +107,7 @@
 	var/obj/item/stack/material/cyborg/plasteel/PL = locate() in equipment
 	PL.synths = list(plasteel)
 
-/obj/item/robot_module/engineering/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+/obj/item/robot_module/engineering/respawn_consumable(var/mob/living/silicon/robot/robot, var/amount)
 	var/obj/item/lightreplacer/LR = locate() in equipment
-	LR.Charge(R, amount)
+	LR.Charge(robot, amount)
 	..()

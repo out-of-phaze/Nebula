@@ -1,6 +1,7 @@
 /decl/stack_recipe/planks
 	abstract_type          = /decl/stack_recipe/planks
 	craft_stack_types      = /obj/item/stack/material/plank
+	validation_material    = /decl/material/solid/organic/wood/oak
 
 /decl/stack_recipe/planks/sandals
 	result_type            = /obj/item/clothing/shoes/sandal
@@ -104,7 +105,7 @@
 	abstract_type          = /decl/stack_recipe/planks/prosthetic
 	difficulty             = MAT_VALUE_EASY_DIY
 	category               = "prosthetics"
-	var/prosthetic_species = SPECIES_HUMAN
+	var/prosthetic_species = /decl/species/human::uid
 	var/prosthetic_model   = /decl/bodytype/prosthetic/wooden
 
 /decl/stack_recipe/planks/prosthetic/spawn_result(mob/user, location, amount, decl/material/mat, decl/material/reinf_mat, paint_color, spent_type, spent_amount = 1)

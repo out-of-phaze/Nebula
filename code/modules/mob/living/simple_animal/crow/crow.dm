@@ -37,7 +37,7 @@
 /obj/item/natural_weapon/crow_claws
 	name = "claws"
 	gender = PLURAL
-	attack_verb = list("clawed")
+	attack_verb = "clawed"
 	sharp = TRUE
 	_base_attack_force = 7
 
@@ -63,11 +63,11 @@
 			return backpack.attack_hand(user)
 	return ..()
 
-/mob/living/simple_animal/crow/attackby(obj/item/I, mob/user)
+/mob/living/simple_animal/crow/attackby(obj/item/used_item, mob/user)
 	if(user.check_intent(I_FLAG_HELP))
 		var/obj/item/backpack = get_equipped_item(slot_back_str)
 		if(backpack)
-			return backpack.attackby(I, user)
+			return backpack.attackby(used_item, user)
 	return ..()
 
 /mob/living/simple_animal/crow/on_update_icon()

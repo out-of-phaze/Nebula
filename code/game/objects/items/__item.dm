@@ -23,7 +23,7 @@
 	var/no_attack_log = FALSE
 	var/obj/item/master = null
 	var/origin_tech                    //Used by R&D to determine what research bonuses it grants.
-	var/list/attack_verb = list("hit") //Used in attackby() to say how something was attacked "[x] has been [z.attack_verb] by [y] with [z]"
+	VAR_PROTECTED/list/attack_verb = "hit" //Used in attackby() to say how something was attacked "[x] has been [z.attack_verb] by [y] with [z]"
 	var/lock_picking_level = 0 //used to determine whether something can pick a lock, and how well.
 	var/attack_cooldown = DEFAULT_WEAPON_COOLDOWN
 	var/melee_accuracy_bonus = 0
@@ -109,8 +109,8 @@
 	var/tmp/use_single_icon
 	var/center_of_mass = @'{"x":16,"y":16}' //can be null for no exact placement behaviour
 
-	/// Used when this item is replaced by a loadout item. If TRUE, loadout places src in wearer's storage. If FALSE, src is deleted.
-	var/replaced_in_loadout = TRUE
+	/// Controls what method is used to resolve conflicts between equipped items and mob loadout.
+	var/replaced_in_loadout = LOADOUT_CONFLICT_DELETE
 
 	var/paint_color
 	var/paint_verb
@@ -129,6 +129,7 @@
 	var/unwieldsound = 'sound/foley/tooldrop1.ogg'
 
 	var/base_name
+	var/base_desc
 
 	/// Can this object leak into water sources?
 	var/watertight = FALSE
@@ -196,6 +197,7 @@
 /obj/item/Initialize(var/ml, var/material_key)
 
 	base_name ||= name
+	base_desc ||= desc
 
 	if(isnull(current_health))
 		current_health = max_health //Make sure to propagate max_health to health var before material setup, for consistency
@@ -488,27 +490,11 @@
 	return ..() && (!strict || loc == user)
 
 /obj/item/proc/squash_item(skip_qdel = FALSE)
-
 	if(!istype(material) || material.hardness > MAT_VALUE_MALLEABLE)
 		return null
-
-	var/list/leftover_mats = list()
-	for(var/mat in matter)
-		var/decl/material/material_decl = GET_DECL(mat)
-		if(material_decl.hardness <= MAT_VALUE_MALLEABLE)
-			var/spawn_amount = round(matter[mat] / SHEET_MATERIAL_AMOUNT)
-			if(spawn_amount > 0)
-				var/obj/item/stack/material/lump/lump = new(loc, spawn_amount, mat)
-				LAZYADD(., lump)
-				continue
-		leftover_mats[mat] = matter[mat]
-
-	if(length(leftover_mats))
-		var/obj/item/debris/scraps/remains = new(loc)
-		remains.matter = leftover_mats?.Copy()
-		remains.update_primary_material()
-		LAZYADD(., remains)
-
+	var/list/results = convert_matter_to_lumps(skip_qdel)
+	if(length(results))
+		. = results
 	if(!skip_qdel)
 		matter = null
 		material = null
@@ -591,26 +577,24 @@
 		if (isturf(old_loc))
 			var/obj/effect/temporary/item_pickup_ghost/ghost = new(old_loc, src)
 			ghost.animate_towards(user)
-		on_picked_up(user)
+		on_picked_up(user, old_loc)
 		return TRUE
 
 	return FALSE
 
 /obj/item/attack_ai(mob/living/silicon/ai/user)
-	if (!istype(src.loc, /obj/item/robot_module))
+	if (!istype(loc, /obj/item/robot_module))
 		return
 	//If the item is part of a cyborg module, equip it
 	if(!isrobot(user))
 		return
-	var/mob/living/silicon/robot/R = user
-	R.activate_module(src)
-	if(R.hud_used)
-		R.hud_used.update_robot_modules_display()
+	var/mob/living/silicon/robot/robot = user
+	robot.put_in_hands(src)
 
-/obj/item/proc/try_slapcrafting(obj/item/W, mob/user)
-	if(SSfabrication.try_craft_with(src, W, user))
+/obj/item/proc/try_slapcrafting(obj/item/used_item, mob/user)
+	if(SSfabrication.try_craft_with(src, used_item, user))
 		return TRUE
-	if(SSfabrication.try_craft_with(W, src, user))
+	if(SSfabrication.try_craft_with(used_item, src, user))
 		return TRUE
 	return FALSE
 
@@ -665,10 +649,13 @@
 		addtimer(CALLBACK(user, TYPE_PROC_REF(/mob, check_emissive_equipment)), 0, TIMER_UNIQUE)
 
 	RAISE_EVENT(/decl/observ/mob_unequipped, user, src)
-	RAISE_EVENT_REPEAT(/decl/observ/item_unequipped, src, user)
+	RAISE_EVENT(/decl/observ/item_unequipped, src, user)
 
 // called just after an item is picked up, after it has been equipped to the mob.
-/obj/item/proc/on_picked_up(mob/user)
+/obj/item/proc/on_picked_up(mob/user, atom/old_loc)
+	if(old_loc == loc || old_loc == user)
+		// not being picked up, just transferring between slots, don't adjust the offset
+		return
 	if(randpixel)
 		pixel_x = rand(-randpixel, randpixel)
 		pixel_y = rand(-randpixel/2, randpixel/2)
@@ -725,7 +712,7 @@
 			addtimer(CALLBACK(user, TYPE_PROC_REF(/mob, check_emissive_equipment)), 0, TIMER_UNIQUE)
 
 	RAISE_EVENT(/decl/observ/mob_equipped, user, src, slot)
-	RAISE_EVENT_REPEAT(/decl/observ/item_equipped, src, user, slot)
+	RAISE_EVENT(/decl/observ/item_equipped, src, user, slot)
 
 // As above but for items being equipped to an active module on a robot.
 /obj/item/proc/equipped_robot(var/mob/user)
@@ -742,7 +729,6 @@
 	if(slot == slot_in_backpack_str)
 		var/obj/item/back = user.get_equipped_item(slot_back_str)
 		return back?.storage?.can_be_inserted(src, user, TRUE)
-
 
 	var/datum/inventory_slot/inv_slot = user.get_inventory_slot_datum(slot)
 	if(!inv_slot)
@@ -764,7 +750,7 @@
 	return inv_slot?.is_accessible(user, src, disable_warning)
 
 /obj/item/proc/can_be_dropped_by_client(mob/M)
-	return M.canUnEquip(src)
+	return M.can_unequip_item(src)
 
 /obj/item/verb/verb_pickup()
 	set src in oview(1)
@@ -1021,8 +1007,7 @@ modules/mob/living/human/life.dm if you die, you will be zoomed out.
 
 /obj/item/clothing/inherit_custom_item_data(var/datum/custom_item/citem)
 	. = ..()
-	base_clothing_icon  = icon
-	base_clothing_state = icon_state
+	reconsider_single_icon()
 
 /obj/item/proc/is_special_cutting_tool(var/high_power)
 	return FALSE
@@ -1137,7 +1122,7 @@ modules/mob/living/human/life.dm if you die, you will be zoomed out.
 	for(var/equipped_slot in get_associated_equipment_slots())
 		wearer.update_equipment_overlay(equipped_slot, FALSE)
 	if(do_update_icon)
-		wearer.update_icon()
+		wearer.lazy_update_icon()
 	return TRUE
 
 /obj/item/proc/reconsider_client_screen_presence(var/client/client, var/slot)
@@ -1185,9 +1170,12 @@ modules/mob/living/human/life.dm if you die, you will be zoomed out.
 /obj/item/proc/handle_loadout_equip_replacement(obj/item/old_item)
 	return
 
-/// Used to handle equipped icons overwritten by custom loadout. If TRUE, loadout places src in wearer's storage. If FALSE, src is deleted by loadout.
+/// Used to handle equipped items overwritten by custom loadout.
+/// Returns one of LOADOUT_CONFLICT_DELETE, LOADOUT_CONFLICT_STORAGE, or LOADOUT_CONFLICT_KEEP.
 /obj/item/proc/loadout_should_keep(obj/item/new_item, mob/wearer)
-	return type != new_item.type && !replaced_in_loadout
+	if(type == new_item.type) // for exact type collisions, just delete by default
+		return LOADOUT_CONFLICT_DELETE
+	return replaced_in_loadout
 
 /obj/item/dropped(mob/user, slot)
 	. = ..()
@@ -1226,10 +1214,9 @@ modules/mob/living/human/life.dm if you die, you will be zoomed out.
 		var/decl/material/bait_mat = GET_DECL(mat)
 		if(bait_mat.fishing_bait_value)
 			. += MATERIAL_UNITS_TO_REAGENTS_UNITS(matter[mat]) * bait_mat.fishing_bait_value * BAIT_VALUE_CONSTANT
-	for(var/mat in reagents?.reagent_volumes)
-		var/decl/material/bait_mat = GET_DECL(mat)
-		if(bait_mat.fishing_bait_value)
-			. += reagents.reagent_volumes[mat] * bait_mat.fishing_bait_value * BAIT_VALUE_CONSTANT
+	for(var/decl/material/reagent as anything in reagents?.reagent_volumes)
+		if(reagent.fishing_bait_value)
+			. += reagents.reagent_volumes[reagent] * reagent.fishing_bait_value * BAIT_VALUE_CONSTANT
 #undef BAIT_VALUE_CONSTANT
 
 /obj/item/proc/get_storage_cost()
@@ -1308,8 +1295,7 @@ modules/mob/living/human/life.dm if you die, you will be zoomed out.
 	if(!reagents_state || !check_state_in_icon(reagents_state, icon))
 		return
 	var/image/reagent_overlay = overlay_image(icon, reagents_state, reagents.get_color(), RESET_COLOR | RESET_ALPHA)
-	for(var/reagent_type in reagents.reagent_volumes)
-		var/decl/material/reagent = GET_DECL(reagent_type)
+	for(var/decl/material/reagent as anything in reagents.reagent_volumes)
 		if(!reagent.reagent_overlay)
 			continue
 		var/modified_reagent_overlay = state_prefix ? "[state_prefix]_[reagent.reagent_overlay]" : reagent.reagent_overlay
@@ -1337,3 +1323,37 @@ modules/mob/living/human/life.dm if you die, you will be zoomed out.
 			coating_string = FONT_COLORED(coating.get_color(), coating_string)
 		return coating_string
 	return ..()
+
+// Bespoke proc for handling when a centrifuge smooshes us, only currently used by growns and hive frames.
+/obj/item/proc/handle_centrifuge_process(obj/machinery/centrifuge/centrifuge)
+	SHOULD_CALL_PARENT(TRUE)
+	return istype(centrifuge) && !QDELETED(centrifuge.loaded_beaker) && istype(centrifuge.loaded_beaker)
+
+/obj/item/proc/convert_matter_to_lumps(skip_qdel = FALSE)
+
+	var/list/scrap_matter = list()
+	for(var/mat in matter)
+		var/mat_amount = matter[mat]
+		var/obj/item/stack/material/mat_stack = /obj/item/stack/material/lump
+		var/mat_per_stack = SHEET_MATERIAL_AMOUNT * initial(mat_stack.matter_multiplier)
+		var/sheet_amount  = round(mat_amount / mat_per_stack)
+		if(sheet_amount)
+			var/obj/item/stack/material/lump/lump = new(loc, sheet_amount, mat)
+			LAZYADD(., lump)
+			mat_amount -= sheet_amount * mat_per_stack
+		if(mat_amount)
+			scrap_matter[mat] += mat_amount
+
+	if(length(scrap_matter))
+		var/obj/item/debris/scraps/scraps = new(loc)
+		scraps.matter = scrap_matter.Copy()
+		scraps.update_primary_material()
+		LAZYADD(., scraps)
+
+	matter = null
+	material = null
+	if(!skip_qdel)
+		qdel(src)
+
+/obj/item/proc/pick_attack_verb()
+	return DEFAULTPICK(attack_verb, attack_verb) || "attacked" // if it's not a list, return itself or just "attacked"

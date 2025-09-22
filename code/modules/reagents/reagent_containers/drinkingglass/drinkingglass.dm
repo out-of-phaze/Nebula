@@ -56,14 +56,13 @@ var/global/const/DRINK_ICON_NOISY = "noise"
 
 /obj/item/chems/drinks/glass2/proc/has_fizz()
 	if(LAZYLEN(reagents.reagent_volumes))
-		var/decl/material/R = reagents.get_primary_reagent_decl()
-		if(("fizz" in R.glass_special))
+		var/decl/material/primary_reagent = reagents.get_primary_reagent_decl()
+		if(("fizz" in primary_reagent.glass_special))
 			return 1
 		var/totalfizzy = 0
-		for(var/rtype in reagents.reagent_volumes)
-			var/decl/material/re = GET_DECL(rtype)
-			if("fizz" in re.glass_special)
-				totalfizzy += REAGENT_VOLUME(reagents, rtype)
+		for(var/decl/material/reagent as anything in reagents.reagent_volumes)
+			if("fizz" in reagent.glass_special)
+				totalfizzy += REAGENT_VOLUME(reagents, reagent)
 		if(totalfizzy >= reagents.total_volume / 5) // 20% fizzy by volume
 			return 1
 	return 0
@@ -72,13 +71,12 @@ var/global/const/DRINK_ICON_NOISY = "noise"
 	if(LAZYLEN(reagents.reagent_volumes) > 0)
 		if(temperature > T0C + 40)
 			return 1
-		var/decl/material/R = reagents.get_primary_reagent_decl()
-		if(!("vapor" in R.glass_special))
+		var/decl/material/primary_reagent = reagents.get_primary_reagent_decl()
+		if(!("vapor" in primary_reagent.glass_special))
 			var/totalvape = 0
-			for(var/rtype in reagents.reagent_volumes)
-				var/decl/material/re = GET_DECL(rtype)
-				if("vapor" in re.glass_special)
-					totalvape += REAGENT_VOLUME(reagents, type)
+			for(var/decl/material/reagent as anything in reagents.reagent_volumes)
+				if("vapor" in reagent.glass_special)
+					totalvape += REAGENT_VOLUME(reagents, reagent)
 			if(totalvape >= volume * 0.6) // 60% vapor by container volume
 				return 1
 	return 0
@@ -199,8 +197,8 @@ var/global/const/DRINK_ICON_NOISY = "noise"
 		else continue
 		side = "right"
 
-/obj/item/chems/drinks/glass2/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/utensil/spoon))
+/obj/item/chems/drinks/glass2/attackby(obj/item/used_item, mob/user)
+	if(istype(used_item, /obj/item/utensil/spoon))
 		if(user.check_intent(I_FLAG_HARM))
 			user.visible_message("<span class='warning'>[user] bashes \the [src] with a spoon, shattering it to pieces! What a rube.</span>")
 			playsound(src, "shatter", 30, 1)

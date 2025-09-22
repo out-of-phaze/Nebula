@@ -44,7 +44,7 @@
 	is receiving it.
 	The most common are:
 	* mob/UnarmedAttack(atom,adjacent) - used here only when adjacent, with no item in hand; in the case of humans, checks gloves
-	* atom/attackby(item,user) - used only when adjacent
+	* atom/attackby(used_item,user) - used only when adjacent
 	* item/afterattack(atom,user,adjacent,params) - used both ranged and adjacent
 	* mob/RangedAttack(atom,params) - used only ranged, only used for tk and laser eyes but could be changed
 */
@@ -187,8 +187,12 @@
 /mob/proc/UnarmedAttack(var/atom/A, var/proximity_flag)
 	return
 
-/mob/living/UnarmedAttack(var/atom/A, var/proximity_flag)
+/// Handles per-mob unarmed attack functionality after shared checks, e.g. maneuvers and abilities.
+/mob/living/proc/ResolveUnarmedAttack(var/atom/A)
+	return A.attack_hand(src)
 
+/mob/living/UnarmedAttack(var/atom/A, var/proximity_flag)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	if(GAME_STATE < RUNLEVEL_GAME)
 		to_chat(src, "You cannot attack people before the game has started.")
 		return TRUE
@@ -204,11 +208,11 @@
 	// Special glove functions:
 	// If the gloves do anything, have them return 1 to stop
 	// normal attack_hand() here.
-	var/obj/item/clothing/gloves/G = get_equipped_item(slot_gloves_str) // not typecast specifically enough in defines
-	if(istype(G) && G.Touch(A,1))
+	var/obj/item/clothing/gloves/G = get_equipped_item(slot_gloves_str)
+	if(istype(G) && G.Touch(A, proximity_flag))
 		return TRUE
 
-	return A.attack_hand(src)
+	return ResolveUnarmedAttack(A)
 
 /*
 	Ranged unarmed attack:

@@ -25,7 +25,6 @@ var/global/list/wall_fullblend_objects = list(
 	density = TRUE
 	blocks_air = 1
 	thermal_conductivity = WALL_HEAT_TRANSFER_COEFFICIENT
-	heat_capacity = 312500 //a little over 5 cm thick , 312500 for 1 m by 2.5 m by 0.25 m plasteel wall
 	explosion_resistance = 10
 	color = COLOR_STEEL
 	turf_flags = TURF_IS_HOLOMAP_OBSTACLE
@@ -103,10 +102,10 @@ var/global/list/wall_fullblend_objects = list(
 	. = ..()
 	var/turf/debris = locate(old_x, old_y, old_z)
 	if(debris)
-		for(var/turf/wall/W in RANGE_TURFS(debris, 1))
-			W.wall_connections = null
-			W.other_connections = null
-			W.queue_icon_update()
+		for(var/turf/wall/wall in RANGE_TURFS(debris, 1))
+			wall.wall_connections = null
+			wall.other_connections = null
+			wall.queue_icon_update()
 
 // Walls always hide the stuff below them.
 /turf/wall/levelupdate()
@@ -301,9 +300,9 @@ var/global/list/wall_fullblend_objects = list(
 
 /turf/wall/proc/burn(temperature)
 	if(!QDELETED(src) && istype(material) && material.combustion_effect(src, temperature, 0.7))
-		for(var/turf/wall/W in range(3,src))
-			if(W != src)
-				addtimer(CALLBACK(W, TYPE_PROC_REF(/turf/wall, burn), temperature/4), 2)
+		for(var/turf/wall/wall in range(3,src))
+			if(wall != src)
+				addtimer(CALLBACK(wall, TYPE_PROC_REF(/turf/wall, burn), temperature/4), 2)
 		physically_destroyed()
 
 /turf/wall/set_color(new_color)

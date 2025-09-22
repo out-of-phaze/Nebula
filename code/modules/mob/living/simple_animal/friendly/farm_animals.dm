@@ -27,7 +27,7 @@
 		body.visible_message(SPAN_DANGER("\The [body] gets an evil-looking gleam in [pronouns.his] eye."))
 
 /datum/mob_controller/aggressive/goat/proc/find_edible_atom(list/targets)
-	// TODO: add /obj/structure/flora here and in goat/UnarmedAttack()
+	// TODO: add /obj/structure/flora here and in goat/ResolveUnarmedAttack()
 	var/atom/maybe_food = locate(/obj/effect/vine) in targets
 	if(!istype(maybe_food))
 		for(var/obj/machinery/portable_atmospherics/hydroponics/tray in targets)
@@ -74,25 +74,24 @@
 	. = ..()
 	set_extension(src, /datum/extension/milkable/goat)
 
-/mob/living/simple_animal/hostile/goat/UnarmedAttack(var/atom/A, var/proximity)
+/mob/living/simple_animal/hostile/goat/ResolveUnarmedAttack(var/atom/A)
 	var/was_food = FALSE
-	if(proximity)
-		if(prob(30))
-			if(istype(A, /obj/effect/vine))
-				var/obj/effect/vine/SV = A
-				SV.die_off(1)
+	if(prob(30))
+		if(istype(A, /obj/effect/vine))
+			var/obj/effect/vine/SV = A
+			SV.die_off(1)
+			was_food = TRUE
+		else if(istype(A, /obj/machinery/portable_atmospherics/hydroponics))
+			var/obj/machinery/portable_atmospherics/hydroponics/tray = A
+			if(tray.seed)
 				was_food = TRUE
-			else if(istype(A, /obj/machinery/portable_atmospherics/hydroponics))
-				var/obj/machinery/portable_atmospherics/hydroponics/tray = A
-				if(tray.seed)
-					was_food = TRUE
-					tray.die()
-					if(!QDELETED(tray))
-						tray.remove_dead(silent = TRUE) // this will qdel invisible trays
-		if(was_food)
-			visible_message(SPAN_NOTICE("\The [src] eats \the [A]."))
-
-	return was_food ? TRUE :..()
+				tray.die()
+				if(!QDELETED(tray))
+					tray.remove_dead(silent = TRUE) // this will qdel invisible trays
+	if(was_food)
+		visible_message(SPAN_NOTICE("\The [src] eats \the [A]."))
+		return TRUE
+	return ..()
 
 /mob/living/simple_animal/cow
 	name = "cow"
@@ -244,14 +243,14 @@ var/global/chicken_count = 0
 	if(.)
 		global.chicken_count -= 1
 
-/mob/living/simple_animal/fowl/chicken/attackby(var/obj/item/O, var/mob/user)
-	if(!istype(O, /obj/item/food))
+/mob/living/simple_animal/fowl/chicken/attackby(var/obj/item/used_item, var/mob/user)
+	if(!istype(used_item, /obj/item/food))
 		return ..()
-	var/obj/item/food/G = O //feedin' dem chickens
+	var/obj/item/food/G = used_item //feedin' dem chickens
 	if(findtext(G.get_grown_tag(), "wheat")) // includes chopped, crushed, dried etc.
 		if(!stat && eggsleft < 4)
-			user.visible_message(SPAN_NOTICE("[user] feeds \the [O] to \the [src]! It clucks happily."), SPAN_NOTICE("You feed \the [O] to \the [src]! It clucks happily."), SPAN_NOTICE("You hear clucking."))
-			qdel(O)
+			user.visible_message(SPAN_NOTICE("[user] feeds \the [used_item] to \the [src]! It clucks happily."), SPAN_NOTICE("You feed \the [used_item] to \the [src]! It clucks happily."), SPAN_NOTICE("You hear clucking."))
+			qdel(used_item)
 			eggsleft += rand(1, 2)
 		else
 			to_chat(user, SPAN_NOTICE("\The [src] doesn't seem hungry!"))

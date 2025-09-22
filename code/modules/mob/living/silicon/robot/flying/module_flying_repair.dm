@@ -2,7 +2,7 @@
 	name = "repair drone module"
 	display_name = "Repair"
 	channels = list ("Engineering" = TRUE)
-	camera_channels = list(CAMERA_CAMERA_CHANNEL_ENGINEERING)
+	camera_channels = list(CAMERA_CHANNEL_ENGINEERING)
 	software = list(
 		/datum/computer_file/program/power_monitor
 	)
@@ -90,8 +90,8 @@
 	PL.synths = list(plasteel)
 	. = ..()
 
-/obj/item/robot_module/flying/repair/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
+/obj/item/robot_module/flying/repair/respawn_consumable(var/mob/living/silicon/robot/robot, var/amount)
 	var/obj/item/lightreplacer/LR = locate() in equipment
 	if(LR)
-		LR.Charge(R, amount)
+		LR.Charge(robot, amount)
 	..()

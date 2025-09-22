@@ -7,10 +7,12 @@
 
 	color = GLASS_COLOR
 	layer = SIDE_WINDOW_LAYER
-	anchored = TRUE
+	anchored = FALSE // Base, non-premapped type should start unanchored.
 	atom_flags = ATOM_FLAG_CHECKS_BORDER | ATOM_FLAG_CAN_BE_PAINTED
 	obj_flags = OBJ_FLAG_ROTATABLE | OBJ_FLAG_MOVES_UNSUPPORTED
-	alpha = 180
+	base_alpha = 100 // at 0.3 opacity for glass, this will result in a total alpha of around 176
+	alpha = 180 // preview value
+	material_alteration = MAT_FLAG_ALTERATION_COLOR
 	material = /decl/material/solid/glass
 	rad_resistance_modifier = 0.5
 	atmos_canpass = CANPASS_PROC
@@ -22,7 +24,7 @@
 	var/const/CONSTRUCTION_STATE_NO_FRAME = 0
 	var/const/CONSTRUCTION_STATE_IN_FRAME = 1
 	var/const/CONSTRUCTION_STATE_FASTENED = 2
-	var/construction_state = CONSTRUCTION_STATE_FASTENED
+	var/construction_state = CONSTRUCTION_STATE_NO_FRAME
 	var/id
 	var/polarized = 0
 	var/basestate = "window"
@@ -38,10 +40,19 @@
 	connections = dirs_to_corner_states(dirs)
 	other_connections = dirs_to_corner_states(other_dirs)
 
-/obj/structure/window/update_materials(var/keep_health)
-	. = ..()
-	name = "[reinf_material ? "reinforced " : ""][material.solid_name] window"
-	desc = "A window pane made from [material.solid_name]."
+/obj/structure/window/update_material_name(override_name)
+	var/base_name = override_name || initial(name)
+	if(istype(material))
+		SetName("[reinf_material ? "reinforced " : ""][material.adjective_name] [base_name]")
+	else
+		SetName(base_name)
+
+/obj/structure/window/update_material_desc(var/override_desc)
+	if(istype(material))
+		var/reinf_string = istype(reinf_material) ? " reinforced with [reinf_material.use_name]" : null
+		desc = "A window pane made from [material.solid_name][reinf_string]."
+	else
+		..()
 
 /obj/structure/window/Initialize(var/ml, var/_mat, var/_reinf_mat, var/dir_to_set, var/anchored)
 	. = ..(ml, _mat, _reinf_mat)
@@ -50,6 +61,8 @@
 	if(. != INITIALIZE_HINT_QDEL)
 		if(!isnull(anchored))
 			set_anchored(anchored)
+			if(!anchored)
+				construction_state = CONSTRUCTION_STATE_NO_FRAME
 		if(!isnull(dir_to_set))
 			set_dir(dir_to_set)
 		if(is_fulltile())
@@ -252,9 +265,9 @@
 	to_chat(user, SPAN_NOTICE("You cut the wiring and remove the polarization from \the [src]."))
 	return TRUE
 
-/obj/structure/window/attackby(obj/item/W, mob/user)
+/obj/structure/window/attackby(obj/item/used_item, mob/user)
 	// bespoke interactions not handled by the prior procs
-	if(IS_MULTITOOL(W))
+	if(IS_MULTITOOL(used_item))
 		if (!polarized)
 			to_chat(user, SPAN_WARNING("\The [src] is not polarized."))
 			return TRUE
@@ -264,13 +277,13 @@
 			toggle()
 		else
 			var/response = input(user, "New Window ID:", name, id) as null | text
-			if (isnull(response) || user.incapacitated() || !user.Adjacent(src) || user.get_active_held_item() != W)
+			if (isnull(response) || user.incapacitated() || !user.Adjacent(src) || user.get_active_held_item() != used_item)
 				return TRUE
 			id = sanitize_safe(response, MAX_NAME_LEN)
 			to_chat(user, SPAN_NOTICE("The new ID of \the [src] is [id]."))
 		return TRUE
-	else if(istype(W, /obj/item/gun/energy/plasmacutter) && anchored)
-		var/obj/item/gun/energy/plasmacutter/cutter = W
+	else if(istype(used_item, /obj/item/gun/energy/plasmacutter) && anchored)
+		var/obj/item/gun/energy/plasmacutter/cutter = used_item
 		if(!cutter.slice(user))
 			return TRUE // failed to finish or otherwise failed, prevent further interactions
 		playsound(src, 'sound/items/Welder.ogg', 80, 1)
@@ -279,7 +292,7 @@
 			visible_message(SPAN_WARNING("[user] has sliced through the window's frame!"))
 			playsound(src, 'sound/items/Welder.ogg', 80, 1)
 			set_anchored(FALSE)
-	if (istype(W, /obj/item/paint_sprayer))
+	if (istype(used_item, /obj/item/paint_sprayer))
 		return FALSE // allow afterattack to run
 	return ..() // handle generic interactions, bashing, etc
 
@@ -414,8 +427,8 @@
 //This proc is used to update the icons of nearby windows. It should not be confused with update_nearby_tiles(), which is an atmos proc!
 /obj/structure/window/proc/update_nearby_icons()
 	update_icon()
-	for(var/obj/structure/window/W in orange(src, 1))
-		W.update_icon()
+	for(var/obj/structure/window/window in orange(src, 1))
+		window.update_icon()
 
 // Visually connect with every type of window as long as it's full-tile.
 /obj/structure/window/can_visually_connect()
@@ -472,6 +485,7 @@
 	..()
 
 /obj/structure/window/basic
+	anchored = TRUE // Premapped type, start anchored.
 	icon_state = "window"
 	color = GLASS_COLOR
 
@@ -486,6 +500,7 @@
 	name = "borosilicate window"
 	color = GLASS_COLOR_SILICATE
 	material = /decl/material/solid/glass/borosilicate
+	anchored = TRUE // Premapped type, start anchored.
 
 /obj/structure/window/borosilicate/full
 	dir = NORTHEAST
@@ -497,6 +512,8 @@
 	color = GLASS_COLOR_SILICATE
 	material = /decl/material/solid/glass/borosilicate
 	reinf_material = /decl/material/solid/metal/steel
+	anchored = TRUE // Premapped type, start anchored and fastened.
+	construction_state = CONSTRUCTION_STATE_FASTENED
 
 /obj/structure/window/borosilicate_reinforced/full
 	dir = NORTHEAST
@@ -507,6 +524,8 @@
 	icon_state = "rwindow"
 	material = /decl/material/solid/glass
 	reinf_material = /decl/material/solid/metal/steel
+	anchored = TRUE // Premapped type, start anchored and fastened.
+	construction_state = CONSTRUCTION_STATE_FASTENED
 
 /obj/structure/window/reinforced/full
 	dir = NORTHEAST
@@ -528,6 +547,7 @@
 	basestate = "w"
 	reinf_basestate = "w"
 	dir = NORTHEAST
+	anchored = TRUE // Premapped type, start anchored.
 
 /obj/structure/window/reinforced/polarized
 	name = "electrochromic window"
@@ -564,8 +584,8 @@
 	construct_state = /decl/machine_construction/wall_frame/panel_closed/simple
 	base_type = /obj/machinery/button/windowtint
 
-/obj/machinery/button/windowtint/attackby(obj/item/W, mob/user)
-	if(IS_MULTITOOL(W))
+/obj/machinery/button/windowtint/attackby(obj/item/used_item, mob/user)
+	if(IS_MULTITOOL(used_item))
 		var/t = sanitize_safe(input(user, "Enter the ID for the button.", name, id_tag), MAX_NAME_LEN)
 		if(!CanPhysicallyInteract(user))
 			return TRUE
@@ -579,9 +599,9 @@
 /obj/machinery/button/windowtint/activate()
 	if(operating)
 		return
-	for(var/obj/structure/window/W in range(src,range))
-		if(W.polarized && (W.id == id_tag || !W.id))
-			W.toggle()
+	for(var/obj/structure/window/window in range(src,range))
+		if(window.polarized && (window.id == id_tag || !window.id))
+			window.toggle()
 	..()
 
 /obj/machinery/button/windowtint/power_change()
@@ -619,27 +639,26 @@
 	if (!ST.can_use(required_amount))
 		to_chat(user, SPAN_NOTICE("You do not have enough sheets."))
 		return
-	for(var/obj/structure/window/WINDOW in loc)
-		if(WINDOW.dir == dir_to_set)
+	for(var/obj/structure/window/existing_window in loc)
+		if(existing_window.dir == dir_to_set)
 			to_chat(user, SPAN_NOTICE("There is already a window facing this way there."))
 			return
-		if(WINDOW.is_fulltile() && (dir_to_set & (dir_to_set - 1))) //two fulltile windows
+		if(existing_window.is_fulltile() && (dir_to_set & (dir_to_set - 1))) //two fulltile windows
 			to_chat(user, SPAN_NOTICE("There is already a window there."))
 			return
 	to_chat(user, SPAN_NOTICE("You start placing the window."))
-	if(do_after(user,20))
-		for(var/obj/structure/window/WINDOW in loc)
-			if(WINDOW.dir == dir_to_set)//checking this for a 2nd time to check if a window was made while we were waiting.
+	if(do_after(user, 2 SECONDS))
+		for(var/obj/structure/window/existing_window in loc)
+			if(existing_window.dir == dir_to_set)//checking this for a 2nd time to check if a window was made while we were waiting.
 				to_chat(user, SPAN_NOTICE("There is already a window facing this way there."))
 				return
-			if(WINDOW.is_fulltile() && (dir_to_set & (dir_to_set - 1)))
+			if(existing_window.is_fulltile() && (dir_to_set & (dir_to_set - 1)))
 				to_chat(user, SPAN_NOTICE("There is already a window there."))
 				return
 
 		if (ST.use(required_amount))
 			var/obj/structure/window/WD = new(loc, ST.material.type, ST.reinf_material?.type, dir_to_set, FALSE)
 			to_chat(user, SPAN_NOTICE("You place [WD]."))
-			WD.set_anchored(FALSE) // handles setting construction state for us
 		else
 			to_chat(user, SPAN_NOTICE("You do not have enough sheets."))
 			return

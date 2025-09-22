@@ -67,7 +67,7 @@
 		return
 
 	if(target.stat == DEAD || (target.status_flags & FAKEDEATH) || !target.client)
-		to_chat(user, SPAN_WARNING("\The [target] is in no state for a mind-ream."))
+		to_chat(user, SPAN_WARNING("\The [target] is in no state for a mind-read."))
 		return TRUE
 
 	user.visible_message(SPAN_WARNING("\The [user] touches \the [target]'s temple..."))
@@ -242,7 +242,7 @@
 		var/coercion_rank = psi?.get_rank(PSI_COERCION)
 		if(coercion_rank >= PSI_RANK_GRANDMASTER)
 			ADJ_STATUS(target, STAT_PARA, -1)
-		target.set_status(STAT_DROWSY, 0)
+		target.set_status_condition(STAT_DROWSY, 0)
 		if(isliving(target))
 			var/mob/living/M = target
 			M.adjust_hallucination(-30)

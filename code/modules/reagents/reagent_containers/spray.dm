@@ -86,9 +86,9 @@
 		return TRUE
 	else
 		//If no safety, we just toggle the nozzle
-		var/decl/interaction_handler/IH = GET_DECL(/decl/interaction_handler/next_spray_amount)
-		if(IH.is_possible(src, user))
-			IH.invoked(src, user, user.get_active_held_item())
+		var/decl/interaction_handler/handler = GET_DECL(/decl/interaction_handler/next_spray_amount)
+		if(handler.is_possible(src, user))
+			handler.invoked(src, user, user.get_active_held_item())
 			return TRUE
 
 ///Whether the spray has a safety toggle
@@ -220,14 +220,6 @@
 
 /obj/item/chems/spray/plantbgone/populate_reagents()
 	add_to_reagents(/decl/material/liquid/weedkiller, reagents.maximum_volume)
-
-/obj/item/chems/spray/plantbgone/afterattack(atom/A, mob/user, proximity)
-	if(!proximity) return
-
-	if(istype(A, /obj/effect/blob)) // blob damage in blob code
-		return
-
-	..()
 
 /obj/item/chems/spray/cleaner/deodorant
 	name = "deodorant"

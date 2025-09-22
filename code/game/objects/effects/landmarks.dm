@@ -1,3 +1,4 @@
+var/global/list/obj/abstract/landmark/all_landmarks = list()
 /obj/abstract/landmark
 	name = "landmark"
 	var/delete_me = 0
@@ -7,13 +8,13 @@
 	tag = "landmark*[name]"
 	if(delete_me)
 		return INITIALIZE_HINT_QDEL
-	global.landmarks_list += src
+	global.all_landmarks += src
 
 /obj/abstract/landmark/proc/delete()
 	delete_me = TRUE
 
 /obj/abstract/landmark/Destroy()
-	global.landmarks_list -= src
+	global.all_landmarks -= src
 	return ..()
 
 /obj/abstract/landmark/start
@@ -107,7 +108,7 @@
 /obj/abstract/landmark/costume/waiter/make_costumes()
 	new /obj/item/clothing/pants/slacks/black(loc)
 	new /obj/item/clothing/shirt/button(loc)
-	new /obj/item/clothing/neck/tie/bow/color/red(loc)
+	new /obj/item/clothing/neck/tie/bow/red(loc)
 	new /obj/item/clothing/suit/jacket/vest/blue(loc)
 	var/CHOICE= pick( /obj/item/clothing/head/kitty, /obj/item/clothing/head/rabbitears)
 	new CHOICE(loc)

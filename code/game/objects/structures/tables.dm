@@ -179,9 +179,9 @@
 		update_materials()
 	return TRUE
 
-/obj/structure/table/attackby(obj/item/W, mob/user, click_params)
+/obj/structure/table/attackby(obj/item/used_item, mob/user, click_params)
 
-	if(user.check_intent(I_FLAG_HARM) && W.is_special_cutting_tool())
+	if(user.check_intent(I_FLAG_HARM) && used_item.is_special_cutting_tool())
 		spark_at(src.loc, amount=5)
 		playsound(src.loc, 'sound/weapons/blade1.ogg', 50, 1)
 		user.visible_message(SPAN_DANGER("\The [src] was sliced apart by \the [user]!"))
@@ -189,14 +189,14 @@
 		return TRUE
 
 	if(!reinf_material)
-		if(istype(W, /obj/item/stack/material/rods))
-			return reinforce_table(W, user)
-		if(istype(W, /obj/item/stack/material))
-			return finish_table(W, user)
+		if(istype(used_item, /obj/item/stack/material/rods))
+			return reinforce_table(used_item, user)
+		if(istype(used_item, /obj/item/stack/material))
+			return finish_table(used_item, user)
 		return ..()
 
-	if(!felted && istype(W, /obj/item/stack/tile/carpet))
-		var/obj/item/stack/tile/carpet/C = W
+	if(!felted && istype(used_item, /obj/item/stack/tile/carpet))
+		var/obj/item/stack/tile/carpet/C = used_item
 		if(C.use(1))
 			user.visible_message(
 				SPAN_NOTICE("\The [user] adds \the [C] to \the [src]."),
@@ -208,15 +208,15 @@
 		return TRUE
 
 	//playing cards
-	if(istype(W, /obj/item/hand))
-		var/obj/item/hand/H = W
+	if(istype(used_item, /obj/item/hand))
+		var/obj/item/hand/H = used_item
 		if(H.cards && length(H.cards) == 1)
 			user.visible_message("\The [user] plays \the [H.cards[1]].")
 			return TRUE
 
-	if(istype(W, /obj/item/deck)) //playing cards
+	if(istype(used_item, /obj/item/deck)) //playing cards
 		if(user.check_intent(I_FLAG_GRAB))
-			var/obj/item/deck/D = W
+			var/obj/item/deck/D = used_item
 			if(!length(D.cards))
 				to_chat(user, "There are no cards in the deck.")
 			else
@@ -226,8 +226,8 @@
 	. = ..()
 
 	// Finally we can put the object onto the table.
-	if(!. && can_place_items && !isrobot(user) && W.loc == user && user.try_unequip(W, src.loc))
-		auto_align(W, click_params)
+	if(!. && can_place_items && !isrobot(user) && used_item.loc == user && user.try_unequip(used_item, src.loc))
+		auto_align(used_item, click_params)
 		return TRUE
 
 /obj/structure/table/proc/reinforce_table(obj/item/stack/material/S, mob/user)
@@ -342,11 +342,10 @@
 	var/flip_mod = ""
 	if(left_neighbor_blend && right_neighbor_blend)
 		flip_type = 2
-		icon_state = "flip[flip_type]"
 	else if(left_neighbor_blend || right_neighbor_blend)
 		flip_type = 1
 		flip_mod = (left_neighbor_blend ? "+" : "-")
-		icon_state = "flip[flip_type][flip_mod]"
+	icon_state = "flip[flip_type][flip_mod]"
 
 	var/image/I
 	if(reinf_material)
@@ -393,26 +392,26 @@
 		return
 
 	var/list/blocked_dirs = list()
-	for(var/obj/structure/window/W in get_turf(src))
-		if(W.is_fulltile())
+	for(var/obj/structure/window/used_item in get_turf(src))
+		if(used_item.is_fulltile())
 			connections = list("0", "0", "0", "0")
 			return
-		blocked_dirs |= W.dir
+		blocked_dirs |= used_item.dir
 
 	for(var/D in list(NORTH, SOUTH, EAST, WEST) - blocked_dirs)
 		var/turf/T = get_step(src, D)
-		for(var/obj/structure/window/W in T)
-			if(W.is_fulltile() || W.dir == global.reverse_dir[D])
+		for(var/obj/structure/window/used_item in T)
+			if(used_item.is_fulltile() || used_item.dir == global.reverse_dir[D])
 				blocked_dirs |= D
 				break
 			else
-				if(W.dir != D) // it's off to the side
-					blocked_dirs |= W.dir|D // blocks the diagonal
+				if(used_item.dir != D) // it's off to the side
+					blocked_dirs |= used_item.dir|D // blocks the diagonal
 
 	for(var/D in list(NORTHEAST, NORTHWEST, SOUTHEAST, SOUTHWEST) - blocked_dirs)
 		var/turf/T = get_step(src, D)
-		for(var/obj/structure/window/W in T)
-			if(W.is_fulltile() || (W.dir & global.reverse_dir[D]))
+		for(var/obj/structure/window/used_item in T)
+			if(used_item.is_fulltile() || (used_item.dir & global.reverse_dir[D]))
 				blocked_dirs |= D
 				break
 
@@ -904,6 +903,7 @@
 	reinf_material = /decl/material/solid/organic/wood/walnut
 	storage = /datum/storage/structure/desk
 	bound_width = 64
+	appearance_flags = /obj/structure/table::appearance_flags & ~TILE_BOUND
 	material_alteration = MAT_FLAG_ALTERATION_ALL
 	can_flip = FALSE
 	top_surface_noun = "desktop"
@@ -979,6 +979,7 @@
 	icon = 'icons/obj/structures/dresser.dmi'
 	icon_state = "dresser"
 	bound_width = 32
+	appearance_flags = /obj/structure/table::appearance_flags
 	top_surface_noun = "surface"
 	tabletop_height = 15
 	mob_offset = 18

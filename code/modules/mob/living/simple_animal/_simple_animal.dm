@@ -10,7 +10,7 @@
 	mob_push_flags = MONKEY|SLIME|SIMPLE_ANIMAL
 
 	icon_state = ICON_STATE_WORLD
-	buckle_pixel_shift = @"{'x':0,'y':0,'z':8}"
+	buckle_pixel_shift = @'{"x":0,"y":0,"z":8}'
 
 	hud_used = /datum/hud/animal
 
@@ -348,11 +348,11 @@ var/global/list/simplemob_icon_bitflag_cache = list()
 		user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 		return TRUE
 
-/mob/living/simple_animal/attackby(var/obj/item/O, var/mob/user)
+/mob/living/simple_animal/attackby(var/obj/item/used_item, var/mob/user)
 
-	if(istype(O, /obj/item/stack/medical))
+	if(istype(used_item, /obj/item/stack/medical))
 		if(stat != DEAD)
-			var/obj/item/stack/medical/MED = O
+			var/obj/item/stack/medical/MED = used_item
 			if(!MED.animal_heal)
 				to_chat(user, SPAN_WARNING("\The [MED] won't help \the [src] at all!"))
 			else if(current_health < get_max_health() && MED.can_use(1))
@@ -508,6 +508,12 @@ var/global/list/simplemob_icon_bitflag_cache = list()
 	name = "quadruped animal"
 	bodytype_flag = 0
 	bodytype_category = "quadrupedal animal body"
+	// Simple animal bodies don't have limbs or organs, currently. If that changes, remove or modify these overrides.
+	// These overrides prevent unnecessary processing.
+	has_limbs = list()
+	has_organ = list()
+	// Simple animals go through a different breathing process (handle_environment) than mobs that use organs do.
+	breathing_organ = null
 
 /mob/living/simple_animal/get_base_telegraphed_melee_accuracy()
 	return telegraphed_melee_accuracy

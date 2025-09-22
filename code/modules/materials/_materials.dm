@@ -119,7 +119,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	var/shard_name = SHARD_SHRAPNEL as text // Path of debris object.
 	var/shard_icon                        // Related to above.
 	var/shard_can_repair = 1              // Can shards be turned into sheets with a welder?
-	var/list/recipes                      // Holder for all recipes usable with a sheet of this material.
 	var/destruction_desc = "breaks apart" // Fancy string for barricades/tables/objects exploding.
 	var/destruction_sound = "fracture"     // As above, but the sound that plays.
 
@@ -182,7 +181,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	/// General-use HP value for products.
 	var/integrity = 150
 	/// Is the material transparent? 0.5< makes transparent walls/doors.
-	var/opacity = TRUE
+	var/opacity = 1.0
 	/// Only used by walls currently.
 	var/explosion_resistance = 5
 	/// Objects with this var add CONDUCTS to flags on spawn.
@@ -270,6 +269,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	var/overdose = 0
 	var/scannable = 0 // Shows up on health analyzers.
 	var/color = COLOR_BEIGE
+	// How much variance in color do objects of this material have, in fraction of maximum brightness/hue.
+	var/color_variance = 0.04
 	var/color_weight = 1
 	var/cocktail_ingredient
 	var/defoliant
@@ -357,7 +358,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	var/compost_value = 0
 
 	/// Nutrition values!
-	var/nutriment_animal     = FALSE
 	var/nutriment_factor     = 0 // Per removed amount each tick
 	var/hydration_factor     = 0 // Per removed amount each tick
 	var/injectable_nutrition = FALSE
@@ -743,8 +743,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 			O.visible_message(SPAN_NOTICE("The solution dissolves the ink on the paper."), range = 1)
 		else if(istype(O, /obj/item/book) && amount >= FLUID_PUDDLE)
 			var/obj/item/book/affectedbook = O
-			if(affectedbook.can_dissolve_text)
-				affectedbook.dat = null
+			if(affectedbook.clear_text())
 				O.visible_message(SPAN_NOTICE("The solution dissolves the ink on the book."), range = 1)
 			else
 				O.visible_message(SPAN_WARNING("The solution does nothing. Whatever this is, it isn't normal ink."), range = 1)
@@ -752,7 +751,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	if(solvent_power >= MAT_SOLVENT_STRONG && O.solvent_can_melt(solvent_power) && (istype(O, /obj/item) || istype(O, /obj/effect/vine)) && (amount > solvent_melt_dose))
 		O.visible_message(SPAN_DANGER("\The [O] dissolves!"))
 		O.handle_melting()
-		holder?.remove_reagent(type, solvent_melt_dose)
+		holder?.remove_reagent(src, solvent_melt_dose)
 	else if(defoliant && istype(O, /obj/effect/vine))
 		qdel(O)
 	else
@@ -776,7 +775,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 /decl/material/proc/touch_turf(var/turf/touching_turf, var/amount, var/datum/reagents/holder) // Cleaner cleaning, lube lubbing, etc, all go here
 
-	if(REAGENT_VOLUME(holder, type) < turf_touch_threshold)
+	if(REAGENT_VOLUME(holder, src) < turf_touch_threshold)
 		return
 
 	if(istype(touching_turf) && touching_turf.simulated)
@@ -787,15 +786,15 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 		if(slipperiness != 0 && !touching_turf.check_fluid_depth()) // Don't make floors slippery if they have an active fluid on top of them please.
 			if(slipperiness < 0)
 				touching_turf.unwet_floor(TRUE)
-			else if (REAGENT_VOLUME(holder, type) >= slippery_amount)
+			else if (REAGENT_VOLUME(holder, src) >= slippery_amount)
 				touching_turf.wet_floor(slipperiness)
 
 	if(length(vapor_products))
-		var/volume = REAGENT_VOLUME(holder, type)
+		var/volume = REAGENT_VOLUME(holder, src)
 		var/temperature = holder?.my_atom?.temperature || T20C
 		for(var/vapor in vapor_products)
 			touching_turf.assume_gas(vapor, (volume * vapor_products[vapor]), temperature)
-		holder.remove_reagent(type, volume)
+		holder.remove_reagent(src, volume)
 
 /decl/material/proc/on_mob_life(var/mob/living/M, var/metabolism_class, var/datum/reagents/holder, var/list/life_dose_tracker)
 
@@ -808,7 +807,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 	// Keep track of dosage of chems across holders for overdosing purposes
 	if(overdose && metabolism_class != CHEM_TOUCH && islist(life_dose_tracker))
-		life_dose_tracker[src] += REAGENT_VOLUME(holder, type)
+		life_dose_tracker[src] += REAGENT_VOLUME(holder, src)
 
 	//determine the metabolism rate
 	var/removed
@@ -830,8 +829,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	if(!(flags & IGNORE_MOB_SIZE))
 		effective *= (MOB_SIZE_MEDIUM/M.mob_size)
 	if(metabolism_class != CHEM_TOUCH)
-		var/dose = LAZYACCESS(M.chem_doses, type) + effective
-		LAZYSET(M.chem_doses, type, dose)
+		var/dose = CHEM_DOSE(M, src) + effective
+		LAZYSET(M._chem_doses, src, dose)
 
 	var/remove_dose = TRUE
 	if(effective >= (metabolism * 0.1) || effective >= 0.1) // If there's too little chemical, don't affect the mob, just remove it
@@ -845,7 +844,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 			if(CHEM_INHALE)
 				affect_inhale(M, effective, holder)
 	if(remove_dose)
-		holder.remove_reagent(type, removed)
+		holder.remove_reagent(src, removed)
 
 /decl/material/proc/affect_blood(var/mob/living/M, var/removed, var/datum/reagents/holder)
 
@@ -857,9 +856,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	if(antibiotic_strength)
 		M.adjust_immunity(-0.1 * antibiotic_strength)
 		M.add_chemical_effect(CE_ANTIBIOTIC, antibiotic_strength)
-		if(REAGENT_VOLUME(holder, type) > 10)
+		if(REAGENT_VOLUME(holder, src) > 10)
 			M.adjust_immunity(-0.3 * antibiotic_strength)
-		if(LAZYACCESS(M.chem_doses, type) > 15)
+		if(CHEM_DOSE(M, src) > 15)
 			M.adjust_immunity(-0.25 * antibiotic_strength)
 
 	if(nutriment_factor || hydration_factor)
@@ -944,7 +943,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 /decl/material/proc/apply_intolerances(mob/living/subject, removed, datum/reagents/holder, ingestion_method)
 
-	var/list/data = REAGENT_DATA(holder, type)
+	var/list/data = REAGENT_DATA(holder, src)
 	var/check_flags = LAZYACCESS(data, DATA_INGREDIENT_FLAGS) | allergen_flags
 	if(!check_flags)
 		return 1
@@ -955,7 +954,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 	var/malus_level = 0
 	for(var/decl/trait/intolerance as anything in intolerances)
-		malus_level = max(malus_level, subject.GetTraitLevel(intolerance.type))
+		malus_level = max(malus_level, subject.get_trait_level(intolerance.type))
 	if(!malus_level)
 		return 1
 
@@ -1026,7 +1025,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 			victim.clean()
 
 	if(solvent_power > MAT_SOLVENT_NONE && removed >= solvent_melt_dose && victim.solvent_act(min(removed * solvent_power * ((removed < solvent_melt_dose) ? 0.1 : 0.2), solvent_max_damage), solvent_melt_dose, solvent_power))
-		holder.remove_reagent(type, REAGENT_VOLUME(holder, type))
+		holder.remove_reagent(src, REAGENT_VOLUME(holder, src))
 		. = TRUE
 
 /decl/material/proc/affect_overdose(mob/living/victim, total_dose) // Overdose effect. Doesn't happen instantly.
@@ -1041,7 +1040,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 /decl/material/proc/mix_data(var/datum/reagents/reagents, var/list/newdata, var/amount)
 	reagents.cached_color = null // colour masking may change
-	. = REAGENT_DATA(reagents, type)
+	. = REAGENT_DATA(reagents, src)
 	if(!length(newdata) || !islist(newdata))
 		return
 
@@ -1053,7 +1052,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 	// Sum our existing taste data with the incoming taste data.
 	var/total_taste = 0
-	var/new_fraction = amount / REAGENT_VOLUME(reagents, type) // the fraction of the total reagent volume that the new data is associated with
+	var/new_fraction = amount / REAGENT_VOLUME(reagents, src) // the fraction of the total reagent volume that the new data is associated with
 	var/list/tastes = list()
 	var/list/newtastes = LAZYACCESS(newdata, DATA_TASTE)
 	for(var/taste in newtastes)
@@ -1088,7 +1087,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	// Blend our extra_colour...
 	var/new_extra_color = newdata?[DATA_EXTRA_COLOR]
 	if(new_extra_color)
-		.[DATA_EXTRA_COLOR] = BlendRGBasHSV(new_extra_color, .[DATA_EXTRA_COLOR], new_fraction)
+		.[DATA_EXTRA_COLOR] = BlendHSV(new_extra_color, .[DATA_EXTRA_COLOR], new_fraction)
 
 /decl/material/proc/explosion_act(obj/item/chems/holder, severity)
 	SHOULD_CALL_PARENT(TRUE)
@@ -1099,8 +1098,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 /decl/material/proc/get_presentation_name(var/obj/item/prop)
 	if(islist(prop?.reagents?.reagent_data))
-		. = LAZYACCESS(prop.reagents.reagent_data[type], DATA_MASK_NAME)
-	. ||= glass_name || liquid_name
+		. = LAZYACCESS(prop.reagents.reagent_data[src], DATA_MASK_NAME)
+	. ||= glass_name || get_reagent_name(prop?.reagents)
 	if(prop?.reagents?.total_volume)
 		. = build_presentation_name_from_reagents(prop, .)
 
@@ -1171,12 +1170,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 	// If it's not ignitable but can be boiled, consider vaporizing it.
 	if(!isnull(boiling_point) && burn_temperature >= boiling_point)
-		LAZYSET(., type, amount)
+		LAZYSET(., src, amount)
 
 /decl/material/proc/get_reagent_name(datum/reagents/holder, phase = MAT_PHASE_LIQUID)
 
 	if(istype(holder) && holder.reagent_data)
-		var/list/rdata = holder.reagent_data[type]
+		var/list/rdata = holder.reagent_data[src]
 		if(rdata)
 			var/data_name = rdata[DATA_MASK_NAME]
 			if(data_name)
@@ -1201,7 +1200,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 
 /decl/material/proc/get_reagent_color(datum/reagents/holder)
 	if(istype(holder) && holder.reagent_data)
-		var/list/rdata = holder.reagent_data[type]
+		var/list/rdata = holder.reagent_data[src]
 		if(rdata)
 			var/data_color = rdata[DATA_MASK_COLOR]
 			if(data_color)
@@ -1209,7 +1208,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/gas_overlay)
 	return color
 
 /decl/material/proc/get_reagent_overlay_color(datum/reagents/holder)
-	var/list/rdata = REAGENT_DATA(holder, type)
+	var/list/rdata = REAGENT_DATA(holder, src)
 	return LAZYACCESS(rdata, DATA_EXTRA_COLOR) || get_reagent_color(holder) + num2hex(opacity * 255)
 
 /decl/material/proc/can_hold_sharpness()

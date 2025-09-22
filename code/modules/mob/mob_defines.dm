@@ -92,7 +92,7 @@
 	//The last mob/living to push/drag/grab this mob (mostly used by slimes friend recognition)
 	var/weakref/last_handled_by_mob
 
-	var/status_flags = CANSTUN|CANWEAKEN|CANPARALYSE|CANPUSH	//bitflags defining which status effects can be inflicted (replaces canweaken, canstun, etc)
+	var/status_flags = CANSTUN|CANWEAKEN|CANPARALYSE|CANPUSH	//bitflags defining which status conditions can be inflicted (replaces canweaken, canstun, etc)
 
 	var/area/lastarea = null
 
@@ -115,7 +115,7 @@
 
 	var/flavor_text = ""
 
-	var/datum/skillset/skillset = /datum/skillset
+	var/datum/skillset/skillset
 
 	var/list/additional_vision_handlers // A lazylist of atoms from which additional vision data is retrieved
 

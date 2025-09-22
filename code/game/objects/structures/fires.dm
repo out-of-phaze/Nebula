@@ -277,36 +277,36 @@
 					environment.adjust_gas(w, waste[w], FALSE)
 			environment.update_values()
 
-/obj/structure/fire_source/attackby(var/obj/item/thing, var/mob/user)
+/obj/structure/fire_source/attackby(var/obj/item/used_item, var/mob/user)
 
 	// Gate a few interactions behind intent so they can be bypassed if needed.
 	if(!user.check_intent(I_FLAG_HARM))
 		// Put cooking items onto the fire source.
-		if(istype(thing, /obj/item/chems/cooking_vessel) && user.try_unequip(thing, get_turf(src)))
-			thing.reset_offsets()
+		if(istype(used_item, /obj/item/chems/cooking_vessel) && user.try_unequip(used_item, get_turf(src)))
+			used_item.reset_offsets()
 			return TRUE
 		// Pour fuel or water into a fire.
-		if(istype(thing, /obj/item/chems))
-			var/obj/item/chems/chems = thing
+		if(istype(used_item, /obj/item/chems))
+			var/obj/item/chems/chems = used_item
 			if(chems.standard_pour_into(user, src))
 				return TRUE
 
-	if(lit == FIRE_LIT && istype(thing, /obj/item/flame))
-		thing.fire_act(return_air(), get_effective_burn_temperature(), 500)
+	if(lit == FIRE_LIT && istype(used_item, /obj/item/flame))
+		used_item.fire_act(return_air(), get_effective_burn_temperature(), 500)
 		return TRUE
 
-	if(thing.isflamesource())
-		visible_message(SPAN_NOTICE("\The [user] attempts to light \the [src] with \the [thing]."))
-		try_light(thing.get_heat())
+	if(used_item.isflamesource())
+		visible_message(SPAN_NOTICE("\The [user] attempts to light \the [src] with \the [used_item]."))
+		try_light(used_item.get_heat())
 		return TRUE
 
 	if((lit != FIRE_LIT || user.check_intent(I_FLAG_HARM)))
 		// Only drop in one log at a time.
-		if(istype(thing, /obj/item/stack))
-			var/obj/item/stack/stack = thing
-			thing = stack.split(1)
-		if(!QDELETED(thing) && user.try_unequip(thing, src))
-			user.visible_message(SPAN_NOTICE("\The [user] drops \the [thing] into \the [src]."))
+		if(istype(used_item, /obj/item/stack))
+			var/obj/item/stack/stack = used_item
+			used_item = stack.split(1)
+		if(!QDELETED(used_item) && user.try_unequip(used_item, src))
+			user.visible_message(SPAN_NOTICE("\The [user] drops \the [used_item] into \the [src]."))
 		update_icon()
 		return TRUE
 
@@ -366,13 +366,12 @@
 		var/do_steam = FALSE
 		var/list/waste = list()
 
-		for(var/rtype in reagents?.reagent_volumes)
+		for(var/decl/material/reagent as anything in reagents?.reagent_volumes)
 
-			var/decl/material/reagent = GET_DECL(rtype)
 			if(reagent.accelerant_value <= FUEL_VALUE_SUPPRESSANT && !isnull(reagent.boiling_point) && reagent.boiling_point < get_effective_burn_temperature())
 				do_steam = TRUE
 
-			var/volume = NONUNIT_CEILING(REAGENT_VOLUME(reagents, rtype) / REAGENT_UNITS_PER_GAS_MOLE, 0.1)
+			var/volume = NONUNIT_CEILING(REAGENT_VOLUME(reagents, reagent) / REAGENT_UNITS_PER_GAS_MOLE, 0.1)
 			var/list/waste_products = burn_material(reagent, volume)
 			if(!isnull(waste_products))
 				for(var/product in waste_products)

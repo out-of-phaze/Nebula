@@ -1,12 +1,13 @@
 /obj/item/ammo_casing
 	name = "bullet casing"
 	desc = "A bullet casing."
-	icon = 'icons/obj/ammo.dmi'
-	icon_state = "pistolcasing"
+	icon = 'icons/obj/ammo/casings/pistol.dmi'
+	icon_state = ICON_STATE_WORLD + "-preview"
 	randpixel = 10
 	obj_flags = OBJ_FLAG_CONDUCTIBLE | OBJ_FLAG_HOLLOW
 	slot_flags = SLOT_LOWER_BODY | SLOT_EARS
 	w_class = ITEM_SIZE_TINY
+	color = /decl/material/solid/metal/brass::color // mapping preview color
 	material = /decl/material/solid/metal/brass
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME
 	drop_sound = list(
@@ -15,11 +16,10 @@
 		'sound/weapons/guns/casingfall3.ogg'
 	)
 
-	var/leaves_residue = 1
+	var/leaves_residue = TRUE
 	var/caliber = ""					//Which kind of guns it can be loaded into
 	var/projectile_type					//The bullet type to create when New() is called
 	var/obj/item/projectile/BB = null	//The loaded bullet - make it so that the projectiles are created only when needed?
-	var/spent_icon = "pistolcasing-spent"
 	var/bullet_color = COLOR_COPPER
 	var/marking_color
 
@@ -34,9 +34,6 @@
 		if(caliber && istype(BB, /obj/item/projectile/bullet))
 			var/obj/item/projectile/bullet/B = BB
 			B.caliber = caliber
-	if(randpixel)
-		pixel_x = rand(-randpixel, randpixel)
-		pixel_y = rand(-randpixel, randpixel)
 	. = ..()
 
 /obj/item/ammo_casing/Destroy()
@@ -89,8 +86,8 @@
 		var/datum/extension/forensic_evidence/forensics = get_or_create_extension(A, /datum/extension/forensic_evidence)
 		forensics.add_from_atom(/datum/forensics/gunshot_residue, src)
 
-/obj/item/ammo_casing/attackby(obj/item/W, mob/user)
-	if(!IS_SCREWDRIVER(W))
+/obj/item/ammo_casing/attackby(obj/item/used_item, mob/user)
+	if(!IS_SCREWDRIVER(used_item))
 		return ..()
 	if(!BB)
 		to_chat(user, "<span class='notice'>There is no bullet in the casing to inscribe anything into.</span>")
@@ -108,19 +105,21 @@
 		BB.SetName("[initial(BB.name)] (\"[label_text]\")")
 	return TRUE
 
+// This is separate because on_update_icon() needs to call parent,
+// and shells need to override this.
+/obj/item/ammo_casing/proc/update_casing_icon()
+	if(BB)
+		var/image/I = overlay_image(icon, "[icon_state]-bullet", bullet_color, flags=RESET_COLOR)
+		I.dir = dir // don't overlays inherit dir already? is this needed?
+		add_overlay(I)
+	if(marking_color)
+		var/image/I = overlay_image(icon, "[icon_state]-marking", marking_color, flags=RESET_COLOR)
+		I.dir = dir
+		add_overlay(I)
+
 /obj/item/ammo_casing/on_update_icon()
 	. = ..()
-	if(use_single_icon)
-		if(BB)
-			var/image/I = overlay_image(icon, "[icon_state]-bullet", bullet_color, flags=RESET_COLOR)
-			I.dir = dir
-			add_overlay(I)
-		if(marking_color)
-			var/image/I = overlay_image(icon, "[icon_state]-marking", marking_color, flags=RESET_COLOR)
-			I.dir = dir
-			add_overlay(I)
-	else if(spent_icon && !BB)
-		icon_state = spent_icon
+	update_casing_icon()
 
 /obj/item/ammo_casing/update_name()
 	. = ..()
@@ -177,6 +176,16 @@
 		stored_ammo += new ammo_type(src)
 	contents_initialized = TRUE
 
+/obj/item/ammo_magazine/get_contained_matter(include_reagents = TRUE)
+	. = ..()
+	if(!lazyload_contents || contents_initialized || !ammo_type || !initial_ammo)
+		return
+	// Add our expected matter from lazyloaded stuff.
+	var/list/ammo_matter = atom_info_repository.get_matter_for(ammo_type).Copy()
+	for(var/matter_entry in ammo_matter)
+		ammo_matter[matter_entry] *= initial_ammo
+	. = MERGE_ASSOCS_WITH_NUM_VALUES(., ammo_matter)
+
 /obj/item/ammo_magazine/proc/get_stored_ammo_count()
 	. = length(stored_ammo)
 	if(!contents_initialized)
@@ -198,10 +207,10 @@
 		SetName("[name] ([english_list(labels, and_text = ", ")])")
 	update_icon()
 
-/obj/item/ammo_magazine/attackby(obj/item/W, mob/user)
-	if(!istype(W, /obj/item/ammo_casing))
+/obj/item/ammo_magazine/attackby(obj/item/used_item, mob/user)
+	if(!istype(used_item, /obj/item/ammo_casing))
 		return ..()
-	var/obj/item/ammo_casing/C = W
+	var/obj/item/ammo_casing/C = used_item
 	if(C.caliber != caliber)
 		to_chat(user, "<span class='warning'>[C] does not fit into [src].</span>")
 		return TRUE
@@ -216,11 +225,11 @@
 	return TRUE
 
 /obj/item/ammo_magazine/attack_self(mob/user)
-	create_initial_contents()
-	if(!stored_ammo.len)
-		to_chat(user, "<span class='notice'>[src] is already empty!</span>")
+	if(!get_stored_ammo_count())
+		to_chat(user, SPAN_NOTICE("[src] is already empty!"))
 		return
-	to_chat(user, "<span class='notice'>You empty [src].</span>")
+	to_chat(user, SPAN_NOTICE("You empty [src]."))
+	create_initial_contents()
 	for(var/obj/item/ammo_casing/C in stored_ammo)
 		C.forceMove(user.loc)
 		C.set_dir(pick(global.alldirs))
@@ -231,12 +240,12 @@
 /obj/item/ammo_magazine/attack_hand(mob/user)
 	if(!user.is_holding_offhand(src) || !user.check_dexterity(DEXTERITY_HOLD_ITEM, TRUE))
 		return ..()
-	create_initial_contents()
-	if(!stored_ammo.len)
+	if(!get_stored_ammo_count())
 		to_chat(user, SPAN_NOTICE("\The [src] is already empty!"))
 		return TRUE
+	create_initial_contents()
 	var/obj/item/ammo_casing/C = stored_ammo[stored_ammo.len]
-	stored_ammo-=C
+	stored_ammo -= C
 	user.put_in_hands(C)
 	user.visible_message(
 		"\The [user] removes \a [C] from [src].",

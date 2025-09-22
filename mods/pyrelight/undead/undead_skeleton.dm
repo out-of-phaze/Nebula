@@ -32,28 +32,27 @@
 /mob/living/human/skeleton
 	skillset = /datum/skillset/undead
 
-/mob/living/human/skeleton/post_setup(species_name, datum/mob_snapshot/supplied_appearance)
+/mob/living/human/skeleton/post_setup(species_uid, datum/mob_snapshot/supplied_appearance)
 	. = ..()
 	make_skeleton()
 	grant_basic_undead_equipment()
 
-/mob/living/human/skeleton/Initialize(mapload, species_name, datum/mob_snapshot/supplied_appearance)
-	if(!species_name)
-		species_name = SPECIES_HUMAN
+/mob/living/human/skeleton/Initialize(mapload, species_uid, datum/mob_snapshot/supplied_appearance)
+	if(!species_uid)
+		species_uid = /decl/species/human::uid
 	. = ..()
 
-/mob/living/human/skeleton/hnoll/Initialize(mapload, species_name, datum/mob_snapshot/supplied_appearance)
-	if(!species_name)
-		species_name = SPECIES_HNOLL
+/mob/living/human/skeleton/hnoll/Initialize(mapload, species_uid, datum/mob_snapshot/supplied_appearance)
+	if(!species_uid)
+		species_uid = /decl/species/hnoll::uid
 	. = ..()
 
-/mob/living/human/skeleton/kobaloi/Initialize(mapload, species_name, datum/mob_snapshot/supplied_appearance)
-	if(!species_name)
-		species_name = SPECIES_KOBALOI
+/mob/living/human/skeleton/kobaloi/Initialize(mapload, species_uid, datum/mob_snapshot/supplied_appearance)
+	if(!species_uid)
+		species_uid = /decl/species/kobaloi::uid
 	. = ..()
 
-/mob/living/human/skeleton/meredrake/Initialize(mapload, species_name, datum/mob_snapshot/supplied_appearance)
-	if(!species_name)
-		var/decl/species/grafadreka/drakes = GET_DECL(/decl/species/grafadreka)
-		species_name = drakes.name
+/mob/living/human/skeleton/meredrake/Initialize(mapload, species_uid, datum/mob_snapshot/supplied_appearance)
+	if(!species_uid)
+		species_uid = /decl/species/grafadreka::uid
 	. = ..()

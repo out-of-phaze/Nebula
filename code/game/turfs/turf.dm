@@ -19,7 +19,6 @@
 
 	//Properties for airtight tiles (/wall)
 	var/thermal_conductivity = 0.05
-	var/heat_capacity = 1
 
 	//Properties for both
 	/// Does this turf contain air/let air through?
@@ -242,20 +241,20 @@
 		grab.affecting.DoMove(get_dir(grab.affecting.loc, src), user, TRUE)
 	return TRUE
 
-/turf/attackby(obj/item/W, mob/user)
+/turf/attackby(obj/item/used_item, mob/user)
 
 	if(is_floor())
 
-		if(istype(W, /obj/item/stack/tile))
-			var/obj/item/stack/tile/T = W
+		if(istype(used_item, /obj/item/stack/tile))
+			var/obj/item/stack/tile/T = used_item
 			T.try_build_turf(user, src)
 			return TRUE
 
-		if(IS_HOE(W) && can_dig_farm(W.material?.hardness))
-			try_dig_farm(user, W)
+		if(IS_HOE(used_item) && can_dig_farm(used_item.material?.hardness))
+			try_dig_farm(user, used_item)
 			return TRUE
 
-		if(IS_SHOVEL(W))
+		if(IS_SHOVEL(used_item))
 
 			// TODO: move these checks into the interaction handlers.
 			var/atom/platform = get_supporting_platform()
@@ -263,20 +262,20 @@
 				to_chat(user, SPAN_WARNING("\The [platform] [platform.get_pronouns().is] in the way!"))
 				return TRUE
 
-			if(!can_be_dug(W.material?.hardness))
-				to_chat(user, SPAN_WARNING("\The [src] is too hard to be dug with \the [W]."))
+			if(!can_be_dug(used_item.material?.hardness))
+				to_chat(user, SPAN_WARNING("\The [src] is too hard to be dug with \the [used_item]."))
 				return TRUE
 
-			if(user.check_intent(I_FLAG_HELP) && can_dig_pit(W.material?.hardness))
-				try_dig_pit(user, W)
-			else if(can_dig_trench(W.material?.hardness))
-				try_dig_trench(user, W)
+			if(user.check_intent(I_FLAG_HELP) && can_dig_pit(used_item.material?.hardness))
+				try_dig_pit(user, used_item)
+			else if(can_dig_trench(used_item.material?.hardness))
+				try_dig_trench(user, used_item)
 			else
-				to_chat(user, SPAN_WARNING("You cannot dig anything out of \the [src] with \the [W]."))
+				to_chat(user, SPAN_WARNING("You cannot dig anything out of \the [src] with \the [used_item]."))
 			return TRUE
 
 		var/decl/material/material = get_material()
-		if(IS_PICK(W) && material)
+		if(IS_PICK(used_item) && material)
 
 			// TODO: move these checks into the interaction handlers.
 			var/atom/platform = get_supporting_platform()
@@ -285,29 +284,29 @@
 				return TRUE
 
 			if(material?.hardness <= MAT_VALUE_FLEXIBLE)
-				to_chat(user, SPAN_WARNING("\The [src] is too soft to be excavated with \the [W]. Use a shovel."))
+				to_chat(user, SPAN_WARNING("\The [src] is too soft to be excavated with \the [used_item]. Use a shovel."))
 				return TRUE
 
 			// Let picks dig out hard turfs, but not dig pits.
-			if(!can_be_dug(W.material?.hardness, using_tool = TOOL_PICK))
-				to_chat(user, SPAN_WARNING("\The [src] is too hard to be excavated with \the [W]."))
+			if(!can_be_dug(used_item.material?.hardness, using_tool = TOOL_PICK))
+				to_chat(user, SPAN_WARNING("\The [src] is too hard to be excavated with \the [used_item]."))
 				return TRUE
 
-			if(can_dig_trench(W.material?.hardness, using_tool = TOOL_PICK))
-				try_dig_trench(user, W, using_tool = TOOL_PICK)
+			if(can_dig_trench(used_item.material?.hardness, using_tool = TOOL_PICK))
+				try_dig_trench(user, used_item, using_tool = TOOL_PICK)
 			else
-				to_chat(user, SPAN_WARNING("You cannot excavate \the [src] with \the [W]."))
+				to_chat(user, SPAN_WARNING("You cannot excavate \the [src] with \the [used_item]."))
 
 			return TRUE
 
-		if(W?.storage?.collection_mode && W.storage.gather_all(src, user))
+		if(used_item?.storage?.collection_mode && used_item.storage.gather_all(src, user))
 			return TRUE
 
-	if(istype(W, /obj/item) && storage && storage.use_to_pickup && storage.collection_mode)
+	if(istype(used_item, /obj/item) && storage && storage.use_to_pickup && storage.collection_mode)
 		storage.gather_all(src, user)
 		return TRUE
 
-	if(IS_COIL(W) && try_build_cable(W, user))
+	if(IS_COIL(used_item) && try_build_cable(used_item, user))
 		return TRUE
 
 	return ..()
@@ -421,15 +420,18 @@
 				L.Add(t)
 	return L
 
-/turf/proc/contains_dense_objects(list/exceptions)
-	if(density)
-		return TRUE
+/turf/proc/get_first_dense_object(list/exceptions)
 	for(var/atom/A in src)
 		if(exceptions && (exceptions == A || (islist(exceptions) && (A in exceptions))))
 			continue
 		if(A.density && !(A.atom_flags & ATOM_FLAG_CHECKS_BORDER))
-			return TRUE
-	return FALSE
+			return A
+	return null
+
+/turf/proc/contains_dense_objects(list/exceptions)
+	if(density)
+		return TRUE
+	return !!get_first_dense_object(exceptions)
 
 /turf/proc/remove_cleanables()
 	for(var/obj/effect/decal/cleanable/cleanable in src)
@@ -475,7 +477,7 @@
 		return
 
 	var/too_much_graffiti = 0
-	for(var/obj/effect/decal/writing/W in src)
+	for(var/obj/effect/decal/writing/writing in src)
 		too_much_graffiti++
 	if(too_much_graffiti >= 5)
 		to_chat(vandal, "<span class='warning'>There's too much graffiti here to add more.</span>")
@@ -864,7 +866,7 @@
 	if(IS_HOE(held) && can_dig_farm(held.material?.hardness))
 		LAZYADD(., /decl/interaction_handler/dig/farm)
 
-/// Contaminant may be the chemical type of the footprint being provided,
+/// Contaminant may be the chemical decl of the footprint being provided,
 /// or null if we just want to know if we support footprints, at all, ever.
 /turf/proc/can_show_coating_footprints(decl/material/contaminant)
 	return simulated

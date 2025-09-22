@@ -29,10 +29,8 @@
 	var/list/decl/bodytype/bodytypes_allowed
 	/// Restricted from specific bodytypes. null matches none
 	var/list/decl/bodytype/bodytypes_denied
-	/// Restrict some styles to specific root species names
-	var/list/species_allowed = list(SPECIES_HUMAN)
-	/// Restrict some styles to specific species names, irrespective of root species name
-	var/list/subspecies_allowed
+	/// Restrict some styles to specific species UIDs.
+	var/list/species_allowed = list(/decl/species/human::uid)
 	/// Restrict some styles to specific bodytype flags.
 	var/body_flags_allowed
 	/// Restrict some styles to specific bodytype flags.
@@ -90,9 +88,7 @@
 	if(species)
 		var/species_is_permitted = TRUE
 		if(species_allowed)
-			species_is_permitted = (species.get_root_species_name(owner) in species_allowed)
-		if(subspecies_allowed)
-			species_is_permitted = (species.name in subspecies_allowed)
+			species_is_permitted = (species.uid in species_allowed)
 		if(!species_is_permitted)
 			return FALSE
 	if(bodytype)
@@ -265,5 +261,8 @@
 	return list(SAM_COLOR = get_random_colour())
 
 /decl/sprite_accessory_category/proc/prepare_character(mob/living/character, list/accessories)
+	return
+
+/decl/sprite_accessory_category/proc/prepare_mob_snapshot(datum/mob_snapshot/snapshot, list/accessories)
 	return
 
