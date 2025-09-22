@@ -1145,7 +1145,7 @@
 /mob/living/human/get_attack_telegraph_delay()
 	return client ? 0 : DEFAULT_ATTACK_COOLDOWN
 
-/mob/living/human/set_status(condition, amount)
+/mob/living/human/set_status_condition(condition, amount)
 	if(has_trait(/decl/trait/undead))
 		var/static/list/ignore_status_conditions = list(
 			STAT_BLIND,

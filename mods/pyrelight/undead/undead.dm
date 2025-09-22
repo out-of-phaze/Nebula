@@ -8,7 +8,7 @@
 /mob/living/human/proc/grant_basic_undead_equipment()
 
 	var/species_name = get_species_name()
-	if(species_name == SPECIES_HUMAN || species_name == SPECIES_HNOLL)
+	if(species_name == /decl/species/human::name || species_name == /decl/species/hnoll::name)
 		var/pants_type = pick(/obj/item/clothing/pants/trousers, /obj/item/clothing/pants/trousers/braies)
 		equip_to_slot_or_del(new pants_type(src), slot_w_uniform_str)
 
@@ -26,7 +26,7 @@
 			put_in_inactive_hand(new /obj/item/shield/crafted/buckler(src))
 		return
 
-	if(species_name == SPECIES_KOBALOI)
+	if(species_name == /decl/species/kobaloi::name)
 
 		var/pants_type = pick(/obj/item/clothing/pants/trousers/braies, /obj/item/clothing/pants/loincloth)
 		equip_to_slot_or_del(new pants_type(src), slot_w_uniform_str)
