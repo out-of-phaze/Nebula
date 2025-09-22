@@ -183,7 +183,7 @@ else if(##equipment_var) {\
 			to_chat(H, "<span class='danger'>You cannot deploy your helmet while wearing \the [head].</span>")
 			return
 		if(H.equip_to_slot_if_possible(helmet, slot_head_str))
-			helmet.on_picked_up(H)
+			helmet.on_picked_up(H, src)
 			helmet.canremove = 0
 			playsound(loc, helmet_deploy_sound, 30)
 			to_chat(H, "<span class='info'>You deploy your suit helmet, sealing you off from the world.</span>")
@@ -216,9 +216,9 @@ else if(##equipment_var) {\
 	src.tank = null
 	playsound(loc, 'sound/effects/spray3.ogg', 50)
 
-/obj/item/clothing/suit/space/void/attackby(obj/item/W, mob/user)
+/obj/item/clothing/suit/space/void/attackby(obj/item/used_item, mob/user)
 
-	if(IS_SCREWDRIVER(W))
+	if(IS_SCREWDRIVER(used_item))
 		if(user.get_equipped_slot_for_item(src) == slot_wear_suit_str)//maybe I should make this into a proc?
 			to_chat(user, "<span class='warning'>You cannot modify \the [src] while it is being worn.</span>")
 		else if(helmet || boots || tank)
@@ -241,36 +241,36 @@ else if(##equipment_var) {\
 			to_chat(user, "\The [src] does not have anything installed.")
 		return TRUE
 
-	if(istype(W,/obj/item/clothing/head/helmet/space))
+	if(istype(used_item,/obj/item/clothing/head/helmet/space))
 		if(user.get_equipped_slot_for_item(src) == slot_wear_suit_str)
 			to_chat(user, "<span class='warning'>You cannot modify \the [src] while it is being worn.</span>")
 		else if(helmet)
 			to_chat(user, "\The [src] already has a helmet installed.")
-		else if(user.try_unequip(W, src))
-			to_chat(user, "You attach \the [W] to \the [src]'s helmet mount.")
-			src.helmet = W
+		else if(user.try_unequip(used_item, src))
+			to_chat(user, "You attach \the [used_item] to \the [src]'s helmet mount.")
+			src.helmet = used_item
 			playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
 		return TRUE
 
-	if(istype(W,/obj/item/clothing/shoes/magboots))
+	if(istype(used_item,/obj/item/clothing/shoes/magboots))
 		if(user.get_equipped_slot_for_item(src) == slot_wear_suit_str)
 			to_chat(user, "<span class='warning'>You cannot modify \the [src] while it is being worn.</span>")
 		else if(boots)
 			to_chat(user, "\The [src] already has magboots installed.")
-		else if(user.try_unequip(W, src))
-			to_chat(user, "You attach \the [W] to \the [src]'s boot mounts.")
-			boots = W
+		else if(user.try_unequip(used_item, src))
+			to_chat(user, "You attach \the [used_item] to \the [src]'s boot mounts.")
+			boots = used_item
 			playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
 		return TRUE
 
-	if(istype(W,/obj/item/tank))
+	if(istype(used_item,/obj/item/tank))
 		if(user.get_equipped_slot_for_item(src) == slot_wear_suit_str)
 			to_chat(user, "<span class='warning'>You cannot modify \the [src] while it is being worn.</span>")
 		else if(tank)
 			to_chat(user, "\The [src] already has an airtank installed.")
-		else if(user.try_unequip(W, src))
-			to_chat(user, "You insert \the [W] into \the [src]'s storage compartment.")
-			tank = W
+		else if(user.try_unequip(used_item, src))
+			to_chat(user, "You insert \the [used_item] into \the [src]'s storage compartment.")
+			tank = used_item
 			playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
 		return TRUE
 

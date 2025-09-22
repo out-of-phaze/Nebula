@@ -1,38 +1,59 @@
 /obj/item/organ
-	name = "organ"
-	icon = 'icons/obj/surgery.dmi'
-	germ_level = 0
-	w_class = ITEM_SIZE_SMALL
+	name                = "organ"
+	icon                = 'icons/obj/surgery.dmi'
+	germ_level          = 0
+	w_class             = ITEM_SIZE_SMALL
 	default_action_type = /datum/action/item_action/organ
-	origin_tech = @'{"materials":1,"biotech":1}'
-	abstract_type = /obj/item/organ
+	origin_tech         = @'{"materials":1,"biotech":1}'
+	abstract_type       = /obj/item/organ
+	pickup_sound        = 'sound/foley/meat1.ogg'
+	drop_sound          = 'sound/foley/meat2.ogg'
+	hitsound            = 'sound/effects/squelch1.ogg'
 
 	// Strings.
-	var/organ_tag = "organ"                // Unique identifier.
-	var/organ_category                     // Identifier for use in organ collections, unused if unset. Would be nice to make this a list, but bodytypes rely on initial() with it.
-	var/parent_organ = BP_CHEST            // Organ holding this object.
+	/// Unique identifier.
+	var/organ_tag = "organ"
+	/// Identifier for use in organ collections, unused if unset. Would be nice to make this a list, but bodytypes rely on initial() with it.
+	var/organ_category
+	/// Organ holding this object.
+	var/parent_organ = BP_CHEST
 
 	// Status tracking.
-	var/status = 0                         // Various status flags (such as robotic)
-	var/organ_properties = 0               // A flag for telling what capabilities this organ has. ORGAN_PROP_PROSTHETIC, ORGAN_PROP_CRYSTAL, etc..
-	var/vital_to_owner                     // Cache var for vitality to current owner.
+	/// Various status flags (such as robotic)
+	var/status = 0
+	/// A flag for telling what capabilities this organ has. ORGAN_PROP_PROSTHETIC, ORGAN_PROP_CRYSTAL, etc..
+	var/organ_properties = 0
+	/// Cache var for vitality to current owner.
+	var/vital_to_owner
 
 	// Reference data.
 	var/datum/mob_snapshot/organ_appearance
-	var/mob/living/human/owner      // Current mob owning the organ.
-	var/decl/species/species               // Original species.
-	var/decl/bodytype/bodytype             // Original bodytype.
-	var/decl/bodytype/appearance_bodytype  // A bodytype used only for icons, marking validation and equipment offsets.
-	var/list/ailments                      // Current active ailments if any.
-	var/meat_name                          // Taken from first owner.
+	/// Current mob owning the organ.
+	var/mob/living/human/owner
+	/// Original species.
+	var/decl/species/species
+	/// Original bodytype.
+	var/decl/bodytype/bodytype
+	/// A bodytype used only for icons, marking validation and equipment offsets.
+	var/decl/bodytype/appearance_bodytype
+	/// Current active ailments if any.
+	var/list/ailments
+	/// Taken from first owner.
+	var/meat_name
 
 	// Damage vars.
-	var/min_broken_damage = 30             // Damage before becoming broken
-	var/max_damage = 30                    // Damage cap, including scarring
-	var/absolute_max_damage = 0            // Lifetime damage cap, ignoring scarring.
-	var/rejecting                          // Is this organ already being rejected?
-	var/death_time                         // REALTIMEOFDAY at moment of death.
-	var/scale_max_damage_to_species_health // Whether or not we should scale the damage values of this organ to the owner species.
+	/// Damage before becoming broken
+	var/min_broken_damage = 30
+	/// Damage cap, including scarring
+	var/max_damage = 30
+	/// Lifetime damage cap, ignoring scarring.
+	var/absolute_max_damage = 0
+	/// Is this organ already being rejected?
+	var/rejecting
+	/// REALTIMEOFDAY at moment of death.
+	var/death_time
+	/// Whether or not we should scale the damage values of this organ to the owner species.
+	var/scale_max_damage_to_species_health
 
 	/// Set to true if this organ should return info to Stat(). See get_stat_info().
 	var/has_stat_info
@@ -123,8 +144,11 @@
 		QDEL_NULL(organ_appearance)
 		organ_appearance = supplied_appearance.Clone()
 	blood_DNA = list(organ_appearance.unique_enzymes = organ_appearance.blood_type)
-	set_species(organ_appearance.root_species?.name || global.using_map.default_species)
-	if(organ_appearance.root_bodytype)
+	if(species != organ_appearance.root_species)
+		if(organ_appearance.root_bodytype && organ_appearance.root_bodytype != bodytype)
+			bodytype = organ_appearance.root_bodytype // this lets us take advantage of set_bodytype being called in set_species
+		set_species(organ_appearance.root_species?.uid || global.using_map.default_species)
+	else if(organ_appearance.root_bodytype && organ_appearance.root_bodytype != bodytype)
 		set_bodytype(organ_appearance.root_bodytype)
 
 /obj/item/organ/proc/set_bodytype(decl/bodytype/new_bodytype, override_material = null, apply_to_internal_organs = TRUE)
@@ -167,15 +191,15 @@
 	absolute_max_damage = floor(ndamage)
 	max_damage = absolute_max_damage
 
-/obj/item/organ/proc/set_species(specie_name)
+/obj/item/organ/proc/set_species(species_uid)
 	vital_to_owner = null // This generally indicates the owner mob is having species set, and this value may be invalidated.
-	if(istext(specie_name))
-		species = get_species_by_key(specie_name)
+	if(istext(species_uid))
+		species = decls_repository.get_decl_by_id(species_uid)
 	else
-		species = specie_name
+		species = species_uid
 	if(!species)
-		species = get_species_by_key(global.using_map.default_species)
-		PRINT_STACK_TRACE("Invalid species. Expected a valid species name as string, was: [log_info_line(specie_name)]")
+		species = decls_repository.get_decl_by_id(global.using_map.default_species)
+		PRINT_STACK_TRACE("Invalid species. Expected a valid species UID as string, was: [log_info_line(species_uid)]")
 
 	set_bodytype(bodytype || species.default_bodytype, override_material = material?.type)
 
@@ -245,9 +269,9 @@
 /obj/item/organ/proc/handle_ailment(var/datum/ailment/ailment)
 	if(ailment.treated_by_reagent_type)
 		for(var/datum/reagents/source as anything in owner.get_metabolizing_reagent_holders())
-			for(var/reagent_type in source.reagent_volumes)
-				if(ailment.treated_by_medication(reagent_type, source.reagent_volumes[reagent_type]))
-					ailment.was_treated_by_medication(source, reagent_type)
+			for(var/decl/material/reagent as anything in source.reagent_volumes)
+				if(ailment.treated_by_medication(reagent.type, source.reagent_volumes[reagent]))
+					ailment.was_treated_by_medication(source, reagent.type)
 					return
 	if(ailment.treated_by_chem_effect && owner.has_chemical_effect(ailment.treated_by_chem_effect, ailment.treated_by_chem_effect_strength))
 		ailment.was_treated_by_chem_effect()

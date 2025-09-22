@@ -212,9 +212,9 @@
 		info["key"] = S.key
 
 		if(isrobot(S))
-			var/mob/living/silicon/robot/R = S
-			info["master"] = R.connected_ai?.name
-			info["sync"] = R.lawupdate
+			var/mob/living/silicon/robot/robot = S
+			info["master"] = robot.connected_ai?.name
+			info["sync"] = robot.lawupdate
 
 		if(!S.laws)
 			info["laws"] = null
@@ -263,7 +263,6 @@
 		info["turf"] = MT ? "[MT] @ [MT.x], [MT.y], [MT.z]" : "null"
 		info["area"] = MT ? "[MT.loc]" : "null"
 		info["antag"] = M.mind ? (M.mind.get_special_role_name("Not antag")) : "No mind"
-		info["hasbeenrev"] = M.mind ? M.mind.has_been_rev : "No mind"
 		info["stat"] = M.stat
 		info["type"] = M.type
 		if(isliving(M))

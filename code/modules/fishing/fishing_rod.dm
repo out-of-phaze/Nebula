@@ -6,6 +6,7 @@
 	name = "fishing rod"
 	desc = "A simple fishing rod with eyelets for stringing a line."
 	material = /decl/material/solid/organic/wood/oak
+	color = /decl/material/solid/organic/wood/oak::color
 	matter = null
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME | MAT_FLAG_ALTERATION_DESC
 	icon = 'icons/obj/fishing_rod.dmi'
@@ -231,12 +232,12 @@
 
 	return ..()
 
-/obj/item/fishing_rod/attackby(obj/item/W, mob/user)
+/obj/item/fishing_rod/attackby(obj/item/used_item, mob/user)
 
-	if(load_line(user, W))
+	if(load_line(user, used_item))
 		return TRUE
 
-	if(istype(W, /obj/item/food))
+	if(istype(used_item, /obj/item/food))
 
 		if(bait)
 			to_chat(user, SPAN_WARNING("\The [src] already has \a [bait] on the hook."))
@@ -246,9 +247,9 @@
 			to_chat(user, SPAN_WARNING("\The [src] needs a line before you can bait it."))
 			return TRUE
 
-		if(user.try_unequip(W, src))
-			bait = W
-			to_chat(user, SPAN_NOTICE("You thread \the [W] onto \the [src]'s hook."))
+		if(user.try_unequip(used_item, src))
+			bait = used_item
+			to_chat(user, SPAN_NOTICE("You thread \the [used_item] onto \the [src]'s hook."))
 			update_icon()
 
 		return TRUE
@@ -341,6 +342,7 @@
 	name = "advanced fishing rod"
 	desc = "It's a fishing rod, an enhanced fiberglass Telescope Ultralight 47; the latest model."
 	material = /decl/material/solid/fiberglass
+	color = /decl/material/solid/fiberglass::color
 	matter = list(
 		/decl/material/solid/metal/steel = MATTER_AMOUNT_REINFORCEMENT
 	)

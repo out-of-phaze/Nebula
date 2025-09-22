@@ -86,11 +86,6 @@
 			holding.afterattack(A, src, 0, params)
 		return
 
-//Middle click cycles through selected modules.
-/mob/living/silicon/robot/MiddleClickOn(var/atom/A)
-	cycle_modules()
-	return
-
 //Give cyborgs hotkey clicks without breaking existing uses of hotkey clicks
 // for non-doors/apcs
 /mob/living/silicon/robot/CtrlShiftClickOn(var/atom/A)
@@ -156,7 +151,7 @@
 	clicks, you can do so here, but you will have to
 	change attack_robot() above to the proper function
 */
-/mob/living/silicon/robot/UnarmedAttack(atom/A)
+/mob/living/silicon/robot/ResolveUnarmedAttack(atom/A)
 	return A.attack_robot(src)
 
 /mob/living/silicon/robot/RangedAttack(atom/A, var/params)

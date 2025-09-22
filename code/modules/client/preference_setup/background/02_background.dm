@@ -1,5 +1,5 @@
 #define GET_ALLOWED_VALUES(write_to, check_key) \
-	var/decl/species/S = get_species_by_key(pref.species); \
+	var/decl/species/S = pref.get_species_decl(); \
 	if(!S) { \
 		write_to = list(); \
 	} else if(S.force_background_info[check_key]) { \
@@ -24,6 +24,13 @@
 	for(var/cat_type in global.using_map.get_background_categories())
 		hidden[cat_type] = TRUE
 	..()
+
+/datum/category_item/player_setup_item/background/details/apply_post_snapshot_preferences(mob/living/human/character, is_preview_copy = FALSE)
+	if(is_preview_copy)
+		return
+	for(var/token in pref.background_info)
+		character.set_background_value(token, pref.background_info[token], defer_language_update = TRUE)
+	character.update_languages()
 
 /datum/category_item/player_setup_item/background/details/sanitize_character()
 
@@ -77,12 +84,12 @@
 		if(istype(background))
 			pref.background_info[cat.type] = background.type
 
-/datum/category_item/player_setup_item/background/details/save_character(datum/pref_record_writer/W)
+/datum/category_item/player_setup_item/background/details/save_character(datum/pref_record_writer/writer)
 	for(var/background_cat_type in pref.background_info)
 		var/decl/background_category/cat = GET_DECL(background_cat_type)
 		var/decl/background_detail/entry = GET_DECL(pref.background_info[background_cat_type])
 		if(istype(cat) && istype(entry))
-			W.write(cat.uid, entry.uid)
+			writer.write(cat.uid, entry.uid)
 
 /datum/category_item/player_setup_item/background/details/content()
 	. = list()
@@ -112,9 +119,11 @@
 		. += "<small>[background_strings["details"] || "No additional details."]</small>"
 		. += "</td><td>"
 		. += "[background_strings["body"] || "No description."]"
-		. += "</td><td width = '50px'>"
-		. += "<a href='byond://?src=\ref[src];toggle_verbose_[cat.uid]=1'>[hidden[cat.type] ? "Expand" : "Collapse"]</a>"
-		. += "</td></tr>"
+		. += "</td>"
+		// Only show the button to expand/hide if the text overflows the limit.
+		if(background.is_long())
+			. += "<td width = '50px'><a href='byond://?src=\ref[src];toggle_verbose_[cat.uid]=1'>[hidden[cat.type] ? "Expand" : "Collapse"]</a></td>"
+		. += "</tr>"
 		. += "</table><hr>"
 
 	. = jointext(.,null)

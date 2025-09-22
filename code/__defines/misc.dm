@@ -383,10 +383,22 @@
 #define CRAYON_DRAW_ARROW    "arrow"
 
 // Enum for results of is_space_movement_permitted()
-#define SPACE_MOVE_SUPPORTED (-1)
-#define SPACE_MOVE_FORBIDDEN   0
-#define SPACE_MOVE_PERMITTED   1
+// Note that it may also return an instance of /atom/movable, which acts as SPACE_MOVE_SUPPORTED.
+#define SPACE_MOVE_SUPPORTED (-1) //! Mob should run space-slipping checks.
+#define SPACE_MOVE_FORBIDDEN   0  //! Mob should begin spacedrift.
+#define SPACE_MOVE_PERMITTED   1  //! Mob should stop/prevent spacedrift.
 
 // Default UI style applied to client prefs.
 #define DEFAULT_UI_STYLE /decl/ui_style/midnight
 
+// Indicates a modifier will never expire.
+#define MOB_MODIFIER_INDEFINITE (-1)
+
+// Indicators for attack checking proc.
+#define MM_ATTACK_TYPE_WEAPON      0
+#define MM_ATTACK_TYPE_THROWN      1
+#define MM_ATTACK_TYPE_PROJECTILE  2
+
+#define MM_ATTACK_RESULT_NONE      0
+#define MM_ATTACK_RESULT_DEFLECTED BITFLAG(0)
+#define MM_ATTACK_RESULT_BLOCKED   BITFLAG(1)

@@ -57,8 +57,8 @@
 /decl/material/liquid/water/affect_blood(var/mob/living/M, var/removed, var/datum/reagents/holder)
 	..()
 	if(ishuman(M))
-		var/list/data = REAGENT_DATA(holder, type)
-		if(data?["holy"])
+		var/list/data = REAGENT_DATA(holder, src)
+		if(data?[DATA_WATER_HOLINESS])
 			affect_holy(M, removed, holder)
 
 /decl/material/liquid/water/proc/affect_holy(mob/living/M, removed, datum/reagents/holder)
@@ -89,15 +89,15 @@
 		touching_turf.assume_air(lowertemp)
 		qdel(hotspot)
 
-	var/volume = REAGENT_VOLUME(holder, type)
+	var/volume = REAGENT_VOLUME(holder, src)
 	if (environment && environment.temperature > min_temperature) // Abstracted as steam or something
 		var/removed_heat = clamp(volume * WATER_LATENT_HEAT, 0, -environment.get_thermal_energy_change(min_temperature))
 		environment.add_thermal_energy(-removed_heat)
 		if (prob(5) && environment && environment.temperature > T100C)
 			touching_turf.visible_message(SPAN_NOTICE("The water sizzles as it lands on \the [touching_turf]!"))
 
-	var/list/data = REAGENT_DATA(holder, type)
-	if(LAZYACCESS(data, "holy"))
+	var/list/data = REAGENT_DATA(holder, src)
+	if(LAZYACCESS(data, DATA_WATER_HOLINESS))
 		touching_turf.turf_flags |= TURF_FLAG_HOLY
 
 /decl/material/liquid/water/touch_obj(var/obj/O, var/amount, var/datum/reagents/holder)

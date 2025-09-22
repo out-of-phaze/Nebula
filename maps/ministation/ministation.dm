@@ -21,6 +21,7 @@ Twice...
 	#include "../../mods/content/scaling_descriptors.dm"
 
 	#include "../../mods/content/bigpharma/_bigpharma.dme"
+	#include "../../mods/content/blob/_blob.dme"
 	#include "../../mods/content/corporate/_corporate.dme"
 	#include "../../mods/content/government/_government.dme"
 	#include "../../mods/content/matchmaking/_matchmaking.dme"
@@ -34,6 +35,7 @@ Twice...
 
 	#include "../../mods/gamemodes/cult/_cult.dme"
 	#include "../../mods/gamemodes/heist/_heist.dme"
+	#include "../../mods/gamemodes/mercenary/_mercenary.dme"
 	#include "../../mods/gamemodes/ninja/_ninja.dme"
 	#include "../../mods/gamemodes/revolution/_revolution.dme"
 	#include "../../mods/gamemodes/traitor/_traitor.dme"

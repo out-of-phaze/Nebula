@@ -26,7 +26,7 @@
 	brightness_on = 4
 	light_wedge = LIGHT_WIDE
 	on = 0
-	replaced_in_loadout = FALSE
+	replaced_in_loadout = LOADOUT_CONFLICT_KEEP
 
 	var/obj/machinery/camera/camera
 	var/tinted = null	//Set to non-null for toggleable tint helmets
@@ -60,10 +60,10 @@
 
 	if(ispath(camera))
 		camera = new camera(src)
-		camera.set_status(0)
+		camera.set_camera_status(0)
 
 	if(camera)
-		camera.set_status(!camera.status)
+		camera.set_camera_status(!camera.status)
 		if(camera.status)
 			camera.c_tag = user.get_id_name()
 			to_chat(user, "<span class='notice'>User scanned as [camera.c_tag]. Camera activated.</span>")
@@ -144,7 +144,7 @@
 		/decl/material/solid/organic/plastic = MATTER_AMOUNT_REINFORCEMENT
 	)
 	protects_against_weather = TRUE
-	replaced_in_loadout = FALSE
+	replaced_in_loadout = LOADOUT_CONFLICT_KEEP
 
 /obj/item/clothing/suit/space/Initialize()
 	. = ..()

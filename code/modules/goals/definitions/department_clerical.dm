@@ -20,8 +20,7 @@
 		SSgoals.pending_goals -= src
 		return
 	paperwork_type = pick(paperwork_types)
-	var/obj/item/paperwork/paperwork_type_obj = paperwork_type
-	waiting_for_signatories_description = replacetext(waiting_for_signatories_description, "%PAPERWORK%", "\the [initial(paperwork_type_obj.name)]")
+	waiting_for_signatories_description = replacetext(waiting_for_signatories_description, "%PAPERWORK%", "\the [atom_info_repository.get_name_for(paperwork_type)]")
 
 	..()
 
@@ -74,8 +73,7 @@
 	if(!generated_paperwork)
 		description = waiting_for_signatories_description
 	else if(QDELETED(paperwork_instance))
-		var/obj/item/paperwork/paperwork_type_obj = paperwork_type
-		description = "\The [initial(paperwork_type_obj.name)] has been destroyed."
+		description = "\The [atom_info_repository.get_name_for(paperwork_type)] has been destroyed."
 	else if(length(paperwork_instance.needs_signed))
 		description = "Have \the [paperwork_instance] signed by [english_list(paperwork_instance.all_signatories)]."
 	else
@@ -128,8 +126,8 @@
 		if(length(has_signed))
 			. += SPAN_NOTICE("It has been signed by: [english_list(has_signed)].")
 
-/obj/item/paperwork/attackby(obj/item/W, mob/user)
-	if(IS_PEN(W))
+/obj/item/paperwork/attackby(obj/item/used_item, mob/user)
+	if(IS_PEN(used_item))
 		if(user.real_name in has_signed)
 			to_chat(user, SPAN_WARNING("You have already signed \the [src]."))
 			return TRUE
@@ -138,7 +136,7 @@
 			return TRUE
 		LAZYADD(has_signed, user.real_name)
 		LAZYREMOVE(needs_signed, user.real_name)
-		user.visible_message(SPAN_NOTICE("\The [user] signs \the [src] with \the [W]."))
+		user.visible_message(SPAN_NOTICE("\The [user] signs \the [src] with \the [used_item]."))
 		associated_goal?.update_strings()
 		update_icon()
 		return TRUE

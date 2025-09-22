@@ -173,8 +173,8 @@
 		remembered_info += "<b>Your account pin is:</b> [account.remote_access_pin]<br>"
 		remembered_info += "<b>Your account funds are:</b> [account.format_value_by_currency(account.money)]<br>"
 		if(account.transaction_log.len)
-			var/datum/transaction/T = account.transaction_log[1]
-			remembered_info += "<b>Your account was created:</b> [T.time], [T.date] at [T.get_source_name()]<br>"
+			var/datum/transaction/transaction = account.transaction_log[1]
+			remembered_info += "<b>Your account was created:</b> [transaction.time], [transaction.date] at [transaction.get_source_name()]<br>"
 		if(cash_on_hand > 0)
 			var/decl/currency/cur = GET_DECL(global.using_map.default_currency)
 			remembered_info += "<b>Your cash on hand is:</b> [cur.format_value(cash_on_hand)]<br>"
@@ -235,13 +235,13 @@
 		to_chat(feedback, "<span class='boldannounce'>Wrong rank for [title]. Valid ranks in [prefs.branches[title]] are: [get_ranks(prefs.branches[title])].</span>")
 		return TRUE
 
-	var/decl/species/S = get_species_by_key(prefs.species)
+	var/decl/species/S = prefs.get_species_decl()
 	if(!is_species_allowed(S))
 		to_chat(feedback, "<span class='boldannounce'>Restricted species, [S], for [title].</span>")
 		return TRUE
 
-	if(LAZYACCESS(minimum_character_age, S.get_root_species_name()) && (prefs.get_character_age() < minimum_character_age[S.get_root_species_name()]))
-		to_chat(feedback, "<span class='boldannounce'>Not old enough. Minimum character age is [minimum_character_age[S.get_root_species_name()]].</span>")
+	if(LAZYACCESS(minimum_character_age, S.uid) && (prefs.get_character_age() < minimum_character_age[S.uid]))
+		to_chat(feedback, "<span class='boldannounce'>Not old enough. Minimum character age is [minimum_character_age[S.uid]].</span>")
 		return TRUE
 
 	if(!S.check_background(src, prefs))
@@ -255,9 +255,9 @@
 
 	return FALSE
 
-/datum/job/proc/get_join_link(var/client/caller, var/href_string, var/show_invalid_jobs)
-	if(is_available(caller))
-		if(is_restricted(caller.prefs))
+/datum/job/proc/get_join_link(var/client/calling_client, var/href_string, var/show_invalid_jobs)
+	if(is_available(calling_client))
+		if(is_restricted(calling_client.prefs))
 			if(show_invalid_jobs)
 				return "<tr bgcolor='[selection_color]'><td style='padding-left:2px;padding-right:2px;'><a style='text-decoration: line-through' href='[href_string]'>[title]</a></td><td style='padding-left:2px;padding-right:2px;''><center>[current_positions]</center></td><td style='padding-left:2px;padding-right:2px;'><center>Active: [get_active_count()]</center></td></tr>"
 		else
@@ -356,22 +356,21 @@
 
 //Returns human-readable list of branches this job allows.
 /datum/job/proc/get_branches()
-	var/list/res = list()
-	for(var/T in allowed_branches)
-		var/datum/mil_branch/B = mil_branches.get_branch_by_type(T)
-		res += B.name
-	return english_list(res)
+	. = list()
+	for(var/branch in allowed_branches)
+		var/datum/mil_branch/branch_datum = mil_branches.get_branch_by_type(branch)
+		. += branch_datum.name
+	return english_list(.)
 
 //Same as above but ranks
 /datum/job/proc/get_ranks(branch)
-	var/list/res = list()
-	var/datum/mil_branch/B = mil_branches.get_branch(branch)
-	for(var/T in allowed_ranks)
-		var/datum/mil_rank/R = T
-		if(B && !(initial(R.name) in B.ranks))
+	. = list()
+	var/datum/mil_branch/branch_datum = mil_branches.get_branch(branch)
+	for(var/datum/mil_rank/rank as anything in allowed_ranks)
+		if(branch_datum && !(initial(rank.name) in branch_datum.ranks))
 			continue
-		res |= initial(R.name)
-	return english_list(res)
+		. |= initial(rank.name)
+	return english_list(.)
 
 /datum/job/proc/get_description_blurb()
 	return description
@@ -380,17 +379,17 @@
 	if(!SSjobs.job_icons[title])
 		var/mob/living/human/dummy/mannequin/mannequin = get_mannequin("#job_icon")
 		if(mannequin)
-			var/decl/species/mannequin_species = get_species_by_key(global.using_map.default_species)
+			var/decl/species/mannequin_species = decls_repository.get_decl_by_id(global.using_map.default_species)
 			if(!is_species_allowed(mannequin_species))
 				// Don't just default to the first species allowed, pick one at random.
 				for(var/other_species in shuffle(get_playable_species()))
-					var/decl/species/other_species_decl = get_species_by_key(other_species)
+					var/decl/species/other_species_decl = decls_repository.get_decl_by_id(other_species)
 					if(is_species_allowed(other_species_decl))
 						mannequin_species = other_species_decl
 						break
 			if(!is_species_allowed(mannequin_species))
 				PRINT_STACK_TRACE("No allowed species allowed for job [title] ([type]), falling back to default!")
-			mannequin.change_species(mannequin_species.name)
+			mannequin.change_species(mannequin_species.uid)
 			dress_mannequin(mannequin)
 			mannequin.set_dir(SOUTH)
 			var/icon/preview_icon = getFlatIcon(mannequin)
@@ -398,27 +397,27 @@
 			SSjobs.job_icons[title] = preview_icon
 	return SSjobs.job_icons[title]
 
-/datum/job/proc/get_unavailable_reasons(var/client/caller)
+/datum/job/proc/get_unavailable_reasons(var/client/calling_client)
 	var/list/reasons = list()
-	if(jobban_isbanned(caller, title))
+	if(jobban_isbanned(calling_client, title))
 		reasons["You are jobbanned."] = TRUE
-	if(is_semi_antagonist && jobban_isbanned(caller, /decl/special_role/provocateur))
+	if(is_semi_antagonist && jobban_isbanned(calling_client, /decl/special_role/provocateur))
 		reasons["You are semi-antagonist banned."] = TRUE
-	if(!player_old_enough(caller))
+	if(!player_old_enough(calling_client))
 		reasons["Your player age is too low."] = TRUE
 	if(!is_position_available())
 		reasons["There are no positions left."] = TRUE
-	if(!isnull(allowed_branches) && (!caller.prefs.branches[title] || !is_branch_allowed(caller.prefs.branches[title])))
+	if(!isnull(allowed_branches) && (!calling_client.prefs.branches[title] || !is_branch_allowed(calling_client.prefs.branches[title])))
 		reasons["Your branch of service does not allow it."] = TRUE
-	else if(!isnull(allowed_ranks) && (!caller.prefs.ranks[title] || !is_rank_allowed(caller.prefs.branches[title], caller.prefs.ranks[title])))
+	else if(!isnull(allowed_ranks) && (!calling_client.prefs.ranks[title] || !is_rank_allowed(calling_client.prefs.branches[title], calling_client.prefs.ranks[title])))
 		reasons["Your rank choice does not allow it."] = TRUE
-	var/decl/species/S = get_species_by_key(caller.prefs.species)
+	var/decl/species/S = calling_client.prefs.get_species_decl()
 	if(S)
 		if(!is_species_allowed(S))
 			reasons["Your species choice does not allow it."] = TRUE
-		if(!S.check_background(src, caller.prefs))
+		if(!S.check_background(src, calling_client.prefs))
 			reasons["Your background choices do not allow it."] = TRUE
-		var/special_blocker = check_special_blockers(caller.prefs)
+		var/special_blocker = check_special_blockers(calling_client.prefs)
 		if(special_blocker)
 			reasons["Your preferences do not allow it: '[special_blocker]'."] = TRUE
 		return TRUE
@@ -430,14 +429,14 @@
 		mannequin.delete_inventory(TRUE)
 		equip_preview(mannequin, additional_skips = OUTFIT_ADJUSTMENT_SKIP_BACKPACK)
 
-/datum/job/proc/is_available(var/client/caller)
+/datum/job/proc/is_available(var/client/calling_client)
 	if(!is_position_available())
 		return FALSE
-	if(jobban_isbanned(caller, title))
+	if(jobban_isbanned(calling_client, title))
 		return FALSE
-	if(is_semi_antagonist && jobban_isbanned(caller, /decl/special_role/provocateur))
+	if(is_semi_antagonist && jobban_isbanned(calling_client, /decl/special_role/provocateur))
 		return FALSE
-	if(!player_old_enough(caller))
+	if(!player_old_enough(calling_client))
 		return FALSE
 	return TRUE
 
@@ -446,7 +445,7 @@
 
 /datum/job/proc/get_roundstart_spawnpoint()
 	var/list/loc_list = list()
-	for(var/obj/abstract/landmark/start/sloc in global.landmarks_list)
+	for(var/obj/abstract/landmark/start/sloc in global.all_landmarks)
 		if(sloc.name != title)	continue
 		if(locate(/mob/living) in sloc.loc)	continue
 		loc_list += sloc

@@ -4,11 +4,13 @@
 	icon = 'icons/obj/drying_rack.dmi'
 	icon_state = ICON_STATE_WORLD
 	material = /decl/material/solid/metal/steel
+	color = /decl/material/solid/metal/steel::color
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME | MAT_FLAG_ALTERATION_DESC
 	var/obj/item/drying
 
 /obj/structure/drying_rack/ebony
 	material = /decl/material/solid/organic/wood/ebony
+	color = /decl/material/solid/organic/wood/ebony::color
 
 /obj/structure/drying_rack/Destroy()
 	QDEL_NULL(drying)
@@ -54,12 +56,12 @@
 	if(drying_state)
 		add_overlay(drying_state)
 
-/obj/structure/drying_rack/attackby(var/obj/item/W, var/mob/user)
+/obj/structure/drying_rack/attackby(var/obj/item/used_item, var/mob/user)
 
-	if(!drying && W.is_dryable())
-		if(user.try_unequip(W))
-			W.forceMove(src)
-			drying = W
+	if(!drying && used_item.is_dryable())
+		if(user.try_unequip(used_item))
+			used_item.forceMove(src)
+			drying = used_item
 			if(!is_processing)
 				START_PROCESSING(SSobj, src)
 			update_icon()

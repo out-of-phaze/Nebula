@@ -309,7 +309,10 @@
 		client.eye = loc
 
 /mob/proc/get_descriptive_slot_name(var/slot)
-	return global.descriptive_slot_names[slot] || slot
+	if(global.abstract_slot_names[slot]) // this is an abstract slot like "in backpack"
+		return global.abstract_slot_names[slot]
+	var/datum/inventory_slot/slot_datum = get_inventory_slot_datum(slot)
+	return slot_datum?.slot_name || slot
 
 /mob/proc/show_stripping_window(mob/user)
 
@@ -842,6 +845,7 @@
 			return ..(facing_dir)
 	else
 		return ..()
+	return FALSE
 
 /mob/proc/set_stat(var/new_stat)
 	. = stat != new_stat
@@ -1153,7 +1157,7 @@
 
 	return FALSE
 
-/mob/proc/handle_flashed(var/flash_strength)
+/mob/proc/handle_flashed(var/flash_strength, do_stun = FALSE)
 	return FALSE
 
 /mob/proc/do_flash_animation()
@@ -1318,7 +1322,7 @@
 /mob/proc/set_skin_tone(value)
 	return
 
-/mob/proc/get_skin_tone(value)
+/mob/proc/get_skin_tone()
 	return
 
 /mob/proc/force_update_limbs()
@@ -1393,8 +1397,11 @@
 	for(var/turf/neighbor in RANGE_TURFS(my_turf, 1))
 		if(neighbor == my_turf)
 			continue
-		if(neighbor.contains_dense_objects(exceptions = src))
+		if(neighbor.is_wall() || neighbor.is_floor())
 			return neighbor
+		var/dense_object = neighbor.get_first_dense_object(exceptions = src)
+		if(dense_object)
+			return dense_object
 		platform = neighbor.get_supporting_platform() || (locate(/obj/structure/lattice) in neighbor)
 		if(platform)
 			return platform
@@ -1436,10 +1443,10 @@
 		return FALSE
 
 	// Check footwear.
-	if(!magboots_only && has_non_slip_footing())
-		return FALSE
+	if(magboots_only)
+		return !((has_gravity() || has_magnetised_footing()) && get_solid_footing())
 
-	if((has_gravity() || has_magnetised_footing()) && get_solid_footing())
+	if(has_non_slip_footing())
 		return FALSE
 
 	// Slip!
@@ -1462,7 +1469,7 @@
 	if(get_equipped_item(slot_handcuffed_str) || buckled)
 		return FALSE
 	for(var/decl/natural_attack/attack as anything in get_mob_natural_attacks())
-		if(attack.is_usable(src) && attack.shredding)
+		if(attack.attack_is_usable(src) && attack.shredding)
 			return TRUE
 	return FALSE
 
@@ -1475,5 +1482,9 @@
 			LAZYDISTINCTADD(., limb_unarmed_attacks)
 
 /mob/proc/isSynthetic()
+	return FALSE
+
+// Returns true if the mob is cloaked, otherwise false
+/mob/proc/is_cloaked()
 	return FALSE
 

@@ -178,7 +178,7 @@
 	current_grab.let_go(src)
 
 /obj/item/grab/proc/on_affecting_move()
-	if(!affecting || !isturf(affecting.loc) || get_dist(affecting, assailant) > 1)
+	if(!affecting || !isturf(affecting.loc) || (get_dist_3d(affecting, assailant) > 1 && affecting.moving_diagonally != /atom/movable::FIRST_DIAGONAL_STEP))
 		force_drop()
 
 /obj/item/grab/proc/force_drop()
@@ -204,7 +204,7 @@
 /obj/item/grab/proc/action_used()
 	if(ishuman(assailant))
 		var/mob/living/human/H = assailant
-		H.remove_cloaking_source(H.species)
+		H.remove_mob_modifier(/decl/mob_modifier/cloaked, source = H.species)
 	last_action = world.time
 	leave_forensic_traces()
 
@@ -279,9 +279,9 @@
 /obj/item/grab/proc/stop_move()
 	return current_grab.stop_move
 
-/obj/item/grab/attackby(obj/W, mob/user)
+/obj/item/grab/attackby(obj/item/used_item, mob/user)
 	if(user == assailant)
-		return current_grab.item_attack(src, W)
+		return current_grab.item_attack(src, used_item)
 	return FALSE
 
 /obj/item/grab/proc/assailant_reverse_facing()

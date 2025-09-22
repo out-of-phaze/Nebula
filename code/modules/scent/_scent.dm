@@ -1,7 +1,3 @@
-var/global/const/SCENT_DESC_ODOR      = "odour"
-var/global/const/SCENT_DESC_SMELL     = "smell"
-var/global/const/SCENT_DESC_FRAGRANCE = "fragrance"
-
 /*****
 Scent intensity
 *****/
@@ -117,7 +113,7 @@ Reagents have the following vars, which coorelate to the vars on the standard sc
 	scent_intensity,
 	scent_descriptor,
 	scent_range
-To add a scent extension to an atom using a reagent's info, where R. is the reagent, use set_scent_by_reagents().
+To add a scent extension to an atom using a reagent's info, where reagent. is the reagent, use set_scent_by_reagents().
 *****/
 
 /proc/set_scent_by_reagents(var/atom/smelly_atom)
@@ -131,14 +127,13 @@ To add a scent extension to an atom using a reagent's info, where R. is the reag
 	var/scent_intensity
 	if(!holder || !holder.total_volume)
 		return
-	for(var/reagent_type in holder.reagent_volumes)
-		var/decl/material/R = GET_DECL(reagent_type)
-		if(!R.scent)
+	for(var/decl/material/reagent as anything in holder.reagent_volumes)
+		if(!reagent.scent)
 			continue
-		var/decl/scent_intensity/SI = GET_DECL(R.scent_intensity)
-		var/r_scent_intensity = REAGENT_VOLUME(holder, reagent_type) * SI.intensity
+		var/decl/scent_intensity/scent = GET_DECL(reagent.scent_intensity)
+		var/r_scent_intensity = REAGENT_VOLUME(holder, reagent) * scent.intensity
 		if(r_scent_intensity > scent_intensity)
-			smelliest = R
+			smelliest = reagent
 			scent_intensity = r_scent_intensity
 
 	return smelliest

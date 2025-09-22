@@ -99,6 +99,11 @@
 	//turfs += centerturf
 	return atoms
 
+/// Despite what the ref says, get_dist does not factor in the Z axis.
+/// This is just get_dist() but Z-aware.
+/proc/get_dist_3d(atom/Loc1, atom/Loc2)
+	return max(abs(Loc1.x-Loc2.x), abs(Loc1.y-Loc2.y), abs(Loc1.z-Loc2.z))
+
 /proc/get_dist_euclidian(atom/Loc1, atom/Loc2)
 	var/dx = Loc1.x - Loc2.x
 	var/dy = Loc1.y - Loc2.y
@@ -171,8 +176,8 @@
 
 	return L
 
-// Returns a list of mobs and/or objects in range of R from source. Used in radio and say code.
-/proc/get_mobs_or_objects_in_view(var/R, var/atom/source, var/include_mobs = 1, var/include_objects = 1)
+// Returns a list of mobs and/or objects in range of get_range from source. Used in radio and say code.
+/proc/get_mobs_or_objects_in_view(var/get_range, var/atom/source, var/include_mobs = 1, var/include_objects = 1)
 
 	var/turf/T = get_turf(source)
 	var/list/hear = list()
@@ -180,7 +185,7 @@
 	if(!T)
 		return hear
 
-	var/list/range = hear(R, T)
+	var/list/range = hear(get_range, T)
 	for(var/I in range)
 		if(ismob(I))
 			hear |= recursive_content_check(I, hear, 3, 1, 0, include_mobs, include_objects)
@@ -292,7 +297,7 @@
 		if(1)
 			return colors[1]
 		if(2)
-			return BlendRGBasHSV(colors[1], colors[2], 0.5)
+			return BlendHSV(colors[1], colors[2], 0.5)
 	var/list/reds = list()
 	var/list/blues = list()
 	var/list/greens = list()

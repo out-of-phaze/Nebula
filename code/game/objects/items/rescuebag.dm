@@ -8,6 +8,7 @@
 	origin_tech = @'{"biotech":2}'
 	material = /decl/material/solid/organic/plastic
 	matter = list(/decl/material/solid/silicon = MATTER_AMOUNT_SECONDARY)
+	bag_type = /obj/structure/closet/body_bag/rescue
 	var/obj/item/tank/airtank
 
 /obj/item/bodybag/rescue/loaded
@@ -23,25 +24,24 @@
 	QDEL_NULL(airtank)
 	return ..()
 
-/obj/item/bodybag/rescue/attack_self(mob/user)
-	var/obj/structure/closet/body_bag/rescue/R = new /obj/structure/closet/body_bag/rescue(user.loc)
-	R.add_fingerprint(user)
-	if(airtank)
-		R.set_tank(airtank)
+/obj/item/bodybag/rescue/create_bag_structure(mob/user)
+	var/obj/structure/closet/body_bag/rescue/bag = ..()
+	if(istype(bag) && airtank)
+		bag.set_tank(airtank)
 		airtank = null
-	qdel(src)
+	return bag
 
-/obj/item/bodybag/rescue/attackby(obj/item/W, mob/user, var/click_params)
-	if(istype(W,/obj/item/tank))
+/obj/item/bodybag/rescue/attackby(obj/item/used_item, mob/user, var/click_params)
+	if(istype(used_item,/obj/item/tank))
 		if(airtank)
 			to_chat(user, "\The [src] already has an air tank installed.")
 			return TRUE
-		if(user.try_unequip(W))
-			W.forceMove(src)
-			airtank = W
-			to_chat(user, "You install \the [W] in \the [src].")
+		if(user.try_unequip(used_item))
+			used_item.forceMove(src)
+			airtank = used_item
+			to_chat(user, "You install \the [used_item] in \the [src].")
 		return TRUE
-	else if(airtank && IS_SCREWDRIVER(W))
+	else if(airtank && IS_SCREWDRIVER(used_item))
 		to_chat(user, "You remove \the [airtank] from \the [src].")
 		airtank.dropInto(loc)
 		airtank = null
@@ -88,15 +88,15 @@
 	if(airtank)
 		add_overlay("tank")
 
-/obj/structure/closet/body_bag/rescue/attackby(obj/item/W, mob/user, var/click_params)
-	if(istype(W,/obj/item/tank))
+/obj/structure/closet/body_bag/rescue/attackby(obj/item/used_item, mob/user, var/click_params)
+	if(istype(used_item,/obj/item/tank))
 		if(airtank)
 			to_chat(user, "\The [src] already has an air tank installed.")
-		else if(user.try_unequip(W, src))
-			set_tank(W)
-			to_chat(user, "You install \the [W] in \the [src].")
+		else if(user.try_unequip(used_item, src))
+			set_tank(used_item)
+			to_chat(user, "You install \the [used_item] in \the [src].")
 		return TRUE
-	else if(airtank && IS_SCREWDRIVER(W))
+	else if(airtank && IS_SCREWDRIVER(used_item))
 		to_chat(user, "You remove \the [airtank] from \the [src].")
 		airtank.dropInto(loc)
 		airtank = null

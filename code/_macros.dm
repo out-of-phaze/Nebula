@@ -147,9 +147,9 @@
 
 #define JOINTEXT(X) jointext(X, null)
 
-#define SPAN_STYLE(S, X) "<span style='[S]'>[X]</span>"
+#define SPAN_STYLE(S, X) "<span style='" + S + "'>" + X + "</span>"
+#define SPAN_CLASS(C, X) "<span class='" + C + "'>" + X + "</span>"
 
-#define SPAN_CLASS(C, X) "<span class='[C]'>[X]</span>"
 #define SPAN_ITALIC(X)        SPAN_CLASS("italic",        X)
 #define SPAN_BOLD(X)          SPAN_CLASS("bold",          X)
 #define SPAN_NOTICE(X)        SPAN_CLASS("notice",        X)
@@ -174,6 +174,7 @@
 #define SPAN_PALEPINK(X)      SPAN_CLASS("font_palepink", X)
 #define SPAN_SINISTER(X)      SPAN_CLASS("sinister", X)
 #define SPAN_MODERATE(X)      SPAN_CLASS("moderate", X)
+#define SPAN_DEADSAY(X)       SPAN_CLASS("deadsay", X)
 // placeholders
 #define SPAN_GOOD(X)          SPAN_GREEN(X)
 #define SPAN_NEUTRAL(X)       SPAN_BLUE(X)

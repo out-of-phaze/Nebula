@@ -98,9 +98,8 @@
 
 		// Handle some post-metabolism reagent processing for generally inedible foods.
 		if(ingested.total_volume > 0)
-			for(var/rtype in ingested.reagent_volumes)
-				var/decl/material/R = GET_DECL(rtype)
-				var/inedible_nutriment_amount = gains_nutriment_from_inedible_reagents[R]
+			for(var/decl/material/reagent as anything in ingested.reagent_volumes)
+				var/inedible_nutriment_amount = gains_nutriment_from_inedible_reagents[reagent.type]
 				if(inedible_nutriment_amount > 0)
 					owner.adjust_nutrition(inedible_nutriment_amount)
 
@@ -185,7 +184,7 @@
 
 /obj/item/organ/internal/voxstack/get_examine_strings(mob/user, distance, infix, suffix)
 	. = ..()
-	var/user_vox = user.get_species_name() == SPECIES_VOX // TODO use bodytype flags instead so subspecies are included
+	var/user_vox = istype(user.get_species(), /decl/species/vox)
 	if (istype(backup))
 		var/owner_viable = find_dead_player(stored_ckey, TRUE)
 		if (user_vox)

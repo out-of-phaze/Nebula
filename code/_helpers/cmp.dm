@@ -57,6 +57,8 @@
 
 /proc/cmp_qdel_item_time(datum/qdel_item/A, datum/qdel_item/B)
 	. = B.hard_delete_time - A.hard_delete_time
+	if (!. && B.qdels && A.qdels) // sort by time per call
+		. = (B.destroy_time / B.qdels) - (A.destroy_time / A.qdels)
 	if (!.)
 		. = B.destroy_time - A.destroy_time
 	if (!.)
@@ -83,6 +85,9 @@
 
 /proc/cmp_fusion_reaction_des(var/decl/fusion_reaction/A, var/decl/fusion_reaction/B)
 	return B.priority - A.priority
+
+/proc/cmp_human_examine_priority(decl/human_examination/a, decl/human_examination/b)
+	return a.priority - b.priority
 
 /proc/cmp_program(var/datum/computer_file/program/A, var/datum/computer_file/program/B)
 	return cmp_text_asc(A.filedesc, B.filedesc)

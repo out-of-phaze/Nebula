@@ -23,10 +23,15 @@
 	var/const/WIRE_RADIO_PULSE = 16		//Allows Pulse(1) to send a radio message
 
 /obj/item/assembly/Destroy()
-	if(!QDELETED(holder))
-		// the holder has the responsibility to clear its associated vars on destroy
-		QDEL_NULL(holder)
-	else
+	if(holder)
+		if(istype(holder))
+			if(holder.a_left == src)
+				holder.a_left = null
+			if(holder.a_right == src)
+				holder.a_right = null
+		if(istype(holder, /datum) && !QDELETED(holder))
+			// the holder has the responsibility to clear its associated vars on destroy
+			qdel(holder)
 		holder = null
 	return ..()
 
@@ -83,15 +88,15 @@
 		//Not sure what goes here quite yet send signal?
 	return 1
 
-/obj/item/assembly/attackby(obj/item/component, mob/user)
-	if(!user_can_attack_with(user) || !component.user_can_attack_with(user))
+/obj/item/assembly/attackby(obj/item/used_item, mob/user)
+	if(!user_can_attack_with(user) || !used_item.user_can_attack_with(user))
 		return TRUE
-	if(isassembly(component))
-		var/obj/item/assembly/assembly = component
+	if(isassembly(used_item))
+		var/obj/item/assembly/assembly = used_item
 		if(!assembly.secured && !secured)
 			attach_assembly(assembly, user)
 			return TRUE
-	if(IS_SCREWDRIVER(component))
+	if(IS_SCREWDRIVER(used_item))
 		if(toggle_secure())
 			to_chat(user, SPAN_NOTICE("\The [src] is ready!"))
 		else

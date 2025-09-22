@@ -11,24 +11,38 @@
 	color                         = /decl/material/solid/metal/stainlesssteel::color
 	amount_per_transfer_from_this = 15
 
+	// Used for work sounds.
+	var/datum/sound_token/work_sound_token
+	var/sound_id
+	var/work_sound
+
 	var/cooking_category
 	var/started_cooking
 	var/decl/recipe/last_recipe
 
+/obj/item/chems/cooking_vessel/Initialize(ml, material_key)
+	. = ..()
+	if(work_sound)
+		sound_id = "[work_sound]"
+
+/obj/item/chems/cooking_vessel/Destroy()
+	QDEL_NULL(work_sound_token)
+	return ..()
+
 // TODO: ladle
-/obj/item/chems/cooking_vessel/attackby(obj/item/W, mob/user)
+/obj/item/chems/cooking_vessel/attackby(obj/item/used_item, mob/user)
 
 	if(user.check_intent(I_FLAG_HARM))
 		return ..()
 
 	// Fill or take from the vessel.
-	if(W.reagents && ATOM_IS_OPEN_CONTAINER(W))
-		if(W.reagents.total_volume)
-			if(istype(W, /obj/item/chems))
-				var/obj/item/chems/vessel = W
+	if(used_item.reagents && ATOM_IS_OPEN_CONTAINER(used_item))
+		if(used_item.reagents.total_volume)
+			if(istype(used_item, /obj/item/chems))
+				var/obj/item/chems/vessel = used_item
 				if(vessel.standard_pour_into(user, src))
 					return TRUE
-		else if(standard_pour_into(user, W))
+		else if(standard_pour_into(user, used_item))
 			return TRUE
 
 	return ..()
@@ -74,18 +88,15 @@
 		. += "\the [thing]"
 
 	if(reagents?.total_volume)
-		for(var/solid_type in reagents.solid_volumes)
-			var/decl/material/reagent = GET_DECL(solid_type)
-			var/reagent_name = reagent.get_reagent_name(reagents, MAT_PHASE_SOLID)
-			. += "[reagents.solid_volumes[solid_type]]u of [reagent_name]"
+		for(var/decl/material/reagent as anything in reagents.solid_volumes)
+			. += "[reagents.solid_volumes[reagent]]u of [reagent.get_reagent_name(reagents, MAT_PHASE_SOLID)]"
 
-		for(var/liquid_type in reagents.liquid_volumes)
-			var/decl/material/reagent = GET_DECL(liquid_type)
+		for(var/decl/material/reagent as anything in reagents.liquid_volumes)
 			var/reagent_name = reagent.get_reagent_name(reagents, MAT_PHASE_LIQUID)
 			if(!isnull(reagent.boiling_point) && temperature >= reagent.boiling_point && reagent.soup_hot_desc)
-				. += "[reagents.liquid_volumes[liquid_type]]u of [reagent.soup_hot_desc] [reagent_name]"
+				. += "[reagents.liquid_volumes[reagent]]u of [reagent.soup_hot_desc] [reagent_name]"
 			else
-				. += "[reagents.liquid_volumes[liquid_type]]u of [reagent_name]"
+				. += "[reagents.liquid_volumes[reagent]]u of [reagent_name]"
 
 /obj/item/chems/cooking_vessel/get_examine_strings(mob/user, distance, infix, suffix)
 	. = ..()
@@ -104,6 +115,7 @@
 		//TODO fail last recipe
 		started_cooking = null
 		last_recipe = null
+		QDEL_NULL(work_sound_token)
 		return PROCESS_KILL
 	if(isnull(started_cooking) || recipe != last_recipe)
 		started_cooking = world.time
@@ -113,12 +125,14 @@
 		if(recipe && recipe == last_recipe && recipe.can_bulk_cook)
 			// Bulk cooking has benefits like reduced cook time
 			// we don't just do it instantly because there's messages each time
-			started_cooking = world.time + (recipe.cooking_time / 2)
+			started_cooking = world.time + (recipe.cooking_time / 5)
 		else
 			started_cooking = null
 			last_recipe = null
 		return
 	last_recipe = recipe
+	if(!work_sound_token)
+		work_sound_token = play_looping_sound(src, sound_id, work_sound, volume = 30)
 	update_icon()
 
 /obj/item/chems/cooking_vessel/on_update_icon()

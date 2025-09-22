@@ -102,7 +102,7 @@
 	return null
 
 /**
-	Merge an exhaled air volume into air contents..
+	Merge an exhaled air volume into air contents.
 */
 /atom/proc/merge_exhaled_volume(datum/gas_mixture/exhaled)
 	var/datum/gas_mixture/environment = return_air()
@@ -145,7 +145,7 @@
 /atom/proc/try_on_reagent_change()
 	SHOULD_NOT_OVERRIDE(TRUE)
 	set waitfor = FALSE
-	if(QDELETED(src) ||_reagent_update_started >= world.time)
+	if(QDELETED(src) || _reagent_update_started >= world.time)
 		return FALSE
 	_reagent_update_started = world.time
 	sleep(0) // Defer to end of tick so we don't drop subsequent reagent updates.
@@ -216,7 +216,8 @@
 	SHOULD_CALL_PARENT(TRUE)
 	if(density != new_density)
 		density = !!new_density
-		RAISE_EVENT(/decl/observ/density_set, src, !density, density)
+		if(event_listeners?[/decl/observ/density_set])
+			raise_event_non_global(/decl/observ/density_set, !density, density)
 
 /**
 	Handle a projectile `P` hitting this atom
@@ -284,11 +285,13 @@
 */
 /atom/proc/examined_by(mob/user, distance, infix, suffix)
 	var/list/examine_lines
+	// to_chat(user, "<blockquote>") // these don't work in BYOND's native output panel. If we switch to browser output instead, you can readd this
 	for(var/add_lines in list(get_examine_header(user, distance, infix, suffix), get_examine_strings(user, distance, infix, suffix), get_examine_hints(user, distance, infix, suffix)))
 		if(islist(add_lines) && LAZYLEN(add_lines))
 			LAZYADD(examine_lines, add_lines)
 	if(LAZYLEN(examine_lines))
 		to_chat(user, jointext(examine_lines, "<br/>"))
+	// to_chat(user, "</blockquote>") // see above
 	RAISE_EVENT(/decl/observ/atom_examined, src, user, distance)
 	return TRUE
 
@@ -376,7 +379,8 @@
 			if(L.light_angle)
 				L.source_atom.update_light()
 
-	RAISE_EVENT(/decl/observ/dir_set, src, old_dir, new_dir)
+	if(event_listeners?[/decl/observ/dir_set])
+		raise_event_non_global(/decl/observ/dir_set, old_dir, new_dir)
 
 
 /// Set the icon to `new_icon`
@@ -398,18 +402,24 @@
 
 /**
 	Update this atom's icon.
-	If prior to the first SSicon_update flush (i.e. it's during init), icon updates are forced to queue instead.
-	This saves a lot of init time.
 
 	- Events: `updated_icon`
 */
 /atom/proc/update_icon()
 	SHOULD_CALL_PARENT(TRUE)
-	if(SSicon_update.init_state == SS_INITSTATE_NONE)
-		queue_icon_update()
-	else
-		on_update_icon()
-		RAISE_EVENT(/decl/observ/updated_icon, src)
+	on_update_icon()
+	if(event_listeners?[/decl/observ/updated_icon])
+		raise_event_non_global(/decl/observ/updated_icon)
+
+/**
+ * Update this atom's icon.
+ * If prior to SSicon_update's first flush, queues.
+ * Otherwise, updates instantly.
+ */
+/atom/proc/lazy_update_icon()
+	if(SSicon_update.init_state != SS_INITSTATE_NONE)
+		return update_icon()
+	queue_icon_update()
 
 /**
 	Update this atom's icon.
@@ -425,13 +435,13 @@
  * Obj adds matter contents. Other overrides may add extra handling for things like material storage.
  * Most useful for calculating worth or deconstructing something along with its contents.
  */
-/atom/proc/get_contained_matter()
-	if(length(reagents?.reagent_volumes))
+/atom/proc/get_contained_matter(include_reagents = TRUE)
+	if(include_reagents && length(reagents?.reagent_volumes))
 		LAZYINITLIST(.)
-		for(var/R in reagents.reagent_volumes)
-			.[R] += floor(REAGENT_VOLUME(reagents, R) / REAGENT_UNITS_PER_MATERIAL_UNIT)
+		for(var/decl/material/reagent as anything in reagents.reagent_volumes)
+			.[reagent.type] += floor(REAGENT_VOLUME(reagents, reagent) / REAGENT_UNITS_PER_MATERIAL_UNIT)
 	for(var/atom/contained_obj as anything in get_contained_external_atoms()) // machines handle component parts separately
-		. = MERGE_ASSOCS_WITH_NUM_VALUES(., contained_obj.get_contained_matter())
+		. = MERGE_ASSOCS_WITH_NUM_VALUES(., contained_obj.get_contained_matter(include_reagents))
 
 /// Return a list of all simulated atoms inside this one.
 /atom/proc/get_contained_external_atoms()
@@ -485,9 +495,8 @@
 */
 /atom/proc/try_detonate_reagents(var/severity = 3)
 	if(reagents)
-		for(var/r_type in reagents.reagent_volumes)
-			var/decl/material/R = GET_DECL(r_type)
-			R.explosion_act(src, severity)
+		for(var/decl/material/reagent as anything in reagents.reagent_volumes)
+			reagent.explosion_act(src, severity)
 
 /**
 	Handle an explosion of `severity` affecting this atom
@@ -673,7 +682,7 @@
 	- Return: The result of the forceMove() at the end.
 */
 /atom/movable/proc/dropInto(var/atom/destination)
-	while(istype(destination))
+	while(!QDELETED(src) && istype(destination))
 		var/atom/drop_destination = destination.onDropInto(src)
 		if(!istype(drop_destination) || drop_destination == destination)
 			return forceMove(destination)

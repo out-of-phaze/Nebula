@@ -66,10 +66,9 @@
 		return
 	w_class = (reagents?.total_volume > 0)? ITEM_SIZE_SMALL : ITEM_SIZE_TINY
 	//#TODO: Maybe acids should handle eating their own containers themselves?
-	for(var/reagent in reagents?.reagent_volumes)
-		var/decl/material/M = GET_DECL(reagent)
-		if(M.solvent_power >= MAT_SOLVENT_STRONG)
-			visible_message(SPAN_DANGER("\The [M] chews through \the [src]!"))
+	for(var/decl/material/reagent as anything in reagents?.reagent_volumes)
+		if(reagent.solvent_power >= MAT_SOLVENT_STRONG)
+			visible_message(SPAN_DANGER("\The [reagent] chews through \the [src]!"))
 			physically_destroyed()
 
 /obj/item/chems/water_balloon/throw_impact(atom/hit_atom, datum/thrownthing/TT)
@@ -146,11 +145,11 @@
 	desc = "A cheap, plastic replica of an energy sword. Realistic sounds! Ages 8 and up."
 	sharp = FALSE
 	edge = FALSE
-	attack_verb = list("hit")
+	attack_verb = "hit"
 	material = /decl/material/solid/organic/plastic
 	active_hitsound = 'sound/weapons/genhit.ogg'
 	active_descriptor = "extended"
-	active_attack_verb = list("hit")
+	active_attack_verb = "hit"
 	active_edge = FALSE
 	active_sharp = FALSE
 	_active_base_attack_force = 1

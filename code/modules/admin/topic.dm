@@ -233,6 +233,8 @@
 				delmob = TRUE
 
 		var/transform_key = replacetext(href_list["simplemake"], "_", " ")
+		// Nothing ever seems to pass species to any simplemake href links...
+		// TODO: Remove subspecies argument if it actually is defunct?
 		if(M.try_rudimentary_transform(transform_key, delmob, href_list["species"]))
 			log_and_message_admins("has used rudimentary transformation on [key_name_admin(M)]. Transforming to [transform_key]; deletemob=[delmob]")
 
@@ -908,9 +910,9 @@
 
 		//Job + antagonist
 		if(M.mind)
-			special_role_description = "Role: <b>[M.mind.assigned_role]</b>; Antagonist: <font color='red'><b>[M.mind.get_special_role_name("unknown role")]</b></font>; Has been rev: [(M.mind.has_been_rev)?"Yes":"No"]"
+			special_role_description = "Role: <b>[M.mind.assigned_role]</b>; Antagonist: <font color='red'><b>[M.mind.get_special_role_name("unknown role")]</b></font>"
 		else
-			special_role_description = "Role: <i>Mind datum missing</i> Antagonist: <i>Mind datum missing</i>; Has been rev: <i>Mind datum missing</i>;"
+			special_role_description = "Role: <i>Mind datum missing</i> Antagonist: <i>Mind datum missing</i>"
 
 		//Health
 		if(isliving(M))
@@ -992,7 +994,7 @@
 			M.take_damage(min(99, M.current_health - 1))
 			SET_STATUS_MAX(M, STAT_STUN, 20)
 			SET_STATUS_MAX(M, STAT_WEAK, 20)
-			M.set_status(STAT_STUTTER, 20)
+			M.set_status_condition(STAT_STUTTER, 20)
 
 	else if(href_list["CentcommReply"])
 		var/mob/living/L = locate(href_list["CentcommReply"])
@@ -1468,13 +1470,16 @@
 			if(!istype(M))
 				to_chat(usr, "[M] is illegal type, must be /mob!")
 				return
-			var/decl/language/L = SSlore.get_language_by_name(href_list["lang"])
-			if(L in M.languages)
-				if(!M.remove_language(L.type))
-					to_chat(usr, "Failed to remove language '[L.name]' from \the [M]!")
+			var/decl/language/L = locate(href_list["lang"])
+			if(istype(L))
+				if(L in M.languages)
+					if(!M.remove_language(L.type))
+						to_chat(usr, "Failed to remove language '[L.name]' from \the [M]!")
+				else
+					if(!M.add_language(L.type))
+						to_chat(usr, "Failed to add language '[L.name]' to \the [M]!")
 			else
-				if(!M.add_language(L.type))
-					to_chat(usr, "Failed to add language '[L.name]' from \the [M]!")
+				to_chat(usr, "Failed to toggle unknown language on \the [M]!")
 
 			show_player_panel(M)
 

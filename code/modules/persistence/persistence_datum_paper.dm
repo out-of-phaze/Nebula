@@ -14,7 +14,7 @@
 		var/obj/structure/noticeboard/board = locate() in creating
 		if(!board)
 			var/decl/material/mat = decls_repository.get_decl_by_id_or_var(tokens["noticeboard_material"], /decl/material, "name")
-			board = new(creating, (mat?.type || /decl/material/solid/organic/wood))
+			board = new(creating, (mat?.type || /decl/material/solid/organic/wood/oak))
 			if("noticeboard_direction" in tokens)
 				board.set_dir(tokens["noticeboard_direction"])
 		if(LAZYLEN(board.notices) < board.max_notices)
@@ -41,7 +41,7 @@
 /decl/persistence_handler/paper/GetAdminDataStringFor(var/thing, var/can_modify, var/mob/user)
 	var/obj/item/paper/paper = thing
 	if(can_modify)
-		. = "<td style='background-color:[paper.color]'>[paper.info]</td><td>[paper.name]</td><td>[paper.last_modified_ckey]</td><td><a href='byond://?src=\ref[src];caller=\ref[user];remove_entry=\ref[thing]'>Destroy</a></td>"
+		. = "<td style='background-color:[paper.color]'>[paper.info]</td><td>[paper.name]</td><td>[paper.last_modified_ckey]</td><td><a href='byond://?src=\ref[src];user=\ref[user];remove_entry=\ref[thing]'>Destroy</a></td>"
 	else
 		. = "<td colspan = 2;style='background-color:[paper.color]'>[paper.info]</td><td>[paper.name]</td><td>[paper.last_modified_ckey]</td>"
 

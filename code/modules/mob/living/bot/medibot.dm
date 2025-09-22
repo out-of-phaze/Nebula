@@ -95,11 +95,7 @@
 				last_newpatient_speak = world.time
 			break
 
-/mob/living/bot/medbot/UnarmedAttack(var/mob/living/human/target, var/proximity)
-	. = ..()
-	if(.)
-		return
-
+/mob/living/bot/medbot/ResolveUnarmedAttack(var/mob/living/human/target)
 	if(!on || !istype(target))
 		return FALSE
 
@@ -155,8 +151,8 @@
 	else
 		icon_state = "medibot[on]"
 
-/mob/living/bot/medbot/attackby(var/obj/item/O, var/mob/user)
-	if(istype(O, /obj/item/chems/glass))
+/mob/living/bot/medbot/attackby(var/obj/item/used_item, var/mob/user)
+	if(istype(used_item, /obj/item/chems/glass))
 		if(locked)
 			to_chat(user, "<span class='notice'>You cannot insert a beaker because the panel is locked.</span>")
 			return TRUE
@@ -164,10 +160,10 @@
 			to_chat(user, "<span class='notice'>There is already a beaker loaded.</span>")
 			return TRUE
 
-		if(!user.try_unequip(O, src))
+		if(!user.try_unequip(used_item, src))
 			return TRUE
-		reagent_glass = O
-		to_chat(user, "<span class='notice'>You insert [O].</span>")
+		reagent_glass = used_item
+		to_chat(user, "<span class='notice'>You insert [used_item].</span>")
 		return TRUE
 	else
 		return ..()
@@ -310,8 +306,8 @@
 
 	// If they're injured, we're using a beaker, and they don't have on of the chems in the beaker
 	if(reagent_glass && use_beaker && ((patient.get_damage(BRUTE) >= heal_threshold) || (patient.get_damage(TOX) >= heal_threshold) || (patient.get_damage(TOX) >= heal_threshold) || (patient.get_damage(OXY) >= (heal_threshold + 15))))
-		for(var/R in reagent_glass.reagents.reagent_volumes)
-			if(!patient.reagents.has_reagent(R))
+		for(var/decl/material/reagent as anything in reagent_glass.reagents.reagent_volumes)
+			if(!patient.reagents.has_reagent(reagent))
 				return 1
 			continue
 

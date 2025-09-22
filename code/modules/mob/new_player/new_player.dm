@@ -164,7 +164,7 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 		if(!SSjobs.check_general_join_blockers(src, job))
 			return FALSE
 
-		var/decl/species/S = get_species_by_key(client.prefs.species)
+		var/decl/species/S = client.prefs.get_species_decl()
 		if(!check_species_allowed(S))
 			return 0
 
@@ -361,7 +361,7 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 
 	var/decl/species/chosen_species
 	if(client.prefs.species)
-		chosen_species = get_species_by_key(client.prefs.species)
+		chosen_species = client.prefs.get_species_decl()
 
 	if(!spawn_turf)
 		var/datum/job/job = SSjobs.get_by_title(mind.assigned_role)
@@ -374,20 +374,16 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 		if(!check_species_allowed(chosen_species))
 			spawning = 0 //abort
 			return null
-		new_character = new(spawn_turf, chosen_species.name)
-
-	if(!new_character)
-		new_character = new(spawn_turf)
-
-	new_character.lastarea = get_area(spawn_turf)
-
-	if(global.random_players)
+	if(global.random_players) // apply randomness prior to creating the character
 		var/decl/species/current_species = client.prefs.get_species_decl()
 		var/decl/pronouns/pronouns = pick(current_species.available_pronouns)
 		client.prefs.gender = pronouns.name
 		client.prefs.real_name = client.prefs.get_random_name()
 		client.prefs.randomize_appearance_and_body_for(new_character)
-	client.prefs.copy_to(new_character)
+	new_character = client.prefs.create_character_from_snapshot(spawn_turf)
+	new_character.lastarea = get_area(spawn_turf)
+
+	// client.prefs.copy_to(new_character) // not anymore lol
 
 	sound_to(src, sound(null, repeat = 0, wait = 0, volume = 85, channel = sound_channels.lobby_channel))// MAD JAMS cant last forever yo
 
@@ -427,11 +423,11 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 /mob/new_player/proc/check_species_allowed(var/decl/species/S, var/show_alert=1)
 	if(!S.is_available_for_join() && !has_admin_rights())
 		if(show_alert)
-			to_chat(src, alert("Your current species, [client.prefs.species], is not available for play."))
+			to_chat(src, alert("Your current species, [S.name], is not available for play."))
 		return 0
 	if(!is_alien_whitelisted(src, S))
 		if(show_alert)
-			to_chat(src, alert("You are currently not whitelisted to play [client.prefs.species]."))
+			to_chat(src, alert("You are currently not whitelisted to play [S.name_plural]."))
 		return 0
 	return 1
 
@@ -439,7 +435,7 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 	SHOULD_CALL_PARENT(FALSE)
 	var/decl/species/chosen_species
 	if(client.prefs.species)
-		chosen_species = get_species_by_key(client.prefs.species)
+		chosen_species = client.prefs.get_species_decl()
 	if(!chosen_species || !check_species_allowed(chosen_species, 0))
 		return global.using_map.default_species
 	return chosen_species.name

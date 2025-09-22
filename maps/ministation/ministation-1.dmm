@@ -65,7 +65,7 @@
 	pixel_y = 24
 	},
 /obj/item/flashlight/lamp/green,
-/obj/item/box/fancy/cigarettes/tricord,
+/obj/item/box/fancy/cigarettes/covert/tricord,
 /turf/floor/carpet/blue,
 /area/ministation/medical)
 "at" = (
@@ -5716,9 +5716,9 @@
 /obj/item/tool/hoe/mini,
 /obj/item/tool/spade,
 /obj/item/tool/spade,
-/obj/item/honey_frame,
-/obj/item/honey_frame,
-/obj/item/honey_frame,
+/obj/item/hive_frame/crafted,
+/obj/item/hive_frame/crafted,
+/obj/item/hive_frame/crafted,
 /turf/floor/tiled,
 /area/ministation/hydro)
 "yg" = (
@@ -6040,7 +6040,7 @@
 "zj" = (
 /obj/effect/floor_decal/corner/beige/half,
 /obj/structure/table/glass,
-/obj/machinery/honey_extractor,
+/obj/machinery/centrifuge/mapped,
 /turf/floor/tiled,
 /area/ministation/hydro)
 "zl" = (

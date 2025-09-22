@@ -27,13 +27,12 @@
 	add_fingerprint(user)
 
 /obj/item/knife/folding/update_attack_force()
-	..()
+	. = ..()
 	if(open)
 		set_edge(TRUE)
 		set_sharp(TRUE)
 		w_class = ITEM_SIZE_NORMAL
 		attack_verb = list("slashed", "stabbed")
-		..()
 	else
 		set_edge(initial(edge))
 		set_sharp(initial(sharp))
@@ -58,7 +57,7 @@
 	valid_handle_colors = list(WOOD_COLOR_GENERIC, WOOD_COLOR_RICH, WOOD_COLOR_BLACK, WOOD_COLOR_CHOCOLATE, WOOD_COLOR_PALE)
 
 /obj/item/knife/folding/wood/get_striking_material(mob/user, atom/target)
-	. = open ? ..() : GET_DECL(/decl/material/solid/organic/wood) // todo: different handle colors -> different material
+	. = open ? ..() : GET_DECL(/decl/material/solid/organic/wood/oak) // todo: different handle colors -> different material
 
 /obj/item/knife/folding/tacticool
 	name = "folding knife"
