@@ -71,10 +71,6 @@
 /obj/item/stack/material/ingot/mapped/tin/twenty,
 /turf/floor/path/running_bond/basalt,
 /area/karzerfeste/caves/point_of_interest/dungeon)
-"N" = (
-/obj/structure/door/ebony,
-/turf/floor/path/herringbone/basalt,
-/area/karzerfeste/caves/point_of_interest/dungeon)
 "R" = (
 /obj/structure/table/wood/ebony,
 /obj/item/bladed/knife,
@@ -194,8 +190,8 @@ a
 l
 l
 l
-N
-N
+p
+p
 l
 l
 l

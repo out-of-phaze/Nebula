@@ -73,10 +73,6 @@
 /obj/structure/door/ebony,
 /turf/floor/path/herringbone/basalt,
 /area/karzerfeste/caves/point_of_interest/dungeon)
-"x" = (
-/obj/structure/door/ebony,
-/turf/floor/path/herringbone/basalt,
-/area/karzerfeste/caves/point_of_interest/dungeon)
 "A" = (
 /obj/structure/chair/bench/ebony{
 	dir = 8
@@ -190,8 +186,8 @@ q
 (2,1,1) = {"
 q
 f
-x
-x
+w
+w
 f
 f
 f
@@ -274,15 +270,15 @@ L
 c
 f
 f
-x
+w
 f
 f
 f
-x
+w
 f
 f
 f
-x
+w
 f
 f
 q
@@ -474,11 +470,11 @@ c
 c
 f
 f
-x
+w
 f
 f
 f
-x
+w
 f
 f
 f
@@ -550,8 +546,8 @@ q
 (20,1,1) = {"
 q
 f
-x
-x
+w
+w
 f
 f
 f

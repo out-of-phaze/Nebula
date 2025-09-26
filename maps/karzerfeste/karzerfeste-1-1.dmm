@@ -629,7 +629,7 @@
 /area/karzerfeste/keep)
 "kC" = (
 /obj/structure/table/marble,
-/obj/item/kitchen/rollingpin,
+/obj/item/rollingpin,
 /obj/item/knife/kitchen/cleaver/bronze,
 /turf/floor/path/herringbone/granite,
 /area/karzerfeste/keep)
@@ -2155,7 +2155,7 @@
 /area/karzerfeste/ward/shrine/east)
 "Od" = (
 /obj/structure/table/marble,
-/obj/item/kitchen/rollingpin,
+/obj/item/rollingpin,
 /turf/floor/path/herringbone/granite,
 /area/karzerfeste/keep)
 "Oe" = (
