@@ -1,6 +1,7 @@
 /decl/strata/permafrost
 	name = "permafrost"
 	base_materials = list(/decl/material/solid/ice)
+	default_strata_candidate = FALSE // don't randomly spawn on exoplanets. maybe eventually use it for asteroid mining or mapped turfs
 	// todo swap hydrogen ice to hydrate
 	ores_rich = list(
 		/decl/material/solid/ice/aspium,

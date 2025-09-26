@@ -412,6 +412,8 @@
 
 		for(var/stype in all_strata)
 			var/decl/strata/strata = all_strata[stype]
+			if(!strata.default_strata_candidate)
+				continue
 			if(strata.is_valid_exoplanet_strata(src))
 				possible_strata += stype
 

@@ -407,6 +407,8 @@
 
 		for(var/stype in all_strata)
 			var/decl/strata/strata = all_strata[stype]
+			if(!strata.default_strata_candidate)
+				continue
 			if(!is_type_in_list(strata, forbid_strata) && strata.is_valid_level_stratum(src))
 				possible_strata += stype
 
