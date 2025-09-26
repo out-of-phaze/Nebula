@@ -10,9 +10,6 @@ var/global/list/obj/abstract/landmark/all_landmarks = list()
 		return INITIALIZE_HINT_QDEL
 	global.all_landmarks += src
 
-/obj/abstract/landmark/proc/delete()
-	delete_me = TRUE
-
 /obj/abstract/landmark/Destroy()
 	global.all_landmarks -= src
 	return ..()
