@@ -2017,3 +2017,5 @@ default behaviour is:
 /mob/living/proc/is_tagging_suitable()
 	return !key && !client
 
+/mob/living/proc/is_playing_dead()
+	return stat || current_posture?.prone || (status_flags & FAKEDEATH)
