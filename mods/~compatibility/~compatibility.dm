@@ -26,3 +26,11 @@
 #ifdef MODPACK_CORPORATE
 #include "patches/corporate.dm"
 #endif
+
+#ifdef CONTENT_PACK_CIRCUITS
+#include "patches/circuits.dm"
+#endif
+
+#ifdef MODPACK_DRAKES
+#include "patches/drakes.dm"
+#endif

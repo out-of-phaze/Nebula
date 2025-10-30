@@ -367,7 +367,7 @@
 	desc = "The pump mode of the vent. Expected values are \"siphon\" or \"release\"."
 	can_write = TRUE
 	has_updates = TRUE
-	var_type = IC_FORMAT_STRING
+	var_type = VAR_FORMAT_STRING
 
 /decl/public_access/public_variable/pump_dir/access_var(obj/machinery/atmospherics/unary/vent_pump/machine)
 	return machine.pump_direction ? "release" : "siphon"
@@ -385,7 +385,7 @@
 	desc = "Numerical codes for whether the pump checks internal or internal pressure (or both) prior to operating. Can also be supplied the string keyword \"default\"."
 	can_write = TRUE
 	has_updates = FALSE
-	var_type = IC_FORMAT_ANY
+	var_type = VAR_FORMAT_ANY
 
 /decl/public_access/public_variable/pump_checks/access_var(obj/machinery/atmospherics/unary/vent_pump/machine)
 	return machine.pressure_checks
@@ -404,7 +404,7 @@
 	desc = "The bound on internal pressure used in checks (a number). When writing, can be supplied the string keyword \"default\" instead."
 	can_write = TRUE
 	has_updates = FALSE
-	var_type = IC_FORMAT_ANY
+	var_type = VAR_FORMAT_ANY
 
 /decl/public_access/public_variable/pressure_bound/access_var(obj/machinery/atmospherics/unary/vent_pump/machine)
 	return machine.internal_pressure_bound

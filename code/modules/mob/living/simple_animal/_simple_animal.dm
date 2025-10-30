@@ -81,7 +81,6 @@
 	var/return_damage_min
 	var/return_damage_max
 
-	var/performing_delayed_life_action = FALSE
 	var/glowing_eyes = FALSE
 	var/mob_icon_state_flags = 0
 
@@ -115,6 +114,10 @@
 /mob/living/simple_animal/Initialize()
 	. = ..()
 
+	if(isnull(draw_visible_overlays))
+		var/list/defaults = get_default_animal_colours()
+		draw_visible_overlays = defaults?.Copy() // do not mutate static list
+
 	if(length(ability_handlers))
 		for(var/handler in ability_handlers)
 			add_ability_handler(handler)
@@ -128,6 +131,9 @@
 		minbodytemp = 0
 
 	check_mob_icon_states(TRUE)
+	if(length(draw_visible_overlays))
+		update_icon()
+
 	if(isnull(base_animal_type))
 		base_animal_type = type
 	if(LAZYLEN(natural_armor))
@@ -604,3 +610,10 @@ var/global/list/simplemob_icon_bitflag_cache = list()
 
 /mob/living/simple_animal/is_space_movement_permitted(allow_movement = FALSE)
 	return skip_spacemove ? SPACE_MOVE_PERMITTED : ..()
+
+/mob/living/simple_animal/proc/get_default_animal_colour(marking_type)
+	var/list/colors = get_default_animal_colours()
+	return LAZYACCESS(colors, marking_type) // Return null if unset, rather than forcing COLOR_BLACK or such.
+
+/mob/living/simple_animal/proc/get_default_animal_colours()
+	return

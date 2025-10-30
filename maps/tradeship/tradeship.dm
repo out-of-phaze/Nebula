@@ -16,10 +16,12 @@
 
 	#include "../../mods/content/beekeeping/_beekeeping.dme"
 	#include "../../mods/content/bigpharma/_bigpharma.dme"
+	#include "../../mods/content/blob/_blob.dme"
 	#include "../../mods/content/breath_holding/_breath_holding.dme"
 	#include "../../mods/content/corporate/_corporate.dme"
 	#include "../../mods/content/dungeon_loot/_dungeon_loot.dme"
 	#include "../../mods/content/government/_government.dme"
+	#include "../../mods/content/integrated_electronics/_integrated_electronics.dme"
 	#include "../../mods/content/karmotrine/_karmotrine.dme"
 	#include "../../mods/content/matchmaking/_matchmaking.dme"
 	#include "../../mods/content/modern_earth/_modern_earth.dme"
@@ -32,6 +34,7 @@
 
 	#include "../../mods/gamemodes/cult/_cult.dme"
 	#include "../../mods/gamemodes/heist/_heist.dme"
+	#include "../../mods/gamemodes/mercenary/_mercenary.dme"
 	#include "../../mods/gamemodes/ninja/_ninja.dme"
 	#include "../../mods/gamemodes/revolution/_revolution.dme"
 	#include "../../mods/gamemodes/spyvspy/_spyvspy.dme"
@@ -72,6 +75,7 @@
 	#include "tradeship_areas.dm"
 	#include "tradeship_documents.dm"
 	#include "tradeship_jobs.dm"
+	#include "tradeship_levels.dm"
 	#include "tradeship_loadouts.dm"
 	#include "tradeship_overmap.dm"
 	#include "tradeship_overrides.dm"

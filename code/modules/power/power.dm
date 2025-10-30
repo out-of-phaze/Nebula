@@ -112,8 +112,6 @@
 
 		if(!cable_only && istype(AM,/obj/machinery/power))
 			var/obj/machinery/power/P = AM
-			if(P.powernet == 0)	continue		// exclude APCs which have powernet=0
-
 			if(!unmarked || !P.powernet)		//if unmarked=1 we only return things with no powernet
 				if(d == 0)
 					. += P
@@ -202,8 +200,8 @@
 		PN = power_source
 	else if(istype(power_source,/obj/item/cell))
 		cell = power_source
-	else if(istype(power_source,/obj/machinery/power/apc))
-		var/obj/machinery/power/apc/apc = power_source
+	else if(istype(power_source,/obj/machinery/apc))
+		var/obj/machinery/apc/apc = power_source
 		cell = apc.get_cell()
 		var/obj/machinery/power/terminal/term = apc.terminal()
 		if (term)
