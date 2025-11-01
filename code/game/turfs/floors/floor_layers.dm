@@ -9,7 +9,6 @@
 		if(islist(_flooring))
 			for(var/floor in _flooring)
 				. += RESOLVE_TO_DECL(floor)
-			_flooring = . // ensure the list elements are resolved
 		else
 			. += RESOLVE_TO_DECL(_flooring)
 	if(_base_flooring)
