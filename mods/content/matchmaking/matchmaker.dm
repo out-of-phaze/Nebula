@@ -70,7 +70,7 @@ var/global/datum/matchmaker/matchmaker = new()
 		return
 	if(!length(matchmaker.get_relationships_between(user.mind, source.mind, TRUE)))
 		return
-	return "<br><span class='notice'>You know them. <a href='byond://?src=\ref[src];show_relations=1'>More...</a></span><br>"
+	return "<br><span class='notice'>You know them. <a href='byond://?src=\ref[source];show_relations=1'>More...</a></span><br>"
 
 //Types of relations
 
