@@ -153,11 +153,11 @@
 						update_icon()
 					return TRUE
 			if(!anchored)
-				user.visible_message("[user] dissassembles the airlock assembly.", "You start to dissassemble the airlock assembly.")
+				user.visible_message("[user] disassembles the airlock assembly.", "You start to disassemble the airlock assembly.")
 				if(do_after(user, 4 SECONDS, src))
 					if(!WT.isOn())
 						return TRUE
-					to_chat(user, "<span class='notice'>You dissasembled the airlock assembly!</span>")
+					to_chat(user, "<span class='notice'>You disassembled the airlock assembly!</span>")
 					dismantle_structure(user)
 				return TRUE
 		else

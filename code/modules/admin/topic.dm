@@ -462,7 +462,7 @@
 			switch(alert("Temporary Ban?",,"Yes","No", "Cancel"))
 				if("Yes")
 					if(!check_rights(R_MOD,0) && !check_rights(R_BAN, 0))
-						to_chat(usr, "<span class='warning'> You cannot issue temporary job-bans!</span>")
+						to_chat(usr, "<span class='warning'>You cannot issue temporary job-bans!</span>")
 						return
 					if(get_config_value(/decl/config/toggle/on/ban_legacy_system))
 						to_chat(usr, "<span class='warning'>Your server is using the legacy banning system, which does not support temporary job bans. Consider upgrading. Aborting ban.</span>")
@@ -472,7 +472,7 @@
 						return
 					var/mod_job_tempban_max = get_config_value(/decl/config/num/mod_job_tempban_max)
 					if(check_rights(R_MOD, 0) && !check_rights(R_BAN, 0) && mins > mod_job_tempban_max)
-						to_chat(usr, "<span class='warning'> Moderators can only job tempban up to [mod_job_tempban_max] minutes!</span>")
+						to_chat(usr, "<span class='warning'>Moderators can only job tempban up to [mod_job_tempban_max] minutes!</span>")
 						return
 					var/reason = sanitize(input(usr,"Reason?","Please State Reason","") as text|null)
 					if(!reason)
@@ -965,7 +965,7 @@
 			return
 
 		if(BSACooldown)
-			to_chat(src.owner, "Standby!  Reload cycle in progress!  Gunnary crews ready in five seconds!")
+			to_chat(src.owner, "Standby!  Reload cycle in progress!  Gunnery crews ready in five seconds!")
 			return
 
 		BSACooldown = 1

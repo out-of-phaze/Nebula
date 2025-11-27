@@ -120,7 +120,7 @@ field_generator power level display
 				src.anchored = FALSE
 				return TRUE
 			if(2)
-				to_chat(user, "<span class='warning'> \The [src] needs to be unwelded from the floor.</span>")
+				to_chat(user, "<span class='warning'>\The [src] needs to be unwelded from the floor.</span>")
 				return TRUE
 	else if(IS_WELDER(W))
 		var/obj/item/weldingtool/WT = W

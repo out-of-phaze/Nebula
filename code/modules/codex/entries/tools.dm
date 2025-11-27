@@ -50,7 +50,7 @@
 /datum/codex_entry/geiger_counter
 	associated_paths = list(/obj/item/geiger)
 	mechanics_text = "By using this item, you may toggle its scanning mode on and off. Examine it while it's on to check for ambient radiation."
-	lore_text = "For centuries geiger counters have been saving the lives of unsuspecting laborers and technicians. You can never be too careful around radiation."
+	lore_text = "For centuries, Geiger counters (sometimes known as Geiger–Müller counters) have been saving the lives of unsuspecting laborers and technicians. You can never be too careful around radiation."
 	available_to_map_tech_level = MAP_TECH_LEVEL_SPACE
 
 /datum/codex_entry/light_replacer
@@ -70,7 +70,7 @@
 /datum/codex_entry/t_scanner
 	associated_paths = list(/obj/item/t_scanner)
 	mechanics_text = "Use this to toggle its scanning capabilities on and off. While on, it will expose the layout of cabling and pipework in a 7x7 area around you."
-	lore_text = "The T-ray scanner is a modern spectroscopy solution and labor-saving device. Why work yourself to the bone removing floor panels when you can simply look through them with submillimeter radiation?"
+	lore_text = "The T-ray scanner is a modern spectroscopy solution and labor-saving device. Why work yourself to the bone removing floor panels when you can simply look through them with sub-millimeter radiation?"
 	available_to_map_tech_level = MAP_TECH_LEVEL_SPACE
 
 /datum/codex_entry/rcd

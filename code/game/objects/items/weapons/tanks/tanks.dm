@@ -195,7 +195,7 @@ var/global/list/global/tank_gauge_cache = list()
 			if(!valve_welded)
 				to_chat(user, "<span class='notice'>You begin welding \the [src] emergency pressure relief valve.</span>")
 				if(do_after(user, 40,src))
-					to_chat(user, "<span class='notice'>You carefully weld \the [src] emergency pressure relief valve shut.</span><span class='warning'> \The [src] may now rupture under pressure!</span>")
+					to_chat(user, "<span class='notice'>You carefully weld \the [src] emergency pressure relief valve shut.</span> <span class='warning'>\The [src] may now rupture under pressure!</span>")
 					valve_welded = 1
 					leaking = 0
 				else

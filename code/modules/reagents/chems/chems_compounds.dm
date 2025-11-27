@@ -52,7 +52,7 @@
 /decl/material/liquid/enzyme
 	name = "universal enzyme"
 	uid = "chem_enzyme"
-	lore_text = "A universal enzyme used in the preperation of certain chemicals and foods."
+	lore_text = "A universal enzyme used in the preparation of certain chemicals and foods."
 	taste_description = "sweetness"
 	taste_mult = 0.7
 	color = "#365e30"

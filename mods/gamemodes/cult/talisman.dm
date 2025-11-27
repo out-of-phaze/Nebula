@@ -50,7 +50,7 @@
 
 /obj/item/paper/talisman/emp/attack_self(var/mob/user)
 	if(iscultist(user))
-		to_chat(user, "This is an emp talisman.")
+		to_chat(user, "This is an EMP talisman.")
 	..()
 
 /obj/item/paper/talisman/emp/afterattack(var/atom/target, var/mob/user, var/proximity)

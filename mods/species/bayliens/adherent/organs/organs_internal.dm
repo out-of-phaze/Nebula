@@ -84,7 +84,7 @@
 
 /obj/item/organ/internal/powered/jets
 	name = "maneuvering jets"
-	desc = "Gas jets from a Adherent chassis."
+	desc = "Gas jets from an Adherent chassis."
 	action_button_name = "Toggle Maneuvering Pack"
 	action_button_desc = "Enables or disables your internal jetpack which allow you to maneuver in open space"
 	default_action_type = /datum/action/item_action/organ/adherent

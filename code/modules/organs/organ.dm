@@ -103,7 +103,7 @@
 				supplied_appearance = owner.get_mob_snapshot() //Grab our owner's appearance info if we don't have any, and they have
 			else
 				//The owner having no DNA can be a valid reason to keep our appearance data null in some cases
-				log_debug("obj/item/organ/setup(): [src] had null appearance data, with a owner with null appearance data!")
+				log_debug("obj/item/organ/setup(): [src] had null appearance data, with an owner with null appearance data!")
 				organ_appearance = null //#TODO: Not sure that's really legal
 				return
 		else

@@ -2069,7 +2069,7 @@
 /obj/machinery/door/blast/regular/open{
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
-
+	
 	},
 /obj/machinery/door/airlock/hatch,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2216,7 +2216,7 @@
 	dir = 4;
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
-
+	
 	},
 /turf/floor,
 /area/unishi/smresearch)
@@ -2346,7 +2346,7 @@
 	dir = 4;
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
-
+	
 	},
 /obj/item/remains,
 /turf/floor,
@@ -2598,7 +2598,7 @@
 /area/unishi/smresearch)
 "gY" = (
 /obj/item/paper/crumpled{
-	info = "I FUCKING KNEW that piece of shit was no good. To whoever finds this, his name is Robert Moreno. He is one of the undergrads here, or at least his story went. The fucker lured us here on the pretense of a huge emergency, and the second we came in, the shutters closed behind us. We have been hearing gunshots through the ship throughout. The emitter was locked and on, and kept hitting that rock thing that one of the profs was studying, and we cant get the damn thing to stop. It chewed through everything we put in front of it and it doesnt look like it's stopping any time soon. The grad student in charge of this monstrosity is screaming and telling us that it's all over. We've been vomiting non stop, and I think our time here is running out."
+	info = "I FUCKING KNEW that piece of shit was no good. To whoever finds this, his name is Robert Moreno. He is one of the undergrads here, or at least his story went. The fucker lured us here on the pretense of a huge emergency, and the second we came in, the shutters closed behind us. We have been hearing gunshots through the ship throughout. The emitter was locked and on, and kept hitting that rock thing that one of the profs was studying, and we cant get the damn thing to stop. It chewed through everything we put in front of it and it doesnt look like it's stopping any time soon. The grad student in charge of this monstrosity is screaming and telling us that it's all over. We've been vomiting nonstop, and I think our time here is running out."
 	},
 /obj/item/usedcryobag,
 /obj/item/clothing/suit/space/void/medical,
@@ -2742,7 +2742,7 @@
 	dir = 4;
 	id_tag = "Biohazard";
 	name = "Biohazard Shutter";
-
+	
 	},
 /obj/item/remains,
 /obj/random/shoes,

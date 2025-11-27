@@ -498,7 +498,7 @@
 "abr" = (
 /obj/structure/flora/pottedplant/unusual{
 	name = "Steve";
-	desc = "This is an unusual plant. It's bulbous ends emit a soft blue light. The name Steve is written in black marker on the pot."
+	desc = "This is an unusual plant. Its bulbous ends emit a soft blue light. The name Steve is written in black marker on the pot."
 	},
 /turf/floor/bluegrid,
 /area/exodus/turret_protected/ai)

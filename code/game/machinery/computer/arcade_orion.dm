@@ -417,7 +417,7 @@
 			else
 				to_chat(usr, "<span class='warning'>You feel ill.</span>")
 		if(ORION_TRAIL_CARP)
-			to_chat(usr, "<span class='danger'> Something bit you!</span>")
+			to_chat(usr, "<span class='danger'>Something bit you!</span>")
 			var/mob/living/M = usr
 			M.take_damage(10)
 		if(ORION_TRAIL_FLUX)

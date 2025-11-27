@@ -8,7 +8,7 @@
 	var/mob/living/simple_animal/borer/B = HAS_BRAIN_WORMS(src)
 
 	if(B && B.host_brain)
-		to_chat(src, "<span class='danger'>You withdraw your probosci, releasing control of [B.host_brain]</span>")
+		to_chat(src, "<span class='danger'>You withdraw your probosces, releasing control of [B.host_brain]</span>")
 
 		B.detach_from_host()
 

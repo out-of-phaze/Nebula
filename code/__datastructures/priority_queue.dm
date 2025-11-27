@@ -30,7 +30,7 @@
 	Remove(.)
 
 /// Removes an `item` from the list
-/// * Returns: `TRUE` if succesfully removed, otherwise `FALSE`
+/// * Returns: `TRUE` if successfully removed, otherwise `FALSE`
 /datum/priority_queue/proc/Remove(item)
 	. = L.Remove(item)
 

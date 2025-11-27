@@ -76,7 +76,7 @@
 /datum/codex_entry/emitter
 	associated_paths = list(/obj/machinery/emitter)
 	mechanics_text = "You must secure this in place with a wrench and weld it to the floor before using it. Using cables on the emitter will allow you to connect it to the powernet with a terminal, placed over a cable node. Clicking will toggle it on and off, at which point, so long as it remains powered, it will fire in a single direction in bursts of four."
-	lore_text = "Lasers like this one have been in use for ages, in applications such as mining, cutting, and in the startup sequence of many advanced space station and starshipn engines."
+	lore_text = "Lasers like this one have been in use for ages, in applications such as mining, cutting, and in the startup sequence of many advanced space station and starship engines."
 	antag_text = "This baby is capable of slicing through walls, sealed lockers, and people."
 	disambiguator = "machine"
 	available_to_map_tech_level = MAP_TECH_LEVEL_SPACE
@@ -141,7 +141,7 @@
 /datum/codex_entry/internet_uplink
 	associated_paths = list(/obj/machinery/internet_uplink, /obj/machinery/computer/internet_uplink)
 	lore_text = "A complex internet uplink, capable of communicating near instantaneously with other uplinks through wormhole technology. It can also communicate with PLEXUS repeaters within a local range using hyperintense radio waves."
-	mechanics_text = "Allows for PLEXUS receivers in a set range on the overmap to function, permitting internetwork functions in the sector. The PLEXUS uplink can restrict access to certain networks. The uplink requires massive amounts of power and atmospheric cooling, scaling with the desired range. <BR>Maximum range can be inreased by installing SMES coils. <BR>Can be controlled via the PLEXUS uplink computer."
+	mechanics_text = "Allows for PLEXUS receivers in a set range on the overmap to function, permitting inter-network functions in the sector. The PLEXUS uplink can restrict access to certain networks. The uplink requires massive amounts of power and atmospheric cooling, scaling with the desired range. <BR>Maximum range can be increased by installing SMES coils. <BR>Can be controlled via the PLEXUS uplink computer."
 	disambiguator = "machine"
 	available_to_map_tech_level = MAP_TECH_LEVEL_SPACE
 

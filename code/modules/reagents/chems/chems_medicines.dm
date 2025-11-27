@@ -335,7 +335,7 @@
 
 /decl/material/liquid/neuroannealer
 	name = "neuroannealer"
-	lore_text = "A neuroplasticity-assisting compound that helps to lessen damage to neurological tissue after a injury. Can aid in healing brain tissue."
+	lore_text = "A neuroplasticity-assisting compound that helps to lessen damage to neurological tissue after an injury. Can aid in healing brain tissue."
 	taste_description = "bitterness"
 	color = "#ffff66"
 	metabolism = REM * 0.25

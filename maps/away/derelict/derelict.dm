@@ -2,7 +2,7 @@
 
 /obj/effect/overmap/visitable/sector/derelict
 	name = "debris field"
-	desc = "A large field of miscellanious debris."
+	desc = "A large field of miscellaneous debris."
 	icon_state = "object"
 	initial_generic_waypoints = list(
 		"nav_derelict_1",

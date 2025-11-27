@@ -815,9 +815,9 @@
 	for(var/mob/M in global.living_mob_list_)
 		var/decl/pronouns/pronouns = user.get_pronouns()
 		if(iscultist(M))
-			to_chat(M, "You see a vision of \the [user] keeling over dead, [pronouns.his] blood glowing blue as it escapes [pronouns.his] body and dissipates into thin air; you hear an otherwordly scream and feel that a great disaster has just been averted.")
+			to_chat(M, "You see a vision of \the [user] keeling over dead, [pronouns.his] blood glowing blue as it escapes [pronouns.his] body and dissipates into thin air; you hear an otherworldly scream and feel that a great disaster has just been averted.")
 		else
-			to_chat(M, "You see a vision of [name] keeling over dead, [pronouns.his] blood glowing blue as it escapes [pronouns.his] body and dissipates into thin air; you hear an otherwordly scream and feel very weak for a moment.")
+			to_chat(M, "You see a vision of [name] keeling over dead, [pronouns.his] blood glowing blue as it escapes [pronouns.his] body and dissipates into thin air; you hear an otherworldly scream and feel very weak for a moment.")
 	log_and_message_admins("mended reality with the greatest sacrifice", user)
 	user.dust()
 	var/decl/special_role/cultist/cult = GET_DECL(/decl/special_role/cultist)
@@ -834,7 +834,7 @@
 /* Imbue runes */
 
 /obj/effect/rune/imbue
-	cultname = "otherwordly abomination that shouldn't exist and that you should report to your local god as soon as you see it, along with the instructions for making this"
+	cultname = "otherworldly abomination that shouldn't exist and that you should report to your local god as soon as you see it, along with the instructions for making this"
 	var/papertype
 
 /obj/effect/rune/imbue/cast(var/mob/living/user)

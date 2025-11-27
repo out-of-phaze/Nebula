@@ -324,7 +324,7 @@
 /decl/surgery_step/robotics/repair_burn/end_step(mob/living/user, mob/living/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = GET_EXTERNAL_ORGAN(target, target_zone)
 	user.visible_message("<span class='notice'>[user] finishes splicing cable into [target]'s [affected.name].</span>", \
-	"<span class='notice'>You finishes splicing new cable into [target]'s [affected.name].</span>")
+	"<span class='notice'>You finish splicing new cable into [target]'s [affected.name].</span>")
 	affected.heal_damage(0,rand(30,50),1,1)
 	affected.status &= ~ORGAN_DISFIGURED
 	..()

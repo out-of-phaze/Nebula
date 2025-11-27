@@ -8,7 +8,7 @@
 		return
 
 	if(isnull(tx) || isnull(ty) || isnull(tz) || isnull(range))
-		to_chat(usr, "Capture Map Part, captures part of a map using camara like rendering.")
+		to_chat(usr, "Capture Map Part, captures part of a map using camera like rendering.")
 		to_chat(usr, "Usage: Capture-Map-Part target_x_cord target_y_cord target_z_cord range")
 		to_chat(usr, "Target coordinates specify bottom left corner of the capture, range defines render distance to opposite corner.")
 		return
@@ -61,7 +61,7 @@
 		return
 
 	if(isnull(tz))
-		to_chat(usr, "Map Part, map using camara like rendering.")
+		to_chat(usr, "Map Part, map using camera like rendering.")
 		to_chat(usr, "Usage: Capture-Map target_z_cord")
 		to_chat(usr, "Target Z coordinates define z level to capture.")
 		return

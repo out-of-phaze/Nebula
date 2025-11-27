@@ -93,7 +93,7 @@
 
 /obj/item/chewables/rollable/fine
 	name = "bag of Golden Sol tobacco"
-	desc = "A exclusive brand of overpriced tobacco, allegedly grown at a lagrange point station in Sol system."
+	desc = "An exclusive brand of overpriced tobacco, allegedly grown at a Lagrange point station in the Sol system."
 	icon_state = "rollfine"
 
 /obj/item/chewables/rollable/fine/WillContain()

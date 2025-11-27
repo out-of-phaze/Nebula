@@ -116,8 +116,8 @@
 
 /decl/surgery_step/limb/attach/fail_step(mob/living/user, mob/living/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/E = tool
-	user.visible_message("<span class='warning'> [user]'s hand slips, damaging [target]'s [E.amputation_point]!</span>", \
-	"<span class='warning'> Your hand slips, damaging [target]'s [E.amputation_point]!</span>")
+	user.visible_message("<span class='warning'>[user]'s hand slips, damaging [target]'s [E.amputation_point]!</span>", \
+	"<span class='warning'>Your hand slips, damaging [target]'s [E.amputation_point]!</span>")
 	target.apply_damage(10, BRUTE, null, damage_flags=DAM_SHARP)
 	..()
 
@@ -161,7 +161,7 @@
 
 /decl/surgery_step/limb/connect/fail_step(mob/living/user, mob/living/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/E = GET_EXTERNAL_ORGAN(target, target_zone)
-	user.visible_message("<span class='warning'> [user]'s hand slips, damaging [target]'s [E.amputation_point]!</span>", \
-	"<span class='warning'> Your hand slips, damaging [target]'s [E.amputation_point]!</span>")
+	user.visible_message("<span class='warning'>[user]'s hand slips, damaging [target]'s [E.amputation_point]!</span>", \
+	"<span class='warning'>Your hand slips, damaging [target]'s [E.amputation_point]!</span>")
 	target.apply_damage(10, BRUTE, null, damage_flags=DAM_SHARP)
 	..()

@@ -26,7 +26,7 @@
 	pill.icon_state = get_medication_icon_state_from_reagent_name(original_reagent, "pill", 1, 5)
 
 /datum/extension/obfuscated_medication/syringe
-	container_description = "A pre-loaded syringe of medication."
+	container_description = "A preloaded syringe of medication."
 	expected_type = /obj/item/chems/syringe
 
 /datum/extension/obfuscated_medication/pill_bottle

@@ -131,7 +131,7 @@ AI MODULES
 		target.set_zeroth_law(law)
 		global.lawchanges.Add("The law specified [targetName]")
 	else
-		global.lawchanges.Add("The law specified [targetName], but the AI's existing law zero cannot be overriden.")
+		global.lawchanges.Add("The law specified [targetName], but the AI's existing law zero cannot be overridden.")
 
 /******************** ProtectStation ********************/
 

@@ -64,7 +64,7 @@ var/global/const/BORG_WIRE_CAMERA = 16
 			var/datum/extension/network_device/camera/robot/D = get_extension(src, /datum/extension/network_device)
 			if(D && D.is_functional())
 				R.visible_message("[R]'s camera lens focuses loudly.")
-				to_chat(R, "Your camera lense focuses loudly.")
+				to_chat(R, "Your camera lens focuses loudly.")
 
 		if(BORG_WIRE_LOCKED_DOWN)
 			R.SetLockdown(!R.lockcharge) // Toggle

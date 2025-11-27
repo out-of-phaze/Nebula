@@ -82,7 +82,7 @@
 	if(!do_after(worm, 100+(worm.host.get_damage(BRAIN)*5) || !worm.host || !worm.can_use_borer_ability()))
 		return
 
-	to_chat(worm, SPAN_DANGER("You plunge your probosci deep into the cortex of the host brain, interfacing directly with their nervous system."))
+	to_chat(worm, SPAN_DANGER("You plunge your probosces deep into the cortex of the host brain, interfacing directly with their nervous system."))
 	to_chat(worm.host, SPAN_DANGER("You feel a strange shifting sensation behind your eyes as an alien consciousness displaces yours."))
 	worm.host.add_language(/decl/language/corticalborer)
 

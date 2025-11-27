@@ -202,7 +202,7 @@
 	minimum = -2
 	maximum = 2
 	mode = RANDOM_CHEM_EFFECT_INT
-	desc = "phychiatric effects"
+	desc = "psychiatric effects"
 
 /decl/random_chem_effect/random_properties/ce_cryogenic
 	chem_effect_define = CE_CRYO

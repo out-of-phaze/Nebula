@@ -1,5 +1,5 @@
 /datum/job/submap/bearcat_captain
-	title = "Independant Captain"
+	title = "Independent Captain"
 	total_positions = 1
 	outfit_type = /decl/outfit/job/bearcat/captain
 	supervisors = "your bottom line"
@@ -8,7 +8,7 @@
 	your crew, and maybe you'll be able to survive long enough to be rescued."
 
 /datum/job/submap/bearcat_crewman
-	title = "Independant Crewman"
+	title = "Independent Crewman"
 	supervisors = "the Captain"
 	total_positions = 3
 	outfit_type = /decl/outfit/job/bearcat/crew
@@ -46,7 +46,7 @@
 			qdel(eyegore)
 
 /obj/abstract/submap_landmark/spawnpoint/captain
-	name = "Independant Captain"
+	name = "Independent Captain"
 
 /obj/abstract/submap_landmark/spawnpoint/crewman
-	name = "Independant Crewman"
+	name = "Independent Crewman"

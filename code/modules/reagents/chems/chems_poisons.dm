@@ -30,7 +30,7 @@
 
 /decl/material/liquid/presyncopics
 	name = "presyncopics"
-	lore_text = "A compound that causess presyncopic effects in the taker, including confusion and dizzyness."
+	lore_text = "A compound that causes presyncopic effects in the taker, including confusion and dizziness."
 	taste_description = "sourness"
 	color = "#000055"
 	metabolism = REM * 0.5

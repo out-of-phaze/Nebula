@@ -304,7 +304,7 @@
 		"Unskilled"   = "You know that chemists work with various ingredients; you know that they can make medicine, poison or other useful concoctions.",
 		"Basic"       = "You can make basic medication--things like anti-toxin or burn salves. You have some training in safety and you won't blow up the lab... probably.",
 		"Trained"     = "You can accurately measure out ingredients, grind powders, and mix reagents. You may still lose some product on occasion, but are unlikely to endanger yourself or those around you.",
-		"Experienced" = "You work as an pharmacist, or else you are a doctor with training in chemistry. If you are a pharmacist, you can make most medications. At this stage, you're working mostly by-the-book. <br>- You can examine held containers for some reagents.",
+		"Experienced" = "You work as a pharmacist, or else you are a doctor with training in chemistry. If you are a pharmacist, you can make most medications. At this stage, you're working mostly by-the-book. <br>- You can examine held containers for some reagents.",
 		"Master"      = "You specialized in chemistry or pharmaceuticals; you are either a medical researcher or professional chemist. You can create custom mixes and make even the trickiest of medications easily. You understand how your pharmaceuticals interact with the bodies of your patients. You are probably the originator of at least one new chemical innovation.<br>- You can examine held containers for all reagents."
 	)
 

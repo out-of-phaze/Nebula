@@ -314,7 +314,7 @@
 
 /decl/config/toggle/forbid_singulo_possession
 	uid = "forbid_singulo_possession"
-	desc = "Remove the # mark infront of this to forbid admins from posssessing the singularity."
+	desc = "Remove the # mark in front of this to forbid admins from posssessing the singularity."
 
 /decl/config/toggle/use_loyalty_implants
 	uid = "use_loyalty_implants"
@@ -353,11 +353,11 @@
 
 /decl/config/toggle/on/ban_legacy_system
 	uid = "ban_legacy_system"
-	desc = "Add a # infront of this if you want to use the SQL based banning system. The legacy systems use the files in the data folder. You need to set up your database to use the SQL based system."
+	desc = "Add a # in front of this if you want to use the SQL based banning system. The legacy systems use the files in the data folder. You need to set up your database to use the SQL based system."
 
 /decl/config/toggle/on/admin_legacy_system
 	uid = "admin_legacy_system"
-	desc = "Add a # infront of this if you want to use the SQL based admin system, the legacy system uses admins.txt. You need to set up your database to use the SQL based system."
+	desc = "Add a # in front of this if you want to use the SQL based admin system, the legacy system uses admins.txt. You need to set up your database to use the SQL based system."
 
 /decl/config/toggle/on/jobs_have_minimal_access
 	uid = "jobs_have_minimal_access"

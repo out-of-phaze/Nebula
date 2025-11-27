@@ -3,7 +3,7 @@
 	desc = "Deep fried <i>everything</i>."
 	icon_state = "fryer_off"
 	can_cook_mobs = 1
-	cook_type = "deep fried"
+	cook_type = "deep-fried"
 	on_icon = "fryer_on"
 	off_icon = "fryer_off"
 	food_color = "#ffad33"

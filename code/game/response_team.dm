@@ -50,7 +50,7 @@ var/global/can_call_ert
 			to_chat(usr, "No emergency response team is currently being sent.")
 			return
 		if(jobban_isbanned(usr, /decl/special_role/ert) || jobban_isbanned(usr, "Security Officer"))
-			to_chat(usr, "<span class='danger'>You are jobbanned from the emergency reponse team!</span>")
+			to_chat(usr, "<span class='danger'>You are jobbanned from the emergency response team!</span>")
 			return
 		var/decl/special_role/ert/ert = GET_DECL(/decl/special_role/ert)
 		if(ert.current_antagonists.len >= ert.hard_cap)

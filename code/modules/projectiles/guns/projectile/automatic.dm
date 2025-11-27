@@ -130,7 +130,7 @@
 // Admin-spawn machine gun. Mech subtype is meant to be used, but this can be spawned for hulks.
 /obj/item/gun/projectile/automatic/machine
 	name = "massive machine gun"
-	desc = "The XC-67 \"Creosote\" is a massive machine gun, and ranks high on most tin-pot dictators' wish lists. Firing this thing without some sort of weapons platform is a hopeless task."
+	desc = "The XC-67 \"Creosote\" is a massive machine gun, and ranks high on most tin-pot dictators' wishlists. Firing this thing without some sort of weapons platform is a hopeless task."
 	icon = 'icons/obj/guns/machine.dmi'
 	w_class = ITEM_SIZE_HUGE
 	_base_attack_force = 10

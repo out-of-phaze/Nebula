@@ -110,7 +110,7 @@
 	if(!istype(communicator))
 		return FALSE
 	if(!communicator.holder)
-		to_chat(communicator, "<span class='warning'>You do not have sufficent permissions to use DSAY!</span>")
+		to_chat(communicator, "<span class='warning'>You do not have sufficient permissions to use DSAY!</span>")
 		return FALSE
 	return DSAY_ASK_BASE
 

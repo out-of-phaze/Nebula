@@ -121,7 +121,7 @@
 /decl/material/liquid/nutriment/batter/cakebatter
 	name = "cake batter"
 	codex_name = null
-	lore_text = "A gooey mixture of eggs, flour and sugar, a important precursor to cake!"
+	lore_text = "A gooey mixture of eggs, flour and sugar, an important precursor to cake!"
 	taste_description = "sweetness"
 	color = "#ffe992"
 	uid = "chem_nutriment_cakebatter"
@@ -323,7 +323,7 @@
 
 /decl/material/liquid/nutriment/sprinkles
 	name = "sprinkles"
-	lore_text = "Multi-colored little bits of sugar, commonly found on donuts. Loved by cops."
+	lore_text = "Multicolored little bits of sugar, commonly found on donuts. Loved by cops."
 	taste_description = "childhood whimsy"
 	nutriment_factor = 1
 	color = "#ff00ff"

@@ -216,11 +216,11 @@
 /obj/item/stack/net/attack_self(mob/user)//press while holding to lay one. If there's net already, place wall
 	var/turf/T = get_turf(user)
 	if (locate(/obj/structure/net/net_wall) in T)
-		to_chat(user, "<span class='warning'>Net wall is already placed here!</span>")
+		to_chat(user, "<span class='warning'>A net wall is already placed here!</span>")
 		return
 	if (locate(/obj/structure/net) in T)//if there's already layed "floor" net
 		if (!attach_wall_check())
-			to_chat(user, "<span class='warning'>You try to place net wall but it falls on the floor. Try to attach it to something vertical and stable.</span>")
+			to_chat(user, "<span class='warning'>You try to place a net wall but it falls on the floor. Try to attach it to something vertical and stable.</span>")
 			return
 		new /obj/structure/net/net_wall(T)
 		//update_adjacent_nets(1)//since net-wall was added we also update adjacent wall-nets

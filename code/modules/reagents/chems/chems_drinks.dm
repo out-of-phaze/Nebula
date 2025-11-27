@@ -881,10 +881,10 @@
 /decl/material/liquid/drink/kefir
 	name = "kefir"
 	lore_text = "Fermented milk. Actually very tasty."
-	taste_description = "sharp, frothy yougurt"
+	taste_description = "sharp, frothy yogurt"
 	color = "#ece4e3"
 	glass_name = "Kefir"
-	glass_desc = "Fermented milk, looks a lot like yougurt."
+	glass_desc = "Fermented milk, looks a lot like yogurt."
 	exoplanet_rarity_plant = MAT_RARITY_NOWHERE
 	exoplanet_rarity_gas = MAT_RARITY_NOWHERE
 	uid = "chem_drink_kefir"

@@ -5,13 +5,13 @@
 // Sound obtained then edited from here : https://freesound.org/people/leonelmail/sounds/328381/ -- Under creative commons 0
 
 /obj/item/geiger
-	name = "geiger counter"
+	name = "\improper Geiger counter"
 	desc = "A handheld device used for detecting and measuring radiation in an area."
 	icon = 'icons/obj/items/device/geiger.dmi'
 	icon_state = "geiger_off"
 	item_state = "multitool"
 	w_class = ITEM_SIZE_SMALL
-	action_button_name = "Toggle geiger counter"
+	action_button_name = "Toggle Geiger counter"
 	material = /decl/material/solid/organic/plastic
 	matter = list(
 		/decl/material/solid/metal/copper    = MATTER_AMOUNT_REINFORCEMENT,

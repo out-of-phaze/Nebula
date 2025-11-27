@@ -42,7 +42,7 @@
 			if(!B || !B.controlling) return
 			B.host.take_damage(rand(0.1,0.5), BRAIN)
 			to_chat(H, "<span class='danger'>With an immense exertion of will, you regain control of your body!</span>")
-			to_chat(B.host, "<span class='danger'>You feel control of the host brain ripped from your grasp, and retract your probosci before the wild neural impulses can damage you.</span>")
+			to_chat(B.host, "<span class='danger'>You feel control of the host brain ripped from your grasp, and retract your probosces before the wild neural impulses can damage you.</span>")
 			B.detach_from_host()
 			verbs -= /mob/living/proc/release_control
 			verbs -= /mob/living/proc/punish_host

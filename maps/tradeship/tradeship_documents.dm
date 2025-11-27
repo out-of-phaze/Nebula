@@ -1,7 +1,7 @@
 /obj/item/documents/tradehouse/account
 	name = "tradehouse accounting documents"
 	desc = "These contain exhaustive information about tradehouse dealings, with up-to-date information regarding wealth and resources controlled by the house."
-	description_antag = "In the wrong hands, the house could certainly find itself disavantaged in dealings in the future."
+	description_antag = "In the wrong hands, the house could certainly find itself disadvantaged in dealings in the future."
 
 /obj/item/documents/tradehouse/personnel
 	name = "tradehouse personnel data"

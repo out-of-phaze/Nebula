@@ -10,7 +10,7 @@
 		item_flags &= ~ITEM_FLAG_NOSLIP
 		magpulse = FALSE
 		canremove = TRUE
-		to_chat(user, "You relax your deathgrip on the flooring.")
+		to_chat(user, "You relax your death grip on the flooring.")
 	else
 		if(!ishuman(user))
 			return

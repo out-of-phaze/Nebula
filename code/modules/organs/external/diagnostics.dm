@@ -226,7 +226,7 @@
 /decl/diagnostic_sign/circulation
 	name = "Paleness"
 	descriptor = "very pale"
-	explanation = "Patient has issues with blood circulaion or volume."
+	explanation = "Patient has issues with blood circulation or volume."
 
 /decl/diagnostic_sign/circulation/manifested_in(obj/item/organ/external/victim)
 	return victim.owner && victim.owner.get_blood_circulation() <= 60

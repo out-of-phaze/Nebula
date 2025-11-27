@@ -150,7 +150,7 @@
 		TRADER_COMPLIMENT_ACCEPT = "Why, thank you, traveler! Long have I slaved over the anvil to produce these goods.",
 		TRADER_INSULT_GOOD       = "Hey, bro, I'm just tryin' to make a living here, okay? The Camelot schtick is part of my brand.",
 		TRADER_INSULT_BAD        = "Man, fuck you, then.",
-		TRADER_BRIBE_REFUSAL     = "Alas, traveler - I could stay all eve, but I've an client in waiting, and they are not known for patience.",
+		TRADER_BRIBE_REFUSAL     = "Alas, traveler - I could stay all eve, but I've a client in waiting, and they are not known for patience.",
 		TRADER_BRIBE_ACCEPT      = "Mayhaps I could set a spell longer, and rest my weary feet."
 	)
 	possible_trading_items = list(

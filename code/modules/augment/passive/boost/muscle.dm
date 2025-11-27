@@ -26,16 +26,16 @@
 	else if(organ_tag == BP_AUGMENT_R_LEG)
 		other = GET_INTERNAL_ORGAN(owner, BP_AUGMENT_L_LEG)
 	if(other && istype(other))
-		var/succesful = TRUE
+		var/successful = TRUE
 		if(owner.get_skill_value(SKILL_HAULING) < SKILL_PROF)
-			succesful = FALSE
+			successful = FALSE
 			var/datum/skill_buff/augment/muscle/A
 			A = owner.buff_skill(buffs, 0, buffpath)
 			if(A && istype(A))
-				succesful = TRUE
+				successful = TRUE
 				A.id = id
 
-		if(succesful)
+		if(successful)
 			other.other = src
 			other.active = TRUE
 			active = TRUE

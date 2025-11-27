@@ -13,7 +13,7 @@
 	push_data()
 
 /obj/item/integrated_circuit/filter/ref
-	extended_desc = "Uses heuristics and complex algoritms to match incoming data against its filtering parameters and occasionally produces both false positives and negatives."
+	extended_desc = "Uses heuristics and complex algorithms to match incoming data against its filtering parameters and occasionally produces both false positives and negatives."
 	var/filter_type
 	complexity = 4
 	inputs = list( "input" = IC_PINTYPE_REF )

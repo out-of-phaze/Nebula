@@ -59,7 +59,7 @@
 	is_hacking = 0
 
 	if(hack_result && in_hack_mode)
-		to_chat(user, "<span class='notice'>Your hacking attempt was succesful!</span>")
+		to_chat(user, "<span class='notice'>Your hacking attempt was successful!</span>")
 		user.playsound_local(get_turf(src), 'sound/piano/A#6.ogg', 50)
 		known_targets.Insert(1, target)	// Insert the newly hacked target first,
 		events_repository.register(/decl/observ/destroyed, target, src, TYPE_PROC_REF(/obj/item/multitool/hacktool, on_target_destroy))

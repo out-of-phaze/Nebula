@@ -362,7 +362,7 @@
 
 /decl/material/liquid/alcohol/wine
 	name = "red wine"
-	lore_text = "An premium alchoholic beverage made from distilled grape juice."
+	lore_text = "A premium alcoholic beverage made from distilled grape juice."
 	taste_description = "bitter sweetness"
 	color = "#7e4043" // rgb: 126, 64, 67
 	strength = 15
@@ -398,7 +398,7 @@
 
 /decl/material/liquid/alcohol/hooch
 	name = "hooch"
-	lore_text = "Either someone's failure at cocktail making or attempt in alchohol production. In any case, do you really want to drink that?"
+	lore_text = "Either someone's failure at cocktail making or attempt in alcohol production. In any case, do you really want to drink that?"
 	taste_description = "pure resignation"
 	color = "#4c3100"
 	strength = 25

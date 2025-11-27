@@ -11,8 +11,8 @@
 	exoplanet_rarity_gas = MAT_RARITY_EXOTIC
 
 /decl/material/liquid/contaminant_cleaner
-	name = "akaline detergent"
-	lore_text = "A highly akaline hydrazine based detergent. Able to clean contaminants, but may release ammonia gas if used in open air."
+	name = "alkaline detergent"
+	lore_text = "A highly alkaline hydrazine based detergent. Able to clean contaminants, but may release ammonia gas if used in open air."
 	taste_description = "bleach"
 	vapor_products = list(/decl/material/gas/ammonia = 0.5)
 	color = "#213799"

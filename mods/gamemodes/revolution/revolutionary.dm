@@ -2,7 +2,7 @@
 	name = "Head Revolutionary"
 	name_plural = "Revolutionaries"
 	antag_indicator = "hud_rev_head"
-	welcome_text = "Down with the capitalists! Down with the Bourgeoise!"
+	welcome_text = "Down with the capitalists! Down with the Bourgeoisie!"
 	flags = ANTAG_SUSPICIOUS | ANTAG_VOTABLE
 	antaghud_indicator = "hudrevolutionary"
 	skill_setter = /datum/antag_skill_setter/station

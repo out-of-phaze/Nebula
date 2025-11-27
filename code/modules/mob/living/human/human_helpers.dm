@@ -159,7 +159,7 @@
 			if(E.damage > 12)
 				ADJ_STATUS(src, STAT_BLURRY, rand(3,6))
 		if(FLASH_PROTECTION_MINOR)
-			to_chat(src, "<span class='warning'>Your eyes stings!</span>")
+			to_chat(src, "<span class='warning'>Your eyes sting!</span>")
 			E.damage += rand(1, 4)
 			if(E.damage > 10)
 				ADJ_STATUS(src, STAT_BLURRY, rand(3,6))

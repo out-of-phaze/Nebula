@@ -44,7 +44,7 @@
 			to_chat(user, "<span class='notice'>The device is secured.</span>")
 			return TRUE
 		if(attached_device)
-			to_chat(user, "<span class='warning'>There is already an device attached to the valve, remove it first.</span>")
+			to_chat(user, "<span class='warning'>There is already a device attached to the valve, remove it first.</span>")
 			return TRUE
 		if(!user.try_unequip(item, src))
 			return TRUE

@@ -70,4 +70,4 @@
 	display_name = "potato chips"
 	fruit = list("potato sticks" = 1)
 	result = /obj/item/food/fries
-	completion_message = "The potato sizzles as as the chips are cooked through."
+	completion_message = "The potato sizzles as the chips are cooked through."

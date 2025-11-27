@@ -32,7 +32,7 @@ MANTIDIFY(/obj/item/tank/jetpack/carbondioxide, "maneuvering pack",          "pr
 
 /obj/item/knife/kitchen/cleaver/ascent
 	name = "xenobiological flenser"
-	desc = "A mindboggingly alien tool for flensing flesh."
+	desc = "A mind-bogglingly alien tool for flensing flesh."
 	icon = 'mods/species/ascent/icons/ascent_doodads.dmi'
 	icon_state = "xenobutch"
 

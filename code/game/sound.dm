@@ -92,7 +92,7 @@ var/global/const/FALLOFF_SOUNDS = 0.5
 
 		var/dx = turf_source.x - T.x // Hearing from the right/left
 		S.x = dx
-		var/dz = turf_source.y - T.y // Hearing from infront/behind
+		var/dz = turf_source.y - T.y // Hearing from in front/behind
 		S.z = dz
 		var/dy = (turf_source.z - T.z) * ZSOUND_DISTANCE_PER_Z // Hearing from above/below. There is ceiling in 2d spessmans.
 		S.y = (dy < 0) ? dy - 1 : dy + 1 //We want to make sure there's *always* at least one extra unit of distance. This helps normalize sound that's emitting from the turf you're on.

@@ -7,7 +7,7 @@
 
 /datum/map_template/ruin/away_site/mobius_rift
 	name = "Mobius rift"
-	description = "Non-euclidian mess."
+	description = "A non-Euclidean mess."
 	suffixes = list("mobius_rift/mobius_rift.dmm")
 	cost = 1
 	area_usage_test_exempted_root_areas = list(/area/mobius_rift)
