@@ -1,4 +1,17 @@
+#ifndef MODPACK_END_CREDITS
+#define MODPACK_END_CREDITS
+#endif
+
 var/global/list/end_titles
+var/global/end_credits_song
+var/global/end_credits_title
+/decl/modpack/end_credits
+	name = "Cinematic End Credits"
+
+/decl/modpack/end_credits/on_round_completion()
+	for(var/client/C in global.clients)
+		if(!C.credits)
+			C.RollCredits()
 
 /client
 	var/list/credits
@@ -45,6 +58,22 @@ var/global/list/end_titles
 	mob.clear_fullscreen("fishbed")
 	mob.clear_fullscreen("fadeout")
 	sound_to(mob, sound(null, channel = sound_channels.lobby_channel))
+
+/proc/get_end_credits_title(var/force)
+	if(!global.end_credits_title || force)
+		var/list/possible_titles = list()
+		SSlore.refresh_credits_from_departments()
+		possible_titles += "THE [pick("DOWNFALL OF", "RISE OF", "TROUBLE WITH", "FINAL STAND OF", "DARK SIDE OF", "DESOLATION OF", "DESTRUCTION OF", "CRISIS OF")] [pick(SSlore.credits_nouns)]"
+		possible_titles += "[pick(SSlore.credits_crew_names)] GETS SERIOUS ABOUT [pick(SSlore.credits_topics)]"
+		possible_titles += "[pick(SSlore.credits_crew_names)] GETS [pick(SSlore.credits_crew_outcomes)]"
+		possible_titles += "[pick(SSlore.credits_crew_names)] LEARNS ABOUT [pick(SSlore.credits_topics)]"
+		possible_titles += "A VERY [pick(SSlore.credits_adjectives)] [pick(SSlore.credits_holidays)]"
+		possible_titles += "[pick(SSlore.credits_adjectives)] [pick(SSlore.credits_adventure_names)]"
+		possible_titles += "[pick(SSlore.credits_topics)] [pick(SSlore.credits_adventure_names)]"
+		possible_titles += "THE DAY [uppertext(global.using_map.station_short)] STOOD STILL"
+		possible_titles |= SSlore.credits_other
+		global.end_credits_title = pick(possible_titles)
+	. = global.end_credits_title
 
 /proc/generate_titles()
 	var/list/titles = list()
@@ -147,3 +176,74 @@ var/global/list/end_titles
 	titles += "<center><span style='font-size:6pt;'>[JOINTEXT(disclaimer)]</span></center>"
 
 	return titles
+
+// Screen Objects
+/obj/screen/credit
+	icon_state = "blank"
+	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
+	alpha = 0
+	screen_loc = "CENTER-7,BOTTOM+1"
+	plane = HUD_PLANE
+	layer = HUD_ABOVE_ITEM_LAYER
+	maptext_height = WORLD_ICON_SIZE * 2
+	maptext_width  = WORLD_ICON_SIZE * 14
+	requires_ui_style = FALSE
+	var/client/parent
+	var/matrix/target
+
+/obj/screen/credit/proc/rollem()
+	var/matrix/M = matrix(transform)
+	M.Translate(0, CREDIT_ANIMATE_HEIGHT)
+	animate(src, transform = M, time = CREDIT_ROLL_SPEED)
+	target = M
+	animate(src, alpha = 255, time = CREDIT_EASE_DURATION, flags = ANIMATION_PARALLEL)
+	addtimer(CALLBACK(src, PROC_REF(ease_out)), CREDIT_ROLL_SPEED - CREDIT_EASE_DURATION)
+	var/mob/owner = owner_ref?.resolve()
+	if(istype(owner) && owner.client)
+		owner.client.screen += src
+
+/obj/screen/credit/proc/ease_out()
+	if(QDELETED(src))
+		return
+	animate(src, alpha = 0, transform = target, time = CREDIT_EASE_DURATION)
+	QDEL_IN_CLIENT_TIME(src, CREDIT_EASE_DURATION)
+
+/obj/screen/credit/Destroy()
+	var/client/P = parent
+	if(istype(P))
+		P.screen -= src
+		LAZYREMOVE(P.credits, src)
+	parent = null
+	return ..()
+
+// Admin Secrets
+/datum/admin_secret_item/fun_secret/change_credits_song
+	name = "Change End Credits Song"
+/datum/admin_secret_item/fun_secret/change_credits_title
+	name = "Change End Credits Title"
+
+/datum/admin_secret_item/fun_secret/change_credits_song/do_execute()
+	var/selected = input("Select a music track for the credits.", "Server music list") as null|anything in decls_repository.get_decl_paths_of_subtype(/decl/music_track)
+	if(selected)
+		var/decl/music_track/track = GET_DECL(selected)
+		global.end_credits_song = track.song
+	SSstatistics.add_field_details("admin_verb","CECS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/datum/admin_secret_item/fun_secret/change_credits_title/do_execute()
+	global.end_credits_title = input(usr, "What title would you like for the end credits?") as null|text
+	if(global.end_credits_title)
+		SSstatistics.add_field_details("admin_verb","CECT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+// Preferences
+/datum/client_preference/show_credits
+	description = "Show End Titles"
+	key = "SHOW_CREDITS"
+
+/datum/client_preference/show_ckey_credits
+	description = "Show Ckey in End Credits"
+	key = "SHOW_CKEY_CREDITS"
+	options = list(PREF_HIDE, PREF_SHOW)
+
+// Overrides
+/decl/webhook/roundend/get_round_title()
+	return global.end_credits_title

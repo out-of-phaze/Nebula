@@ -226,15 +226,6 @@ var/global/list/_client_preferences_by_type
 	description = "Draw gun based on intent"
 	key = "HOLSTER_ON_INTENT"
 
-/datum/client_preference/show_credits
-	description = "Show End Titles"
-	key = "SHOW_CREDITS"
-
-/datum/client_preference/show_ckey_credits
-	description = "Show Ckey in End Credits"
-	key = "SHOW_CKEY_CREDITS"
-	options = list(PREF_HIDE, PREF_SHOW)
-
 /datum/client_preference/give_personal_goals
 	description = "Give Personal Goals"
 	key = "PERSONAL_GOALS"

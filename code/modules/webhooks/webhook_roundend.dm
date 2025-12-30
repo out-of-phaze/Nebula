@@ -1,6 +1,9 @@
 /decl/webhook/roundend
 	id = WEBHOOK_ROUNDEND
 
+/decl/webhook/roundend/proc/get_round_title()
+	return "Round [global.game_id]"
+
 // Data expects three numerical fields: "survivors", "escaped", "ghosts", "clients"
 /decl/webhook/roundend/get_message(var/list/data)
 	. = ..()
@@ -19,7 +22,7 @@
 		desc += "Round duration: **[roundduration2text()]**"
 
 	.["embeds"] = list(list(
-		"title"       = global.end_credits_title,
+		"title"       = get_round_title(),
 		"description" = desc,
 		"color"       = COLOR_WEBHOOK_DEFAULT
 	))

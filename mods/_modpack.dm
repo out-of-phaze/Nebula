@@ -78,6 +78,9 @@
 /decl/modpack/proc/get_membership_perks()
 	return
 
+/// This runs on round end in declare_completion() right after the first to_world message.
+/decl/modpack/proc/on_round_completion()
+
 /client/verb/modpacks_list()
 	set name = "Modpacks List"
 	set category = "OOC"
