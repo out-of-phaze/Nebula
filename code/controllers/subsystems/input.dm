@@ -4,7 +4,7 @@ SUBSYSTEM_DEF(input)
 	init_order = SS_INIT_INPUT
 	flags = SS_TICKER
 	priority = SS_PRIORITY_INPUT
-	runlevels = RUNLEVELS_DEFAULT | RUNLEVEL_LOBBY
+	runlevels = RUNLEVELS_ALL
 
 	var/list/macro_set
 
