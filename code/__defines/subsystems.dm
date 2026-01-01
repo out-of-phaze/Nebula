@@ -7,7 +7,7 @@
 #define INITIALIZE_HINT_QDEL     2  //Call qdel on the atom
 
 //type and all subtypes should always call Initialize in New()
-#define INITIALIZE_IMMEDIATE(X) ##X/New(loc, ...){\
+#define INITIALIZE_IMMEDIATE(X) ##X/immediate_initialize = TRUE; ##X/New(loc, ...){\
 	..();\
 	if(!(atom_flags & ATOM_FLAG_INITIALIZED)) {\
 		var/previous_stage = SSatoms.atom_init_stage;\

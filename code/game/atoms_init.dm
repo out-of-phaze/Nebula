@@ -22,6 +22,10 @@
 		if(SSatoms.InitAtom(src, args))
 			//we were deleted
 			return
+	else if(!immediate_initialize && length(args) > 1)
+		// special-case, we need to save the args
+		args[1] = TRUE // this queue is only ever run through on mapload anyway
+		initialize_args = args.Copy()
 	if(atom_flags & ATOM_FLAG_CLIMBABLE)
 		verbs += /atom/proc/climb_on
 

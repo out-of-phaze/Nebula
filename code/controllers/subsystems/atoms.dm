@@ -45,7 +45,11 @@ SUBSYSTEM_DEF(atoms)
 	var/list/mapload_arg = list(TRUE)
 	for(var/atom/A as anything in world)
 		if(!(A.atom_flags & ATOM_FLAG_INITIALIZED)) // skip any INITIALIZE_IMMEDIATE atoms
-			InitAtom(A, mapload_arg)
+			if(A.initialize_args)
+				InitAtom(A, A.initialize_args)
+				A.initialize_args = null
+			else
+				InitAtom(A, mapload_arg)
 			.++
 	report_progress("Initialized [.] atom\s in world")
 

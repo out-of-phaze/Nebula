@@ -19,6 +19,10 @@
 	var/explosion_resistance = 0
 	/// (BOOL) If it can be spawned normally
 	var/is_spawnable_type = FALSE
+	/// (BOOL) If it uses INITIALIZE_IMMEDIATE. Compile-time only.
+	var/immediate_initialize = FALSE
+	/// (LAZYLIST) Args passed to initialize.
+	var/tmp/list/initialize_args
 
 
 	/// (DICTIONARY) A lazy map. The `key` is a MD5 player name and the `value` is the blood type.
