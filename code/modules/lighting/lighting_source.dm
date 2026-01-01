@@ -34,7 +34,7 @@
 	var/tmp/test_y_offset   // How much the Y coord should be offset due to direction.
 	var/tmp/facing_opaque = FALSE
 
-	var/list/datum/lighting_corner/effect_str     // List used to store how much we're affecting corners.
+	var/alist/*/datum/lighting_corner*//effect_str     // List used to store how much we're affecting corners.
 	var/list/turf/affecting_turfs
 
 	var/applied = FALSE // Whether we have applied our light yet or not.
@@ -220,12 +220,14 @@
 	effect_str = null
 
 /datum/light_source/proc/recalc_corner(datum/lighting_corner/C, now = FALSE)
-	LAZYINITLIST(effect_str)
+	if(!effect_str)
+		effect_str = alist()
 	if (effect_str[C]) // Already have one.
 		REMOVE_CORNER(C,now)
 		effect_str[C] = 0
 
-	var/actual_range = light_range
+	var/actual_range = (light_angle && facing_opaque) ? light_range * LIGHTING_BLOCKED_FACTOR : light_range
+	var/falloff_multiplier = FALLOFF_DIVIDEND
 
 	var/Sx = pixel_turf.x
 	var/Sy = pixel_turf.y
@@ -234,7 +236,8 @@
 	var/height = C.z == Sz ? LIGHTING_HEIGHT : CALCULATE_CORNER_HEIGHT(C.z, Sz)
 	APPLY_CORNER(C, now, Sx, Sy, height)
 
-	UNSETEMPTY(effect_str)
+	if(effect_str && !length(effect_str))
+		effect_str = null
 
 /datum/light_source/proc/update_corners(now = FALSE)
 	var/update = FALSE
@@ -333,9 +336,9 @@
 	else if (needs_update == LIGHTING_CHECK_UPDATE)
 		return	// No change.
 
-	var/list/datum/lighting_corner/corners = list()
+	/// A list of the corners we found, associative mostly to deduplicate them.
+	var/alist/*/datum/lighting_corner*//found_corners = alist()
 	var/list/turf/turfs                    = list()
-	var/thing
 	var/datum/lighting_corner/C
 	var/turf/T
 	var/list/Tcorners
@@ -344,6 +347,7 @@
 	var/Sz = pixel_turf.z
 	var/corner_height = LIGHTING_HEIGHT
 	var/actual_range = (light_angle && facing_opaque) ? light_range * LIGHTING_BLOCKED_FACTOR : light_range
+	var/falloff_multiplier = FALLOFF_DIVIDEND
 	var/test_x
 	var/test_y
 
@@ -358,13 +362,13 @@
 			if ((DETERMINANT(limit_a_x, limit_a_y, test_x, test_y) > 0) || DETERMINANT(test_x, test_y, limit_b_x, limit_b_y) > 0)
 				continue
 
-		if (TURF_IS_DYNAMICALLY_LIT_UNSAFE(T) || T.light_source_solo || T.light_source_multi)
-			Tcorners = T.corners
+		Tcorners = T.corners
+		if (TURF_IS_DYNAMICALLY_LIT_UNSAFE(T) || T.light_source_solo || T.light_source_multi || (T.z_flags & ZM_ALLOW_LIGHTING))
 			if (!T.lighting_corners_initialised)
 				T.lighting_corners_initialised = TRUE
 
 				if (!Tcorners)
-					T.corners = list(null, null, null, null)
+					T.corners = new(4)
 					Tcorners = T.corners
 
 				for (var/i = 1 to 4)
@@ -373,11 +377,11 @@
 
 					Tcorners[i] = new /datum/lighting_corner(T, LIGHTING_CORNER_DIAGONAL[i], i)
 
-			if (!T.has_opaque_atom)
-				for (var/v in 1 to 4)
-					var/val = Tcorners[v]
-					if (val)
-						corners[val] = 0
+		if (Tcorners && !T.has_opaque_atom)
+			for (var/v in 1 to 4)
+				var/datum/lighting_corner/val = Tcorners[v]
+				if (val?.active) // this ensures inactive corners will be pruned below
+					found_corners[val] = 0
 
 		turfs += T
 
@@ -390,58 +394,47 @@
 
 	var/list/L = turfs - affecting_turfs // New turfs, add us to the affecting lights of them.
 	affecting_turfs += L
-	for (thing in L)
-		T = thing
+	for (T as anything in L)
 		LAZYADD(T.affecting_lights, src)
 
 	L = affecting_turfs - turfs // Now-gone turfs, remove us from the affecting lights.
 	affecting_turfs -= L
-	for (thing in L)
-		T = thing
+	for (T as anything in L)
 		LAZYREMOVE(T.affecting_lights, src)
 
-	LAZYINITLIST(effect_str)
-	if (needs_update == LIGHTING_VIS_UPDATE)
-		for (thing in corners - effect_str)
-			C = thing
+	if(!effect_str)
+		effect_str = alist()
+
+	if (needs_update == LIGHTING_VIS_UPDATE) // update triggered by an opacity change, only handle adding new corners and removing missing ones
+		// the corners not already in effect_str
+		// this is duplicated in each branch because avoiding `L =` saves us time in the long run
+		for (C as anything in found_corners - effect_str)
 			LAZYADD(C.affecting, src)
-			if (!C.active)
-				effect_str[C] = 0
-				continue
-
-			APPLY_CORNER_BY_HEIGHT(now)
-	else
-		L = corners - effect_str
-		for (thing in L)
-			C = thing
+			INIT_CORNER_BY_HEIGHT(now)
+	else // some characteristic of the light itself may have changed, so recalculate all corners
+		// the corners that aren't in effect_str already
+		L = found_corners - effect_str
+		for (C as anything in L)
 			LAZYADD(C.affecting, src)
-			if (!C.active)
-				effect_str[C] = 0
-				continue
+			INIT_CORNER_BY_HEIGHT(now)
 
+		// existing corners already in effect_str
+		for (C as anything in found_corners - L)
 			APPLY_CORNER_BY_HEIGHT(now)
 
-		for (thing in corners - L)
-			C = thing
-			if (!C.active)
-				effect_str[C] = 0
-				continue
-
-			APPLY_CORNER_BY_HEIGHT(now)
-
-	L = effect_str - corners
-	for (thing in L)
-		C = thing
-		REMOVE_CORNER(C, now)
+	// corners in effect_str that we didn't find and must remove
+	L = effect_str - found_corners
+	for (C as anything in L)
 		LAZYREMOVE(C.affecting, src)
-
+		REMOVE_CORNER(C, now)
 	effect_str -= L
 
 	applied_lum_r = lum_r
 	applied_lum_g = lum_g
 	applied_lum_b = lum_b
 
-	UNSETEMPTY(effect_str)
+	if(effect_str && !length(effect_str))
+		effect_str = null
 	UNSETEMPTY(affecting_turfs)
 
 #undef INTELLIGENT_UPDATE

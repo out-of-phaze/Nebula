@@ -129,7 +129,7 @@ var/global/list/REVERSE_LIGHTING_CORNER_DIAGONAL = list(0, 0, 0, 0, 3, 4, 0, 0, 
 	if (has_ambience)
 		init_ambient()
 
-#define OVERLAY_PRESENT(T) (T && T.lighting_overlay)
+#define OVERLAY_PRESENT(T) (T?.lighting_overlay)
 
 /datum/lighting_corner/proc/update_active()
 	active = FALSE
