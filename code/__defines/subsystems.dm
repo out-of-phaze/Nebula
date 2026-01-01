@@ -10,8 +10,11 @@
 #define INITIALIZE_IMMEDIATE(X) ##X/New(loc, ...){\
 	..();\
 	if(!(atom_flags & ATOM_FLAG_INITIALIZED)) {\
+		var/previous_stage = SSatoms.atom_init_stage;\
+		SSatoms.atom_init_stage = INITIALIZATION_INNEW_MAPLOAD;\
 		args[1] = TRUE;\
 		SSatoms.InitAtom(src, args);\
+		SSatoms.atom_init_stage = previous_stage;\
 	}\
 }
 

@@ -11,8 +11,6 @@ SUBSYSTEM_DEF(atoms)
 	var/atom_init_stage = INITIALIZATION_INSSATOMS
 	var/old_init_stage
 
-	/// A non-associative list of lists, with the format list(list(atom, list(Initialize arguments))).
-	var/list/created_atoms = list()
 	/// A list of atoms to call LateInitialize on.
 	var/list/late_loaders = list()
 
@@ -23,36 +21,15 @@ SUBSYSTEM_DEF(atoms)
 	InitializeAtoms()
 	return ..()
 
-/datum/controller/subsystem/atoms/proc/InitializeAtoms()
+/datum/controller/subsystem/atoms/proc/InitializeAtoms(list/which_atoms)
 	if(atom_init_stage <= INITIALIZATION_INSSATOMS)
 		return
 
 	atom_init_stage = INITIALIZATION_INNEW_MAPLOAD
-
-	var/list/mapload_arg = list(TRUE)
-
-	var/index = 1
-	// Things can add to the end of this list while we iterate, so we can't use a for loop.
-	while(index <= length(created_atoms))
-		// Don't remove from this list while we run, that's expensive.
-		// That would also make it harder to handle things added while we iterate.
-		var/list/creation_packet = created_atoms[index++]
-		var/atom/A = creation_packet[1]
-		var/list/atom_args = creation_packet[2]
-		// I sure hope nothing in this list is ever hard-deleted, or else QDELING will runtime.
-		// If you get a null reference runtime error, just change it back to QDELETED.
-		// The ATOM_FLAG_INITIALIZED check is because of INITIALIZE_IMMEDIATE().
-		if(!QDELING(A) && !(A.atom_flags & ATOM_FLAG_INITIALIZED))
-			if(atom_args)
-				atom_args.Insert(1, TRUE)
-				InitAtom(A, atom_args)
-			else
-				InitAtom(A, mapload_arg)
-			CHECK_TICK
-
-	report_progress("Initialized [index] atom\s")
-	created_atoms.Cut()
-
+	if(!which_atoms)
+		InitializeWorldAtoms()
+	else
+		InitializeListAtoms(which_atoms)
 	atom_init_stage = INITIALIZATION_INNEW_REGULAR
 
 	if(length(late_loaders))
@@ -62,6 +39,30 @@ SUBSYSTEM_DEF(atoms)
 			CHECK_TICK
 		report_progress("Late initialized [length(late_loaders)] atom\s")
 		late_loaders.Cut()
+
+/datum/controller/subsystem/atoms/proc/InitializeWorldAtoms()
+	. = 0 // count of atoms initialized
+	var/list/mapload_arg = list(TRUE)
+	for(var/atom/A as anything in world)
+		if(!(A.atom_flags & ATOM_FLAG_INITIALIZED)) // skip any INITIALIZE_IMMEDIATE atoms
+			InitAtom(A, mapload_arg)
+			.++
+	report_progress("Initialized [.] atom\s in world")
+
+/datum/controller/subsystem/atoms/proc/InitializeListAtoms(list/atoms)
+	var/static/list/mapload_arg = list(TRUE)
+	if(!length(atoms))
+		return // todo: crash? ASSERT(length(atoms) > 0)?
+
+	. = 0
+	for(var/atom/A as anything in atoms) // no nulls please
+		if(QDELING(A) || (A.atom_flags & ATOM_FLAG_INITIALIZED))
+			EMPTY_BLOCK_GUARD // Pass
+		else
+			InitAtom(A, mapload_arg)
+			.++
+			CHECK_TICK
+	report_progress("Initialized [.] atom\s")
 
 /datum/controller/subsystem/atoms/proc/InitAtom(atom/A, list/arguments)
 	var/the_type = A.type
