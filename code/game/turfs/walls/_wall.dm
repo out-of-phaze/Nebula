@@ -61,8 +61,7 @@ var/global/list/wall_fullblend_objects = list(
 	var/shutter_sound = 'sound/weapons/Genhit.ogg'
 
 /turf/wall/Initialize(var/ml, var/materialtype, var/rmaterialtype)
-
-	..(ml)
+	. = ..(ml)
 
 	// Clear mapping icons.
 	icon = get_wall_icon()
@@ -74,14 +73,12 @@ var/global/list/wall_fullblend_objects = list(
 
 	set_turf_materials((materialtype || material || get_default_material()), (rmaterialtype || reinf_material), TRUE, girder_material, skip_update = TRUE)
 
-	. = INITIALIZE_HINT_LATELOAD
 	set_extension(src, /datum/extension/penetration/proc_call, PROC_REF(CheckPenetration))
 	START_PROCESSING(SSturf, src) //Used for radiation.
-
-/turf/wall/LateInitialize(var/ml)
-	..()
-	update_material(!ml)
-	if(!ml)
+	if(ml) // if we're in mapload, we have to wait to update
+		return INITIALIZE_HINT_LATELOAD
+	else // it's safe to update our neighbors since we aren't in mapload
+		update_material(update_neighbors = TRUE)
 		for(var/direction in global.alldirs)
 			var/turf/target_turf = get_step_resolving_mimic(src, direction)
 			if(istype(target_turf))
@@ -89,6 +86,11 @@ var/global/list/wall_fullblend_objects = list(
 					target_turf.queue_icon_update()
 				else
 					target_turf.update_icon()
+
+// we should always be mapload=TRUE here
+/turf/wall/LateInitialize()
+	..()
+	update_material(FALSE)
 
 /turf/wall/Destroy()
 	STOP_PROCESSING(SSturf, src)

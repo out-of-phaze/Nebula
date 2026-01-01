@@ -37,7 +37,7 @@ var/global/_wall_chisel_skill = SKILL_CONSTRUCTION
 	if(ramp_slope_direction)
 		make_ramp(null, ramp_slope_direction, TRUE)
 
-/turf/wall/natural/LateInitialize(var/ml)
+/turf/wall/natural/LateInitialize()
 	//Set the rock color
 	if(!paint_color)
 		paint_color = SSmaterials.get_rock_color(src)

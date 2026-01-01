@@ -10,6 +10,8 @@ var/global/list/closets = list()
 	material = /decl/material/solid/metal/steel
 	tool_interaction_flags = TOOL_INTERACTION_ANCHOR
 
+	/// If this was initialized with mapload = TRUE, was_maploaded will also be TRUE. Used for containing turf contents in LateInitialize.
+	var/tmp/was_maploaded = FALSE
 	var/welded = 0
 	var/large = 1
 	var/wall_mounted = 0 //never solid (You can always pass over it)
@@ -32,7 +34,7 @@ var/global/list/closets = list()
 	global.closets -= src
 	. = ..()
 
-/obj/structure/closet/Initialize()
+/obj/structure/closet/Initialize(mapload)
 	..()
 	global.closets += src
 	if((setup & CLOSET_HAS_LOCK))
@@ -45,14 +47,15 @@ var/global/list/closets = list()
 			reset_color()
 			queue_icon_update()
 
+	was_maploaded = mapload
 	return INITIALIZE_HINT_LATELOAD
 
-/obj/structure/closet/LateInitialize(mapload, ...)
+/obj/structure/closet/LateInitialize()
 	var/list/will_contain = WillContain()
 	if(will_contain)
 		create_objects_in_loc(opened ? loc : src, will_contain)
 
-	if(!opened && mapload) // if closed and it's the map loading phase, relevant items at the crate's loc are put in the contents
+	if(!opened && was_maploaded) // if closed and it's the map loading phase, relevant items at the crate's loc are put in the contents
 		store_contents()
 
 /obj/structure/closet/update_lock_overlay()

@@ -14,16 +14,19 @@ var/global/list/floor_decals = list()
 	var/detail_color
 
 // Have to wait for turfs to set up their flooring, so we can better guess at our layers.
-/obj/effect/floor_decal/Initialize()
+/obj/effect/floor_decal/Initialize(mapload, var/newdir, var/newcolour, var/newappearance)
 	..()
+	// These can be done now, though, since they don't depend on turfs!
+	supplied_dir = newdir
+	if(newappearance)
+		appearance = newappearance
+	if(newcolour)
+		color = newcolour
+	if(supplied_dir)
+		set_dir(supplied_dir)
 	return INITIALIZE_HINT_LATELOAD
 
-/obj/effect/floor_decal/LateInitialize(mapload, var/newdir, var/newcolour, var/newappearance)
-	supplied_dir = newdir
-	if(newappearance) appearance = newappearance
-	if(newcolour) color = newcolour
-
-	if(supplied_dir) set_dir(supplied_dir)
+/obj/effect/floor_decal/LateInitialize()
 	var/turf/T = get_turf(src)
 	if(istype(T))
 		layer = T.is_plating() ? DECAL_PLATING_LAYER : DECAL_LAYER

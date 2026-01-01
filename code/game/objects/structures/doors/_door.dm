@@ -25,7 +25,7 @@
 		set_light(material.luminescence, 0.5, material.color)
 	return INITIALIZE_HINT_LATELOAD
 
-/obj/structure/door/LateInitialize(mapload, dir=0, populate_parts=TRUE)
+/obj/structure/door/LateInitialize()
 	..()
 	update_nearby_tiles(need_rebuild = TRUE)
 

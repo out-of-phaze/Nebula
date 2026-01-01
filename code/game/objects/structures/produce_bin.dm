@@ -10,18 +10,18 @@
 	material_alteration = MAT_FLAG_ALTERATION_ALL
 	storage = /datum/storage/produce_bin
 
-/obj/structure/produce_bin/Initialize()
-	..()
-	return INITIALIZE_HINT_LATELOAD
-
-/obj/structure/produce_bin/LateInitialize(mapload, ...)
-	..()
+/obj/structure/produce_bin/Initialize(mapload)
+	. = ..()
 	if(mapload)
-		for(var/obj/item/food/grown/produce in loc)
-			if(!produce.simulated || produce.anchored)
-				continue
-			if(storage.can_be_inserted(produce, null))
-				storage.handle_item_insertion(null, produce)
+		return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/produce_bin/LateInitialize()
+	..()
+	for(var/obj/item/food/grown/produce in loc)
+		if(!produce.simulated || produce.anchored)
+			continue
+		if(storage.can_be_inserted(produce, null))
+			storage.handle_item_insertion(null, produce)
 
 /obj/structure/produce_bin/attackby(obj/item/used_item, mob/user)
 

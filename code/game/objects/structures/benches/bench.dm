@@ -9,6 +9,8 @@
 	material = /decl/material/solid/organic/wood/oak
 	obj_flags = 0
 	anchored = TRUE
+	/// If this was initialized with mapload = TRUE, was_maploaded will also be TRUE.
+	var/tmp/was_maploaded = FALSE
 	/// A bitfield of connected neighbors.
 	var/neighbors = 0
 
@@ -26,11 +28,12 @@
 
 /obj/structure/chair/bench/Initialize(mapload)
 	..()
+	was_maploaded = mapload
 	return INITIALIZE_HINT_LATELOAD
 
-/obj/structure/chair/bench/LateInitialize(mapload)
+/obj/structure/chair/bench/LateInitialize()
 	..()
-	if(mapload)
+	if(was_maploaded)
 		recalculate_connections()
 	else
 		update_neighbors()

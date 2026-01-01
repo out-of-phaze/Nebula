@@ -10,6 +10,7 @@
 	material = /decl/material/solid/metal/aluminium
 	tool_interaction_flags = TOOL_INTERACTION_DECONSTRUCT | TOOL_INTERACTION_ANCHOR
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME
+	var/tmp/check_duplicates = FALSE // set to true if mapload
 
 	var/base_icon = "ladder"
 	var/draw_shadow = TRUE
@@ -37,10 +38,11 @@
 
 /obj/structure/ladder/Initialize(maploading, material)
 	..()
+	check_duplicates = maploading
 	return INITIALIZE_HINT_LATELOAD
 
-/obj/structure/ladder/LateInitialize(maploading, material)
-	if(maploading)
+/obj/structure/ladder/LateInitialize()
+	if(check_duplicates)
 		for(var/obj/structure/ladder/ladder in loc)
 			if(ladder != src)
 				log_warning("Deleting duplicate ladder at ([x], [y], [z])!")

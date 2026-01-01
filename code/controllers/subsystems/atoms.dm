@@ -13,7 +13,7 @@ SUBSYSTEM_DEF(atoms)
 
 	/// A non-associative list of lists, with the format list(list(atom, list(Initialize arguments))).
 	var/list/created_atoms = list()
-	/// A non-associative list of lists, with the format list(list(atom, list(LateInitialize arguments))).
+	/// A list of atoms to call LateInitialize on.
 	var/list/late_loaders = list()
 
 	var/list/BadInitializeCalls = list()
@@ -56,13 +56,11 @@ SUBSYSTEM_DEF(atoms)
 	atom_init_stage = INITIALIZATION_INNEW_REGULAR
 
 	if(length(late_loaders))
-		index = 1
-		while(index <= length(late_loaders))
-			var/list/creation_packet = late_loaders[index++]
-			var/atom/A = creation_packet[1]
-			A.LateInitialize(arglist(creation_packet[2]))
+		// due to atom_init_stage this should be safe, as nothing should be added to late_loaders in LateInitialize
+		for(var/atom/A as anything in late_loaders)
+			A.LateInitialize()
 			CHECK_TICK
-		report_progress("Late initialized [index] atom\s")
+		report_progress("Late initialized [length(late_loaders)] atom\s")
 		late_loaders.Cut()
 
 /datum/controller/subsystem/atoms/proc/InitAtom(atom/A, list/arguments)
@@ -83,29 +81,30 @@ SUBSYSTEM_DEF(atoms)
 		BadInitializeCalls[the_type] |= BAD_INIT_SLEPT
 	#endif
 
-	var/qdeleted = FALSE
+	// have we been qdeleted?
+	. = FALSE
 
 	switch(result)
 		if(INITIALIZE_HINT_NORMAL)
-			EMPTY_BLOCK_GUARD
+			EMPTY_BLOCK_GUARD // Pass
 		if(INITIALIZE_HINT_LATELOAD)
-			if(arguments[1])	//mapload
-				late_loaders[++late_loaders.len] = list(A, arguments)
+			if(arguments[1]) //mapload
+				late_loaders += A
 			else
-				A.LateInitialize(arglist(arguments))
+				A.LateInitialize()
 		if(INITIALIZE_HINT_QDEL)
 			A.atom_flags |= ATOM_FLAG_INITIALIZED // never call EarlyDestroy if we return this hint
 			qdel(A)
-			qdeleted = TRUE
+			. = TRUE
 		else
 			BadInitializeCalls[the_type] |= BAD_INIT_NO_HINT
 
 	if(!A)	//possible harddel
-		qdeleted = TRUE
+		. = TRUE
 	else if(!(A.atom_flags & ATOM_FLAG_INITIALIZED))
 		BadInitializeCalls[the_type] |= BAD_INIT_DIDNT_INIT
 
-	return qdeleted || QDELING(A)
+	return . || QDELING(A)
 
 /datum/controller/subsystem/atoms/stat_entry(msg)
 	..("Bad Initialize Calls:[BadInitializeCalls.len]")

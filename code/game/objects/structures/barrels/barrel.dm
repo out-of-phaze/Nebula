@@ -34,23 +34,22 @@
 /obj/structure/reagent_dispensers/barrel/can_drink_from(mob/user)
 	return REAGENT_TOTAL_VOLUME(reagents) && user.check_has_mouth()
 
-/obj/structure/reagent_dispensers/barrel/Initialize()
+/obj/structure/reagent_dispensers/barrel/Initialize(mapload)
 	if(ispath(metal_material))
 		metal_material = GET_DECL(metal_material)
 	if(!istype(metal_material))
 		metal_material = null
 	. = ..()
-	if(. == INITIALIZE_HINT_NORMAL && storage)
+	if(. == INITIALIZE_HINT_NORMAL && mapload && storage)
 		return INITIALIZE_HINT_LATELOAD //  we want to grab our turf contents.
 
-/obj/structure/reagent_dispensers/barrel/LateInitialize(mapload, ...)
+/obj/structure/reagent_dispensers/barrel/LateInitialize()
 	..()
-	if(mapload)
-		for(var/obj/item/thing in loc)
-			if(!thing.simulated || thing.anchored)
-				continue
-			if(storage.can_be_inserted(thing, null))
-				storage.handle_item_insertion(null, thing)
+	for(var/obj/item/thing in loc)
+		if(!thing.simulated || thing.anchored)
+			continue
+		if(storage.can_be_inserted(thing, null))
+			storage.handle_item_insertion(null, thing)
 
 /obj/structure/reagent_dispensers/barrel/on_reagent_change()
 	if(!(. = ..()) || QDELETED(src))
