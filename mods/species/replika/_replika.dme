@@ -2,6 +2,7 @@
 #define MODPACK_REPLIKA
 // BEGIN_INCLUDE
 #include "../../../mods/content/psionics/_psionics.dme"
+#include "../../../mods/content/ventcrawl/_ventcrawl.dme"
 #include "_replika.dm"
 #include "accessory.dm"
 #include "chems.dm"

@@ -4,7 +4,7 @@
 	icon = 'mods/species/replika/icons/repair_spray.dmi'
 	item_flags = ITEM_FLAG_NO_BLUDGEON
 	w_class = ITEM_SIZE_SMALL
-	volume = 20 // needs room to dump a repair patch into it
+	chem_volume = 20 // needs room to dump a repair patch into it
 	possible_transfer_amounts = @"[5,10,15]"
 	var/tmp/sound_spray = 'sound/effects/spray.ogg' ///Sound played when spraying
 
@@ -37,7 +37,7 @@
 	if(standard_pour_into(user, target))
 		return TRUE
 
-	if(reagents.total_volume < amount_per_transfer_from_this)
+	if(REAGENT_TOTAL_VOLUME(reagents) < amount_per_transfer_from_this)
 		to_chat(user, SPAN_WARNING("\The [src] is empty!"))
 		return TRUE
 
@@ -108,7 +108,7 @@
 
 /obj/item/chems/hypospray/autoinjector/klstim/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/klstim_n, reagents.maximum_volume)
+	reagents.add_reagent(/decl/material/liquid/klstim_n, REAGENT_MAXIMUM_VOLUME(reagents))
 
 /obj/item/chems/patch
 	name = "patch"
@@ -119,7 +119,7 @@
 	randpixel = 7
 	possible_transfer_amounts = null
 	w_class = ITEM_SIZE_TINY
-	volume = 5
+	chem_volume = 5
 	material = /decl/material/solid/organic/paper
 	atom_flags = 0 // not open, temperature can change
 	var/start_sealed = TRUE // if sealed, it must be torn before it can be used
@@ -143,7 +143,7 @@
 	var/obj/item/organ/external/targeted_organ = GET_EXTERNAL_ORGAN(victim, user.get_target_zone() || BP_CHEST)
 	if(!isliving(victim))
 		return TRUE
-	if(!reagents?.total_volume)
+	if(!REAGENT_TOTAL_VOLUME(reagents))
 		to_chat(user, SPAN_NOTICE("\The [src] has no medicine in it!"))
 	if(!targeted_organ)
 		to_chat(user, SPAN_NOTICE("You can't apply \the [src] there, \the [victim] is missing that body part!"))
@@ -188,7 +188,7 @@
 		var/contained = REAGENT_LIST(src)
 		admin_attack_log(user, victim, "Dosed the victim with [src] (Reagents: [contained])", "Was dosed with [src] (Reagents: [contained])", "used [src] (Reagents: [contained])")
 		victim.visible_message("<b>\The [user]</b> applies \the [src] to \the [victim]'s [targeted_organ.name].", SPAN_NOTICE("You apply \the [src] to \the [victim]'s [targeted_organ.name]."))
-	reagents.trans_to_mob(victim, reagents.total_volume, CHEM_TOUCH)
+	reagents.trans_to_mob(victim, REAGENT_TOTAL_VOLUME(reagents), CHEM_TOUCH)
 	physically_destroyed()
 	return TRUE
 
@@ -206,7 +206,7 @@
 		return TRUE
 
 /obj/item/chems/patch/on_reagent_change()
-	if(reagents?.total_volume == 0)
+	if(REAGENT_TOTAL_VOLUME(reagents) == 0)
 		addtimer(CALLBACK(src, /atom/proc/physically_destroyed), 0) // I hate this, but we need it to happen after other procs finish running.
 	else
 		..()
@@ -217,8 +217,8 @@
 	for(var/key in matter)
 		mat = GET_DECL(key)
 		mat.place_cuttings(our_turf, matter[key] % SHEET_MATERIAL_AMOUNT)
-	if(reagents?.total_volume > 0) // destroyed by something other than being used
-		reagents.splash_turf(our_turf, reagents.total_volume)
+	if(REAGENT_TOTAL_VOLUME(reagents) > 0) // destroyed by something other than being used
+		reagents.splash_turf(our_turf, REAGENT_TOTAL_VOLUME(reagents))
 	return ..()
 
 /obj/item/chems/patch/attack_self(mob/user)
@@ -239,7 +239,7 @@
 	Coagulant K stops fluid leaks quickly and reliably by thickening Replika oxidant fluid into a gelatinous mass."
 
 /obj/item/chems/patch/repair/populate_reagents()
-	reagents.add_reagent(/decl/material/solid/koagulant_k, reagents.maximum_volume)
+	reagents.add_reagent(/decl/material/solid/koagulant_k, REAGENT_MAXIMUM_VOLUME(reagents))
 
 /obj/item/box/survival/replika
 	name = "\improper Replika repair kit"
