@@ -1,4 +1,7 @@
-#define BLENDED "blended"
+var/global/const/DATA_BLENDED = /decl/reagent_data_field/blended
+
+/decl/reagent_data_field/blended
+	uid = "rdf_karmotrine_blended"
 
 /decl/cocktail/get_additional_guide_text()
 	if(blended)
@@ -18,14 +21,14 @@
 
 /obj/machinery/reagentgrinder/juicer/end_grind(mob/user)
 	. = ..()
-	if(!LAZYLEN(beaker?.reagents?.reagent_volumes))
+	if(!LAZYLEN(REAGENT_VOLUMES(beaker?.reagents)))
 		return
 	var/is_blended = FALSE
 	// give all the cocktail chemicals in the beaker the 'blended' data
-	for(var/chem_path in beaker.reagents.reagent_volumes)
+	for(var/chem_path in REAGENT_VOLUMES(beaker.reagents))
 		if (!ispath(chem_path, /decl/material/liquid/blendable))
 			continue
-		LAZYSET(beaker.reagents.reagent_data, chem_path, list(BLENDED = TRUE))
+		REAGENT_SET_DATA(beaker.reagents, chem_path, list((DATA_BLENDED) = TRUE))
 		is_blended = TRUE
 	if(is_blended)
 		visible_message(SPAN_NOTICE("The contents of \the [beaker] settle into a fine liquid."))
@@ -36,12 +39,12 @@
 // mix_data isn't called without initial data, so we set it to false here
 /decl/material/liquid/blendable/initialize_data(var/newdata)
 	. = ..() || list()
-	.[BLENDED] ||= FALSE
+	.[DATA_BLENDED] ||= FALSE
 
 /decl/material/liquid/blendable/mix_data(var/datum/reagents/reagents, var/list/newdata, var/amount)
 	. = ..()
-	if(LAZYACCESS(., BLENDED) && !LAZYACCESS(newdata, BLENDED)) // have to re-blend if you add unblended reagents
-		.[BLENDED] = FALSE
+	if(LAZYACCESS(., DATA_BLENDED) && !LAZYACCESS(newdata, DATA_BLENDED)) // have to re-blend if you add unblended reagents
+		.[DATA_BLENDED] = FALSE
 
 /decl/cocktail
 	var/blended = FALSE /// if TRUE, checks for BLENDED in reagent data during matches()
@@ -52,15 +55,13 @@
 	if(!blended)
 		return
 	var/is_blended = FALSE
-	for(var/chem_path in prop.reagents.reagent_volumes)
+	for(var/chem_path in REAGENT_VOLUMES(prop.reagents))
 		if (!ispath(chem_path, /decl/material/liquid/blendable))
 			continue
 		var/list/data = REAGENT_DATA(prop.reagents, chem_path)
-		if(!LAZYACCESS(data, BLENDED))
+		if(!LAZYACCESS(data, DATA_BLENDED))
 			return FALSE
 		is_blended = TRUE
 	if(!is_blended)
 		CRASH("Cocktail [src.name] ([src.type]) has blended set but has no blendable ingredients!")
 	return TRUE
-
-#undef BLENDED
