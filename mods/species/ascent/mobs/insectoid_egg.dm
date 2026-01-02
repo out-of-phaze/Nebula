@@ -2,7 +2,7 @@ var/global/default_gyne
 
 /decl/ghosttrap/kharmaani_egg
 	name = "mantid nymph"
-	ban_checks = list(/decl/special_role/provocateur)
+	ban_checks = list(MANTID_NYMPH_BAN)
 	ghost_trap_message = "They are hatching from a kharmaan egg now."
 
 /decl/ghosttrap/kharmaani_egg/forced(var/mob/user)
@@ -18,7 +18,6 @@ var/global/default_gyne
 /obj/structure/insectoid_egg
 	name = "alien egg"
 	desc = "A semi-translucent alien egg."
-	current_health = 100
 	max_health = 100
 	icon = 'mods/species/ascent/icons/egg.dmi'
 	icon_state = "egg"

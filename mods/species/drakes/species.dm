@@ -16,7 +16,7 @@
 	snow_slowdown_mod = -0.5
 	gluttonous = GLUT_TINY
 	available_pronouns = list(
-		/decl/pronouns,
+		/decl/pronouns/pseudoplural,
 		/decl/pronouns/neuter,
 		/decl/pronouns/male,
 		/decl/pronouns/female
@@ -73,6 +73,10 @@
 	else
 		pain_emotes_with_pain_level = adult_pain_emotes_with_pain_level
 	return ..()
+
+/decl/species/grafadreka/handle_post_spawn(var/mob/living/human/H)
+	. = ..()
+	H.default_attack = GET_DECL(/decl/natural_attack/claws/strong/drake)
 
 // Stub for muscle memory of the Sit verb on Polaris.
 /mob/living/human/proc/drake_sit()

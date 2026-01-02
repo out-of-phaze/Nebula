@@ -67,7 +67,7 @@ var/global/list/ventcrawl_machinery = list(
 	for(var/obj/machinery/atmospherics/unary/U in range(1))
 		if(is_type_in_list(U,ventcrawl_machinery) && Adjacent(U) && U.can_crawl_through())
 			pipes |= U
-	if(!pipes || !pipes.len)
+	if(!LAZYLEN(pipes))
 		to_chat(src, "There are no pipes that you can ventcrawl into within range!")
 		return
 	if(pipes.len == 1)
@@ -152,3 +152,10 @@ var/global/list/ventcrawl_machinery = list(
 			client.images -= current_image
 		client.eye = src
 	LAZYCLEARLIST(pipes_shown)
+
+/mob/living/Login()
+	. = ..()
+	//login during ventcrawl
+	if(is_ventcrawling && istype(loc, /obj/machinery/atmospherics)) //attach us back into the pipes
+		remove_ventcrawl()
+		add_ventcrawl(loc)

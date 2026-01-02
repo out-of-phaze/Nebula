@@ -11,6 +11,7 @@
 	can_collect     = TRUE
 	print_type      = /obj/effect/footprints
 	drop_material_on_remove = TRUE
+	uid             = "floor_snow"
 
 /decl/flooring/snow/get_movement_delay(var/travel_dir, var/mob/mover)
 	. = ..()
@@ -24,7 +25,7 @@
 		. = max(., 0)
 
 /decl/flooring/snow/fire_act(turf/floor/target, datum/gas_mixture/air, exposed_temperature, exposed_volume)
-	if(!target.reagents?.total_volume)
+	if(!REAGENT_TOTAL_VOLUME(target.reagents))
 		if(target.get_topmost_flooring() == src)
 			target.remove_flooring(src)
 		else if(target.get_base_flooring() == src)
@@ -51,8 +52,10 @@
 	icon            = 'icons/turf/flooring/snow.dmi'
 	icon_base       = "permafrost"
 	force_material  = /decl/material/solid/ice
+	uid             = "floor_permafrost"
 
 /decl/flooring/snow/fake
 	name            = "holosnow"
 	desc            = "Not quite the same as snow on an entertainment terminal, but close."
 	holographic     = TRUE
+	uid             = "floor_snow_fake"

@@ -3,19 +3,12 @@
 	icon_state = ICON_STATE_WORLD
 	w_class = ITEM_SIZE_SMALL
 	material_alteration = MAT_FLAG_ALTERATION_ALL
+	chem_volume = 20
 	var/destroy_on_centrifuge = FALSE
-
-/obj/item/hive_frame/Initialize(ml, material_key)
-	. = ..()
-	initialize_reagents()
-
-/obj/item/hive_frame/initialize_reagents(populate = TRUE)
-	create_reagents(20)
-	. = ..()
 
 /obj/item/hive_frame/on_reagent_change()
 	. = ..()
-	if(reagents?.total_volume)
+	if(REAGENT_TOTAL_VOLUME(reagents))
 		SetName("filled [initial(name)] ([reagents.get_primary_reagent_name()])")
 	else
 		SetName(initial(name))
@@ -26,7 +19,7 @@
 	var/mesh_state = "[icon_state]-mesh"
 	if(check_state_in_icon(mesh_state, icon))
 		add_overlay(overlay_image(icon, mesh_state, COLOR_WHITE, RESET_COLOR))
-	if(reagents?.total_volume)
+	if(REAGENT_TOTAL_VOLUME(reagents))
 		var/comb_state = "[icon_state]-comb"
 		if(check_state_in_icon(comb_state, icon))
 			add_overlay(overlay_image(icon, comb_state, reagents.get_color(), RESET_COLOR))
@@ -35,8 +28,8 @@
 /obj/item/hive_frame/handle_centrifuge_process(obj/machinery/centrifuge/centrifuge)
 	if(!(. = ..()))
 		return
-	if(reagents.total_volume)
-		reagents.trans_to_holder(centrifuge.loaded_beaker.reagents, reagents.total_volume)
+	if(REAGENT_TOTAL_VOLUME(reagents))
+		reagents.trans_to_holder(centrifuge.loaded_beaker.reagents, REAGENT_TOTAL_VOLUME(reagents))
 	for(var/obj/item/thing in contents)
 		thing.dropInto(centrifuge.loc)
 	if(destroy_on_centrifuge)
@@ -59,4 +52,4 @@
 
 /obj/item/hive_frame/crafted/filled/populate_reagents()
 	. = ..()
-	reagents.add_reagent(/decl/material/liquid/nutriment/honey, reagents?.maximum_volume)
+	reagents.add_reagent(/decl/material/liquid/nutriment/honey, REAGENT_MAXIMUM_VOLUME(reagents))

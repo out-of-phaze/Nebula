@@ -7,22 +7,18 @@
 	density = TRUE
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER | ATOM_FLAG_CLIMBABLE
 	movable_flags = MOVABLE_FLAG_WHEELED
+	chem_volume = 180
+
 	var/obj/item/bag/trash/mybag	= null
 	var/obj/item/mop/mymop = null
 	var/obj/item/chems/spray/myspray = null
 	var/obj/item/lightreplacer/myreplacer = null
 	var/signs = 0	//maximum capacity hardcoded below
 
-
-/obj/structure/janitorialcart/Initialize()
-	. = ..()
-	create_reagents(180)
-
 /obj/structure/janitorialcart/get_examine_strings(mob/user, distance, infix, suffix)
 	. = ..()
 	if(distance <= 1)
-		. += "\The [src] [html_icon(src)] contains [reagents.total_volume] unit\s of liquid!"
-
+		. += "\The [src] [html_icon(src)] contains [REAGENT_TOTAL_VOLUME(reagents)] unit\s of liquid!"
 
 /obj/structure/janitorialcart/attackby(obj/item/used_item, mob/user)
 	if(istype(used_item, /obj/item/bag/trash) && !mybag)
@@ -35,11 +31,11 @@
 		return TRUE
 
 	else if(istype(used_item, /obj/item/mop))
-		if(used_item.reagents.total_volume < used_item.reagents.maximum_volume)	//if it's not completely soaked we assume they want to wet it, otherwise store it
-			if(reagents.total_volume < 1)
+		if(REAGENT_TOTAL_VOLUME(used_item.reagents) < REAGENT_MAXIMUM_VOLUME(used_item.reagents))	//if it's not completely soaked we assume they want to wet it, otherwise store it
+			if(REAGENT_TOTAL_VOLUME(reagents) < 1)
 				to_chat(user, "<span class='warning'>[src] is out of water!</span>")
 			else
-				reagents.trans_to_obj(used_item, used_item.reagents.maximum_volume)
+				reagents.trans_to_obj(used_item, REAGENT_MAXIMUM_VOLUME(used_item.reagents))
 				to_chat(user, "<span class='notice'>You wet [used_item] in [src].</span>")
 				playsound(loc, 'sound/effects/slosh.ogg', 25, 1)
 			return TRUE
@@ -191,6 +187,7 @@
 	density =  TRUE
 	material_alteration = MAT_FLAG_ALTERATION_NONE
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
+	chem_volume = 100
 	movement_handlers = list(
 		/datum/movement_handler/deny_multiz,
 		/datum/movement_handler/delay = list(1),
@@ -208,19 +205,18 @@
 		"[WEST]"  = list("x" =  13, "y" = 7, "z" = 0)
 	)
 	. = ..()
-	create_reagents(100)
 
 /obj/structure/janicart/get_examine_strings(mob/user, distance, infix, suffix)
 	. = ..()
 	if(distance <= 1)
-		. += "[html_icon(src)] This [callme] contains [reagents.total_volume] unit\s of water!"
+		. += "[html_icon(src)] This [callme] contains [REAGENT_TOTAL_VOLUME(reagents)] unit\s of water!"
 		if(mybag)
 			. += "\A [mybag] is hanging on the [callme]."
 
 /obj/structure/janicart/attackby(obj/item/used_item, mob/user)
 
 	if(istype(used_item, /obj/item/mop))
-		if(reagents.total_volume > 1)
+		if(REAGENT_TOTAL_VOLUME(reagents) > 1)
 			reagents.trans_to_obj(used_item, 2)
 			to_chat(user, SPAN_NOTICE("You wet [used_item] in the [callme]."))
 			playsound(loc, 'sound/effects/slosh.ogg', 25, 1)

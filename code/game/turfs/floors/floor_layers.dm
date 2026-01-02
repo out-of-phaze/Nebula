@@ -9,8 +9,7 @@
 		if(islist(_flooring))
 			for(var/floor in _flooring)
 				. += RESOLVE_TO_DECL(floor)
-			_flooring = . // ensure the list elements are resolved
-		else
+		else if(!isnull(_flooring))
 			. += RESOLVE_TO_DECL(_flooring)
 	if(_base_flooring)
 		. += get_base_flooring()
@@ -208,7 +207,8 @@
 
 	update_floor_strings()
 
-	gender     = copy_from.gender
+	set_gender(copy_from.gender)
+
 	layer      = copy_from.floor_layer
 	turf_flags = copy_from.turf_flags
 	z_flags    = copy_from.z_flags

@@ -150,30 +150,15 @@
 #define BP_EYES     "eyes"
 #define BP_HEART    "heart"
 #define BP_LUNGS    "lungs"
-#define BP_TRACH	"tracheae"
 #define BP_BRAIN    "brain"
 #define BP_LIVER    "liver"
 #define BP_KIDNEYS  "kidneys"
 #define BP_STOMACH  "stomach"
-#define BP_PLASMA   "plasma vessel"
 #define BP_APPENDIX "appendix"
 #define BP_CELL     "cell"
-#define BP_HIVE     "hive node"
-#define BP_NUTRIENT "nutrient vessel"
-#define BP_ACID     "acid gland"
-#define BP_EGG      "egg sac"
-#define BP_RESIN    "resin spinner"
-#define BP_STRATA   "neural strata"
-#define BP_RESPONSE "response node"
-#define BP_GBLADDER "gas bladder"
-#define BP_POLYP    "polyp segment"
-#define BP_ANCHOR   "anchoring ligament"
-#define BP_ACETONE  "acetone reactor"
 
 // Robo Organs.
 #define BP_VOICE             "vocal synthesiser"
-#define BP_STACK             "stack"
-#define BP_OPTICS            "optics"
 
 //Augmetations
 #define BP_AUGMENT_R_ARM        "right arm augment"
@@ -351,6 +336,7 @@ var/global/list/dexterity_levels = list(
 // Additional pronoun sets.
 #define NEUTER_ANIMATE "animate singular neutral"
 #define SECOND_PERSON_SINGULAR "second person singular"
+#define PSEUDOPLURAL "pseudoplural"
 
 // Equipment Overlays Indices //
 #define HO_CONDITION_LAYER  1

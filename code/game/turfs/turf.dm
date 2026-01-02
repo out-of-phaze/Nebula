@@ -84,8 +84,6 @@
 	// Temporary list of weakrefs of atoms who should be excepted from falling into us
 	var/list/skip_height_fall_for
 
-	var/paint_color
-
 	/// Floorlike structures like catwalks. Updated/retrieved by get_supporting_platform()
 	var/obj/structure/supporting_platform
 
@@ -213,8 +211,8 @@
 	if(weather)
 		. += weather.get_movement_delay(return_air(), travel_dir)
 	// TODO: check user species webbed feet, wearing swimming gear
-	if(!get_supporting_platform() && reagents?.total_volume > FLUID_PUDDLE)
-		. += (reagents.total_volume > FLUID_SHALLOW) ? 6 : 3
+	if(!get_supporting_platform() && REAGENT_TOTAL_VOLUME(reagents) > FLUID_PUDDLE)
+		. += (REAGENT_TOTAL_VOLUME(reagents) > FLUID_SHALLOW) ? 6 : 3
 
 /turf/attack_hand(mob/user)
 
@@ -250,10 +248,6 @@
 			T.try_build_turf(user, src)
 			return TRUE
 
-		if(IS_HOE(used_item) && can_dig_farm(used_item.material?.hardness))
-			try_dig_farm(user, used_item)
-			return TRUE
-
 		if(IS_SHOVEL(used_item))
 
 			// TODO: move these checks into the interaction handlers.
@@ -274,8 +268,12 @@
 				to_chat(user, SPAN_WARNING("You cannot dig anything out of \the [src] with \the [used_item]."))
 			return TRUE
 
-		var/decl/material/material = get_material()
-		if(IS_PICK(used_item) && material)
+		if(IS_HOE(used_item) && can_dig_farm(used_item.material?.hardness))
+			try_dig_farm(user, used_item)
+			return TRUE
+
+		var/decl/material/digging_material = get_material()
+		if(IS_PICK(used_item) && digging_material)
 
 			// TODO: move these checks into the interaction handlers.
 			var/atom/platform = get_supporting_platform()
@@ -283,7 +281,7 @@
 				to_chat(user, SPAN_WARNING("\The [platform] [platform.get_pronouns().is] in the way!"))
 				return TRUE
 
-			if(material?.hardness <= MAT_VALUE_FLEXIBLE)
+			if(digging_material?.hardness <= MAT_VALUE_FLEXIBLE)
 				to_chat(user, SPAN_WARNING("\The [src] is too soft to be excavated with \the [used_item]. Use a shovel."))
 				return TRUE
 
@@ -356,8 +354,8 @@
 		var/mob/mover_mob = mover
 		if(!istype(mover_mob) || (!mover_mob.throwing && !mover_mob.can_overcome_gravity()))
 			var/turf/old_turf  = mover.loc
-			var/old_height     = old_turf.get_physical_height() + old_turf.reagents?.total_volume
-			var/current_height = get_physical_height() + reagents?.total_volume
+			var/old_height     = old_turf.get_physical_height() + REAGENT_TOTAL_VOLUME(old_turf.reagents)
+			var/current_height = get_physical_height() + REAGENT_TOTAL_VOLUME(reagents)
 			if(abs(current_height - old_height) > FLUID_SHALLOW)
 				if(current_height > old_height)
 					return 0
@@ -827,12 +825,7 @@
 	return null
 
 /turf/get_color()
-	if(paint_color)
-		return paint_color
-	var/decl/material/material = get_material()
-	if(material)
-		return material.color
-	return color
+	return paint_color || get_material()?.color || color
 
 /turf/proc/get_fishing_result(obj/item/food/bait)
 	var/area/A = get_area(src)
@@ -858,26 +851,33 @@
 	var/obj/item/held = user ? (user.get_active_held_item() || user.get_usable_hand_slot_organ()) : null
 	if(!istype(held))
 		return
-	if(IS_SHOVEL(held))
-		if(can_dig_pit(held.material?.hardness))
-			LAZYADD(., /decl/interaction_handler/dig/pit)
-		if(can_dig_trench(held.material?.hardness))
+	if(is_open())
+		if(HasBelow(z))
+			LAZYADD(., /decl/interaction_handler/dig_ramp_from_above)
+	else
+		if(IS_SHOVEL(held))
+			if(can_dig_pit(held.material?.hardness))
+				LAZYADD(., /decl/interaction_handler/dig/pit)
+			if(can_dig_trench(held.material?.hardness))
+				LAZYADD(., /decl/interaction_handler/dig/trench)
+		if(IS_PICK(held) && can_dig_trench(held.material?.hardness, using_tool = TOOL_PICK))
 			LAZYADD(., /decl/interaction_handler/dig/trench)
-	if(IS_PICK(held) && can_dig_trench(held.material?.hardness, using_tool = TOOL_PICK))
-		LAZYADD(., /decl/interaction_handler/dig/trench)
-	if(IS_HOE(held) && can_dig_farm(held.material?.hardness))
-		LAZYADD(., /decl/interaction_handler/dig/farm)
+		if(IS_HOE(held) && can_dig_farm(held.material?.hardness))
+			LAZYADD(., /decl/interaction_handler/dig/farm)
 
 /// Contaminant may be the chemical decl of the footprint being provided,
 /// or null if we just want to know if we support footprints, at all, ever.
 /turf/proc/can_show_coating_footprints(decl/material/contaminant)
 	return simulated
 
+/turf/proc/is_purged()
+	return
+
 /decl/interaction_handler/show_turf_contents
 	name = "Show Turf Contents"
 	expected_user_type = /mob
 	interaction_flags = 0
-	examine_desc = "list everything on $TARGET_THEM$"
+	examine_desc = "list everything on the turf"
 
 /decl/interaction_handler/show_turf_contents/invoked(atom/target, mob/user, obj/item/prop)
 	target.show_atom_list_for_turf(user, get_turf(target))
@@ -905,8 +905,8 @@
 		if(T.can_dig_trench(prop?.material?.hardness))
 			T.try_dig_trench(user, prop)
 	else if(IS_PICK(prop))
-		var/decl/material/material = T.get_material()
-		if(material?.hardness > MAT_VALUE_FLEXIBLE && T.can_dig_trench(prop?.material?.hardness, using_tool = TOOL_PICK))
+		var/decl/material/digging_material = T.get_material()
+		if(digging_material?.hardness > MAT_VALUE_FLEXIBLE && T.can_dig_trench(prop?.material?.hardness, using_tool = TOOL_PICK))
 			T.try_dig_trench(user, prop, using_tool = TOOL_PICK)
 
 /decl/interaction_handler/dig/pit
@@ -931,5 +931,3 @@
 
 /turf/take_vaporized_reagent(reagent, amount)
 	return assume_gas(reagent, round(amount / REAGENT_UNITS_PER_GAS_MOLE))
-
-/turf/proc/is_purged()

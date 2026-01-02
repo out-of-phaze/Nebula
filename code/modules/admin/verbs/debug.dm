@@ -17,7 +17,7 @@
 	t += "<span class='warning'>Temperature: [env.temperature]</span>\n"
 	t += "<span class='warning'>Pressure: [env.return_pressure()]kPa</span>\n"
 	for(var/g in env.gas)
-		t += "<span class='notice'>[g]: [env.gas[g]] / [env.gas[g] * R_IDEAL_GAS_EQUATION * env.temperature / env.volume]kPa</span>\n"
+		t += "<span class='notice'>[g]: [env.gas[g]] / [env.gas[g] * R_IDEAL_GAS_EQUATION * env.temperature / env.total_volume]kPa</span>\n"
 
 	usr.show_message(t, 1)
 	SSstatistics.add_field_details("admin_verb","ASL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -425,10 +425,9 @@
 	set name = "Spawn Material Stack"
 	if(!check_rights(R_DEBUG)) return
 
-	var/decl/material/material = input("Select material to spawn") as null|anything in decls_repository.get_decls_of_subtype_unassociated(/decl/material)
-	if(!istype(material))
-		return
-	material.create_object(get_turf(mob), 50)
+	var/decl/material/spawn_material = input("Select material to spawn") as null|anything in decls_repository.get_decls_of_subtype_unassociated(/decl/material)
+	if(istype(spawn_material))
+		spawn_material.create_object(get_turf(mob), 50)
 
 /client/proc/force_ghost_trap_trigger()
 	set category = "Debug"

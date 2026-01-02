@@ -79,7 +79,7 @@
 	available_pronouns = list(
 		/decl/pronouns/neuter,
 		/decl/pronouns/neuter/person,
-		/decl/pronouns,
+		/decl/pronouns/pseudoplural,
 		/decl/pronouns/male,
 		/decl/pronouns/female
 	)
@@ -155,7 +155,7 @@ var/global/list/vox_current_pressure_toggle = list()
 
 /decl/species/vox/handle_death(var/mob/living/human/H)
 	..()
-	var/obj/item/organ/internal/voxstack/stack = H.get_organ(BP_STACK, /obj/item/organ/internal/voxstack)
+	var/obj/item/organ/internal/voxstack/stack = H.get_organ(BP_VOXSTACK, /obj/item/organ/internal/voxstack)
 	if (stack)
 		stack.do_backup()
 

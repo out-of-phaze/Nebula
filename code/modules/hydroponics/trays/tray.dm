@@ -5,11 +5,12 @@
 	icon_state = "hydrotray3"
 	density = TRUE
 	anchored = TRUE
-	volume = 100
+	gas_volume = 100
 	construct_state = /decl/machine_construction/default/panel_closed
 	uncreated_component_parts = null
 	stat_immune = 0
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER | ATOM_FLAG_CLIMBABLE | ATOM_FLAG_NO_CHEM_CHANGE
+	chem_volume = 200
 
 	var/mechanical = 1         // Set to 0 to stop it from drawing the alert lights.
 	var/base_name = "tray"
@@ -38,7 +39,8 @@
 	var/lastproduce = 0        // Last time tray was harvested
 	var/closed_system          // If set, the tray will attempt to take atmos from a pipe.
 	var/force_update           // Set this to bypass the cycle time check.
-	var/obj/temp_chem_holder   // Something to hold reagents during process_reagents()
+	/// Something to hold reagents during process_reagents()
+	var/obj/effect/chem_holder/temp_chem_holder
 
 	// Counter used by bees.
 	var/pollen = 0
@@ -163,10 +165,7 @@
 	if(!mechanical)
 		construct_state = /decl/machine_construction/noninteractive
 	. = ..()
-	temp_chem_holder = new()
-	temp_chem_holder.create_reagents(10)
-	temp_chem_holder.atom_flags |= ATOM_FLAG_OPEN_CONTAINER
-	create_reagents(200)
+	temp_chem_holder = new(null, 10)
 	if(mechanical)
 		connect()
 	lazy_update_icon()
@@ -230,12 +229,12 @@
 
 	if(!reagents) return
 
-	if(reagents.total_volume <= 0)
+	if(REAGENT_TOTAL_VOLUME(reagents) <= 0)
 		return
 
-	reagents.trans_to_obj(temp_chem_holder, min(reagents.total_volume,rand(1,3)))
+	reagents.trans_to_obj(temp_chem_holder, min(REAGENT_TOTAL_VOLUME(reagents),rand(1,3)))
 
-	for(var/decl/material/reagent as anything in temp_chem_holder.reagents.reagent_volumes)
+	for(var/decl/material/reagent as anything in REAGENT_VOLUMES(temp_chem_holder.reagents))
 
 		var/reagent_total = REAGENT_VOLUME(temp_chem_holder.reagents, reagent)
 

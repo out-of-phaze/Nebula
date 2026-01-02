@@ -29,10 +29,6 @@
 		to_chat(joining, SPAN_WARNING("You are banned from playing offstation roles."))
 		return FALSE
 
-	if(job.is_semi_antagonist && jobban_isbanned(joining, /decl/special_role/provocateur))
-		to_chat(joining, SPAN_WARNING("You are banned from playing semi-antagonist roles."))
-		return FALSE
-
 	if(job.is_restricted(joining.client.prefs, joining))
 		return FALSE
 
@@ -112,7 +108,8 @@
 		global.universe.OnPlayerLatejoin(character)
 		log_and_message_admins("has joined the round as offsite role [character.mind.assigned_role].", character)
 		RAISE_EVENT(/decl/observ/submap_join, src, character, job)
-		if(character.cannot_stand()) equip_wheelchair(character)
+		if(character.cannot_stand())
+			equip_wheelchair(character)
 		job.post_equip_job_title(character, job.title)
 		qdel(joining)
 

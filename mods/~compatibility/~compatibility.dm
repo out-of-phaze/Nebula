@@ -11,7 +11,7 @@
 #include "patches/mixed_gamemodes.dm"
 #endif
 
-#ifdef MODPACK_FANTASY_SPECIES
+#ifdef MODPACK_FANTASY
 #include "patches/fantasy.dm"
 #endif
 
@@ -33,4 +33,8 @@
 
 #ifdef MODPACK_DRAKES
 #include "patches/drakes.dm"
+#endif
+
+#ifdef CONTENT_PACK_VENTCRAWL
+#include "patches/ventcrawl.dm"
 #endif

@@ -184,10 +184,10 @@
 
 /decl/material/solid/potash/affect_blood(var/mob/living/M, var/removed, var/datum/reagents/holder)
 	. = ..()
-	var/volume = REAGENT_VOLUME(holder, src)
-	if(volume > 3)
+	var/affect_volume = REAGENT_VOLUME(holder, src)
+	if(affect_volume > 3)
 		M.add_chemical_effect(CE_PULSE, 1)
-	if(volume > 10)
+	if(affect_volume > 10)
 		M.add_chemical_effect(CE_PULSE, 1)
 
 /decl/material/solid/bauxite
@@ -236,6 +236,8 @@
 	dug_drop_type = /obj/item/stack/material/ore/handful
 	default_solid_form = /obj/item/stack/material/ore/handful
 	can_backfill_floor_type = /decl/flooring/sand
+	sound_manipulate = 'sound/foley/paperpickup2.ogg'
+	sound_dropped = 'sound/foley/paperpickup1.ogg'
 
 /decl/material/solid/clay
 	name = "clay"
@@ -261,6 +263,8 @@
 	can_backfill_floor_type = /decl/flooring/clay
 	gemstone_chance = 0.01
 	gemstone_types  = list(/decl/material/solid/gemstone/sapphire = 1)
+	sound_manipulate = 'sound/foley/paperpickup2.ogg'
+	sound_dropped = 'sound/foley/paperpickup1.ogg'
 
 /decl/material/solid/soil
 	name = "soil"
@@ -281,6 +285,8 @@
 	)
 	solution_name = "mud"
 	coated_adjective = "muddy"
+	sound_manipulate = 'sound/foley/paperpickup2.ogg'
+	sound_dropped = 'sound/foley/paperpickup1.ogg'
 
 // todo: make mud either its own material or a mix of dirt and water
 // or let dirt be in the liquid volumes list for mud?

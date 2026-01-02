@@ -133,12 +133,12 @@
 
 	var/removing = (4 * removed * antitoxin_strength)
 	var/datum/reagents/ingested = M.get_ingested_reagents()
-	for(var/decl/material/reagent as anything in ingested?.reagent_volumes)
+	for(var/decl/material/reagent as anything in REAGENT_VOLUMES(ingested))
 		if((remove_generic && reagent.toxicity) || (reagent.type in remove_toxins))
 			ingested.remove_reagent(reagent, removing)
 			return
 
-	for(var/decl/material/reagent as anything in M.reagents?.reagent_volumes)
+	for(var/decl/material/reagent as anything in REAGENT_VOLUMES(M.reagents))
 		if((remove_generic && reagent.toxicity) || (reagent.type in remove_toxins))
 			M.remove_from_reagents(reagent, removing)
 			return
@@ -226,18 +226,18 @@
 	uid = "chem_adrenaline"
 
 /decl/material/liquid/adrenaline/affect_blood(var/mob/living/M, var/removed, var/datum/reagents/holder)
-	var/volume = REAGENT_VOLUME(holder, src)
+	var/affect_volume = REAGENT_VOLUME(holder, src)
 	var/dose = CHEM_DOSE(M, src)
 	. = ..()
 	if(dose < 0.2)	//not that effective after initial rush
-		M.add_chemical_effect(CE_PAINKILLER, min(30*volume, 80))
+		M.add_chemical_effect(CE_PAINKILLER, min(30*affect_volume, 80))
 		M.add_chemical_effect(CE_PULSE, 1)
 	else if(dose < 1)
-		M.add_chemical_effect(CE_PAINKILLER, min(10*volume, 20))
+		M.add_chemical_effect(CE_PAINKILLER, min(10*affect_volume, 20))
 	M.add_chemical_effect(CE_PULSE, 2)
 	if(dose > 10)
 		ADJ_STATUS(M, STAT_JITTER, 5)
-	if(volume >= 5 && M.is_asystole())
+	if(affect_volume >= 5 && M.is_asystole())
 		holder.remove_reagent(type, 5)
 		if(ishuman(M))
 			var/mob/living/human/H = M
@@ -368,7 +368,7 @@
 	var/charges = removed * DETOXIFIER_EFFECTIVENESS
 	var/dosecharges = CHEM_DOSE(M, src) * DETOXIFIER_DOSE_EFFECTIVENESS
 	for(var/datum/reagents/container as anything in M.get_metabolizing_reagent_holders())
-		for(var/decl/material/reagent as anything in container.reagent_volumes)
+		for(var/decl/material/reagent as anything in REAGENT_VOLUMES(container))
 			var/decl/material/liquid/painkillers/painkiller = reagent
 			if(!istype(painkiller) || !painkiller.narcotic)
 				continue

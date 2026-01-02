@@ -30,8 +30,9 @@
 		H.update_eyes()
 
 /decl/material/liquid/glowsap/on_leaving_metabolism(datum/reagents/metabolism/holder)
-	if(ishuman(holder?.my_atom))
-		var/mob/living/human/H = holder.my_atom
+	var/my_atom = REAGENT_GET_ATOM(holder)
+	if(ishuman(my_atom))
+		var/mob/living/human/H = my_atom
 		addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living/human, update_eyes)), 5 SECONDS)
 	. = ..()
 
@@ -283,14 +284,14 @@
 
 /decl/material/liquid/lactate/affect_blood(var/mob/living/M, var/removed, var/datum/reagents/holder)
 	. = ..()
-	var/volume = REAGENT_VOLUME(holder, src)
+	var/affect_volume = REAGENT_VOLUME(holder, src)
 	M.add_chemical_effect(CE_PULSE, 1)
-	if(volume >= 10)
+	if(affect_volume >= 10)
 		M.add_chemical_effect(CE_PULSE, 1)
-		M.add_chemical_effect(CE_SLOWDOWN, (volume/15) ** 2)
+		M.add_chemical_effect(CE_SLOWDOWN, (affect_volume/15) ** 2)
 	else if(CHEM_DOSE(M, src) > 30) //after prolonged exertion
 		ADJ_STATUS(M, STAT_JITTER, 5)
-		M.add_chemical_effect(CE_BREATHLOSS, 0.02 * volume)
+		M.add_chemical_effect(CE_BREATHLOSS, 0.02 * affect_volume)
 
 /decl/material/liquid/nanoblood
 	name = "nanoblood"
@@ -382,7 +383,7 @@
 	var/list/data = REAGENT_DATA(holder, src)
 	if(world.time > LAZYACCESS(data, DATA_COOLDOWN_TIME) + 3 MINUTES)
 		LAZYSET(data, DATA_COOLDOWN_TIME, world.time)
-		LAZYSET(holder.reagent_data, type, data)
+		REAGENT_SET_DATA(holder, type, data)
 		to_chat(M, SPAN_NOTICE("You feel faintly sore in the throat."))
 
 /decl/material/liquid/nanitefluid

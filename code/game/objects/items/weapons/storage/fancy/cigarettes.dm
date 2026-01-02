@@ -17,11 +17,7 @@
 	return list(/obj/item/clothing/mask/smokable/cigarette = 6)
 
 /obj/item/box/fancy/cigarettes/Initialize(ml, material_key)
-	. = ..()
-	initialize_reagents()
-
-/obj/item/box/fancy/cigarettes/initialize_reagents(populate)
-	create_reagents(5 * max(storage?.max_storage_space, 1)) //so people can inject cigarettes without opening a packet, now with being able to inject the whole one
+	chem_volume = 5 * max(/datum/storage/box/cigarettes::max_storage_space, 1) //so people can inject cigarettes without opening a packet, now with being able to inject the whole one
 	. = ..()
 
 /obj/item/box/fancy/cigarettes/use_on_mob(mob/living/target, mob/living/user, animate = TRUE)
@@ -46,7 +42,7 @@
 
 		storage?.remove_from_storage(user, cig, null)
 		user.equip_to_slot(cig, slot_wear_mask_str)
-		reagents.maximum_volume = 5 * contents.len
+		create_or_update_reagents(5 * contents.len)
 		to_chat(user, SPAN_NOTICE("You take a cigarette out of the pack."))
 		update_icon()
 		return TRUE

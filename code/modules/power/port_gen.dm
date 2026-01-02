@@ -37,11 +37,10 @@
 	if(!sound_id)
 		sound_id = "[type]_[sequential_id(/obj/machinery/port_gen)]"
 	if(active && HasFuel() && !IsBroken())
-		var/volume = 10 + 15*power_output
+		var/work_volume = 10 + 15*power_output
 		if(!sound_token)
-
-			sound_token = play_looping_sound(src, sound_id, working_sound, volume = volume)
-		sound_token.SetVolume(volume)
+			sound_token = play_looping_sound(src, sound_id, working_sound, volume = work_volume)
+		sound_token.SetVolume(work_volume)
 	else if(sound_token)
 		QDEL_NULL(sound_token)
 
@@ -367,8 +366,8 @@
 	data["fuel_type"] = capitalize(sheet_name)
 
 	data["uses_coolant"] = !!reagents
-	data["coolant_stored"] = reagents?.total_volume
-	data["coolant_capacity"] = reagents?.maximum_volume
+	data["coolant_stored"] = REAGENT_TOTAL_VOLUME(reagents)
+	data["coolant_capacity"] = REAGENT_MAXIMUM_VOLUME(reagents)
 
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
@@ -458,14 +457,11 @@
 	rad_power = 12
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
 	anchored = TRUE
-
-/obj/machinery/port_gen/pacman/super/potato/Initialize()
-	create_reagents(120)
-	. = ..()
+	chem_volume = 120
 
 /obj/machinery/port_gen/pacman/super/potato/get_examine_strings(mob/user, distance, infix, suffix)
 	. = ..()
-	. += "Auxilary tank shows [reagents.total_volume]u of liquid in it."
+	. += "Auxilary tank shows [REAGENT_TOTAL_VOLUME(reagents)]u of liquid in it."
 
 /obj/machinery/port_gen/pacman/super/potato/UseFuel()
 	if(reagents.has_reagent(/decl/material/liquid/alcohol/vodka))

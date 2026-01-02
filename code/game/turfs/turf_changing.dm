@@ -64,6 +64,7 @@
 	var/old_affecting_lights = affecting_lights
 	var/old_lighting_overlay = lighting_overlay
 	var/old_dynamic_lighting = TURF_IS_DYNAMICALLY_LIT_UNSAFE(src)
+	var/old_z_opacity        = z_flags & ZM_ALLOW_LIGHTING
 	var/old_flooded =          flooded
 	var/old_outside =          is_outside
 	var/old_is_open =          is_open()
@@ -145,6 +146,11 @@
 	if (old_ambience != ambient_light || old_ambience_mult != ambient_light_multiplier)
 		update_ambient_light(FALSE)
 
+	var/new_z_opacity = z_flags & ZM_ALLOW_LIGHTING
+	if (new_z_opacity != old_z_opacity)
+		for (var/datum/lighting_corner/corn in corners)
+			corn.rebuild_ztraversal(!new_z_opacity)
+
 	var/tidlu = TURF_IS_DYNAMICALLY_LIT_UNSAFE(src)
 	if ((old_opacity != opacity) || (tidlu != old_dynamic_lighting) || force_lighting_update)
 		reconsider_lights()
@@ -187,6 +193,11 @@
 	if(old_alpha_mask_state != get_movable_alpha_mask_state(null))
 		for(var/atom/movable/AM as anything in changed_turf)
 			AM.update_turf_alpha_mask()
+
+	// Anything on our turf needs to fall down.
+	if(HasBelow(z) && changed_turf.is_open() && !old_is_open)
+		for(var/atom/movable/thing in changed_turf.get_contained_external_atoms())
+			thing.fall()
 
 /turf/proc/transport_properties_from(turf/other, transport_air)
 	if(transport_air && can_inherit_air && (other.zone || other.air))

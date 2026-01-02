@@ -64,6 +64,15 @@
 	/// (FLOAT) world.time of last on_reagent_update call, used to prevent recursion due to reagents updating reagents
 	VAR_PRIVATE/_reagent_update_started = 0
 
+	/// (STRING) A color applied over the top of any material color. Implemented on /obj/item, /obj/structure and /turf.
+	var/paint_color
+
+	/// (DATUM) Reference to material decl. If set to a /decl/material path, will init the item with that material.
+	/// Implemented on /mob/living/exosuit, /turf/wall, /obj/item and /obj/structure
+	var/decl/material/material
+	/// (DATUM) Similar to above, but largely used by /turf/wall, /obj/structure and /obj/item/stack/material
+	var/decl/material/reinf_material
+
 /atom/proc/get_max_health()
 	return max_health
 
@@ -155,7 +164,7 @@
 
 /atom/proc/on_reagent_change()
 	SHOULD_CALL_PARENT(TRUE)
-	if(storage && reagents?.total_volume)
+	if(storage && REAGENT_TOTAL_VOLUME(reagents))
 		for(var/obj/item/thing in get_stored_inventory())
 			thing.fluid_act(reagents)
 	return TRUE
@@ -437,9 +446,10 @@
  * Most useful for calculating worth or deconstructing something along with its contents.
  */
 /atom/proc/get_contained_matter(include_reagents = TRUE)
-	if(include_reagents && length(reagents?.reagent_volumes))
+	var/list/reagent_volumes = REAGENT_VOLUMES(reagents)
+	if(include_reagents && length(reagent_volumes))
 		LAZYINITLIST(.)
-		for(var/decl/material/reagent as anything in reagents.reagent_volumes)
+		for(var/decl/material/reagent as anything in reagent_volumes)
 			.[reagent.type] += floor(REAGENT_VOLUME(reagents, reagent) / REAGENT_UNITS_PER_MATERIAL_UNIT)
 	for(var/atom/contained_obj as anything in get_contained_external_atoms()) // machines handle component parts separately
 		. = MERGE_ASSOCS_WITH_NUM_VALUES(., contained_obj.get_contained_matter(include_reagents))
@@ -496,7 +506,7 @@
 */
 /atom/proc/try_detonate_reagents(var/severity = 3)
 	if(reagents)
-		for(var/decl/material/reagent as anything in reagents.reagent_volumes)
+		for(var/decl/material/reagent as anything in REAGENT_VOLUMES(reagents))
 			reagent.explosion_act(src, severity)
 
 /**
@@ -1018,13 +1028,13 @@
 	return istype(turf) ? turf.is_outside() : OUTSIDE_UNCERTAIN
 
 /atom/proc/can_be_poured_into(atom/source)
-	return (reagents?.maximum_volume > 0) && ATOM_IS_OPEN_CONTAINER(src)
+	return (REAGENT_MAXIMUM_VOLUME(reagents) > 0) && ATOM_IS_OPEN_CONTAINER(src)
 
 /// This is whether it's physically possible to pour from this atom to the target atom, based on context like user intent and src being open, etc.
 /// This should not check things like whether there is actually anything in src to pour.
 /// It should also not check anything controlled by the target atom, because can_be_poured_into() already exists.
 /atom/proc/can_be_poured_from(mob/user, atom/target)
-	return (reagents?.maximum_volume > 0) && ATOM_IS_OPEN_CONTAINER(src)
+	return (REAGENT_MAXIMUM_VOLUME(reagents) > 0) && ATOM_IS_OPEN_CONTAINER(src)
 
 /atom/proc/take_vaporized_reagent(reagent, amount)
 	return
@@ -1032,8 +1042,11 @@
 /atom/proc/is_watertight()
 	return !ATOM_IS_OPEN_CONTAINER(src)
 
+/atom/proc/reaction_can_overflow(decl/chemical_reaction/reaction)
+	return ATOM_IS_OPEN_CONTAINER(src)
+
 /atom/proc/can_drink_from(mob/user)
-	return ATOM_IS_OPEN_CONTAINER(src) && reagents?.total_volume && user.check_has_mouth()
+	return ATOM_IS_OPEN_CONTAINER(src) && REAGENT_TOTAL_VOLUME(reagents) && user.check_has_mouth()
 
 /atom/proc/adjust_required_attack_dexterity(mob/user, required_dexterity)
 	if(storage) // TODO: possibly check can_be_inserted() to avoid being able to shoot mirrors as a drake.

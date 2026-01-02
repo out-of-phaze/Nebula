@@ -3,6 +3,7 @@
 	#include "modpack_testing_lobby.dm"
 	#include "blank.dmm"
 
+	#include "../../mods/content/actors.dm"
 	#include "../../mods/content/mundane.dm"
 	#include "../../mods/content/scaling_descriptors.dm"
 
@@ -25,12 +26,15 @@
 	#include "../../mods/content/modern_earth/_modern_earth.dme"
 	#include "../../mods/content/mouse_highlights/_mouse_highlight.dme"
 	#include "../../mods/content/pheromones/_pheromones.dme"
+	#include "../../mods/content/plant_dissection/_plant_dissection.dme"
 	#include "../../mods/content/psionics/_psionics.dme"
+	#include "../../mods/content/sealant_gun/_sealant_gun.dme"
 	#include "../../mods/content/shackles/_shackles.dme"
 	#include "../../mods/content/standard_jobs/_standard_jobs.dme"
 	#include "../../mods/content/supermatter/_supermatter.dme"
 	#include "../../mods/content/tabloids/_tabloids.dme"
 	#include "../../mods/content/undead/_undead.dme"
+	#include "../../mods/content/ventcrawl/_ventcrawl.dme"
 	#include "../../mods/content/xenobiology/_xenobiology.dme"
 
 	#include "../../mods/gamemodes/cult/_cult.dme"
@@ -58,6 +62,8 @@
 	#include "../../mods/species/unathi/_unathi.dme"
 	#include "../../mods/species/utility_frames/_utility_frames.dme"
 	#include "../../mods/species/vox/_vox.dme"
+
+	#include "../../mods/utility/prometheus_metrics/_prometheus_metrics.dme"
 
 	#define USING_MAP_DATUM /datum/map/modpack_testing
 

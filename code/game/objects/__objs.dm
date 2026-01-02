@@ -9,6 +9,9 @@
 	///The current health of the obj. Leave to null, unless you want the object to start at a different health than max_health.
 	current_health = null
 
+	// If non-null and positive, will create a reagent holder on Initialize()
+	var/chem_volume
+
 	var/obj_flags
 	var/datum/talking_atom/talking_atom
 	var/list/req_access
@@ -30,8 +33,12 @@
 	//Only apply directional offsets if the mappers haven't set any offsets already
 	if(!pixel_x && !pixel_y && !pixel_w && !pixel_z)
 		update_directional_offset()
-	if(isnull(current_health))
+	if(isnull(current_health) || current_health == INFINITY)
 		current_health = get_max_health()
+	else
+		current_health = min(current_health, get_max_health())
+	if(!isnull(chem_volume) && chem_volume >= 0) // 0-volume holders perserved for legacy code reasons. Ideally shouldn't exist if <= 0
+		initialize_reagents()
 
 /obj/object_shaken()
 	shake_animation()
@@ -257,13 +264,14 @@
 	return TRUE
 
 /**
- * Init starting reagents and/or reagent var. Not called at the /obj level.
+ * Init starting reagents and/or reagent var. Called if chem_volume > 0 in /obj/Initialize()
  * populate: If set to true, we expect map load/admin spawned reagents to be set.
  */
 /obj/proc/initialize_reagents(var/populate = TRUE)
 	SHOULD_CALL_PARENT(TRUE)
-	if(reagents?.total_volume > 0)
+	if(REAGENT_TOTAL_VOLUME(reagents) > 0)
 		log_warning("\The [src] possibly is initializing its reagents more than once!")
+	create_or_update_reagents(chem_volume)
 	if(populate)
 		populate_reagents()
 
@@ -323,7 +331,7 @@
 
 /obj/fluid_act(var/datum/reagents/fluids)
 	..()
-	if(!QDELETED(src) && fluids?.total_volume)
+	if(!QDELETED(src) && REAGENT_TOTAL_VOLUME(fluids))
 		fluids.touch_obj(src)
 
 // TODO: maybe iterate the entire matter list or do some partial damage handling
@@ -337,8 +345,9 @@
 	. = ..()
 	if(QDELETED(src))
 		return
-	if(reagents?.total_volume)
-		reagents.trans_to(loc, reagents.total_volume)
+	var/reagent_volume = REAGENT_TOTAL_VOLUME(reagents)
+	if(reagent_volume)
+		reagents.trans_to(loc, reagent_volume)
 	dump_contents()
 	return place_melted_product(meltable_materials)
 
@@ -416,12 +425,12 @@
 /obj/physically_destroyed(skip_qdel)
 	var/dumped_reagents = FALSE
 	var/atom/last_loc = loc
-	if(last_loc && reagents?.total_volume)
-		reagents.trans_to(loc, reagents.total_volume, defer_update = TRUE)
+	if(last_loc && REAGENT_TOTAL_VOLUME(reagents))
+		reagents.trans_to(loc, REAGENT_TOTAL_VOLUME(reagents), defer_update = TRUE)
 		dumped_reagents = TRUE
 		reagents.clear_reagents() // We are qdeling, don't bother with a more nuanced update.
 	. = ..()
-	if(dumped_reagents && last_loc && !QDELETED(last_loc) && last_loc.reagents?.total_volume)
+	if(dumped_reagents && last_loc && !QDELETED(last_loc) && REAGENT_TOTAL_VOLUME(last_loc.reagents))
 		last_loc.reagents.handle_update()
 		HANDLE_REACTIONS(last_loc.reagents)
 

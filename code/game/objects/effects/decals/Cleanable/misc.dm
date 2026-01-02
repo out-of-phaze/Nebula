@@ -81,12 +81,12 @@
 	icon_state         = "vomit_1"
 	persistent         = TRUE
 	generic_filth      = TRUE
+	chem_volume        = 30
 
 /obj/effect/decal/cleanable/vomit/Initialize(ml, _age)
 	random_icon_states = icon_states(icon)
-	. = ..()
 	atom_flags |= ATOM_FLAG_OPEN_CONTAINER
-	create_reagents(30, src)
+	. = ..()
 	if(prob(75))
 		set_rotation(pick(90, 180, 270))
 
@@ -101,7 +101,7 @@
 
 /obj/effect/decal/cleanable/vomit/Crossed(atom/movable/AM)
 	. = ..()
-	if(!QDELETED(src) && reagents?.total_volume >= 1 && isliving(AM))
+	if(!QDELETED(src) && REAGENT_TOTAL_VOLUME(reagents) >= 1 && isliving(AM))
 		var/mob/living/walker = AM
 		walker.add_walking_contaminant(reagents, rand(2, 3))
 

@@ -10,6 +10,8 @@
 	pixel_x     = -16
 	light_range = 5
 	light_power = 0.5
+	chem_volume = 500
+
 	var/used    = FALSE
 	var/increase_age_prob = (100 / 6)
 
@@ -114,16 +116,8 @@
 	light_range            = null
 	light_power            = null
 
-/obj/structure/fountain/mundane/Initialize(ml, _mat, _reinf_mat)
-	. = ..()
-	initialize_reagents(ml)
-
-/obj/structure/fountain/mundane/initialize_reagents(populate = TRUE)
-	create_reagents(500)
-	. = ..()
-
 /obj/structure/fountain/mundane/populate_reagents()
-	add_to_reagents(/decl/material/liquid/water, reagents.maximum_volume) //Don't give free water when building one
+	add_to_reagents(/decl/material/liquid/water, REAGENT_MAXIMUM_VOLUME(reagents)) //Don't give free water when building one
 
 /obj/structure/fountain/mundane/attack_hand(mob/user)
 	if(user.check_intent(I_FLAG_HARM))

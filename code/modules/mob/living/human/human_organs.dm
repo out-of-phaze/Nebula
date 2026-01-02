@@ -70,9 +70,10 @@
 		LAZYDISTINCTADD(external_organs, O)
 
 	// Update our organ category lists, if neeed.
-	if(O.organ_category)
-		LAZYINITLIST(organs_by_category)
-		LAZYDISTINCTADD(organs_by_category[O.organ_category], O)
+	if(O.organ_categories)
+		for(var/category in cached_json_decode(O.organ_categories))
+			LAZYINITLIST(organs_by_category)
+			LAZYDISTINCTADD(organs_by_category[category], O)
 
 	// Update stat organs as well
 	if(O.has_stat_info)
@@ -112,10 +113,11 @@
 		LAZYREMOVE(external_organs, O)
 
 	// Update our organ category lists, if neeed.
-	if(O.organ_category && islist(organs_by_category))
-		organs_by_category[O.organ_category] -= O
-		if(LAZYLEN(organs_by_category[O.organ_category]) <= 0)
-			LAZYREMOVE(organs_by_category, O.organ_category)
+	if(O.organ_categories && islist(organs_by_category))
+		for(var/category in cached_json_decode(O.organ_categories))
+			organs_by_category[category] -= O
+			if(LAZYLEN(organs_by_category[category]) <= 0)
+				LAZYREMOVE(organs_by_category, category)
 
 	// Update stat organs as well
 	if(O.has_stat_info && stat_organs)
@@ -217,8 +219,8 @@
 	if(!(. = ..()))
 		return
 	//Move some blood over to the organ
-	if(!BP_IS_PROSTHETIC(O) && O.species && O.reagents?.total_volume < 5)
-		vessel.trans_to(O, 5 - O.reagents.total_volume, 1, 1)
+	if(!BP_IS_PROSTHETIC(O) && O.species && REAGENT_TOTAL_VOLUME(O.reagents) < 5)
+		vessel.trans_to(O, 5 - REAGENT_TOTAL_VOLUME(O.reagents), 1, 1)
 
 
 /mob/living/human/is_asystole()

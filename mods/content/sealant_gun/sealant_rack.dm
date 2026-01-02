@@ -1,6 +1,6 @@
 /obj/structure/sealant_rack
 	name = "sealant tank rack"
-	icon = 'icons/obj/structures/sealant_props.dmi'
+	icon = 'mods/content/sealant_gun/icons/sealant_props.dmi'
 	icon_state = "rack"
 	density = TRUE
 	anchored = TRUE
@@ -18,6 +18,7 @@
 	LAZYINITLIST(tanks)
 	for(var/i = 1 to rand(1,max_tanks))
 		tanks += new /obj/item/sealant_tank(src)
+	update_icon()
 
 /obj/structure/sealant_rack/on_update_icon()
 	..()

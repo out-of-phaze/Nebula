@@ -9,6 +9,7 @@ var/global/list/flooring_cache = list()
 
 /decl/flooring
 	abstract_type = /decl/flooring
+	decl_flags = DECL_FLAG_MANDATORY_UID
 
 	var/name
 	var/desc
@@ -18,6 +19,7 @@ var/global/list/flooring_cache = list()
 	var/color = COLOR_WHITE
 	var/footstep_type = /decl/footsteps/plating
 	var/growth_value = 0
+	var/deconstruct_sound
 
 	var/neighbour_type
 
@@ -294,7 +296,8 @@ var/global/list/flooring_cache = list()
 			return TRUE
 		to_chat(user, SPAN_NOTICE("You remove the [get_surface_descriptor()] with \the [item]."))
 		floor.remove_flooring(floor.get_topmost_flooring(), place_product = TRUE)
-		playsound(floor, 'sound/items/Deconstruct.ogg', 80, 1)
+		if(deconstruct_sound)
+			playsound(floor, deconstruct_sound, 80, 1)
 		return TRUE
 
 	if(constructed)

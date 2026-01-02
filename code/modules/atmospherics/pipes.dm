@@ -24,7 +24,7 @@
 	var/datum/gas_mixture/air_temporary    // used when reconstructing a pipeline that broke
 	var/datum/reagents/liquid_temporary // used when reconstructing a pipeline that broke
 	var/datum/pipeline/parent
-	var/volume = 0
+	var/gas_volume = 0
 	var/leaking = 0		// Do not set directly, use set_leaking(TRUE/FALSE)
 
 	//minimum pressure before check_pressure(...) should be called
@@ -128,7 +128,7 @@
 			loc.assume_air(air_temporary)
 			air_temporary = null
 		if(liquid_temporary)
-			liquid_temporary.trans_to(loc, liquid_temporary.total_volume)
+			liquid_temporary.trans_to(loc, REAGENT_TOTAL_VOLUME(liquid_temporary))
 			liquid_temporary = null
 	if(leaking)
 		STOP_PROCESSING_MACHINE(src, MACHINERY_PROCESS_SELF)
@@ -210,7 +210,7 @@
 		update_sound(0)
 		. = PROCESS_KILL
 	else if(leaking)
-		parent.mingle_with_turf(loc, volume)
+		parent.mingle_with_turf(loc, gas_volume)
 		var/air = parent.air?.return_pressure()
 		if(!sound_token && air)
 			update_sound(1)
@@ -225,7 +225,7 @@
 	name = "pipe"
 	desc = "A one-meter section of regular pipe."
 
-	volume = ATMOS_DEFAULT_VOLUME_PIPE
+	gas_volume = ATMOS_DEFAULT_VOLUME_PIPE
 
 	dir = SOUTH
 	initialize_directions = SOUTH|NORTH
@@ -380,7 +380,7 @@
 	icon_state = "map"
 	name = "pipe manifold"
 	desc = "A manifold composed of regular pipes."
-	volume = ATMOS_DEFAULT_VOLUME_PIPE * 1.5
+	gas_volume = ATMOS_DEFAULT_VOLUME_PIPE * 1.5
 
 	dir = SOUTH
 	initialize_directions = EAST|NORTH|WEST
@@ -509,7 +509,7 @@
 	icon_state = ""
 	name = "4-way pipe manifold"
 	desc = "A manifold composed of regular pipes."
-	volume = ATMOS_DEFAULT_VOLUME_PIPE * 2
+	gas_volume = ATMOS_DEFAULT_VOLUME_PIPE * 2
 
 	dir = SOUTH
 	initialize_directions = NORTH|SOUTH|EAST|WEST
@@ -634,7 +634,7 @@
 	icon = 'icons/atmos/pipes.dmi'
 	icon_state = "cap"
 	level = LEVEL_ABOVE_PLATING
-	volume = 35
+	gas_volume = 35
 
 	pipe_class = PIPE_CLASS_UNARY
 	dir = SOUTH

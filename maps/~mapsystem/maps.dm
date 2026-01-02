@@ -157,14 +157,15 @@ var/global/const/MAP_HAS_RANK   = 2		//Rank system, also toggleable
 		/decl/background_category/religion    = /decl/background_detail/religion/other
 	)
 
+	// Order must conform to ACCESS_REGION_FOO defines.
 	var/access_modify_region = list(
-		ACCESS_REGION_SECURITY = list(access_hos, access_change_ids),
-		ACCESS_REGION_MEDBAY = list(access_cmo, access_change_ids),
-		ACCESS_REGION_RESEARCH = list(access_rd, access_change_ids),
-		ACCESS_REGION_ENGINEERING = list(access_ce, access_change_ids),
-		ACCESS_REGION_COMMAND = list(access_change_ids),
-		ACCESS_REGION_GENERAL = list(access_change_ids),
-		ACCESS_REGION_SUPPLY = list(access_change_ids)
+		list(access_hos, access_change_ids),
+		list(access_cmo, access_change_ids),
+		list(access_rd, access_change_ids),
+		list(access_ce, access_change_ids),
+		list(access_change_ids),
+		list(access_change_ids),
+		list(access_change_ids)
 	)
 	var/secrets_directory
 
@@ -205,6 +206,9 @@ var/global/const/MAP_HAS_RANK   = 2		//Rank system, also toggleable
 	)
 
 	var/default_ui_style
+
+	/// Is maint currently all-access?
+	var/maint_all_access = FALSE
 
 /datum/map/New()
 	..()
@@ -474,11 +478,11 @@ var/global/const/MAP_HAS_RANK   = 2		//Rank system, also toggleable
 	return
 
 /datum/map/proc/make_maint_all_access(var/radstorm = 0)
-	maint_all_access = 1
+	maint_all_access = TRUE
 	priority_announcement.Announce("The maintenance access requirement has been revoked on all maintenance airlocks.", "Attention!")
 
 /datum/map/proc/revoke_maint_all_access(var/radstorm = 0)
-	maint_all_access = 0
+	maint_all_access = FALSE
 	priority_announcement.Announce("The maintenance access requirement has been readded on all maintenance airlocks.", "Attention!")
 
 /datum/map/proc/show_titlescreen(client/C)
@@ -548,7 +552,7 @@ var/global/const/MAP_HAS_RANK   = 2		//Rank system, also toggleable
 	var/obj/item/passport/pass = new passport_type(get_turf(H))
 	if(istype(pass))
 		pass.set_info(H)
-	if(!H.equip_to_slot(pass, slot_in_backpack_str))
+	if(!H.equip_to_slot(pass, slot_in_wallet_str) && !H.equip_to_slot(pass, slot_in_backpack_str))
 		H.put_in_hands(pass)
 
 /datum/map/proc/populate_overmap_events()
