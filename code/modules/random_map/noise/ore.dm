@@ -81,9 +81,7 @@
 		spawning = rare_metals
 	var/tx = ((origin_x-1)+x)*chunk_size
 	var/ty = ((origin_y-1)+y)*chunk_size
-	. = block(tx, ty, origin_z, tx+chunk_size, ty+chunk_size)
-	var/rsc_size = max(common_resources.len, spawning.len)
-	for(var/turf/T as anything in .)
+	for(var/turf/T in block(tx, ty, origin_z, tx+chunk_size, ty+chunk_size))
 		var/list/resources = list()
 		var/list/ranges
 		for(var/val in common_resources)
