@@ -18,10 +18,7 @@ var/global/list/server_whitelist
 		global.server_whitelist = file2list(CONFIG_SERVER_WHITELIST_FILE) || list()
 
 	// Clear blank rows.
-	while(null in global.server_whitelist)
-		global.server_whitelist -= null
-	while("" in global.server_whitelist)
-		global.server_whitelist -= ""
+	global.server_whitelist.RemoveAll(null, "")
 
 	// Remove old list rather than append.
 	if(fexists(CONFIG_SERVER_WHITELIST_FILE))

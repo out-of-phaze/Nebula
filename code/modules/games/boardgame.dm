@@ -124,9 +124,7 @@
 
 				//put item in new spot.
 					thing = board["[selected]"]
-					board["[selected]"] = null
 					board -= "[selected]"
-					board -= null
 					board["[s]"] = thing
 					selected = -1
 			else
@@ -144,9 +142,7 @@
 			var/obj/item/thing = board["[selected]"]
 			if(!thing)
 				return
-			board["[selected]"] = null
 			board -= "[selected]"
-			board -= null
 			thing.forceMove(src.loc)
 			num--
 			selected = -1
@@ -158,9 +154,7 @@
 						src.updateDialog()
 						return
 			//Didn't find it in use, remove it and allow GC to delete it.
-			board_icons["[thing.icon] [thing.icon_state]"] = null
 			board_icons -= "[thing.icon] [thing.icon_state]"
-			board_icons -= null
 	src.updateDialog()
 
 //Checkers

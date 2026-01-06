@@ -219,9 +219,8 @@ var/global/datum/controller/radio/radio_controller = new /datum/controller/radio
 	for (var/devices_filter in devices)
 		var/list/devices_line = devices[devices_filter]
 		devices_line-=device
-		while (null in devices_line)
-			devices_line -= null
-		if (devices_line.len==0)
+		LIST_CLEAR_NULLS(devices_line)
+		if (!length(devices_line))
 			devices -= devices_filter
 
 /datum/signal
