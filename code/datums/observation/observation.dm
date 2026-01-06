@@ -64,16 +64,16 @@
 
 /datum
 	/// Associative list of observ type -> associative list of listeners -> an instance/list of procs to call on the listener when the event is raised.
-	var/list/list/list/event_listeners
+	var/alist/event_listeners
 	/// Associative list of observ type -> datums we're listening to; contains no information about callbacks as that's already stored on their event_listeners list.
-	var/list/_listening_to
+	var/alist/_listening_to
 
 /decl/observ/proc/is_listening(var/datum/event_source, var/datum/listener, var/proc_call)
 	// Return whether there are global listeners unless the event source is given.
 	if (!event_source)
 		return !!global_listeners.len
 
-	var/list/listeners = event_source.event_listeners?[type]
+	var/alist/listeners = event_source.event_listeners?[type]
 	// Return whether anything is listening to a source, if no listener is given.
 	if (!listener)
 		return length(global_listeners) || !!listeners
@@ -112,15 +112,15 @@
 		CRASH("Unexpected type. Expected [expected_type], was [event_source.type]")
 
 	// Setup the listeners for this source if needed.
-	LAZYINITLIST(event_source.event_listeners)
-	LAZYINITLIST(event_source.event_listeners[type])
-	var/list/listeners = event_source.event_listeners[type]
+	A_LAZYINITLIST(event_source.event_listeners)
+	A_LAZYINITLIST(event_source.event_listeners[type])
+	var/alist/listeners = event_source.event_listeners[type]
 	// Make sure the callbacks are a list.
 	var/list/callbacks = listeners[listener]
 	if (!callbacks)
 		callbacks = list()
 		listeners[listener] = callbacks
-		LAZYINITLIST(listener._listening_to)
+		A_LAZYINITLIST(listener._listening_to)
 		LAZYADD(listener._listening_to[type], event_source)
 
 	// If the proc_call is already registered skip
@@ -136,19 +136,21 @@
 	if (!event_source || !listener || !event_source.event_listeners?[type])
 		return 0
 
-	var/list/list/listeners = event_source.event_listeners[type]
+	var/alist/listeners = event_source.event_listeners[type]
 	// Remove all callbacks if no specific one is given.
 	if (!proc_call)
 		// Return the number of callbacks removed.
 		. = length(listeners[listener])
 		if(listeners.Remove(listener))
+			// listener._listening_to?[type] is a list of datums or null
+			// listener._listening_to is an alist of type->list or null
 			LAZYREMOVE(listener._listening_to?[type], event_source)
-			UNSETEMPTY(listener._listening_to)
+			A_UNSETEMPTY(listener._listening_to)
 			// Perform some cleanup and return true.
 			if (!length(listeners)) // No one is listening to us on this source anymore.
-				LAZYREMOVE(event_source.event_listeners, type)
-			UNSETEMPTY(event_source.event_listeners?[type])
-			UNSETEMPTY(event_source.event_listeners)
+				A_LAZYREMOVE(event_source.event_listeners, type)
+			A_UNSETEMPTY(event_source.event_listeners?[type])
+			A_UNSETEMPTY(event_source.event_listeners)
 			return .
 		return 0
 
@@ -162,11 +164,11 @@
 		return 0
 
 	if(!LAZYLEN(callbacks)) // the above Remove() took our last callback away, so remove our callbacks list for this listener
-		LAZYREMOVE(event_source.event_listeners[type], listener) // note that UNSETEMPTY would just give it a null value
-		LAZYREMOVE(listener._listening_to[type], event_source)
+		A_LAZYREMOVE(event_source.event_listeners[type], listener) // note that A_UNSETEMPTY would just give it a null value
+		LAZYREMOVE(listener._listening_to[type], event_source) // _listening_to[type] is a normal list and not an alist
 		if(!LAZYLEN(listener._listening_to[type]))
-			LAZYREMOVE(listener._listening_to, type)
-	if(!LAZYLEN(event_source.event_listeners[type]))
+			A_LAZYREMOVE(listener._listening_to, type)
+	if(!A_LAZYLEN(event_source.event_listeners[type])) // alist of listeners
 		LAZYREMOVE(event_source.event_listeners, type)
 	return 1
 
@@ -216,12 +218,13 @@
 /// A variant of raise_event for extra-fast processing, for observs that are certain to never have any global registrations.
 /datum/proc/raise_event_non_global(event_type)
 	// Call the listeners for this specific event source, if they exist.
-	var/list/listeners = event_listeners?[event_type]
+	var/alist/listeners = event_listeners?[event_type]
 	if(length(listeners))
 		args[1] = src // replace event_type with src for the call
-		for (var/listener in listeners)
-			var/list/callbacks = listeners[listener]
-			for (var/proc_call in callbacks)
+		var/list/callbacks_list
+		for (var/listener, callbacks in listeners)
+			callbacks_list = callbacks
+			for (var/proc_call in callbacks_list)
 				// If the callback crashes, record the error and remove it.
 				try
 					call(listener, proc_call)(arglist(args))
@@ -250,11 +253,12 @@
 					unregister_global(listener, proc_call)
 
 	// Call the listeners for this specific event source, if they exist.
-	var/list/listeners = source.event_listeners?[type]
+	var/alist/listeners = source.event_listeners?[type]
 	if(length(listeners))
-		for (var/listener in listeners)
-			var/list/callbacks = listeners[listener]
-			for (var/proc_call in callbacks)
+		var/list/callbacks_list
+		for (var/listener, callbacks in listeners)
+			callbacks_list = callbacks
+			for (var/proc_call in callbacks_list)
 				// If the callback crashes, record the error and remove it.
 				try
 					call(listener, proc_call)(arglist(args))
