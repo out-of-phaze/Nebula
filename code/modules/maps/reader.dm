@@ -12,12 +12,7 @@ var/global/dmm_suite/preloader/_preloader = new
 	var/list/atoms_to_initialise
 
 /dmm_suite
-	// /"([a-zA-Z]+)" = \(((?:.|\n)*?)\)\n(?!\t)|\((\d+),(\d+),(\d+)\) = \{"\n*([a-zA-Z\n]*)\n?"\}/g
-	var/static/regex/dmmRegex = new/regex({""(\[a-zA-Z]+)" = \\(((?:.|\n)*?)\\)\n(?!\t)|\\((\\d+),(\\d+),(\\d+)\\) = \\{"\n*(\[a-zA-Z\n]*)\n?"\\}"}, "g")
-		// /^[\s\n]+"?|"?[\s\n]+$|^"|"$/g
-	var/static/regex/trimQuotesRegex = new/regex({"^\[\\s\n]+"?|"?\[\\s\n]+$|^"|"$"}, "g")
-		// /^[\s\n]+|[\s\n]+$/
-	var/static/regex/trimRegex = new/regex("^\[\\s\n]+|\[\\s\n]+$", "g")
+	var/static/regex/dmm_regex = new(@'"([A-Za-z]+)" = (?:\(\n|\()((?:.|\n)*?)\)\n(?!\t)|\((\d+),(\d+),(\d+)\) = \{"([A-Za-z\n]*)"\}', "g")
 	var/static/list/modelCache = list()
 	var/static/space_key
 	var/static/list/types_to_delete
@@ -84,7 +79,7 @@ var/global/dmm_suite/preloader/_preloader = new
 		z_offset = world.maxz + 1
 
 	var/list/bounds = list(1.#INF, 1.#INF, 1.#INF, -1.#INF, -1.#INF, -1.#INF)
-	var/list/grid_models = list()
+	var/alist/grid_models = alist()
 	var/key_len = 0
 
 	var/stored_index = 1
@@ -92,12 +87,14 @@ var/global/dmm_suite/preloader/_preloader = new
 	var/list/atoms_to_initialise = list()
 	var/list/atoms_to_delete = list()
 
-	while(dmmRegex.Find(tfile, stored_index))
-		stored_index = dmmRegex.next
+	var/list/regex_output // cache the group var so we don't have to repeatedly do datum var lookup
+	while(findtext(tfile, dmm_regex, stored_index))
+		stored_index = dmm_regex.next
+		regex_output = dmm_regex.group
 
 		// "aa" = (/type{vars=blah})
-		if(dmmRegex.group[1]) // Model
-			var/key = dmmRegex.group[1]
+		if(regex_output[1]) // Model
+			var/key = regex_output[1]
 			if(grid_models[key]) // Duplicate model keys are ignored in DMMs
 				continue
 			if(key_len != length(key))
@@ -106,14 +103,14 @@ var/global/dmm_suite/preloader/_preloader = new
 				else
 					throw EXCEPTION("Inconsistant key length in DMM")
 			if(!measureOnly)
-				grid_models[key] = dmmRegex.group[2]
+				grid_models[key] = regex_output[2]
 
 		// (1,1,1) = {"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}
-		else if(dmmRegex.group[3]) // Coords
+		else if(regex_output[3]) // Coords
 			if(!key_len)
 				throw EXCEPTION("Coords before model definition in DMM")
 
-			var/curr_x = text2num(dmmRegex.group[3])
+			var/curr_x = text2num(regex_output[3])
 
 			if(curr_x < x_lower || curr_x > x_upper)
 				continue
@@ -121,8 +118,8 @@ var/global/dmm_suite/preloader/_preloader = new
 			var/xcrdStart = curr_x + x_offset - 1
 			//position of the currently processed square
 			var/xcrd
-			var/ycrd = text2num(dmmRegex.group[4]) + y_offset - 1
-			var/zcrd = text2num(dmmRegex.group[5]) + z_offset - 1
+			var/ycrd = text2num(regex_output[4]) + y_offset - 1
+			var/zcrd = text2num(regex_output[5]) + z_offset - 1
 
 			var/zexpansion = zcrd > world.maxz
 			if(!zexpansion && !LEVELS_ARE_Z_CONNECTED(zcrd, z_offset))
@@ -137,7 +134,7 @@ var/global/dmm_suite/preloader/_preloader = new
 			bounds[MAP_MINZ] = min(bounds[MAP_MINZ], zcrd)
 			bounds[MAP_MAXZ] = max(bounds[MAP_MAXZ], zcrd)
 
-			var/list/gridLines = splittext(dmmRegex.group[6], "\n")
+			var/list/gridLines = splittext(regex_output[6], "\n")
 			if(!length(gridLines)) // Skip it if only blank lines exist.
 				continue
 
@@ -259,9 +256,9 @@ var/global/dmm_suite/preloader/_preloader = new
 			//finding next member (e.g /turf/unsimulated/wall{icon_state = "rock"} or /area/mine/explored)
 			dpos = find_next_delimiter_position(model, old_position, ",", "{", "}") //find next delimiter (comma here) that's not within {...}
 
-			var/full_def = trim_text(copytext(model, old_position, dpos)) //full definition, e.g : /obj/foo/bar{variables=derp}
+			var/full_def = trim(copytext(model, old_position, dpos)) //full definition, e.g : /obj/foo/bar{variables=derp}
 			var/variables_start = findtext(full_def, "{")
-			var/atom_def = text2path(trim_text(copytext(full_def, 1, variables_start))) //path definition, e.g /obj/foo/bar
+			var/atom_def = text2path(trim(copytext(full_def, 1, variables_start))) //path definition, e.g /obj/foo/bar
 			old_position = dpos + 1
 
 			if(!atom_def) // Skip the item if the path does not exist.  Fix your crap, mappers!
@@ -402,15 +399,6 @@ var/global/dmm_suite/preloader/_preloader = new
 		stoplag()
 		SSatoms.map_loader_begin()
 
-//text trimming (both directions) helper proc
-//optionally removes quotes before and after the text (for variable name)
-/dmm_suite/proc/trim_text(what as text,trim_quotes=0)
-	if(trim_quotes)
-		return trimQuotesRegex.Replace(what, "")
-	else
-		return trimRegex.Replace(what, "")
-
-
 //find the position of the next delimiter,skipping whatever is comprised between opening_escape and closing_escape
 //returns 0 if reached the last delimiter
 /dmm_suite/proc/find_next_delimiter_position(text as text,initial_position as num, delimiter=",",opening_escape="\"",closing_escape="\"")
@@ -465,7 +453,7 @@ var/global/dmm_suite/preloader/_preloader = new
 		//check if this is a simple variable (as in list(var1, var2)) or an associative one (as in list(var1="foo",var2=7))
 		var/equal_position = findtext(text,"=",old_position, position)
 
-		var/trim_left = trim_text(copytext(text,old_position,(equal_position ? equal_position : position)), 0)
+		var/trim_left = trim(copytext(text,old_position,(equal_position ? equal_position : position)))
 		old_position = position + 1
 
 		if(!length(trim_left))
@@ -486,7 +474,7 @@ var/global/dmm_suite/preloader/_preloader = new
 			if(isnum(left))
 				PRINT_STACK_TRACE("Numerical key in associative list.")
 				break // This is invalid; apparently dm will runtime in this situation.
-			var/trim_right = trim_text(copytext(text,equal_position+1,position))//the content of the variable
+			var/trim_right = trim(copytext(text,equal_position+1,position))//the content of the variable
 			to_return[left] = readlistitem(trim_right)
 
 	while(position != 0)

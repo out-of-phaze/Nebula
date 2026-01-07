@@ -361,9 +361,8 @@ var/global/regex/starts_lowercase_regex = regex(@"^[a-z]")
 	return ""
 
 // Returns a string with reserved characters and spaces before the first word and after the last word removed.
-// not work for unicode spaces - you should cleanup them first with sanitize()
 /proc/trim(text)
-	return trim_left(trim_right(text))
+	return trimtext(text) || ""
 
 //Returns a string with the first element of the string capitalized.
 // NOTE: This will not work if there are any HTML tags.
