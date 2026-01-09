@@ -621,14 +621,19 @@ The _flatIcons list is a cache for generated icon files.
 	// This is a workaround for the lighting planemaster not being factored in.
 	// If it's ever removed, or if a better way is found, please replace this.
 	var/list/render_lighting = list()
+	var/list/render_bloom = list()
 	for(var/turf/T as anything in render_turfs)
 		render_atoms.Add(T)
 
 		for(var/atom/A as anything in T)
 			// We need to handle lighting separately if we're including it, and if not, skip it entirely.
-			if(istype(A, /atom/movable/lighting_overlay))
+			if(istype(A, /atom/movable/lighting/multiplier))
 				if(show_lighting)
 					render_lighting.Add(A)
+				continue
+			if(istype(A, /atom/movable/lighting/adder))
+				if(show_lighting)
+					render_bloom.Add(A)
 				continue
 
 			if(!A.alpha || (A.invisibility > SEE_INVISIBLE_LIVING))
@@ -656,10 +661,15 @@ The _flatIcons list is a cache for generated icon files.
 
 	// TODO: for custom exposure/flash/etc simulation on the camera, you could set the alpha on the overlay copy icons here
 	if(show_lighting)
-		for(var/atom/movable/lighting_overlay/lighting_overlay as anything in render_lighting)
+		for(var/atom/movable/lighting/multiplier/lighting_overlay as anything in render_lighting)
 			var/icon/lighting_overlay_icon = getFlatIcon(lighting_overlay)
 			var/x_offset = (lighting_overlay.x - target_x) * world.icon_size
 			var/y_offset = (lighting_overlay.y - target_y) * world.icon_size
 			capture.Blend(lighting_overlay_icon, ICON_MULTIPLY, lighting_overlay.pixel_x + x_offset, lighting_overlay.pixel_y + y_offset)
+		for(var/atom/movable/lighting/adder/additive_overlay as anything in render_bloom)
+			var/icon/additive_overlay_icon = getFlatIcon(additive_overlay)
+			var/x_offset = (additive_overlay.x - target_x) * world.icon_size
+			var/y_offset = (additive_overlay.y - target_y) * world.icon_size
+			capture.Blend(additive_overlay_icon, ICON_ADD, additive_overlay.pixel_x + x_offset, additive_overlay.pixel_y + y_offset)
 
 	return capture

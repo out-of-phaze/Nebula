@@ -7,7 +7,9 @@
 	/// List of light sources affecting this turf.
 	var/tmp/list/datum/light_source/affecting_lights
 	/// Our lighting overlay, used to apply multiplicative lighting to the tile and its contents.
-	var/tmp/atom/movable/lighting_overlay/lighting_overlay
+	var/tmp/atom/movable/lighting/multiplier/lighting_overlay
+	/// Our additive lighting overlay, used to apply additive lighting (aka 'bloom').
+	var/tmp/atom/movable/lighting/adder/lighting_adder
 	var/tmp/list/datum/lighting_corner/corners
 	/// Not to be confused with opacity, this will be TRUE if there's any opaque atom on the tile.
 	var/tmp/has_opaque_atom = FALSE
@@ -46,7 +48,7 @@
 		if (!lighting_corners_initialised || !corners)
 			generate_missing_corners()
 
-		new /atom/movable/lighting_overlay(src, now)
+		new /atom/movable/lighting/multiplier(src, now)
 
 		for (var/datum/lighting_corner/C in corners)
 			if (!C.active) // We would activate the corner, calculate the lighting for it.

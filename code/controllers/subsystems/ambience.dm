@@ -91,12 +91,12 @@ SUBSYSTEM_DEF(ambience)
 			var/new_power = daycycle?.current_period?.power
 			if(!isnull(new_power))
 				if(new_power > 0)
-					set_ambient_light(daycycle.current_period.color, clamp(new_power + ambient_light_modifier, 0, 1))
+					set_ambient_light(daycycle.current_period.color, max(new_power + ambient_light_modifier, 0))
 				return TRUE
 
 		// Apply general level ambience.
 		if(level_data?.ambient_light_level)
-			set_ambient_light(level_data.ambient_light_color, clamp(level_data.ambient_light_level + ambient_light_modifier, 0, 1))
+			set_ambient_light(level_data.ambient_light_color, max(level_data.ambient_light_level + ambient_light_modifier, 0))
 			return TRUE
 
 	return FALSE
