@@ -1,3 +1,8 @@
+#define USE_ACES // Optional. Comment out to disable ACES tonemapping. This cannot be a config option due to the cost of checking the config in lighting code.
+
+// Clamp is done elsewhere, and is using linear scaling instead of saturating.
+#define ACES_TONEMAP(X) (X * (2.51 * X + 0.03)) / (X * (2.43 * X + 0.59) + 0.14)
+
 // This is the define used to calculate falloff.
 #define LUM_FALLOFF(Cx,Cy,Tx,Ty,HEIGHT) (1 - CLAMP01(sqrt(((Cx) - (Tx)) ** 2 + ((Cy) - (Ty)) ** 2 + HEIGHT) / max(1, actual_range)))
 

@@ -302,32 +302,55 @@ var/global/list/REVERSE_LIGHTING_CORNER_DIAGONAL = list(0, 0, 0, 0, 3, 4, 0, 0, 
 	var/lg = apparent_g
 	var/lb = apparent_b
 
-	// Cache these values a head of time so 4 individual lighting overlays don't all calculate them individually.
+#ifdef USE_ACES
 	var/mx = max(lr, lg, lb) // Scale it so 1 is the strongest lum, if it is above 1.
+	var/local_max_red = 1
+	var/local_max_green = 1
+	var/local_max_blue = 1
 	. = 1 // factor
 	if (mx > 1)
 		. = 1 / mx
+		// we want to saturate, but we also want to preserve the relative intensities of these channels to each other
+		local_max_red = lr / mx
+		local_max_green = lg / mx
+		local_max_blue = lb / mx
 
-	cache_r = round(lr * ., LIGHTING_ROUND_VALUE)
-	cache_g = round(lg * ., LIGHTING_ROUND_VALUE)
-	cache_b = round(lb * ., LIGHTING_ROUND_VALUE)
+	cache_r = round(clamp(ACES_TONEMAP(lr), 0, 1) * local_max_red, LIGHTING_ROUND_VALUE)
+	cache_g = round(clamp(ACES_TONEMAP(lg), 0, 1) * local_max_green, LIGHTING_ROUND_VALUE)
+	cache_b = round(clamp(ACES_TONEMAP(lb), 0, 1) * local_max_blue, LIGHTING_ROUND_VALUE)
+
+#else
+
+		// Cache these values ahead of time so 4 individual lighting overlays don't all calculate them individually.
+		var/mx = max(lr, lg, lb) // Scale it so 1 is the strongest lum, if it is above 1.
+		. = 1 // factor
+		if (mx > 1)
+			. = 1 / mx
+
+		cache_r = round(lr * ., LIGHTING_ROUND_VALUE)
+		cache_g = round(lg * ., LIGHTING_ROUND_VALUE)
+		cache_b = round(lb * ., LIGHTING_ROUND_VALUE)
+
+#endif
 
 	cache_mx = round(mx, LIGHTING_ROUND_VALUE)
 
-	var/turf/T
-	for (var/i in 1 to 4)
-		// this is ugly as fuck, but it's still more legible than doing this with a macro
-		switch (i)
-			if (1) T = t1
-			if (2) T = t2
-			if (3) T = t3
-			if (4) T = t4
-
+	if(now)
+		t1?.lighting_overlay?.update_overlay()
+		t2?.lighting_overlay?.update_overlay()
+		t3?.lighting_overlay?.update_overlay()
+		t4?.lighting_overlay?.update_overlay()
+	else
+		var/turf/T
 		var/atom/movable/lighting_overlay/Ov
-		if (T && (Ov = T.lighting_overlay))
-			if (now)
-				Ov.update_overlay()
-			else if (!Ov.needs_update)
+		for (var/i in 1 to 4)
+			// this is ugly as fuck, but it's still more legible than doing this with a macro
+			switch (i)
+				if (1) T = t1
+				if (2) T = t2
+				if (3) T = t3
+				if (4) T = t4
+			if (T && (Ov = T.lighting_overlay) && !Ov.needs_update)
 				Ov.needs_update = TRUE
 				SSlighting.overlay_queue += Ov
 
