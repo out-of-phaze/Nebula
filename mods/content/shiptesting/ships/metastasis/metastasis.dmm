@@ -545,7 +545,7 @@
 /obj/structure/rack,
 /obj/item/clothing/sensor/buddytag,
 /obj/item/gps/mining,
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 1;
 	pixel_y = 22
 	},
@@ -605,7 +605,7 @@
 /area/metastasis/atmospherics)
 "iV" = (
 /obj/structure/rack,
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 1;
 	pixel_y = 22
 	},
@@ -734,7 +734,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	pixel_y = -22
 	},
 /obj/structure/cable,
@@ -970,7 +970,7 @@
 /turf/floor/tiled/techfloor/grid,
 /area/metastasis/cargo_bay)
 "nF" = (
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	pixel_y = -22
 	},
 /obj/structure/cable,
@@ -1038,7 +1038,7 @@
 "oe" = (
 /obj/structure/table,
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 1;
 	pixel_y = 22
 	},
@@ -1132,7 +1132,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 1;
 	pixel_y = 22
 	},
@@ -1400,7 +1400,7 @@
 /area/metastasis/cargo_bay)
 "tj" = (
 /obj/structure/closet/firecloset,
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 1;
 	pixel_y = 22
 	},
@@ -1608,7 +1608,7 @@
 /area/metastasis/damage_control)
 "wy" = (
 /obj/structure/table/steel_reinforced,
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 1;
 	pixel_y = 22
 	},
@@ -1810,7 +1810,7 @@
 /obj/effect/floor_decal/spline/plain/grey{
 	dir = 8
 	},
-/obj/machinery/power/apc/high{
+/obj/machinery/apc/high{
 	dir = 8;
 	pixel_x = -22
 	},
@@ -2468,7 +2468,7 @@
 /obj/structure/rack,
 /obj/item/clothing/sensor/buddytag,
 /obj/item/gps/mining,
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	pixel_y = -22
 	},
 /obj/item/radio,

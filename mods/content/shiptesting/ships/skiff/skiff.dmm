@@ -116,7 +116,7 @@
 /turf/space,
 /area/space)
 "D" = (
-/obj/machinery/power/apc/high{
+/obj/machinery/apc/high{
 	pixel_y = -22
 	},
 /obj/structure/railing/mapped{

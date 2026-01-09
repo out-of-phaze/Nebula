@@ -9,7 +9,7 @@
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 4;
 	start_pressure = 30.3975;
-	volume = 15000
+	gas_volume = 15000
 	},
 /turf/simulated/floor,
 /area/space)
@@ -204,7 +204,7 @@
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 8;
 	start_pressure = 30.3975;
-	volume = 15000
+	gas_volume = 15000
 	},
 /turf/simulated/floor,
 /area/space)

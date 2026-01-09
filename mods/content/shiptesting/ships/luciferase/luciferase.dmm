@@ -9,7 +9,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 4;
 	pixel_x = 22
 	},
@@ -212,7 +212,7 @@
 /area/luciferase/engineering_equipmentroom)
 "cF" = (
 /obj/structure/cable,
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 4;
 	pixel_x = 22
 	},
@@ -464,7 +464,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 10
 	},
-/obj/machinery/power/apc/critical{
+/obj/machinery/apc/critical{
 	dir = 1;
 	pixel_y = 22
 	},
@@ -720,7 +720,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	pixel_y = -22
 	},
 /turf/floor/tiled/dark,
@@ -1259,7 +1259,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 1;
 	pixel_y = 22
 	},
@@ -1554,7 +1554,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 1;
 	pixel_y = 22
 	},
@@ -2306,7 +2306,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 1;
 	pixel_y = 22
 	},
@@ -2582,7 +2582,7 @@
 	dir = 4;
 	pixel_x = -21
 	},
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 1;
 	pixel_y = 22
 	},
@@ -2818,7 +2818,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber,
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 8;
 	pixel_x = -22
 	},
@@ -2920,7 +2920,7 @@
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 8;
 	start_pressure = 30.3975;
-	volume = 15000
+	gas_volume = 15000
 	},
 /obj/machinery/airlock_sensor{
 	id_tag = "kugel_service_interior_sensor";
@@ -3069,7 +3069,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	pixel_y = -22
 	},
 /obj/abstract/submap_landmark/spawnpoint/luciferase_medic_spawn,
@@ -3941,7 +3941,7 @@
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 8;
 	start_pressure = 30.3975;
-	volume = 15000
+	gas_volume = 15000
 	},
 /obj/machinery/airlock_sensor{
 	dir = 8;
@@ -3990,7 +3990,7 @@
 "VW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable,
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 4;
 	pixel_x = 22
 	},

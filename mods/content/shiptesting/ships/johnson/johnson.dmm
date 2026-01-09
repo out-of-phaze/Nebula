@@ -127,7 +127,7 @@
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 8;
 	start_pressure = 30.3975;
-	volume = 15000
+	gas_volume = 15000
 	},
 /obj/machinery/door/firedoor,
 /turf/floor/tiled/techfloor/grid,
@@ -207,7 +207,7 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 4;
 	pixel_x = 22
 	},
@@ -305,7 +305,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 1;
 	pixel_y = 22
 	},
@@ -720,7 +720,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/fabricator/imprinter,
 /obj/item/chems/chem_disp_cartridge/sacid{
-	volume = 120
+	chem_volume = 120
 	},
 /turf/floor/tiled/steel_grid,
 /area/johnson/mining)
@@ -822,7 +822,7 @@
 	},
 /obj/item/paper_bin,
 /obj/item/folder/yellow,
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	dir = 8;
 	pixel_x = -22
 	},
@@ -1133,7 +1133,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	pixel_y = -22
 	},
 /obj/effect/floor_decal/industrial/firstaid{
@@ -1950,7 +1950,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/power/apc{
+/obj/machinery/apc{
 	pixel_y = -22
 	},
 /turf/floor/tiled/steel_grid,
@@ -2196,7 +2196,7 @@
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 1;
 	start_pressure = 30.3975;
-	volume = 15000
+	gas_volume = 15000
 	},
 /obj/structure/sign/warning/airlock{
 	dir = 8;

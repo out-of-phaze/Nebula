@@ -247,7 +247,7 @@
 /turf/floor/plating,
 /area/lozenge)
 "G" = (
-/obj/machinery/power/apc/critical{
+/obj/machinery/apc/critical{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
