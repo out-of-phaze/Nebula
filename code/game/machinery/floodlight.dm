@@ -75,3 +75,30 @@
 	change_power_consumption(initial(active_power_usage) * light_mod , POWER_USE_ACTIVE)
 	if(use_power)
 		set_light(l_range, l_power)
+
+// tmp
+/obj/structure/searchlight
+	name = "searchlight"
+	icon = 'icons/obj/machines/floodlight.dmi'
+	icon_state = "flood01"
+	light_power = 2
+	light_range = 12
+	light_color = LIGHT_COLOR_HALOGEN
+	light_wedge = LIGHT_LESS_NARROW
+	light_orientation = 0
+
+/obj/structure/searchlight/Initialize(ml, _mat, _reinf_mat)
+	. = ..()
+	START_PROCESSING(SSfastprocess, src)
+
+/obj/structure/searchlight/Destroy()
+	STOP_PROCESSING(SSfastprocess, src)
+	return ..()
+
+/obj/structure/searchlight/Process()
+	var/const/ROTATIONS_PER_SECOND = 0.1
+	var/const/SECONDS_PER_TICK = 0.2 // SSfastprocess.wait
+	var/const/ROTATIONS_PER_TICK = ROTATIONS_PER_SECOND * SECONDS_PER_TICK
+	var/const/DEGREES_PER_TICK = 360 * ROTATIONS_PER_TICK
+	light_orientation = SIMPLIFY_DEGREES(light_orientation + DEGREES_PER_TICK)
+	update_light()

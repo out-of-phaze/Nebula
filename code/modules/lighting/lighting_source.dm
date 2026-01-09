@@ -30,9 +30,19 @@
 	var/tmp/cached_origin_x // The last known X coord of the origin.
 	var/tmp/cached_origin_y // The last known Y coord of the origin.
 	var/tmp/old_direction   // The last known direction of the origin.
+	var/tmp/old_orientation // The last known orientation of the origin.
 	var/tmp/test_x_offset   // How much the X coord should be offset due to direction.
 	var/tmp/test_y_offset   // How much the Y coord should be offset due to direction.
 	var/tmp/facing_opaque = FALSE
+
+
+	// These are used to determine the effect strength so that light spreads out as it reaches the edge of the cone.
+	var/tmp/limit_center_x
+	var/tmp/limit_center_y
+	var/tmp/limit_left_x
+	var/tmp/limit_left_y
+	var/tmp/limit_right_x
+	var/tmp/limit_right_y
 
 	var/list/datum/lighting_corner/effect_str     // List used to store how much we're affecting corners.
 	var/list/turf/affecting_turfs
@@ -159,21 +169,43 @@
 /// Evaluates to TRUE if the point (TEST_X, TEST_Y) is counter-clockwise from the line (0,0) to (BASIS_X, BASIS_Y).
 #define IS_COUNTER_CLOCKWISE_FROM(BASIS_X, BASIS_Y, TEST_X, TEST_Y) (DETERMINANT(BASIS_X, BASIS_Y, TEST_X, TEST_Y) > 0)
 /// Compute unsigned distance of point (px,py) from line formed by (ax, ay) (bx, by)
-#define DISTANCE_FROM_LINE(PX,PY,AX,AY,BX,BY) (abs((BX-AX)*PX + (BY-AY)*PY)/sqrt((BX-AX)**2 + (BY-AY)**2))
-#define DISTANCE_FROM_ORIGIN_LINE(PX,PY,TX,TY) (abs(TX*PX + TY*PY)/sqrt(TX**2 + TY**2))
+#define DISTANCE_FROM_LINE(PX,PY,AX,AY,BX,BY) (abs(((BX)-(AX))*(PX) + (BY-AY)*(PY))/sqrt(((BX)-(AX))**2 + ((BY)-(AY))**2))
+// I think this formula should also work and is (to me) clearer than the above, but it hasn't been tested thoroughly and should be equivalent anyway.
+// #define DISTANCE_FROM_LINE(PX,PY,AX,AY,BX,BY) (abs(DETERMINANT(AX-PX, AX-PY, BX-PX, BY-PY))/sqrt((AX-BX)**2 + (AY-BY)**2))
+/// Compute unsigned distance of point (px, py) from line formed by (0, 0) (tx, ty)
+#define DISTANCE_FROM_ORIGIN_LINE(PX,PY,TX,TY) (abs((TX)*(PX) + (TY)*(PY))/sqrt((TX)**2 + (TY)**2))
 // This number serves purely to make sure that the endpoint used for the cone extends past the actual light range.
 #define ARBITRARY_NUMBER 10
+// I am pretty sure this is broken but I don't know how to properly debug it. Shrug. Works well enough.
+// No it doesn't time to debug.
+// If we're to the left of the left side or the right of the right side, the dist has actual_range/2 added.
+// Otherwise it's the distance from the centerline.
+// Note that this is only used for the 180 degree semicircle aligned with the cone.
+// #define COMPUTE_EFFECTIVE_DIR_DISTANCE(VTW, Ex, Ey) VTW = DISTANCE_FROM_ORIGIN_LINE(Ex - test_x_offset, Ey - test_x_offset, limit_center_x, limit_center_y)
+/* #define COMPUTE_EFFECTIVE_DIR_DISTANCE(VTW, Ex, Ey) \
+if(IS_CLOCKWISE_FROM(limit_a_x, limit_a_y, Ex, Ey) && IS_COUNTER_CLOCKWISE_FROM(limit_b_x, limit_b_y, Ex, Ey)) { \
+	VTW = DISTANCE_FROM_LINE(Ex, Ey, limit_center_x, limit_center_y, pixel_turf.x, pixel_turf.y); \
+} else { \
+	VTW = max(1, actual_range)*0.9 + max(DISTANCE_FROM_LINE(Ex, Ey, limit_a_x, limit_a_y, pixel_turf.x, pixel_turf.y), DISTANCE_FROM_LINE(Ex, Ey, limit_b_x, limit_b_y, pixel_turf.x, pixel_turf.y)); \
+} */
+#define DOT_PRODUCT(Ax, Ay, Bx, By) (((Ax)*(Bx))+((Ay)*(By)))
+#define MAGNITUDE(X,Y) (sqrt((X)**2 + (Y)**2))
+#define COS_DIFFERENCE(Ax,Ay,Bx,By) (DOT_PRODUCT(Ax, Ay, Bx, By)/(MAGNITUDE(Ax, Ay) * MAGNITUDE(Bx, By)))
 /// Compute the distance from the closest side of the light cone.
 /// Intended mostly for corners outside the cone.
 #define COMPUTE_EFFECTIVE_DIR_DISTANCE(VTW, Ex, Ey) \
 if (IS_COUNTER_CLOCKWISE_FROM(limit_a_x, limit_a_y, Ex, Ey)) { \
-	VTW = DISTANCE_FROM_LINE(Ex, Ey, limit_a_x, limit_a_y, pixel_turf.x, pixel_turf.y); \
-} else if (IS_CLOCKWISE_FROM(limit_b_x, limit_b_y, Ex, Ey) > 0) { \
-	VTW = DISTANCE_FROM_LINE(Ex, Ey, limit_b_x, limit_b_y, pixel_turf.x, pixel_turf.y); \
-} else {	/* ?! */ VTW = INFINITY; }
+	VTW = DISTANCE_FROM_ORIGIN_LINE(Ex - test_x_offset, Ey - test_y_offset, limit_a_x, limit_a_y); \
+} else if (IS_CLOCKWISE_FROM(limit_b_x, limit_b_y, Ex, Ey)) { \
+	VTW = DISTANCE_FROM_ORIGIN_LINE(Ex - test_x_offset, Ey - test_y_offset, limit_b_x, limit_b_y); \
+} else { VTW = DISTANCE_FROM_ORIGIN_LINE(Ex - test_x_offset, Ey - test_y_offset, limit_center_x, limit_center_y) * COS_DIFFERENCE(Ex - test_x_offset, Ey - test_y_offset, limit_center_x, limit_center_y); }
+// } else {	/* ?! */ VTW = INFINITY; }
 
-/datum/light_source/proc/regenerate_angle(ndir)
+/datum/light_source/proc/regenerate_angle(ndir, norientation)
+	if(!isnull(norientation))
+		ndir = angle2dir(norientation)
 	old_direction = ndir
+	old_orientation = norientation
 
 	var/turf/front = get_step(pixel_turf, old_direction)
 	facing_opaque = (front && front.has_opaque_atom)
@@ -196,50 +228,57 @@ if (IS_COUNTER_CLOCKWISE_FROM(limit_a_x, limit_a_y, Ex, Ey)) { \
 	// (test_x_offset, test_y_offset) = (pixel_turf.x + cos(90-dir2angle(old_direction)), pixel_turf.y + sin(90-dir2angle(old_direction)))
 	// which might be useful if we ever switch this to using angles for orientation instead of dirs.
 	var/angle = light_angle * 0.5
-	switch (old_direction)
-		if (NORTH)
-			limit_a_t = 90 + angle
-			limit_b_t = 90 - angle
-			test_y_offset += sin(90) * 0.5 // this const folds
+	if(!isnull(norientation))
+		norientation = 90 - norientation // transform to the lighting coordinate system
+		limit_a_t = norientation + angle
+		limit_b_t = norientation - angle
+		test_x_offset += round(cos(norientation))
+		test_y_offset += round(sin(norientation))
+	else
+		switch (old_direction)
+			if (NORTH)
+				limit_a_t = 90 + angle
+				limit_b_t = 90 - angle
+				test_y_offset += sin(90) // this const folds
 
-		if (SOUTH)
-			limit_a_t = -90 + angle
-			limit_b_t = -90 - angle
-			test_y_offset += sin(-90) * 0.5
+			if (SOUTH)
+				limit_a_t = -90 + angle
+				limit_b_t = -90 - angle
+				test_y_offset += sin(-90)
 
-		if (EAST)
-			limit_a_t = 0 + angle
-			limit_b_t = 0 - angle
-			test_x_offset += cos(0) * 0.5
+			if (EAST)
+				limit_a_t = 0 + angle
+				limit_b_t = 0 - angle
+				test_x_offset += cos(0)
 
-		if (WEST)
-			limit_a_t = 180 + angle
-			limit_b_t = 180 - angle
-			test_x_offset += cos(180) * 0.5
+			if (WEST)
+				limit_a_t = 180 + angle
+				limit_b_t = 180 - angle
+				test_x_offset += cos(180)
 
-		if(NORTHEAST)
-			limit_a_t = 45 + angle
-			limit_b_t = 45 - angle
-			test_x_offset += cos(45) * 0.5
-			test_y_offset += sin(45) * 0.5
+			if(NORTHEAST)
+				limit_a_t = 45 + angle
+				limit_b_t = 45 - angle
+				test_x_offset += cos(45)
+				test_y_offset += sin(45)
 
-		if(SOUTHEAST)
-			limit_a_t = -45 + angle
-			limit_b_t = -45 - angle
-			test_x_offset += cos(-45) * 0.5
-			test_y_offset += sin(-45) * 0.5
+			if(SOUTHEAST)
+				limit_a_t = -45 + angle
+				limit_b_t = -45 - angle
+				test_x_offset += cos(-45)
+				test_y_offset += sin(-45)
 
-		if(NORTHWEST)
-			limit_a_t = 135 + angle
-			limit_b_t = 135 - angle
-			test_x_offset += cos(135) * 0.5
-			test_y_offset += sin(135) * 0.5
+			if(NORTHWEST)
+				limit_a_t = 135 + angle
+				limit_b_t = 135 - angle
+				test_x_offset += cos(135)
+				test_y_offset += sin(135)
 
-		if(SOUTHWEST)
-			limit_a_t = -135 + angle
-			limit_b_t = -135 - angle
-			test_x_offset += cos(-135) * 0.5
-			test_y_offset += sin(-135) * 0.5
+			if(SOUTHWEST)
+				limit_a_t = -135 + angle
+				limit_b_t = -135 - angle
+				test_x_offset += cos(-135)
+				test_y_offset += sin(-135)
 
 	// Convert our angle + range into a vector.
 	limit_a_x = POLAR_TO_CART_X(light_range + ARBITRARY_NUMBER, limit_a_t)
@@ -250,6 +289,20 @@ if (IS_COUNTER_CLOCKWISE_FROM(limit_a_x, limit_a_y, Ex, Ey)) { \
 	limit_b_x = trunc(limit_b_x)
 	limit_b_y = POLAR_TO_CART_Y(light_range + ARBITRARY_NUMBER, limit_b_t)
 	limit_b_y = trunc(limit_b_y)
+	// these are experimental bullshit
+	limit_center_x = POLAR_TO_CART_X(light_range + ARBITRARY_NUMBER, isnull(norientation) ? (90 - dir2angle(ndir)) : norientation)
+	limit_center_x = trunc(limit_center_x)
+	limit_center_y = POLAR_TO_CART_Y(light_range + ARBITRARY_NUMBER, isnull(norientation) ? (90 - dir2angle(ndir)) : norientation)
+	limit_center_y = trunc(limit_center_y)
+	// this is a 180 degree-ish filter regardless of how large the cone is
+	limit_left_x = POLAR_TO_CART_X(light_range + ARBITRARY_NUMBER, (isnull(norientation) ? (90 - dir2angle(ndir)) : norientation) - 90)
+	limit_left_x = trunc(limit_left_x)
+	limit_left_y = POLAR_TO_CART_Y(light_range + ARBITRARY_NUMBER, (isnull(norientation) ? (90 - dir2angle(ndir)) : norientation) - 90)
+	limit_left_y = trunc(limit_left_y)
+	limit_right_x = POLAR_TO_CART_X(light_range + ARBITRARY_NUMBER, (isnull(norientation) ? (90 - dir2angle(ndir)) : norientation) + 90)
+	limit_right_x = trunc(limit_right_x)
+	limit_right_y = POLAR_TO_CART_Y(light_range + ARBITRARY_NUMBER, (isnull(norientation) ? (90 - dir2angle(ndir)) : norientation) + 90)
+	limit_right_y = trunc(limit_right_y)
 
 #undef ARBITRARY_NUMBER
 #undef POLAR_TO_CART_Y
@@ -258,15 +311,12 @@ if (IS_COUNTER_CLOCKWISE_FROM(limit_a_x, limit_a_y, Ex, Ey)) { \
 /datum/light_source/proc/remove_lum(now = FALSE)
 	applied = FALSE
 
-	var/thing
-	for (thing in affecting_turfs)
-		var/turf/T = thing
+	for (var/turf/T as anything in affecting_turfs)
 		LAZYREMOVE(T.affecting_lights, src)
 
 	affecting_turfs = null
 
-	for (thing in effect_str)
-		var/datum/lighting_corner/C = thing
+	for (var/datum/lighting_corner/C as anything in effect_str)
 		REMOVE_CORNER(C,now)
 
 		LAZYREMOVE(C.affecting, src)
@@ -349,37 +399,42 @@ if (IS_COUNTER_CLOCKWISE_FROM(limit_a_x, limit_a_y, Ex, Ey)) { \
 	if (light_angle)
 		UPDATE_APPROXIMATE_PIXEL_TURF // expensive, but necessary to avoid weirdness. todo: track last offset and recalculate?
 		var/ndir
-		if (ismob(top_atom) && top_atom:facing_dir)
+		var/norientation
+		if(!isnull(top_atom.light_orientation))
+			norientation = top_atom.light_orientation
+		else if (ismob(top_atom) && top_atom:facing_dir)
 			ndir = top_atom:facing_dir
 		else if(top_atom.light_dir)
 			ndir = top_atom.light_dir
 		else
 			ndir = top_atom.dir
 
-		if (old_direction != ndir)	// If our direction has changed, we need to regenerate all the angle info.
-			regenerate_angle(ndir)
+		if (old_direction != ndir || !isnull(norientation))	// If our direction has changed, we need to regenerate all the angle info.
+			regenerate_angle(ndir, norientation)
 			update = TRUE
 		else // Check if it was just a x/y translation, and update our vars without an regenerate_angle() call if it is.
 			var/co_updated = FALSE
-			if (pixel_turf.x != cached_origin_x)
-				test_x_offset += pixel_turf.x - cached_origin_x
-				cached_origin_x = pixel_turf.x
+			px = source_turf.x + (px/WORLD_ICON_SIZE)
+			py = source_turf.y + (py/WORLD_ICON_SIZE)
+			if (px != cached_origin_x)
+				test_x_offset += px - cached_origin_x
+				cached_origin_x = px
 
 				co_updated = TRUE
 
-			if (pixel_turf.y != cached_origin_y)
-				test_y_offset += pixel_turf.y - cached_origin_y
-				cached_origin_y = pixel_turf.y
+			if (py != cached_origin_y)
+				test_y_offset += py - cached_origin_y
+				cached_origin_y = py
 
 				co_updated = TRUE
 
 			if (co_updated)
 				// We might be facing a wall now.
-				var/turf/front = get_step(pixel_turf, old_direction)
+				var/turf/front = get_step(locate(px, py, source_turf.z), old_direction)
 				var/new_fo = (front && front.has_opaque_atom)
 				if (new_fo != facing_opaque)
 					facing_opaque = new_fo
-					regenerate_angle(ndir)
+					regenerate_angle(ndir, norientation)
 
 				update = TRUE
 

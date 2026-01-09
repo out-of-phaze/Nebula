@@ -10,9 +10,14 @@
 #define LIGHTING_DARKNESS_ICON_STATE "black"	// icon_state used for lighting overlays with no luminosity.
 #define LIGHTING_TRANSPARENT_ICON_STATE "blank"
 
-// This is purely used as a threshold for 'is this turf probably dark' to avoid floating point nonsense.
+/// This is purely used as a threshold for 'is this turf probably dark' to avoid floating point nonsense.
 #define LIGHTING_SOFT_THRESHOLD 0.001
-#define LIGHTING_BLOCKED_FACTOR 0.5	// How much the range of a directional light will be reduced while facing a wall.
+/// How high a luminance channel needs to get before that corner is eligible for bloom. If this is set too low, harshly lit areas look hazy.
+#define LIGHTING_BLOOM_THRESHOLD 2.5
+/// How much raw luminance should be divided by before feeding it to the bloom function.
+#define LIGHTING_BLOOM_LUM_DIVISOR 3
+/// How much the range of a directional light will be reduced while facing a wall.
+#define LIGHTING_BLOCKED_FACTOR 0.5
 
 // If defined, instant updates will be used whenever server load permits. Otherwise queued updates are always used.
 #define USE_INTELLIGENT_LIGHTING_UPDATES

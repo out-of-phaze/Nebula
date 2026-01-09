@@ -67,7 +67,7 @@
 
 	return ..()
 
-/atom/movable/openspace/multiplier/proc/copy_lighting(atom/movable/lighting_overlay/LO, use_shadower_mult = TRUE)
+/atom/movable/openspace/multiplier/proc/copy_lighting(atom/movable/lighting/multiplier/LO, use_shadower_mult = TRUE)
 	var/mutable_appearance/MA = new /mutable_appearance(LO)
 	MA.layer = MIMICED_LIGHTING_LAYER
 	MA.plane = OPENTURF_MAX_PLANE

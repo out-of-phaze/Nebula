@@ -54,12 +54,18 @@ var/global/list/REVERSE_LIGHTING_CORNER_DIAGONAL = list(0, 0, 0, 0, 3, 4, 0, 0, 
 	var/apparent_g = 0
 	var/apparent_b = 0
 
+	// The intensity of additive lighting.
+	var/add_r = 0
+	var/add_g = 0
+	var/add_b = 0
+	var/needs_add = FALSE
+
 	var/needs_update = FALSE
 
 	var/cache_r  = 0
 	var/cache_g  = 0
 	var/cache_b  = 0
-	var/cache_mx = 0
+	var/cache_max_luminosity = 0
 
 /datum/lighting_corner/New(turf/new_turf, diagonal, oi)
 	SSlighting.total_lighting_corners += 1
@@ -304,17 +310,27 @@ var/global/list/REVERSE_LIGHTING_CORNER_DIAGONAL = list(0, 0, 0, 0, 3, 4, 0, 0, 
 	var/lg = apparent_g
 	var/lb = apparent_b
 
-	// Cache these values a head of time so 4 individual lighting overlays don't all calculate them individually.
-	var/mx = max(lr, lg, lb) // Scale it so 1 is the strongest lum, if it is above 1.
-	. = 1 // factor
-	if (mx > 1)
-		. = 1 / mx
+	// Cache these values ahead of time so 4 individual lighting overlays don't all calculate them individually.
+	var/max_luminosity = max(lr, lg, lb) // Scale it so 1 is the strongest lum, if it is above 1.
+	add_r = 0
+	add_g = 0
+	add_b = 0
+	needs_add = FALSE
+	. = max_luminosity > 0
+	if(max_luminosity > 1)
+		. = 1 / max_luminosity
+		// Additive lighting to simulate bloom.
+		if(round(max_luminosity, LIGHTING_ROUND_VALUE) > LIGHTING_BLOOM_THRESHOLD)
+			add_r = round(((lr / LIGHTING_BLOOM_LUM_DIVISOR) ** 2) / 10, LIGHTING_ROUND_VALUE)
+			add_g = round(((lg / LIGHTING_BLOOM_LUM_DIVISOR) ** 2) / 10, LIGHTING_ROUND_VALUE)
+			add_b = round(((lb / LIGHTING_BLOOM_LUM_DIVISOR) ** 2) / 10, LIGHTING_ROUND_VALUE)
+			needs_add = max(add_r, add_g, add_b) > 0
 
 	cache_r = round(lr * ., LIGHTING_ROUND_VALUE)
 	cache_g = round(lg * ., LIGHTING_ROUND_VALUE)
 	cache_b = round(lb * ., LIGHTING_ROUND_VALUE)
 
-	cache_mx = round(mx, LIGHTING_ROUND_VALUE)
+	cache_max_luminosity = round(max_luminosity, LIGHTING_ROUND_VALUE)
 
 	var/turf/T
 	for (var/i in 1 to 4)
@@ -325,7 +341,7 @@ var/global/list/REVERSE_LIGHTING_CORNER_DIAGONAL = list(0, 0, 0, 0, 3, 4, 0, 0, 
 			if (3) T = t3
 			if (4) T = t4
 
-		var/atom/movable/lighting_overlay/Ov
+		var/atom/movable/lighting/multiplier/Ov
 		if (T && (Ov = T.lighting_overlay))
 			if (now)
 				Ov.update_overlay()

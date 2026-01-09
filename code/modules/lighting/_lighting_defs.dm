@@ -1,7 +1,10 @@
 // This is the define used to calculate falloff.
 #define LUM_FALLOFF(Cx,Cy,Tx,Ty,HEIGHT) (1 - CLAMP01(sqrt(((Cx) - (Tx)) ** 2 + ((Cy) - (Ty)) ** 2 + HEIGHT) / max(1, actual_range)))
 
-#define LUM_FALLOFF_WITH_DIR_ADJACENCY(Cx, Cy, Tx, Ty, HEIGHT, EFFECTIVE_DISTANCE) (min(LUM_FALLOFF(Cx, Cy, Tx, Ty, HEIGHT), (EFFECTIVE_DISTANCE)/3))
+#define LUM_FALLOFF_WITH_DIR_ADJACENCY(Cx, Cy, Tx, Ty, HEIGHT, EFFECTIVE_DISTANCE) ((1 - CLAMP01((sqrt(((Cx) - (Tx)) ** 2 + ((Cy) - (Ty)) ** 2 + HEIGHT) + (EFFECTIVE_DISTANCE)) / max(1, actual_range))))
+// #define LUM_FALLOFF_WITH_DIR_ADJACENCY(Cx, Cy, Tx, Ty, HEIGHT, EFFECTIVE_DISTANCE) (min(LUM_FALLOFF(Cx, Cy, Tx, Ty, HEIGHT), (EFFECTIVE_DISTANCE)/3))
+// I have a sneaking suspicion that the above is not correct, but these didn't seem to improve it any.
+// #define LUM_FALLOFF_WITH_DIR_ADJACENCY(Cx, Cy, Tx, Ty, HEIGHT, EFFECTIVE_DISTANCE) (min(LUM_FALLOFF(Cx, Cy, Tx, Ty, HEIGHT), 1 - CLAMP01((EFFECTIVE_DISTANCE) / max(1, actual_range))))
 
 // Macro that applies light to a new corner.
 // It is a macro in the interest of speed, yet not having to copy paste it.

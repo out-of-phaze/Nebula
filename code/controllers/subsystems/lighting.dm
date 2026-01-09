@@ -6,6 +6,7 @@ SUBSYSTEM_DEF(lighting)
 	runlevels = RUNLEVELS_DEFAULT | RUNLEVEL_LOBBY
 
 	var/total_lighting_overlays = 0
+	var/total_lighting_adders = 0
 	var/total_lighting_sources = 0
 	var/total_ambient_turfs = 0
 	var/total_lighting_corners = 0
@@ -91,7 +92,7 @@ SUBSYSTEM_DEF(lighting)
 				if(!isnull(tile.lighting_overlay))
 					log_warning("Attempted to create lighting_overlay on [tile.get_log_info_line()] when it already had one.")
 					continue
-				new /atom/movable/lighting_overlay(tile)
+				new /atom/movable/lighting/multiplier(tile)
 				overlaycount++
 			CHECK_TICK
 
@@ -170,7 +171,7 @@ SUBSYSTEM_DEF(lighting)
 		MC_SPLIT_TICK
 
 	while (oq_idex <= curr_overlays.len)
-		var/atom/movable/lighting_overlay/O = curr_overlays[oq_idex++]
+		var/atom/movable/lighting/multiplier/O = curr_overlays[oq_idex++]
 
 		if (!QDELETED(O) && O.needs_update)
 			O.update_overlay()

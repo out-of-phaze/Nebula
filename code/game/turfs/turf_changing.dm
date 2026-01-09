@@ -63,6 +63,7 @@
 	var/old_prev_type =        prev_type
 	var/old_affecting_lights = affecting_lights
 	var/old_lighting_overlay = lighting_overlay
+	var/old_lighting_adder =   lighting_adder
 	var/old_dynamic_lighting = TURF_IS_DYNAMICALLY_LIT_UNSAFE(src)
 	var/old_z_opacity        = z_flags & ZM_ALLOW_LIGHTING
 	var/old_flooded =          flooded
@@ -136,6 +137,7 @@
 	corners = old_corners
 
 	lighting_overlay = old_lighting_overlay
+	lighting_adder = old_lighting_adder
 
 	recalc_atom_opacity()
 

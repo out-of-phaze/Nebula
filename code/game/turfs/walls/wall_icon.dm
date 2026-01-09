@@ -188,15 +188,15 @@
 			LAZYADD(shutters, image(shutter_icon, num2text(shutter_state), dir = stepdir))
 			if(shutter_state)
 				var/turf/other_neighbor = get_step_resolving_mimic(src, global.reverse_dir[stepdir])
-				if(istype(other_neighbor))
-					var/light_amt   = 255 * other_neighbor.get_lumcount()
-					if(other_neighbor.lighting_overlay && light_amt > 0) // get_lumcount defaults to 0.5 if lighting_overlay is null
-						if(!new_light_dir || light_str < light_amt / 255)
+				if(istype(other_neighbor) && (other_neighbor.ambient_light_multiplier > 0))
+					var/light_amt = LIGHTING_BLOOM_THRESHOLD + (other_neighbor.ambient_light_multiplier * LIGHTING_BLOOM_LUM_DIVISOR)
+					if(light_amt > 0)
+						if(!new_light_dir || light_str < light_amt)
 							new_light_dir = stepdir
-							light_str = light_amt / 255
+							light_str = light_amt
 							new_light_color = other_neighbor.get_avg_color()
-						var/image/light_overlay = emissive_overlay(shutter_icon, "glow", dir = stepdir, color = other_neighbor.get_avg_color())
-						light_overlay.alpha = light_amt
+						var/image/light_overlay = emissive_overlay(shutter_icon, "glow", dir = stepdir, color = other_neighbor.ambient_light)
+						light_overlay.alpha = light_amt * 255
 						light_overlay.appearance_flags |= RESET_COLOR|RESET_ALPHA
 						LAZYADD(shutters, light_overlay)
 		// create a light cone in the direction of new_light_dir with color new_light_color

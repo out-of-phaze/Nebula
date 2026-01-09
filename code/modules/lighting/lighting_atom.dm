@@ -11,6 +11,8 @@
 	var/light_offset_y
 	/// An override for cases where the light is not facing the same direction as the object.
 	var/light_dir
+	/// !!EXPERIMENTAL!! Like light_dir, but an angle instead of a dir. Used for non-dir-locked lighting.
+	var/light_orientation
 
 	var/tmp/datum/light_source/light // Our light source. Don't fuck with this directly unless you have a good reason!
 	var/tmp/list/light_source_multi       // Any light sources that are "inside" of us, for example, if src here was a mob that's carrying a flashlight, that flashlight's light source would be part of this list.

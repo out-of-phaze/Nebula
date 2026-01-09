@@ -12,8 +12,8 @@
 		var/my_height    = get_physical_height()
 		var/their_height = turf_to_check.get_physical_height()
 		// Uppermost turfs draw over lower turfs if there is a serious difference.
-		if(my_height != their_height)
-			return my_height > their_height
+		if(my_height > their_height)
+			return TRUE
 		// Use edge layer if we're within height range.
 		return can_layer_over(turf_to_check)
 	return TRUE
