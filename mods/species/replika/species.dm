@@ -76,10 +76,10 @@
 	name = "Replika"
 	description = "You are a biosynthetic humanoid created by the Nation to serve as their primary workforce."
 
-/decl/background_detail/heritage/synthetic/replika/get_random_name(mob/M, gender)
-	var/decl/bodytype/replika/our_bodytype = M.client.prefs.get_bodytype_decl()
-	if(!istype(our_bodytype, /decl/bodytype/replika))
+/decl/background_detail/heritage/synthetic/replika/get_random_cultural_name(mob/recipient, gender, species)
+	if(species != /decl/species/replika::uid)
 		return ..()
+	var/decl/bodytype/replika/our_bodytype = recipient.client.prefs.get_bodytype_decl()
 	return our_bodytype.get_default_name()
 
 /decl/species/replika/equip_survival_gear(mob/living/human/victim)
