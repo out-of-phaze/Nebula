@@ -308,11 +308,14 @@
 	color = COLOR_GRAY80
 	exoplanet_rarity_gas = MAT_RARITY_EXOTIC
 	uid = "chem_oxygel"
+	var/oxygenation_level = 1 // 1 -> 50% restoration, 2 -> 70%, 3 -> 90%
+	/// How much carbon monoxide is removed from the blood per unit metabolised?
+	var/carbon_monoxide_per_unit = 2
 
 /decl/material/liquid/oxy_meds/affect_blood(var/mob/living/M, var/removed, var/datum/reagents/holder)
 	. = ..()
-	M.add_chemical_effect(CE_OXYGENATED, 1)
-	holder.remove_reagent(/decl/material/gas/carbon_monoxide, 2 * removed)
+	M.add_chemical_effect(CE_OXYGENATED, oxygenation_level)
+	holder.remove_reagent(/decl/material/gas/carbon_monoxide, carbon_monoxide_per_unit * removed)
 
 /decl/material/liquid/clotting_agent
 	name = "clotting agent"
