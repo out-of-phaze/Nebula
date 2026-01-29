@@ -45,19 +45,27 @@
 		update_light_status(TRUE)
 		update_icon()
 
+/obj/machinery/light/proc/_update_light_offset()
+	PRIVATE_PROC(TRUE)
+	switch (dir)
+		if (NORTH)
+			light_offset_x = 0
+			light_offset_y = WORLD_ICON_SIZE * 0.5
+		if (SOUTH)
+			light_offset_x = 0
+			light_offset_y = WORLD_ICON_SIZE * -0.5
+		if (EAST)
+			light_offset_x = WORLD_ICON_SIZE * 0.5
+			light_offset_y = 0
+		if (WEST)
+			light_offset_x = WORLD_ICON_SIZE * -0.5
+			light_offset_y = 0
+
 // create a new lighting fixture
 /obj/machinery/light/Initialize(mapload, d=0, populate_parts = TRUE)
 	. = ..()
 
-	switch (dir)
-		if (NORTH)
-			light_offset_y = WORLD_ICON_SIZE * 0.5
-		if (SOUTH)
-			light_offset_y = WORLD_ICON_SIZE * -0.5
-		if (EAST)
-			light_offset_x = WORLD_ICON_SIZE * 0.5
-		if (WEST)
-			light_offset_x = WORLD_ICON_SIZE * -0.5
+	_update_light_offset()
 
 	if(populate_parts && ispath(light_type))
 		lightbulb = new light_type(src)
@@ -71,6 +79,10 @@
 /obj/machinery/light/Destroy()
 	QDEL_NULL(lightbulb)
 	. = ..()
+
+/obj/machinery/light/set_dir(ndir)
+	. = ..()
+	_update_light_offset()
 
 /// Handles light updates that were formerly done in update_icon.
 /// * trigger (BOOL): if TRUE, this can trigger effects like burning out, rigged light explosions, etc.
