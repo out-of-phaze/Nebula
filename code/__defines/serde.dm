@@ -10,7 +10,7 @@
 #define SERIALIZE_IF_MODIFIED(V, T) if(V != initial(V)) { SERIALIZE(V, T) }
 #define SERIALIZE_TYPE_IF_MODIFIED(V, T) if(V != initial(V)) { SERIALIZE_VALUE(V, T, "[V]") }
 #define SERIALIZE_DECL_IF_MODIFIED(V, T) if((isnull(V) && !isnull(initial(V))) || ((istext(V) || istype(V, /decl) || ispath(V, /decl)) && !DECLS_ARE_EQUIVALENT(V, initial(V)))) { var/decl/__D = RESOLVE_TO_DECL(V); SERIALIZE_VALUE(V, T, __D?.uid) }
-#define SERIALIZE_INSTANCE(V, T) SERIALIZE_VALUE(V, T, V.get_run_uid())
+#define SERIALIZE_INSTANCE(V, T) SERIALIZE_VALUE(V, T, V?.get_run_uid())
 #define SERIALIZE_INSTANCE_IF_MODIFIED(V, T) if(V != initial(V)) { SERIALIZE_VALUE(V, T, V?.get_run_uid()) }
 #define SERIALIZE_INSTANCE_LIST(V, T) if(islist(V)) { var/list/__instance_uids = list(); for(var/datum/instance in V) { __instance_uids += instance.get_run_uid() }; SERIALIZE_VALUE(V, T, __instance_uids) }
 #define SERIALIZE_DECL_LIST(V, T) if(islist(V)) { var/list/__decl_uids = list(); for(var/decl/__decl in V) { __decl_uids += __decl.uid }; SERIALIZE_VALUE(V, T, __decl_uids) }
