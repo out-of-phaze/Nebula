@@ -18,7 +18,6 @@
 		new_background_info[token] = detail.uid
 	if(length(new_background_info))
 		SERIALIZE_VALUE(background_info, /mob/living/human, new_background_info)
-	SERIALIZE_DECL_LIST_ASSOC(background_info, /mob/living/human)
 	SERIALIZE(flavor_texts, /mob/living/human)
 	SERIALIZE_IF_MODIFIED(pose, /mob/living/human)
 	SERIALIZE_INSTANCE_IF_MODIFIED(internal, /mob/living/human) // essential to avoid suddenly dying if you're saved in space
