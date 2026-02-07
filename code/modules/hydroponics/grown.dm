@@ -100,6 +100,13 @@
 		bitesize = 1 + round(REAGENT_TOTAL_VOLUME(reagents) / 2, 1)
 	update_icon()
 
+/obj/item/food/grown/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(plant_segment_type, /obj/item/food/grown)
+	SERIALIZE_IF_MODIFIED(backyard_grilling_count, /obj/item/food/grown)
+	if(seed && seed.name != initial(seed))
+		SERIALIZE_VALUE(seed, /obj/item/food/grown, seed.name)
+
 /obj/item/food/grown/populate_reagents()
 	. = ..()
 	if(!length(seed?.get_chemical_composition(_segment = plant_segment_type)))

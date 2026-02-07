@@ -46,6 +46,17 @@
 		if(butchery_data.meat_name)
 			nutriment_desc = list((butchery_data.meat_name) = 10)
 
+/obj/item/food/butchery/Serialize()
+	. = ..()
+	SERIALIZE_DECL_IF_MODIFIED(butchery_data, /obj/item/food/butchery)
+	SERIALIZE_IF_MODIFIED(meat_name, /obj/item/food/butchery)
+	SERIALIZE_TYPE_IF_MODIFIED(fat_material, /obj/item/food/butchery)
+
+/obj/item/food/butchery/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_DECL_IF_MODIFIED(butchery_data, /obj/item/food/butchery)
+	DESERIALIZE_TYPE_IF_MODIFIED(fat_material, /obj/item/food/butchery)
+
 /obj/item/food/butchery/Initialize(mapload, material_key, skip_plate = FALSE, decl/butchery_data/new_data, new_meat_name)
 	initialize_butchery_data(new_data, new_meat_name)
 	. = ..()

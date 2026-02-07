@@ -37,6 +37,11 @@
 	update_strings()
 	update_icon()
 
+/obj/item/food/processed_grown/Serialize()
+	. = ..()
+	if(seed && seed.name != initial(seed))
+		SERIALIZE_VALUE(seed, /obj/item/food/processed_grown, seed.name)
+
 /obj/item/food/processed_grown/get_grown_tag()
 	if(!processed_grown_tag || !seed?.grown_tag)
 		return
