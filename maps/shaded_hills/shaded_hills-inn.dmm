@@ -456,7 +456,7 @@
 /area/shaded_hills/inn/porch)
 "lE" = (
 /obj/abstract/level_data_spawner/shaded_hills_downlands,
-/turf/unsimulated/mask,
+/turf/unsimulated/mask_alt,
 /area/shaded_hills/outside/downlands)
 "lF" = (
 /turf/floor/path/herringbone/basalt,
@@ -1081,7 +1081,7 @@
 /area/shaded_hills/inn)
 "BI" = (
 /obj/abstract/map_data/shaded_hills,
-/turf/unsimulated/mask,
+/turf/unsimulated/mask_alt,
 /area/shaded_hills/outside/downlands)
 "BL" = (
 /obj/structure/bed/simple/ebony/cloth,
@@ -1564,7 +1564,7 @@
 /turf/floor/path/herringbone/basalt,
 /area/shaded_hills/inn)
 "NH" = (
-/turf/unsimulated/mask,
+/turf/unsimulated/mask_alt,
 /area/shaded_hills/outside/downlands/poi)
 "NZ" = (
 /obj/structure/table/wood/ebony,
@@ -1905,7 +1905,7 @@
 /turf/floor/wood/walnut,
 /area/shaded_hills/inn)
 "Wm" = (
-/turf/unsimulated/mask,
+/turf/unsimulated/mask_alt,
 /area/shaded_hills/outside/downlands)
 "WD" = (
 /obj/structure/railing/mapped/wooden/walnut,

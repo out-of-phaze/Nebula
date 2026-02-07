@@ -166,6 +166,7 @@
 		/datum/random_map/noise/ore/rich/shaded_hills
 	)
 	base_turf = /turf/floor/rock/basalt
+	daycycle_id = null // you get your light from above
 
 /datum/level_data/main_level/shaded_hills/dungeon
 	name = "Shaded Hills - Dungeon"
@@ -177,6 +178,7 @@
 	subtemplate_category = MAP_TEMPLATE_CATEGORY_FANTASY_DUNGEON
 	subtemplate_area = /area/shaded_hills/caves/dungeon/poi
 	base_turf = /turf/floor/rock/basalt
+	daycycle_id = null // you get your light from above
 
 /obj/abstract/level_data_spawner/shaded_hills_grassland
 	level_data_type = /datum/level_data/main_level/shaded_hills/grassland

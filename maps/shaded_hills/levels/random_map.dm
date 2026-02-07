@@ -9,7 +9,7 @@
 	abstract_type = /datum/random_map/noise/shaded_hills
 	smoothing_iterations = 1
 	smooth_single_tiles  = TRUE
-	target_turf_type = /turf/unsimulated/mask
+	target_turf_type = /turf/unsimulated/mask_alt
 
 /datum/random_map/noise/forage/shaded_hills
 	abstract_type = /datum/random_map/noise/forage/shaded_hills
