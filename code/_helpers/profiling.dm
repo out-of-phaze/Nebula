@@ -98,7 +98,6 @@
 
 // Only enable this if you have a local copy of the byond-tracy DLL.
 // DO NOT commit the DLL to the repo.
-#define TRACY_PROFILE
 #ifdef TRACY_PROFILE
 /proc/prof_init()
 	var/lib
