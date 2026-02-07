@@ -4,6 +4,7 @@
 	// see login.dm
 	if(my_client)
 		global.using_map.hide_titlescreen(my_client)
+		close_spawn_windows()
 		my_client = null
 
 	..()

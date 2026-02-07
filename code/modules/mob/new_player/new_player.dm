@@ -453,8 +453,9 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 /mob/new_player/proc/close_spawn_windows()
 	close_browser(src, "window=latechoices") //closes late choices window
 	close_browser(src, "window=preferences_window") //closes preferences window
-	if(client?.prefs)
-		client.prefs.close_load_dialog(src)
+	var/client/client_to_use = client || my_client
+	if(client_to_use?.prefs)
+		client_to_use.prefs.close_load_dialog(src)
 	panel.close()
 
 /mob/new_player/proc/check_species_allowed(var/decl/species/S, var/show_alert=1)
