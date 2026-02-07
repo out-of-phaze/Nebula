@@ -12,6 +12,12 @@
 	// SERIALIZE_REAGENTS(touching, /mob/living/human, "touching")
 	SERIALIZE_IF_MODIFIED(real_name, /mob/living/human)
 	SERIALIZE_INSTANCE_LIST(worn_underwear, /mob/living/human)
+	var/list/new_background_info = list()
+	for(var/token in background_info)
+		var/decl/background_detail/detail = background_info[token]
+		new_background_info[token] = detail.uid
+	if(length(new_background_info))
+		SERIALIZE_VALUE(background_info, /mob/living/human, new_background_info)
 	SERIALIZE_DECL_LIST_ASSOC(background_info, /mob/living/human)
 	SERIALIZE(flavor_texts, /mob/living/human)
 	SERIALIZE_IF_MODIFIED(pose, /mob/living/human)
