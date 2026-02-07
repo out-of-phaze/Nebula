@@ -121,6 +121,7 @@
 	if(!istype(T, /turf/floor))
 		return
 	var/turf/floor/floor = T
+	var/expected_fluid_depth = floor.get_fluid_depth() || (floor.fill_reagent_type ? -floor.get_physical_height() : 0)
 	var/decl/flooring/flooring = floor.get_topmost_flooring()
 	var/parse_value = noise2value(value)
 	var/place_prob
@@ -146,7 +147,7 @@
 			place_type = SAFEPICK(forage["grass"])
 
 		if(istype(flooring, /decl/flooring/mud))
-			switch(floor.get_fluid_depth())
+			switch(expected_fluid_depth)
 				if(FLUID_OVER_MOB_HEAD to FLUID_MAX_DEPTH)
 					place_prob = parse_value * forage_weight
 					place_type = SAFEPICK(forage["riverbed"])
@@ -167,7 +168,7 @@
 
 	else
 		if(istype(flooring, /decl/flooring/mud))
-			switch(floor.get_fluid_depth())
+			switch(expected_fluid_depth)
 				if(FLUID_SLURRY to FLUID_OVER_MOB_HEAD)
 					place_prob = parse_value * cave_forage_weight
 					place_type = SAFEPICK(forage["cave_shallows"])
