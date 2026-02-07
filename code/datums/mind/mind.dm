@@ -45,6 +45,7 @@
 	. = ..()
 	// assigned_special_role can be either a decl or a string... lovely
 	var/old_special_role = assigned_special_role
+	DESERIALIZE_INSTANCE(current)
 	DESERIALIZE_DECL_IF_MODIFIED(assigned_special_role, /datum/mind)
 	if(!assigned_special_role)
 		assigned_special_role = old_special_role
