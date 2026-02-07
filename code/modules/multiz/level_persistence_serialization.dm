@@ -34,9 +34,12 @@ var/global/list/level_persistence_ref_map = list()
 	if(!length(instances_to_save))
 		return
 	for(var/datum/thing as anything in instances_to_save)
-		var/serialized_instance = thing.DoSerialize()
-		if(length(serialized_instance))
-			.[thing.get_run_uid()] = serialized_instance
+		try
+			var/serialized_instance = thing.DoSerialize()
+			if(length(serialized_instance))
+				.[thing.get_run_uid()] = serialized_instance
+		catch(var/exception/E)
+			error("Exception when serializing [thing] ([thing.type]): [EXCEPTION_TEXT(E)]")
 
 // Returns a linear list of instances that we are interested in saving.
 /datum/level_data/proc/get_persistent_instances()
