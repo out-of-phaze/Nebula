@@ -76,3 +76,4 @@
 	. = ..()
 	if((damage_type == BRUTE) && (damage_flags & (DAM_EDGE | DAM_SHARP | DAM_BULLET))) // damage flags that should cause bleeding
 		adjustBleedTicks(damage)
+	contents_were_modified("simple animal took damage")

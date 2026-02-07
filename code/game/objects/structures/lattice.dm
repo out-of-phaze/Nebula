@@ -15,7 +15,8 @@
 /obj/structure/lattice/Initialize(mapload)
 	. = ..()
 	if(. != INITIALIZE_HINT_QDEL)
-		DELETE_IF_DUPLICATE_OF(/obj/structure/lattice)
+		if(!__deserialization_payload)
+			DELETE_IF_DUPLICATE_OF(/obj/structure/lattice)
 		if(!istype(material))
 			return INITIALIZE_HINT_QDEL
 		var/turf/T = loc

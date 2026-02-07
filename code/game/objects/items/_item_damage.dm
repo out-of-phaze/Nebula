@@ -6,6 +6,7 @@
 		CRASH("Item '[type]' take_damage proc was called with negative damage.") //Negative damage are an implementation issue.
 
 	//Apply armor
+	contents_were_modified("item took damage")
 	var/datum/extension/armor/A = get_extension(src, /datum/extension/armor)
 	if(A)
 		var/list/dam_after_armor = A.apply_damage_modifications(damage, damage_type, damage_flags, null, armor_pen, TRUE)

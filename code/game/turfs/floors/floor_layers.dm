@@ -5,6 +5,11 @@
 
 /turf/floor/proc/get_all_flooring()
 	. = list()
+	// if this is called pre-init we need to resolve the flooring list
+	if(istext(_flooring))
+		_flooring = resolve_decl_uid_list(cached_json_decode(_flooring))
+		if(!length(_flooring))
+			_flooring = null
 	if(_flooring)
 		if(islist(_flooring))
 			for(var/floor in _flooring)
@@ -38,6 +43,11 @@
 		if(isnull(_flooring))
 			_topmost_flooring = FALSE
 		else
+			// if this is called pre-init we need to resolve the flooring list
+			if(istext(_flooring))
+				_flooring = resolve_decl_uid_list(cached_json_decode(_flooring))
+				if(!length(_flooring))
+					_flooring = null
 			var/flooring_length = length(_flooring)
 			if(flooring_length) // no need to check islist, length is only nonzero for lists and strings, and strings are invalid here
 				_topmost_flooring = RESOLVE_TO_DECL(_flooring[flooring_length])
@@ -48,6 +58,11 @@
 /turf/floor/proc/clear_flooring(skip_update = FALSE, place_product)
 	if(isnull(_flooring))
 		return FALSE
+	// if this is called pre-init we need to resolve the flooring list
+	if(istext(_flooring))
+		_flooring = resolve_decl_uid_list(cached_json_decode(_flooring))
+		if(!length(_flooring))
+			_flooring = null
 	if(islist(_flooring))
 		for(var/floor in _flooring)
 			remove_flooring(floor, TRUE, place_product)
@@ -55,7 +70,7 @@
 		remove_flooring(_flooring, TRUE, place_product)
 	if(!skip_update)
 		update_from_flooring()
-	state_was_modified()
+	state_was_modified("clear_flooring")
 	return TRUE
 
 /turf/floor/proc/remove_flooring(var/decl/flooring/flooring, skip_update, place_product)
@@ -63,12 +78,17 @@
 	// Remove floor layers one by one.
 	_topmost_flooring  = null
 
+	// if this is called pre-init we need to resolve the flooring list
+	if(istext(_flooring))
+		_flooring = resolve_decl_uid_list(cached_json_decode(_flooring))
+		if(!length(_flooring))
+			_flooring = null
 	if(islist(flooring))
 		for(var/floor in UNLINT(flooring))
 			if(remove_flooring(floor, TRUE, place_product))
 				. = TRUE
 		if(.)
-			state_was_modified()
+			state_was_modified("remove_flooring (list)")
 			if(!skip_update)
 				set_floor_broken(skip_update = TRUE)
 				set_floor_burned(skip_update = TRUE)
@@ -89,7 +109,7 @@
 	else if(_flooring == flooring)
 		_flooring = null
 
-	state_was_modified()
+	state_was_modified("remove_flooring")
 
 	// If the turf was not the topmost turf, then we don't really need to care about it.
 	if(!was_topmost)
@@ -146,11 +166,10 @@
 			_flooring = RESOLVE_TO_DECL(newflooring)
 		else
 			return FALSE
-		state_was_modified()
 		if(!skip_update)
+			state_was_modified("set_flooring") // this is our best effort at skipping unnecessary serialization
 			update_from_flooring()
 		return TRUE
-
 
 	// If we already have a flooring state, we need to do some cleanup and housekeeping.
 	clear_flooring(skip_update = TRUE, place_product = place_product)
@@ -168,7 +187,7 @@
 		for(var/floor in UNLINT(newflooring))
 			if(add_flooring(floor, skip_update = FALSE))
 				. = TRUE
-		state_was_modified()
+		state_was_modified("add_flooring (list)")
 		if(!skip_update)
 			set_floor_broken(skip_update = TRUE)
 			set_floor_burned(skip_update = TRUE)
@@ -180,6 +199,11 @@
 	if(!newflooring)
 		return FALSE
 
+	// if this is called pre-init we need to resolve the flooring list
+	if(istext(_flooring))
+		_flooring = resolve_decl_uid_list(cached_json_decode(_flooring))
+		if(!length(_flooring))
+			_flooring = null
 	// Check if the layer is already present.
 	if(_flooring)
 		if(islist(_flooring))
@@ -196,7 +220,7 @@
 			_flooring = list(_flooring)
 		_flooring |= newflooring
 
-	state_was_modified()
+	state_was_modified("add_flooring")
 
 	// Update for the new top layer.
 	if(!skip_update)
@@ -220,6 +244,8 @@
 
 	layer      = copy_from.floor_layer
 	turf_flags = copy_from.turf_flags
+	if(turf_flags & TURF_FLAG_ABSORB_LIQUID) // this should maybe be a separate flag but everything that has it shouldn't have dirt
+		remove_dirt(get_dirt())
 	z_flags    = copy_from.z_flags
 
 	if(copy_from.turf_light_range || copy_from.turf_light_power || copy_from.turf_light_color)

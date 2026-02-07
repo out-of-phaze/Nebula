@@ -16,16 +16,20 @@ SUBSYSTEM_DEF(icon_update)
 
 /datum/controller/subsystem/icon_update/fire(resumed = FALSE, no_mc_tick = FALSE)
 	var/list/cached_refs = queue_refs // local variables are quicker to access than instance variables. it's still the same list though
-	if(!cached_refs.len)
+	if(!length(cached_refs))
 		suspend()
 		return
 
-	var/static/count = 1 // proc-level static var, as with SSgarbage, in case a runtime makes this proc end early
-	while (count <= length(cached_refs)) // if we kept a copy of the queue to avoid mutating it while we run, this could possibly be made a lot faster by just using a for loop?
+	var/static/count = 0 // proc-level static var, as with SSgarbage, in case a runtime makes this proc end early
+	if (count) //runtime last run before we could do this.
+		var/c = count
+		count = 0 //so if we runtime on the Cut, we don't try again.
+		cached_refs.Cut(1, c+1)
+	while (count < length(cached_refs)) // if we kept a copy of the queue to avoid mutating it while we run, this could possibly be made a lot faster by just using a for loop?
 		if(Master.map_loading) // we started loading a map mid-run, so stop and clean up
 			break
 		// Pops the atom from the queue
-		var/atom/A = cached_refs[count++] // count is used to cut our list later and save time
+		var/atom/A = cached_refs[++count] // count is used to cut our list later and save time
 		if(QDELETED(A))
 			continue
 		A.icon_update_queued = FALSE
@@ -34,8 +38,9 @@ SUBSYSTEM_DEF(icon_update)
 			CHECK_TICK
 		else if (MC_TICK_CHECK)
 			break
-	cached_refs.Cut(1, count)
-	count = 1
+	if(count)
+		cached_refs.Cut(1, count+1)
+		count = 0
 
 /atom
 	var/icon_update_queued = FALSE

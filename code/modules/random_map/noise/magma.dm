@@ -39,7 +39,10 @@
 /datum/random_map/noise/volcanism/get_additional_spawns(var/value, var/turf/T)
 	if(value>=178)
 		if(istype(T,/turf/floor))
-			T.ChangeTurf(/turf/floor/lava)
+			var/turf/floor/floor = T
+			floor.clear_flooring()
+			floor.set_base_flooring(/decl/flooring/lava)
 		else if(istype(T,/turf/wall/natural))
 			var/turf/wall/natural/M = T
 			M.floor_type = /turf/floor/lava
+			M.state_was_modified("floor_type")

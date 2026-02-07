@@ -132,6 +132,7 @@
 			if(prob(15) && !floor.contains_dense_objects()) // Static as current map has limited amount of rock turfs
 				var/rock_type = SAFEPICK(forage["rocks"])
 				new rock_type(floor)
+				floor.contents_were_modified("forage rock")
 				return
 
 		if(istype(flooring, /decl/flooring/grass))
@@ -139,6 +140,7 @@
 				if(length(trees))
 					var/tree_type = pickweight(trees)
 					new tree_type(floor)
+					floor.contents_were_modified("forage tree")
 				return
 			place_prob = parse_value * forage_weight
 			place_type = SAFEPICK(forage["grass"])
@@ -174,6 +176,7 @@
 						if(length(cave_trees))
 							var/tree_type = pick(cave_trees)
 							new tree_type(floor)
+							floor.contents_were_modified("forage cave tree")
 						return
 					place_prob = parse_value * cave_forage_weight * 2
 					place_type = SAFEPICK(forage["caves"])
@@ -184,10 +187,13 @@
 	if(place_type && prob(place_prob))
 		if(istype(place_type, /datum/seed))
 			new /obj/structure/flora/plant(floor, null, null, place_type)
+			floor.contents_were_modified("forage map plant")
 			for(var/stepdir in global.alldirs)
 				if(prob(15))
 					var/turf/neighbor = get_step(floor, stepdir)
 					if(istype(neighbor, floor.type) && !(locate(/obj/structure/flora/plant) in neighbor))
 						new /obj/structure/flora/plant(neighbor, null, null, place_type)
+						neighbor.contents_were_modified("forage plant spread")
 		else if(ispath(place_type, /atom))
 			new place_type(floor)
+			floor.contents_were_modified("forage map")

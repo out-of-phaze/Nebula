@@ -22,7 +22,7 @@
 	if(isnull(initial(paint_verb)) && !isnull(material))
 		paint_verb = material.paint_verb
 	hitsound = material?.hitsound || initial(hitsound)
-	if(max_health != -1)
+	if(max_health != ITEM_HEALTH_NO_DAMAGE)
 		max_health = initial(max_health) + material?.integrity * get_material_health_modifier()
 		if(reinf_material)
 			var/bonus_health = reinf_material.integrity * get_material_health_modifier()
@@ -31,6 +31,15 @@
 				current_health += bonus_health
 		current_health = keep_health ? min(current_health, max_health) : max_health
 	update_icon()
+
+// keep this in sync with update_materials please
+// it can't be used there because of the !keep_health check sadly
+/obj/structure/proc/get_expected_max_health()
+	if(max_health == ITEM_HEALTH_NO_DAMAGE)
+		return max_health
+	. = initial(max_health) + material?.integrity * get_material_health_modifier()
+	if(reinf_material)
+		. += reinf_material.integrity * get_material_health_modifier()
 
 /obj/structure/proc/update_material_name(var/override_name)
 	var/base_name = override_name || initial(name)

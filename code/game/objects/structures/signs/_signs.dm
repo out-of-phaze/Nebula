@@ -11,6 +11,10 @@
 	///The type of the sign this item will turn into upon installation
 	var/sign_type
 
+/obj/item/sign/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(sign_type, /obj/item/sign)
+
 /obj/item/sign/Initialize(ml, material_key)
 	. = ..()
 	if(ispath(sign_type))

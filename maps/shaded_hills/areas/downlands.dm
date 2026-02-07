@@ -1,5 +1,6 @@
 /area/shaded_hills/outside/downlands
 	name = "Downlands"
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
 /area/shaded_hills/outside/downlands/poi
 	name = "Deep Downlands"
@@ -10,6 +11,7 @@
 	fishing_results = list()
 	sound_env = ROOM
 	turf_initializer = /decl/turf_initializer/spiderwebs
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
 /decl/turf_initializer/combo/kitchen_webs
 	initialisers = list(
@@ -32,6 +34,7 @@
 	fishing_results = list()
 	sound_env = ROOM
 	turf_initializer = /decl/turf_initializer/spiderwebs
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
 /area/shaded_hills/farmhouse
 	name = "\improper Farmhouse"
@@ -39,6 +42,7 @@
 	fishing_results = list()
 	sound_env = ROOM
 	turf_initializer = /decl/turf_initializer/spiderwebs
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
 /area/shaded_hills/farmhouse/porch
 	name = "\improper Farmhouse Porch"
@@ -51,6 +55,7 @@
 	fishing_results = list()
 	sound_env = ROOM
 	turf_initializer = /decl/turf_initializer/spiderwebs
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
 /area/shaded_hills/storehouse
 	name = "\improper Storehouse"
@@ -58,6 +63,7 @@
 	fishing_results = list()
 	sound_env = ROOM
 	turf_initializer = /decl/turf_initializer/spiderwebs
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
 /area/shaded_hills/general_store
 	name = "\improper General Store"
@@ -65,6 +71,7 @@
 	fishing_results = list()
 	sound_env = ROOM
 	turf_initializer = /decl/turf_initializer/spiderwebs
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
 /area/shaded_hills/general_store/porch
 	name = "\improper General Store Porch"
@@ -78,6 +85,7 @@
 	area_flags = AREA_FLAG_HOLY
 	sound_env = ROOM
 	turf_initializer = /decl/turf_initializer/spiderwebs
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
 /area/shaded_hills/shrine/kitchen
 	name = "\improper Shrine Kitchen"
@@ -85,12 +93,15 @@
 
 /area/shaded_hills/outside/shrine
 	name = "\improper Shrine Grounds"
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
 /area/shaded_hills/caves/dungeon
 	name = "\improper Deep Dungeon"
 
 /area/shaded_hills/caves/dungeon/inn
 	name = "\improper Root Cellar"
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
 /area/shaded_hills/caves/dungeon/poi
 	name = "\improper Deepest Dungeon"
+	area_flags = parent_type::area_flags & ~AREA_FLAG_ALLOW_LEVEL_PERSISTENCE

@@ -13,6 +13,35 @@
 
 	var/literacy_charges = 2 //used to limit the number of books a master literate mob can make
 
+/datum/skillset/ShouldSerialize(_age)
+	return ..() && skills_transferable // maybe?
+
+/datum/skillset/Serialize()
+	. = ..()
+	// buffs are not persisted
+	// neither are verbs since they're recalculated on New
+	SERIALIZE_INSTANCE(owner, /datum/skillset)
+	var/list/serial_skill_list = list()
+	for(var/skill_path in skill_list)
+		var/decl/skill/skill_decl = GET_DECL(skill_path)
+		serial_skill_list[skill_decl.uid] = skill_list[skill_path]
+	SERIALIZE_VALUE(skill_list, /datum/skillset, serial_skill_list)
+	SERIALIZE_IF_MODIFIED(literacy_charges, /datum/skillset) // if the books persist, so should the charges? i guess?
+
+/datum/skillset/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(owner)
+	var/list/new_skill_list = list()
+	for(var/skill_uid in skill_list)
+		var/decl/skill/skill_decl = decls_repository.get_decl_by_id(skill_uid)
+		new_skill_list[skill_decl.type] = skill_list[skill_uid]
+	skill_list = new_skill_list
+	return SERDE_HINT_POSTINIT
+
+/datum/skillset/DeserializePostInit(list/instance_map)
+	. = ..()
+	on_levels_change()
+
 var/global/list/all_skill_verbs
 /datum/skillset/New(mob/mob)
 	owner = mob

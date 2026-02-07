@@ -85,7 +85,7 @@
 					damage_desc = "<font color='red'>severe</font>"
 			scan_data += "<b>Severity:</b> [damage_desc]"
 			scan_data += "<b>Hits by weapon:</b> [data.hits]"
-		scan_data += "<b>Approximate time of wound infliction:</b> [worldtime2stationtime(data.time_inflicted)]"
+		scan_data += "<b>Approximate time of wound infliction:</b> [ticks2readable(world.time - data.time_inflicted)] ago"
 		scan_data += "<b>Affected limbs:</b> [english_list(organs)]"
 		scan_data += ""
 

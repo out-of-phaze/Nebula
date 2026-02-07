@@ -140,6 +140,7 @@
 	if(lit == FIRE_LIT)
 		bellows_oxygenation = 0
 		lit = FIRE_DEAD
+		contents_were_modified("fire source died")
 		last_fuel_ignite_temperature = null
 		last_fuel_burn_temperature = T20C
 		refresh_affected_exterior_turfs()
@@ -168,6 +169,7 @@
 		return FALSE
 	last_fuel_burn_temperature = max(last_fuel_burn_temperature, ignition_temperature) // needed for initial burn procs to function
 	lit = FIRE_LIT
+	contents_were_modified("fire source lit")
 	refresh_affected_exterior_turfs()
 	visible_message(SPAN_DANGER("\The [src] catches alight!"))
 	START_PROCESSING(SSobj, src)

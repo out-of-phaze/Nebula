@@ -23,6 +23,14 @@
 	/// (BOOL) If TRUE, wire datum is accessible for interactions.
 	var/wires_accessible = FALSE
 
+/obj/item/taperecorder/Serialize()
+	. = ..()
+	SERIALIZE_INSTANCE(mytape, /obj/item/taperecorder)
+
+/obj/item/taperecorder/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(mytape)
+
 /obj/item/taperecorder/Initialize()
 	. = ..()
 	wires = new(src)

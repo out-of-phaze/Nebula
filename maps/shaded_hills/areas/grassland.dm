@@ -37,6 +37,7 @@
 	description = "The soft susurration of running water mingles with the hum of insects and croak of frogs."
 	area_blurb_category = /area/shaded_hills/outside/river
 	forced_ambience = list('sound/ambience/shore.ogg')
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
 /area/shaded_hills/outside/river/get_additional_fishing_results()
 	var/static/list/additional_fishing_results = list(

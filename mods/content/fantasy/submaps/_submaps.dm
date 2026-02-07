@@ -50,3 +50,4 @@
 	name = "Point Of Interest"
 	description = null
 	area_blurb_category = /area/fantasy/outside/point_of_interest
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE

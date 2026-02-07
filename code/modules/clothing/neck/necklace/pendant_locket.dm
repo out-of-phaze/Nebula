@@ -5,6 +5,15 @@
 	var/open
 	var/obj/item/held
 
+/obj/item/pendant/locket/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(open, /obj/item/pendant/locket)
+	SERIALIZE_INSTANCE_IF_MODIFIED(held, /obj/item/pendant/locket)
+
+/obj/item/pendant/locket/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(held)
+
 /obj/item/pendant/locket/attack_self(mob/user)
 	if(!("[get_world_inventory_state()]-open" in icon_states(icon)))
 		to_chat(user, SPAN_WARNING("\The [src] doesn't seem to open."))

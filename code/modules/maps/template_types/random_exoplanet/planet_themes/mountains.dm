@@ -30,3 +30,4 @@
 	if(istype(T, /turf/wall/natural) && use_area)
 		var/turf/wall/natural/N = T
 		N.floor_type = use_area.base_turf
+		N.state_was_modified("floor_type")

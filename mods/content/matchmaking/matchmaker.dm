@@ -13,7 +13,7 @@
 			var/datum/relation/relation = new TT
 			relation.holder = character.mind
 			relation.info = character.client.prefs.relations_info[T]
-			character.mind.gen_relations_info = character.client.prefs.relations_info["general"]
+			character.mind.general_relations_info = character.client.prefs.relations_info["general"]
 	if(!ishuman(character))
 		return TRUE
 	if(!job.create_record)
@@ -22,6 +22,7 @@
 	return TRUE
 
 /datum/mind
+	var/general_relations_info
 	var/list/known_connections //list of known (RNG) relations between people
 
 /datum/mind/Destroy()
@@ -199,8 +200,8 @@
 	var/list/relations = matchmaker.get_relationships(mind)
 	var/list/dat = list()
 	var/editable = 0
-	if(mind.gen_relations_info)
-		dat += "<b>Things they all know about you:</b><br>[mind.gen_relations_info]<hr>"
+	if(mind.general_relations_info)
+		dat += "<b>Things they all know about you:</b><br>[mind.general_relations_info]<hr>"
 		dat += "An <b>\[F\]</b> indicates that the other player has finalized the connection.<br>"
 		dat += "<br>"
 	for(var/datum/relation/relation in relations)
@@ -212,7 +213,7 @@
 		dat += "<br>"
 		dat += "<b>Things they know about you:</b>[!relation.finalized ?"<a href='byond://?src=\ref[src];info_relation=\ref[relation]'>Edit</a>" : ""]<br>[relation.info ? "[relation.info]" : " Nothing specific."]"
 		if(relation.other.info)
-			dat += "<br><b>Things you know about them:</b><br>[relation.other.info]<br>[relation.other.holder.gen_relations_info]"
+			dat += "<br><b>Things you know about them:</b><br>[relation.other.info]<br>[relation.other.holder.general_relations_info]"
 		dat += "<hr>"
 
 	if(mind.known_connections && mind.known_connections.len)
@@ -233,15 +234,15 @@
 	var/decl/modpack/matchmaking/matchmaker = IMPLIED_DECL
 	var/list/relations = matchmaker.get_relationships(mind,other.mind,TRUE)
 	var/list/dat = list("<h2>[other]</h2>")
-	if(mind.gen_relations_info)
-		dat += "<b>Things they know about you:</b><br>[mind.gen_relations_info]<hr>"
+	if(mind.general_relations_info)
+		dat += "<b>Things they know about you:</b><br>[mind.general_relations_info]<hr>"
 		dat += "<br>"
 	for(var/datum/relation/relation in relations)
 		dat += "<br>[relation.desc]"
 		dat += "<br>"
 		dat += "<b>Things they know about you:</b><br>[relation.info ? "[relation.info]" : " Nothing specific."]"
 		if(relation.other.info)
-			dat += "<br><b>Things you know about them:</b><br>[relation.other.info]<br>[relation.other.holder.gen_relations_info]"
+			dat += "<br><b>Things you know about them:</b><br>[relation.other.info]<br>[relation.other.holder.general_relations_info]"
 		dat += "<hr>"
 
 	var/datum/browser/popup = new(usr, "relations", "Relationship Info")

@@ -33,6 +33,11 @@
 /turf/proc/add_dirt(amount)
 	if(!simulated)
 		return FALSE
+	if(turf_flags & TURF_FLAG_ABSORB_LIQUID) // this should maybe be a separate flag but everything that has it shouldn't have dirt
+		return FALSE
+	var/decl/material/turf_material = get_material()
+	if(turf_material?.dirtiness > 0) // can't get dirt dirty!
+		return FALSE
 	var/obj/effect/decal/cleanable/dirt/dirt = locate() in src
 	if(!dirt)
 		dirt = new(src)

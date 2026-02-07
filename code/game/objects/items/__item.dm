@@ -1163,7 +1163,7 @@ modules/mob/living/human/life.dm if you die, you will be zoomed out.
 	desc = new_desc
 
 /obj/item/proc/setup_power_supply(loaded_cell_type, accepted_cell_type, power_supply_extension_type, charge_value)
-	SHOULD_CALL_PARENT(FALSE)
+	SHOULD_CALL_PARENT(TRUE)
 	if(loaded_cell_type || accepted_cell_type)
 		set_extension(src, (power_supply_extension_type || /datum/extension/loaded_cell), (accepted_cell_type || loaded_cell_type), loaded_cell_type, charge_value)
 

@@ -14,6 +14,10 @@
 	var/box_tag
 	var/box_tag_color = COLOR_BLACK
 
+/obj/item/pizzabox/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(pizza, /obj/item/pizzabox)
+
 /obj/item/pizzabox/Initialize(ml, material_key)
 	. = ..()
 	if(ispath(pizza))

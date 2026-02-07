@@ -349,6 +349,7 @@
 		update_icon()
 		return
 
+	contents_were_modified("door damage")
 	var/component_damage = get_damage_leakthrough(damage, BRUTE)
 	damage -= component_damage
 

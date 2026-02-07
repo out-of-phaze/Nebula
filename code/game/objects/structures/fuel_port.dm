@@ -82,5 +82,8 @@
 	return
 
 // And here subtype with inserted tank.
+/obj/structure/fuel_port/hydrogen/GetSerializedType()
+	return /obj/structure/fuel_port
+
 /obj/structure/fuel_port/hydrogen
 	start_tank_type = /obj/item/tank/hydrogen

@@ -135,6 +135,8 @@
 		worker.equip_to_storage_or_put_in_hands(thing)
 
 /datum/job/proc/get_total_starting_money(var/mob/living/human/worker)
+	if(worker.__deserialization_payload) // ???? i guess??
+		return 0 // you already got your starting money when you joined
 	. = 4 * rand(75, 100) * economic_power
 	// Get an average economic power for our background.
 	var/background_mod =   0

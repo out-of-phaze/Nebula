@@ -17,11 +17,15 @@
 /obj/structure/produce_bin/LateInitialize(mapload, ...)
 	..()
 	if(mapload)
+		loc?._suppress_content_change_update = TRUE
+		_suppress_content_change_update = TRUE
 		for(var/obj/item/food/grown/produce in loc)
 			if(!produce.simulated || produce.anchored)
 				continue
 			if(storage.can_be_inserted(produce, null))
 				storage.handle_item_insertion(null, produce)
+		loc?._suppress_content_change_update = FALSE
+		_suppress_content_change_update = FALSE
 
 /obj/structure/produce_bin/attackby(obj/item/used_item, mob/user)
 

@@ -172,7 +172,10 @@ var/global/list/map_count = list()
 	if(!T || (target_turf_type && !istype(T,target_turf_type)))
 		return 0
 	var/newpath = get_appropriate_path(map[current_cell])
-	. = (newpath && !istype(T, newpath)) ? T.ChangeTurf(newpath) : T
+	if(newpath && !istype(T, newpath))
+		. = T.ChangeTurf(newpath)
+	else
+		. = T
 	get_additional_spawns(map[current_cell], ., get_spawn_dir(x, y))
 	if(use_area)
 		ChangeArea(., use_area)

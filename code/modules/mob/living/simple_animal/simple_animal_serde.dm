@@ -2,15 +2,11 @@
 /mob/living/simple_animal/ShouldSerialize(_age)
 	return simulated
 
-/mob/living/simple_animal/GetPossiblySerializableInstances()
-	return list(src)
-
 /mob/living/simple_animal/Serialize()
 	. = ..()
 
-	SERIALIZE_IF_MODIFIED(name, /mob/living/simple_animal)
-	SERIALIZE_IF_MODIFIED(desc, /mob/living/simple_animal)
-	SERIALIZE_IF_MODIFIED(icon_state, /mob/living/simple_animal)
+	SERIALIZE_IF_MODIFIED(icon_state, /mob/living)
+	SERIALIZE_IF_MODIFIED(bleed_ticks, /mob/living/simple_animal)
 
 	SERIALIZE_IF_MODIFIED(purge, /mob/living/simple_animal)
 	SERIALIZE_IF_MODIFIED(eye_color, /mob/living/simple_animal)

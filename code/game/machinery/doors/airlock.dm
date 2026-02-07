@@ -89,6 +89,22 @@
 	var/welded_file         = 'icons/obj/doors/station/welded.dmi'
 	var/emag_file           = 'icons/obj/doors/station/emag.dmi'
 
+/obj/machinery/door/airlock/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(lock_cut_state, /obj/machinery/door/airlock)
+	SERIALIZE_INSTANCE(brace, /obj/machinery/door/airlock)
+	SERIALIZE_IF_MODIFIED(door_color, /obj/machinery/door/airlock)
+	SERIALIZE_IF_MODIFIED(stripe_color, /obj/machinery/door/airlock)
+	SERIALIZE_IF_MODIFIED(symbol_color, /obj/machinery/door/airlock)
+	SERIALIZE_IF_MODIFIED(window_color, /obj/machinery/door/airlock)
+	SERIALIZE_IF_MODIFIED(welded, /obj/machinery/door/airlock)
+	SERIALIZE_IF_MODIFIED(locked, /obj/machinery/door/airlock)
+	SERIALIZE_IF_MODIFIED(lights, /obj/machinery/door/airlock)
+
+/obj/machinery/door/airlock/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(brace)
+
 /obj/machinery/door/airlock/Process()
 	if(main_power_lost_until > 0 && world.time >= main_power_lost_until)
 		regainMainPower()
@@ -1103,6 +1119,7 @@ About the new airlock wires panel:
 // Braces can act as an extra layer of armor - they will take damage first.
 /obj/machinery/door/airlock/take_damage(damage, damage_type = BRUTE, damage_flags, inflicter, armor_pen = 0, silent, do_update_health)
 	if(brace)
+		contents_were_modified("airlock brace damage")
 		brace.take_damage(damage)
 	else
 		..()

@@ -105,6 +105,16 @@
 /obj/item/gun/launcher/bow/fancy/crafted
 	string = null
 
+/obj/item/gun/launcher/bow/Serialize()
+	. = ..()
+	SERIALIZE_INSTANCE_IF_MODIFIED(string, /obj/item/gun/launcher/bow)
+	SERIALIZE_INSTANCE_IF_MODIFIED(_loaded, /obj/item/gun/launcher/bow)
+
+/obj/item/gun/launcher/bow/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(string)
+	DESERIALIZE_INSTANCE(_loaded)
+
 /obj/item/gun/launcher/bow/Initialize()
 	if(ispath(string))
 		set_string(new string(src))

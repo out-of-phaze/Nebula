@@ -7,6 +7,10 @@
 	material = /decl/material/solid/metal/steel
 	var/lock_data
 
+/obj/item/lock_construct/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(lock_data, /obj/item/lock_construct)
+
 /obj/item/lock_construct/Initialize()
 	. = ..()
 	lock_data = generateRandomString(round(material.integrity/50))

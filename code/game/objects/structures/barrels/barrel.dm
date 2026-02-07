@@ -46,11 +46,15 @@
 /obj/structure/reagent_dispensers/barrel/LateInitialize(mapload, ...)
 	..()
 	if(mapload)
+		loc?._suppress_content_change_update = TRUE
+		_suppress_content_change_update = TRUE
 		for(var/obj/item/thing in loc)
 			if(!thing.simulated || thing.anchored)
 				continue
 			if(storage.can_be_inserted(thing, null))
 				storage.handle_item_insertion(null, thing)
+		_suppress_content_change_update = FALSE
+		loc?._suppress_content_change_update = FALSE
 
 /obj/structure/reagent_dispensers/barrel/on_reagent_change()
 	if(!(. = ..()) || QDELETED(src))

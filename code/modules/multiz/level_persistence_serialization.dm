@@ -33,8 +33,8 @@ var/global/list/level_persistence_ref_map = list()
 	var/list/instances_to_save = get_persistent_instances()
 	if(!length(instances_to_save))
 		return
-	for(var/datum/thing as anything in get_persistent_instances())
-		var/serialized_instance = thing.Serialize()
+	for(var/datum/thing as anything in instances_to_save)
+		var/serialized_instance = thing.DoSerialize()
 		if(length(serialized_instance))
 			.[thing.get_run_uid()] = serialized_instance
 

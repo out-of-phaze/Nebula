@@ -50,7 +50,8 @@
 		if(reinf_material || additional_reinf_material || felted)
 			tool_interaction_flags &= ~TOOL_INTERACTION_DECONSTRUCT
 
-		DELETE_IF_DUPLICATE_OF(/obj/structure/table)
+		if(!__deserialization_payload)
+			DELETE_IF_DUPLICATE_OF(/obj/structure/table)
 		. = INITIALIZE_HINT_LATELOAD
 
 // We do this because need to make sure adjacent tables init their material before we try and merge.

@@ -249,46 +249,40 @@ var/global/list/REVERSE_LIGHTING_CORNER_DIAGONAL = list(0, 0, 0, 0, 3, 4, 0, 0, 
 	UPDATE_APPARENT(src, g)
 	UPDATE_APPARENT(src, b)
 
+	var/datum/lighting_corner/Tcorn = src
 	var/turf/T
 	var/Ti
 
-	if (t1)
-		T = t1
-		Ti = t1i
-	else if (t2)
-		T = t2
-		Ti = t2i
-	else if (t3)
-		T = t3
-		Ti = t3i
-	else if (t4)
-		T = t4
-		Ti = t4i
-	else
-		// This should be impossible to reach -- how do we exist without at least one master turf?
-		CRASH("Corner has no masters!")
-
-	var/datum/lighting_corner/below = src
-
 	// We init before Z-Mimic, cannot rely on above/below.
-	while ((T = GET_BELOW(T)) && ((below.t1?.z_flags | below.t2?.z_flags | below.t3?.z_flags | below.t4?.z_flags) & ZM_ALLOW_LIGHTING) && TURF_IS_DYNAMICALLY_LIT_UNSAFE(T))
+	while(TRUE)
+		if ((Tcorn.t1?.z_flags & ZM_ALLOW_LIGHTING) && (T = Tcorn.t1.below || GET_BELOW(Tcorn.t1)))
+			Ti = Tcorn.t1i
+		else if ((Tcorn.t2?.z_flags & ZM_ALLOW_LIGHTING) && (T = Tcorn.t2.below || GET_BELOW(Tcorn.t2)))
+			Ti = Tcorn.t2i
+		else if ((Tcorn.t3?.z_flags & ZM_ALLOW_LIGHTING) && (T = Tcorn.t3.below || GET_BELOW(Tcorn.t3)))
+			Ti = Tcorn.t3i
+		else if ((Tcorn.t4?.z_flags & ZM_ALLOW_LIGHTING) && (T = Tcorn.t4.below || GET_BELOW(Tcorn.t4)))
+			Ti = Tcorn.t4i
+		else // Corner doesn't/can't pass light downwards
+			break
+
 		if (!T.corners || !T.corners[Ti])
 			T.generate_missing_corners()
 
 		ASSERT(T.corners?.len)
 
-		below = T.corners[Ti]
-		below.above_ambient_r += delta_r
-		below.above_ambient_g += delta_g
-		below.above_ambient_b += delta_b
+		Tcorn = T.corners[Ti]
+		Tcorn.above_ambient_r += delta_r
+		Tcorn.above_ambient_g += delta_g
+		Tcorn.above_ambient_b += delta_b
 
-		UPDATE_APPARENT(below, r)
-		UPDATE_APPARENT(below, g)
-		UPDATE_APPARENT(below, b)
+		UPDATE_APPARENT(Tcorn, r)
+		UPDATE_APPARENT(Tcorn, g)
+		UPDATE_APPARENT(Tcorn, b)
 
-		if (!skip_update && !below.needs_update)
-			below.needs_update = TRUE
-			SSlighting.corner_queue += below
+		if (!skip_update && !Tcorn.needs_update)
+			Tcorn.needs_update = TRUE
+			SSlighting.corner_queue += Tcorn
 
 	if (needs_update || skip_update)
 		return
@@ -347,16 +341,16 @@ var/global/list/REVERSE_LIGHTING_CORNER_DIAGONAL = list(0, 0, 0, 0, 3, 4, 0, 0, 
 	var/Ti
 
 	if (!new_opacity)
-		for (;;)
-			if (Tcorn.t1 && (T = Tcorn.t1.below || GET_BELOW(Tcorn.t1)) && (T.above?.z_flags & ZM_ALLOW_LIGHTING))
+		while(TRUE)
+			if ((Tcorn.t1?.z_flags & ZM_ALLOW_LIGHTING) && (T = Tcorn.t1.below || GET_BELOW(Tcorn.t1)))
 				Ti = Tcorn.t1i
-			else if (Tcorn.t2 && (T = Tcorn.t2.below || GET_BELOW(Tcorn.t2)) && (T.above?.z_flags & ZM_ALLOW_LIGHTING))
+			else if ((Tcorn.t2?.z_flags & ZM_ALLOW_LIGHTING) && (T = Tcorn.t2.below || GET_BELOW(Tcorn.t2)))
 				Ti = Tcorn.t2i
-			else if (Tcorn.t3 && (T = Tcorn.t3.below || GET_BELOW(Tcorn.t3)) && (T.above?.z_flags & ZM_ALLOW_LIGHTING))
+			else if ((Tcorn.t3?.z_flags & ZM_ALLOW_LIGHTING) && (T = Tcorn.t3.below || GET_BELOW(Tcorn.t3)))
 				Ti = Tcorn.t3i
-			else if (Tcorn.t4 && (T = Tcorn.t4.below || GET_BELOW(Tcorn.t4)) && (T.above?.z_flags & ZM_ALLOW_LIGHTING))
+			else if ((Tcorn.t4?.z_flags & ZM_ALLOW_LIGHTING) && (T = Tcorn.t4.below || GET_BELOW(Tcorn.t4)))
 				Ti = Tcorn.t4i
-			else	// Nothing above us that cares about below light.
+			else // Turf doesn't/can't pass light downwards
 				break
 
 			Tcorn = T.corners[Ti]
@@ -375,7 +369,7 @@ var/global/list/REVERSE_LIGHTING_CORNER_DIAGONAL = list(0, 0, 0, 0, 3, 4, 0, 0, 
 	T = null
 	Tcorn = src
 
-	for (;;)
+	while(TRUE)
 		if (Tcorn.t1 && (T = Tcorn.t1.above || GET_ABOVE(Tcorn.t1)) && (T.z_flags & ZM_ALLOW_LIGHTING))
 			Ti = Tcorn.t1i
 		else if (Tcorn.t2 && (T = Tcorn.t2.above || GET_ABOVE(Tcorn.t2)) && (T.z_flags & ZM_ALLOW_LIGHTING))

@@ -89,21 +89,23 @@
 	. = SSshuttle.block_queue
 	SSshuttle.block_queue = TRUE
 
-/datum/map_template/proc/init_shuttles(var/pre_init_state, var/map_hash, var/list/initialized_areas_by_type)
-	for (var/shuttle_type in shuttles_to_initialise)
-		LAZYSET(SSshuttle.shuttles_to_initialize, shuttle_type, map_hash) // queue up for init.
+/datum/map_template/proc/init_areas(var/map_hash, var/list/initialized_areas_by_type)
 	if(map_hash)
-		SSshuttle.map_hash_to_areas[map_hash] = initialized_areas_by_type
+		SSmapping.map_hash_to_areas[map_hash] = initialized_areas_by_type
 		for(var/area/A in initialized_areas_by_type)
 			A.saved_map_hash = map_hash
 			events_repository.register(/decl/observ/destroyed, A, src, PROC_REF(cleanup_lateloaded_area))
+
+/datum/map_template/proc/init_shuttles(var/pre_init_state, var/map_hash, var/list/initialized_areas_by_type)
+	for (var/shuttle_type in shuttles_to_initialise)
+		LAZYSET(SSshuttle.shuttles_to_initialize, shuttle_type, map_hash) // queue up for init.
 	SSshuttle.block_queue = pre_init_state
 	SSshuttle.clear_init_queue() // We will flush the queue unless there were other blockers, in which case they will do it.
 
 /datum/map_template/proc/cleanup_lateloaded_area(area/destroyed_area)
 	events_repository.unregister(/decl/observ/destroyed, destroyed_area, src, PROC_REF(cleanup_lateloaded_area))
 	if(destroyed_area.saved_map_hash)
-		SSshuttle.map_hash_to_areas[destroyed_area.saved_map_hash] -= destroyed_area
+		SSmapping.map_hash_to_areas[destroyed_area.saved_map_hash] -= destroyed_area
 
 ///Handle loading a single map path its bottom left corner starting at x,y,z.
 /// Returns a /datum/map_load_metadata if loading was successful.
@@ -158,6 +160,7 @@
 	//initialize things that are normally initialized after map load
 	Master.StartLoadingMap()
 	init_atoms(atoms_to_initialise)
+	init_areas(map_hash, initialized_areas_by_type)
 	init_shuttles(shuttle_state, map_hash, initialized_areas_by_type)
 	after_load()
 	for(var/z_index = bounds[MAP_MINZ] to bounds[MAP_MAXZ])
@@ -199,6 +202,7 @@
 	//initialize things that are normally initialized after map load
 	Master.StartLoadingMap()
 	init_atoms(atoms_to_initialise)
+	init_areas(map_hash, initialized_areas_by_type)
 	init_shuttles(shuttle_state, map_hash, initialized_areas_by_type)
 	after_load()
 	Master.StopLoadingMap()

@@ -77,7 +77,7 @@
 		if(IsValidEntry(thing))
 			var/list/things_to_serialize = thing.GetPossiblySerializableInstances()
 			for(var/datum/subthing in things_to_serialize)
-				entries[subthing.get_run_uid()] = subthing.Serialize()
+				entries[subthing.get_run_uid()] = subthing.DoSerialize()
 	var/decl/serialization_handler/handler = GET_DECL(serialization_handler)
 	handler.save_data_to_file(filename, entries, name)
 

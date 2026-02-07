@@ -3,9 +3,9 @@ SUBSYSTEM_DEF(daycycle)
 	name       = "Day Cycle"
 	priority   = SS_PRIORITY_DAYCYCLE
 	wait       = 10 SECONDS
-	flags      = SS_BACKGROUND | SS_POST_FIRE_TIMING | SS_NO_INIT
-	runlevels  = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
-	init_order = SS_INIT_TICKER
+	flags      = SS_BACKGROUND | SS_POST_FIRE_TIMING
+	runlevels  = RUNLEVEL_LOBBY | RUNLEVEL_GAME | RUNLEVEL_POSTGAME
+	init_order = SS_INIT_DEFAULT // run prior to SSair so external atmosphere has the right temperature
 	var/list/daycycles = list()
 	var/list/current_run
 
@@ -36,7 +36,10 @@ SUBSYSTEM_DEF(daycycle)
 		daycycles[daycycle_id] = daycycle
 	return daycycle
 
-/datum/controller/subsystem/daycycle/fire(resumed = 0)
+/datum/controller/subsystem/daycycle/Initialize(start_timeofday)
+	fire(mc_check = FALSE)
+
+/datum/controller/subsystem/daycycle/fire(resumed = FALSE, mc_check = TRUE)
 	if(get_config_value(/decl/config/toggle/disable_daycycle))
 		disable()
 		LAZYCLEARLIST(current_run)
@@ -49,5 +52,8 @@ SUBSYSTEM_DEF(daycycle)
 		current_run.len--
 		if(istype(cycle))
 			cycle.tick()
-			if (MC_TICK_CHECK)
-				return
+			if(mc_check)
+				if (MC_TICK_CHECK)
+					break
+			else
+				CHECK_TICK

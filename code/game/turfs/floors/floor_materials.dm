@@ -12,8 +12,11 @@
 		. = TRUE
 
 	if(.)
-		state_was_modified()
 		if(!skip_update)
+			// todo: some kind of post-material-set proc so this feels less shoved-in
+			if(material?.dirtiness > 0) // can't get dirt dirty!
+				remove_dirt(get_dirt())
+			state_was_modified("set_turf_materials") // this is our best effort at skipping unnecessary serialization
 			queue_icon_update()
 
 /turf/floor/get_material()

@@ -36,6 +36,7 @@ var/global/dmm_suite/preloader/_preloader = new
 			/obj/machinery,
 			/obj/structure,
 			/obj/abstract/landmark/exoplanet_spawn,
+			/obj/effect/decal/cleanable/plant_bits
 		))
 	..()
 
@@ -70,7 +71,7 @@ var/global/dmm_suite/preloader/_preloader = new
 
 	if(length(M.turfs_to_mark_modified))
 		for(var/turf/turf in M.turfs_to_mark_modified)
-			turf.state_was_modified()
+			turf.state_was_modified("load_map")
 
 	#ifdef TESTING
 	if(turfsSkipped)

@@ -46,6 +46,25 @@
 	/// A set of utensil flags determining which utensil interactions are valid with this food.
 	var/utensil_flags = UTENSIL_FLAG_SCOOP | UTENSIL_FLAG_COLLECT
 
+/obj/item/food/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(cooked_food, /obj/item/food)
+	SERIALIZE_IF_MODIFIED(dry, /obj/item/food)
+	SERIALIZE_IF_MODIFIED(slice_num, /obj/item/food)
+	SERIALIZE_IF_MODIFIED(bitecount, /obj/item/food)
+	SERIALIZE_IF_MODIFIED(filling_color, /obj/item/food)
+	if(istype(plate))
+		SERIALIZE_INSTANCE(plate, /obj/item/food)
+	if(istype(trash, /obj/item))
+		var/obj/item/trash_item = trash
+		SERIALIZE_VALUE(trash, /obj/item/food, trash_item.get_run_uid())
+
+/obj/item/food/Deserialize(list/instance_map)
+	. = ..()
+	// these check istext() so it's safe to do without additional checks
+	DESERIALIZE_INSTANCE(plate)
+	DESERIALIZE_INSTANCE(trash)
+
 /obj/item/food/Initialize(ml, material_key, skip_plate = FALSE)
 	. = ..()
 	if(cooked_food == FOOD_RAW)

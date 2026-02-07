@@ -23,7 +23,6 @@
 
 	SHOULD_CALL_PARENT(FALSE)
 	atom_flags |= ATOM_FLAG_INITIALIZED
-	_earliest_type ||= type
 
 	AMBIENCE_QUEUE_TURF(src)
 

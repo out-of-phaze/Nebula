@@ -15,6 +15,11 @@
 		cell = new cell(src)
 	. = ..()
 
+/obj/item/organ/internal/cell/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(open, /obj/item/organ/internal/cell)
+	SERIALIZE_IF_MODIFIED(cell, /obj/item/organ/internal/cell)
+
 /obj/item/organ/internal/cell/proc/percent()
 	if(!cell)
 		return 0

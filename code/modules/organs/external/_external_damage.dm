@@ -20,6 +20,7 @@
 	if((brute <= 0) && (burn <= 0))
 		return 0
 
+	contents_were_modified("organ took damage")
 	var/sharp = (damage_flags & DAM_SHARP)
 	var/edge  = (damage_flags & DAM_EDGE)
 	var/laser = (damage_flags & DAM_LASER)

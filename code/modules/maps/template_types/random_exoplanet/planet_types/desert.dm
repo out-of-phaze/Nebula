@@ -118,6 +118,7 @@
 	var/v = noise2value(value)
 	if(v > 6 && prob(10))
 		new/obj/effect/quicksand(T)
+		T.contents_were_modified("desert planet quicksand")
 
 /datum/random_map/noise/exoplanet/desert/get_appropriate_path(var/value)
 	. = ..()

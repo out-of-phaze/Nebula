@@ -27,6 +27,10 @@
 	var/tmp/activate_sound              = 'sound/items/welderactivate.ogg'
 	var/tmp/deactivate_sound            = 'sound/items/welderdeactivate.ogg'
 
+/obj/item/weldingtool/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(tank, /obj/item/weldingtool)
+
 /obj/item/weldingtool/Initialize()
 	if(ispath(tank))
 		insert_tank(new tank, null, TRUE, TRUE)

@@ -140,6 +140,8 @@
 	if(current_health == ITEM_HEALTH_NO_DAMAGE) // This object does not take damage.
 		return
 
+	contents_were_modified("structure took damage")
+
 	if(material && material.is_brittle())
 		if(reinf_material)
 			if(reinf_material.is_brittle())

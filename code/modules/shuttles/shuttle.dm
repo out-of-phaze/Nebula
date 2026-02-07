@@ -60,8 +60,8 @@
 				events_repository.register(/decl/observ/destroyed, area_type, src, PROC_REF(remove_shuttle_area))
 				continue
 			var/area/A
-			if(map_hash && islist(SSshuttle.map_hash_to_areas[map_hash]))
-				A = SSshuttle.map_hash_to_areas[map_hash][area_type] // We try to find the correct area of the given type.
+			if(map_hash && islist(SSmapping.map_hash_to_areas[map_hash]))
+				A = SSmapping.map_hash_to_areas[map_hash][area_type] // We try to find the correct area of the given type.
 			else
 				A = locate(area_type) // But if this is a mainmap shuttle, there is only one anyway so just find it.
 			if(!istype(A))

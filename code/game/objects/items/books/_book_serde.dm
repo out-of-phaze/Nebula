@@ -29,3 +29,15 @@
 			forceMove(pick(global.station_bookcases))
 		else
 			forceMove(get_random_spawn_turf(SPAWN_FLAG_PERSISTENCE_CAN_SPAWN))
+
+/obj/item/book/skill/Serialize()
+	. = ..()
+	SERIALIZE_DECL_IF_MODIFIED(skill, /obj/item/book/skill)
+	SERIALIZE_IF_MODIFIED(skill_req, /obj/item/book/skill)
+	SERIALIZE_IF_MODIFIED(skill_name, /obj/item/book/skill)
+	SERIALIZE_IF_MODIFIED(ez_read, /obj/item/book/skill)
+	SERIALIZE_IF_MODIFIED(progress, /obj/item/book/skill)
+
+/obj/item/book/skill/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_DECL_TO_TYPE(skill)

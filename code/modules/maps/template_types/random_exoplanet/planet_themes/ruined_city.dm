@@ -109,6 +109,7 @@
 	if(istype(T, /turf/floor/concrete/reinforced/road))
 		if(prob(1))
 			new/obj/structure/rubble/house(T)
+			T.contents_were_modified("rubble")
 		if(prob(5))
 			T.set_floor_broken(TRUE)
 
@@ -145,10 +146,13 @@
 		return
 	if(prob(10))
 		new/obj/item/remains/xeno/charred(T)
+		T.contents_were_modified("charred remains")
 	if((T.is_floor_broken() && prob(80)) || prob(10))
 		new/obj/structure/rubble/house(T)
+		T.contents_were_modified("rubble")
 	if(prob(1))
 		new/obj/abstract/landmark/exoplanet_spawn/animal(T)
+		T.contents_were_modified("exoplanet animal")
 
 //Artifact containment lab
 /turf/wall/containment

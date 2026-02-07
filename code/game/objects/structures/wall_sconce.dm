@@ -36,11 +36,19 @@
 	/// Whether or not the light source, if present, is automatically lit on Initialize.
 	var/start_lit = FALSE
 
+/obj/structure/wall_sconce/Serialize()
+	. = ..()
+	SERIALIZE_INSTANCE_IF_MODIFIED(light_source, /obj/structure/wall_sconce)
+
+/obj/structure/wall_sconce/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(light_source)
+
 /obj/structure/wall_sconce/Initialize(var/ml, var/_mat, var/_reinf_mat, var/supplied_dir)
 
 	if(ispath(light_source))
 		light_source = new light_source(src)
-	if(start_lit && istype(light_source))
+	if(start_lit && istype(light_source) && !__deserialization_payload)
 		light_source.light(null, no_message = TRUE)
 
 	. = ..()
@@ -129,6 +137,9 @@
 		add_overlay(sconce_overlay)
 
 // Subtypes below.
+/obj/structure/wall_sconce/GetSerializedType() // don't save the subtypes or we'll get a bajillion stacked items
+	return /obj/structure/wall_sconce
+
 /obj/structure/wall_sconce/lantern
 	light_source        = /obj/item/flame/fuelled/lantern/filled
 

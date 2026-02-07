@@ -39,7 +39,7 @@
 
 /obj/effect/decal/cleanable/blood/Deserialize(list/instance_map)
 	. = ..()
-	DESERIALIZE_DECL_TO_TYPE(chemical)
+	DESERIALIZE_DECL_TO_TYPE_IF_MODIFIED(chemical, /obj/effect/decal/cleanable/blood)
 
 /obj/effect/decal/cleanable/blood/reveal_blood()
 	if(ispath(chemical, /decl/material/liquid/blood) && !fluorescent)

@@ -1,6 +1,14 @@
 /obj/structure
 	var/datum/lock/lock
 
+/obj/structure/Serialize()
+	. = ..()
+	SERIALIZE_INSTANCE_IF_MODIFIED(lock, /obj/structure)
+
+/obj/structure/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(lock)
+
 /obj/structure/proc/try_key_unlock(obj/item/used_item, mob/user)
 	if(!lock)
 		return FALSE

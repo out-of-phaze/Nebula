@@ -4,6 +4,7 @@
 		return
 	if(damage_type != BRUTE && damage_type != BURN && damage_type != ELECTROCUTE)
 		return
+	contents_were_modified("machinery damage")
 	if(!silent)
 		var/hitsound = 'sound/weapons/smash.ogg'
 		if(damage_type == ELECTROCUTE)

@@ -34,11 +34,6 @@
 
 	set_turf_materials(material, skip_update = TRUE)
 
-	if(istext(_flooring))
-		_flooring = resolve_decl_uid_list(cached_json_decode(_flooring))
-		if(!length(_flooring))
-			_flooring = null
-
 	if(!floortype && (ispath(_flooring) || islist(_flooring)))
 		floortype = _flooring
 	else

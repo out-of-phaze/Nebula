@@ -34,6 +34,7 @@
 		if(istype(result, /turf/wall) && build_turf_type)
 			var/turf/wall/result_wall = result
 			result_wall.floor_type = build_turf_type
+			result_wall.state_was_modified("floor_type")
 	return result
 
 /decl/stack_recipe/turfs/wall

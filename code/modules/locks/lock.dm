@@ -35,6 +35,20 @@
 	holder = null
 	. = ..()
 
+/datum/lock/Serialize()
+	. = ..()
+	SERIALIZE_INSTANCE_IF_MODIFIED(holder, /datum/lock)
+	SERIALIZE_IF_MODIFIED(status, /datum/lock)
+	SERIALIZE_IF_MODIFIED(lock_data, /datum/lock)
+	SERIALIZE_TYPE_IF_MODIFIED(material, /datum/lock)
+	SERIALIZE_TYPE_IF_MODIFIED(lockpicking_skill, /datum/lock)
+
+/datum/lock/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(holder)
+	DESERIALIZE_TYPE_IF_MODIFIED(material, /datum/lock)
+	DESERIALIZE_TYPE_IF_MODIFIED(lockpicking_skill, /datum/lock)
+
 /datum/lock/proc/unlock(var/key = "", var/mob/user)
 	if(!isLocked())
 		to_chat(user, SPAN_WARNING("It's already unlocked!"))

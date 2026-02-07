@@ -26,6 +26,6 @@
 		. = TRUE
 
 	if(.)
-		state_was_modified()
 		if(!skip_update)
+			state_was_modified("set_turf_materials")
 			queue_icon_update()

@@ -3,7 +3,7 @@
 	if(ramp_slope_direction == new_slope)
 		return
 
-	state_was_modified()
+	state_was_modified("make_ramp")
 	ramp_slope_direction = new_slope
 	QDEL_NULL_LIST(engravings)
 

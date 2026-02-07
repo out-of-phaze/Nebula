@@ -16,6 +16,22 @@
 	daycycle_type = /datum/daycycle/shaded_hills
 	daycycle_id = "daycycle_shaded_hills"
 	template_edge_padding = 0 // we use a strictly delineated subarea, no need for this guard
+	persistent_data_location = "data/level_data"
+
+// don't opt out of it on a serde-based basis
+/datum/level_data/main_level/shaded_hills/should_generate_level()
+	if(!get_config_value(/decl/config/toggle/roundstart_level_generation) || !(get_subtemplate_budget() || length(level_generators)))
+		return FALSE
+	return TRUE
+
+/datum/level_data/main_level/shaded_hills/generate_level()
+	// if we persist the subtemplate area, we need to avoid making new subtemplates
+	// todo: handle list subtemplate_area, which is technically allowed
+	if(has_serde_data())
+		var/area/subtemplate_area_type = subtemplate_area || base_area
+		if(isarea(subtemplate_area_type) && (subtemplate_area_type::area_flags & AREA_FLAG_ALLOW_LEVEL_PERSISTENCE))
+			subtemplate_budget = 0
+	return ..()
 
 /datum/daycycle/shaded_hills
 	cycle_duration = 2 HOURS // 1 hour of daylight, 1 hour of night
@@ -41,8 +57,21 @@
 	subtemplate_budget = 5
 	subtemplate_category = MAP_TEMPLATE_CATEGORY_FANTASY_GRASSLAND
 	subtemplate_area = /area/shaded_hills/outside/poi
+	persistent_data_location = "data/level_data"
 
+/datum/level_data/main_level/shaded_hills/grassland/generate_level()
+	// if we have persistent data, remove the ones we don't want to re-generate (like the forage map)
+	// todo: make this not hardcoded
+	if(has_serde_data())
+		// no need to remove caves because that checks mask turfs
+		// no need to remove ore because we don't serialize extensions (oops, oversight, but it might be too expensive to anyway)
+		level_generators -= /datum/random_map/noise/forage/shaded_hills/grassland
+	return ..()
+
+// todo: some kind of mob migration events to repopulate the level over time
 /datum/level_data/main_level/shaded_hills/grassland/get_mobs_to_populate_level()
+	if(has_serde_data()) // we've already generated mobs
+		return
 	var/static/list/mobs_to_spawn = list(
 		list(
 			list(
@@ -65,14 +94,26 @@
 		"shaded_hills_grassland" = NORTH
 	)
 	level_generators = list(
+		/datum/random_map/automata/cave_system/shaded_hills,
 		/datum/random_map/noise/shaded_hills/swamp,
 		/datum/random_map/noise/forage/shaded_hills/swamp
 	)
 	subtemplate_budget = 5
 	subtemplate_category = MAP_TEMPLATE_CATEGORY_FANTASY_SWAMP
 	subtemplate_area = /area/shaded_hills/outside/swamp/poi
+	persistent_data_location = "data/level_data"
+
+/datum/level_data/main_level/shaded_hills/swamp/generate_level()
+	// if we have persistent data, remove the ones we don't want to re-generate (like the forage map)
+	// todo: make this not hardcoded
+	if(has_serde_data())
+		// no need to remove the noisemap because it checks for mask turfs
+		level_generators -= /datum/random_map/noise/forage/shaded_hills/swamp
+	return ..()
 
 /datum/level_data/main_level/shaded_hills/swamp/get_mobs_to_populate_level()
+	if(has_serde_data()) // we've already generated mobs
+		return
 	var/static/list/mobs_to_spawn = list(
 		list(
 			list(
@@ -108,14 +149,26 @@
 		"shaded_hills_grassland" = SOUTH
 	)
 	level_generators = list(
+		/datum/random_map/automata/cave_system/shaded_hills,
 		/datum/random_map/noise/shaded_hills/woods,
 		/datum/random_map/noise/forage/shaded_hills/woods
 	)
 	subtemplate_budget = 5
 	subtemplate_category = MAP_TEMPLATE_CATEGORY_FANTASY_WOODS
 	subtemplate_area = /area/shaded_hills/outside/woods/poi
+	persistent_data_location = "data/level_data"
+
+/datum/level_data/main_level/shaded_hills/woods/generate_level()
+	// if we have persistent data, remove the ones we don't want to re-generate (like the forage map)
+	// todo: make this not hardcoded
+	if(has_serde_data())
+		// no need to remove the noisemap because it checks for mask turfs
+		level_generators -= /datum/random_map/noise/forage/shaded_hills/woods
+	return ..()
 
 /datum/level_data/main_level/shaded_hills/woods/get_mobs_to_populate_level()
+	if(has_serde_data()) // we've already generated mobs
+		return
 	var/static/list/mobs_to_spawn = list(
 		list(
 			list(
@@ -151,6 +204,15 @@
 	subtemplate_budget = 5
 	subtemplate_category = MAP_TEMPLATE_CATEGORY_FANTASY_DOWNLANDS
 	subtemplate_area = /area/shaded_hills/outside/downlands/poi
+	persistent_data_location = "data/level_data"
+
+/datum/level_data/main_level/shaded_hills/downlands/generate_level()
+	// if we have persistent data, remove the ones we don't want to re-generate (like the forage map)
+	// todo: make this not hardcoded
+	if(has_serde_data())
+		// no need to remove the noisemap because it checks for mask turfs
+		level_generators -= /datum/random_map/noise/forage/shaded_hills/grassland
+	return ..()
 
 /datum/level_data/main_level/shaded_hills/caverns
 	name = "Shaded Hills - Caverns"

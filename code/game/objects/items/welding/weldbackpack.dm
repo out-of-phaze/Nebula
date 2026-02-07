@@ -21,6 +21,14 @@
 	if(istype(pack))
 		linked_pack = pack
 
+/obj/item/weldingtool/weldpack/Serialize()
+	. = ..()
+	SERIALIZE_INSTANCE(linked_pack, /obj/item/weldingtool/weldpack)
+
+/obj/item/weldingtool/weldpack/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(linked_pack)
+
 /obj/item/weldingtool/weldpack/insert_tank(obj/item/chems/welder_tank/T, mob/user, no_updates, quiet)
 	return FALSE
 
@@ -94,6 +102,14 @@
 
 /obj/item/chems/weldpack/populate_reagents()
 	add_to_reagents(/decl/material/liquid/fuel, REAGENT_MAXIMUM_VOLUME(reagents))
+
+/obj/item/chems/weldpack/Serialize()
+	. = ..()
+	SERIALIZE_INSTANCE(welder, /obj/item/chems/weldpack)
+
+/obj/item/chems/weldpack/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(welder)
 
 /obj/item/chems/weldpack/Initialize(ml, material_key)
 	if(ispath(welder))

@@ -39,7 +39,6 @@
 
 	if (!N)
 		return
-
 	// Spawning space in the middle of a multiz stack should just spawn an open turf.
 	if(ispath(N, /turf/space))
 		var/turf/below = GetBelow(src)
@@ -47,15 +46,22 @@
 			var/area/A = get_area(src)
 			N = A?.open_turf || open_turf_type || /turf/open
 
+	_earliest_type ||= type // set this prior to any changes
+	var/old_earliest_type = _earliest_type
+	var/old_earliest_area = _earliest_area
+
 	if (!(atom_flags & ATOM_FLAG_INITIALIZED))
-		return new N(src)
+		var/turf/new_turf = new N(src)
+		// these vars won't persist otherwise
+		new_turf._earliest_type = old_earliest_type
+		new_turf._earliest_area = old_earliest_area
+		return new_turf
 
 	// Rebuilt on next call.
 	supporting_platform = null
 
 	// Track a number of old values for the purposes of raising
 	// state change events after changing the turf to the new type.
-	var/old_earliest_type =    _earliest_type
 	var/old_fire =             fire
 	var/old_above =            above
 	var/old_opacity =          opacity
@@ -202,8 +208,10 @@
 		for(var/atom/movable/thing in changed_turf.get_contained_external_atoms())
 			thing.fall()
 
+	changed_turf._earliest_area = old_earliest_area
 	changed_turf._earliest_type = old_earliest_type
-	changed_turf.state_was_modified()
+	if(type != changed_turf._earliest_type)
+		changed_turf.state_was_modified("changeturf")
 
 /turf/proc/transport_properties_from(turf/other, transport_air)
 	if(transport_air && can_inherit_air && (other.zone || other.air))

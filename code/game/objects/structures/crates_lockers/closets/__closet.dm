@@ -50,10 +50,18 @@ var/global/list/closets = list()
 /obj/structure/closet/LateInitialize(mapload, ...)
 	var/list/will_contain = WillContain()
 	if(will_contain)
+		loc?._suppress_content_change_update = TRUE
+		_suppress_content_change_update = TRUE
 		create_objects_in_loc(opened ? loc : src, will_contain)
+		loc?._suppress_content_change_update = FALSE
+		_suppress_content_change_update = FALSE
 
 	if(!opened && mapload) // if closed and it's the map loading phase, relevant items at the crate's loc are put in the contents
+		loc?._suppress_content_change_update = TRUE // if this is loaded from a template it'll be marked to serialize anyway
+		_suppress_content_change_update = TRUE // so we can assume this is a compiled-in map
 		store_contents()
+		loc?._suppress_content_change_update = FALSE
+		_suppress_content_change_update = FALSE
 
 /obj/structure/closet/update_lock_overlay()
 	return // TODO

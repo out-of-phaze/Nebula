@@ -79,6 +79,8 @@ var/global/list/areas = list()
 
 	var/static/global_uid = 0
 	var/uid
+	/// Is this a new instance or the original, compiled-in one?
+	var/is_original = TRUE
 	var/area_flags = 0
 
 	//all air alarms in area are connected via magic
@@ -110,6 +112,9 @@ var/global/list/areas = list()
 		for(var/fish in additional_fishing_results)
 			fishing_results[fish] = additional_fishing_results[fish]
 	. = ..()
+	var/area/base_area = locate(src.type) in global.areas
+	if(base_area) // we aren't the first
+		is_original = FALSE
 	global.areas += src
 	if(!requires_power || !apc)
 		power_light =   0
@@ -148,6 +153,9 @@ var/global/list/areas = list()
 	var/area/old_area = get_area(T)
 	if(old_area == A)
 		return
+
+	T._earliest_area ||= old_area // do not use type, we can have multiple areas per type
+	T.contents_were_modified("ChangeArea") // in serialization, we consider the area to be a content of the loc even though that's false
 
 	var/old_area_ambience = old_area?.interior_ambient_light_modifier
 

@@ -23,6 +23,10 @@
 				else
 					target_turf.update_icon()
 
+// is this needed??
+/turf/open/get_physical_height()
+	return -(FLUID_DEEP)
+
 /turf/open/flooded
 	name = "open water"
 	flooded = /decl/material/liquid/water

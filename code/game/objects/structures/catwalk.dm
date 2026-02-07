@@ -21,7 +21,8 @@
 
 /obj/structure/catwalk/Initialize()
 	. = ..()
-	DELETE_IF_DUPLICATE_OF(/obj/structure/catwalk)
+	if(!__deserialization_payload)
+		DELETE_IF_DUPLICATE_OF(/obj/structure/catwalk)
 
 	if(!istype(material))
 		return INITIALIZE_HINT_QDEL

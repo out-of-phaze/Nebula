@@ -9,6 +9,9 @@
 	material = /decl/material/solid/organic/plastic
 	var/bag_type = /obj/structure/closet/body_bag
 
+/obj/item/bodybag/GetSerializedType()
+	return bag_type
+
 /obj/item/bodybag/proc/create_bag_structure(mob/user)
 	var/atom/bag = new bag_type(user.loc)
 	bag.add_fingerprint(user)

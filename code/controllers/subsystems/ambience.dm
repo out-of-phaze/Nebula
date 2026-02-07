@@ -2,26 +2,38 @@ SUBSYSTEM_DEF(ambience)
 	name = "Ambient Lighting"
 	wait = 1
 	priority = SS_PRIORITY_LIGHTING
-	init_order = SS_INIT_LIGHTING
+	init_order = SS_INIT_WEATHER // must come AFTER lighting
 	runlevels = RUNLEVEL_LOBBY | RUNLEVELS_DEFAULT // Copied from icon update subsystem.
-	flags = SS_NO_INIT
 	var/list/queued = list()
 
 /datum/controller/subsystem/ambience/stat_entry()
 	..("P:[length(queued)]")
 
+/datum/controller/subsystem/ambience/Initialize(start_timeofday)
+	log_ss("ambience", "Flushing ambience queue with [length(queued)] turfs.")
+	fire(no_mc_tick = TRUE)
+
 /datum/controller/subsystem/ambience/fire(resumed = FALSE, no_mc_tick = FALSE)
 	var/list/curr = queued
-	while (curr.len)
-		var/turf/target = curr[curr.len]
+	var/static/count = 0 // proc-level static var, as with SSgarbage, in case a runtime makes this proc end early
+	if (count) //runtime last run before we could do this.
+		var/c = count
+		count = 0 //so if we runtime on the Cut, we don't try again.
+		curr.Cut(1, c+1)
+	for(var/turf/target in curr) // this is faster for the vast majority of flat lists, even large ones
+		if(!target.ambience_queued) // already dequeued or processed
+			continue
 		target.ambience_queued = FALSE
-		curr.len--
+		count++
 		if(!QDELETED(target))
 			target.update_ambient_light_from_z_or_area()
 		if (no_mc_tick)
 			CHECK_TICK
 		else if (MC_TICK_CHECK)
-			return
+			break
+	if(count)
+		curr.Cut(1, count+1)
+		count = 0
 
 /datum/controller/subsystem/ambience/StartLoadingMap()
 	suspend()
@@ -42,10 +54,11 @@ SUBSYSTEM_DEF(ambience)
 	return TRUE
 
 /turf/proc/update_ambient_light_from_z_or_area()
+	if(opacity) // walls and such don't get ambient lights
+		clear_ambient_light()
+		return
 
 	// If we're not outside, we don't show ambient light.
-	clear_ambient_light() // TODO: fix the delta issues resulting in burn-in so this can be run only when needed
-
 	var/ambient_light_modifier
 	// If we're indoors because of our area, OR we're outdoors and not exposed to the weather, get interior ambience.
 	var/outsideness = shows_outdoor_ambience()

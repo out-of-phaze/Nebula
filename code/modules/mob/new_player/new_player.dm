@@ -87,6 +87,40 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 				totalPlayers++
 				if(player.ready)totalPlayersReady++
 
+/mob/new_player/proc/can_ready()
+	return GAME_STATE <= RUNLEVEL_LOBBY
+
+/mob/new_player/proc/can_observe()
+	return GAME_STATE >= RUNLEVEL_LOBBY
+
+/mob/new_player/proc/can_latejoin()
+	return GAME_STATE == RUNLEVEL_GAME
+
+// CHARACTER PERSISTENCE EDIT
+/mob/new_player/can_ready()
+	return ..() && !get_existing_character()
+
+/mob/new_player/can_observe()
+	return ..() && !get_existing_character()
+
+/mob/new_player/can_latejoin()
+	return ..() && !get_existing_character()
+
+/datum/controller/subsystem/jobs/check_general_join_blockers(var/mob/new_player/joining, var/datum/job/job)
+	. = ..()
+	if(!.)
+		return
+	var/mob/living/human/existing_character = joining.get_existing_character()
+	to_chat(joining, SPAN_WARNING("You are already in-game as [existing_character.real_name]!"))
+	return FALSE
+
+/mob/new_player/proc/get_existing_character()
+	for(var/mob/living/human/character in global.human_mob_list)
+		if(character.mind?.key == key)
+			return character
+	return null
+// END CHARACTER PERSISTENCE EDIT
+
 /mob/new_player/Topic(href, href_list) // This is a full override; does not call parent.
 	if(usr != src || !client)
 		return TOPIC_NOACTION
@@ -100,7 +134,7 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 		return 1
 
 	if(href_list["lobby_ready"])
-		if(GAME_STATE <= RUNLEVEL_LOBBY)
+		if(can_ready())
 			ready = !ready
 		show_lobby_menu()
 
@@ -108,7 +142,7 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 		show_lobby_menu()
 
 	if(href_list["lobby_observe"])
-		if(GAME_STATE < RUNLEVEL_LOBBY)
+		if(can_observe())
 			to_chat(src, SPAN_WARNING("Please wait for server initialization to complete..."))
 			return
 
@@ -151,7 +185,7 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 			return 1
 
 	if(href_list["lobby_join"])
-		if(GAME_STATE != RUNLEVEL_GAME)
+		if(!can_latejoin())
 			to_chat(usr, SPAN_DANGER("The round is either not ready, or has already finished..."))
 			return
 		LateChoices() //show the latejoin job selection menu
@@ -184,7 +218,7 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 	if(src != usr)
 		return 0
 
-	if(GAME_STATE != RUNLEVEL_GAME)
+	if(!can_latejoin())
 		to_chat(usr, SPAN_WARNING("The round is either not ready, or has already finished."))
 		return 0
 

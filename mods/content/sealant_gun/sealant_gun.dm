@@ -38,6 +38,10 @@
 		loaded_tank.reagents.remove_reagent(/decl/material/liquid/foam, foam_charges_per_shot)
 		. = new /obj/item/sealant(src)
 
+/obj/item/gun/launcher/sealant/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(loaded_tank, /obj/item/gun/launcher/sealant)
+
 /obj/item/gun/launcher/sealant/Initialize()
 	. = ..()
 	if(ispath(loaded_tank))

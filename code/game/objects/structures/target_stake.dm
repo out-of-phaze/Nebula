@@ -65,6 +65,9 @@
 	. = ..()
 	LAZYADD(., dummy)
 
+/obj/structure/target_stake/GetSerializedType()
+	return /obj/structure/target_stake
+
 // Subtypes below.
 /obj/structure/target_stake/steel
 	material   = /decl/material/solid/metal/steel
@@ -76,6 +79,9 @@
 
 /obj/structure/target_stake/archery/can_hold_dummy(mob/user, obj/item/training_dummy/new_dummy)
 	return istype(new_dummy, /obj/item/training_dummy/straw/archery)
+
+/obj/structure/target_stake/archery/GetSerializedType()
+	return /obj/structure/target_stake/archery
 
 // Subtypes with/for dummies.
 /obj/structure/target_stake/mapped

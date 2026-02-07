@@ -6,6 +6,10 @@
 	material_alteration = MAT_FLAG_ALTERATION_NAME | MAT_FLAG_ALTERATION_DESC | MAT_FLAG_ALTERATION_COLOR
 	var/obj/item/pendant/pendant
 
+/obj/item/clothing/neck/necklace/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(pendant, /obj/item/clothing/neck/necklace)
+
 /obj/item/clothing/neck/necklace/Initialize()
 	. = ..()
 	if(ispath(pendant))
@@ -82,17 +86,35 @@
 /obj/item/clothing/neck/necklace/prism
 	pendant = /obj/item/pendant/prism
 
+/obj/item/clothing/neck/necklace/prism/GetSerializedType()
+	return /obj/item/clothing/neck/necklace
+
 /obj/item/clothing/neck/necklace/frill
 	pendant = /obj/item/pendant/frill
+
+/obj/item/clothing/neck/necklace/frill/GetSerializedType()
+	return /obj/item/clothing/neck/necklace
 
 /obj/item/clothing/neck/necklace/square
 	pendant = /obj/item/pendant/setting/square
 
+/obj/item/clothing/neck/necklace/square/GetSerializedType()
+	return /obj/item/clothing/neck/necklace
+
 /obj/item/clothing/neck/necklace/cross
 	pendant = /obj/item/pendant/setting/cross
+
+/obj/item/clothing/neck/necklace/cross/GetSerializedType()
+	return /obj/item/clothing/neck/necklace
 
 /obj/item/clothing/neck/necklace/diamond
 	pendant = /obj/item/pendant/setting/diamond
 
+/obj/item/clothing/neck/necklace/diamond/GetSerializedType()
+	return /obj/item/clothing/neck/necklace
+
 /obj/item/clothing/neck/necklace/ornate
 	pendant = /obj/item/pendant/setting/ornate
+
+/obj/item/clothing/neck/necklace/ornate/GetSerializedType()
+	return /obj/item/clothing/neck/necklace

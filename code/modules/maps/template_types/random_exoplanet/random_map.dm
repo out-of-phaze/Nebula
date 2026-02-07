@@ -104,6 +104,7 @@
 		new /obj/abstract/landmark/exoplanet_spawn/megafauna(T)
 	else
 		new /obj/abstract/landmark/exoplanet_spawn/animal(T)
+	T.contents_were_modified("spawn_fauna")
 
 /datum/random_map/noise/exoplanet/proc/get_grass_overlay()
 	var/grass_num = "[rand(1,6)]"
@@ -124,6 +125,7 @@
 	else
 		new /obj/abstract/landmark/exoplanet_spawn/plant(T)
 		spawn_grass(T)
+	T.contents_were_modified("spawn_flora")
 
 /datum/random_map/noise/exoplanet/proc/spawn_grass(var/turf/T)
 	if(istype(T, water_type))
@@ -131,6 +133,7 @@
 	if(locate(/obj/effect/floor_decal) in T)
 		return
 	new /obj/effect/floor_decal(T, null, null, get_grass_overlay())
+	T.contents_were_modified("spawn_grass")
 
 /datum/random_map/noise/exoplanet/cleanup()
 	..()

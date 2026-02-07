@@ -71,6 +71,7 @@ var/global/next_station_date_change = 1 DAY
 var/global/next_duration_update = 0
 var/global/last_round_duration = 0
 var/global/round_start_time = 0
+var/global/round_start_realtime = 0
 
 /proc/ticks2shortreadable(tick_time, separator = ":")
 	var/hours = round(tick_time / (1 HOUR))

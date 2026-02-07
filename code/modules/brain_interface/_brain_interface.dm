@@ -37,6 +37,10 @@
 	. = ..()
 	update_icon()
 
+/obj/item/organ/internal/brain_interface/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(holding_brain, /obj/item/organ/internal/brain_interface)
+
 /obj/item/organ/internal/brain_interface/get_brainmob(var/create_if_missing = FALSE)
 	return holding_brain?.get_brainmob(create_if_missing)
 

@@ -28,14 +28,44 @@
 		yourself.
 
 */
+/datum/mind/Serialize()
+	. = ..()
+	SERIALIZE_KEY_VALUE("args", list(key))
+	SERIALIZE(name, /datum/mind)
+	SERIALIZE_INSTANCE(current, /datum/mind)
+	SERIALIZE_IF_MODIFIED(assigned_role, /datum/mind)
+	if(ispath(assigned_special_role, /decl))
+		SERIALIZE_DECL_IF_MODIFIED(assigned_special_role, /datum/mind)
+	else if(istext(assigned_special_role))
+		SERIALIZE(assigned_special_role, /datum/mind)
+	SERIALIZE_IF_MODIFIED(role_alt_title, /datum/mind)
+	// money and account stuff isn't serialized, sorry
+
+/datum/mind/Deserialize(list/instance_map)
+	. = ..()
+	// assigned_special_role can be either a decl or a string... lovely
+	var/old_special_role = assigned_special_role
+	DESERIALIZE_DECL_IF_MODIFIED(assigned_special_role, /datum/mind)
+	if(!assigned_special_role)
+		assigned_special_role = old_special_role
+	// assigned_job has to be set from assigned_role
+	if(istext(assigned_role))
+		var/datum/job/job = SSjobs.get_by_title(assigned_role)
+		if(job)
+			assigned_job = job
+	return SERDE_HINT_POSTINIT
+
+/datum/mind/DeserializePostInit(list/instance_map)
+	. = ..()
+	if(assigned_job)
+		assigned_job.current_positions++
+		// assigned_job.setup_account(current) // this doesn't work
 
 /datum/mind
 	var/key
 	var/name				//replaces mob/var/original_name
 	var/mob/living/current
 	var/active = 0
-
-	var/gen_relations_info
 
 	var/assigned_role
 	var/assigned_special_role

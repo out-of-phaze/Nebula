@@ -13,6 +13,7 @@
 	var/hung_desc        = "The banner is rather unremarkable."
 	var/banner_type      = /obj/item/banner
 	var/embroiderable    = TRUE
+	/// assoc list of decl instance -> color at runtime, or decl path -> color at compiletime
 	var/list/decals
 	var/trim_color
 
@@ -23,6 +24,16 @@
 			decals[decal_decl] = decals[decal]
 			decals -= decal
 	. = ..()
+
+/obj/item/banner/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(trim_color, /obj/item/banner)
+	SERIALIZE_IF_MODIFIED(hung_desc, /obj/item/banner)
+	SERIALIZE_DECL_LIST_ASSOC(decals, /obj/item/banner)
+
+/obj/item/banner/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_DECL_LIST_ASSOC(decals)
 
 var/global/list/banner_type_to_symbols = list()
 /obj/item/banner/proc/get_available_decals()

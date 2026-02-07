@@ -8,6 +8,10 @@
 	material_alteration = MAT_FLAG_ALTERATION_COLOR | MAT_FLAG_ALTERATION_NAME | MAT_FLAG_ALTERATION_DESC
 	var/key_data
 
+/obj/item/key/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(key_data, /obj/item/key)
+
 /obj/item/key/get_examine_strings(mob/user, distance, infix, suffix)
 	. = ..()
 	if(distance <= 1)

@@ -50,8 +50,8 @@
 
 /turf/mimic_edge/Initialize(ml)
 	. = ..()
-	//Clear ourselves from the ambient queue
-	AMBIENCE_DEQUEUE_TURF(src)
+	//Don't process ambience, but don't bother removing us from the list if we wound up in there; we'll just be skipped
+	ambience_queued = FALSE
 	//Need to put a mouse-opaque overlay there to prevent people turning/shooting towards ACTUAL location of vis_content things
 	click_eater = new(src) //#TODO: get rid of that once we got proper proxy atom handling
 	setup_mimic()

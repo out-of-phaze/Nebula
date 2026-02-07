@@ -22,7 +22,6 @@
 	var/accepts_banner_type = /obj/item/banner
 
 // Avoiding random generation behavior on subtypes.
-// We don't serialize a reference to the banner item anyway.
 /obj/structure/banner_frame/GetSerializedType()
 	return /obj/structure/banner_frame
 
@@ -36,6 +35,14 @@
 		set_banner(locate(/obj/item/banner) in src)
 	. = ..()
 	update_icon()
+
+/obj/structure/banner_frame/Serialize()
+	. = ..()
+	SERIALIZE_INSTANCE(banner, /obj/structure/banner_frame)
+
+/obj/structure/banner_frame/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(banner)
 
 /obj/structure/banner_frame/proc/set_banner(var/new_banner)
 	if(banner == new_banner)

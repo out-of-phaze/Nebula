@@ -152,7 +152,7 @@
 
 /// Handle reagents being modified
 /atom/proc/try_on_reagent_change()
-	SHOULD_NOT_OVERRIDE(TRUE)
+	// SHOULD_NOT_OVERRIDE(TRUE)
 	set waitfor = FALSE
 	if(QDELETED(src) || _reagent_update_started >= world.time)
 		return FALSE
@@ -168,6 +168,11 @@
 		for(var/obj/item/thing in get_stored_inventory())
 			thing.fluid_act(reagents)
 	return TRUE
+
+/atom/movable/try_on_reagent_change()
+	if(_reagent_update_started) // this is NOT our first update
+		contents_were_modified("movable's reagents changed")
+	return ..()
 
 /**
 	Handle an atom bumping this atom

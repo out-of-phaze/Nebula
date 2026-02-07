@@ -465,17 +465,20 @@
 	if(base_area)
 		return list(base_area)
 
-// If we do serde, that implies we don't want to apply another layer of procgen over what's already saved.
-// Specific levels should override this proc as needed for generation independent of serde.
-/datum/level_data/proc/should_generate_level()
-	if(!is_persistent())
-		return TRUE
-	if(!get_config_value(/decl/config/toggle/roundstart_level_generation) || !(get_subtemplate_budget() || length(level_generators)))
-		return FALSE
+/datum/level_data/proc/has_serde_data()
 	if(isnull(_has_serde_data))
 		var/decl/serialization_handler/handler = RESOLVE_TO_DECL(persistence_handler)
 		_has_serde_data = fexists(handler.get_data_path(persistent_data_location, global.using_map.path, ckey(level_id)))
-	return !_has_serde_data
+	return _has_serde_data
+
+// If we do serde, that implies we don't want to apply another layer of procgen over what's already saved.
+// Specific levels should override this proc as needed for generation independent of serde.
+/datum/level_data/proc/should_generate_level()
+	if(!get_config_value(/decl/config/toggle/roundstart_level_generation) || !(get_subtemplate_budget() || length(level_generators)))
+		return FALSE
+	if(!is_persistent())
+		return TRUE
+	return !has_serde_data()
 
 ///Called when setting up the level. Apply generators and anything that modifies the turfs of the level.
 /datum/level_data/proc/generate_level()
@@ -536,6 +539,7 @@
 				if(istype(place_mob_at, mob_turf) && !(locate(/mob/living) in place_mob_at))
 					var/mob_type = pickweight(mob_types)
 					new mob_type(place_mob_at)
+					place_mob_at.contents_were_modified("after_generate_level mob")
 					mob_count--
 					CHECK_TICK
 
@@ -908,5 +912,13 @@ INITIALIZE_IMMEDIATE(/obj/abstract/level_data_spawner)
 /datum/level_data/proc/update_turf_ambience()
 	if(SSatoms.atom_init_stage >= INITIALIZATION_INNEW_REGULAR)
 		for(var/turf/level_turf as anything in block(level_inner_min_x, level_inner_min_y, level_z, level_inner_max_x, level_inner_max_y, level_z))
+			if(level_turf.opacity) // don't bother with these, they can't show ambience anyway
+				continue
 			level_turf.update_ambient_light_from_z_or_area() // AMBIENCE_QUEUE_TURF(level_turf) - seems to be less consistent
+			CHECK_TICK
+	else
+		for(var/turf/level_turf as anything in block(level_inner_min_x, level_inner_min_y, level_z, level_inner_max_x, level_inner_max_y, level_z))
+			if(level_turf.opacity) // don't bother queueing these, they can't show ambience anyway
+				continue
+			AMBIENCE_QUEUE_TURF(level_turf) // fire this later
 			CHECK_TICK

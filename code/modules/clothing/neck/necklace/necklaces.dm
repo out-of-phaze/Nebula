@@ -2,6 +2,12 @@
 /obj/item/clothing/neck/necklace/locket
 	pendant = /obj/item/pendant/locket
 
+/obj/item/clothing/neck/necklace/locket/GetSerializedType()
+	return /obj/item/clothing/neck/necklace
+
+/obj/item/clothing/neck/necklace/random/GetSerializedType()
+	return /obj/item/clothing/neck/necklace
+
 /obj/item/clothing/neck/necklace/random/Initialize(ml, material_key)
 	material_key = pick(global.random_jewellery_material_types)
 	pendant      = pick(list(

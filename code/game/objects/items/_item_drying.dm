@@ -9,6 +9,15 @@
 	// Set if colour should be passed to dried product.
 	var/dried_product_takes_color = TRUE
 
+/obj/item/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(drying_wetness, /obj/item)
+	SERIALIZE_TYPE_IF_MODIFIED(dried_type, /obj/item) // must be serialized for things like offal
+
+/obj/item/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_TYPE_IF_MODIFIED(dried_type, /obj/item)
+
 /obj/item/proc/is_dryable()
 	return drying_wetness > 0
 

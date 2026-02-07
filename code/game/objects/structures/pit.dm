@@ -158,6 +158,11 @@
 	var/destruction_finish_message = "hacking at"
 	var/gravemarker_type           = /obj/item/gravemarker
 
+/obj/structure/gravemarker/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(icon_state, /atom)
+	SERIALIZE_IF_MODIFIED(message, /obj/structure/gravemarker)
+
 /obj/structure/gravemarker/get_examine_strings(mob/user, distance, infix, suffix)
 	. = ..()
 	if(distance < 2)
@@ -195,6 +200,9 @@
 /obj/structure/gravemarker/random/Initialize()
 	generate()
 	. = ..()
+
+/obj/structure/gravemarker/random/GetSerializedType()
+	return /obj/structure/gravemarker
 
 /obj/structure/gravemarker/random/proc/generate()
 	icon_state = pick("wood","cross")

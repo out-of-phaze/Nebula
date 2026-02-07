@@ -174,12 +174,26 @@
 		return TRUE
 	return FALSE
 
+/turf/proc/get_expected_reagent_count()
+	return 0
+
+/turf/floor/get_expected_reagent_count()
+	. = ..()
+	if(fill_reagent_type)
+		.++
+		if(contaminant_reagent_type && (contaminant_proportion > 0)) // you can't have a contaminant without also having a fill reagent
+			.++
+
 /turf/on_reagent_change()
 
 	if(!(. = ..()))
 		return
 
-	state_was_modified()
+	// this may be more expensive than actually serializing it unconditionally
+	// basically, we shouldn't mark a reagent change as modification unless it's different than the default reagents this turf has
+	// also, don't re-check this if we're already marked as modified.
+	if(!_state_was_modified && length(REAGENT_VOLUMES(reagents)) > get_expected_reagent_count())
+		state_was_modified("reagent change")
 
 	if(REAGENT_TOTAL_LIQUID_VOLUME(reagents) < FLUID_SLURRY)
 		dump_solid_reagents()

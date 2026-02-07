@@ -28,6 +28,12 @@
 
 	material = /decl/material/solid/metal/steel
 
+/obj/item/gun/launcher/grenade/Serialize()
+	. = ..()
+	if(length(grenades))
+		SERIALIZE(grenades, /obj/item/gun/launcher/grenade)
+	SERIALIZE_IF_MODIFIED(chambered, /obj/item/gun/launcher/grenade)
+
 //revolves the magazine, allowing players to choose between multiple grenade types
 /obj/item/gun/launcher/grenade/proc/pump(mob/M)
 	playsound(M, 'sound/weapons/shotgunpump.ogg', 60, 1)
@@ -111,6 +117,9 @@
 /obj/item/gun/launcher/grenade/loaded
 	var/initial_load_type
 
+/obj/item/gun/launcher/grenade/loaded/GetSerializedType()
+	return /obj/item/gun/launcher/grenade
+
 /obj/item/gun/launcher/grenade/loaded/Initialize()
 	. = ..()
 	if(initial_load_type)
@@ -155,6 +164,9 @@
 	for(var/i in 1 to max_grenades)
 		grenade_type = pickweight(grenade_types)
 		grenades += new grenade_type(src)
+
+/obj/item/gun/launcher/grenade/random/GetSerializedType()
+	return /obj/item/gun/launcher/grenade
 
 //Underslung grenade launcher to be used with the Z8
 /obj/item/gun/launcher/grenade/underslung

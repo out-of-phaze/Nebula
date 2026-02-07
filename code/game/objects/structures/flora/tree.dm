@@ -3,14 +3,14 @@
 // Trees
 ////////////////////////////////////////
 /obj/structure/flora/tree
-	name         = "tree"
-	density      = TRUE
-	pixel_x      = -16
-	layer        = ABOVE_HUMAN_LAYER
-	material     = /decl/material/solid/organic/wood/oak
-	w_class      = ITEM_SIZE_STRUCTURE
-	hitsound     = 'sound/effects/hit_wood.ogg'
-	snd_cut      = 'sound/effects/plants/tree_fall.ogg'
+	name            = "tree"
+	density         = TRUE
+	default_pixel_x = -16
+	layer           = ABOVE_HUMAN_LAYER
+	material        = /decl/material/solid/organic/wood/oak
+	w_class         = ITEM_SIZE_STRUCTURE
+	hitsound        = 'sound/effects/hit_wood.ogg'
+	snd_cut         = 'sound/effects/plants/tree_fall.ogg'
 
 	/// What kind of log we leave behind.
 	var/log_type = /obj/item/stack/material/log

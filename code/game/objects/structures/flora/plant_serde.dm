@@ -4,4 +4,4 @@
 /obj/structure/flora/plant/Serialize()
 	. = ..()
 	if(plant && plant.name != initial(plant))
-		.[nameof(/obj/structure/flora/plant::plant)] = plant.name
+		SERIALIZE_VALUE(plant, /obj/structure/flora/plant, plant.name)

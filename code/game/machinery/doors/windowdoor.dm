@@ -133,6 +133,7 @@
 
 /obj/machinery/door/window/take_damage(damage, damage_type = BRUTE, damage_flags, inflicter, armor_pen = 0, silent, do_update_health)
 	current_health = max(0, current_health - damage)
+	contents_were_modified("windoor damage")
 	if (current_health <= 0)
 		shatter()
 		return

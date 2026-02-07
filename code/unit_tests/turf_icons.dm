@@ -69,7 +69,8 @@
 		SSairflow.processing     -= floor
 		SSoverlays.processing    -= floor
 		SSicon_update.queue_refs -= floor
-		AMBIENCE_DEQUEUE_TURF(floor)
+		//Don't process ambience, but don't bother removing us from the list if we wound up in there; we'll just be skipped
+		floor.ambience_queued = FALSE // AMBIENCE_DEQUEUE_TURF(floor)
 		if(floor.reagents)
 			floor.reagents.clear_reagents()
 			SSmaterials.active_holders -= floor.reagents

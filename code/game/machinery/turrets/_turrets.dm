@@ -55,6 +55,14 @@
 	var/timer_id = null
 	var/decl/hostility/hostility = /decl/hostility/turret
 
+/obj/machinery/turret/Serialize()
+	. = ..()
+	SERIALIZE_INSTANCE_IF_MODIFIED(installed_gun, /obj/machinery/turret)
+
+/obj/machinery/turret/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(installed_gun)
+
 /obj/machinery/turret/Initialize()
 	if(ispath(installed_gun))
 		installed_gun = new installed_gun(src)

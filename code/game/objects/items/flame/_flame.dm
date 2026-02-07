@@ -37,27 +37,38 @@
 
 /obj/item/flame/Initialize(var/ml, var/material_key)
 
-	var/list/available_scents = get_available_scents()
-	if(LAZYLEN(available_scents))
-		scent = pick(available_scents)
-		scent = GET_DECL(scent)
-		if(istype(scent))
-			if(scent.color)
-				set_color(scent.color)
-			desc += " This one smells of [scent.scent]."
-		else
-			scent = null
+	if(!scent)
+		var/list/available_scents = get_available_scents()
+		if(LAZYLEN(available_scents))
+			scent = pick(available_scents)
+			scent = GET_DECL(scent)
+			if(istype(scent))
+				if(scent.color)
+					set_color(scent.color)
+				desc += " This one smells of [scent.scent]."
+			else
+				scent = null
 
 	. = ..()
 
 	set_extension(src, /datum/extension/tool, list(TOOL_CAUTERY = TOOL_QUALITY_BAD))
-	update_icon()
-	if(istype(loc, /obj/structure/wall_sconce))
-		loc.update_icon()
+	if(lit) // supposed to start lit, but it needs vars and such set
+		lit = FALSE // so we can light it
+		light(null, TRUE)
+	else // if we got lit, no need to call update_icon
+		update_icon()
+		if(istype(loc, /obj/structure/wall_sconce))
+			loc.update_icon()
 
 /obj/item/flame/Destroy()
 	snuff_out(null, TRUE)
 	return ..()
+
+/obj/item/flame/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(lit, /obj/item/flame)
+	SERIALIZE_IF_MODIFIED(_fuel, /obj/item/flame)
+	SERIALIZE_DECL_IF_MODIFIED(scent, /obj/item/flame)
 
 /obj/item/flame/proc/get_available_scents()
 	return null
@@ -77,6 +88,7 @@
 	if(lit || !has_fuel(_fuel_spend_amt))
 		return FALSE
 	lit = TRUE
+	contents_were_modified("flame item lit")
 	if(!can_store_lit)
 		obj_flags |= OBJ_FLAG_NO_STORAGE
 	atom_damage_type =  BURN
@@ -119,6 +131,7 @@
 	if(!lit)
 		return FALSE
 	lit = FALSE
+	contents_were_modified("flame item snuffed")
 	if(!can_store_lit && !(initial(obj_flags) & OBJ_FLAG_NO_STORAGE)) // only disable it if it wasn't already set
 		obj_flags &= ~OBJ_FLAG_NO_STORAGE
 	atom_damage_type =  BRUTE

@@ -3,6 +3,7 @@
 	var/list/nested_instances = list()
 	var/list/instanced_areas  = list()
 	var/list/created_data     = list()
+	var/list/modified_turfs   = list()
 
 	LAZYINITLIST(instance_map)
 
@@ -23,7 +24,11 @@
 			// Instance is a /datum.
 			// Just pass the data in and assume the datum type knows what to do with it.
 			if(!ispath(load_path, /atom) && ispath(load_path, /datum))
-				created_instance = new load_path(instance_data)
+				var/list/creation_args = instance_data?["args"]
+				if(islist(creation_args))
+					created_instance = new load_path(arglist(creation_args))
+				else
+					created_instance = new load_path()
 				created_data += created_instance
 			else
 				var/list/spawn_data = instance_data[nameof(/atom/movable::loc)]
@@ -45,17 +50,9 @@
 							else
 								created_instance = spawn_loc.ChangeTurf(load_path)
 
-						// TODO: Areas will need bespoke handling for non-subtype-related persistence (blueprint renaming etc).
-						else if(ispath(load_path, /area))
-							var/area/area = instanced_areas[load_path]
-							if(!area)
-								area = new load_path(null)
-								instanced_areas[load_path] = area
-							ChangeArea(spawn_loc, area)
-
 						else if(ispath(load_path, /atom))
 							created_instance = new load_path(spawn_loc)
-							spawn_loc._contents_were_modified = TRUE // ensure
+							spawn_loc.contents_were_modified("[load_path] deserialized") // ensure
 						else
 							error("[requestor]: attempted to instantiate unimplemented path '[load_path]'.")
 							continue
@@ -73,16 +70,23 @@
 						continue
 
 				else
-					// Should we just go ahead and do this to create atoms in nullspace?
-					// Would we ever want to track an atom in nullspace via level persistence?
-					error("[requestor]: attempted to load non-/datum persistent instance with no spawn loc.")
+					// TODO: Areas will need bespoke handling for non-subtype-related persistence (blueprint renaming etc).
+					if(ispath(load_path, /area))
+						var/area/area = instanced_areas[load_path]
+						if(!area)
+							area = new load_path(null)
+							instanced_areas[load_path] = area
+					else
+						// Should we just go ahead and do this to create atoms in nullspace?
+						// Would we ever want to track an atom in nullspace via level persistence?
+						error("[requestor]: attempted to load persistent turf or movable instance with no spawn loc.")
 
 			if(istype(created_instance))
 				LAZYSET(., uid, created_instance)
+				created_instance.__deserialization_payload = instance_data
+				SSatoms.deserialized_instances[uid] = created_instance
 				if(isatom(created_instance))
-					var/atom/atom = created_instance
-					atom.__deserialization_payload = instance_data
-					SSatoms.deserialized_atoms[uid] = atom
+					modified_turfs |= get_turf(created_instance)
 				if(!isnull(entries_decay_at) && !isnull(entry_decay_weight))
 					created_instance.HandlePersistentDecay(entries_decay_at, entry_decay_weight)
 
@@ -90,8 +94,10 @@
 			log_error("Exception during persistent instance load - [islist(instance_data) ? json_encode(instance_data) : "no instance data"]: [EXCEPTION_TEXT(E)]")
 
 	// Atoms use SSatoms for this, datums don't go through SSatoms so need to do it here.
-	for(var/datum/instance in created_data)
+	// I lied
+/* 	for(var/datum/instance in created_data)
 		instance.DeserializePostInit(.)
+		instance.__deserialization_payload = null */
 
 	// Resolve any loc references to instances.
 	for(var/atom/movable/atom as anything in nested_instances)
@@ -101,13 +107,10 @@
 			error("[requestor]: could not resolve instance ref [nested_atom_id] to instance.")
 			continue
 		atom.forceMove(nested_atom)
-		nested_atom.contents_were_modified()
+		nested_atom.contents_were_modified("[atom] ([atom.type]) nested")
 
 	// Now that everything is loaded and placed, clear out anything that should not be present on the turfs we've loaded.
-	for(var/uid in SSatoms.deserialized_atoms)
-		var/turf/turf = SSatoms.deserialized_atoms[uid]
-		if(!istype(turf))
-			continue
+	for(var/turf/turf as anything in modified_turfs)
 		for(var/atom/thing in turf)
 			if(!thing.simulated)
 				continue

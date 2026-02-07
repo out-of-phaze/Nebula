@@ -40,6 +40,11 @@
 			B.caliber = caliber
 	. = ..()
 
+/obj/item/ammo_casing/Serialize()
+	. = ..()
+	if(!BB || BB.type != projectile_type)
+		SERIALIZE(BB, /obj/item/ammo_casing)
+
 /obj/item/ammo_casing/Destroy()
 	QDEL_NULL(BB)
 	return ..()

@@ -110,8 +110,11 @@
 
 	// Fire Entered events for freshly created movables.
 	// Changing this behavior will almost certainly break power; update accordingly.
-	if (!ml && loc)
-		loc.Entered(src, null)
+	if (loc)
+		if(!ml)
+			loc.Entered(src, null)
+		else if(simulated && (loc.atom_flags & ATOM_FLAG_INITIALIZED)) // if the atom is uninitialized don't bother making it modify
+			loc.contents_were_modified("[src] ([type]) created")
 	if(loc && (z_flags & ZMM_WIDE_LOAD))
 		SSzcopy.discover_movable(src)
 

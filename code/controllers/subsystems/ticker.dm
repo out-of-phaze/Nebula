@@ -91,6 +91,7 @@ SUBSYSTEM_DEF(ticker)
 
 	// Initialize the roundstart timer
 	global.round_start_time = world.time
+	global.round_start_realtime = world.realtime
 	generate_multi_spawn_items()
 	SSlighting.handle_roundstart()
 	SSmapping.start_processing_all_planets()
@@ -311,6 +312,18 @@ Helpers
 		for(var/mob/M in global.player_list)
 			if(!isnewplayer(M))
 				to_chat(M, "Captainship not forced on anyone.")
+
+// CHARACTER SERIALIZATION OVERRIDE
+/datum/controller/subsystem/ticker/equip_characters()
+	. = ..()
+	// give all keyless mobs with pre-existing minds their keys
+	for(var/mob/living/human/existing_character in global.human_mob_list)
+		if(existing_character.key)
+			continue
+		if(!existing_character.mind)
+			continue
+		existing_character.key = existing_character.mind.key
+// END CHARACTER SERIALIZATION OVERRIDE
 
 /datum/controller/subsystem/ticker/proc/attempt_late_antag_spawn(var/list/antag_choices)
 	var/decl/special_role/antag = antag_choices[1]

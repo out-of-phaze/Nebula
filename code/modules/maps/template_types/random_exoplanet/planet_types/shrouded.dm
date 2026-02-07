@@ -114,6 +114,7 @@
 	..()
 	if(!T.density && prob(0.045)) // about 1 in 10 screens or so
 		new /obj/structure/leech_spawner/exoplanet(T)
+		T.contents_were_modified("leech spawner")
 
 ////////////////////////////////////////////////////////////////////////////
 // Areas

@@ -40,10 +40,17 @@
 /obj/machinery/centrifuge/mapped
 	loaded_beaker = /obj/item/chems/glass/beaker/large
 
+/obj/machinery/centrifuge/mapped/GetSerializedType()
+	return /obj/machinery/centrifuge
+
 /obj/machinery/centrifuge/Initialize()
 	. = ..()
 	if(ispath(loaded_beaker))
 		loaded_beaker = new loaded_beaker
+
+/obj/machinery/centrifuge/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(loaded_beaker, /obj/machinery/centrifuge)
 
 /obj/machinery/centrifuge/get_stored_inventory()
 	. = ..()

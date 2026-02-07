@@ -36,6 +36,9 @@
 	..()
 	return INITIALIZE_HINT_LATELOAD
 
+/obj/structure/banner_frame/random/GetSerializedType()
+	return /obj/structure/banner_frame
+
 /obj/structure/banner_frame/random/LateInitialize()
 	..()
 	var/banner_type = pick(list(

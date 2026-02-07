@@ -18,6 +18,9 @@
 	var/initial_reagent_amount = 20
 	var/initial_reagent_type   = /decl/material/liquid/nutriment/soup/simple
 
+/obj/item/chems/glass/bowl/mapped/GetSerializedType()
+	return /obj/item/chems/glass/bowl
+
 /obj/item/chems/glass/bowl/mapped/proc/get_initial_reagent_data()
 	return
 
@@ -164,6 +167,10 @@
 	if(REAGENT_TOTAL_VOLUME(reagents) <= 0)
 		drained = TRUE
 	. = ..()
+
+// if it's drained, it should be saved as a normal bowl
+/obj/item/chems/glass/bowl/mystery/GetSerializedType()
+	return drained ? /obj/item/chems/glass/bowl : ..()
 
 /obj/item/chems/glass/bowl/mystery/update_container_desc()
 	if(!drained && REAGENT_TOTAL_VOLUME(reagents))

@@ -6,6 +6,7 @@
 	icon_edge_layer = FLOOR_EDGE_SNOW
 	has_corners     = FALSE
 	flooring_flags  = TURF_REMOVE_SHOVEL
+	turf_flags      = TURF_FLAG_BACKGROUND | TURF_IS_HOLOMAP_PATH | TURF_FLAG_ABSORB_LIQUID
 	footstep_type   = /decl/footsteps/snow
 	has_base_range  = 13
 	force_material  = /decl/material/solid/ice/snow
@@ -57,6 +58,7 @@
 	icon            = 'icons/turf/flooring/snow.dmi'
 	icon_base       = "permafrost"
 	force_material  = /decl/material/solid/ice
+	turf_flags      = TURF_FLAG_BACKGROUND | TURF_IS_HOLOMAP_PATH
 	uid             = "floor_permafrost"
 
 /decl/flooring/permafrost/get_vehicle_transit_delay(obj/vehicle/vehicle)

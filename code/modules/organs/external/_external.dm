@@ -1525,6 +1525,36 @@ Note that amputating the affected organ does in fact remove the infection from t
 		var/max_halloss = round(owner.species.total_health * 0.8 * ((100 - armor) / 100)) //up to 80% of passing out, further reduced by armour
 		add_pain(clamp(0, max_halloss - owner.get_damage(PAIN), 30))
 
+/obj/item/organ/external/Serialize()
+	. = ..()
+	// TODO: serialize ailments
+	if(length(autopsy_data))
+		var/list/autopsy_list = list()
+		for(var/key in autopsy_data)
+			var/datum/autopsy_data/autopsy_datum = autopsy_data[key]
+			autopsy_list[key] = list(
+				nameof(autopsy_datum.weapon) = autopsy_datum.weapon,
+				nameof(autopsy_datum.damage) = autopsy_datum.damage,
+				nameof(autopsy_datum.hits) = autopsy_datum.hits,
+				nameof(autopsy_datum.time_inflicted) = global.round_start_realtime + (autopsy_datum.time_inflicted - global.round_start_time),
+			)
+		SERIALIZE_VALUE(autopsy_data, /obj/item/organ/external, autopsy_list)
+
+/obj/item/organ/external/Deserialize(list/instance_map)
+	. = ..()
+	// TODO: deserialize ailments
+	if(islist(autopsy_data))
+		for(var/key in autopsy_data)
+			var/list/autopsy_entry = autopsy_data[key]
+			if(istype(autopsy_entry, /datum/autopsy_data))
+				continue
+			var/datum/autopsy_data/autopsy_datum = new()
+			autopsy_datum.weapon = autopsy_entry[nameof(autopsy_datum.weapon)]
+			autopsy_datum.hits = autopsy_entry[nameof(autopsy_datum.hits)]
+			autopsy_datum.damage = autopsy_entry[nameof(autopsy_datum.damage)]
+			autopsy_datum.time_inflicted = world.realtime - autopsy_entry[nameof(autopsy_datum.time_inflicted)]
+			autopsy_data[key] = autopsy_datum
+
 //Adds autopsy data for used_weapon.
 /obj/item/organ/external/proc/add_autopsy_data(var/used_weapon, var/damage)
 	var/key = used_weapon

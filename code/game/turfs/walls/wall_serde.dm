@@ -12,8 +12,8 @@
 
 /turf/wall/Deserialize(list/instance_map)
 	. = ..()
-	DESERIALIZE_DECL_TO_TYPE(girder_material)
-	DESERIALIZE_DECL_TO_TYPE(shutter_material)
+	DESERIALIZE_DECL_TO_TYPE_IF_MODIFIED(girder_material, /turf/wall)
+	DESERIALIZE_DECL_TO_TYPE_IF_MODIFIED(shutter_material, /turf/wall)
 
 /turf/wall/natural/Serialize()
 	. = ..()

@@ -41,6 +41,9 @@
 		var/mob/critter = new animal_type(src)
 		name = "[name] ([critter.name])"
 
+/obj/structure/largecrate/animal/GetSerializedType()
+	return /obj/structure/largecrate/animal
+
 /obj/structure/largecrate/animal/cat
 	animal_type = /mob/living/simple_animal/passive/cat
 

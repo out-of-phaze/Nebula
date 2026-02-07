@@ -11,8 +11,8 @@ SUBSYSTEM_DEF(atoms)
 	var/atom_init_stage = INITIALIZATION_INSSATOMS
 	var/old_init_stage
 
-	/// An associative list of UIDs to atoms that were deserialized prior to flush.
-	var/list/deserialized_atoms = list()
+	/// An associative list of UIDs to datums that were deserialized prior to flush.
+	var/list/deserialized_instances = list()
 	/// A non-associative list of lists, with the format list(list(atom, list(Initialize arguments))).
 	var/list/created_atoms = list()
 	/// A non-associative list of lists, with the format list(list(atom, list(LateInitialize arguments))).
@@ -33,13 +33,13 @@ SUBSYSTEM_DEF(atoms)
 
 	// Preload any atoms that have deserialized during the initial load process prior to flush.
 	var/index = 1
-	var/list/postinit_serde_atoms = list()
-	if(length(deserialized_atoms))
-		while(index <= length(deserialized_atoms))
-			var/uid = deserialized_atoms[index++]
-			var/atom/instance = deserialized_atoms[uid]
-			if(instance.Preload(deserialized_atoms) == SERDE_HINT_POSTINIT)
-				postinit_serde_atoms += instance
+	var/list/postinit_serde_instances = list()
+	if(length(deserialized_instances))
+		while(index <= length(deserialized_instances))
+			var/uid = deserialized_instances[index++]
+			var/datum/instance = deserialized_instances[uid]
+			if(instance.Preload(deserialized_instances) == SERDE_HINT_POSTINIT)
+				postinit_serde_instances += instance
 			CHECK_TICK
 		report_progress("Deserialized [index-1] atom\s.")
 		index = 1
@@ -78,24 +78,24 @@ SUBSYSTEM_DEF(atoms)
 		report_progress("Late initialized [index] atom\s")
 		late_loaders.Cut()
 
-	if(length(postinit_serde_atoms))
+	if(length(postinit_serde_instances))
 		index = 1
-		while(index <= length(postinit_serde_atoms))
-			var/atom/instance = postinit_serde_atoms[index++]
-			instance.DeserializePostInit(deserialized_atoms)
+		while(index <= length(postinit_serde_instances))
+			var/datum/instance = postinit_serde_instances[index++]
+			instance.DeserializePostInit(deserialized_instances)
 			CHECK_TICK
-		postinit_serde_atoms.Cut()
+		postinit_serde_instances.Cut()
 
 	// Clear out the serde payloads now that everything should be tidied away.
-	if(length(deserialized_atoms))
+	if(length(deserialized_instances))
 		index = 1
-		while(index <= length(deserialized_atoms))
-			var/uid = deserialized_atoms[index++]
-			var/atom/instance = deserialized_atoms[uid]
+		while(index <= length(deserialized_instances))
+			var/uid = deserialized_instances[index++]
+			var/datum/instance = deserialized_instances[uid]
 			if(istype(instance))
 				instance.__deserialization_payload = null
 			CHECK_TICK
-		deserialized_atoms.Cut()
+		deserialized_instances.Cut()
 
 /datum/controller/subsystem/atoms/proc/InitAtom(atom/A, list/arguments)
 	var/the_type = A.type

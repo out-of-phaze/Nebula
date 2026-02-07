@@ -105,6 +105,10 @@
 	if(scope_zoom)
 		verbs += /obj/item/gun/proc/scope
 
+/obj/item/gun/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(silencer, /obj/item/gun)
+
 /obj/item/gun/Destroy()
 	// autofire timer is automatically cleaned up
 	autofiring_at = null

@@ -179,6 +179,7 @@ SUBSYSTEM_DEF(jobs)
 		return FALSE
 	return TRUE
 
+// this name is a misnomer, it's used for submaps.
 /datum/controller/subsystem/jobs/proc/check_latejoin_blockers(var/mob/new_player/joining, var/datum/job/job)
 	if(!check_general_join_blockers(joining, job))
 		return FALSE

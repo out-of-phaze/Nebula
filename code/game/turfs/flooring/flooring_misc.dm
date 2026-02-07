@@ -92,4 +92,5 @@
 	force_material     = /decl/material/solid/organic/plantmatter/grass/dry
 	constructed        = TRUE
 	gender             = NEUTER
+	turf_flags         = TURF_FLAG_BACKGROUND | TURF_IS_HOLOMAP_PATH | TURF_FLAG_ABSORB_LIQUID
 	uid                = "floor_straw"

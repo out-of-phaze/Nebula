@@ -5,6 +5,7 @@
 /area/shaded_hills/outside/river/lake
 	name = "Woodland Lake"
 	forced_ambience = list('sound/ambience/shore.ogg')
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
 /area/shaded_hills/outside/river/lake/get_additional_fishing_results()
 	var/static/list/additional_fishing_results = list(
@@ -19,6 +20,7 @@
 /area/shaded_hills/outside/woods
 	name = "Woodlands"
 	sound_env = FOREST
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
 /area/shaded_hills/outside/woods/poi
 	name = "Deep Woodlands"
@@ -37,3 +39,4 @@
 	sound_env = STANDARD_STATION
 	fishing_failure_prob = 100
 	fishing_results = list()
+	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE

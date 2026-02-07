@@ -60,11 +60,23 @@
 	return_string += "<b>[viewer.client.prefs.real_name]</b></a>"
 	return_string += "[viewer.client.prefs.job_high ? ", [viewer.client.prefs.job_high]" : null]<br>"
 
-	if(GAME_STATE <= RUNLEVEL_LOBBY)
+	if(viewer.can_ready())
 		if(viewer.ready)
 			return_string += "<a class='linkOn' href='byond://?src=\ref[viewer];lobby_ready=1'>Un-Ready</a>"
 		else
 			return_string += "<a href='byond://?src=\ref[viewer];lobby_ready=1'>Ready Up</a>"
-	else
+	else if(viewer.can_latejoin())
 		return_string += "<a href='byond://?src=\ref[viewer];lobby_join=1'>Join Game!</A>"
 	return JOINTEXT(return_string)
+
+// CHARACTER PERSISTENCE EDIT
+/datum/lobby_option/character_setup/get_lobby_menu_string(var/mob/new_player/viewer)
+	var/mob/living/human/existing_character = viewer.get_existing_character()
+	if(!existing_character)
+		return ..()
+	. = list()
+	var/job_string = existing_character.mind?.assigned_role
+	. += "<hr>Current character: <b>[existing_character.real_name]</b>[job_string ? ", [job_string]" : null]<br>"
+	. += "Wait for round to start..."
+	return JOINTEXT(.)
+// END CHARACTER PERSISTENCE EDIT

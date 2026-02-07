@@ -15,14 +15,22 @@
 		/decl/material/solid/silicon      = MATTER_AMOUNT_TRACE,
 	)
 
-	var/obj/item/shockpaddles/linked/paddles
+	var/obj/item/shockpaddles/linked/paddles = /obj/item/shockpaddles/linked
 	var/obj/item/cell/bcell = null
+
+/obj/item/defibrillator/Serialize()
+	. = ..()
+	SERIALIZE_INSTANCE(paddles, /obj/item/defibrillator)
+	SERIALIZE_INSTANCE(bcell, /obj/item/defibrillator)
+
+/obj/item/defibrillator/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(paddles)
+	DESERIALIZE_INSTANCE(bcell)
 
 /obj/item/defibrillator/Initialize() //starts without a cell for rnd
 	if(ispath(paddles))
 		paddles = new paddles(src, src)
-	else
-		paddles = new(src, src)
 	if(ispath(bcell))
 		bcell = new bcell(src)
 	. = ..()

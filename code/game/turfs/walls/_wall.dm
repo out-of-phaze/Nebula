@@ -204,6 +204,7 @@ var/global/list/wall_fullblend_objects = list(
 /turf/wall/take_damage(damage, damage_type = BRUTE, damage_flags, inflicter, armor_pen = 0, silent, do_update_health)
 	if(damage)
 		src.damage = max(0, src.damage + damage)
+		state_was_modified("wall took damage")
 		update_damage()
 
 /turf/wall/proc/update_damage()

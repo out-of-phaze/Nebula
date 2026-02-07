@@ -27,7 +27,7 @@ SUBSYSTEM_DEF(persistence)
 
 /datum/controller/subsystem/persistence/Initialize()
 	. = ..()
-	initial_save_skip_period = max(0, (wait - 10 MINUTES)) // Skip initial fire(), typically there's no need to save immediately after roundstart
+	initial_save_skip_period = world.time + max(0, (wait - 10 MINUTES)) // Skip initial fire(), typically there's no need to save immediately after roundstart
 	decls_repository.get_decls_of_subtype(/decl/persistence_handler) // Initialize()s persistence categories.
 
 	// Begin snowflake.

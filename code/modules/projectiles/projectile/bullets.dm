@@ -16,6 +16,10 @@
 	var/mob_passthrough_check = 0
 	var/caliber
 
+/obj/item/projectile/bullet/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(caliber, /obj/item/projectile/bullet)
+
 /obj/item/projectile/bullet/get_miss_sounds()
 	var/static/list/miss_sounds = list(
 		'sound/weapons/guns/miss1.ogg',

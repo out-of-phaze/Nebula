@@ -165,6 +165,10 @@
 
 /obj/structure/cask_rack/large/mapped/Initialize(ml, _mat, _reinf_mat)
 	. = ..()
+	loc?._suppress_content_change_update = TRUE
+	_suppress_content_change_update = TRUE
 	try_stack_barrel(new /obj/structure/reagent_dispensers/barrel/cask/ebony/water)
 	try_stack_barrel(new /obj/structure/reagent_dispensers/barrel/cask/ebony/beer)
 	try_stack_barrel(new /obj/structure/reagent_dispensers/barrel/cask/ebony/wine)
+	loc?._suppress_content_change_update = FALSE
+	_suppress_content_change_update = FALSE

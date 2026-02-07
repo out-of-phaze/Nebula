@@ -101,7 +101,6 @@
 /turf/Initialize(mapload, ...)
 	. = null && ..()	// This weird construct is to shut up the 'parent proc not called' warning without disabling the lint for child types. We explicitly return an init hint so this won't change behavior.
 
-	_earliest_type ||= type
 	color = null
 
 	// atom/Initialize has been copied here for performance (or at least the bits of it that turfs use has been)
@@ -180,7 +179,8 @@
 	if (!changing_turf)
 		PRINT_STACK_TRACE("Improper turf qdel. Do not qdel turfs directly.")
 
-	AMBIENCE_DEQUEUE_TURF(src)
+	//Don't process ambience, but don't bother removing us from the list if we wound up in there; we'll just be skipped
+	ambience_queued = FALSE // AMBIENCE_DEQUEUE_TURF(src)
 
 	changing_turf = FALSE
 
@@ -633,7 +633,7 @@
 	if(is_outside == new_outside)
 		return FALSE
 
-	state_was_modified()
+	state_was_modified("set_outside")
 	is_outside = new_outside
 	update_external_atmos_participation()
 	AMBIENCE_QUEUE_TURF(src)

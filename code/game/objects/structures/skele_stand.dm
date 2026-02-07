@@ -11,6 +11,16 @@
 	. = ..()
 	set_gender(pick(MALE, FEMALE, PLURAL))
 
+/obj/structure/skele_stand/Serialize()
+	. = ..()
+	if(length(swag))
+		var/list/serial_swag = list()
+		for(var/slot in swag)
+			var/obj/item/the_swag = swag[slot]
+			if(!the_swag)
+				continue
+			serial_swag[slot] = the_swag.get_run_uid()
+
 /obj/structure/skele_stand/proc/rattle_bones(mob/user, atom/thingy)
 	if((world.time - cooldown) <= 1 SECOND)
 		return //reduces spam.
