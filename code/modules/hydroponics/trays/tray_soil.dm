@@ -19,6 +19,14 @@
 
 	var/obj/item/stack/material/brick/reinforced_with
 
+/obj/machinery/portable_atmospherics/hydroponics/soil/Serialize()
+	. = ..()
+	SERIALIZE_INSTANCE_IF_MODIFIED(reinforced_with, /obj/machinery/portable_atmospherics/hydroponics/soil)
+
+/obj/machinery/portable_atmospherics/hydroponics/soil/Deserialize(list/instance_map)
+	. = ..()
+	DESERIALIZE_INSTANCE(reinforced_with)
+
 /obj/machinery/portable_atmospherics/hydroponics/soil/get_alt_interactions(var/mob/user)
 	. = ..()
 	LAZYREMOVE(., global._reagent_interactions)

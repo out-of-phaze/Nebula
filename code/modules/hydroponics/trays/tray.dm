@@ -38,9 +38,9 @@
 	var/plant_health = 0       // Plant health.
 	var/lastproduce = 0        // Last time tray was harvested
 	var/closed_system          // If set, the tray will attempt to take atmos from a pipe.
-	var/force_update           // Set this to bypass the cycle time check.
+	var/tmp/force_update       // Set this to bypass the cycle time check.
 	/// Something to hold reagents during process_reagents()
-	var/obj/effect/chem_holder/temp_chem_holder
+	var/tmp/obj/effect/chem_holder/temp_chem_holder
 
 	// Counter used by bees.
 	var/pollen = 0
@@ -124,6 +124,34 @@
 		/decl/material/liquid/mutagenics =  15
 	)
 
+
+/obj/machinery/portable_atmospherics/hydroponics/Serialize()
+	. = ..()
+	SERIALIZE_IF_MODIFIED(waterlevel, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(nutrilevel, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(pestlevel, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(weedlevel, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(dead, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(harvest, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(age, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(sampled, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(yield_mod, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(mutation_mod, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(toxins, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(mutation_level, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(tray_light, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(plant_health, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(closed_system, /obj/machinery/portable_atmospherics/hydroponics)
+	// SERIALIZE_IF_MODIFIED(force_update, /obj/machinery/portable_atmospherics/hydroponics)
+	SERIALIZE_IF_MODIFIED(pollen, /obj/machinery/portable_atmospherics/hydroponics)
+	if(seed && seed.roundstart && seed.name != initial(seed)) // only works for roundstart seeds atm bc we go off of seed name
+		SERIALIZE_VALUE(seed, /obj/machinery/portable_atmospherics/hydroponics, seed.name)
+
+/obj/machinery/portable_atmospherics/hydroponics/Deserialize(list/instance_map)
+	. = ..()
+	if(istext(seed))
+		seed = SSplants.seeds[seed]
+
 /obj/machinery/portable_atmospherics/hydroponics/proc/set_seed(new_seed, reset_values)
 
 	if(seed == new_seed)
@@ -180,7 +208,7 @@
 
 /obj/machinery/portable_atmospherics/hydroponics/LateInitialize()
 	. = ..()
-	if(locate(/obj/item/seeds) in get_turf(src))
+	if(!seed && locate(/obj/item/seeds) in get_turf(src))
 		plant()
 
 /obj/machinery/portable_atmospherics/hydroponics/bullet_act(var/obj/item/projectile/Proj)
