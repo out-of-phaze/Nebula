@@ -109,8 +109,10 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 /datum/controller/subsystem/jobs/check_general_join_blockers(var/mob/new_player/joining, var/datum/job/job)
 	. = ..()
 	if(!.)
-		return
+		return FALSE
 	var/mob/living/human/existing_character = joining.get_existing_character()
+	if(!existing_character)
+		return TRUE
 	to_chat(joining, SPAN_WARNING("You are already in-game as [existing_character.real_name]!"))
 	return FALSE
 
