@@ -14,7 +14,7 @@
 #define SERIALIZE_INSTANCE_IF_MODIFIED(V, T) if(V != initial(V)) { SERIALIZE_VALUE(V, T, V?.get_run_uid()) }
 #define SERIALIZE_INSTANCE_LIST(V, T) if(islist(V)) { var/list/__instance_uids = list(); for(var/datum/instance in V) { __instance_uids += instance.get_run_uid() }; SERIALIZE_VALUE(V, T, __instance_uids) }
 #define SERIALIZE_DECL_LIST(V, T) if(islist(V)) { var/list/__decl_uids = list(); for(var/decl/__decl in V) { __decl_uids += __decl.uid }; SERIALIZE_VALUE(V, T, __decl_uids) }
-#define SERIALIZE_DECL_LIST_ASSOC(V, T) if(islist(V)) { var/list/__decl_uids = list(); for(var/key in V) { var/decl/__decl = RESOLVE_TO_DECL(V); __decl_uids[__decl.uid] = V[key]; }; SERIALIZE_VALUE(V, T, __decl_uids) }
+#define SERIALIZE_DECL_LIST_ASSOC(V, T) if(islist(V)) { var/list/__decl_uids = list(); for(var/key in V) { var/decl/__decl = RESOLVE_TO_DECL(key); __decl_uids[__decl.uid] = V[key]; }; SERIALIZE_VALUE(V, T, __decl_uids) }
 #define SERIALIZE_REAGENTS(V, T, I) if(istype(V, /datum/reagents)) {                                                       \
 	SERIALIZE_KEY_VALUE(I + SERDE_REAGENT_VOLUME, UNLINT(V.maximum_volume));                                               \
 	if(UNLINT(V.total_volume)) {                                                                                           \
