@@ -1046,6 +1046,8 @@ modules/mob/living/human/life.dm if you die, you will be zoomed out.
 /obj/item/proc/add_coating(reagent_type, amount, data)
 	if(!coating)
 		coating = new /datum/reagents(10, src)
+	else if(islist(coating))
+		FINALIZE_REAGENTS_SERDE(coating)
 	if(ispath(reagent_type))
 		coating.add_reagent(reagent_type, amount, data)
 	else if(istype(reagent_type, /datum/reagents))
@@ -1059,6 +1061,8 @@ modules/mob/living/human/life.dm if you die, you will be zoomed out.
 /obj/item/proc/remove_coating(amount)
 	if(!coating)
 		return
+	else if(islist(coating))
+		FINALIZE_REAGENTS_SERDE(coating)
 	coating.remove_any(amount)
 	if(REAGENT_TOTAL_VOLUME(coating) <= MINIMUM_CHEMICAL_VOLUME)
 		clean(FALSE)
