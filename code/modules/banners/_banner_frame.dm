@@ -21,10 +21,6 @@
 	var/obj/item/banner/banner
 	var/accepts_banner_type = /obj/item/banner
 
-// Avoiding random generation behavior on subtypes.
-/obj/structure/banner_frame/GetSerializedType()
-	return /obj/structure/banner_frame
-
 /obj/structure/banner_frame/set_dir(ndir)
 	return ..(force_south_facing ? SOUTH : ndir)
 
