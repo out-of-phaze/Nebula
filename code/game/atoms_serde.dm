@@ -9,7 +9,6 @@
 	if(!isnull(initial(max_health)) || !material) // if initial is null and we have a material, then we auto-set our max health and don't need to serialize
 		SERIALIZE_IF_MODIFIED(max_health, /atom)
 	SERIALIZE_IF_MODIFIED(dir, /atom)
-	SERIALIZE_IF_MODIFIED(gender, /atom)
 	if(ATOM_IS_TEMPERATURE_SENSITIVE(src))
 		SERIALIZE_IF_MODIFIED(temperature, /atom)
 	// we don't serialize atom_flags, so we use this to serialize things like opening cans/etc

@@ -35,6 +35,7 @@
 		for(var/trait_type in _mob_traits)
 			serial_mob_traits["[trait_type]"] = _mob_traits[trait_type]
 	// pronouns!
+	SERIALIZE_IF_MODIFIED(gender, /mob/living)
 	SERIALIZE_IF_MODIFIED(pronoun_gender, /mob/living)
 	SERIALIZE_DECL_IF_MODIFIED(pronouns, /mob/living)
 	// inventory!
