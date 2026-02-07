@@ -21,10 +21,10 @@ SUBSYSTEM_DEF(ambience)
 		count = 0 //so if we runtime on the Cut, we don't try again.
 		curr.Cut(1, c+1)
 	for(var/turf/target in curr) // this is faster for the vast majority of flat lists, even large ones
+		count++
 		if(!target.ambience_queued) // already dequeued or processed
 			continue
 		target.ambience_queued = FALSE
-		count++
 		if(!QDELETED(target))
 			target.update_ambient_light_from_z_or_area()
 		if (no_mc_tick)
