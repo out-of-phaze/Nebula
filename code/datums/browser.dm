@@ -46,6 +46,12 @@
 	if(common_stylesheet)
 		add_stylesheet("common", common_stylesheet)
 
+/datum/browser/Destroy(force)
+	close()
+	user = null
+	ref = null
+	return ..()
+
 /datum/browser/proc/set_title(ntitle)
 	title = sanitize(ntitle)
 
