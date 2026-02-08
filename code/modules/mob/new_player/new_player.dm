@@ -456,7 +456,7 @@ INITIALIZE_IMMEDIATE(/mob/new_player)
 	var/client/client_to_use = client || my_client
 	if(client_to_use?.prefs)
 		client_to_use.prefs.close_load_dialog(src)
-	panel.close()
+	panel?.close()
 
 /mob/new_player/proc/check_species_allowed(var/decl/species/S, var/show_alert=1)
 	if(!S.is_available_for_join() && !has_admin_rights())
