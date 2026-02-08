@@ -1,6 +1,8 @@
 /obj/item
 	var/list/_item_effects
 
+// TODO: serialize _item_effects
+
 /obj/item/proc/has_item_effect(decl/item_effect/effect, effect_category)
 	if(!length(_item_effects))
 		return FALSE
