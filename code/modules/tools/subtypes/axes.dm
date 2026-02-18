@@ -22,6 +22,12 @@
 	material = /decl/material/solid/metal/iron
 	handle_material = /decl/material/solid/organic/wood/ebony
 
+/obj/item/tool/axe/walnut
+	handle_material = /decl/material/solid/organic/wood/walnut
+
+/obj/item/tool/axe/walnut/bronze
+	material = /decl/material/solid/metal/bronze
+
 /obj/item/tool/axe/iron
 	material = /decl/material/solid/metal/iron
 
