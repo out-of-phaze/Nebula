@@ -222,10 +222,7 @@ SUBSYSTEM_DEF(jobs)
 		if(job.title in mode.disabled_jobs)
 			return 0
 
-		var/position_limit = job.total_positions
-		if(!latejoin)
-			position_limit = job.spawn_positions
-		if((job.current_positions < position_limit) || position_limit == -1)
+		if(job.is_position_available(latejoin = latejoin))
 			player.mind.assigned_job = job
 			player.mind.assigned_role = rank
 			player.mind.role_alt_title = job.get_alt_title_for(player.client)
@@ -406,7 +403,7 @@ SUBSYSTEM_DEF(jobs)
 		return FALSE
 	if(!player.client.prefs.CorrectLevel(job, level))
 		return FALSE
-	if(!job.is_position_available())
+	if(!job.is_position_available(latejoin = FALSE))
 		return FALSE
 	assign_role(player, job.title, mode = mode)
 	return TRUE

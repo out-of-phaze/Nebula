@@ -220,8 +220,9 @@
 		for(var/obj/item/sub_item in item.contents)
 			apply_fingerprints_to_item(holder, sub_item)
 
-/datum/job/proc/is_position_available()
-	return (current_positions < total_positions) || (total_positions == -1)
+/datum/job/proc/is_position_available(latejoin = TRUE)
+	var/position_limit = latejoin ? total_positions : spawn_positions
+	return (current_positions < position_limit) || (position_limit == -1)
 
 /datum/job/proc/has_alt_title(var/mob/H, var/supplied_title, var/desired_title)
 	return (supplied_title == desired_title) || (H.mind && H.mind.role_alt_title == desired_title)
