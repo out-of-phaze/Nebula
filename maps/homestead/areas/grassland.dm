@@ -28,9 +28,6 @@
 	// hopefully the sound environment makes this sound nicer?
 	forced_ambience = list('sound/ambience/shore.ogg')
 
-/area/homestead/outside/poi
-	name = "Deep Grassland"
-
 /area/homestead/outside/river
 	name = "River"
 	color = COLOR_BLUE
@@ -73,6 +70,3 @@
 
 /area/homestead/caves/deep
 	name = "\improper Deep Caverns"
-
-/area/homestead/caves/deep/poi
-	name = "\improper Deepest Caverns"

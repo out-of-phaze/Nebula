@@ -54,9 +54,6 @@
 		"homestead_swamp"     = SOUTH,
 		"homestead_downlands" = EAST
 	)
-	subtemplate_budget = 5
-	subtemplate_category = MAP_TEMPLATE_CATEGORY_FANTASY_GRASSLAND
-	subtemplate_area = /area/homestead/outside/poi
 	persistent_data_location = "data/level_data"
 
 /datum/level_data/main_level/homestead/grassland/generate_level()
@@ -79,7 +76,8 @@
 				/mob/living/simple_animal/passive/rabbit       = 3,
 				/mob/living/simple_animal/passive/rabbit/brown = 3,
 				/mob/living/simple_animal/passive/rabbit/black = 3,
-				/mob/living/simple_animal/opossum              = 5
+				/mob/living/simple_animal/opossum              = 3,
+				/mob/living/simple_animal/passive/sheep        = 3,
 			),
 			/turf/floor/grass,
 			10
@@ -98,9 +96,6 @@
 		/datum/random_map/noise/homestead/swamp,
 		/datum/random_map/noise/forage/homestead/swamp
 	)
-	subtemplate_budget = 5
-	subtemplate_category = MAP_TEMPLATE_CATEGORY_FANTASY_SWAMP
-	subtemplate_area = /area/homestead/outside/swamp/poi
 	persistent_data_location = "data/level_data"
 
 /datum/level_data/main_level/homestead/swamp/generate_level()
@@ -153,9 +148,6 @@
 		/datum/random_map/noise/homestead/woods,
 		/datum/random_map/noise/forage/homestead/woods
 	)
-	subtemplate_budget = 5
-	subtemplate_category = MAP_TEMPLATE_CATEGORY_FANTASY_WOODS
-	subtemplate_area = /area/homestead/outside/woods/poi
 	persistent_data_location = "data/level_data"
 
 /datum/level_data/main_level/homestead/woods/generate_level()
@@ -197,9 +189,6 @@
 	connected_levels = list(
 		"homestead_dungeon" = EAST
 	)
-	subtemplate_budget = 5
-	subtemplate_category = MAP_TEMPLATE_CATEGORY_FANTASY_CAVERNS
-	subtemplate_area = /area/homestead/caves/deep/poi
 	level_generators = list(
 		/datum/random_map/automata/cave_system/homestead,
 		/datum/random_map/noise/ore/rich/homestead

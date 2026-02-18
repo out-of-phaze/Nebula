@@ -13,6 +13,12 @@
 
 /datum/random_map/noise/forage/homestead
 	abstract_type = /datum/random_map/noise/forage/homestead
+	trees = list(
+		/obj/structure/flora/tree/hardwood/walnut = 18,
+		/obj/structure/flora/tree/dead/walnut = 2,
+		/obj/structure/flora/tree/hardwood/yew = 2,
+		/obj/structure/flora/tree/dead/yew = 1,
+	)
 
 /datum/random_map/noise/ore/poor/homestead
 
@@ -82,15 +88,18 @@
 	tree_weight = 7
 	trees = list(
 		/obj/structure/flora/tree/hardwood/walnut = 8,
-		/obj/structure/flora/tree/hardwood/yew = 8,
-		/obj/structure/flora/tree/hardwood/mahogany = 8,
 		/obj/structure/flora/bush/pointybush = 3,
+		/obj/structure/flora/tree/hardwood/yew = 2,
+		/obj/structure/flora/tree/hardwood/mahogany = 2,
+		/obj/structure/flora/tree/hardwood/maple = 1,
 		/obj/structure/flora/tree/dead/walnut = 1,
 		/obj/structure/flora/tree/dead/yew = 1,
 		/obj/structure/flora/tree/dead/mahogany = 1,
+		/obj/structure/flora/tree/dead/maple = 1,
 		/obj/structure/flora/stump/tree/walnut = 1,
 		/obj/structure/flora/stump/tree/yew = 1,
 		/obj/structure/flora/stump/tree/mahogany = 1,
+		/obj/structure/flora/stump/tree/maple = 1,
 		/obj/structure/flora/bush/genericbush = 1,
 		/obj/structure/flora/bush/grassybush = 1,
 		/obj/structure/flora/bush/stalkybush = 1,

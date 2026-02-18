@@ -14,10 +14,6 @@
 	forced_ambience = list('sound/ambience/marshy.ogg')
 	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
-/area/homestead/outside/swamp/poi
-	name = "Deep Swamp"
-	forced_ambience = list('sound/ambience/marshy.ogg')
-
 /area/homestead/outside/river/swamp
 	name = "Swampy River"
 	description = "Mud squelches underfoot as the river broadens and splits, feeding a broad expanse of swamp and still water."

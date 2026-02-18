@@ -15,18 +15,16 @@
 	#include "areas/woods.dm"
 
 	#include "jobs/_jobs.dm"
-	#include "jobs/caves.dm"
 	#include "jobs/visitors.dm"
-	#include "jobs/wilderness.dm"
+	#include "jobs/homestead.dm"
 
 	#include "levels/_levels.dm"
 	#include "levels/random_map.dm"
 	#include "levels/strata.dm"
 
 	#include "outfits/_outfits.dm"
-	#include "outfits/caves.dm"
 	#include "outfits/visitors.dm"
-	#include "outfits/wilderness.dm"
+	#include "outfits/homesteaders.dm"
 
 	#include "homestead_currency.dm"
 	#include "homestead_events.dm"

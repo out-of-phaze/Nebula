@@ -9,9 +9,9 @@
 		/obj/item/clothing/pants/trousers,
 		/obj/item/clothing/shirt/jerkin
 	)
-	backpack_contents = list(
+/* 	backpack_contents = list(
 		/obj/item/rock/flint/striker,
 		/obj/item/bladed/folding/iron,
 		/obj/item/flame/torch
-	)
-	outfit_flags  = OUTFIT_HAS_BACKPACK | OUTFIT_EXTENDED_SURVIVAL
+	) */
+	outfit_flags  = OUTFIT_HAS_BACKPACK

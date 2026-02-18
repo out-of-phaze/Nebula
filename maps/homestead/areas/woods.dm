@@ -22,9 +22,6 @@
 	sound_env = FOREST
 	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
 
-/area/homestead/outside/woods/poi
-	name = "Deep Woodlands"
-
 /area/homestead/outside/river/woods
 	name = "Woodland River"
 
@@ -33,10 +30,3 @@
 
 /area/homestead/caves/unexplored/woods
 	name = "Trackless Deeps - Far North"
-
-/area/homestead/forester_hut
-	name = "\improper Foresters' Hut"
-	sound_env = STANDARD_STATION
-	fishing_failure_prob = 100
-	fishing_results = list()
-	area_flags = parent_type::area_flags | AREA_FLAG_ALLOW_LEVEL_PERSISTENCE | AREA_FLAG_NO_LEGACY_PERSISTENCE
