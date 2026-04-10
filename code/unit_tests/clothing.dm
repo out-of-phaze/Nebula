@@ -46,7 +46,7 @@
 
 		// Check for old accessory states.
 		if(!(initial_icon in icon_states_checked))
-			icon_state_cache += initial_icon
+			icon_states_checked += initial_icon
 			for(var/state in icon_states(initial_icon))
 				if(findtext(lowertext(state), "slot_tie") && !("slot_tie" in reported_failures[initial_icon]))
 					LAZYADD(reported_failures[initial_icon], "slot_tie")
