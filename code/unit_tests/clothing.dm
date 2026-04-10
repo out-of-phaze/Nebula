@@ -47,7 +47,7 @@
 		// Check for old accessory states.
 		if(!(initial_icon in icon_states_checked))
 			icon_states_checked += initial_icon
-			for(var/state in icon_states(initial_icon))
+			for(var/state in get_states_in_icon_cached(initial_icon))
 				if(findtext(lowertext(state), "slot_tie") && !("slot_tie" in reported_failures[initial_icon]))
 					LAZYADD(reported_failures[initial_icon], "slot_tie")
 					clothing_fails += "legacy 'slot_tie' state defined in '[initial_icon]'"
@@ -60,6 +60,10 @@
 				failures += "[clothing_type]:\n- [jointext(clothing_fails, "\n- ")]"
 			continue
 
+		// AFTER THIS POINT, CLOTHES IS AN INSTANCE, NOT A TYPEPATH
+		// PLEASE PAY ATTENTION TO THIS, OR ELSE YOU'LL END UP SPENDING 30 MINUTES WONDERING
+		// "WHY DO WE USE THE INITIAL VALUE ABOVE, BUT A DIRECT ACCESS DOWN HERE? IS SHE STUPID?"
+		// EXACTLY LIKE I DID.
 		clothes = new clothes
 
 		// Check if the clothing has a fallback icon slot and an icon for it.
