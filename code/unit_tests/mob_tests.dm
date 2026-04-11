@@ -257,7 +257,7 @@
 		fail("[icon_file] is not a valid icon file.")
 		return 1
 
-	var/list/valid_states = get_states_in_icon_cached(icon_file)
+	var/alist/valid_states = get_states_in_icon_cached(icon_file)
 
 	if(!length(valid_states))
 		return 1

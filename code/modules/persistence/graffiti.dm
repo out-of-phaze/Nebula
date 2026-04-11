@@ -43,11 +43,11 @@
 		if(too_much_graffiti >= 5)
 			return INITIALIZE_HINT_QDEL
 
-	var/list/random_icon_states = get_states_in_icon(icon)
+	var/alist/random_icon_states = get_states_in_icon(icon)
 	for(var/obj/effect/decal/writing/writing in loc)
 		random_icon_states -= writing.icon_state
 	if(length(random_icon_states))
-		icon_state = pick(random_icon_states)
+		icon_state = apick(random_icon_states)
 	SSpersistence.track_value(src, /decl/persistence_handler/graffiti)
 	. = ..(mapload)
 	if(!isnull(_age))

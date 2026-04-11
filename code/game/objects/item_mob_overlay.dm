@@ -23,34 +23,34 @@ var/global/list/bodypart_to_slot_lookup_table = list(
 // Cached cause asking icons is expensive. This is still expensive, so avoid using it if
 // you can reasonably expect the icon_state to exist beforehand, or if you can cache the
 // value somewhere (as done below with use_single_icon in /obj/item/Initialize()).
-var/global/list/icon_state_cache = list()
+var/global/alist/icon_state_cache = alist()
 /proc/check_state_in_icon(var/checkstate, var/checkicon)
 	// isicon() is apparently quite expensive so short-circuit out early if we can.
 	if(!istext(checkstate) || isnull(checkicon) || !(isfile(checkicon) || isicon(checkicon)))
 		return FALSE
-	var/list/check = _fetch_icon_state_cache_entry(checkicon) // should never return null once we reach this point
+	var/alist/check = _fetch_icon_state_cache_entry(checkicon) // should never return null once we reach this point
 	return check[checkstate]
 
 /// A proc for getting an associative list of icon states in an icon.
 /// Uses the same cache as check_state_in_icon.
 /// Does not copy, MUST NOT BE MUTATED.
 /proc/get_states_in_icon_cached(checkicon) /* as OD_MAP(text, OD_BOOL) */
-	return _fetch_icon_state_cache_entry(checkicon) || list()
+	return _fetch_icon_state_cache_entry(checkicon) || alist()
 
 /// get_states_in_icon_cached but it does a copy, so the return value can be mutated.
 /proc/get_states_in_icon(checkicon) /* as OD_MAP(text, OD_BOOL) */
-	var/list/out = get_states_in_icon_cached(checkicon)
+	var/alist/out = get_states_in_icon_cached(checkicon)
 	return out.Copy()
 
 /proc/_fetch_icon_state_cache_entry(checkicon)
 	if(!checkicon)
 		return null
-	// if we want to let people del icons (WHY???) then we can use weakreF()
+	// if we want to let people del icons (WHY???) then we can use weakref()
 	// but right now it's cheaper to just use checkicon directly
 	// ref doesn't even do any deduplication
-	var/list/check = global.icon_state_cache[checkicon]
+	var/alist/check = global.icon_state_cache[checkicon]
 	if(!check)
-		check = list()
+		check = alist()
 		for(var/istate in icon_states(checkicon))
 			check[istate] = TRUE
 		global.icon_state_cache[checkicon] = check
