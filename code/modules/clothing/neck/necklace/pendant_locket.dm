@@ -6,7 +6,7 @@
 	var/obj/item/held
 
 /obj/item/pendant/locket/attack_self(mob/user)
-	if(!("[get_world_inventory_state()]-open" in icon_states(icon)))
+	if(!check_state_in_icon("[get_world_inventory_state()]-open", icon))
 		to_chat(user, SPAN_WARNING("\The [src] doesn't seem to open."))
 		return TRUE
 	open = !open

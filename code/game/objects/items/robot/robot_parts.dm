@@ -26,7 +26,7 @@
 		if(robot_model)
 			SetName("[robot_model.name] [initial(name)]")
 			desc = "[robot_model.desc]"
-			if(icon_state in icon_states(robot_model.icon_base))
+			if(check_state_in_icon(icon_state, robot_model.icon_base))
 				icon = robot_model.icon_base
 	else
 		SetDefaultName()

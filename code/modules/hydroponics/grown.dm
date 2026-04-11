@@ -192,7 +192,7 @@
 // Separated for subtypes to override.
 /obj/item/food/grown/proc/update_grown_icon()
 	icon_state = "[seed.get_trait(TRAIT_PRODUCT_ICON)]-product"
-	if("[seed.get_trait(TRAIT_PRODUCT_ICON)]-leaf" in icon_states('icons/obj/hydroponics/hydroponics_products.dmi'))
+	if(check_state_in_icon("[seed.get_trait(TRAIT_PRODUCT_ICON)]-leaf", 'icons/obj/hydroponics/hydroponics_products.dmi'))
 		var/image/fruit_leaves = image('icons/obj/hydroponics/hydroponics_products.dmi',"[seed.get_trait(TRAIT_PRODUCT_ICON)]-leaf")
 		if(!dry && !backyard_grilling_count)
 			fruit_leaves.color = seed.get_trait(TRAIT_PLANT_COLOUR)

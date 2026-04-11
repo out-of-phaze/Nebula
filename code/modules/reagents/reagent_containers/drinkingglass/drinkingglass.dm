@@ -95,9 +95,9 @@ var/global/const/DRINK_ICON_NOISY = "noise"
 	. = custom_desc || ..()
 
 /obj/item/chems/drinks/glass2/proc/can_add_extra(obj/item/glass_extra/GE)
-	if(!("[overlay_base_icon]_[GE.glass_addition]left" in icon_states(icon)))
+	if(!check_state_in_icon("[overlay_base_icon]_[GE.glass_addition]left", icon))
 		return FALSE
-	if(!("[overlay_base_icon]_[GE.glass_addition]right" in icon_states(icon)))
+	if(!check_state_in_icon("[overlay_base_icon]_[GE.glass_addition]right", icon))
 		return FALSE
 	return TRUE
 
@@ -162,9 +162,9 @@ var/global/const/DRINK_ICON_NOISY = "noise"
 			over_liquid |= image(icon, src, "[overlay_base_icon]_vapor")
 
 		for(var/S in R.glass_special)
-			if("[overlay_base_icon]_[S]" in icon_states(icon))
+			if(check_state_in_icon("[overlay_base_icon]_[S]", icon))
 				under_liquid |= image(icon, src, "[overlay_base_icon]_[S]")
-			else if("[overlay_base_icon][amnt]_[S]" in icon_states(icon))
+			else if(check_state_in_icon("[overlay_base_icon][amnt]_[S]", icon))
 				over_liquid |= image(icon, src, "[overlay_base_icon][amnt]_[S]")
 
 		underlays += under_liquid

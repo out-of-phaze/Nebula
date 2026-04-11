@@ -27,7 +27,7 @@
 	. = ..()
 	if(front_id)
 		var/tiny_state = "id-generic"
-		if(("id-"+front_id.icon_state) in icon_states(icon))
+		if(check_state_in_icon("id-"+front_id.icon_state, icon))
 			tiny_state = "id-"+front_id.icon_state
 		add_overlay(overlay_image(icon, tiny_state, flags = RESET_COLOR))
 

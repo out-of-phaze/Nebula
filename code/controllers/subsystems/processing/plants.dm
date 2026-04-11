@@ -25,7 +25,7 @@ PROCESSING_SUBSYSTEM_DEF(plants)
 
 /datum/controller/subsystem/processing/plants/Initialize()
 	// Build the icon lists.
-	for(var/icostate in icon_states('icons/obj/hydroponics/hydroponics_growing.dmi'))
+	for(var/icostate in get_states_in_icon_cached('icons/obj/hydroponics/hydroponics_growing.dmi'))
 		var/split = findtext(icostate,"-")
 		if(!split)
 			// invalid icon_state
@@ -41,7 +41,7 @@ PROCESSING_SUBSYSTEM_DEF(plants)
 		if(!(plant_sprites[base]) || (plant_sprites[base]<ikey))
 			plant_sprites[base] = ikey
 
-	for(var/icostate in icon_states('icons/obj/hydroponics/hydroponics_products.dmi'))
+	for(var/icostate in get_states_in_icon_cached('icons/obj/hydroponics/hydroponics_products.dmi'))
 		var/split = findtext(icostate,"-")
 		if(split)
 			plant_product_sprites |= copytext(icostate,1,split)

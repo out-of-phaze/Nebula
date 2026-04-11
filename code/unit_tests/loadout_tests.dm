@@ -69,8 +69,7 @@
 	return  1
 
 /proc/type_has_valid_icon_state(var/atom/type)
-	var/atom/A = type
-	return (initial(A.icon_state) in icon_states(initial(A.icon)))
+	return check_state_in_icon(type::icon_state, type::icon)
 
 
 /datum/unit_test/loadout_custom_setup_tweaks_shall_have_valid_procs
