@@ -183,7 +183,7 @@
 	var/list/obj/screen/holomap_text/maptexts
 	var/list/obj/screen/holomap_level_select/lbuttons
 	var/list/image/levels
-	var/list/z_levels
+	var/list/affected_z_levels
 	var/z = -1
 	var/displayed_level = 1 //Index of level to display
 
@@ -196,7 +196,7 @@
 	QDEL_LIST_ASSOC_VAL(levels)
 	LAZYCLEARLIST(maptexts)
 	LAZYCLEARLIST(levels)
-	LAZYCLEARLIST(z_levels)
+	LAZYCLEARLIST(affected_z_levels)
 	. = ..()
 
 /datum/station_holomap/proc/initialize_holomap(turf/T, isAI = null, mob/user = null, reinit = FALSE)
@@ -225,7 +225,7 @@
 		QDEL_LIST_ASSOC_VAL(maptexts)
 		LAZYCLEARLIST(maptexts)
 		LAZYCLEARLIST(levels)
-		LAZYCLEARLIST(z_levels)
+		LAZYCLEARLIST(affected_z_levels)
 
 	station_map = image(icon(HOLOMAP_ICON, "stationmap"))
 	station_map.layer = UNDER_HUD_LAYER
@@ -243,7 +243,7 @@
 		if(istype(O))
 			var/z_count = length(O.map_z)
 			var/current_z_index = 1
-			z_levels = O.map_z.Copy()
+			affected_z_levels = O.map_z.Copy()
 
 			if(z_count > 1)
 				if(!LAZYLEN(lbuttons))
@@ -284,7 +284,7 @@
 			set_level(current_z_index)
 
 /datum/station_holomap/proc/set_level(level)
-	if(level > z_levels.len)
+	if(level > length(affected_z_levels))
 		return
 
 	displayed_level = level
@@ -292,18 +292,18 @@
 	station_map.overlays.Cut()
 	station_map.vis_contents.Cut()
 
-	if(z == z_levels[displayed_level])
+	if(z == affected_z_levels[displayed_level])
 		station_map.overlays += cursor
 
-	station_map.overlays += LAZYACCESS(levels, "[z_levels[displayed_level]]")
-	station_map.vis_contents += LAZYACCESS(maptexts, "[z_levels[displayed_level]]")
+	station_map.overlays += LAZYACCESS(levels, "[affected_z_levels[displayed_level]]")
+	station_map.vis_contents += LAZYACCESS(maptexts, "[affected_z_levels[displayed_level]]")
 
 	//Fix legend position
 	var/pixel_y = HOLOMAP_LEGEND_Y
 	for(var/obj/screen/holomap_legend/element in legend)
 		element.holomap = src
 		element.pixel_y = pixel_y //Set adjusted pixel y as it will be needed for area placement
-		element.Setup(z_levels[displayed_level])
+		element.Setup(affected_z_levels[displayed_level])
 		if(element.has_areas)
 			pixel_y -= 10
 			station_map.vis_contents += element
@@ -311,7 +311,7 @@
 	if(displayed_level > 1)
 		station_map.vis_contents += lbuttons[1]
 
-	if(displayed_level < z_levels.len)
+	if(displayed_level < length(affected_z_levels))
 		station_map.vis_contents += lbuttons[2]
 
 /datum/station_holomap/proc/legend_select(obj/screen/holomap_legend/L)

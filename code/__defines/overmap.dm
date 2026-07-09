@@ -12,8 +12,11 @@
 #define OVERMAP_WEAKNESS_MINING 4
 #define OVERMAP_WEAKNESS_EXPLOSIVE 8
 
-#define HasBelow(Z) (((Z) > world.maxz || (Z) < 2 || ((Z)-1) > z_levels.len) ? 0 : z_levels[(Z)-1])
-#define HasAbove(Z) (((Z) >= world.maxz || (Z) < 1 || (Z) > z_levels.len) ? 0 : z_levels[(Z)])
+// we know global.z_levels.len <= world.maxz, so no need to check both
+// if it's >= world.maxz it will be >= global.z_levels.len
+// and if it's > global.z_levels.len it doesn't matter if it's <= world.maxz because it still won't have a level
+#define HasBelow(Z) (((Z) < 2 || ((Z)-1) > global.z_levels.len) ? 0 : global.z_levels[(Z)-1])
+#define HasAbove(Z) (((Z) < 1 || (Z) > global.z_levels.len) ? 0 : global.z_levels[(Z)])
 
 #define KM_OVERMAP_RATE		100
 #define SHIP_MOVE_RESOLUTION 0.001

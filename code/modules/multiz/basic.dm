@@ -2,7 +2,7 @@
 var/global/list/z_levels = list() // Each Z-level is associated with the relevant map data landmark
 
 /proc/get_map_data(z)
-	return z > 0 && z_levels.len >= z ? z_levels[z] : null
+	return z > 0 && length(global.z_levels) >= z ? global.z_levels[z] : null
 
 // Thankfully, no bitwise magic is needed here.
 /proc/GetAbove(var/atom/atom)
