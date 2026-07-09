@@ -15,9 +15,11 @@ INITIALIZE_IMMEDIATE(/obj/abstract/map_data)
 	if(_height)
 		height = _height
 	for(var/i = (loc.z - height + 1) to (loc.z-1))
-		if (z_levels.len <i)
-			z_levels.len = i
-		z_levels[i] = src
+		if (global.z_levels.len <i)
+			global.z_levels.len = i
+		if(global.z_levels[i])
+			var/obj/abstract/map_data/old_map_data = global.z_levels[i]
+			PRINT_STACK_TRACE("Conflicting map data, [get_log_info_line()] conflicts with old map data [old_map_data.get_log_info_line()]!")
 
 	if (length(SSzcopy.zlev_maximums))
 		SSzcopy.calculate_zstack_limits()
