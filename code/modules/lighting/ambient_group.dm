@@ -62,11 +62,11 @@ var/global/ambience_group_map[BITWISE_MAX_BITS]
 	T.ambience_active_groups -= 1
 
 /datum/ambience_group/proc/set_ambient_light(color, multiplier)
-	var/list/new_parts = rgb2num(color)
+	var/list/new_parts = _ambient_rgb2num_turf_cached(color)
 
-	var/dr = (new_parts[1] / 255) * multiplier - apparent_r
-	var/dg = (new_parts[2] / 255) * multiplier - apparent_g
-	var/db = (new_parts[3] / 255) * multiplier - apparent_b
+	var/dr = new_parts[1] * multiplier - apparent_r
+	var/dg = new_parts[2] * multiplier - apparent_g
+	var/db = new_parts[3] * multiplier - apparent_b
 
 	if (round(dr/4, LIGHTING_ROUND_VALUE) == 0 && round(dg/4, LIGHTING_ROUND_VALUE) == 0 && round(db/4, LIGHTING_ROUND_VALUE) == 0)
 		// no-op

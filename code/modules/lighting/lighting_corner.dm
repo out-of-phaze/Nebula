@@ -150,6 +150,35 @@ var/global/list/REVERSE_LIGHTING_CORNER_DIAGONAL = list(0, 0, 0, 0, 3, 4, 0, 0, 
 
 #define UPDATE_APPARENT(T, CH) T.apparent_##CH = T.self_##CH + T.below_##CH + T.ambient_##CH + T.above_ambient_##CH
 
+var/global/alist/cached_ambient_corner_lookup = alist()
+/// Cached version of rgb2num that also does our rescaling from 0-255 to 0.0-0.25 (per-corner contribution)
+/proc/_ambient_rgb2num_corner_cached(hexstring)
+	if(!hexstring)
+		return 0
+	// We also divide by 4 to pull the per-corner averaging out entirely.
+	var/const/SCALE_FACTOR = 255 * 4
+	if(!cached_ambient_corner_lookup[hexstring])
+		. = rgb2num(hexstring)
+		.[1] /= SCALE_FACTOR
+		.[2] /= SCALE_FACTOR
+		.[3] /= SCALE_FACTOR
+		cached_ambient_corner_lookup[hexstring] = .
+	return cached_ambient_corner_lookup[hexstring]
+
+var/global/alist/cached_ambient_turf_lookup = alist()
+/// Cached version of rgb2num that also does our rescaling from 0-255 to 0.0-1.0 (per-turf contribution)
+/proc/_ambient_rgb2num_turf_cached(hexstring)
+	if(!hexstring)
+		return 0
+	var/const/SCALE_FACTOR = 255
+	if(!cached_ambient_turf_lookup[hexstring])
+		. = rgb2num(hexstring)
+		.[1] /= SCALE_FACTOR
+		.[2] /= SCALE_FACTOR
+		.[3] /= SCALE_FACTOR
+		cached_ambient_turf_lookup[hexstring] = .
+	return cached_ambient_turf_lookup[hexstring]
+
 // Configure ambient lighting for *just* this corner. This deliberately does not handle Z-propagation, that's managed by generate_z_connections().
 /datum/lighting_corner/proc/init_ambient()
 	var/sum_r = 0
@@ -168,15 +197,11 @@ var/global/list/REVERSE_LIGHTING_CORNER_DIAGONAL = list(0, 0, 0, 0, 3, 4, 0, 0, 
 		if (!T || !T.ambient_light)
 			continue
 
-		var/list/parts = rgb2num(T.ambient_light)
+		var/list/parts = _ambient_rgb2num_corner_cached(T.ambient_light)
 
-		sum_r += (parts[1] / 255) * T.ambient_light_multiplier
-		sum_g += (parts[2] / 255) * T.ambient_light_multiplier
-		sum_b += (parts[3] / 255) * T.ambient_light_multiplier
-
-	sum_r /= 4
-	sum_g /= 4
-	sum_b /= 4
+		sum_r += parts[1] * T.ambient_light_multiplier
+		sum_g += parts[2] * T.ambient_light_multiplier
+		sum_b += parts[3] * T.ambient_light_multiplier
 
 	ambient_r += sum_r
 	ambient_g += sum_g
