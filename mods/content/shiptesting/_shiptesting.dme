@@ -7,4 +7,5 @@
 #include "ships/johnson/johnson.dm"
 #include "ships/lozenge/lozenge.dm"
 #include "ships/tanker/tanker.dm"
+#include "props/coffee_maker.dm"
 #endif
