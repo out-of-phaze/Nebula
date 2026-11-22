@@ -1,7 +1,7 @@
 /datum/job
 	var/list/psi_faculties                // Starting psi faculties, if any.
 	var/psi_latency_chance = 0            // Chance of an additional psi latency, if any.
-	var/give_psionic_implant_on_join = TRUE // If psionic, will be implanted for control.
+	var/give_psionic_implant_on_join = FALSE // If psionic, will be implanted for control.
 
 /datum/job/submap
 	give_psionic_implant_on_join = FALSE
